@@ -13,34 +13,160 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/new.css">
   <title>Admin-Dashboard</title>
-  <style>
-    .n {
-      background: #0D2942;
-    }
 
-    .b {
-      font: normal normal normal 16px/21px Segoe UI;
-      letter-spacing: 0px;
-      color: #0BB44F;
-      font-weight: 500;
-    }
-    .s{
-      right: 358px;
-    }
-    
-  </style>
 </head>
 
-<body>
-
+<body style="font-family: Segoe UI;">
+  <!------------------------------------------Navbar---------------------------------------------------------->
   <nav class="navbar navbar-expand-lg n pr-auto">
-      <img src="img/Group 193.png" class="img-fluid navbar-brand navbar-nav mr-auto">
-      <button class="btn bg-white btn-lg active rounded-pill" style="padding-left: 30px; padding-right: 30px;">
-        <a href="#" class="b">Login</a>
-      </button>
+    <img src="img/logo.png" class="img-fluid navbar-brand navbar-nav mr-auto">
+    <button class="btn bg-white btn-lg active rounded-pill" style="padding-left: 30px; padding-right: 30px;">
+      <a href="#" class="b">Login</a>
+    </button>
   </nav>
- 
+
+  <!------------------------------------------Body---------------------------------------------------------->
+  <div class="container my-5">
+    <div class="row row-cols-2">
+      <!------------------------------------------Side Bar left---------------------------------------------->
+      <div class="container col-md-3 rounded " style="background-color: #0D2942;">
+        <div class="row">
+          <img src="img/home.png" class="img-fluid my-5 mx-auto d-block">
+        </div>
+        <div class="row">
+          <h6 class="text-white mx-auto d-block">Dashboard</h6>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <hr class="divider">
+          </div>
+        </div>
+
+        <div class="row row-sm-2" style="font-size: 14px;">
+          <!--------------------style="background-color: aqua;"--------------------Vertical navigation bar------------------------------------------->
+          <nav class="navbar navbar-expand-sm text-white">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#" role="button">
+                    <img src="img/approvejob.png" class="img-fluid my-2">
+                    Approve Jobs
+                  </a>
+                </li>
+                <!---------------------manage profile---------------------------------------------------------->
+
+                <li class="nav-item dropdown">
+                  <a class="text-white nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/manageprofile.png" class="img-fluid my-2">
+                    Manage User Profile
+                  </a>
+                  <div class="dropdown-menu bg-success" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">
+                      <img src="img/profilelogo.png" class="img-fluid">
+                      User Profile
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <img src="img/companies.png" class="img-fluid">
+                      Companies
+                    </a>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#" role="button">
+                    <img src="img/manageblog.png" class="img-fluid">
+                    Manage Blogs
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#" role="button">
+                    <img src="img/sunad.png" class="img-fluid">
+                    Sub Admin
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#" role="button">
+                    <img src="img/fakerep.png" class="img-fluid">
+                    Fake Reports
+                  </a>
+                </li>
+                <!---------------------------------------------------EMployee--------------------------------------->
+                <li class="nav-item text-center text-success mt-4">EMPLOYEE
+                  <hr class="divider">
+                </li>
+
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#" role="button">
+                    <img src="img/maintain.png" class="img-fluid">
+                    Maintain Profile
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#" role="button">
+                    <img src="img/applied.png" class="img-fluid">
+                    Applied Jobs
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#" role="button">
+                    <img src="img/report.png" class="img-fluid">
+                    Report Fake
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#" role="button">
+                    <img src="img/delete.png" class="img-fluid">
+                    Delete Profile
+                  </a>
+                </li>
+
+                <!---------------------------------------------------EMployer--------------------------------------->
+                <li class="nav-item text-center text-success mt-4">EMPLOYER
+                  <hr class="divider">
+                </li>
+
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#" role="button">
+                    <img src="img/maipro.png" class="img-fluid">
+                    Maintain Profile
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#" role="button">
+                    <img src="img/jobposted.png" class="img-fluid">
+                    Jobs Posted
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white nav-link" href="#" role="button">
+                    <img src="img/report.png" class="img-fluid">
+                    Report Fake
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!------------------------------------------Side bar right---------------------------------------------->
+      <div class="container col-md-8 rounded roun">
+        <nav aria-label="breadcrumb" style="margin-left: -15px; margin-right: -15px;">
+          <ol class="breadcrumb " style="background-color: #969696;">
+            <li class="breadcrumb-item "><a class="text-white" href="#">Home</a></li>
+            <li class="breadcrumb-item active  text-white" aria-current="page">JOBS PORTAL Admin Panel</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

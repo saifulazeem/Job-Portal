@@ -1,0 +1,37 @@
+.n {
+    background: #0D2942;
+  }
+
+  .b {
+    font: normal normal normal 16px/21px Segoe UI;
+    letter-spacing: 0px;
+    color: #0BB44F;
+    font-weight: 500;
+  }
+  .s{
+    right: 358px;
+  }
+  .mx-auto{
+    margin-top: -40px;
+  }
+  .divider{
+    background-color: aliceblue;
+    color: aliceblue;
+}
+.txt
+{
+    font-size: small;
+    align-items: left;
+}
+.dropdown-item:hover{
+    background-color: grey;
+}
+ /* Style to change separator  */
+ .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: white;
+}
+.roun{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
