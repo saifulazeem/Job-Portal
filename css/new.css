@@ -1,12 +1,18 @@
 .n {
     background: #0D2942;
   }
-
+body{
+  font-family: 'Segoe UI';
+}
   .b {
     font: normal normal normal 16px/21px Segoe UI;
     letter-spacing: 0px;
     color: #0BB44F;
     font-weight: 500;
+  }
+  .b:hover{
+    color:black;
+    text-decoration: none;
   }
   .s{
     right: 358px;
@@ -17,6 +23,23 @@
   .divider{
     background-color: aliceblue;
     color: aliceblue;
+}
+.navbar-toggler{
+  background-color: blanchedalmond;
+}
+.navbar-toggler-icon{
+  background-color: black;
+}
+.tag{
+  font-size: 25px;
+}
+.text
+{
+  font-size: 16px;
+}
+td,tr,table {
+
+color:white;
 }
 .txt
 {
@@ -34,4 +57,63 @@
 .roun{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-  
+.nav-link:hover{
+color: #0BB44F;
+}
+.nav-link{
+  color: white;
+  }
+
+.container-fluid {
+    padding: 0px;
+    text-align: center;
+}
+
+/* Centered text */
+.centered {
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.top {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+}
+.shadow
+{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.ex {
+    padding-right: 70px;
+    padding-left: 70px;
+    border-radius: 8px;
+}
+
+.for {
+    border-radius: 15px;
+    height: auto;
+}
+.list-group-item {
+    background-color:#0D2942;
+    color: gainsboro;
+}
+.list-group-item:hover {
+  background-color:#0D2942;
+  color:  #0BB44F;
+}
+.foot{
+  background-color:#0D2942;
+  color: gainsboro; 
+  padding: 20px;
+}
+
+.hov:hover {
+  color:  #0BB44F;
+}
