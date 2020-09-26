@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <title>About Us</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -57,146 +57,42 @@
     <!---------------------------------------------CONTAINER--------------------------------------------->
     <div>
         <div class="container-fluid">
-            <img src="img/about.png" style="text-align: center; opacity: 0.5;" class="img-fluid" alt="Responsive image">
-            <div class="centered text-center">
-                <p style="font-size:4vw;" class="text-center t text-dark">About Us</p>
-            </div>
-        </div>
-
-        <div class="container top rounded" style="top:-150px; background-color: white;">
             <div class="row">
-                <div class="col-8">
-                    <div class="row my-3 mx-2">
-                        <p class="font-weight-bold tag">Who we are</p>
-                        <p class="text">The Tab is the voice of students and the UK’s largest and most influential
-                            student media brand.
-                            We have three million monthly unique users in the UK - the largest student audience in the
-                            country.</p>
+                <!--------------------------IMAGE------------------------------------------------->
+                <div class="col-lg-6">
+                    <img src="img/login.png" style="text-align: center; opacity: 0.5;" class="img-fluid"
+                        alt="Responsive image">
+                    <div class="centered text-center" style="top: 40%; ">
+                        <p style="font-size:7vw;" class="text-center t text-dark">LOGIN</p>
                     </div>
+                </div>
 
-                    <div class="row my-3 mx-2">
-                        <p class="font-weight-bold tag">Why</p>
-                        <p class="text">We know that trying to find a decent internship or graduate scheme is long. It
-                            can take hours of scrolling
-                            through mind-numbingly dull job posts to find something that looks even mildly interesting
-                            (and doesn’t
-                            require 3+ years of experience for an entry-level role).Don’t you want that time back? To
-                            give yourself
-                            an extra hour lie-in? To binge-watch Euphoria again? To actually have the time to apply for
-                            these jobs??!?
+                <!--------------------------FORM--------------------------------------------------->
+                <div class="col-lg-5 offset-lg-2" style="margin:20px;">
 
-                        </p>
-                    </div>
-
-                    <div class="row my-3 mx-2">
-                        <p class="font-weight-bold tag">What</p>
-                        <dl class="row text">
-                            <dt class="col-sm-3">Specialisation:</dt>
-                            <dd class="col-sm-9">Cut the BS and get specialised job alerts based on your career
-                                preferences
-                            </dd>
-
-                            <dt class="col-sm-3">Quality:</dt>
-                            <dd class="col-sm-9"> Get access to the best student and graduate-focused job offers and
-                                employers</dd>
-
-                            <dt class="col-sm-3">Effort: </dt>
-                            <dd class="col-sm-9">Let the companies contact you too, this job hunt doesn’t need to be
-                                one-sided
-                            </dd>
-
-                            <dt class="col-sm-3">Cheatsheet:</dt>
-                            <dd class="col-sm-9"> Tips and tricks on our blog will help you ace your applications and
-                                interviews</dd>
-                        </dl>
-                    </div>
-
-                    <div class="row my-3 mx-2">
-                        <p class="font-weight-bold tag">How</p>
-                        <p class="text">Sign up by scrolling down to the form below.
+                    <form>
+                        <div class="form-group m-3">
+                        <button type="button" class="btn btn-success ex text-white" style="padding-right: 100px; padding-left: 100px;">
+                            Employer Log In Form</button>
                             <br><br>
-                            For the sake of inputting one measly email address and clicking a
-                            few boxes, you could cut the boredom down to half (don’t quote us on that).
-                        </p>
-                    </div>
-                </div>
-
-                <!-------------------------------------------------list of LATEST JOBS----------------------------------------->
-                <div class="col">
-                    <div class="container top my-4 rounded" style="background-color:#0D2942; color: gainsboro;">
-                        <p class="font-weight-normal text-center mx-4 mt-5" style="font-size: xx-large;">LATEST JOBs</p>
-                        <div class="list-group">
-                            <ul>
-                                <li>
-                                    <a href="#" class="list-group-item list-group-item-action">
-                                        <div class="d-flex w-100">
-                                            <h5 class="mb-1">Job Post</h5>
-                                        </div>
-                                        <p class="mb-1">Company Name</p>
-                                        <div>
-                                            <img src="img/location.png" class="img-responsive">
-                                            <small>Location</small>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="list-group-item list-group-item-action">
-                                        <div class="d-flex w-100">
-                                            <h5 class="mb-1">Job Post</h5>
-                                        </div>
-                                        <p class="mb-1">Company Name</p>
-                                        <div>
-                                            <img src="img/location.png" class="img-responsive">
-                                            <small>Location</small>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="list-group-item list-group-item-action">
-                                        <div class="d-flex w-100">
-                                            <h5 class="mb-1">Job Post</h5>
-                                        </div>
-                                        <p class="mb-1">Company Name</p>
-                                        <div>
-                                            <img src="img/location.png" class="img-responsive">
-                                            <small>Location</small>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                          <label for="exampleInputEmail1">Email Address</label>
+                          <input type="email" class="form-control f" id="exampleInputEmail1" placeholder="example@email.com" aria-describedby="emailHelp">
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row rounded" style="padding-bottom: 20px; padding-top: 20px;">
-                <div class="container top rounded" style="margin:20px; padding-top:20px;padding-bottom:20px;">
-                    <div class="row">
-                        <div class="col ">
-                            <img src="img/hiring.png" style="text-align: center; padding: 0px; margin: 0px;"
-                                class="img-fluid" alt="Responsive image">
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control f" id="exampleInputPassword1" placeholder="***********">
                         </div>
-                        <div class="col" style="margin:20px;">
-                            <form>
-                                <h4 class="text-center">POST A JOB</h4>
-                                <h5 class="text-center">Sign Up for Job Alerts</h5>
-                                <div class="form-group">
-                                    <input type="email" class="shadow form-control for" placeholder="Email address"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="shadow form-control for" placeholder="Keywords"
-                                        id="exampleInputkeyword">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="shadow form-control for" placeholder="Location"
-                                        id="exampleInputLocation">
-                                </div>
-                                <button type="submit" class="btn btn-success ex text-center d-flex mx-auto my-3">Create
-                                    Alert</button>
-                            </form>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Remember Me</label>
                         </div>
-                    </div>
+                        <button type="submit" class="btn ex text-white" style="background-color: #0D2942;">Login</button>
+                        <br><br>
+                        <a class="chan2" style="text-decoration: none;" href="#">Sign Up</a>
+                        <br>
+                        <a class="my-2 chan" style="text-decoration: none;" href="#">Forgot your password?</a>
+                      </form>
                 </div>
             </div>
         </div>
@@ -244,10 +140,10 @@
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 resp" style="position: relative;">
                 <img src="img/circle.png" class="img-fluid ">
             </div>
-            
+
             <!------------------------------------------------tables and form-------------------------------->
 
-            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" >
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                 <div class="container">
                     <div class="container-fluid">
                         <div class="row my-4">
@@ -318,7 +214,7 @@
                                     </tbody>
                                 </table>
                             </div>
-            
+
                             <!-------------------------------------FORM--------------------------------------------------->
                             <div class="col-lg-4 table-responsive">
                                 <table class="table table-sm table-borderless">
