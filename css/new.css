@@ -133,8 +133,10 @@ color: #0BB44F;
 .topimg{
   top:-180px;
 }
+/*home.html cards div*/
 .over{
   top: -620px;
+  margin-bottom: -740px;
 }
 .hg{
   height: 500px;
@@ -146,6 +148,11 @@ color: #0BB44F;
   top:-540px;
   right:-50px;
 }
+/*about.html text*/
+.t{
+  top:60%;
+}
+
  }
 
 @media (min-width: 576px) {
@@ -164,8 +171,10 @@ color: #0BB44F;
   top: 180px;
   left: 66px;
 }
+/*home.html cards div*/
 .over{
   top: -580px;
+  margin-bottom: -650px;
 }
 .hg{
   height: 350px;
@@ -176,6 +185,15 @@ color: #0BB44F;
   width:200px;
   right:-420px;
 }
+/*about.html text*/
+.t{
+  top:60%;
+}
+/*about.html div*/
+.over-about{
+  top:-80px;
+}
+
  }
 
 @media (min-width: 768px) {
@@ -194,8 +212,10 @@ color: #0BB44F;
   top: 90px;
   left: 66px;
 }
+/*home.html cards div*/
 .over{
   top: -620px;
+  margin-bottom: -640px;
 }
 .hg{
   height: 350px;
@@ -205,6 +225,17 @@ color: #0BB44F;
   position: absolute;
   width:230px;
   right:-270px;
+}
+.img-resp{
+  height:600px;
+}
+/*about.html text*/
+.t{
+  top:30%;
+}
+/*about.html div*/
+.over-about{
+  top:-120px;
 }
  }
  
@@ -224,8 +255,10 @@ color: #0BB44F;
   top: 100px;
   left: 66px;
 }
+/*home.html cards div*/
 .over{
   top: -720px;
+  margin-bottom: -630px;
 }
 .hg{
   height: 450px;
@@ -234,6 +267,17 @@ color: #0BB44F;
   position: absolute;
   width:270px;
   right:-150px;
+}
+.img-resp{
+  height:600px;
+}
+/*about.html text*/
+.t{
+  top:60%;
+}
+/*about.html div*/
+.over-about{
+  top:-180px;
 }
  }
 
@@ -254,8 +298,10 @@ color: #0BB44F;
   top: 130px;
   left: 196px;
 }
+/*home.html cards div*/
 .over{
   top: -720px;
+  margin-bottom: -610px;
 }
 .hg{
   height: 450px;
@@ -267,6 +313,20 @@ color: #0BB44F;
   width:300px;
   right:-150px;
 }
+.img-resp{
+  height:600px;
+}
+/*about.html text*/
+.t{
+  top:40%;
+}
+
+/*about.html div*/
+.over-about{
+  top:-150px;
+}
+/*black overlay effect on image*/
+
  }
 
 /* Centered text */
@@ -276,7 +336,6 @@ color: #0BB44F;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     position: absolute;
-    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
