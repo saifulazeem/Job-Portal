@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        .myDiv:target{
+        
+        display:block !important;
+        
+        }
+        
+        </style>
 </head>
 <body>
-   
+  <!--seen-->
+  <a href="#First" >First Div</a>
+
+<a href="#Second">Second Div</a>
+
+<a href="#Third">Third Div</a>
+
+<a href="#Fourth">Fourth Div</a>
+
+<!---visible-->
+<div class="myDiv" id="First" style="display:none">First</div>
+
+<div class="myDiv" id="Second" style="display:none">Second</div>
+
+<div class="myDiv" id="Third" style="display:none">Third</div>
+
+<div class="myDiv" id="Fourth" style="display:none">Fourth</div>
+
 </body>
 </html>

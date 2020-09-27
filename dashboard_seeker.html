@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
-    <title>Company Admin Panel</title>
+    <title>Seeker Admin Panel</title>
 
 </head>
 
@@ -24,13 +24,13 @@
     <nav class="navbar navbar-expand-lg n pr-auto">
         <img src="img/logo.png" class="img-fluid navbar-brand navbar-nav mr-auto">
         <button class="btn bg-white btn-lg active rounded-pill" style="padding-left: 30px; padding-right: 30px;">
-            <a href="#" class="b">Login</a>
+            <a href="login.html" class="b">Login</a>
         </button>
     </nav>
 
     <!------------------------------------------Body---------------------------------------------------------->
     <div class="container my-5">
-        <div class="row row-cols-2">
+        <div class="row row-cols-2 mx-2">
             <!------------------------------------------Side Bar left---------------------------------------------->
             <div class="container text-white  col-lg-3 col-md-4 col-sm-6 rounded col-12 rounded "
                 style="background-color: #0D2942;">
@@ -44,21 +44,21 @@
                     <p class="mx-auto pt-3" style="font-size: 14;">@Username</p>
                 </div>
 
-                <div class="row my-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-xs-3">
+                <div class="row my-2 mx-2">
+                    <div class="col-lg-4 col-md-5 col-sm-6 col-xs-1">
                         Profile
                     </div>
-                    <div class="col-lg-3 offset-lg-5 col-md-4 offset-md-3 col-sm-6 col-xs-3">
+                    <div class="col-lg-3 offset-lg-5 col-md-4 offset-md-3 col-sm-2 offset-sm-2 col-xs-2">
                         25%
                     </div>
                 </div>
-                <div class="progress"  style="height:8px">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25"
+                <div class="progress mx-2"  style="height:8px; ">
+                    <div class="progress-bar bg-success" type="range" role="progressbar" style="width: 25%" aria-valuenow="25"
                         aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
 
 
-                <div class="row row-sm-2 my-3" style="font-size: 14px;">
+                <div class="row row-sm-2 my-3 mx-2" style="font-size: 14px;">
                     <!----------------------------------------Vertical navigation bar------------------------------------------->
                     <nav class="navbar navbar-expand text-white">
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -69,7 +69,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class=" nav-link" href="#" role="button" aria-haspopup="true"
+                                    <a class="nav-link" href="#editprofile" role="button" aria-haspopup="true"
                                         aria-expanded="false">
                                         <img src="img/profilelogo.png" class="img-fluid">
                                         Edit Profile
@@ -77,7 +77,15 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" role="button" aria-haspopup="true"
+                                    <a class="nav-link" href="#resume" role="button" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <img src="img/resume.png" class="img-fluid my-2">
+                                        Resume
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#jobs" role="button" aria-haspopup="true"
                                         aria-expanded="false">
                                         <img src="img/jobposted.png" class="img-fluid">
                                         Jobs
@@ -85,7 +93,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" role="button" aria-haspopup="true"
+                                    <a class="nav-link" href="#deletejobs" role="button" aria-haspopup="true"
                                         aria-expanded="false">
                                         <img src="img/delete.png" class="img-fluid my-2">
                                         Delete Profile
@@ -101,12 +109,31 @@
             <!------------------------------------------Side bar right---------------------------------------------->
             <div
                 class="container col-lg-8 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-5 col-sm-offset-1 col-12 rounded roun">
-                <nav aria-label="breadcrumb" style="margin-left: -15px; margin-right: -15px;">
+                <nav aria-label="breadcrumb">
                     <ol class="breadcrumb " style="background-color: #969696;">
                         <li class="breadcrumb-item "><a class="text-white" href="#">Home</a></li>
                         <li class="breadcrumb-item active  text-white" aria-current="page">JOBS PORTAL Admin Panel</li>
                     </ol>
                 </nav>
+                <!----------------------edit profile------------------->
+                <div class="mx-4 myDiv" id="editprofile">
+                    <p class="txt-dark">edit profile</p>
+                </div>
+
+                <!----------------------resume-------------------------->
+                <div class="mx-4 myDiv" id="resume">
+                    <p class="txt-dark">resume</p>
+                </div>
+
+                <!----------------------jobs--------------------------->
+                <div class="mx-4 myDiv" id="jobs">
+                    <p class="txt-dark">jobs</p>
+                </div>
+
+                <!----------------------delete jobs-------------------->
+                <div class="mx-4 myDiv" id="deletejobs">
+                    <p class="txt-dark">delete jobs</p>
+                </div>
             </div>
         </div>
     </div>
