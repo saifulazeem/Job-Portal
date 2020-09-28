@@ -21,6 +21,19 @@ body{
   .s{
     right: 358px;
   }
+  
+/* Style the links inside the navigation bar */
+.nav-item a:hover {
+    border-bottom: 3px solid #0BB44F;
+    color: #0BB44F;
+  }
+  
+  .active {
+    border-bottom: 3px solid #0BB44F;
+  }
+    .nav-link{
+      color: white;
+      }
   .mx-auto{
     margin-top: -40px;
   }
@@ -83,12 +96,7 @@ color:white;
 .roun{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.nav-link:hover{
-color: #0BB44F;
-}
-.nav-link{
-  color: white;
-  }
+
 .link:hover{
   color: #0BB44F;
   }
@@ -363,12 +371,18 @@ color: #0BB44F;
 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+/*button*/
 .ex {
     padding-right: 70px;
     padding-left: 70px;
     border-radius: 8px;
 }
-
+.bt{
+  background-color: #0D2942;
+}
+.bt:hover{
+background-color: #153E63;
+}
 .for {
     border-radius: 15px;
     height: auto;

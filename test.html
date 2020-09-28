@@ -1,37 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-
-        .myDiv:target{
-        
-        display:block !important;
-        
-        }
-        
-        </style>
-</head>
+<html>
 <body>
-  <!--seen-->
-  <a href="#First" >First Div</a>
 
-<a href="#Second">Second Div</a>
+<form>
+  Select your favorite fruit:
+  <select id="mySelect">
+    <option>choose</option>
+    <option value="orange">Orange</option>
+    <option value="pineapple">Pineapple</option>
+    <option value="banana">Banana</option>
+  </select>
+</form>
 
-<a href="#Third">Third Div</a>
+<p id="this">Click the button to change the selected fruit to banana.</p>
 
-<a href="#Fourth">Fourth Div</a>
+<button type="button" onclick="myFunction()">Try it</button>
 
-<!---visible-->
-<div class="myDiv" id="First" style="display:none">First</div>
-
-<div class="myDiv" id="Second" style="display:none">Second</div>
-
-<div class="myDiv" id="Third" style="display:none">Third</div>
-
-<div class="myDiv" id="Fourth" style="display:none">Fourth</div>
+<script>
+function myFunction() {
+  document.getElementById("this").innerHTML = document.getElementById("mySelect").value;
+}
+</script>
 
 </body>
 </html>

@@ -7,13 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <title>Recruiter Login</title>
+    <title>SIGN UP</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
 </head>
+<script language='javascript' type='text/javascript'>
+    function check(input) {
+        if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+        }
+    }
+</script>
 
 <body>
     <!-------------------------------------NAVIGATION BAR----------------------------------------------->
@@ -28,19 +38,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav justify-content-end ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">ABOUT US </a>
+                    <a class="nav-link" href="about.html">ABOUT US <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">EMPLOYERS PROFILE</a>
+                    <a class="nav-link" href="dashboard_employer.html">EMPLOYERS PROFILE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CAREERS GUIDE</a>
+                    <a class="nav-link" href="#">CAREERS GUIDE<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">BLOG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="">RECRUITER LOGIN</a>
+                    <a class="nav-link" href="Recruiterlogin.html">RECRUITER LOGIN</a>
                 </li>
             </ul>
         </div>
@@ -49,49 +59,119 @@
         </button>
 
     </nav>
+
     <!---------------------------------------------CONTAINER--------------------------------------------->
     <div>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <!--------------------------IMAGE-------------------------------------------------------->
-                <div class="col-lg-6">
-                    <div class="header">
-                        <img src="img/login.png" style="text-align: center;" class="imag img-resp img-fluid"
-                            alt="Responsive image">
-                    </div>
-                    <div class="centered text-center" style="top: 40%; ">
-                        <p style="font-size:7vw;" class="text-center t text-white">LOGIN</p>
-                    </div>
-                </div>
 
-                <!--------------------------FORM--------------------------------------------------------->
-                <div class="col-lg-5 offset-lg-2 mr-3 ml-3 my-4">
-
-                    <div class="row d-flex justify-content-center align-item-center mt-3">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">Email Address</label>
-                                <input type="email" size="60" required class="form-control f" id="exampleInputEmail1"
-                                    placeholder="example@email.com" aria-describedby="emailHelp">
+                <!--------------------------FORM--------------------------------------------------->
+                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-6 mx-auto my-4 roun rounded"
+                    style="background-color:#e0e0e0;">
+                    <div class="row m-3">
+                        <form action="register_employee2.html">
+                            <!-------------------------------NAME------------------------------------->
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="exampleInputEmail1" class=" mx-2">First
+                                        name<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control f" required placeholder="John">
+                                </div>
+                                <div class="col">
+                                    <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">Last
+                                        name<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control f" required placeholder="Smith">
+                                </div>
+                            </div>
+                            <!-------------------------------Email------------------------------------->
+                            <div class="form-group mt-3">
+                                <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">Email
+                                    Address<span class="text-danger">*</span></label>
+                                <input type="email" size="60" required class="form-control f" required
+                                    id="exampleInputEmail1" placeholder="example@email.com"
+                                    aria-describedby="emailHelp">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                                     anyone else.</small>
                             </div>
+                            <!-------------------------------Password------------------------------------->
                             <div class="form-group">
-                                <label for="exampleInputPassword1" class="d-flex align-items-start mx-2">Password</label>
-                                <input type="password" size="60" required minlength="8" class="form-control f"
-                                    id="exampleInputPassword1" placeholder="***********">
+                                <label for="exampleInputPassword1"
+                                    class="d-flex align-items-start mx-2">Password<span class="text-danger">*</span></label>
+                                <input type="password" size="60" required minlength="8" required class="form-control f"
+                                id="password" placeholder="***********">
+                                <small id="passwordHelpInline" class="text-muted">
+                                    Must be 8-20 characters long.
+                                </small>
                             </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1" class="d-flex align-items-start mx-2">Confirm
+                                    Password<span class="text-danger">*</span></label>
+                                <input type="password" size="60" required minlength="8" required class="form-control f"
+                                id="password_confirm" oninput="check(this)" placeholder="***********">
+                                    <small id="passwordHelpInline" class="text-muted">
+                                        Must be 8-20 characters long.
+                                    </small>
                             </div>
-                            <button type="submit" class="btn ex bt text-white">Login</button>
-                            <br><br>
-                            <a class="chan2" style="text-decoration: none;" href="#">Sign Up</a>
-                            <br>
-                            <a class="my-2 chan" style="text-decoration: none;" href="#">Forgot your password?</a>
+                            <!-------------------------------Country------------------------------------->
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">State<span class="text-danger">*</span></label>
+                                    <select id="inputState" required class="form-control f">
+                                        <option selected>Choose...</option>
+                                        <option>Pakistan</option>
+                                        <option>India</option>
+                                        <option>America</option>
+                                        <option>Germany</option>
+                                    </select>
+                                </div>
+                                <!-------------------------------City------------------------------------->
+                                <div class="form-group col-md-6 offset-md-2">
+                                    <label for="inputCity">City<span class="text-danger">*</span></label>
+                                    <input type="text" required class="form-control f" placeholder="xyz" id="inputCity">
+                                </div>
+                            </div>
+
+                            <!-------------------------------Cell number------------------------------------->
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <!-------------------------------Country Code-------------------------->
+                                    <label for="inputcountrycode">Country Code<span class="text-danger">*</span></label>
+                                    <select id="inputcountrycode" required class="form-control f">
+                                        <option selected>Choose...</option>
+                                        <option>+92</option>
+                                        <option>+1</option>
+                                        <option>+91</option>
+                                    </select>
+                                </div>
+                                <!-------------------------------Sim Code-------------------------->
+                                <div class="form-group col-md-4">
+                                    <label for="inputSimCode">Sim Code<span class="text-danger">*</span></label>
+                                    <select id="inputSimCode" required class="form-control f">
+                                        <option selected>Choose...</option>
+                                        <option>+92</option>
+                                        <option>+1</option>
+                                        <option>+91</option>
+                                    </select>
+                                </div>
+
+                                <!-------------------------------Number-------------------------->
+                                <div class="form-group col-md-4">
+                                    <label for="inputnum">Number<span class="text-danger">*</span></label>
+                                    <input type="text" pattern="[0-9]{7}" title="Numbers only" required class="form-control f" placeholder="1234567" id="inputnum">
+                                </div>
+                            </div>
+
+                            <!-------------------------BUTTON------------------------------------->
+                            <div class="d-flex justify-content-center align-self-center mt-3">
+                                <button type="submit" class="btn ex text-white bt">Next</button>
+                            </div>
                         </form>
                     </div>
+                    <div class="d-flex justify-content-center align-self-center">
+                        Already Have an Account?<a class="chan" style="text-decoration: none;"
+                            href="login.html"><b>&nbsp
+                                Sign In </b></a>
+                    </div><br>
                 </div>
             </div>
         </div>
