@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <title>SIGN UP - EMPLOYEE</title>
+    <title>SIGN UP - MODERATOR</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -64,7 +64,7 @@
     <div>
         <div class="container">
             <div class="row mx-auto mt-4" style="padding:50px; margin-bottom: -50px;">
-                <h1 class="8vw text-dark mx-auto">EMPLOYEE SIGN UP</h1>
+                <h1 class="8vw text-dark mx-auto">MODERATOR SIGN UP</h1>
             </div>
             <div class="row">
 
@@ -78,12 +78,16 @@
                                 <div class="col">
                                     <label for="exampleInputEmail1" class=" mx-2">First
                                         name<span class="text-danger">*</span></label>
-                                    <input pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter on alphabets only. ')" type="text" class="form-control f" required placeholder="John">
+                                    <input pattern="[a-zA-Z]+"
+                                        oninvalid="setCustomValidity('Please enter on alphabets only. ')" type="text"
+                                        class="form-control f" required placeholder="John">
                                 </div>
                                 <div class="col">
                                     <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">Last
                                         name<span class="text-danger">*</span></label>
-                                    <input pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter on alphabets only. ')" type="text" class="form-control f" required placeholder="Smith">
+                                    <input pattern="[a-zA-Z]+"
+                                        oninvalid="setCustomValidity('Please enter on alphabets only. ')" type="text"
+                                        class="form-control f" required placeholder="Smith">
                                 </div>
                             </div>
                             <!-------------------------------Email------------------------------------->
@@ -98,83 +102,42 @@
                             </div>
                             <!-------------------------------Password------------------------------------->
                             <div class="form-group">
-                                <label for="exampleInputPassword1"
-                                    class="d-flex align-items-start mx-2">Password<span class="text-danger">*</span></label>
+                                <label for="pass" class="d-flex align-items-start mx-2">Password<span
+                                        class="text-danger">*</span></label>
                                 <input type="password" size="60" required minlength="8" required class="form-control f"
-                                id="password" placeholder="***********">
+                                    id="password" placeholder="***********">
                                 <small id="passwordHelpInline" class="text-muted">
                                     Must be 8-20 characters long.
                                 </small>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1" class="d-flex align-items-start mx-2">Confirm
+                                <label for="confpass" class="d-flex align-items-start mx-2">Confirm
                                     Password<span class="text-danger">*</span></label>
                                 <input type="password" size="60" required minlength="8" required class="form-control f"
-                                id="password_confirm" oninput="check(this)" placeholder="***********">
-                                    <small id="passwordHelpInline" class="text-muted">
-                                        Must be 8-20 characters long.
-                                    </small>
+                                    id="password_confirm" oninput="check(this)" placeholder="***********">
+                                <small id="passwordHelpInline" class="text-muted">
+                                    Must be 8-20 characters long.
+                                </small>
                             </div>
-                            <!-------------------------------Country------------------------------------->
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="inputState">State<span class="text-danger">*</span></label>
-                                    <select id="inputState" required class="form-control f">
-                                        <option selected>Choose...</option>
-                                        <option>Pakistan</option>
-                                        <option>India</option>
-                                        <option>America</option>
-                                        <option>Germany</option>
-                                    </select>
-                                </div>
-                                <!-------------------------------City------------------------------------->
-                                <div class="form-group col-md-6 offset-md-2">
-                                    <label for="inputCity">City<span class="text-danger">*</span></label>
-                                    <input type="text" required class="form-control f" placeholder="xyz" id="inputCity">
-                                </div>
-                            </div>
-
-                            <!-------------------------------Cell number------------------------------------->
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <!-------------------------------Country Code-------------------------->
-                                    <label for="inputcountrycode">Country Code<span class="text-danger">*</span></label>
-                                    <select id="inputcountrycode" required class="form-control f">
-                                        <option selected>Choose...</option>
-                                        <option>+92</option>
-                                        <option>+1</option>
-                                        <option>+91</option>
-                                    </select>
-                                </div>
-                                <!-------------------------------Sim Code-------------------------->
-                                <div class="form-group col-md-4">
-                                    <label for="inputSimCode">Sim Code<span class="text-danger">*</span></label>
-                                    <select id="inputSimCode" required class="form-control f">
-                                        <option selected>Choose...</option>
-                                        <option>+92</option>
-                                        <option>+1</option>
-                                        <option>+91</option>
-                                    </select>
-                                </div>
-
-                                <!-------------------------------Number-------------------------->
-                                <div class="form-group col-md-4">
-                                    <label for="inputnum">Number<span class="text-danger">*</span></label>
-                                    <input type="text" pattern="[0-9]{7}" title="Numbers only" required class="form-control f" placeholder="1234567" id="inputnum">
-                                </div>
+                            <!-------------------------------Specify Access------------------------------------->
+                            <div class="form-group">
+                                <label for="access">Specify Access<span class="text-danger">*</span></label>
+                                <select id="access" required class="form-control f">
+                                    <option selected>Choose...</option>
+                                    <option>Manage Blogs</option>
+                                    <option>Provide User Authorization</option>
+                                    <option>Manage Complains</option>
+                                    <option>Approve Job Post</option>
+                                </select>
                             </div>
 
                             <!-------------------------BUTTON------------------------------------->
                             <div class="d-flex justify-content-center align-self-center mt-3">
                                 <button type="submit" class="btn ex text-white bt">
-                                    <a href="register_employee2.html" class="text-white" style="text-decoration: none;">Next</a></button>
+                                    <a href="register_employee2.html" class="text-white"
+                                        style="text-decoration: none;">REGISTER MODERATOR</a></button>
                             </div>
                         </form>
-                    </div>
-                    <div class="d-flex justify-content-center align-self-center">
-                        Already Have an Account?<a class="chan" style="text-decoration: none;"
-                            href="login.html"><b>&nbsp
-                                Sign In </b></a>
                     </div><br>
                 </div>
             </div>

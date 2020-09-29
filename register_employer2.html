@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <title>SIGN UP - EMPLOYER</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+
+    <script type="text/JavaScript">
+    function showInput() {
+        document.getElementById('sum').innerHTML =document.getElementById("summary").value;
+    }
+
+    function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+</head>
+
+<body>
+    <!-------------------------------------NAVIGATION BAR----------------------------------------------->
+
+    <nav class="navbar navbar-expand flex-column flex-md-row bd-navbar n">
+        <div>
+            <a class="navbar-brand mr-0 mr-md-2" href="#">
+                <img src="img/logo.png" class="img-fluid navbar-brand navbar-nav d-block">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav justify-content-end ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT US <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard_employer.html">EMPLOYERS PROFILE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CAREERS GUIDE<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Recruiterlogin.html">RECRUITER LOGIN</a>
+                </li>
+            </ul>
+        </div>
+        <button class="btn bg-white btn-lg active rounded-pill " style="padding-left: 30px; padding-right: 30px;">
+            <a href="login.html" class="b">Login</a>
+        </button>
+
+    </nav>
+
+    <!---------------------------------------------CONTAINER--------------------------------------------->
+
+
+
+    <div>
+        <div class="container">
+            <div class="row mx-auto mt-4" style="padding:50px; margin-bottom: -50px;">
+                <h1 class="8vw text-dark mx-auto">EMPLOYER SIGN UP</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-6 mx-auto my-4 roun rounded"
+                    style="background-color:#e0e0e0;">
+                    <div class="row">
+                        <div class="col mx-2 my-2">
+                            <div class="">
+                                <img src="img/profile.png" id="blah" class="img-fluid holder">
+                                <!--avatar icon-->
+                                <input type='file' id="BtnBrowseHidden" onchange="readURL(this);"
+                                    style="display: none;" />
+                                <label for="BtnBrowseHidden" id="LblBrowse">
+                                    <div class="holderimg">
+                                        <!--upload icon-->
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-camera"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M15 12V6a1 1 0 0 0-1-1h-1.172a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 9.173 3H6.828a1 1 0 0 0-.707.293l-.828.828A3 3 0 0 1 3.172 5H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z" />
+                                            <path fill-rule="evenodd"
+                                                d="M8 11a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                            <path d="M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                                        </svg>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-inline bg-success table-responsive table-borderless offset-1">
+                                <table class="table table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="color: black;">Phone</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color: black;">Email</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------------------------------Second Container------------------------------------------>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-6 mx-auto my-4 roun rounded"
+                    style="background-color:#e0e0e0;">
+
+                    <form>
+                        <!--------------------------FORM--------------------------------------------------->
+                        <!-------------------------------CEO------------------------------------->
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">CEO<span
+                                    class="text-danger">*</span></label>
+                            <input pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter on alphabets only. ')"
+                                type="text" class="form-control f" required placeholder="Smith">
+                        </div>
+
+                        <!-------------------------------About------------------------------------->
+                        <div class="form-group mt-3">
+                            <label for="about">About<span class="text-danger">*</span></label>
+                            <textarea name="about" required placeholder="Some info" id="summary"
+                            class="form-control f about textarea_counter" rows="8"
+                            aria-hidden="true"></textarea>
+                        </div>
+                        <!-------------------------------INDUSTRY------------------------------------->
+                        <div class="form-group mt-3">
+                            <label for="industry">Industry<span class="text-danger">*</span></label>
+                            <select class="form-control f" name="industry" required id="industry">
+                                <option value="">Choose any one</option>
+                                <option class="black" value="8">Accounting / Taxation</option>
+                                <option class="black" value="7">Advertising / PR</option>
+                                <option class="black" value="24">Agriculture / Fertilizer / Pesticide
+                                </option>
+                                <option class="black" value="117">Apparel/Clothing</option>
+                                <option class="black" value="62">Architecture/Interior Design</option>
+                                <option class="black" value="33">Arts / Entertainment</option>
+                                <option class="black" value="48">AutoMobile</option>
+                                <option class="black" value="347">Aviation</option>
+                                <option class="black" value="3">Banking/Financial Services</option>
+                                <option class="black" value="63">BPO</option>
+                                <option class="black" value="34">Broadcasting</option>
+                                <option class="black" value="35">Business Development</option>
+                                <option class="black" value="47">Call Center</option>
+                                <option class="black" value="12">Chemicals</option>
+                                <option class="black" value="28">Construction/Cement/Metals</option>
+                                <option class="black" value="106">Consultants</option>
+                                <option class="black" value="70">Courier / Logistics</option>
+                                <option class="black" value="122">Distribution and Logistics</option>
+                                <option class="black" value="11">Education/Training</option>
+                                <option class="black" value="45">Electronics</option>
+                                <option class="black" value="46">Engineering</option>
+                                <option class="black" value="64">Event Management</option>
+                                <option class="black" value="61">Fashion</option>
+                                <option class="black" value="4">Fast Moving Consumer Goods (FMCG)</option>
+                                <option class="black" value="118">Food &amp; Beverages</option>
+                                <option class="black" value="65">Gems &amp; Jewelery</option>
+                                <option class="black" value="66">Government</option>
+                                <option class="black" value="67">Health &amp; Fitness</option>
+                                <option class="black" value="68">Healthcare / Hospital / Medical</option>
+                                <option class="black" value="69">Hospitality</option>
+                                <option class="black" value="25">Hotel Management / Restaurants</option>
+                                <option class="black" value="103">Importers / Distributors/Exporters
+                                </option>
+                                <option class="black" value="1">Information Technology</option>
+                                <option class="black" value="6">Insurance / Takaful</option>
+                                <option class="black" value="116">Investments</option>
+                                <option class="black" value="31">Law Firms/Legal</option>
+                                <option class="black" value="10">Manufacturing</option>
+                                <option class="black" value="30">Media/Communications</option>
+                                <option class="black" value="27">Mining / Petroleum</option>
+                                <option class="black" value="44">N.G.O./Social Services</option>
+                                <option class="black" value="183">Oil &amp; Gas / Natural Resources</option>
+                                <option class="black" value="107">Packaging</option>
+                                <option class="black" value="115">Personal Care and Services</option>
+                                <option class="black" value="5">Pharmaceuticals / Clinical Research</option>
+                                <option class="black" value="71">Power / Energy</option>
+                                <option class="black" value="91">Project Management</option>
+                                <option class="black" value="37">Publishing/Printing</option>
+                                <option class="black" value="73">Real Estate/Property</option>
+                                <option class="black" value="72">Recruitment / Employment Firms</option>
+                                <option class="black" value="42">Retail</option>
+                                <option class="black" value="74">Security / Law Enforcement</option>
+                                <option class="black" value="41">Services</option>
+                                <option class="black" value="75">Shipping / Marine</option>
+                                <option class="black" value="2">Telecommunication / ISP</option>
+                                <option class="black" value="9">Textiles / Garments</option>
+                                <option class="black" value="119">Tiles &amp; Ceramics</option>
+                                <option class="black" value="38">Travel/Tourism/Transportation</option>
+                                <option class="black" value="120">Warehousing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                
+                <!-------------------------------Website------------------------------------->
+                <div class="form-group mt-3">
+                    <label for="website" class="d-flex align-items-start mx-2">Website</label>
+                    <input type="url" pattern="https?://.+" class="form-control f" placeholder="https://www.example.com">
+                </div>
+                
+                <!-------------------------------No. of employees------------------------------------->
+                <div class="form-group mt-3">
+                    <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">No. of employees<span
+                            class="text-danger">*</span></label>
+                    <input type="number" class="form-control f" required placeholder="10">
+                    <small class="text-muted">Enter numbers only</small>
+
+                </div>
+
+                <!-------------------------------Operating since------------------------------------->
+                <div class="form-group mt-3">
+                    <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">Operating since<span
+                            class="text-danger">*</span></label>
+                            <div class="has-feedback">
+                                <select class="form-control f" name="startDate[]" required
+                                    id="EndDateYear">
+                                    <option value="">Year</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                    <option value="1979">1979</option>
+                                    <option value="1978">1978</option>
+                                    <option value="1977">1977</option>
+                                    <option value="1976">1976</option>
+                                    <option value="1975">1975</option>
+                                    <option value="1974">1974</option>
+                                    <option value="1973">1973</option>
+                                    <option value="1972">1972</option>
+                                    <option value="1971">1971</option>
+                                    <option value="1970">1970</option>
+                                </select>
+                            </div>
+
+                </div>
+
+                <!-------------------------BUTTON------------------------------------->
+                <div class="d-flex justify-content-center align-self-center mt-3 mb-4">
+                    <button type="submit" class="btn ex text-white bt">
+                        <a href="" class="text-white" style="text-decoration: none;">REGISTER</a></button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-----------------------------------------------------FOOTER----------------------------------------------------------->
+    <footer class="container-fluid foot" style="background-color: #323232;">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="img/logo.png" class="img-fluid d-block">
+                    <!--logo-->
+                </div>
+                <div class="col my-auto">
+                    <div class="row">
+                        <div class="col-lg-1 offset-lg-2 col-md-1 offset-md-2 col-sm-1 offset-sm-2 px-0 my-2">
+                            <img src="img/joblisting.png" class="img-fluid d-flex justify-content ">
+                        </div>
+                        <div class="col-lg-2 col-md-1 col-sm-1 hov px-0">
+                            <p class="tag d-flex justify-content">1124</p>
+                            <p class="text d-flex justify-content py-0">Job Listing</p>
+                        </div>
+                        <div class="col-lg-1 offset-lg-2 col-md-1 offset-md-2 col-sm-1 offset-sm-2 px-0 my-2">
+                            <img src="img/resumeposted.png" class="img-fluid d-flex justify-content">
+                        </div>
+                        <div class="col-lg-4 col-md-1 col-sm-1 hov px-0">
+                            <p class="tag d-flex justify-content">444</p>
+                            <p class="text d-flex justify-content py-0">Resumes Posted</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------------------------------HORIZONTAL LINE------------------------------------->
+        <div class="row">
+            <div class="col-md-12">
+                <hr style="background-color: green; height: 1.2px;" class="p-0 m-0">
+            </div>
+        </div>
+
+        <!-------------------------------------------NEXT ROW------------------------------------------------>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 resp" style="position: relative;">
+                <img src="img/circle.png" class="img-fluid ">
+            </div>
+
+            <!------------------------------------------------tables and form-------------------------------->
+
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                <div class="container">
+                    <div class="container-fluid">
+                        <div class="row my-4">
+                            <!-------------------------------------TABLE--------------------------------------------------->
+                            <div class="col-lg-8  table-responsive">
+                                <table class="table table-sm table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="d-flex justify-content" style="font-size: 20px;"> For
+                                                    Candidates
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p class="d-flex justify-content" style="font-size: 20px;">For
+                                                    Employers
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p class="d-flex justify-content" style="font-size: 20px;">Other</p>
+                                            </td>
+                                            <td>
+                                                <p class="d-flex justify-content" style="font-size: 20px;">Legal</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="text link d-flex justify-content" href="#">Browse Jobs</a>
+                                            </td>
+                                            <td><a class="text link d-flex justify-content" href="#">Browse
+                                                    Candidates</a>
+                                            </td>
+                                            <td><a class="text link d-flex justify-content" href="#">Job Page</a>
+                                            </td>
+                                            <td><a class="text link d-flex justify-content" href="#">Privacy
+                                                    Policy</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="text link d-flex justify-content" href="#">Browse
+                                                    Categories</a>
+                                            </td>
+                                            <td><a class="text link d-flex justify-content" href="#">Employer
+                                                    Dashboard</a>
+                                            </td>
+                                            <td><a class="text link d-flex justify-content" href="#">Job Page
+                                                    Alternative</a></td>
+                                            <td><a class="text link d-flex justify-content" href="#">Terms of
+                                                    Use</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="text link d-flex justify-content" href="#">Candidate
+                                                    Dashboard</a>
+                                            </td>
+                                            <td><a class="text link d-flex justify-content" href="#">Add Job</a>
+                                            </td>
+                                            <td><a class="text link d-flex justify-content" href="#">Resume Page</a>
+                                            </td>
+                                            <td><a class="text link d-flex justify-content" href="#">FAQ</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="text link d-flex justify-content" href="#">Job Alerts</a>
+                                            </td>
+                                            <td><a class="text link d-flex justify-content" href="#">Job
+                                                    Packages</a>
+                                            </td>
+                                            <td><a class="text link d-flex justify-content" href="#">Blog</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="text link d-flex justify-content" href="#">My
+                                                    Bookmarks</a>
+                                            </td>
+                                            <td><a class="text link d-flex justify-content" href="#"></a></td>
+                                            <td><a class="text link d-flex justify-content" href="#">Contact</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-------------------------------------FORM--------------------------------------------------->
+                            <div class="col-lg-4 table-responsive">
+                                <table class="table table-sm table-borderless">
+                                    <tbody>
+                                        <tr>
+                                            <td scope="col"><img src="img/newsletter.png" class="img-fluid"></td>
+                                            <td scope="col" colspan="3" style="font-size: 20px;">Sign Up For a
+                                                Newsletter
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <p class="link text d-flex justify-content">
+                                                    Weekly breaking news, analysis and cutting edge
+                                                    advices on job searching.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <form class="form-inline my-2 my-lg-0 ml-2">
+                                                    <input class="form-control mr-sm-2" type="email" size="22"
+                                                        style=" background-color: #818181;"
+                                                        placeholder="Enter your Email here...">
+                                                    <button class="btn btn-success rounded my-2 my-sm-0"
+                                                        style="width:min-content;" type="submit">SUBSCRIBE</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
