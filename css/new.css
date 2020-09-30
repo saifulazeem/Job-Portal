@@ -74,6 +74,7 @@ color:white;
 .h::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   /* Firefox */
   color:grey;
+  padding-left: 20px;
 }
 
 /*about.html placeholder*/
@@ -136,7 +137,7 @@ color:white;
 .container {
   padding: 0px;
 }
-
+/***********************************************************************************************************************/
 @media (max-width: 575.98px) {
   .resp {
    position: absolute;
@@ -174,9 +175,46 @@ color:white;
 .t{
   margin-top: 90px;
 }
-
+/*home.html main img top*/ 
+.homeimg{
+  height:580px;
+  width:1300px;
+}
+.homeover{
+  margin-top: -250px;
+}
+.hometexttop{
+  position: absolute;
+  top: 220px;
+  left: 16px;
+}
+.h::placeholder{
+  font-size: 12px;
+  padding-left: 3px;
+}
+.homedivtxt{
+  font-size: 20px;
+  font-weight:600;
+}
+/*home.html slider*/
+.homeimgslide{
+  position: relative; 
+  border-radius: 20px;
+  width:120px;
+  height:120px;
+  margin: 0px;
+}
+.homeimgslidetxt{
+  font-size:12px;
+  width:120px;
+  top: 100px; 
+  position:absolute;
+  text-align:center;
+  border-radius: 15px; 
+  background-color: #0BB44F;
+}
  }
-
+/***********************************************************************************************************************/
 @media (min-width: 576px) {
   .resp {
    position: absolute;
@@ -216,9 +254,51 @@ color:white;
 .over-about{
   top:-80px;
 }
-
+/*home.html main img top*/ 
+.homeimg{
+  height:580px;
+  width:1300px;
+}
+.homeover{
+  margin-top: -250px;
+}
+.hometexttop{
+  position: absolute;
+  top: 220px;
+  left: 16px;
+}
+.h::placeholder{
+  font-size: 12px;
+  padding-left: 3px;
+}
+.homedivtxt{
+  font-size: 20px;
+  font-weight:600;
+}
+/*home.html slider*/
+.homeimgslide{
+  position: relative; 
+  border-radius: 20px;
+  width:150px;
+  height:150px;
+  margin: 0px;
+  
+}
+.homeimgslidetxt{
+  font-size:16px;
+  width:150px;
+  top: 120px; 
+  position:absolute;
+  text-align:center;
+  border-radius: 15px; 
+  background-color: #0BB44F;
+}
+/*home.html slider "Select category" position button*/
+.homesel{
+  right:-30px;
+}
  }
-
+/***********************************************************************************************************************/
 @media (min-width: 768px) {
   .resp {
    position: absolute;
@@ -261,8 +341,54 @@ color:white;
 .over-about{
   top:-120px;
 }
+/*home.html main img top*/ 
+.homeimg{
+  height:660px;
+  width:1300px;
+}
+.homeover{
+  margin-top: -290px;
+}
+.hometexttop{
+  position: absolute;
+  top: 130px;
+  left: 136px;
+}
+.h::placeholder{
+  font-size: 12px;
+  padding-left: 3px;
+}
+.homepad{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.homedivtxt{
+  font-size: 22px;
+  font-weight:620;
+}
+/*home.html slider*/
+.homeimgslide{
+  position: relative; 
+  border-radius: 20px;
+  width:150px;
+  height:180px;
+  margin: 0px;
+}
+.homeimgslidetxt{
+  font-size:16px;
+  width:150px;
+  top: 150px; 
+  position:absolute;
+  text-align:center;
+  border-radius: 15px; 
+  background-color: #0BB44F;
+}
+/*home.html slider "Select category" position button*/
+.homesel{
+  right:-90px;
+}
  }
- 
+ /***********************************************************************************************************************/
  @media (min-width: 992px) {
   .resp {    
    position: absolute;
@@ -305,9 +431,50 @@ color:white;
 .over-about{
   top:-180px;
 }
-
+/*home.html main img top*/ 
+.homeimg{
+  height:600px;
+  width:1300px;
+}
+.homeover{
+  margin-top: -250px;
+}
+.hometexttop{
+  position: absolute;
+  top: 130px;
+  left: 196px;
+}
+.homepad{
+  padding-left: 200px;
+  padding-right: 200px;
+}
+.homedivtxt{
+  font-size: 26px;
+  font-weight:650;
+}
+/*home.html slider*/
+.homeimgslide{
+  position: relative; 
+  border-radius: 20px;
+  width:160px;
+  height:200px;
+  margin: 0px;
+}
+.homeimgslidetxt{
+  font-size:18px;
+  width:160px;
+  top: 163px; 
+  position:absolute;
+  text-align:center;
+  border-radius: 20px; 
+  background-color: #0BB44F;
+}
+/*home.html slider "Select category" position button*/
+.homesel{
+  right:-200px;
+}
  }
-
+/***********************************************************************************************************************/
  @media (min-width: 1200px) {
    /*Footer image*/
   .resp {
@@ -358,11 +525,74 @@ color:white;
 .over-about{
   top:-150px;
 }
+/*home.html globe images*/
+.s1{
+  position: absolute;left:900px; top:3300px;
+}
+.s2{
+  position: absolute; left: 400px; top:3300px;
+}
+.s3{
+  position: absolute; right:450px;top:3100px;
+}
+.s4{
+  position: absolute; left:500px; top:3100px;
+}
+/*home.html main img top*/ 
+.homeimg{
+  height:600px;
+  width:3000px;
+}
+.homeover{
+  margin-top: -200px;
+}
+.hometexttop{
+  position: absolute;
+  top: 130px;
+  left: 196px;
+}
+.homepad{
+  padding-left: 200px;
+  padding-right: 200px;
+}
+.homedivtxt{
+  font-size: 30px;
+  font-weight:700;
+}
+/*home.html slider*/
+.homeimgslide{
+  position: relative; 
+  border-radius: 20px;
+  width:200px;
+  height:200px;
+  margin: 0px;
+}
+.homeimgslidetxt{
+  font-size:20px;
+  width:200px;
+  top: 160px; 
+  position:absolute;
+  text-align:center;
+  border-radius: 20px; 
+  background-color: #0BB44F;
+}
+/*home.html slider "Select category" position button*/
+.homesel{
+  right:-270px;
+}
+}
+
+.homeemp{
+  font-size: 40px;
+  font-weight: 800;
+  color: #0BB44F;
+  opacity: 50%;
 }
 /*black overlay effect on image*/
 .header {
   background: black;
 }
+/*for every centered main images in all pgs*/
  .imag {
   object-fit: cover;
   opacity: 0.4;
@@ -476,4 +706,10 @@ background-color:  #0BB44F;
 .aover{
   top: -1000px;
   margin-bottom: -600px;
+}
+/*home.html form*/
+.tb{
+    background-color: white;
+    border-radius: 200px;
+   
 }
