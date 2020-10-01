@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+</head>
+<script language='javascript' type='text/javascript'>
+    function check(input) {
+        if (input.value != document.getElementById('password').value) {
+            input.setCustomValidity('Password Must be Matching.');
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+        }
+    }
+    $(document).ready(function () {
+        $('input[type="radio"]').click(function () {
+            var inputValue = $(this).attr("value");
+            var targetBox = $("." + inputValue);
+            $(".box").not(targetBox).hide();
+
+            $(".first").hide();
+            $(targetBox).show();
+        });
+    });
+
+</script>
+
+<body>
+    <!-------------------------------------NAVIGATION BAR----------------------------------------------->
+
+    <nav class="navbar navbar-expand flex-column flex-md-row bd-navbar n">
+        <div>
+            <a class="navbar-brand mr-0 mr-md-2" href="#">
+                <img src="img/logo.png" class="img-fluid navbar-brand navbar-nav d-block">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav justify-content-end ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT US <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">EMPLOYERS PROFILE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CAREERS GUIDE<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                </li>
+            </ul>
+        </div>
+        <button class="btn bg-white btn-lg rounded-pill " style="padding-left: 30px; padding-right: 30px;">
+            <a href="login.html" class="b">Login</a>
+        </button>
+    </nav>
+
+    <!---------------------------------------------CONTAINER--------------------------------------------->
+    <div class="container first">
+        <div class="row mx-auto mt-4 my-auto" style="padding-top: 100px;">
+            <h1 class="8vw text-dark mt-auto mx-auto mb-2">SIGN UP</h1>
+        </div>
+        <div class="row">
+
+            <!--------------------------FORM--------------------------------------------------->
+            <div class="col-lg-6 col-md-8 col-sm-10 col-xs-6 mx-auto my-4 roun rounded"
+                style="background-color:#e0e0e0;">
+                <div class="row m-3">
+                    <form action="register_employee2.html" method="GET">
+                        <!-------------------------------NAME------------------------------------->
+                        <div class="form-group">
+                            <label for="reg" class=" mx-2 homedivtxt">REGISTER As: </label>
+                            <div class="col m-auto" style="font-size: 20px; ">
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="reg" id="emp" value="emp">
+                                    <label class="form-check-label" for="emp">
+                                        Employer
+                                    </label>
+                                </div>
+                                <div class="form-check mt-2 ">
+                                    <input class="form-check-input" type="radio" name="reg" id="js" value="js">
+                                    <label class="form-check-label" for="js">
+                                        Job Seeker
+                                    </label>
+                                </div>
+                                <div class="first"></div>
+                            </div>
+                        </div>
+                </div>
+
+                <!-------------------------BUTTON------------------------------------->
+
+                <div class="row m-4 float-right">
+                    <button type="submit" class="shadow btn ex text-white bt ">
+                        <a href="#" class="text-white" style="text-decoration: none;">Next</a></button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <!--------------------------SHOW DIV on button click--------------->
+
+
+    <!---------------------------------------------EMPLOYER-------------------------------------------->
+    <div class="emp box" style="display: none;">
+        <div class="container">
+            <div class="row mx-auto mt-4" style="padding:50px; margin-bottom: -50px;">
+                <h1 class="8vw text-dark mx-auto">EMPLOYER SIGN UP</h1>
+            </div>
+            <div class="row">
+
+                <!--------------------------FORM--------------------------------------------------->
+                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-6 mx-auto my-4 roun rounded"
+                    style="background-color:#e0e0e0;">
+                    <div class="row m-3">
+                        <form method="GET">
+                            <!-------------------------------NAME------------------------------------->
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="exampleInputEmail1" class=" mx-2">Company
+                                        name<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control f" required placeholder="John">
+                                </div>
+                            </div>
+                            <!-------------------------------Email------------------------------------->
+                            <div class="form-group mt-3">
+                                <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">Email
+                                    Address<span class="text-danger">*</span></label>
+                                <input type="email" size="60" required class="form-control f" required
+                                    id="exampleInputEmail1" placeholder="example@email.com"
+                                    aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <!-------------------------------Password------------------------------------->
+                            <div class="form-group">
+                                <label for="exampleInputPassword1" class="d-flex align-items-start mx-2">Password<span
+                                        class="text-danger">*</span></label>
+                                <input type="password" size="60" required minlength="8" required class="form-control f"
+                                    id="password" placeholder="***********">
+                                <small id="passwordHelpInline" class="text-muted">
+                                    Must be 8-20 characters long.
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1" class="d-flex align-items-start mx-2">Confirm
+                                    Password<span class="text-danger">*</span></label>
+                                <input type="password" size="60" required minlength="8" required class="form-control f"
+                                    id="password_confirm" oninput="check(this)" placeholder="***********">
+                                <small id="passwordHelpInline" class="text-muted">
+                                    Must be 8-20 characters long.
+                                </small>
+                            </div>
+                            <!-------------------------------Country------------------------------------->
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">State<span class="text-danger">*</span></label>
+                                    <select id="inputState" required class="form-control f">
+                                        <option selected>Choose...</option>
+                                        <option>Pakistan</option>
+                                        <option>India</option>
+                                        <option>America</option>
+                                        <option>Germany</option>
+                                    </select>
+                                </div>
+                                <!-------------------------------City------------------------------------->
+                                <div class="form-group col-md-6 offset-md-2">
+                                    <label for="inputCity">City<span class="text-danger">*</span></label>
+                                    <input type="text" required class="form-control f" placeholder="xyz" id="inputCity">
+                                </div>
+                            </div>
+
+                            <!-------------------------------Cell number------------------------------------->
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <!-------------------------------Country Code-------------------------->
+                                    <label for="inputcountrycode">Country Code<span class="text-danger">*</span></label>
+                                    <select id="inputcountrycode" required class="form-control f">
+                                        <option selected>Choose...</option>
+                                        <option>+92</option>
+                                        <option>+1</option>
+                                        <option>+91</option>
+                                    </select>
+                                </div>
+                                <!-------------------------------Sim Code-------------------------->
+                                <div class="form-group col-md-4">
+                                    <label for="inputSimCode">Sim Code<span class="text-danger">*</span></label>
+                                    <select id="inputSimCode" required class="form-control f">
+                                        <option selected>Choose...</option>
+                                        <option>+92</option>
+                                        <option>+1</option>
+                                        <option>+91</option>
+                                    </select>
+                                </div>
+
+                                <!-------------------------------Number-------------------------->
+                                <div class="form-group col-md-4">
+                                    <label for="inputnum">Number<span class="text-danger">*</span></label>
+                                    <input type="text" pattern="[0-9]{7}" title="Numbers only" required
+                                        class="form-control f" placeholder="1234567" id="inputnum">
+                                </div>
+                            </div>
+
+                            <!-------------------------BUTTON------------------------------------->
+                            <div class="d-flex justify-content-center align-self-center mt-3">
+                                <button type="submit" class="btn ex text-white bt">
+                                    <a href="register_employee2.html" class="text-white"
+                                        style="text-decoration: none;">Next</a></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex justify-content-center align-self-center">
+                        Already Have an Account?<a class="chan" style="text-decoration: none;"
+                            href="login.html"><b>&nbsp
+                                Sign In </b></a>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!---------------------------------------------JOB SEEKER--------------------------------------------->
+    <div class="js box" style="display: none;">
+        <div>
+            <div class="container">
+                <div class="row mx-auto mt-4" style="padding:50px; margin-bottom: -50px;">
+                    <h1 class="8vw text-dark mx-auto">EMPLOYEE SIGN UP</h1>
+                </div>
+                <div class="row">
+
+                    <!--------------------------FORM--------------------------------------------------->
+                    <div class="col-lg-6 col-md-8 col-sm-10 col-xs-6 mx-auto my-4 roun rounded"
+                        style="background-color:#e0e0e0;">
+                        <div class="row m-3">
+                            <form action="register_employee2.html" method="GET">
+                                <!-------------------------------NAME------------------------------------->
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="exampleInputEmail1" class=" mx-2">First
+                                            name<span class="text-danger">*</span></label>
+                                        <input pattern="[a-zA-Z]+"
+                                            oninvalid="setCustomValidity('Please enter on alphabets only. ')"
+                                            type="text" class="form-control f" required placeholder="John">
+                                    </div>
+                                    <div class="col">
+                                        <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">Last
+                                            name<span class="text-danger">*</span></label>
+                                        <input pattern="[a-zA-Z]+"
+                                            oninvalid="setCustomValidity('Please enter on alphabets only. ')"
+                                            type="text" class="form-control f" required placeholder="Smith">
+                                    </div>
+                                </div>
+                                <!-------------------------------Email------------------------------------->
+                                <div class="form-group mt-3">
+                                    <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">Email
+                                        Address<span class="text-danger">*</span></label>
+                                    <input type="email" size="60" required class="form-control f" required
+                                        id="exampleInputEmail1" placeholder="example@email.com"
+                                        aria-describedby="emailHelp">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                        anyone else.</small>
+                                </div>
+                                <!-------------------------------Password------------------------------------->
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1"
+                                        class="d-flex align-items-start mx-2">Password<span
+                                            class="text-danger">*</span></label>
+                                    <input type="password" size="60" required minlength="8" required
+                                        class="form-control f" id="password" placeholder="***********">
+                                    <small id="passwordHelpInline" class="text-muted">
+                                        Must be 8-20 characters long.
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1" class="d-flex align-items-start mx-2">Confirm
+                                        Password<span class="text-danger">*</span></label>
+                                    <input type="password" size="60" required minlength="8" required
+                                        class="form-control f" id="password_confirm" oninput="check(this)"
+                                        placeholder="***********">
+                                    <small id="passwordHelpInline" class="text-muted">
+                                        Must be 8-20 characters long.
+                                    </small>
+                                </div>
+                                <!-------------------------------Country------------------------------------->
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputState">State<span class="text-danger">*</span></label>
+                                        <select id="inputState" required class="form-control f">
+                                            <option selected>Choose...</option>
+                                            <option>Pakistan</option>
+                                            <option>India</option>
+                                            <option>America</option>
+                                            <option>Germany</option>
+                                        </select>
+                                    </div>
+                                    <!-------------------------------City------------------------------------->
+                                    <div class="form-group col-md-6 offset-md-2">
+                                        <label for="inputCity">City<span class="text-danger">*</span></label>
+                                        <input type="text" required class="form-control f" placeholder="xyz"
+                                            id="inputCity">
+                                    </div>
+                                </div>
+
+                                <!-------------------------------Cell number------------------------------------->
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <!-------------------------------Country Code-------------------------->
+                                        <label for="inputcountrycode">Country Code<span
+                                                class="text-danger">*</span></label>
+                                        <select id="inputcountrycode" required class="form-control f">
+                                            <option selected>Choose...</option>
+                                            <option>+92</option>
+                                            <option>+1</option>
+                                            <option>+91</option>
+                                        </select>
+                                    </div>
+                                    <!-------------------------------Sim Code-------------------------->
+                                    <div class="form-group col-md-4">
+                                        <label for="inputSimCode">Sim Code<span class="text-danger">*</span></label>
+                                        <select id="inputSimCode" required class="form-control f">
+                                            <option selected>Choose...</option>
+                                            <option>+92</option>
+                                            <option>+1</option>
+                                            <option>+91</option>
+                                        </select>
+                                    </div>
+
+                                    <!-------------------------------Number-------------------------->
+                                    <div class="form-group col-md-4">
+                                        <label for="inputnum">Number<span class="text-danger">*</span></label>
+                                        <input type="text" pattern="[0-9]{7}" title="Numbers only" required
+                                            class="form-control f" placeholder="1234567" id="inputnum">
+                                    </div>
+                                </div>
+
+                                <!-------------------------BUTTON------------------------------------->
+                                <div class="d-flex justify-content-center align-self-center mt-3">
+                                    <button type="submit" class="btn ex text-white bt">
+                                        <a href="register_employee2.html" class="text-white"
+                                            style="text-decoration: none;">Next</a></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="d-flex justify-content-center align-self-center">
+                            Already Have an Account?<a class="chan" style="text-decoration: none;"
+                                href="login.html"><b>&nbsp
+                                    Sign In </b></a>
+                        </div><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

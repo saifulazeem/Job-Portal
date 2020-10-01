@@ -28,7 +28,7 @@ body{
     color: #0BB44F;
   }
   
-  .act {
+  .active {
     border-bottom: 3px solid #0BB44F;
     color: #0BB44F;
   }
@@ -117,21 +117,25 @@ color:white;
 .link{
     color: #929292;
     }
+
+    /*career.html cards*/
     .cards-txt:hover{
       color:white;
       text-decoration: none;
       }
-    .cards-txt{
-        color:black;
-        }     
-        
-    .cards:hover{
-      background-color: #0BB44F;
+      .cards:hover{
+        background-color: #0BB44F;
+        text-decoration: none;
+        }
+       /*career.html cards*/
+    .subcards-txt:hover{
+      color:white;
       text-decoration: none;
       }
-    .cards{
-        background-color: white;
-        }     
+      .subcards:hover{
+        background-color: #0BB44F;
+        text-decoration: none;
+        }
 .container-fluid {
     padding: 0px;
     text-align: center;
@@ -141,11 +145,19 @@ color:white;
 }
 /***********************************************************************************************************************/
 @media (max-width: 575.98px) {
+  /*footer circle image*/
   .resp {
    position: absolute;
-   left: -250px;
+   left: -30px;
    }
-   
+    /*Footer form*/
+    .newsform{
+      padding-left:70px;
+     }
+     /*Footer table*/
+     .foottab{
+      padding-left:10px;
+     }
 /* Top left text */
 .top-left {
   position: absolute;
@@ -156,23 +168,51 @@ color:white;
 .topimg{
   top:-40px;
 }
-/*home.html cards div*/
+/*home.html, career.html cards div*/
 .over{
-  top: -920px;
-  margin-bottom: -960px;
+  top: -770px;
+  margin-bottom: -1040px;
 }
 /*home.html blue rectangle*/
 .hg{
-  height: 900px;
+  height: 700px;
 }
-/*home.html circle*/
+/*accountancy.html cards div*/
+.aover{
+  top: -760px;
+}
+/*accountancy.html sub div*/
+.dover{
+  top: -860px;
+  margin-bottom: -100px;
+}
+
+/*home.html,about circle*/
 .cir{
   position: absolute;
-  width:200px;
-  top:-900px;
-  height:400px;
-  right:-90px;
+  width:150px;
+  height:170px;
+  right:-150px;
 }
+/*accountancy main text over image*/
+.cent {
+  width:600px;
+  height:400px;
+  position: absolute;
+  top: 110px;
+  left:250px;
+}
+/*accountancy.html cards*/
+.subcards-txt{
+  color:black;
+  font-size:10px;
+  }     
+  
+.subcards{
+  background-color: white;
+  height:120px;
+  width:120px;
+  } 
 /*about.html text*/
 .t{
   margin-top: 90px;
@@ -217,19 +257,19 @@ color:white;
 }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:400px; top:4450px;
+  position: absolute;left:400px; top:4250px;
   width: 60px;height:60px;
 }
 .s2{
-  position: absolute; left:350px; top:4600px;
+  position: absolute; left:350px; top:4300px;
   width: 60px;height:60px;
 }
 .s3{
-  position: absolute; left:190px; top:4550px;
+  position: absolute; left:190px; top:4350px;
   width: 60px;height:60px;
 }
 .s4{
-  position: absolute; left:120px; top:4500px;
+  position: absolute; left:120px; top:4200px;
   width: 60px;height:60px;
 }
 /*Alert form in home.html and about.html*/ 
@@ -237,14 +277,33 @@ color:white;
   border-radius: 20px 20px 0px 0px;
   height:340px;
 }
+/*career.html cards*/
+.cards-txt{
+  color:black;
+  font-size: 12px;
+  }     
+  
+.cards{
+  background-color: white;
+  height:130px;
+  width:120px;
+  } 
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
   .resp {
    position: absolute;
-   left: -80px;
+   left: -50px;
    }
-   
+    /*Footer form*/
+    .newsform{
+      padding-top:40px;
+      padding-left:120px;
+     }
+     /*Footer table*/
+     .foottab{
+      padding-left:10px;
+     }
   /*home.html main image*/
 .topimg{
   top:-180px;
@@ -255,21 +314,51 @@ color:white;
   top: 180px;
   left: 66px;
 }
-/*home.html cards div*/
+/*home.html, career.html cards div*/
 .over{
   top: -690px;
-  margin-bottom: -640px;
+  margin-bottom: -510px;
 }
 /*home.html blue rectangle*/
 .hg{
   height: 480px;
 }
-/*home.html circle*/
+/*accountancy.html cards div*/
+.aover{
+  top: -760px;
+}
+/*accountancy.html sub div*/
+.dover{
+  top: -860px;
+  margin-bottom: -100px;
+}
+
+/*home.html,about circle*/
 .cir{
   position: absolute;
-  width:200px;
-  right:-340px;
+  width:150px;
+  height:170px;
+  right:-150px;
 }
+/*accountancy main text over image*/
+.cent {
+  width:600px;
+  height:400px;
+  position: absolute;
+  top: 110px;
+  left:250px;
+}
+/*accountancy.html cards*/
+.subcards-txt{
+  color:black;
+  font-size:10px;
+  }     
+  
+.subcards{
+  background-color: white;
+  height:120px;
+  width:120px;
+  } 
 /*about.html text*/
 .t{
   margin-top: 50px;
@@ -344,13 +433,33 @@ color:white;
   height:340px;
   width: 1900px;
 }
+/*career.html cards*/
+.cards-txt{
+  color:black;
+  font-size: 12px;
+  }     
+  
+.cards{
+  background-color: white;
+  height:130px;
+  width:120px;
+  } 
+  
  }
 /***********************************************************************************************************************/
 @media (min-width: 768px) {
   .resp {
    position: absolute;
-   left: -90px;
+   left: -60px;
    }
+    /*Footer form*/
+    .newsform{
+      padding-left: 130px;
+     }
+     /*Footer table*/
+     .foottab{
+       left: -30px;
+     }
 /*home.html main image*/
    .topimg{
     top:-180px;
@@ -362,10 +471,10 @@ color:white;
   top: 90px;
   left: 66px;
 }
-/*home.html cards div*/
+/*home.html, career.html cards div*/
 .over{
   top: -620px;
-  margin-bottom: -640px;
+  margin-bottom: -510px;
 }
 /*home.html blue rectangle*/
 .hg{
@@ -388,6 +497,47 @@ color:white;
 .over-about{
   top:-120px;
 }
+
+/*accountancy.html blue rectangle*/
+.ag{
+  height: 700px;
+}
+/*accountancy.html cards div*/
+.aover{
+  top: -10px;
+}
+/*accountancy.html sub div*/
+.dover{
+  top: -600px;
+  margin-bottom: -100px;
+}
+
+/*home.html,about circle*/
+.cir{
+  position: absolute;
+  width:150px;
+  height:170px;
+  right:-150px;
+}
+/*accountancy main text over image*/
+.cent {
+  width:600px;
+  height:400px;
+  position: absolute;
+  top: 110px;
+  left:180px;
+}
+/*accountancy.html cards*/
+.subcards-txt{
+  color:black;
+  font-size:10px;
+  }     
+  
+.subcards{
+  background-color: white;
+  height:150px;
+  width:130px;
+  } 
 /*home.html main img top*/ 
 .homeimg{
   height:660px;
@@ -456,6 +606,17 @@ color:white;
   border-radius: 20px 0px 0px 20px;
   height:360px;
 }
+/*career.html cards*/
+.cards-txt{
+  color:black;
+  font-size: 12px;
+  }     
+  
+.cards{
+  background-color: white;
+  height:130px;
+  width:120px;
+  } 
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
@@ -463,6 +624,15 @@ color:white;
    position: absolute;
    left: -100px;
    }
+   /*Footer form*/
+   .newsform{
+     top:-40px;
+     padding-left: 0px;
+    }
+    /*Footer table*/
+    .foottab{
+      left: -30px;
+    }
   /*home.html main image*/
 .topimg{
   top:-180px;
@@ -474,20 +644,14 @@ color:white;
   top: 100px;
   left: 66px;
 }
-/*home.html cards div*/
+/*home.html, career.html cards div*/
 .over{
   top: -720px;
-  margin-bottom: -630px;
+  margin-bottom: -582px;
 }
 /*home.html blue rectangle*/
 .hg{
   height: 450px;
-}
-/*home.html circle*/
-.cir{
-  position: absolute;
-  width:270px;
-  right:-150px;
 }
 .img-resp{
   height:600px;
@@ -499,6 +663,53 @@ color:white;
 /*about.html div*/
 .over-about{
   top:-180px;
+}
+/*accountancy.html blue rectangle*/
+.ag{
+  height: 700px;
+}
+/*accountancy.html cards div*/
+.aover{
+  top: -760px;
+}
+/*accountancy.html sub div*/
+.dover{
+  top: -860px;
+  margin-bottom: -100px;
+}
+
+/*home.html,about circle*/
+.cir{
+  position: absolute;
+  width:90px;
+  height:170px;
+  right:-150px;
+}
+/*accountancy main text over image*/
+.cent {
+  width:600px;
+  height:400px;
+  position: absolute;
+  top: 110px;
+  left:250px;
+}
+/*accountancy.html cards*/
+.subcards-txt{
+  color:black;
+  font-size:10px;
+  }     
+  
+.subcards{
+  background-color: white;
+  height:145px;
+  width:130px;
+  } 
+/*home.html, accountancy.html circle image*/
+.cir{
+  position: absolute;
+  width:600px;
+  height:640px;
+  right:-330px;
 }
 /*home.html main img top*/ 
 .homeimg{
@@ -560,14 +771,33 @@ color:white;
   border-radius: 20px 0px 0px 20px;
   height:360px;
 }
+/*career.html cards*/
+.cards-txt{
+  color:black;
+  font-size: 20px;
+  }     
+  
+.cards{
+  background-color: white;
+  height:150px;
+  width:150px;
+  }  
  }
 /***********************************************************************************************************************/
  @media (min-width: 1200px) {
-   /*Footer image*/
+   /*Footer circle image*/
   .resp {
    position: absolute;
    left: -150px;
    }
+   /*Footer form*/
+   .newsform{
+     padding-left: 30px;
+    }
+    /*Footer table*/
+    .foottab{
+      left: -30px;
+    }
    /*home.html main image*/
    .topimg{
     top:-250px;
@@ -579,10 +809,10 @@ color:white;
   top: 130px;
   left: 196px;
 }
-/*home.html cards div*/
+/*home.html, career.html cards div*/
 .over{
-  top: -720px;
-  margin-bottom: -610px;
+  top: -780px;
+  margin-bottom: -675px;
 }
 /*home.html blue rectangle*/
 .hg{
@@ -591,15 +821,49 @@ color:white;
 
 /*accountancy.html blue rectangle*/
 .ag{
-  height: 700px;
+  height: 1000px;
+}
+/*accountancy.html cards div*/
+.aover{
+  top: -1040px;
+}
+/*accountancy.html sub div*/
+.dover{
+  top: -960px;
+  margin-bottom: -700px;
 }
 
-/*home pg circle image*/
+/*accountancy main text over image*/
+.cent {
+  width:830px;
+  height:400px;
+  position: absolute;
+  top: 130px;
+  left:350px;
+}
+/*home.html, accountancy.html circle image*/
 .cir{
   position: absolute;
-  width:300px;
-  right:-150px;
+  width:500px;
+  height:640px;
+  right:-270px;
 }
+/*accountancy.html cards*/
+.subcards-txt{
+  color:black;
+  font-size:12px;
+  }     
+  
+.subcards{
+  background-color: white;
+  height:150px;
+  width:150px;
+  } 
+  /*subsubdiv accountancy.html*/
+  .subdivover{
+    top: -260px;
+  margin-bottom: -700px;
+  }
 .img-resp{
   height:600px;
 }
@@ -676,6 +940,22 @@ font-size: 20px;
 .formalert{
   border-radius: 20px 0px 0px 20px;
 }
+
+/*career.html above img text*/
+.careertxt{
+  font-size: 25px;
+}
+
+/*career.html cards*/
+.cards-txt{
+  color:black;
+  }     
+  
+.cards{
+  background-color: white;
+  height:180px;
+  width:180px;
+  }  
 }
 /******************************************************************************************/
 .homeemp{
@@ -737,10 +1017,11 @@ background-color:  #0BB44F;
   background-color:#0D2942;
   color:  #0BB44F;
 }
+/*---------footer-----------*/
 .foot{
   background-color:#0D2942;
   color: gainsboro; 
-  padding: 20px;
+  padding-top: 20px;
 }
 
 .hov:hover {
@@ -792,17 +1073,8 @@ background-color:  #0BB44F;
 .d:hover{
   background-color: #d6d6d4;
 }
-/*accountancy*/
-.cent {
-  position: absolute;
-  top: 140px;
-  left:290px;
-}
-/*accountancy.html cards div*/
-.aover{
-  top: -1000px;
-  margin-bottom: -600px;
-}
+
+
 /*home.html form*/
 .tb{
     background-color: white;
