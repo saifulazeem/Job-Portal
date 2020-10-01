@@ -28,9 +28,11 @@ body{
     color: #0BB44F;
   }
   
-  .active {
+  .act {
     border-bottom: 3px solid #0BB44F;
+    color: #0BB44F;
   }
+  li.borderless { border-top: 0 none; }
     .nav-link{
       color: white;
       }
@@ -213,6 +215,28 @@ color:white;
   border-radius: 15px; 
   background-color: #0BB44F;
 }
+/*home.html globe images*/
+.s1{
+  position: absolute;left:400px; top:4450px;
+  width: 60px;height:60px;
+}
+.s2{
+  position: absolute; left:350px; top:4600px;
+  width: 60px;height:60px;
+}
+.s3{
+  position: absolute; left:190px; top:4550px;
+  width: 60px;height:60px;
+}
+.s4{
+  position: absolute; left:120px; top:4500px;
+  width: 60px;height:60px;
+}
+/*Alert form in home.html and about.html*/ 
+.formalert{
+  border-radius: 20px 20px 0px 0px;
+  height:340px;
+}
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
@@ -296,6 +320,29 @@ color:white;
 /*home.html slider "Select category" position button*/
 .homesel{
   right:-30px;
+}
+/*home.html globe images*/
+.s1{
+  position: absolute;left:450px; top:3690px;
+  width: 80px;height:80px;
+}
+.s2{
+  position: absolute; left: 350px; top:3600px;
+  width: 80px;height:80px;
+}
+.s3{
+  position: absolute; right:350px;top:3750px;
+  width: 80px;height:80px;
+}
+.s4{
+  position: absolute; left:500px; top:3600px;
+  width: 80px;height:80px;
+}
+/*Alert form in home.html and about.html*/ 
+.formalert{
+  border-radius: 20px 20px 0px 0px;
+  height:340px;
+  width: 1900px;
 }
  }
 /***********************************************************************************************************************/
@@ -387,6 +434,28 @@ color:white;
 .homesel{
   right:-90px;
 }
+/*home.html globe images*/
+.s1{
+  position: absolute;left:700px; top:3600px;
+  width: 100px;height:100px;
+}
+.s2{
+  position: absolute; left: 400px; top:3500px;
+  width: 100px;height:100px;
+}
+.s3{
+  position: absolute; right:350px;top:3450px;
+  width: 100px;height:100px;
+}
+.s4{
+  position: absolute; left:500px; top:3600px;
+  width: 100px;height:100px;
+}
+/*Alert form in home.html and about.html*/ 
+.formalert{
+  border-radius: 20px 0px 0px 20px;
+  height:360px;
+}
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
@@ -472,6 +541,24 @@ color:white;
 /*home.html slider "Select category" position button*/
 .homesel{
   right:-200px;
+}
+/*home.html globe images*/
+.s1{
+  position: absolute;left:900px; top:3300px;
+}
+.s2{
+  position: absolute; left: 400px; top:3300px;
+}
+.s3{
+  position: absolute; right:350px;top:3250px;
+}
+.s4{
+  position: absolute; left:500px; top:3100px;
+}
+/*Alert form in home.html and about.html*/ 
+.formalert{
+  border-radius: 20px 0px 0px 20px;
+  height:360px;
 }
  }
 /***********************************************************************************************************************/
@@ -580,8 +667,17 @@ color:white;
 .homesel{
   right:-270px;
 }
+/*home.html placeholder*/
+.h::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  /* Firefox */
+font-size: 20px;
 }
-
+/*Alert form in home.html and about.html*/ 
+.formalert{
+  border-radius: 20px 0px 0px 20px;
+}
+}
+/******************************************************************************************/
 .homeemp{
   font-size: 40px;
   font-weight: 800;
@@ -711,5 +807,5 @@ background-color:  #0BB44F;
 .tb{
     background-color: white;
     border-radius: 200px;
-   
 }
+
