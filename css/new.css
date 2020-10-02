@@ -23,7 +23,7 @@ body{
   }
   
 /* Style the links inside the navigation bar */
-.nav-item a:hover {
+.navhov a:hover {
     border-bottom: 3px solid #0BB44F;
     color: #0BB44F;
   }
@@ -32,6 +32,16 @@ body{
     border-bottom: 3px solid #0BB44F;
     color: #0BB44F;
   }
+
+  .dashnav a:hover {
+    color: #0BB44F;
+  }
+
+  .subdashnav a:hover {
+    color: white;
+  }
+
+
   li.borderless { border-top: 0 none; }
     .nav-link{
       color: white;
@@ -136,6 +146,15 @@ color:white;
         background-color: #0BB44F;
         text-decoration: none;
         }
+        /*accountancy.html cards*/
+    .acards-txt:hover{
+      color:white;
+      text-decoration: none;
+      }
+      .acards:hover{
+        background-color: #0BB44F;
+        text-decoration: none;
+        }
 .container-fluid {
     padding: 0px;
     text-align: center;
@@ -171,7 +190,7 @@ color:white;
 /*home.html, career.html cards div*/
 .over{
   top: -770px;
-  margin-bottom: -1040px;
+  margin-bottom: -685px;
 }
 /*home.html blue rectangle*/
 .hg{
@@ -179,7 +198,12 @@ color:white;
 }
 /*accountancy.html cards div*/
 .aover{
-  top: -760px;
+  top: -860px;
+margin:30px;
+}
+.ag{
+  height:900px;
+  top:0px;
 }
 /*accountancy.html sub div*/
 .dover{
@@ -187,21 +211,34 @@ color:white;
   margin-bottom: -100px;
 }
 
-/*home.html,about circle*/
+/*accountancy.html  circle*/
 .cir{
   position: absolute;
   width:150px;
   height:170px;
-  right:-150px;
+  right:-40px;
+  top:-140px;
 }
 /*accountancy main text over image*/
 .cent {
-  width:600px;
+  width:400px;
   height:400px;
   position: absolute;
-  top: 110px;
-  left:250px;
+  top: 170px;
+  left:20px;
+  font-size:8px; 
+  
 }
+/*accountancy.html cards*/
+.acards-txt{
+  color:black;
+  font-size: 6px;
+  }     
+.acards{
+  background-color: white;
+  height:165px;
+  width:100px;
+  } 
 /*accountancy.html cards*/
 .subcards-txt{
   color:black;
@@ -282,10 +319,17 @@ color:white;
   color:black;
   font-size: 12px;
   }     
-  
+   /*career.html circle*/
+ .careercir{
+  position: absolute;
+  width:250px;
+  height:350px;
+  right:20px;
+  top:-110px;
+}
 .cards{
   background-color: white;
-  height:130px;
+  height:140px;
   width:120px;
   } 
  }
@@ -317,7 +361,7 @@ color:white;
 /*home.html, career.html cards div*/
 .over{
   top: -690px;
-  margin-bottom: -510px;
+  margin-bottom: -570px;
 }
 /*home.html blue rectangle*/
 .hg{
@@ -325,7 +369,11 @@ color:white;
 }
 /*accountancy.html cards div*/
 .aover{
-  top: -760px;
+  top: -730px;
+}
+.ag{
+  height:480px;
+  top:-50px;
 }
 /*accountancy.html sub div*/
 .dover{
@@ -333,21 +381,33 @@ color:white;
   margin-bottom: -100px;
 }
 
-/*home.html,about circle*/
+/*accountancy.html circle*/
 .cir{
   position: absolute;
-  width:150px;
-  height:170px;
-  right:-150px;
+  width:250px;
+  height:300px;
+  right:-390px;
+  top:60px;
 }
 /*accountancy main text over image*/
 .cent {
   width:600px;
   height:400px;
   position: absolute;
-  top: 110px;
-  left:250px;
+  top: 170px;
+  left:110px;
+  font-size: 12px;
 }
+/*accountancy.html cards*/
+.acards-txt{
+  color:black;
+  font-size: 6px;
+  }     
+.acards{
+  background-color: white;
+  height:165px;
+  width:100px;
+  } 
 /*accountancy.html cards*/
 .subcards-txt{
   color:black;
@@ -438,10 +498,17 @@ color:white;
   color:black;
   font-size: 12px;
   }     
-  
+  /*career.html circle*/
+ .careercir{
+  position: absolute;
+  width:350px;
+  height:450px;
+  right:-300px;
+  top:-140px;
+}
 .cards{
   background-color: white;
-  height:130px;
+  height:160px;
   width:120px;
   } 
   
@@ -504,7 +571,7 @@ color:white;
 }
 /*accountancy.html cards div*/
 .aover{
-  top: -10px;
+  top: -1050px;
 }
 /*accountancy.html sub div*/
 .dover{
@@ -512,21 +579,32 @@ color:white;
   margin-bottom: -100px;
 }
 
-/*home.html,about circle*/
+/*accountancy.html circle image*/
 .cir{
   position: absolute;
-  width:150px;
-  height:170px;
-  right:-150px;
+  width:350px;
+  height:440px;
+  right:-430px;
 }
 /*accountancy main text over image*/
 .cent {
-  width:600px;
+  font-size: 16px;
+  width:700px;
   height:400px;
   position: absolute;
-  top: 110px;
-  left:180px;
+  top: 100px;
+  left:150px;
 }
+/*accountancy.html cards*/
+.acards-txt{
+  color:black;
+  font-size: 10px;
+  }     
+.acards{
+  background-color: white;
+  height:145px;
+  width:120px;
+  } 
 /*accountancy.html cards*/
 .subcards-txt{
   color:black;
@@ -611,10 +689,17 @@ color:white;
   color:black;
   font-size: 12px;
   }     
-  
+  /*career.html circle*/
+ .careercir{
+  position: absolute;
+  width:450px;
+  height:500px;
+  right:-350px;
+  top:-140px;
+}
 .cards{
   background-color: white;
-  height:130px;
+  height:170px;
   width:120px;
   } 
  }
@@ -670,7 +755,7 @@ color:white;
 }
 /*accountancy.html cards div*/
 .aover{
-  top: -760px;
+  top: -1150px;
 }
 /*accountancy.html sub div*/
 .dover{
@@ -694,6 +779,17 @@ color:white;
   left:250px;
 }
 /*accountancy.html cards*/
+.acards-txt{
+  color:black;
+  font-size: 12px;
+  }     
+.acards{
+  background-color: white;
+  height:170px;
+  width:150px;
+  } 
+
+/*accountancy.html cards*/
 .subcards-txt{
   color:black;
   font-size:10px;
@@ -704,12 +800,13 @@ color:white;
   height:145px;
   width:130px;
   } 
-/*home.html, accountancy.html circle image*/
+/*accountancy.html circle image*/
 .cir{
   position: absolute;
-  width:600px;
-  height:640px;
-  right:-330px;
+  width:400px;
+  height:540px;
+  right:-200px;
+  top:-60px;
 }
 /*home.html main img top*/ 
 .homeimg{
@@ -776,7 +873,14 @@ color:white;
   color:black;
   font-size: 20px;
   }     
-  
+ /*career.html circle*/
+ .careercir{
+  position: absolute;
+  width:450px;
+  height:600px;
+  right:70px;
+  top:-200px;
+}
 .cards{
   background-color: white;
   height:150px;
@@ -812,7 +916,7 @@ color:white;
 /*home.html, career.html cards div*/
 .over{
   top: -780px;
-  margin-bottom: -675px;
+  margin-bottom: -890px;
 }
 /*home.html blue rectangle*/
 .hg{
@@ -821,33 +925,46 @@ color:white;
 
 /*accountancy.html blue rectangle*/
 .ag{
-  height: 1000px;
+  height: 450px;
 }
 /*accountancy.html cards div*/
 .aover{
-  top: -1040px;
+  top: -940px;
 }
-/*accountancy.html sub div*/
-.dover{
-  top: -960px;
-  margin-bottom: -700px;
-}
-
+/*accountancy.html cards*/
+.acards-txt{
+  color:black;
+  font-size: 12px;
+  }     
+.acards{
+  background-color: white;
+  height:170px;
+  width:150px;
+  } 
 /*accountancy main text over image*/
 .cent {
   width:830px;
   height:400px;
   position: absolute;
   top: 130px;
-  left:350px;
+  left:270px;
+  font-size: 18px;
 }
-/*home.html, accountancy.html circle image*/
+/*accountancy.html circle image*/
 .cir{
   position: absolute;
   width:500px;
   height:640px;
   right:-270px;
 }
+
+
+/*accountancy.html sub div*/
+.dover{
+  top: -960px;
+  margin-bottom: -700px;
+}
+
 /*accountancy.html cards*/
 .subcards-txt{
   color:black;
@@ -951,6 +1068,14 @@ font-size: 20px;
   color:black;
   }     
   
+  /*career.html circle*/
+ .careercir{
+  position: absolute;
+  width:500px;
+  height:600px;
+  right:5px;
+  top:-200px;
+}
 .cards{
   background-color: white;
   height:180px;
