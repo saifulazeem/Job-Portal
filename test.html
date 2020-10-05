@@ -1,52 +1,56 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+    <style>
+        #range
+{
+    position:absolute;
+    height:200%;
+    top: 0;
+}
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+body div.ui-slider-range.ui-widget-header {
+    background:blue;
+}
+
+    </style>
+    <script>
+        $(document).ready(function () {
+
+var slider = $('.slider').slider({
+    range: true,
+    min: 0,
+    max: 100,
+    values: [ 75, 80 ],
+    change: function (e, ui) {
+        //                    $("#img1").fadeOut();
+        //                    alert("done");
+    },
+    slide: function (e, ui) {
+        var point = ui.value;
+        $("#selected_value").html(point);
+        var width = 100 - point;
+       $("#range").css({ "width": point + "%" });
+    }
+
+});
+
+console.log(slider);
+});
+    </script>
 </head>
+<body>
+    <div>
+        Min: <span id="selected_value">0</span><br />
 
-</style>
-<div class="disp"></div>
-<body style="background-color: #ff8566">
-    <div class="main">
-        <div class="input_fields_container_part">
-            <div>
-                <button class="btn btn-sm btn-primary add_more_button">Add More</button>
-            </div>
-        </div>
+    </div>
+    <div>
+        <div class="slider"><div id="range"></div></div>
     </div>
 </body>
-
-<script>
-
-    $(document).ready(function () {
-        $(".disp").hide();
-        $('.add_more_button').click(function (e) {
-            //click event on add more fields button having class add_more_button
-            e.preventDefault();
-            $('.input_fields_container_part').append('<div><input type="text" name="tags" id="user_input" /><button class="remove_field" style="margin-left:10px;">Remove</button><button id="sub" class="submitted">SUBMIT</button></div>');
-            //add input field
-
-        });
-        $('.input_fields_container_part').on("click", ".remove_field", function (e) {
-            //user click on remove text links
-            e.preventDefault();
-            $(this).parent('div').remove();
-        });
-        $('.input_fields_container_part').on("click", ".submitted", function (e) {
-            //user click on remove text links
-            e.preventDefault();
-            $(".disp").show();
-            var str = $("#user_input").val();
-            $(".disp" ).text(str);
-        });
-    });
-</script>
-
 </html>

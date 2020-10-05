@@ -1,0 +1,475 @@
+</body>
+
+</html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+
+    <title>Job Page</title>
+    <script>
+
+        $(document).ready(function () {
+            $(".disp").hide();
+            $('.add_more_button').click(function (e) {
+                //click event on add more fields button having class add_more_button
+                e.preventDefault();
+                if ($("#user_input").val != "") {
+                    $('.input_fields_container_part').append('<div class="p-3 text-dark"><input type="text" name="tags" id="user_input" /><button class="remove_field " style="margin-left:3px;">Remove</button><button id="sub" class="submitted">Add</button></div>');
+                    //add input field
+                }
+                else {
+                    //do nothing
+                }
+
+            });
+            $('.input_fields_container_part').on("click", ".remove_field", function (e) {
+                //user click on remove text links
+                e.preventDefault();
+                $(this).parent('div').remove();
+            });
+            $('.input_fields_container_part').on("click", ".submitted", function (e) {
+                //user click on remove text links
+                e.preventDefault();
+                $(".disp").show();
+                var str = $("#user_input").val();
+                $(".disp").text(str);
+                $(this).parent('div').remove();
+            });
+
+            $('.hov').mouseenter(function () {
+                $('.collapse').show();
+            })
+            $('.collapse').mouseenter(function () {
+                $('.collapse').show();
+            })
+            $('.hov').mouseleave(function () {
+                $('.collapse').hide();
+            })
+            $('.collapse').mouseleave(function () {
+                $('.collapse').hide();
+            })
+        });
+    </script>
+</head>
+
+<body style="font-family: Segoe UI;">
+    <!------------------------------------------Navbar---------------------------------------------------------->
+    <nav class="navbar navbar-expand flex-column flex-md-row bd-navbar n text">
+        <div>
+            <a class="navbar-brand mr-0 mr-md-2" href="#">
+                <img src="img/logo.png" class="img-fluid navbar-brand navbar-nav d-block">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav justify-content-end ml-auto">
+                <li class="nav-item navhov">
+                    <a class="nav-link" href="about.html">ABOUT US</a>
+                </li>
+                <li class="nav-item navhov">
+                    <a class="nav-link" href="#">EMPLOYERS PROFILE</a>
+                </li>
+                <li class="nav-item navhov">
+                    <a class="nav-link " href="careers.html">CAREERS GUIDE</a>
+                </li>
+                <li class="nav-item navhov">
+                    <a class="nav-link" href="blog.html">BLOG</a>
+                </li>
+            </ul>
+        </div>
+        <button class="btn bg-white btn-lg rounded-pill " style="padding-left: 30px; padding-right: 30px;">
+            <a href="login.html" class="b">Login</a>
+        </button>
+    </nav>
+
+
+    <!------------------------------------------Body---------------------------------------------------------->
+    <div class="container my-5">
+        <div class="container-fluid">
+            <div class="row">
+                <!--------------Large and Medium View--------->
+                <div class="col-lg-12 col-md-12 table-responsive d-lg-block d-md-block d-sm-none d-none">
+                    <table class="table table-borderless table-sm">
+                        <tbody>
+                            <tr>
+                                <!--------First row------------->
+                                <td>
+                                    <p class="text-dark" style="margin:0px;">What Job You Are Looking For?<img
+                                            src="img/arrowblack.png" class="img-fluid">
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="text-dark" style="margin:0px;">Where?<img src="img/arrowblack.png"
+                                            class="img-fluid">
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="text-dark" style="margin:0px;">Categories<img src="img/arrowblack.png"
+                                            class="img-fluid"></p>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr class="shadow">
+                                <!---------Second row------------->
+                                <!------------------------FORM------------------------------------->
+                                <form class="form-inline">
+                                    <td style="padding:0px;">
+                                        <input type="text" class="form-control h empkey" id="keywords"
+                                            placeholder="Keywords">
+                                    </td>
+                                    <td style="padding:0px;">
+                                        <input type="text" class="form-control h emploccat" id="location"
+                                            placeholder="Location">
+                                    </td>
+                                    <td style="padding:0px;">
+                                        <input type="text" class="form-control h emploccat" id="categories"
+                                            placeholder="All Categories">
+                                    </td>
+                                    <td style="padding:0px;">
+                                        <button type="submit" class="btn btn-success empbtn"><img src="img/search.png"
+                                                class="img-fluid"></button>
+                                    </td>
+                                </form>
+                            </tr>
+                            <tr>
+                                <!--------Third row------------->
+                                <td colspan="3" class="text-dark">
+                                    Need more search options?<a href="#" class="chan"
+                                        style="text-decoration: none;">&nbsp;ADVANCE
+                                        SEARCH</a>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--------------Small View--------->
+                <div class="col-sm-12 col-12 table-responsive d-lg-none d-md-none d-sm-block d-block">
+                    <table class="table table-borderless table-sm">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p class="text-dark" style="margin:0px;">What Job You Are Looking For?<img
+                                            src="img/arrowblack.png" class="img-fluid">
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0px;">
+                                    <input type="text" class="form-control h empkey" id="keywords"
+                                        placeholder="Keywords">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="text-dark" style="margin:0px;">Where?<img src="img/arrowblack.png"
+                                            class="img-fluid">
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0px;">
+                                    <input type="text" class="form-control h emploccat" id="location"
+                                        placeholder="Location">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="text-dark" style="margin:0px;">Categories<img src="img/arrowblack.png"
+                                            class="img-fluid"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0px;">
+                                    <input type="text" class="form-control h emploccat" id="categories"
+                                        placeholder="All Categories">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0px;">
+                                    <button type="submit" class="btn btn-success empbtn"><img src="img/search.png"
+                                            class="img-fluid"></button>
+                                </td>
+                            </tr>
+                            <!--------Third row------------->
+                            <td colspan="3" class="text-dark">
+                                Need more search options?<a href="#" class="chan"
+                                    style="text-decoration: none;">&nbsp;ADVANCE
+                                    SEARCH</a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-------------------------------------NEXT CONTAINER--------------------------->
+        <div class="row text shadow my-4 roun">
+            <!------------------------------------------Side Bar left---------------------------------------------->
+            <div class="container text-white col-lg-3 col-md-3 col-sm-10 col-10 my-4" style="border-radius:10px;background-color: #0D2942;margin-bottom:40px;position:relative;
+                padding-bottom: 200px;">
+
+                <div class="row my-auto mx-auto d-flex justify-content-center tag"
+                    style="padding-top:30px; letter-spacing: 4px;">
+                    FILTERS
+                </div>
+
+                <div class="row my-2 mx-4">
+                    Min. Salary
+                    <input type="range" class="" id="rangeInput" name="rangeInput" min="5000" max="100000" value="0"
+                        oninput="amount.value=rangeInput.value">
+
+                    <div class="col-lg-3 offset-lg-9"><output id="amount" name="amount" for="rangeInput"
+                            class="text-white "><small>5000</small></output></div>
+                </div>
+
+                <div class="row my-2 mx-2">
+                    <div class="col-lg-12">
+                        <div class=" border-white border-bottom">
+                            <div class="d-inline text">
+                                Job Title
+                            </div>
+                            <div class="d-inline dropdown-toggle text-white" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" id="drop" style="padding-left: 150px; width:40px;height:30px;">
+
+                                <div class="dropdown-menu" aria-labelledby="drop">
+                                    <a class="dropdown-item text" href="#" style="width:200px;">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
+                                                City
+                                            </div>
+                                            <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
+                                                (24)
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <a class="dropdown-item text" href="#" style="width:200px;">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
+                                                City
+                                            </div>
+                                            <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
+                                                (24)
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item text" href="#" style="width:200px;">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
+                                                City
+                                            </div>
+                                            <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
+                                                (24)
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item text" href="#" style="width:200px;">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
+                                                City
+                                            </div>
+                                            <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
+                                                (24)
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <!--<div class="row my-2 mx-4">
+                                        <div class="disp">
+                                            <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
+
+                                            </div>
+                                            <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
+
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                    <a class="dropdown-item text" href="#">
+                                        <div class="row add_more_button">
+                                            <div class="col-lg-4 col-md-4 col-sm-3 col-3 offset-1">
+                                                <img src="img/add.png" class="img-fluid rounded-pill">
+                                            </div>
+                                            <div class="col col-md-2 col-sm-2 col-2">
+                                                Show More
+                                            </div>
+                                        </div>
+
+                                        <div class="input_fields_container_part">
+                                        </div>
+                                </div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!------------------------------------------Center----------------------------------------------------->
+            <div class="col-lg-6 col-md-8 col-sm-12 col-xs-10 my-4">
+
+                <!-------first div-->
+                <div class="container roun empdivs hov" style="padding:20px 40px;">
+                    <div class="row" style="font-size: 18px;">
+                        <b>Senior Software Quality Assurance Engineer</b>
+                    </div>
+                    <div class="row">
+                        <img src="img/location.png" class="img-responsive d-inline mr-2">
+                        <small class="d-inline text-muted">Location</small>
+
+                    </div>
+                    <div class="row" style="font-size: 12px;">
+                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry exp)
+                    </div>
+                    <div class="row" style="font-size: 12px;">
+                        Responsibilities: Provide comprehensive an..
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 p-0 m-0">
+                            <img src="img/date.png" class="img-responsive d-inline">
+                            <small class="d-inline text-muted">Sep 04, 2020</small>
+                        </div>
+                        <div class="col-lg-2 p-0 m-0">
+                            <img src="img/yrs.png" class="img-responsive d-inline">
+                            <small class="d-inline text-muted">3 Years</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--------display div on hover-->
+                <div class="collapse col-12" id="collapsesum" data-parent="#myGroup">
+                    
+                    <div class=" roun empdivs" style="padding:20px; margin-top: 10px;"
+                        data-target="#collapsesum">
+                        <div class="row" style="font-size: 18px;">
+                            <b>Senior Software Quality Assurance Engineer</b>
+                        </div>
+                        <div class="row">
+                            <img src="img/location.png" class="img-responsive d-inline mr-2">
+                            <small class="d-inline text-muted">Location</small>
+
+                        </div>
+                        <div class="row">
+                            Please Login to View Salary
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <!--buttons-->
+                            <div class="d-inline mt-3">
+                                <button type="submit" onclick="showInput();"
+                                    class="btn ex text-white bt bg-success">Apply</button>
+                            </div>
+                            <div class="d-inline mt-3 ml-2">
+                                <button type="button" data-toggle="collapse" data-target=""
+                                    class="btn ex text-white bt">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------------Side bar right---------------------------------------------->
+            <div class="container text-white col-lg-3 col-md-3 col-sm-10 col-10 my-4" style="border-radius:10px;background-color: #0D2942;margin-bottom:40px;position:relative;
+                padding-bottom: 200px;">
+
+                <div class="row my-auto mx-auto d-flex justify-content-center tag"
+                    style="padding-top:30px;letter-spacing: 4px;">
+                    Create Job Alert
+                </div>
+
+                <div class="row my-auto mx-4 d-flex justify-content-center" style="padding-top:30px;">
+                    The Keyword you entered "Sr.
+                    Software Engineer" is a*
+                </div>
+
+                <div class="row my-2 mx-2">
+                    <div class="col-lg-12">
+                        <form style="font-weight: 100; font-size: 12px;">
+                            <!----------------------------CHECK BOXES------------------>
+                            <div class="form-group form-check">
+                                <input type="checkbox" required class="form-check-input in" id="chktitle">
+                                <label class="form-check-label" style="margin-left: 20px;" for="chktitle">Job
+                                    Title</label>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" required class="form-check-input" id="chkskills">
+                                <label class="form-check-label" style="margin-left: 20px;"
+                                    for="chkskills">Skills</label>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" required class="form-check-input" id="chkcompany">
+                                <label class="form-check-label" style="margin-left: 20px;"
+                                    for="chkcompany">Company</label>
+                            </div>
+
+                            <!------------------------------Fields---------------->
+                            <div class="form-group mx-2">
+                                <label for="lbllevels">Career Levels*</label>
+                                <input type="text" class="form-control formjob" style="width: 240px;"
+                                    id="exampleInputEmail1" required>
+                            </div>
+                            <div class="form-group mx-2">
+                                <label for="lblexp">Your Experience*</label>
+                                <input type="text" class="form-control formjob" style="width: 240px;" id="lblexp"
+                                    required>
+                            </div>
+                            <div class="form-group mx-2">
+                                <label for="lblsal">Your Expected Salary (PKR)*</label>
+                                <input type="text" class="form-control formjob" style="width: 240px;" id="lblsal"
+                                    required>
+                            </div>
+                            <div class="form-group mx-2">
+                                <label for="lblcity">City*</label>
+                                <input type="email" class="form-control formjob" style="width: 240px;" id="lblcity"
+                                    required>
+                            </div>
+
+                            <div class="form-group mx-2">
+                                <label for="lblemail">Your Email*</label>
+                                <input type="email" class="form-control formjob" style="width: 240px;" id="lblemail"
+                                    required>
+                            </div>
+
+                            <button type="submit"
+                                class="btn btnsave mx-auto my-auto d-flex justify-content-center">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

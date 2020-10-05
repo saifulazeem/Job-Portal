@@ -362,6 +362,27 @@ padding-top: 200px;
 .blogsubtext{
   letter-spacing: 2px;font-size: 16px;
 }
+/*Employer.html*/
+.empdivs{
+  border-radius: 12px;
+  padding-left: 19px;
+  padding-right: 19px;
+  font-size: 12px;
+  padding-top: 10px;
+}
+.txtemp{
+  font-size: 16px;
+}
+/*form Employer.html*/
+.empkey{
+  width: 250px;height:40px;margin-left: 50px;
+}
+.emploccat{
+  width: 250px;height:40px;margin-left: 50px;
+}
+.empbtn{
+  width: 150px; height: 43px; margin-left: 6px;margin-left: 150px; margin-top: 15px;
+}
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
@@ -571,6 +592,26 @@ padding-top: 200px;
 }
 .blogsubtext{
   letter-spacing: 2px;font-size: 16px;
+}
+/*Employer.html*/
+.empdivs{
+  border-radius: 12px;
+  padding-left: 19px;
+  padding-right: 19px;
+  font-size: 12px;
+}
+.txtemp{
+  font-size: 16px;
+}
+/*form Employer.html*/
+.empkey{
+  width: 250px;height:40px;margin-left: 50px;
+}
+.emploccat{
+  width: 250px;height:40px;margin-left: 50px;
+}
+.empbtn{
+  width: 150px; height: 43px; margin-left: 6px;margin-left: 150px; margin-top: 15px;
 }
  }
 /***********************************************************************************************************************/
@@ -799,6 +840,31 @@ padding-top: 200px;
 .blogsubtext{
    letter-spacing: 4px;font-size: 25px;
 }
+/*Employer.html*/
+.empdivs{
+  border-radius: 14px;
+  font-size:12px;
+}
+/*Employer.html*/
+.empdivs{
+  border-radius: 12px;
+  padding-left: 19px;
+  padding-right: 19px;
+  font-size: 12px;
+}
+.txtemp{
+  font-size: 16px;
+}
+/*form Employer.html*/
+.empkey{
+  width: 225px;height:50px;margin-left: 0px;
+}
+.emploccat{
+  width: 195px;height:50px;margin-left: 0px;
+}
+.empbtn{
+  width: 90px; height: 43px; margin-left: 6px;margin-right: -4px; margin-top: 3px;
+}
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
@@ -1019,6 +1085,26 @@ padding-top: 200px;
 .blogtext{
  top:290px; 
   letter-spacing: 4px;font-size: 25px;
+}
+/*Employer.html*/
+.empdivs{
+  border-radius: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 12px;
+}
+.txtemp{
+  font-size: 16px;
+}
+/*form Employer.html*/
+.empkey{
+  width: 285px;height:50px;margin-left: 0px;
+}
+.emploccat{
+  width: 260px;height:50px;margin-left: 0px;
+}
+.empbtn{
+  width: 140px; height: 43px; margin-left: 10px;margin-right: -10px; margin-top: 3px;
 }
  }
 /***********************************************************************************************************************/
@@ -1246,6 +1332,26 @@ font-size: 20px;
 .blogtext{
   letter-spacing: 4px;font-size: 25px;
 }
+/*Employer.html*/
+.empdivs{
+  border-radius: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+}
+.txtemp{
+  font-size: 16px;
+}
+/*form Employer.html*/
+.empkey{
+  width: 340px;height:50px;margin-left: 0px;
+}
+.emploccat{
+  width: 320px;height:50px;margin-left: 0px;
+}
+.empbtn{
+  width: 150px; height: 43px; margin-left: 10px;margin-right: -10px; margin-top: 3px;
+}
 }
 /******************************************************************************************/
 .homeemp{
@@ -1385,6 +1491,42 @@ background-color:  #0BB44F;
 }
 /*Employer.html add button*/
 .addbtn:hover{
-background-color: mediumslateblue;
+background-color:#d4d4d4;
 cursor:hand;
+color:black;
+}
+tr{
+  border-top: hidden;
+}
+/*Employer.html dropdown*/
+.border-3 {
+  border-width:3px !important;
+}
+.dropdown-menu {
+  min-width:inherit;
+  max-width: inherit;
+}
+.btnsave{
+  background-color: #0BB44F;
+  color:white;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.btnsave:hover{
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color:gainsboro;
+  color:black;
+}
+
+/*jobs.html page*/
+.formjob{
+  background-color: #0D2942;
+  color: white;
+}
+.formjob:focus{
+  background-color: white;
 }
