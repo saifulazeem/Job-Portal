@@ -1,56 +1,52 @@
-<!-------------------------TESTIMONIAL----------------------------------->
-<div class="container">
-    <div class="row">
-        <h2>
-            Testimonial
-        </h2>
-    </div>
-    <div class="row col-lg-10 offset-lg-2">
-        <div class="col-lg-4">
-            <div class="container roun bg-white" style="border-radius: 20px;">
-                <div class="row bg-success"
-                    style="margin-left:0px; width: 278px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;">
+<!DOCTYPE html>
+<html>
 
-                </div>
-                <div class="row" style="padding-left: 120px; ">
-                    <div><img src="img/s1.png" class="img-fluid"></div>
-                </div>
-                <div class="row">
-                    <p class="2vw text-dark m-auto mb-0 "><b> Name</b></p>
-                </div>
-                <div class="row">
-                    <p class="text-dark m-auto text-sm text-muted" style="font-size: small;">Audit Senerio at EY</p>
-                </div>
-                <div class="row text-justify m-4 mb-0 mt-0 p-4">
-                    <p class="text-dark m-auto text-sm" style="font-size: small;">
-                        Booker provides software that helps retailers manage their stores. This company leverages
-                        their customers to tell the story of what makes their software great, making this page a
-                        focal point of their website's main navigation. </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="container roun bg-white" style="border-radius: 20px;">
-                <div class="row bg-success"
-                    style="margin-left:0px; width: 278px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-                </div>
-                <div class="row" style="padding-left: 120px; ">
-                    <div><img src="img/s1.png" class="img-fluid"></div>
-                </div>
-                <div class="row">
-                    <p class="2vw text-dark m-auto mb-0 "><b> Name</b></p>
-                </div>
-                <div class="row">
-                    <p class="text-dark m-auto text-sm text-muted" style="font-size: small;">Audit Senerio at EY</p>
-                </div>
-                <div class="row text-justify m-4 mb-0 mt-0 p-4">
-                    <p class="text-dark m-auto text-sm" style="font-size: small;">
-                        Booker provides software that helps retailers manage their stores. This company leverages
-                        their customers to tell the story of what makes their software great, making this page a
-                        focal point of their website's main navigation. </p>
-                </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+</style>
+<div class="disp"></div>
+<body style="background-color: #ff8566">
+    <div class="main">
+        <div class="input_fields_container_part">
+            <div>
+                <button class="btn btn-sm btn-primary add_more_button">Add More</button>
             </div>
         </div>
     </div>
-</div>
+</body>
+
+<script>
+
+    $(document).ready(function () {
+        $(".disp").hide();
+        $('.add_more_button').click(function (e) {
+            //click event on add more fields button having class add_more_button
+            e.preventDefault();
+            $('.input_fields_container_part').append('<div><input type="text" name="tags" id="user_input" /><button class="remove_field" style="margin-left:10px;">Remove</button><button id="sub" class="submitted">SUBMIT</button></div>');
+            //add input field
+
+        });
+        $('.input_fields_container_part').on("click", ".remove_field", function (e) {
+            //user click on remove text links
+            e.preventDefault();
+            $(this).parent('div').remove();
+        });
+        $('.input_fields_container_part').on("click", ".submitted", function (e) {
+            //user click on remove text links
+            e.preventDefault();
+            $(".disp").show();
+            var str = $("#user_input").val();
+            $(".disp" ).text(str);
+        });
+    });
+</script>
+
+</html>

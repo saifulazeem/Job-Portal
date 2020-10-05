@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .red-box,
+        .message-window {
+            height: 350px;
+        }
+
+        .red-box {
+            width: 100%;
+            background: red;
+            z-index: 1;
+            position: absolute;
+        }
+
+        .message-window {
+            width: 100%;
+            z-index: 2;
+            position: absolute;
+            left: 100%;
+            background: #f90;
+            color: #000;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.photo-details-messages').click(function () {
+                var s2 = $('.message-window');
+                var s1 = $('.red-box');
+                s1.animate({ "right": "100%" }, "slow").removeClass('visible');
+                s2.animate({ "left": "0" }, "slow").addClass('visible');
+            });
+
+            $('.bk').click(function () {
+                var s2 = $('.message-window');
+                var s1 = $('.red-box');
+                s2.animate({ "left": "100%" }, "slow").removeClass('visible');
+                s1.animate({ "right": "0" }, "slow").addClass('visible');
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="message-window">Here I am !
+        <div class="container">
+            <button class="btn bk bg-success">BACK</button>
+        </div>
+    </div>
+    <div class="red-box">Fixed div
+        <button class="btn photo-details-messages bg-success" onclick=chk();>NEXT</button>
+    </div>
+
+
+   
+
+</body>
+
+</html>

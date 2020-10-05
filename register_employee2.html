@@ -120,10 +120,10 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container" id="myGroup">
             <div class="row">
 
-                <!--------------------------FORM--------------------------------------------------->
+                <!--------------------------divs start HERE--------------------------------------------------->
                 <div class="col-lg-6 col-md-8 col-sm-10 col-xs-6 mx-auto my-4 roun rounded"
                     style="background-color:#e0e0e0;">
                     <!-------------------------------Summary------------------------------------->
@@ -131,16 +131,16 @@
                         <div>
                             <p id="sum"></p>
                         </div>
-                        <div class="d-inline">
+                        <div class="d-inline col-9 offset-1">
                             <label for="skill" class="d-flex align-items-start mx-2"><b>Summary</b></label>
                         </div>
-                        <div class="d-inline offset-9" data-toggle="collapse" data-target="#collapseskill"
+                        <div class="d-inline col-1" data-toggle="collapse" data-target="#collapsesum"
                             aria-expanded="false" aria-controls="collapseskill">
                             <img src="img/add.png">
                         </div>
 
                         <form class="col-12">
-                            <div class="collapse col-12" id="collapseskill">
+                            <div class="collapse col-12" id="collapsesum" data-parent="#myGroup">
                                 <div class="form-group mt-3">
                                     <textarea name="summary" placeholder="Some info" id="summary"
                                         class="form-control f summary textarea_counter" rows="8"
@@ -156,11 +156,11 @@
                     </div>
                     <!-------------------------------Skills------------------------------------->
                     <div class="row mt-3">
-                        <div class="d-inline">
+                        <div class="d-inline col-9 offset-1">
                             <label for="skill" class="d-flex align-items-start mx-2"><b>Skill</b><span
                                     class="text-danger">*</span></label>
                         </div>
-                        <div class="d-inline offset-10" data-toggle="collapse" data-target="#collapseskill"
+                        <div class="d-inline col-1" data-toggle="collapse" data-target="#collapseskill"
                             aria-expanded="false" aria-controls="collapseskill">
                             <img src="img/add.png">
                         </div>
@@ -176,7 +176,7 @@
                         </div>
 
                         <form class="col-12">
-                            <div class="collapse col-12" id="collapseskill">
+                            <div class="collapse col-12" id="collapseskill" data-parent="#myGroup">
                                 <!----to be collapsed-->
                                 <div class="form-group col-12">
                                     <label for="exampleskill" class="d-flex align-items-start">Add a New
@@ -210,11 +210,11 @@
 
                     <!-------------------------------Experience------------------------------------->
                     <div class="row mt-2">
-                        <div class="d-inline">
+                        <div class="d-inline col-9 offset-1">
                             <label for="skill" class="d-flex align-items-start mx-2"><b>Experience</b><span
                                     class="text-danger">*</span><label>
                         </div>
-                        <div class="d-inline offset-9" data-toggle="collapse" data-target="#collapseexp"
+                        <div class="d-inline col-1" data-toggle="collapse" data-target="#collapseexp"
                             aria-expanded="false" aria-controls="collapseexp">
                             <img src="img/add.png">
                         </div>
@@ -230,7 +230,7 @@
                         </div>
 
                         <form class="col-12">
-                            <div class="collapse col-12" id="collapseexp">
+                            <div class="collapse col-12" id="collapseexp" data-parent="#myGroup">
                                 <!----to be collapsed-->
                                 <div class="form-group col-12">
                                     <label for="jobtitle" class="d-flex align-items-start">
@@ -242,7 +242,7 @@
                                             class="text-danger">*</span></label>
                                     <input type="text" required class="form-control f" required id="company">
                                 </div>
-                                c
+                                
 
                                 <div class="form-group col-12 ">
                                     <label for="industry">Salary<span class="text-danger">*</span></label>
@@ -1219,11 +1219,11 @@
                     <!--------------------------------------------------------Education----------------------------------------------------->
 
                     <div class="row mt-2">
-                        <div class="d-inline">
+                        <div class="d-inline col-9 offset-1">
                             <label for="skill" class="d-flex align-items-start mx-2"><b>Education</b><span
                                     class="text-danger">*</span><label>
                         </div>
-                        <div class="d-inline offset-9" data-toggle="collapse" data-target="#collapseedu"
+                        <div class="d-inline col-1" data-toggle="collapse" data-target="#collapseedu"
                             aria-expanded="false" aria-controls="collapseedu">
                             <img src="img/add.png">
                         </div>
@@ -1239,7 +1239,7 @@
                         </div>
 
                         <form class="col-12">
-                            <div class="collapse col-12" id="collapseedu">
+                            <div class="collapse col-12" id="collapseedu" data-parent="#myGroup">
                                 <!----to be collapsed-->
                                 <div class="form-group col-12">
                                     <label for="degreetitle" class="d-flex align-items-start">
@@ -2054,11 +2054,11 @@
                     <!--------------------------------------------------------Language----------------------------------------------------->
 
                     <div class="row mt-2">
-                        <div class="d-inline">
+                        <div class="d-inline col-9 offset-1">
                             <label for="language" class="d-flex align-items-start mx-2"><b>Language</b><span
                                     class="text-danger">*</span><label>
                         </div>
-                        <div class="d-inline offset-9" data-toggle="collapse" data-target="#collapselan"
+                        <div class="d-inline col-1" data-toggle="collapse" data-target="#collapselan"
                             aria-expanded="false" aria-controls="collapselan">
                             <img src="img/add.png">
                         </div>
@@ -2074,7 +2074,7 @@
                         </div>
 
 
-                        <div class="collapse col-12" id="collapselan">
+                        <div class="collapse col-12" id="collapselan" data-parent="#myGroup">
                             <form class="col-12">
                                 <!----to be collapsed-->
                                 <div class="form-group col-12">

@@ -10,11 +10,32 @@
     <title>SIGN UP</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
 </head>
+<style>
+    body {
+        overflow: hidden;
+    }
+
+
+    .slideleft {
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+    }
+
+    .empdiv,
+    .jsdiv {
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        left: 100%;
+    }
+</style>
 <script language='javascript' type='text/javascript'>
+
     function check(input) {
         if (input.value != document.getElementById('password').value) {
             input.setCustomValidity('Password Must be Matching.');
@@ -23,17 +44,28 @@
             input.setCustomValidity('');
         }
     }
-    $(document).ready(function () {
-        $('input[type="radio"]').click(function () {
-            var inputValue = $(this).attr("value");
-            var targetBox = $("." + inputValue);
-            $(".box").not(targetBox).hide();
 
-            $(".first").hide();
-            $(targetBox).show();
+    $(document).ready(function () {
+        var s1 = $('.slideleft');
+        $('.btnnext').click(function () {
+            var radioValue = $("input[name='reg']:checked").val();
+            if (radioValue == "emp") {
+                var s2 = $('.empdiv');
+                s1.animate({ "right": "100%" }, "slow").removeClass('visible');
+                s2.animate({ "left": "0" }, "slow").addClass('visible');
+            }
+            else if (radioValue == "js") {
+                var s2 = $('.jsdiv');
+                s1.animate({ "right": "100%" }, "slow").removeClass('visible');
+                s2.animate({ "left": "0" }, "slow").addClass('visible');
+            }
+        });
+        $('.btnback').click(function () {
+            var s2 = $('.slideright');
+            s2.animate({ "left": "100%" }, "slow").removeClass('visible');
+            s1.animate({ "right": "0" }, "slow").addClass('visible');
         });
     });
-
 </script>
 
 <body>
@@ -68,46 +100,43 @@
     </nav>
 
     <!---------------------------------------------CONTAINER--------------------------------------------->
-    <div class="container first">
-        <div class="row mx-auto mt-4 my-auto" style="padding-top: 100px;">
-            <h1 class="8vw text-dark mt-auto mx-auto mb-2">SIGN UP</h1>
-        </div>
-        <div class="row">
+    <div class="slideleft">
+        <div class="container">
+            <div class="row mx-auto mt-4 my-auto" style="padding-top: 100px;">
+                <h1 class="8vw text-dark mt-auto mx-auto mb-2">SIGN UP</h1>
+            </div>
+            <div class="row">
 
-            <!--------------------------FORM--------------------------------------------------->
-            <div class="col-lg-6 col-md-8 col-sm-10 col-xs-6 mx-auto my-4 roun rounded"
-                style="background-color:#e0e0e0;">
-                <div class="row m-3">
-                    <form action="register_employee2.html" method="GET">
-                        <!-------------------------------NAME------------------------------------->
-                        <div class="form-group">
-                            <label for="reg" class=" mx-2 homedivtxt">REGISTER As: </label>
-                            <div class="col m-auto" style="font-size: 20px; ">
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="reg" id="emp" value="emp">
-                                    <label class="form-check-label" for="emp">
-                                        Employer
-                                    </label>
+                <!--------------------------FORM--------------------------------------------------->
+                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-6 mx-auto my-4 roun rounded"
+                    style="background-color:#e0e0e0;">
+                    <div class="row m-3">
+                        <form>
+                            <div class="form-group">
+                                <label for="reg" class=" mx-2 homedivtxt">REGISTER As: </label>
+                                <div class="col m-auto" style="font-size: 20px; ">
+                                    <div class="form-check mt-3 mx-4">
+                                        <input class="form-check-input" type="radio" name="reg" id="emp" value="emp">
+                                        <label class="form-check-label" for="emp">
+                                            Employer
+                                        </label>
+                                    </div>
+                                    <div class="form-check mt-2 mx-4">
+                                        <input class="form-check-input" type="radio" name="reg" id="js" value="js">
+                                        <label class="form-check-label" for="js">
+                                            Job Seeker
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="form-check mt-2 ">
-                                    <input class="form-check-input" type="radio" name="reg" id="js" value="js">
-                                    <label class="form-check-label" for="js">
-                                        Job Seeker
-                                    </label>
-                                </div>
-                                <div class="first"></div>
                             </div>
-                        </div>
-                </div>
-
-                <!-------------------------BUTTON------------------------------------->
-
-                <div class="row m-4 float-right">
-                    <button type="submit" class="shadow btn ex text-white bt ">
-                        <a href="#" class="text-white" style="text-decoration: none;">Next</a></button>
+                        </form>
+                    </div>
+                    <!---------------------BUTTON-------------------->
+                    <div class="float-right mb-3 ">
+                        <button type="submit" class="btn ex text-white bt btnnext">Next</button>
+                    </div>
                 </div>
             </div>
-            </form>
         </div>
     </div>
 
@@ -115,7 +144,7 @@
 
 
     <!---------------------------------------------EMPLOYER-------------------------------------------->
-    <div class="emp box" style="display: none;">
+    <div class="slideright empdiv">
         <div class="container">
             <div class="row mx-auto mt-4" style="padding:50px; margin-bottom: -50px;">
                 <h1 class="8vw text-dark mx-auto">EMPLOYER SIGN UP</h1>
@@ -215,11 +244,18 @@
                             </div>
 
                             <!-------------------------BUTTON------------------------------------->
-                            <div class="d-flex justify-content-center align-self-center mt-3">
-                                <button type="submit" class="btn ex text-white bt">
-                                    <a href="register_employee2.html" class="text-white"
-                                        style="text-decoration: none;">Next</a></button>
+                            <div class="mt-3">
+                                <div class="float-left mt-3">
+                                    <button class="btn regbtn text-white bt btnback">Back</button>
+                                </div>
+
+                                <div class="float-right mt-3">
+                                    <button type="submit" class="btn regbtn text-white bt">
+                                        <a href="register_employee2.html" class="text-white"
+                                            style="text-decoration: none;">Next</a></button>
+                                </div>
                             </div>
+
                         </form>
                     </div>
                     <div class="d-flex justify-content-center align-self-center">
@@ -235,7 +271,7 @@
 
 
     <!---------------------------------------------JOB SEEKER--------------------------------------------->
-    <div class="js box" style="display: none;">
+    <div class="slideright jsdiv">
         <div>
             <div class="container">
                 <div class="row mx-auto mt-4" style="padding:50px; margin-bottom: -50px;">
@@ -349,10 +385,16 @@
                                 </div>
 
                                 <!-------------------------BUTTON------------------------------------->
-                                <div class="d-flex justify-content-center align-self-center mt-3">
-                                    <button type="submit" class="btn ex text-white bt">
-                                        <a href="register_employee2.html" class="text-white"
-                                            style="text-decoration: none;">Next</a></button>
+                                <div class="mt-3">
+                                    <div class="float-left mt-3">
+                                        <button class="btn regbtn text-white bt btnback">Back</button>
+                                    </div>
+
+                                    <div class="float-right mt-3">
+                                        <button type="submit" class="btn regbtn text-white bt">
+                                            <a href="register_employee2.html" class="text-white"
+                                                style="text-decoration: none;">Next</a></button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -369,18 +411,6 @@
 
     </div>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

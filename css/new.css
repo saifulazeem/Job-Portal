@@ -1223,7 +1223,7 @@ font-size: 20px;
 .over{
   left:0px;
   top: -700px;
-  margin-bottom: -895px;
+  margin-bottom: -775px;
 }
 /*career.html blue rectangle*/
 .hg{
@@ -1294,6 +1294,12 @@ font-size: 20px;
 }
 .bt:hover{
 background-color:  #0BB44F;
+}
+/*button*/
+.regbtn {
+  padding-right: 105px;
+  padding-left: 105px;
+  border-radius: 8px;
 }
 .for {
     border-radius: 15px;
@@ -1376,4 +1382,9 @@ background-color:  #0BB44F;
 }
 .blogtitle{
   color:black;
+}
+/*Employer.html add button*/
+.addbtn:hover{
+background-color: mediumslateblue;
+cursor:hand;
 }

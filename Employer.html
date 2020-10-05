@@ -12,11 +12,43 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
     <title>Employer</title>
+    <script>
 
+        $(document).ready(function () {
+            $(".disp").hide();
+            $('.add_more_button').click(function (e) {
+                //click event on add more fields button having class add_more_button
+                e.preventDefault();
+                if ($("#user_input").val != "") {
+                    $('.input_fields_container_part').append('<div style="background-color:grey;" class="p-3 text-dark"><input type="text" name="tags" id="user_input" /><button class="remove_field " style="margin-left:3px;">Remove</button><button id="sub" class="submitted">Add</button></div>');
+                    //add input field
+                }
+                else {
+                    //do nothing
+                }
+
+            });
+            $('.input_fields_container_part').on("click", ".remove_field", function (e) {
+                //user click on remove text links
+                e.preventDefault();
+                $(this).parent('div').remove();
+            });
+            $('.input_fields_container_part').on("click", ".submitted", function (e) {
+                //user click on remove text links
+                e.preventDefault();
+                $(".disp").show();
+                var str = $("#user_input").val();
+                $(".disp").text(str);
+                $(this).parent('div').remove();
+            });
+        });
+    </script>
 </head>
 
 <body style="font-family: Segoe UI;">
@@ -60,22 +92,22 @@
                             <tr>
                                 <!--------First row------------->
                                 <td>
-                                    <p class="text-dark" style="margin:0px;width: 90%;">What Job You Are Looking
-                                        For?<img src="img/arrowblack.png" class="img-fluid">
-                                    </p>
-                                </td>
-                                <td>
-                                    <p class="text-dark" style="margin:0px;width: 100%;">Where?<img
+                                    <p class="text-dark" style="margin:0px;">What Job You Are Looking For?<img
                                             src="img/arrowblack.png" class="img-fluid">
                                     </p>
                                 </td>
                                 <td>
-                                    <p class="text-dark" style="margin:0px;width: 100%;">Categories<img
-                                            src="img/arrowblack.png" class="img-fluid"></p>
+                                    <p class="text-dark" style="margin:0px;">Where?<img src="img/arrowblack.png"
+                                            class="img-fluid">
+                                    </p>
+                                </td>
+                                <td>
+                                    <p class="text-dark" style="margin:0px;">Categories<img src="img/arrowblack.png"
+                                            class="img-fluid"></p>
                                 </td>
                                 <td></td>
                             </tr>
-                            <tr class="rounded shadow">
+                            <tr class="shadow">
                                 <!---------Second row------------->
                                 <!------------------------FORM------------------------------------->
                                 <form class="form-inline">
@@ -91,8 +123,10 @@
                                         <input type="text" class="form-control h" id="categories" style="height:50px;"
                                             placeholder="All Categories">
                                     </td>
-                                    <td style="padding:0px; top:-10px; position: relative;">
-                                        <button type="submit" class="btn"><img src="img/search.png"
+                                    <td style="padding:0px;">
+                                        <button type="submit"
+                                            class="btn btn-success p-auto m-auto w-100 h-100 pl-lg-4 pr-lg-4 pl-md-4 pr-md-4 pl-sm-1 pr-sm-1 pr-1 pl-1 m-1"
+                                            style="padding-right: 0px;"><img src="img/search.png"
                                                 class="img-fluid"></button>
                                     </td>
                                 </form>
@@ -115,96 +149,97 @@
 
 
         <!-------------------------------------NEXT CONTAINER--------------------------->
-        <div class="row row-cols-2">
+        <div class="row mx-4">
             <!------------------------------------------Side Bar left---------------------------------------------->
-            <div class="container text-white  col-lg-3 col-md-4 col-sm-6 rounded col-12 rounded "
-                style="background-color: #0D2942;margin-bottom:40px;position:relative">
+            <div class="container text-white col-lg-3 col-md-3 col-sm-10 rounded col-10" style="background-color: #0D2942;margin-bottom:40px;position:relative;
+                padding-bottom: 200px;">
 
                 <div class="row my-auto mx-auto d-flex justify-content-center" style="padding-top:30px;">
                     REFINE YOUR SEARCH
                 </div>
 
                 <div class="row my-2 mx-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-xs-1">
+                    <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
                         City
                     </div>
-                    <div class="col-lg-3 offset-lg-5 col-md-4 offset-md-3 col-sm-2 offset-sm-2 col-xs-2">
+                    <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
                         (24)
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
-                      <hr class="divider ">
+                        <hr class="divider ">
                     </div>
-                  </div>
+                </div>
 
-                  <div class="row my-2 mx-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-xs-1">
+                <div class="row my-2 mx-2">
+                    <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
                         City
                     </div>
-                    <div class="col-lg-3 offset-lg-5 col-md-4 offset-md-3 col-sm-2 offset-sm-2 col-xs-2">
+                    <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
                         (24)
                     </div>
                 </div>
                 <div class="row my-2 mx-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-xs-1">
+                    <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
                         City
                     </div>
-                    <div class="col-lg-3 offset-lg-5 col-md-4 offset-md-3 col-sm-2 offset-sm-2 col-xs-2">
+                    <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
                         (24)
                     </div>
                 </div>
                 <div class="row my-2 mx-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-xs-1">
+                    <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
                         City
                     </div>
-                    <div class="col-lg-3 offset-lg-5 col-md-4 offset-md-3 col-sm-2 offset-sm-2 col-xs-2">
+                    <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
                         (24)
                     </div>
                 </div>
                 <div class="row my-2 mx-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-xs-1">
+                    <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
                         City
                     </div>
-                    <div class="col-lg-3 offset-lg-5 col-md-4 offset-md-3 col-sm-2 offset-sm-2 col-xs-2">
+                    <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
                         (24)
                     </div>
                 </div>
-                <div class="row my-2 mx-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-xs-1">
-                        <img src="img/add.png" class="img-fluid">
+
+                <div class="row my-2 mx-4">
+                    <div class="disp">
+                        <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
+
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
+
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-2  col-xs-2">
+                </div>
+                <div class="row my-2 mx-2 addbtn add_more_button">
+                    <div class="col-lg-2 col-md-4 col-sm-3 col-3 offset-1">
+                        <img src="img/add.png" class="img-fluid ">
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                         More
                     </div>
+                </div>
+                <div class="input_fields_container_part">
                 </div>
             </div>
 
             <!------------------------------------------Side bar right---------------------------------------------->
-            <div class="container col-lg-8 col-md-6 col-sm-5 col-xs-12 rounded roun">
-                <!----------------------breadcrumb------------------->
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb " style="background-color: #969696;">
-                        <li class="breadcrumb-item "><a class="text-white" href="#">Home</a></li>
-                        <li class="breadcrumb-item text-white" aria-current="page">JOBS PORTAL Admin Panel</li>
-                    </ol>
-                </nav>
+            <div class="container col-lg-8 col-md-8 col-sm-7 col-xs-10 mx-4 rounded roun">
+                <div class="row">
+                    <div class="col-lg-3 mx-5 tag font-weight-bold">
+                        All Employers
+                    </div>
+                    <div class="col-lg-5">
 
-                <!----------------------edit profile------------------->
-                <div class="mx-4 myDiv" id="editprofile">
-                    <p class="txt-dark">edit profile</p>
+                    </div>
                 </div>
 
-                <!----------------------jobs--------------------------->
-                <div class="mx-4 myDiv" id="jobs">
-                    <p class="txt-dark">jobs</p>
-                </div>
 
-                <!----------------------delete jobs-------------------->
-                <div class="mx-4 myDiv" id="deletejobs">
-                    <p class="txt-dark">delete jobs</p>
-                </div>
             </div>
         </div>
     </div>
