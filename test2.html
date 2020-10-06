@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"  media="screen">
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+  <title>Document</title>
+  
 
 </head>
-<body>
-<div data-role="page">
-  <div data-role="header">
-    <h1>Range Slider</h1>
-  </div>
 
-  <div data-role="main" class="ui-content">
-    <form method="post" action="/action_page_post.php">
-      <div data-role="rangeslider">
-        <label for="price-min">Price:</label>
-        <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
-        <label for="price-max">Price:</label>
-        <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
+<body>
+  <div class="row my-4 mx-2" style="padding-top:130px;padding-bottom: 200px;">
+    <div class="container shadow roun">
+      <div class="row mx-4 my-4">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8">
+          <p class="d-flex align-self-center homedivtxt" style="float: left;font-size: 25px;">
+            Explore by choose category
+          </p>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-6 col-xs-9">
+          <div class="btn-group homesel">
+            <button class="btn btn-success" type="button"
+              style="border-radius: 50px 0px 0px 50px; padding-left: 30px; padding-right: 40px;">
+              Select category
+            </button>
+            <button type="button" style="border-radius: 0px 50px 50px 0px;padding-left: 30px; padding-right: 20px;"
+              class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+              <button class="btn dropdown-item d">UI/UX Designer</button>
+              <button class="btn dropdown-item d">Web Developer</button>
+              <button class="btn dropdown-item d">App Developer</button>
+            </div>
+          </div>
+        </div>
       </div>
-        <input type="submit" data-inline="true" value="Submit">
-        <p>The range slider can be useful for allowing users to select a specific price range when browsing products.</p>
-      </form>
+    </div>
   </div>
-</div>
 </body>
+
 </html>

@@ -14,8 +14,6 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
@@ -24,6 +22,8 @@
     <script>
 
         $(document).ready(function () {
+            //Center div
+             $('.collapsed').hide();
 
             $('.hov').mouseenter(function () {
                 $('.collapsed').show();
@@ -36,6 +36,15 @@
             });
             $('.collapsed').mouseleave(function () {
                 $('.collapsed').hide();
+            });
+
+            //SHOW MORE
+            $('.dispshm').click(function () {
+                if ($(this).text() == "See Less") {
+                    $(this).text("Show More");
+                } else {
+                    $(this).text("See Less");
+                }
             });
         });
     </script>
@@ -56,7 +65,7 @@
                     <a class="nav-link" href="about.html">ABOUT US</a>
                 </li>
                 <li class="nav-item navhov">
-                    <a class="nav-link" href="#">EMPLOYERS PROFILE</a>
+                    <a class="nav-link" href="Employer.html">EMPLOYERS PROFILE</a>
                 </li>
                 <li class="nav-item navhov">
                     <a class="nav-link " href="careers.html">CAREERS GUIDE</a>
@@ -222,21 +231,1232 @@
                     </div>
                 </div>
 
-                <div class="row my-2 mx-2">
-                    <div class="col-lg-12">
-                        <div class=" border-white border-bottom">
-                            <div class="d-inline text">
-                                Job Title
-                            </div>
-                            <div class="d-inline dropdown-toggle text-white" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false" id="drop"
-                                style="padding-left: 150px; width:40px;height:30px;">
+                <!--------------------------------------------JOB TITLE-------------------------------->
+                <div class="row my-2 mx-4">
+                    <div class=" border-white border-bottom">
+                        <a href="" data-toggle="collapse" data-target="#collapsemaintitle" aria-expanded="false"
+                            aria-controls="collapsemaintitle" style="text-decoration: none;" class="d-inline colap">
 
-                                <div class="dropdown-menu" aria-labelledby="drop">
-                                   
+                            <b class="collapsedivs">Job Title</b>
+
+                            <div class="d-inline dropdown-toggle text-white" aria-expanded="false"
+                                style="padding-left:160px;">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-------------------------------------------LIST(collapse on click)------------------------------------>
+                <!------------Next Row-->
+                <div class="collapse panel-collapse show" id="collapsemaintitle" data-parent="#myGroup">
+                    <div class="row mt-2 ml-0 mt-5 jtitle" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Software Quality Assurance En..
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Software Quality Assurance En..
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Software Quality Assurance En..
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Software Quality Assurance En..
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-----------------------------------------DIV to be Collapsed------------------------------------->
+                    <div class="collapse" id="collapsetitle" data-parent="#myGroup">
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Software Quality Assurance En..
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
                                 </div>
                             </div>
                         </div>
+
+
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Software Quality Assurance En..
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------Next Row-->
+
+                    <!---------------------------------SHOW MORE---------------------------------->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <a href="" data-toggle="collapse" data-target="#collapsetitle" aria-expanded="false"
+                            aria-controls="collapsetitle">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-4 col-md-5 col-sm-6 col-1">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--------------------------------------------CITY-------------------------------->
+                <div class="row my-2 mx-4">
+                    <div class=" border-white border-bottom">
+                        <a href="" data-toggle="collapse" data-target="#collapsemaincity" aria-expanded="true"
+                            aria-controls="collapsemaincity" style="text-decoration: none;" class="d-inline colap ">
+
+                            <b class="collapsedivs">City</b>
+
+                            <div class="d-inline dropdown-toggle text-white" aria-expanded="true"
+                                style="padding-left:195px;">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-------------------------------------------LIST(collapse on click)------------------------------------>
+                <!------------Next Row-->
+                <div class="collapse panel-collapse show" id="collapsemaincity" data-parent="#myGroup">
+                    <div class="row mt-2 ml-0 mt-5 jtitle" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Lahore
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Lahore
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Lahore
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Lahore
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-----------------------------------------DIV to be Collapsed------------------------------------->
+                    <div class="collapse" id="collapsecity" data-parent="#myGroup">
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Lahore
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Lahore
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------Next Row-->
+
+                    <!---------------------------------SHOW MORE---------------------------------->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <a href="" data-toggle="collapse" data-target="#collapsecity" aria-expanded="false"
+                            aria-controls="collapsecity">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-4 col-md-5 col-sm-6 col-1">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1 showmore dispshm"
+                                    style="font-size: 13px;text-decoration:none;">
+                                    Show More
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--------------------------------------------Experience-------------------------------->
+                <div class="row my-2 mx-4">
+                    <div class=" border-white border-bottom">
+                        <a href="" data-toggle="collapse" data-target="#collapsemainexp" aria-expanded="true"
+                            aria-controls="collapsemainexp" style="text-decoration: none;" class="d-inline colap ">
+
+                            <b class="collapsedivs">Experience</b>
+
+                            <div class="d-inline dropdown-toggle text-white" aria-expanded="true"
+                                style="padding-left:145px;">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-------------------------------------------LIST(collapse on click)------------------------------------>
+                <!------------Next Row-->
+                <div class="collapse panel-collapse show" id="collapsemainexp" data-parent="#myGroup">
+                    <div class="row mt-2 ml-0 mt-5 jtitle" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                1 Year
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                1 Year
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                1 Year
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                1 Year
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-----------------------------------------DIV to be Collapsed------------------------------------->
+                    <div class="collapse" id="collapseexp" data-parent="#myGroup">
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    1 Year
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    1 Year
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------Next Row-->
+
+                    <!---------------------------------SHOW MORE---------------------------------->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <a href="" data-toggle="collapse" data-target="#collapseexp" aria-expanded="false"
+                            aria-controls="collapseexp">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-4 col-md-5 col-sm-6 col-1">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1 showmore dispshm"
+                                    style="font-size: 13px;text-decoration:none;">
+                                    Show More
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--------------------------------------------Job Type-------------------------------->
+                <div class="row my-2 mx-4">
+                    <div class=" border-white border-bottom">
+                        <a href="" data-toggle="collapse" data-target="#collapsemaintype" aria-expanded="true"
+                            aria-controls="collapsemaintype" style="text-decoration: none;" class="d-inline colap ">
+
+                            <b class="collapsedivs">Job Type</b>
+
+                            <div class="d-inline dropdown-toggle text-white" aria-expanded="true"
+                                style="padding-left:165px;">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-------------------------------------------LIST(collapse on click)------------------------------------>
+                <!------------Next Row-->
+                <div class="collapse panel-collapse show" id="collapsemaintype" data-parent="#myGroup">
+                    <div class="row mt-2 ml-0 mt-5 jtitle" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Full Time/Permanent
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Full Time/Permanent
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Full Time/Permanent
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Full Time/Permanent
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-----------------------------------------DIV to be Collapsed------------------------------------->
+                    <div class="collapse" id="collapsetype" data-parent="#myGroup">
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Full Time/Permanent
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Full Time/Permanent
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------Next Row-->
+
+                    <!---------------------------------SHOW MORE---------------------------------->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <a href="" data-toggle="collapse" data-target="#collapsetype" aria-expanded="false"
+                            aria-controls="collapsetype">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-4 col-md-5 col-sm-6 col-1">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1 showmore dispshm"
+                                    style="font-size: 13px;text-decoration:none;">
+                                    Show More
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--------------------------------------------Skills-------------------------------->
+                <div class="row my-2 mx-4">
+                    <div class=" border-white border-bottom">
+                        <a href="" data-toggle="collapse" data-target="#collapsemainskills" aria-expanded="true"
+                            aria-controls="collapsemainskills" style="text-decoration: none;" class="d-inline colap ">
+
+                            <b class="collapsedivs">Skills</b>
+
+                            <div class="d-inline dropdown-toggle text-white" aria-expanded="true"
+                                style="padding-left:195px;">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-------------------------------------------LIST(collapse on click)------------------------------------>
+                <!------------Next Row-->
+                <div class="collapse panel-collapse show" id="collapsemainskills" data-parent="#myGroup">
+                    <div class="row mt-2 ml-0 mt-5 jtitle" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Javascript
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Javascript
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Javascript
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Javascript
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-----------------------------------------DIV to be Collapsed------------------------------------->
+                    <div class="collapse" id="collapseskills" data-parent="#myGroup">
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Javascript
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Javascript
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------Next Row-->
+
+                    <!---------------------------------SHOW MORE---------------------------------->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <a href="" data-toggle="collapse" data-target="#collapseskills" aria-expanded="false"
+                            aria-controls="collapseskills">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-4 col-md-5 col-sm-6 col-1">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1 showmore dispshm"
+                                    style="font-size: 13px;text-decoration:none;">
+                                    Show More
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--------------------------------------------Industry-------------------------------->
+                <div class="row my-2 mx-4">
+                    <div class=" border-white border-bottom">
+                        <a href="" data-toggle="collapse" data-target="#collapsemainind" aria-expanded="true"
+                            aria-controls="collapsemainind" style="text-decoration: none;" class="d-inline colap ">
+
+                            <b class="collapsedivs">Industry</b>
+
+                            <div class="d-inline dropdown-toggle text-white" aria-expanded="true"
+                                style="padding-left:169px;">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-------------------------------------------LIST(collapse on click)------------------------------------>
+                <!------------Next Row-->
+                <div class="collapse panel-collapse show" id="collapsemainind" data-parent="#myGroup">
+                    <div class="row mt-2 ml-0 mt-5 jtitle" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Information Technology
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Information Technology
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Information Technology
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Information Technology
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-----------------------------------------DIV to be Collapsed------------------------------------->
+                    <div class="collapse" id="collapselevel" data-parent="#myGroup">
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Information Technology
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Information Technology
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------Next Row-->
+
+                    <!---------------------------------SHOW MORE---------------------------------->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <a href="" data-toggle="collapse" data-target="#collapseind" aria-expanded="false"
+                            aria-controls="collapseind">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-4 col-md-5 col-sm-6 col-1">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1 showmore dispshm"
+                                    style="font-size: 13px;text-decoration:none;">
+                                    Show More
+                                </div>
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1 showmore dispshl"
+                                    style="font-size: 13px;text-decoration:none; display: none;">
+                                    Show Less
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--------------------------------------------Gender-------------------------------->
+                <div class="row my-2 mx-4">
+                    <div class=" border-white border-bottom">
+                        <a href="" data-toggle="collapse" data-target="#collapsemaingend" aria-expanded="true"
+                            aria-controls="collapsemaingend" style="text-decoration: none;" class="d-inline colap ">
+
+                            <b class="collapsedivs">Gender</b>
+
+                            <div class="d-inline dropdown-toggle text-white" aria-expanded="true"
+                                style="padding-left:175px;">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-------------------------------------------LIST(collapse on click)------------------------------------>
+                <!------------Next Row-->
+                <div class="collapse panel-collapse show" id="collapsemaingend" data-parent="#myGroup">
+                    <div class="row mt-2 ml-0 mt-5 jtitle" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Male
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Male
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-----------------------------------------DIV to be Collapsed------------------------------------->
+                    <div class="collapse" id="collapsegend" data-parent="#myGroup">
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Male
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Male
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------Next Row-->
+
+                    <!---------------------------------SHOW MORE---------------------------------->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <a href="" data-toggle="collapse" data-target="#collapsegend" aria-expanded="false"
+                            aria-controls="collapsegend">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-4 col-md-5 col-sm-6 col-1">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1 showmore dispshm"
+                                    style="font-size: 13px;text-decoration:none;">
+                                    Show More
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--------------------------------------------Functional Area-------------------------------->
+                <div class="row my-2 mx-4">
+                    <div class=" border-white border-bottom">
+                        <a href="" data-toggle="collapse" data-target="#collapsemainarea" aria-expanded="true"
+                            aria-controls="collapsemainarea" style="text-decoration: none;" class="d-inline colap ">
+
+                            <b class="collapsedivs">Functional Area</b>
+
+                            <div class="d-inline dropdown-toggle text-white" aria-expanded="true"
+                                style="padding-left:115px;">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-------------------------------------------LIST(collapse on click)------------------------------------>
+                <!------------Next Row-->
+                <div class="collapse panel-collapse show" id="collapsemainarea" data-parent="#myGroup">
+                    <div class="row mt-2 ml-0 mt-5 jtitle" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Experienced Professional
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Software & Web Development
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Software & Web Development
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Software & Web Development
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-----------------------------------------DIV to be Collapsed------------------------------------->
+                    <div class="collapse" id="collapsearea" data-parent="#myGroup">
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Software & Web Development
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!------------Next Row-->
+                        <div class="row ml-0" style="font-size: 10px;">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Software & Web Development
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------Next Row-->
+
+                    <!---------------------------------SHOW MORE---------------------------------->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <a href="" data-toggle="collapse" data-target="#collapsearea" aria-expanded="false"
+                            aria-controls="collapsearea">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-4 col-md-5 col-sm-6 col-1">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1 showmore dispshm"
+                                    style="font-size: 13px;text-decoration:none;">
+                                    Show More
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--------------------------------------------Company-------------------------------->
+                <div class="row my-2 mx-4">
+                    <div class=" border-white border-bottom">
+                        <a href="" data-toggle="collapse" data-target="#collapsemaincomp" aria-expanded="true"
+                            aria-controls="collapsemaincomp" style="text-decoration: none;" class="d-inline colap ">
+
+                            <b class="collapsedivs">Company</b>
+
+                            <div class="d-inline dropdown-toggle text-white" aria-expanded="true"
+                                style="padding-left:155px;">
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-------------------------------------------LIST(collapse on click)------------------------------------>
+                <!------------Next Row-->
+                <div class="collapse panel-collapse show" id="collapsemaincomp" data-parent="#myGroup">
+                    <div class="row mt-2 ml-0 mt-5 jtitle" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Contour Software
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Contour Software
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Contour Software
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!------------Next Row-->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <div class="row mt-2 ml-2 col-lg-12">
+                            <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                <input type="checkbox" class="form-check-input" id="chk">
+                            </div>
+
+                            <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                Contour Software
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                (24)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-----------------------------------------DIV to be Collapsed------------------------------------->
+                    <div class="collapse" id="collapsecomp" data-parent="#myGroup">
+                        <!------------Next Row-->
+                        <div class="row ml-0">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Contour Software
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!------------Next Row-->
+                        <div class="row ml-0">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-1 col-md-5 col-sm-6 col-1">
+                                    <input type="checkbox" class="form-check-input" id="chk">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1">
+                                    Contour Software
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-sm-2 col-2">
+                                    (24)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------Next Row-->
+
+                    <!---------------------------------SHOW MORE---------------------------------->
+                    <div class="row ml-0" style="font-size: 10px;">
+                        <a href="" data-toggle="collapse" data-target="#collapsecomp" aria-expanded="false"
+                            aria-controls="collapsecomp">
+                            <div class="row mt-2 ml-2 col-lg-12">
+                                <div class="col-lg-4 col-md-5 col-sm-6 col-1">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1 showmore dispshm"
+                                    style="font-size: 13px;text-decoration:none;">
+                                    Show More
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-------------------------BUTTON------------------------------------->
+                <div class="my-5 mx-5">
+                    <div class=" mt-3 d-inline">
+                        <button type="button" class="btn">
+                            <a href="#" class="btnsearchjob1" style="text-decoration: none;">Search</a></button>
+                    </div>
+
+                    <div class="mt-3 d-inline">
+                        <button type="submit" class="btn">
+                            <a href="" class="btnsearchjob2" style="text-decoration: none;">Reset</a></button>
                     </div>
                 </div>
             </div>
@@ -274,29 +1494,29 @@
                 </div>
 
                 <!--------display div on hover-->
-                <div class="collapsed col-12" id="collapsesum" data-parent="#myGroup">
+                <div class="container collapsed col-12" id="collapsesum" data-parent="#myGroup">
 
                     <div class=" roun empdivs" style="padding:20px; margin-top: 10px;" data-target="#collapsesum">
-                        <div class="row" style="font-size: 18px;">
+                        <div class="row mx-2" style="font-size: 18px;">
                             <b>Senior Software Quality Assurance Engineer</b>
                         </div>
-                        <div class="row">
+                        <div class="row mx-2">
                             <img src="img/location.png" class="img-responsive d-inline mr-2">
                             <small class="d-inline text-muted">Location</small>
 
                         </div>
-                        <div class="row">
-                            Please Login to View Salary
+                        <div class="row mx-2">
+                            <a href="login.html" >Please Login to View Salary</a>
                         </div>
                         <div class="d-flex justify-content-center">
                             <!--buttons-->
                             <div class="d-inline mt-3">
                                 <button type="submit" onclick="showInput();"
-                                    class="btn ex text-white bt bg-success">Apply</button>
+                                    class="btn btnsearchjob1 text-white bt bg-success">Apply</button>
                             </div>
                             <div class="d-inline mt-3 ml-2">
                                 <button type="button" data-toggle="collapse" data-target=""
-                                    class="btn ex text-white bt">Save</button>
+                                    class="btn btnsearchjob2 text-white bt" style="background-color: #0D2942;">Save</button>
                             </div>
                         </div>
                         <div class="row">
@@ -306,74 +1526,159 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="row jd my-2">
+                                <div class="row jd my-2 mx-2">
                                     <b>Job Description</b>
                                 </div>
-                                <div class="row my-2">
+                                <div class="row my-2  mx-2">
                                     <b>Company Intro:</b>
                                 </div>
-                                <div class="row my-2">
+                                <div class="row my-2  mx-2">
                                     <ul>
                                         <li class="my-2">
-                                            Truxxon Consulting is a consultancy service for international companies and
-                                            businesses in the field of Logistics Management, strategic planning, project
+                                            Truxxon Consulting is a consultancy service for international companies
+                                            and
+                                            businesses in the field of Logistics Management, strategic planning,
+                                            project
                                             management and institutional Development.
                                         </li>
                                         <li class="my-2">
-                                            Truxxon Consulting is a consultancy service for international companies and
-                                            businesses in the field of Logistics Management, strategic planning, project
+                                            Truxxon Consulting is a consultancy service for international companies
+                                            and
+                                            businesses in the field of Logistics Management, strategic planning,
+                                            project
                                             management and institutional Development.
                                         </li>
                                         <li class="my-2">
-                                            Truxxon Consulting is a consultancy service for international companies and
-                                            businesses in the field of Logistics Management, strategic planning, project
+                                            Truxxon Consulting is a consultancy service for international companies
+                                            and
+                                            businesses in the field of Logistics Management, strategic planning,
+                                            project
                                             management and institutional Development.
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="row my-2">
+                                <div class="row my-2  mx-2">
                                     <b>Who we are looking for:</b>
                                 </div>
                                 <div class="row my-2">
                                     <ul>
                                         <li class="my-2">
-                                            Truxxon Consulting is a consultancy service for international companies and
-                                            businesses in the field of Logistics Management, strategic planning, project
+                                            Truxxon Consulting is a consultancy service for international companies
+                                            and
+                                            businesses in the field of Logistics Management, strategic planning,
+                                            project
                                             management and institutional Development.
                                         </li>
                                         <li class="my-2">
-                                            Truxxon Consulting is a consultancy service for international companies and
-                                            businesses in the field of Logistics Management, strategic planning, project
+                                            Truxxon Consulting is a consultancy service for international companies
+                                            and
+                                            businesses in the field of Logistics Management, strategic planning,
+                                            project
                                             management and institutional Development.
                                         </li>
                                         <li class="my-2">
-                                            Truxxon Consulting is a consultancy service for international companies and
-                                            businesses in the field of Logistics Management, strategic planning, project
+                                            Truxxon Consulting is a consultancy service for international companies
+                                            and
+                                            businesses in the field of Logistics Management, strategic planning,
+                                            project
                                             management and institutional Development.
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="row my-2">
+                                <div class="row my-2  mx-2">
                                     <b>Responsibilities:</b>
                                 </div>
                                 <div class="row my-2">
                                     <ul>
                                         <li class="my-2">
-                                            Truxxon Consulting is a consultancy service for international companies and
-                                            businesses in the field of Logistics Management, strategic planning, project
+                                            Truxxon Consulting is a consultancy service for international companies
+                                            and
+                                            businesses in the field of Logistics Management, strategic planning,
+                                            project
                                             management and institutional Development.
                                         </li>
                                         <li class="my-2">
-                                            Truxxon Consulting is a consultancy service for international companies and
-                                            businesses in the field of Logistics Management, strategic planning, project
+                                            Truxxon Consulting is a consultancy service for international companies
+                                            and
+                                            businesses in the field of Logistics Management, strategic planning,
+                                            project
                                             management and institutional Development.
                                         </li>
                                         <li class="my-2">
-                                            Truxxon Consulting is a consultancy service for international companies and
-                                            businesses in the field of Logistics Management, strategic planning, project
+                                            Truxxon Consulting is a consultancy service for international companies
+                                            and
+                                            businesses in the field of Logistics Management, strategic planning,
+                                            project
                                             management and institutional Development.
                                         </li>
                                     </ul>
+                                </div>
+
+                                <div class="row my-2  mx-2">
+                                    <b>Skills:</b>
+                                </div>
+                                <div class="row my-2 mx-4">
+                                    <div class="keyworddiv d-inline ">Games Developement</div>
+                                    <div class="keyworddiv d-inline">Programming</div>
+                                    <div class="keyworddiv d-inline">Developement</div>
+                                </div>
+
+                                <div class="row my-2 mx-2 mt-4">
+                                    <b>Job Details:</b>
+                                </div>
+                                <div class="row my-2 mx-2">
+                                    <table class="table table-borderless table-responsive text-dark text-sm">
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">Industry:</th>
+                                            <td style="color: black;">Information Technology</td>
+                                          </tr>
+                                          <tr class="smallfont">
+                                            <th scope="row">Functional Area:</th>
+                                            <td style="color: black;">Software & Web Development</td>
+                                          </tr>
+                                          <tr  class="smallfont">
+                                            <th scope="row">Total Positions:</th>
+                                            <td style="color: black;"> 4 Posts</td>
+                                          </tr>
+                                          <tr  class="smallfont">
+                                            <th scope="row">Job Type:</th>
+                                            <td style="color: black;">Full Time/Permanent</td>
+                                          </tr>
+                                          <tr class="smallfont">
+                                            <th scope="row">Job Location:</th>
+                                            <td style="color: black;">Lahore, Pakistan</td>
+                                          </tr>
+                                          <tr class="smallfont">
+                                            <th scope="row">Gender:</th>
+                                            <td style="color: black;">No Preference</td>
+                                          </tr>
+                                          <tr class="smallfont">
+                                            <th scope="row">Age:</th>
+                                            <td style="color: black;">19 - 30 Years</td>
+                                          </tr>
+                                          <tr class="smallfont">
+                                            <th scope="row">Minimum Education:</th>
+                                            <td style="color: black;">Bachelors</td>
+                                          </tr>
+                                          <tr class="smallfont">
+                                            <th scope="row">Career Level:</th>
+                                            <td style="color: black;">Experienced Professional</td>
+                                          </tr>
+                                          <tr class="smallfont">
+                                            <th scope="row">Experience:</th>
+                                            <td style="color: black;">1 Year - 3 Years</td>
+                                          </tr>
+                                          <tr class="smallfont">
+                                            <th scope="row">Apply Before:</th>
+                                            <td style="color: black;"> Nov 02, 2020</td>
+                                          </tr>
+                                          <tr class="smallfont">
+                                            <th scope="row">Posting Date:</th>
+                                            <td style="color: black;">Oct 01, 2020</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
                                 </div>
                             </div>
                         </div>
@@ -381,8 +1686,8 @@
                 </div>
             </div>
             <!------------------------------------------Side bar right---------------------------------------------->
-            <div class="container text-white col-lg-3 col-md-3 col-sm-10 col-10 my-4" style="border-radius:10px;background-color: #0D2942;margin-bottom:40px;position:relative;
-                padding-bottom: 200px;">
+            <div class="container text-white col-lg-3 col-md-3 col-sm-10 col-10 my-4 h-75"
+                style="border-radius:10px;background-color: #0D2942;padding-bottom: 30px;">
 
                 <div class="row my-auto mx-auto d-flex justify-content-center tag"
                     style="padding-top:30px;letter-spacing: 4px;">
@@ -424,11 +1729,11 @@
                                 <select class="form-control custom-select formjob" name="careerLevel" required="" style="
                                 height:30px;">
                                     <option value="">Select Career Level</option>
-                                    <option value="685">Intern/Student</option>
-                                    <option value="868">Entry Level</option>
-                                    <option value="693">Experienced Professional</option>
-                                    <option value="698">Department Head</option>
-                                    <option value="697">GM / CEO / Country Head / President</option>
+                                    <option value="1">Intern/Student</option>
+                                    <option value="2">Entry Level</option>
+                                    <option value="3">Experienced Professional</option>
+                                    <option value="4">Department Head</option>
+                                    <option value="5">GM / CEO / Country Head / President</option>
                                 </select>
                             </div>
                             <div class="form-group mx-2">

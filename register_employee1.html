@@ -23,6 +23,25 @@
             input.setCustomValidity('');
         }
     }
+
+     // Example starter JavaScript for disabling form submissions if there are invalid fields
+     (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
 </script>
 
 <body>
@@ -41,13 +60,13 @@
                     <a class="nav-link" href="about.html">ABOUT US <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item navhov">
-                    <a class="nav-link" href="#">EMPLOYERS PROFILE</a>
+                    <a class="nav-link" href="Employer.html">EMPLOYERS PROFILE</a>
                 </li>
                 <li class="nav-item navhov">
                     <a class="nav-link" href="careers.html">CAREERS GUIDE<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item navhov">
-                    <a class="nav-link" href="#">BLOG</a>
+                    <a class="nav-link" href="blog.html">BLOG</a>
                 </li>
             </ul>
         </div>
@@ -68,66 +87,115 @@
                 <div class="col-lg-6 col-md-8 col-sm-10 col-xs-6 mx-auto my-4 roun rounded"
                     style="background-color:#e0e0e0;">
                     <div class="row m-3">
-                        <form action="register_employee2.html" method="GET">
+                        <form class="needs-validation" novalidate>
                             <!-------------------------------NAME------------------------------------->
                             <div class="form-row">
                                 <div class="col">
-                                    <label for="exampleInputEmail1" class=" mx-2">First
+                                    <label for="name1" class=" mx-2">First
                                         name<span class="text-danger">*</span></label>
-                                    <input pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter on alphabets only. ')" type="text" class="form-control f" required placeholder="John">
+                                    <input id="name1" pattern="[a-zA-Z]+" type="text" class="form-control f" placeholder="John" required>
+                                
+                                    <div class="invalid-feedback">
+                                        Please provide a valid name.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
                                 </div>
                                 <div class="col">
-                                    <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">Last
+                                    <label for="name2" class="d-flex align-items-start mx-2">Last
                                         name<span class="text-danger">*</span></label>
-                                    <input pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter on alphabets only. ')" type="text" class="form-control f" required placeholder="Smith">
+                                    <input id="name2" pattern="[a-zA-Z]+" type="text" class="form-control f" placeholder="Smith" required>
+                                
+                                    <div class="invalid-feedback">
+                                        Please provide a valid name.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
                                 </div>
                             </div>
                             <!-------------------------------Email------------------------------------->
                             <div class="form-group mt-3">
-                                <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">Email
+                                <label for="mail" class="d-flex align-items-start mx-2">Email
                                     Address<span class="text-danger">*</span></label>
-                                <input type="email" size="60" required class="form-control f" required
-                                    id="exampleInputEmail1" placeholder="example@email.com"
-                                    aria-describedby="emailHelp">
+                                <input type="email" size="60" class="form-control f" 
+                                    id="mail" placeholder="example@email.com"
+                                    aria-describedby="emailHelp" required>
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                                     anyone else.</small>
+                                    
+                                <div class="invalid-feedback">
+                                    Please provide a valid email.
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
                             </div>
                             <!-------------------------------Password------------------------------------->
                             <div class="form-group">
-                                <label for="exampleInputPassword1"
+                                <label for="pass1"
                                     class="d-flex align-items-start mx-2">Password<span class="text-danger">*</span></label>
-                                <input type="password" size="60" required minlength="8" required class="form-control f"
-                                id="password" placeholder="***********">
+                                <input type="password" size="60" minlength="8" class="form-control f"
+                                id="pass1" placeholder="***********" required>
                                 <small id="passwordHelpInline" class="text-muted">
                                     Must be 8-20 characters long.
                                 </small>
+                                
+                                <div class="invalid-feedback">
+                                    Please provide a valid password.
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1" class="d-flex align-items-start mx-2">Confirm
+                                <label for="pass2" class="d-flex align-items-start mx-2">Confirm
                                     Password<span class="text-danger">*</span></label>
-                                <input type="password" size="60" required minlength="8" required class="form-control f"
-                                id="password_confirm" oninput="check(this)" placeholder="***********">
+                                <input type="password" size="60" minlength="8" class="form-control f"
+                                id="pass1" oninput="check(this)" placeholder="***********" required>
                                     <small id="passwordHelpInline" class="text-muted">
                                         Must be 8-20 characters long.
                                     </small>
+                                    
+                                <div class="invalid-feedback">
+                                    Please provide a valid password.
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
                             </div>
                             <!-------------------------------Country------------------------------------->
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="inputState">State<span class="text-danger">*</span></label>
-                                    <select id="inputState" required class="form-control f">
-                                        <option selected>Choose...</option>
+                                    <select id="inputState" class="form-control f" required>
+                                        <option selected disabled value="">Choose...</option>
                                         <option>Pakistan</option>
                                         <option>India</option>
                                         <option>America</option>
                                         <option>Germany</option>
                                     </select>
+                                    
+                                <div class="invalid-feedback">
+                                    Please provide a valid country.
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
                                 </div>
                                 <!-------------------------------City------------------------------------->
                                 <div class="form-group col-md-6 offset-md-2">
                                     <label for="inputCity">City<span class="text-danger">*</span></label>
-                                    <input type="text" required class="form-control f" placeholder="xyz" id="inputCity">
+                                    <input type="text" class="form-control f" placeholder="xyz" id="inputCity" required>
                                 </div>
+                                
+                                <div class="invalid-feedback">
+                                    Please provide a valid city.
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
                             </div>
 
                             <!-------------------------------Cell number------------------------------------->
@@ -135,29 +203,50 @@
                                 <div class="form-group col-md-4">
                                     <!-------------------------------Country Code-------------------------->
                                     <label for="inputcountrycode">Country Code<span class="text-danger">*</span></label>
-                                    <select id="inputcountrycode" required class="form-control f">
-                                        <option selected>Choose...</option>
+                                    <select id="inputcountrycode" class="form-control f" required>
+                                        <option selected disabled value="">Choose...</option>
                                         <option>+92</option>
                                         <option>+1</option>
                                         <option>+91</option>
                                     </select>
+                                    
+                                <div class="invalid-feedback">
+                                    Please provide a valid country code.
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
                                 </div>
                                 <!-------------------------------Sim Code-------------------------->
                                 <div class="form-group col-md-4">
                                     <label for="inputSimCode">Sim Code<span class="text-danger">*</span></label>
-                                    <select id="inputSimCode" required class="form-control f">
-                                        <option selected>Choose...</option>
+                                    <select id="inputSimCode" class="form-control f" required>
+                                        <option selected disabled value="">Choose...</option>
                                         <option>+92</option>
                                         <option>+1</option>
                                         <option>+91</option>
                                     </select>
+                                    
+                                <div class="invalid-feedback">
+                                    Please provide a valid sim code.
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
                                 </div>
 
                                 <!-------------------------------Number-------------------------->
                                 <div class="form-group col-md-4">
                                     <label for="inputnum">Number<span class="text-danger">*</span></label>
-                                    <input type="text" pattern="[0-9]{7}" title="Numbers only" required class="form-control f" placeholder="1234567" id="inputnum">
+                                    <input type="text" pattern="[0-9]{7}" title="Numbers only" class="form-control f" placeholder="1234567" id="inputnum" required>
                                 </div>
+                                
+                                <div class="invalid-feedback">
+                                    Please provide a valid number.
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                  </div>
                             </div>
 
                             <!-------------------------BUTTON------------------------------------->
