@@ -4,53 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    
-    <style>
-        #range
-{
-    position:absolute;
-    height:200%;
-    top: 0;
-}
-
-body div.ui-slider-range.ui-widget-header {
-    background:blue;
-}
-
-    </style>
-    <script>
-        $(document).ready(function () {
-
-var slider = $('.slider').slider({
-    range: true,
-    min: 0,
-    max: 100,
-    values: [ 75, 80 ],
-    change: function (e, ui) {
-        //                    $("#img1").fadeOut();
-        //                    alert("done");
-    },
-    slide: function (e, ui) {
-        var point = ui.value;
-        $("#selected_value").html(point);
-        var width = 100 - point;
-       $("#range").css({ "width": point + "%" });
-    }
-
-});
-
-console.log(slider);
-});
-    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/new.css">
 </head>
-<body>
-    <div>
-        Min: <span id="selected_value">0</span><br />
+<script>
+    $('a').click(function (e) {
+  var id = $(this).attr('href');
+  $(id).show();
 
-    </div>
-    <div>
-        <div class="slider"><div id="range"></div></div>
-    </div>
+  // Don't follow the link
+  e.preventDefault();
+});
+</script>
+<body>
+    <a href="#pippo" class="fakeLink" id="yes"> LINK PIPPO </a>
+    <a href="#dfdf" class="fakeLink" id="no"> fffffffffffff </a>
+    <a href="#fffff" class="fakeLink" id="yn"> d </a>
 </body>
 </html>
