@@ -23,7 +23,7 @@
 
         $(document).ready(function () {
             //Center div
-             $('.collapsed').hide();
+            $('.collapsed').hide();
 
             $('.hov').mouseenter(function () {
                 $('.collapsed').show();
@@ -46,7 +46,22 @@
                     $(this).text("See Less");
                 }
             });
+            //SHOW MORE BUTTON
+            $('.dispbtnmore').click(function () {
+                if ($('.dispshm').text() == "See Less") {
+                    $('.dispshm').text("Show More");
+                } else {
+                    $('.dispshm').text("See Less");
+                }
+            });
         });
+
+        function checkFormData() {
+            if (!$('input[name=jobalert]:checked').length > 0) {
+                document.getElementById("errMessage").innerHTML = "Please select atleast One checkbox";
+                return false;
+            }
+        }
     </script>
 </head>
 
@@ -358,7 +373,12 @@
                             aria-controls="collapsetitle">
                             <div class="row mt-2 ml-2 col-lg-12">
                                 <div class="col-lg-4 col-md-5 col-sm-6 col-1">
-                                    <img src="img/addgreen.png" class="img-fluid">
+                                    <img src="img/addgreen.png" class="img-fluid dispbtnmore">
+                                </div>
+
+                                <div class="col-lg-8 col-md-5 col-sm-6 col-1 showmore dispshm"
+                                    style="font-size: 13px;text-decoration:none;">
+                                    Show More
                                 </div>
                             </div>
                         </a>
@@ -1506,7 +1526,7 @@
 
                         </div>
                         <div class="row mx-2">
-                            <a href="login.html" >Please Login to View Salary</a>
+                            <a href="login.html">Please Login to View Salary</a>
                         </div>
                         <div class="d-flex justify-content-center">
                             <!--buttons-->
@@ -1516,7 +1536,8 @@
                             </div>
                             <div class="d-inline mt-3 ml-2">
                                 <button type="button" data-toggle="collapse" data-target=""
-                                    class="btn btnsearchjob2 text-white bt" style="background-color: #0D2942;">Save</button>
+                                    class="btn btnsearchjob2 text-white bt"
+                                    style="background-color: #0D2942;">Save</button>
                             </div>
                         </div>
                         <div class="row">
@@ -1629,56 +1650,56 @@
                                 <div class="row my-2 mx-2">
                                     <table class="table table-borderless table-responsive text-dark text-sm">
                                         <tbody>
-                                          <tr>
-                                            <th scope="row">Industry:</th>
-                                            <td style="color: black;">Information Technology</td>
-                                          </tr>
-                                          <tr class="smallfont">
-                                            <th scope="row">Functional Area:</th>
-                                            <td style="color: black;">Software & Web Development</td>
-                                          </tr>
-                                          <tr  class="smallfont">
-                                            <th scope="row">Total Positions:</th>
-                                            <td style="color: black;"> 4 Posts</td>
-                                          </tr>
-                                          <tr  class="smallfont">
-                                            <th scope="row">Job Type:</th>
-                                            <td style="color: black;">Full Time/Permanent</td>
-                                          </tr>
-                                          <tr class="smallfont">
-                                            <th scope="row">Job Location:</th>
-                                            <td style="color: black;">Lahore, Pakistan</td>
-                                          </tr>
-                                          <tr class="smallfont">
-                                            <th scope="row">Gender:</th>
-                                            <td style="color: black;">No Preference</td>
-                                          </tr>
-                                          <tr class="smallfont">
-                                            <th scope="row">Age:</th>
-                                            <td style="color: black;">19 - 30 Years</td>
-                                          </tr>
-                                          <tr class="smallfont">
-                                            <th scope="row">Minimum Education:</th>
-                                            <td style="color: black;">Bachelors</td>
-                                          </tr>
-                                          <tr class="smallfont">
-                                            <th scope="row">Career Level:</th>
-                                            <td style="color: black;">Experienced Professional</td>
-                                          </tr>
-                                          <tr class="smallfont">
-                                            <th scope="row">Experience:</th>
-                                            <td style="color: black;">1 Year - 3 Years</td>
-                                          </tr>
-                                          <tr class="smallfont">
-                                            <th scope="row">Apply Before:</th>
-                                            <td style="color: black;"> Nov 02, 2020</td>
-                                          </tr>
-                                          <tr class="smallfont">
-                                            <th scope="row">Posting Date:</th>
-                                            <td style="color: black;">Oct 01, 2020</td>
-                                          </tr>
+                                            <tr>
+                                                <th scope="row">Industry:</th>
+                                                <td style="color: black;">Information Technology</td>
+                                            </tr>
+                                            <tr class="smallfont">
+                                                <th scope="row">Functional Area:</th>
+                                                <td style="color: black;">Software & Web Development</td>
+                                            </tr>
+                                            <tr class="smallfont">
+                                                <th scope="row">Total Positions:</th>
+                                                <td style="color: black;"> 4 Posts</td>
+                                            </tr>
+                                            <tr class="smallfont">
+                                                <th scope="row">Job Type:</th>
+                                                <td style="color: black;">Full Time/Permanent</td>
+                                            </tr>
+                                            <tr class="smallfont">
+                                                <th scope="row">Job Location:</th>
+                                                <td style="color: black;">Lahore, Pakistan</td>
+                                            </tr>
+                                            <tr class="smallfont">
+                                                <th scope="row">Gender:</th>
+                                                <td style="color: black;">No Preference</td>
+                                            </tr>
+                                            <tr class="smallfont">
+                                                <th scope="row">Age:</th>
+                                                <td style="color: black;">19 - 30 Years</td>
+                                            </tr>
+                                            <tr class="smallfont">
+                                                <th scope="row">Minimum Education:</th>
+                                                <td style="color: black;">Bachelors</td>
+                                            </tr>
+                                            <tr class="smallfont">
+                                                <th scope="row">Career Level:</th>
+                                                <td style="color: black;">Experienced Professional</td>
+                                            </tr>
+                                            <tr class="smallfont">
+                                                <th scope="row">Experience:</th>
+                                                <td style="color: black;">1 Year - 3 Years</td>
+                                            </tr>
+                                            <tr class="smallfont">
+                                                <th scope="row">Apply Before:</th>
+                                                <td style="color: black;"> Nov 02, 2020</td>
+                                            </tr>
+                                            <tr class="smallfont">
+                                                <th scope="row">Posting Date:</th>
+                                                <td style="color: black;">Oct 01, 2020</td>
+                                            </tr>
                                         </tbody>
-                                      </table>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -1697,7 +1718,7 @@
 
                 <div class="row my-2 mx-2">
                     <div class="col-lg-12">
-                        <form style="font-weight: 100; font-size: 12px;">
+                        <form style="font-weight: 100; font-size: 12px;" onsubmit="return checkFormData()">
                             <div class="form-group mx-2">
                                 <label for="lblkey">Keywords*</label>
                                 <input type="text" max-length="100" class="form-control formjob" style="width: 240px;"
@@ -1707,22 +1728,25 @@
                                 The Keyword you entered is a*
                             </div>
                             <!----------------------------CHECK BOXES------------------>
-                            <div class="form-group form-check">
-                                <input type="checkbox" required class="form-check-input in" id="chktitle">
+                            <div class="form-group form-check" required>
+                                <input type="checkbox" value="Title" class="form-check-input in" id="chktitle"
+                                    name="jobalert">
                                 <label class="form-check-label" style="margin-left: 20px;" for="chktitle">Job
                                     Title</label>
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" required class="form-check-input" id="chkskills">
+
+                                <input type="checkbox" value="Skills" class="form-check-input" id="chkskills"
+                                    name="jobalert">
                                 <label class="form-check-label" style="margin-left: 20px;"
                                     for="chkskills">Skills</label>
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" required class="form-check-input" id="chkcompany">
+
+                                <input type="checkbox" value="Company" class="form-check-input" id="chkcompany"
+                                    name="jobalert">
                                 <label class="form-check-label" style="margin-left: 20px;"
                                     for="chkcompany">Company</label>
-                            </div>
+                                <div class="errMessage text-white bg-success">hghg</div>
 
+                            </div>
+                            
                             <!------------------------------Fields---------------->
                             <div class="form-group mx-2">
                                 <label for="lbllevels">Career Levels*</label>
@@ -1786,7 +1810,7 @@
                             <div class="form-group mx-2">
                                 <label for="lblsal">Your Expected Salary (PKR)*</label>
                                 <select class="form-control custom-select formjob" name="expSalary" style="
-                                height:30px;">
+                                height:30px;" required>
                                     <option value="">Select Salary</option>
                                     <option value="5000">5,000 - 5,999</option>
                                     <option value="6000">6,000 - 6,999</option>
@@ -1840,7 +1864,7 @@
                             <div class="form-group mx-2">
                                 <label for="lblcity">City*</label>
                                 <select class="form-control custom-select formjob" name="city" id="lblcity" style="
-                                height:30px;">
+                                height:30px;" required>
                                     <option value="">Select City</option>
                                     <option value="1180">Islamabad</option>
                                     <option value="1184">Karachi</option>
