@@ -16,7 +16,20 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
     <title>Seeker Admin Panel</title>
+    <script>
 
+        $(document).ready(function () {
+            $('.del').click(function () {
+                $(this).parent().parent().hide();
+            });
+            $("#arrowRotate").click(function() { 
+       var _this = $(this);
+       var current = _this.attr("src");
+       var swap = _this.attr("data-swap");     
+     _this.attr('src', swap).attr("data-swap",current);   
+});  
+        });
+    </script>
 </head>
 
 <body style="font-family: Segoe UI;">
@@ -127,29 +140,116 @@
 
                 <!----------------------jobs--------------------------->
                 <div class="mx-4 myDiv" id="jobs">
-                    <p class="txt-dark">jobs</p>
+                    <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Jobs Section</p>
+                    <div class="col-lg-12 col-md-5 offset-md-1 col-sm-6 col-9 mx-auto my-2">
+                        <div class="container roun bg-white" style="border-radius: 20px;">
+                            <div class="row bg-success seekdiv text-white">
+                                <span class="mx-4 my-3"><b>Details</b></span>
+                            </div>
+                            <!----------Applied Jobs------->
+                            <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="seekjobsdiv p-2 col-12">Applied Jobs</div>
+
+                                <!------------------Divs------------------>
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-8">
+                                            <b>Senior Software Quality Assurance Engineer</b>
+                                        </div>
+                                        <div class="col-lg-3" style="position: relative;">
+                                            <button type="submit" class="btn btnseeker text-white">Applied Jobs</button>
+                                        </div>
+                                        <div class="col-lg-1" style="left: -30px;">
+                                                <img id="arrowRotate" src="img/heartempty.png"  data-swap="img/heartfilled.png" class="">
+                                                
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <img src="img/location.png" class="img-responsive d-inline">
+                                        <small class="d-inline text-muted">Location</small>
+
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
+                                        industry exp)
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Responsibilities: Provide comprehensive an..
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 p-0 m-0">
+                                            <img src="img/date.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">Sep 04, 2020</small>
+                                        </div>
+                                        <div class="col-lg-2 p-0 m-0">
+                                            <img src="img/yrs.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">3 Years</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
                 <!----------------------delete jobs-------------------->
                 <div class="mx-4 myDiv" id="deletejobs">
-                    <p class="txt-dark">delete jobs</p>
+                    <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Delete Profile</p>
                     <div class="col-lg-12 col-md-5 offset-md-1 col-sm-6 col-9 mx-auto my-2">
                         <div class="container roun bg-white" style="border-radius: 20px;">
                             <div class="row bg-success seekdiv text-white">
-                            <span class="mx-4 my-3"><b>EMPLOYEE</b></span>
+                                <span class="mx-4 my-3"><b>Employee</b></span>
                             </div>
-                            
-                            <div class="row">
-                                <div class="col-lg-3 bg-grey">Name</div>
-                                <p class="2vw text-dark m-auto mb-0 "><b></b></p>
-                            </div>
-                            <div class="row text-justify m-4 mb-0 mt-0 p-4">
-                                <p class="text-dark m-auto text-sm" style="font-size: small;">
-                                    Booker provides software that helps retailers manage their stores. This company
-                                    leverages
-                                    their customers to tell the story of what makes their software great, making this
-                                    page a
-                                    focal point of their website's main navigation. </p>
+                            <div class="row text-justify m-4 mb-0 mt-0 p-4 ">
+                                <!------------table-------------->
+                                <table class="table table-hover seekdeltable">
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <div class="seekdeldiv p-2">Name</div>
+                                            </td>
+                                            <td>
+                                                <div class="seekdeldiv p-2">Email</div>
+                                            </td>
+                                            <td>
+                                                <div class="seekdeldiv p-2">Id</div>
+                                            </td>
+                                        </tr>
+                                        <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
                             </div>
                         </div>
                     </div>

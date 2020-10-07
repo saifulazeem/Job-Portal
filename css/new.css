@@ -387,6 +387,12 @@ padding-top: 200px;
 .empbtn{
   width: 150px; height: 43px; margin-left: 6px;margin-left: 150px; margin-top: 15px;
 }
+/*register.html button*/
+.regbtn {
+  padding-right: 35px;
+  padding-left: 35px;
+  border-radius: 4px;
+}
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
@@ -616,6 +622,12 @@ padding-top: 200px;
 }
 .empbtn{
   width: 150px; height: 43px; margin-left: 6px;margin-left: 150px; margin-top: 15px;
+}
+/*register.html button*/
+.regbtn {
+  padding-right: 45px;
+  padding-left: 45px;
+  border-radius: 5px;
 }
  }
 /***********************************************************************************************************************/
@@ -869,6 +881,13 @@ padding-top: 200px;
 .empbtn{
   width: 90px; height: 43px; margin-left: 6px;margin-right: -4px; margin-top: 3px;
 }
+
+/*register.html button*/
+.regbtn {
+  padding-right: 55px;
+  padding-left: 55px;
+  border-radius: 8px;
+}
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
@@ -1109,6 +1128,13 @@ padding-top: 200px;
 }
 .empbtn{
   width: 140px; height: 43px; margin-left: 10px;margin-right: -10px; margin-top: 3px;
+}
+
+/*register.html button*/
+.regbtn {
+  padding-right: 50px;
+  padding-left: 50px;
+  border-radius: 5px;
 }
  }
 /***********************************************************************************************************************/
@@ -1356,6 +1382,13 @@ font-size: 20px;
 .empbtn{
   width: 150px; height: 43px; margin-left: 10px;margin-right: -10px; margin-top: 3px;
 }
+/*register.html*/
+/*button*/
+.regbtn {
+  padding-right: 95px;
+  padding-left: 95px;
+  border-radius: 8px;
+}
 }
 /******************************************************************************************/
 .homeemp{
@@ -1444,12 +1477,6 @@ font-size: 12px;
 
 }
 
-/*button*/
-.regbtn {
-  padding-right: 95px;
-  padding-left: 95px;
-  border-radius: 8px;
-}
 .for {
     border-radius: 15px;
     height: auto;
@@ -1588,4 +1615,51 @@ tr{
  min-width: max-content; height: 60px; border-radius: 20px 20px 0px 0px;
  margin-left:0px;
  margin-right:0px;
+}
+.btnseeker{
+  color:white;
+  background-color:#0BB44F;
+  font-size: 12px;
+}
+.seekjobsdiv{
+  background-color: #0D2942;
+  border-radius: 6px;
+  color:white;
+}
+.seekdeldiv{
+  background-color: #d9dbda;
+  border-radius: 6px;
+}
+.seekdeltable td{
+  color: black;
+  text-align: center;
+}
+/*.seekdeltable tr{
+  border: 2px solid #d9dbda;
+}*/
+.seekdeltable td{
+  border: 2px solid #d9dbda;
+}
+.seekdeltable thead td{
+  border: 0px;
+}
+.seekdeltable tr{
+  border: 2px solid #d9dbda;
+}
+.seekdeltable{
+  border-collapse: collapse;
+  border-style: hidden;/*hides the boundary*/
+}
+.delhov{
+  cursor: hand;
+}
+.content {
+  display: none;
+  margin: 15px;
+}
+.activator:hover {
+  width: 500px;
+}
+.activator:hover .content {
+  display: block;
 }

@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/new.css">
 </head>
-<body>
+<script>
+  $(document).ready(function () {
 
+    $('.empdivs').hover(function () {
+      $(this).animate({
+        height: '500px'
+      }, 1000);
+    }, function () {
+      $(this).animate({
+        height: '200px'
+      }, 300);
+    });
+  });
+</script>
+<style>
+
+</style>
+
+<body>
 <div class="container">
-  <h2>Simple Collapsible</h2>
-  <p>Click on the button to toggle between showing and hiding content.</p>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
-  <div id="demo" class="collapse in">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+<div class="row">
+
+  <div class="container roun empdivs hov" style="padding:20px 40px;" id="collapsesum">
+    <div class="activator">
+      <div class="row" style="font-size: 18px;">
+        <b>Senior Software Quality Assurance Engineer</b>
+      </div>
+
+      <!--------display div on hover-->
+      <div class="row mx-2 bg-success" style="font-size: 18px;">
+        <b>Senior Software Quality Assurance Engineer</b>
+      </div>
+    </div>
   </div>
 </div>
-    
+<div class="row">
+  <div class="container roun empdivs hov" style="padding:20px 40px;" id="collapsesum">
+    <div class="activator">
+      <div class="row" style="font-size: 18px;">
+        <b>Senior Software Quality Assurance Engineer</b>
+      </div>
+
+      <!--------display div on hover-->
+      <div class="row mx-2 bg-success" style="font-size: 18px;">
+        <b>Senior Software Quality Assurance Engineer</b>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 </body>
+
 </html>
