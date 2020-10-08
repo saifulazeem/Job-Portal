@@ -12,22 +12,27 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
     <title>Seeker Admin Panel</title>
-    <script>
+    <style>
+        /*heart images in seeker dashboard*/
+        .im1 {
+            content: url('img/heartempty.png');
+        }
 
+        .im2 {
+            content: url('img/heartfilled.png');
+        }
+    </style>
+    <script>
         $(document).ready(function () {
-            $('.del').click(function () {
-                $(this).parent().parent().hide();
+            //hide or show Heart img
+            $(".imagetog").click(function (event) {
+                $(this).toggleClass("im2");
             });
-            $("#arrowRotate").click(function() { 
-       var _this = $(this);
-       var current = _this.attr("src");
-       var swap = _this.attr("data-swap");     
-     _this.attr('src', swap).attr("data-swap",current);   
-});  
         });
     </script>
 </head>
@@ -42,10 +47,10 @@
     </nav>
 
     <!------------------------------------------Body---------------------------------------------------------->
-    <div class="container my-5">
-        <div class="row row-cols-2 mx-2">
+    <div class="my-5 p-lg-5 p-md-5 p-sm-1 p-2">
+        <div class="row mx-lg-1 mx-md-0 mx-sm-0 mx-3">
             <!------------------------------------------Side Bar left---------------------------------------------->
-            <div class="container text-white  col-lg-3 col-md-4 col-sm-6 rounded col-12 rounded "
+            <div class="container text-white col-lg-3 col-md-3 col-sm-4 col-12 rounded "
                 style="background-color: #0D2942;">
                 <div class="row">
                     <img src="img/seeker.png" class="img-fluid my-5 mx-auto d-block">
@@ -121,7 +126,7 @@
 
             <!------------------------------------------Side bar right---------------------------------------------->
             <div
-                class="container col-lg-8 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-5 col-sm-offset-1 col-12 rounded roun">
+                class="container col-lg-8 col-lg-offset-1 col-md-8 col-sm-7 col-sm-offset-1 col-12 rounded roun my-lg-0 my-md-0 my-sm-0 my-5">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb " style="background-color: #969696;">
                         <li class="breadcrumb-item "><a class="text-white" href="#">Home</a></li>
@@ -130,18 +135,893 @@
                 </nav>
                 <!----------------------edit profile------------------->
                 <div class="mx-4 myDiv" id="editprofile">
-                    <p class="txt-dark">edit profile</p>
+                    <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Employee Profile</p>
+                    <div class="col-12 mx-auto my-2"
+                        style=" padding-bottom: 170px;">
+                        <div class="container roun bg-white" style="border-radius: 20px;">
+                            <div class="row bg-success seekdiv text-white">
+                                <span class="mx-4 my-3"><b>Details FORM</b></span>
+                            </div>
+                            <form class="col-lg-12">
+                                <!-------------------------------Upload Image----------------------->
+                                <div class="row m-4 mb-0 mt-0 py-4">
+                                    <div class="col-lg-5 ">
+                                        <div class="row mx-2">
+                                            <span class="text-muted font-weight-bold">Add your Image</span>
+                                        </div>
+                                        <div class="row mt-4 mx-2">
+                                            <div class="roun imgboxseek">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!----------------------------Basic Information--------------------------->
+                                <div class="row m-4 mb-0 mt-0 py-4 ">
+                                    <div class="seekjobsdiv p-2 col-12">Basic Information</div>
+
+                                    <!------ div-->
+                                    <div class="container mt-4 col-12" style="padding:20px;">
+                                        <div class="row" style="font-size: 15px;">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="fname">First name:</label>
+                                                    <input type="text" class="form-control f" id="fname">
+                                                </div>
+                                                <div class="col">
+                                                    <label for="lname">Last name:</label>
+                                                    <input type="text" class="form-control f" id="lname">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control f" id="email">
+                                                </div>
+                                                <div class="col">
+                                                    <label for="phone">Phone:</label>
+                                                    <input type="number" class="form-control f" id="phone">
+                                                    <small class="text-muted">Digits Only</small>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="address">Address:</label>
+                                                    <input type="text" class="form-control f" id="address">
+                                                </div>
+                                                <div class="col">
+                                                    <label for="lang">Language:</label>
+                                                    <input type="text" class="form-control f" id="lang">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="jd">Job Description:</label>
+                                                    <input type="text" class="form-control f" id="jd">
+                                                </div>
+                                                <div class="col">
+                                                    <label for="cnic">Phone:</label>
+                                                    <input type="text" class="form-control f" id="cnic">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!----------------------------Social Networks--------------------------->
+                                <div class="row m-4 mb-0 mt-0 py-4 ">
+                                    <div class="seekjobsdiv p-2 col-12">Basic Information</div>
+
+
+                                    <!------ div-->
+                                    <div class="container mt-4 col-12" style="padding:10px; padding-right:0px;">
+                                        <div class="row " style="font-size: 15px;">
+                                            <div class="row col-lg-12">
+                                                <div class="col">
+                                                    <label for="google">Google:</label>
+                                                    <input type="text" class="form-control f" id="google">
+                                                </div>
+                                                <div class="col">
+                                                    <label for="facebook">Facebook:</label>
+                                                    <input type="text" class="form-control f" id="facebook">
+                                                </div>
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col">
+                                                    <label for="twitter">Twitter:</label>
+                                                    <input type="text" class="form-control f" id="twitter">
+                                                </div>
+                                                <div class="col">
+                                                    <label for="linkedin">LinkedIn</label>
+                                                    <input type="text" class="form-control f" id="linkedin">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!----------------------------Update Button--------------------------->
+                                <div class="row m-4 my-5 py-4 ">
+                                    <div class="col-lg-3 col-md-4 col-sm-7 col-6 my-3 p-2 btnupdate" onclick="document.forms[0].submit()">
+                                        <span class="col-lg-3 col-md-3 col-sm-3 col-3 ml-lg-3 ml-0">Update</span>
+                                        <img class="" src="img/update.png" class="img-responsive">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
 
                 <!----------------------resume-------------------------->
                 <div class="mx-4 myDiv" id="resume">
-                    <p class="txt-dark">resume</p>
+                    <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Resume</p>
+                    <div class="col-12 mx-auto my-2"
+                        style=" padding-bottom: 170px;">
+                        <div class="container roun bg-white" style="border-radius: 20px;">
+                            <div class="row bg-success seekdiv text-white">
+                                <span class="mx-4 my-3"><b>Details</b></span>
+                            </div>
+                            <!----------------------------Basic Information--------------------------->
+                            <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="seekjobsdiv p-2 col-12">Basic Information</div>
+
+                                <!------ div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    
+                                    <div class="row" style="font-size: 15px;">
+                                        <!----------------------------LARGE VIEW-------------------->
+                                        <div class="col-lg-12 table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
+                                            <table class="table table-borderless resumetable text-black">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <!-----table-Job Description-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/job-discription.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Job Description:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            Graphic Designer
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <!-----table-Email-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/email.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Email:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            example@user.com
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <!-----table-Location-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/location-g.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Location:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            Lahore
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <!-----table-Website-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/website.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Website:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            www.example.com
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <!-----table-Phone-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/phone.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Phone:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                           1234567
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <!----------------------------MEDIUM VIEW-------------------->
+                                        <div class="col-md-12 m-0 p-0 table-responsive-md d-md-block d-sm-none d-lg-none d-none">
+                                            <table class="table table-borderless resumetable text-black">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <!-----table-Job Description-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/job-discription.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Job Description:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            Graphic Designer
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <!-----table-Email-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/email.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Email:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            example@user.com
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <!-----table-Location-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/location-g.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Location:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            Lahore
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td>
+                                                            <!-----table-Website-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/website.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Website:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            www.example.com
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <!-----table-Phone-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/phone.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Phone:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                           1234567
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                         <!----------------------------SMALL VIEW-------------------->
+                                         <div class="col-sm-10 m-0 p-0 table-responsive-sm d-sm-block d-none d-lg-none d-md-none">
+                                            <table class="table table-borderless resumetable text-black" style="margin-left:-20px;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <!-----table-Job Description-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/job-discription.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Job Description:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            Graphic Designer
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr><tr>
+                                                        <td>
+                                                            <!-----table-Email-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/email.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Email:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            example@user.com
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <!-----table-Location-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/location-g.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Location:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            Lahore
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td></tr>
+                                                        <tr>
+                                                        <td>
+                                                            <!-----table-Website-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/website.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Website:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            www.example.com
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <!-----table-Phone-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/phone.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Phone:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                           1234567
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <!----------------------------VERY SMALL VIEW-------------------->
+                                        <div class="col-10 m-0 p-0 table-responsive-xs d-block d-sm-none d-md-none d-lg-none mx-auto">
+                                            <table class="table table-borderless resumetable text-black" style="margin-left:-20px;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <!-----table-Job Description-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/job-discription.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Job Description:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            Graphic Designer
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr><tr>
+                                                        <td>
+                                                            <!-----table-Email-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/email.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Email:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            example@user.com
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <!-----table-Location-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/location-g.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Location:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            Lahore
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td></tr>
+                                                        <tr>
+                                                        <td>
+                                                            <!-----table-Website-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/website.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Website:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                            www.example.com
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <!-----table-Phone-->
+                                                            <table class="table-sm table-borderless resumetable">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img src="img/phone.png"
+                                                                                class="img-responsive">
+                                                                        </td>
+                                                                        <td>
+                                                                            <b>Phone:</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" class="text-black">
+                                                                           1234567
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!------------------------------------About Us------------------------------>
+                            <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="seekjobsdiv p-2 col-12">About Us</div>
+
+                                <!------div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 12px;">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum.
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!----------------------------Education Background---------------------------->
+                            <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="seekjobsdiv p-2 col-12">Education Background</div>
+
+                                <!------------------------------------Divs--------------------------------------->
+                                <!------First div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-2 col-md-3 col-sm-2 col-2 m-auto d-block">
+                                            <img src="img/study.png" class="img-responsive">
+                                        </div>
+                                        <div class="col-lg-9  col-md-3 col-sm-2 col-2 m-auto d-block">
+                                            <div class="row text-muted" style="font-size: 12px;">
+                                                2018-present
+                                            </div>
+                                            <div class="row text-sm" style="font-size: 14px;">
+                                                recently with desktop publishing software like
+                                            </div>
+                                            <div class="row " style="font-size: 12px;">
+                                                recently with desktop publishing software like Aldus PageMaker
+                                                including
+                                                versions of Lorem Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------Second div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-2">
+                                            <img src="img/study.png" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="row text-muted" style="font-size: 12px;">
+                                                2018-present
+                                            </div>
+                                            <div class="row text-sm" style="font-size: 14px;">
+                                                recently with desktop publishing software like
+                                            </div>
+                                            <div class="row " style="font-size: 12px;">
+                                                recently with desktop publishing software like Aldus PageMaker
+                                                including
+                                                versions of Lorem Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------Third div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-2">
+                                            <img src="img/study.png" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="row text-muted" style="font-size: 12px;">
+                                                2018-present
+                                            </div>
+                                            <div class="row text-sm" style="font-size: 14px;">
+                                                recently with desktop publishing software like
+                                            </div>
+                                            <div class="row " style="font-size: 12px;">
+                                                recently with desktop publishing software like Aldus PageMaker
+                                                including
+                                                versions of Lorem Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-------------------------------Work Experience------------------------>
+                            <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="seekjobsdiv p-2 col-12">Work Experience</div>
+
+                                <!------------------------------------Divs--------------------------------------->
+                                <!------First div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-2">
+                                            <img src="img/work-ex.png" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="row text-muted" style="font-size: 12px;">
+                                                2018-present
+                                            </div>
+                                            <div class="row text-sm" style="font-size: 14px;">
+                                                recently with desktop publishing software like
+                                            </div>
+                                            <div class="row " style="font-size: 12px;">
+                                                recently with desktop publishing software like Aldus PageMaker
+                                                including
+                                                versions of Lorem Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------Second div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-2">
+                                            <img src="img/work-ex.png" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="row text-muted" style="font-size: 12px;">
+                                                2018-present
+                                            </div>
+                                            <div class="row text-sm" style="font-size: 14px;">
+                                                recently with desktop publishing software like
+                                            </div>
+                                            <div class="row " style="font-size: 12px;">
+                                                recently with desktop publishing software like Aldus PageMaker
+                                                including
+                                                versions of Lorem Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-------------------------------Special Qualification------------------------>
+                            <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="seekjobsdiv p-2 col-12">Special Qualification</div>
+
+                                <!------div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+                                    <!-------------------first div--------------->
+                                    <div class="row my-2" style="font-size: 15px;">
+                                        <div class="col-lg-2">
+                                            <img src="img/special-qualification.png" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="row " style="font-size: 12px;">
+                                                recently with desktop publishing software like Aldus PageMaker
+                                                including
+                                                versions of Lorem Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-------------------second div--------------->
+                                    <div class="row my-2" style="font-size: 15px;">
+                                        <div class="col-lg-2">
+                                            <img src="img/special-qualification.png" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="row " style="font-size: 12px;">
+                                                recently with desktop publishing software like Aldus PageMaker
+                                                including
+                                                versions of Lorem Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-------------------third div--------------->
+                                    <div class="row my-2" style="font-size: 15px;">
+                                        <div class="col-lg-2">
+                                            <img src="img/special-qualification.png" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <div class="row " style="font-size: 12px;">
+                                                recently with desktop publishing software like Aldus PageMaker
+                                                including
+                                                versions of Lorem Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!----------------------------Update Button--------------------------->
+                            <div class="row m-4 my-5 py-4 ">
+                                <div class="col-lg-3 col-md-4 col-sm-7 col-5 my-3 p-2 btnupdate" onclick="document.forms[0].submit()">
+                                    <span class="col-lg-3 col-md-4 col-sm-7 col-3 ml-lg-3 ml-0">Update</span>
+                                    <img class="" src="img/update.png" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!----------------------jobs--------------------------->
                 <div class="mx-4 myDiv" id="jobs">
                     <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Jobs Section</p>
-                    <div class="col-lg-12 col-md-5 offset-md-1 col-sm-6 col-9 mx-auto my-2">
+                    <div class="col-12 mx-auto my-2" style=" padding-bottom: 170px;">
                         <div class="container roun bg-white" style="border-radius: 20px;">
                             <div class="row bg-success seekdiv text-white">
                                 <span class="mx-4 my-3"><b>Details</b></span>
@@ -150,24 +1030,28 @@
                             <div class="row m-4 mb-0 mt-0 py-4 ">
                                 <div class="seekjobsdiv p-2 col-12">Applied Jobs</div>
 
-                                <!------------------Divs------------------>
+                                <!------------------------------------Divs--------------------------------------->
+                                <!------First div-->
                                 <div class="container roun shadow mt-4 col-11"
                                     style="padding:20px 40px; border-radius: 10px;">
 
                                     <div class="row" style="font-size: 15px;">
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
                                             <b>Senior Software Quality Assurance Engineer</b>
                                         </div>
-                                        <div class="col-lg-3" style="position: relative;">
-                                            <button type="submit" class="btn btnseeker text-white">Applied Jobs</button>
+                                        <div class="col-lg-3 col-md-2 col-sm-9 col-7" style="position: relative;">
+                                            <button type="submit"
+                                                class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
+                                                Jobs</button>
                                         </div>
-                                        <div class="col-lg-1" style="left: -30px;">
-                                                <img id="arrowRotate" src="img/heartempty.png"  data-swap="img/heartfilled.png" class="">
-                                                
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-1">
+                                            <div class="imagetog">
+                                                <img class="im1 mt-sm-2 mt-3" />
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <img src="img/location.png" class="img-responsive d-inline">
+                                    <div class="row mt-3">
+                                        <img src="img/location.png" class="img-responsive d-inline ">
                                         <small class="d-inline text-muted">Location</small>
 
                                     </div>
@@ -191,6 +1075,238 @@
                                     </div>
                                 </div>
 
+                                <!------Second div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                            <b>Senior Software Quality Assurance Engineer</b>
+                                        </div>
+                                        <div class="col-lg-3 col-md-2 col-sm-9 col-7" style="position: relative;">
+                                            <button type="submit"
+                                                class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
+                                                Jobs</button>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-1">
+                                            <div class="imagetog">
+                                                <img class="im1 mt-sm-2 mt-3" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <img src="img/location.png" class="img-responsive d-inline ">
+                                        <small class="d-inline text-muted">Location</small>
+
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
+                                        industry exp)
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Responsibilities: Provide comprehensive an..
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 p-0 m-0">
+                                            <img src="img/date.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">Sep 04, 2020</small>
+                                        </div>
+                                        <div class="col-lg-2 p-0 m-0">
+                                            <img src="img/yrs.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">3 Years</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!----------Favorite Jobs------->
+                            <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="seekjobsdiv p-2 col-12">Favorite</div>
+
+                                <!------------------------------------Divs--------------------------------------->
+                                <!------First div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                            <b>Senior Software Quality Assurance Engineer</b>
+                                        </div>
+                                        <div class="col-lg-3 col-md-2 col-sm-9 col-7" style="position: relative;">
+                                            <button type="submit"
+                                                class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
+                                                Jobs</button>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-1">
+                                            <div class="imagetog">
+                                                <img class="im1 mt-sm-2 mt-3" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <img src="img/location.png" class="img-responsive d-inline ">
+                                        <small class="d-inline text-muted">Location</small>
+
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
+                                        industry exp)
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Responsibilities: Provide comprehensive an..
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 p-0 m-0">
+                                            <img src="img/date.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">Sep 04, 2020</small>
+                                        </div>
+                                        <div class="col-lg-2 p-0 m-0">
+                                            <img src="img/yrs.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">3 Years</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!------Second div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                            <b>Senior Software Quality Assurance Engineer</b>
+                                        </div>
+                                        <div class="col-lg-3 col-md-2 col-sm-9 col-7" style="position: relative;">
+                                            <button type="submit"
+                                                class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
+                                                Jobs</button>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-1">
+                                            <div class="imagetog">
+                                                <img class="im1 mt-sm-2 mt-3" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <img src="img/location.png" class="img-responsive d-inline ">
+                                        <small class="d-inline text-muted">Location</small>
+
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
+                                        industry exp)
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Responsibilities: Provide comprehensive an..
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 p-0 m-0">
+                                            <img src="img/date.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">Sep 04, 2020</small>
+                                        </div>
+                                        <div class="col-lg-2 p-0 m-0">
+                                            <img src="img/yrs.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">3 Years</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!----------New Jobs------->
+                            <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="seekjobsdiv p-2 col-12">New Jobs</div>
+
+                                <!------------------------------------Divs--------------------------------------->
+                                <!------First div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                            <b>Senior Software Quality Assurance Engineer</b>
+                                        </div>
+                                        <div class="col-lg-3 col-md-2 col-sm-9 col-7" style="position: relative;">
+                                            <button type="submit"
+                                                class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
+                                                Jobs</button>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-1">
+                                            <div class="imagetog">
+                                                <img class="im1 mt-sm-2 mt-3" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <img src="img/location.png" class="img-responsive d-inline ">
+                                        <small class="d-inline text-muted">Location</small>
+
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
+                                        industry exp)
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Responsibilities: Provide comprehensive an..
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 p-0 m-0">
+                                            <img src="img/date.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">Sep 04, 2020</small>
+                                        </div>
+                                        <div class="col-lg-2 p-0 m-0">
+                                            <img src="img/yrs.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">3 Years</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!------Second div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                            <b>Senior Software Quality Assurance Engineer</b>
+                                        </div>
+                                        <div class="col-lg-3 col-md-2 col-sm-9 col-7" style="position: relative;">
+                                            <button type="submit" class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
+                                                Jobs</button>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-1">
+                                            <div class="imagetog">
+                                                <img class="im1 mt-sm-2 mt-3" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <img src="img/location.png" class="img-responsive d-inline ">
+                                        <small class="d-inline text-muted">Location</small>
+
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
+                                        industry exp)
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Responsibilities: Provide comprehensive an..
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 p-0 m-0">
+                                            <img src="img/date.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">Sep 04, 2020</small>
+                                        </div>
+                                        <div class="col-lg-2 p-0 m-0">
+                                            <img src="img/yrs.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">3 Years</small>
+                                        </div>
+
+                                    </div>
+                                </div>
 
                             </div>
 
@@ -198,59 +1314,61 @@
                     </div>
                 </div>
 
-                <!----------------------delete jobs-------------------->
+                <!----------------------delete profile-------------------->
                 <div class="mx-4 myDiv" id="deletejobs">
                     <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Delete Profile</p>
-                    <div class="col-lg-12 col-md-5 offset-md-1 col-sm-6 col-9 mx-auto my-2">
-                        <div class="container roun bg-white" style="border-radius: 20px;">
-                            <div class="row bg-success seekdiv text-white">
-                                <span class="mx-4 my-3"><b>Employee</b></span>
-                            </div>
-                            <div class="row text-justify m-4 mb-0 mt-0 p-4 ">
-                                <!------------table-------------->
-                                <table class="table table-hover seekdeltable">
-                                    <thead>
-                                        <tr>
-                                            <td>
-                                                <div class="seekdeldiv p-2">Name</div>
-                                            </td>
-                                            <td>
-                                                <div class="seekdeldiv p-2">Email</div>
-                                            </td>
-                                            <td>
-                                                <div class="seekdeldiv p-2">Id</div>
-                                            </td>
-                                        </tr>
-                                        <tr class="text-center" style="background-color: #0D2942; color: white;">
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <div class="container roun bg-white" style="border-radius: 20px;">
+                        <div class="row bg-success seekdiv text-white">
+                            <span class="mx-4 my-3"><b>Employee</b></span>
+                        </div>
+                        <div class="row text-justify m-1 mb-0 mt-0 p-lg-4 p-md-4 p-sm-1 p-1 pb-sm-4 mb-5">
+                            <!------------table LARGE and MEDIUM VIEW-------------->
+                            <table class="table table-hover seekdeltable">
+                                <thead>
+                                    <tr>
+                                        <td>
+                                            <div class="seekdeldiv p-2">Name</div>
+                                        </td>
+                                        <td>
+                                            <div class="seekdeldiv p-2">Email</div>
+                                        </td>
+                                        <td>
+                                            <div class="seekdeldiv p-2">Id</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                            </div>
+
                         </div>
                     </div>
                 </div>

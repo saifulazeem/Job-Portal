@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <title>Document</title>
+
+<head>
+    <meta charset="utf-8">
+    <title>toggleClass demo</title>
+    <style>
+        p {
+            margin: 4px;
+            font-size: 16px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .highlight {
+            background: yellow;
+        }
+        .im1 {
+            content: url('img/heartempty.png');
+        }
+
+        .im2 {
+            content: url('img/heartfilled.png');
+           
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+
+
+<script>
+    $(document).ready(function () {
+        $(".imagetog").click(function (event) {
+
+                //$(event.target.className).not(this).removeClass("im1");
+                $(this).toggleClass("im2");
+
+        });
+        /*$( "p" ).click(function() {
+        $( this ).toggleClass( "highlight" );
+            });*/
+    });
+</script>
+
+<body>
+    <div class="imagetog">
+        <img class="im1" />
+    </div>
+    <div class="imagetog">
+        <img class="im1" />
+    </div>
+    <div class="imagetog">
+        <img class="im1" />
+    </div>
+</body>
+
+</html>

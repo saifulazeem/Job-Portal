@@ -1516,17 +1516,13 @@ font-size: 12px;
 }
 
 .holderimg {
-  padding: 10px;
   border-radius: 20px;
-  background-color: #929292;
-  left: 65%;
-  top: 80%;
   position: absolute;
   margin-top: -25px;
   margin-left: -25px;
 }
 .holderimg:hover{
-  background-color:wheat;
+  background-color: #929292;
 }
 /*for packages.html*/
 .divs{
@@ -1662,4 +1658,26 @@ tr{
 }
 .activator:hover .content {
   display: block;
+}
+.resumetable td{
+  font-size: 12px;
+  color:black;
+}
+.resumetable b{
+  font-size: 14px;
+}
+.imgboxseek{
+  height:190px;
+  width:200px;
+  background-color: #f0eded;
+}
+.btnupdate:hover{
+  background-color:#0BB44F;
+  color: white;
+  cursor: hand;
+}
+.btnupdate{
+  background-color:#0D2942; 
+  color:white;
+  border-radius: 10px;
 }
