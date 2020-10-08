@@ -57,6 +57,91 @@
             }
         }
     </script>
+    <style>
+        input[type='range'] {
+            -webkit-appearance: none;
+            background-color: white;
+            height: 20px;
+            overflow: hidden;
+            width: 400px;
+        }
+
+        input[type='range']::-webkit-slider-runnable-track {
+            -webkit-appearance: none;
+            height: 20px;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            box-shadow: -210px 0 0 200px #666;
+            background: #4CAF50;
+            border: 5px solid white;
+            cursor: pointer;
+
+        }
+
+        .slidecontainer {
+            width: 100%;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 12px;
+            border-radius: 9px;
+            background: white;
+            outline: none;
+            opacity: 0.8;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            
+        }
+
+        .slider:hover {
+            opacity: 1;
+            outline: 0px;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 35px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+            margin: -12px 0px 0px 0px;
+        }
+
+        input[type='range']::-moz-range-thumb {
+            background: #333;
+            border-radius: 50%;
+            box-shadow: -1010px 0 0 1000px #666;
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            border: 0;
+        }
+
+        input[type="range"]::-moz-range-track {
+            background-color: #ddd;
+        }
+
+        input[type="range"]::-moz-range-progress {
+            background-color: #666;
+            height: 20px
+        }
+
+        input[type="range"]::-ms-fill-upper {
+            background-color: #ddd;
+        }
+
+        input[type="range"]::-ms-fill-lower {
+            background-color: #666;
+        }
+    </style>
 </head>
 
 <body style="font-family: Segoe UI;">
@@ -232,7 +317,7 @@
                     Min. Salary
                 </div>
                 <div class="row mx-4">
-                    <input type="range" id="rangeInput" value="5000" min="5000" max="1000000"
+                    <input type="range" id="rangeInput" class="slider" step="1000" value="5000" min="5000" max="1000000"
                         oninput="amount.value=rangeInput.value">
                 </div>
                 <div class="row mb-4">

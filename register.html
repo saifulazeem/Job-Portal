@@ -61,11 +61,22 @@
                 s1.animate({ "right": "100%" }, "slow").removeClass('visible');
                 s2.animate({ "left": "0" }, "slow").addClass('visible');
             }
+            else if (!radioValue) {
+                $('.emptydiv').show();
+
+            }
         });
         $('.btnback').click(function () {
+            //slider
             var s2 = $('.slideright');
             s2.animate({ "left": "100%" }, "slow").removeClass('visible');
             s1.animate({ "right": "0" }, "slow").addClass('visible');
+
+            //uncheck radiobtn values----clear form
+            $('#myForm')[0].reset();
+
+            //move to top of page
+            $('html, body').animate({scrollTop: '0px'}, 300);
         });
     });
 
@@ -92,6 +103,7 @@
     $('.mainblock').show();
     $('.empdiv').hide();
     $('.jsdiv').hide();
+    $('.emptydiv').hide();
 });
 </script>
 
@@ -138,7 +150,7 @@
                 <div class="col-lg-6 col-md-8 col-sm-10 col-9 mx-auto my-4 roun rounded"
                     style="background-color:#e0e0e0;">
                     <div class="row m-3 mainblock">
-                        <form>
+                        <form id="myForm">
                             <div class="form-group">
                                 <label for="reg" class=" mx-2 homedivtxt">REGISTER As: </label>
                                 <div class="col m-auto" style="font-size: 20px; ">
@@ -159,9 +171,14 @@
                         </form>
                     </div>
                     <!---------------------BUTTON-------------------->
-                    <div class="float-right mb-3 ">
+                    <div class="row ">
+                    <div class="col-lg-7 mx-3">
+                        <div class="emptydiv font-weight-bold" style="color: brown;">Please Select an Option to Proceed!</div>
+                    </div>
+                    <div class="col-lg-2 mr-3 my-3">
                         <button type="submit" class="btn ex text-white bt btnnext">Next</button>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
