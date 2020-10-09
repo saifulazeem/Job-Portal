@@ -34,6 +34,37 @@
                 $(this).toggleClass("im2");
             });
         });
+
+        function CheckOpt(val) {
+            var element = document.getElementById('reason');
+            if (val == 'others') {
+                element.style.display = 'block';
+                element.required = true;
+            }
+            else//any value
+            {
+                element.style.display = 'none';
+                element.required = false;
+            }
+
+        }
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
     </script>
 </head>
 
@@ -136,15 +167,14 @@
                 <!----------------------edit profile------------------->
                 <div class="mx-4 myDiv" id="editprofile">
                     <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Employee Profile</p>
-                    <div class="col-12 mx-auto my-2"
-                        style=" padding-bottom: 170px;">
+                    <div class="col-12 my-2" style=" padding-bottom: 170px;">
                         <div class="container roun bg-white" style="border-radius: 20px;">
                             <div class="row bg-success seekdiv text-white">
                                 <span class="mx-4 my-3"><b>Details FORM</b></span>
                             </div>
                             <form class="col-lg-12">
                                 <!-------------------------------Upload Image----------------------->
-                                <div class="row m-4 mb-0 mt-0 py-4">
+                                <div class="row m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
                                     <div class="col-lg-5 ">
                                         <div class="row mx-2">
                                             <span class="text-muted font-weight-bold">Add your Image</span>
@@ -157,49 +187,49 @@
                                 </div>
 
                                 <!----------------------------Basic Information--------------------------->
-                                <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
                                     <div class="seekjobsdiv p-2 col-12">Basic Information</div>
 
                                     <!------ div-->
                                     <div class="container mt-4 col-12" style="padding:20px;">
                                         <div class="row" style="font-size: 15px;">
-                                            <div class="row">
-                                                <div class="col">
+                                            <div class="row col-12">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="fname">First name:</label>
                                                     <input type="text" class="form-control f" id="fname">
                                                 </div>
-                                                <div class="col">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="lname">Last name:</label>
                                                     <input type="text" class="form-control f" id="lname">
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col">
+                                            <div class="row col-12">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="email">Email:</label>
                                                     <input type="email" class="form-control f" id="email">
                                                 </div>
-                                                <div class="col">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="phone">Phone:</label>
                                                     <input type="number" class="form-control f" id="phone">
                                                     <small class="text-muted">Digits Only</small>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col">
+                                            <div class="row col-12">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="address">Address:</label>
                                                     <input type="text" class="form-control f" id="address">
                                                 </div>
-                                                <div class="col">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="lang">Language:</label>
                                                     <input type="text" class="form-control f" id="lang">
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col">
+                                            <div class="row col-12">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="jd">Job Description:</label>
                                                     <input type="text" class="form-control f" id="jd">
                                                 </div>
-                                                <div class="col">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="cnic">Phone:</label>
                                                     <input type="text" class="form-control f" id="cnic">
                                                 </div>
@@ -209,29 +239,29 @@
                                 </div>
 
                                 <!----------------------------Social Networks--------------------------->
-                                <div class="row m-4 mb-0 mt-0 py-4 ">
-                                    <div class="seekjobsdiv p-2 col-12">Basic Information</div>
+                                <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                                    <div class="seekjobsdiv p-2 col-12">Social Networks</div>
 
 
                                     <!------ div-->
                                     <div class="container mt-4 col-12" style="padding:10px; padding-right:0px;">
                                         <div class="row " style="font-size: 15px;">
                                             <div class="row col-lg-12">
-                                                <div class="col">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="google">Google:</label>
                                                     <input type="text" class="form-control f" id="google">
                                                 </div>
-                                                <div class="col">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="facebook">Facebook:</label>
                                                     <input type="text" class="form-control f" id="facebook">
                                                 </div>
                                             </div>
                                             <div class="row col-lg-12">
-                                                <div class="col">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="twitter">Twitter:</label>
                                                     <input type="text" class="form-control f" id="twitter">
                                                 </div>
-                                                <div class="col">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                     <label for="linkedin">LinkedIn</label>
                                                     <input type="text" class="form-control f" id="linkedin">
                                                 </div>
@@ -242,8 +272,9 @@
                                 </div>
 
                                 <!----------------------------Update Button--------------------------->
-                                <div class="row m-4 my-5 py-4 ">
-                                    <div class="col-lg-3 col-md-4 col-sm-7 col-6 my-3 p-2 btnupdate" onclick="document.forms[0].submit()">
+                                <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                                    <div class="col-lg-3 col-md-4 col-sm-7 col-6 my-3 p-2 btnupdate"
+                                        onclick="document.forms[0].submit()">
                                         <span class="col-lg-3 col-md-3 col-sm-3 col-3 ml-lg-3 ml-0">Update</span>
                                         <img class="" src="img/update.png" class="img-responsive">
                                     </div>
@@ -257,8 +288,7 @@
                 <!----------------------resume-------------------------->
                 <div class="mx-4 myDiv" id="resume">
                     <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Resume</p>
-                    <div class="col-12 mx-auto my-2"
-                        style=" padding-bottom: 170px;">
+                    <div class="col-12 mx-auto my-2" style=" padding-bottom: 170px;">
                         <div class="container roun bg-white" style="border-radius: 20px;">
                             <div class="row bg-success seekdiv text-white">
                                 <span class="mx-4 my-3"><b>Details</b></span>
@@ -271,10 +301,11 @@
                                 <div class="container roun shadow mt-4 col-11"
                                     style="padding:20px 40px; border-radius: 10px;">
 
-                                    
+
                                     <div class="row" style="font-size: 15px;">
                                         <!----------------------------LARGE VIEW-------------------->
-                                        <div class="col-lg-12 table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
+                                        <div
+                                            class="col-lg-12 table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
                                             <table class="table table-borderless resumetable text-black">
                                                 <tbody>
                                                     <tr>
@@ -387,7 +418,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td colspan="2" class="text-black">
-                                                                           1234567
+                                                                            1234567
                                                                         </td>
                                                                         <td>
                                                                         </td>
@@ -402,7 +433,8 @@
                                         </div>
 
                                         <!----------------------------MEDIUM VIEW-------------------->
-                                        <div class="col-md-12 m-0 p-0 table-responsive-md d-md-block d-sm-none d-lg-none d-none">
+                                        <div
+                                            class="col-md-12 m-0 p-0 table-responsive-md d-md-block d-sm-none d-lg-none d-none">
                                             <table class="table table-borderless resumetable text-black">
                                                 <tbody>
                                                     <tr>
@@ -517,7 +549,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td colspan="2" class="text-black">
-                                                                           1234567
+                                                                            1234567
                                                                         </td>
                                                                         <td>
                                                                         </td>
@@ -527,14 +559,16 @@
                                                         </td>
                                                         <td></td>
                                                     </tr>
-                                                    
+
                                                 </tbody>
                                             </table>
                                         </div>
 
-                                         <!----------------------------SMALL VIEW-------------------->
-                                         <div class="col-sm-10 m-0 p-0 table-responsive-sm d-sm-block d-none d-lg-none d-md-none">
-                                            <table class="table table-borderless resumetable text-black" style="margin-left:-20px;">
+                                        <!----------------------------SMALL VIEW-------------------->
+                                        <div
+                                            class="col-sm-10 m-0 p-0 table-responsive-sm d-sm-block d-none d-lg-none d-md-none">
+                                            <table class="table table-borderless resumetable text-black"
+                                                style="margin-left:-20px;">
                                                 <tbody>
                                                     <tr>
                                                         <td>
@@ -560,7 +594,8 @@
                                                                 </tbody>
                                                             </table>
                                                         </td>
-                                                    </tr><tr>
+                                                    </tr>
+                                                    <tr>
                                                         <td>
                                                             <!-----table-Email-->
                                                             <table class="table-sm table-borderless resumetable">
@@ -608,8 +643,9 @@
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
-                                                        </td></tr>
-                                                        <tr>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
                                                         <td>
                                                             <!-----table-Website-->
                                                             <table class="table-sm table-borderless resumetable">
@@ -650,7 +686,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td colspan="2" class="text-black">
-                                                                           1234567
+                                                                            1234567
                                                                         </td>
                                                                         <td>
                                                                         </td>
@@ -660,14 +696,16 @@
                                                         </td>
                                                         <td></td>
                                                     </tr>
-                                                    
+
                                                 </tbody>
                                             </table>
                                         </div>
 
                                         <!----------------------------VERY SMALL VIEW-------------------->
-                                        <div class="col-10 m-0 p-0 table-responsive-xs d-block d-sm-none d-md-none d-lg-none mx-auto">
-                                            <table class="table table-borderless resumetable text-black" style="margin-left:-20px;">
+                                        <div
+                                            class="col-10 m-0 p-0 table-responsive-xs d-block d-sm-none d-md-none d-lg-none mx-auto">
+                                            <table class="table table-borderless resumetable text-black"
+                                                style="margin-left:-20px;">
                                                 <tbody>
                                                     <tr>
                                                         <td>
@@ -693,7 +731,8 @@
                                                                 </tbody>
                                                             </table>
                                                         </td>
-                                                    </tr><tr>
+                                                    </tr>
+                                                    <tr>
                                                         <td>
                                                             <!-----table-Email-->
                                                             <table class="table-sm table-borderless resumetable">
@@ -741,8 +780,9 @@
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
-                                                        </td></tr>
-                                                        <tr>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
                                                         <td>
                                                             <!-----table-Website-->
                                                             <table class="table-sm table-borderless resumetable">
@@ -783,7 +823,7 @@
                                                                     </tr>
                                                                     <tr>
                                                                         <td colspan="2" class="text-black">
-                                                                           1234567
+                                                                            1234567
                                                                         </td>
                                                                         <td>
                                                                         </td>
@@ -793,7 +833,7 @@
                                                         </td>
                                                         <td></td>
                                                     </tr>
-                                                    
+
                                                 </tbody>
                                             </table>
                                         </div>
@@ -1009,7 +1049,8 @@
 
                             <!----------------------------Update Button--------------------------->
                             <div class="row m-4 my-5 py-4 ">
-                                <div class="col-lg-3 col-md-4 col-sm-7 col-5 my-3 p-2 btnupdate" onclick="document.forms[0].submit()">
+                                <div class="col-lg-3 col-md-4 col-sm-7 col-5 my-3 p-2 btnupdate"
+                                    onclick="document.forms[0].submit()">
                                     <span class="col-lg-3 col-md-4 col-sm-7 col-3 ml-lg-3 ml-0">Update</span>
                                     <img class="" src="img/update.png" class="img-responsive">
                                 </div>
@@ -1274,7 +1315,8 @@
                                             <b>Senior Software Quality Assurance Engineer</b>
                                         </div>
                                         <div class="col-lg-3 col-md-2 col-sm-9 col-7" style="position: relative;">
-                                            <button type="submit" class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
+                                            <button type="submit"
+                                                class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
                                                 Jobs</button>
                                         </div>
                                         <div class="col-lg-1 col-md-1 col-sm-1 col-1">
@@ -1315,60 +1357,53 @@
                 </div>
 
                 <!----------------------delete profile-------------------->
-                <div class="mx-4 myDiv" id="deletejobs">
+                <div class="mx-4 myDiv mb-5" id="deletejobs">
                     <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Delete Profile</p>
                     <div class="container roun bg-white" style="border-radius: 20px;">
                         <div class="row bg-success seekdiv text-white">
                             <span class="mx-4 my-3"><b>Employee</b></span>
                         </div>
-                        <div class="row text-justify m-1 mb-0 mt-0 p-lg-4 p-md-4 p-sm-1 p-1 pb-sm-4 mb-5">
-                            <!------------table LARGE and MEDIUM VIEW-------------->
-                            <table class="table table-hover seekdeltable">
-                                <thead>
-                                    <tr>
-                                        <td>
-                                            <div class="seekdeldiv p-2">Name</div>
-                                        </td>
-                                        <td>
-                                            <div class="seekdeldiv p-2">Email</div>
-                                        </td>
-                                        <td>
-                                            <div class="seekdeldiv p-2">Id</div>
-                                        </td>
-                                    </tr>
-                                    <tr class="text-center" style="background-color: #0D2942; color: white;">
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                        <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="row text-justify m-1 mt-0 p-lg-4 p-md-4 p-sm-1 p-3 pb-sm-4 mb-5 pb-5">
+                            <div class="row">
+                                <p class="col-lg-8 mx-auto my-auto text-center">When you delete your account, your
+                                    profile, photos, videos, comments, likes and
+                                    followers will be permanently removed.</p>
+                            </div>
+                            <div class="row mt-5 mx-auto roun rounded p-5">
+                                <div class="col-lg-12">
+                                    <form class="needs-validation" novalidate action="login.html">
+                                        <div class="form-group">
+                                            <label for="delacc"><b>Why are you deleting your account?</b></label>
+                                            <select id="delacc" name="reason" class="form-control f"
+                                                onchange='CheckOpt(this.value);' required>
+                                                <option selected disabled value="">Choose...</option>
+                                                <option value="nothing useful">I don't find anything useful here
+                                                </option>
+                                                <option value="noprivacy">No privacy</option>
+                                                <option value="difficult">Difficult to Operate</option>
+                                                <option value="others">Others</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a valid option
+                                            </div>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control f" name="reason" id="reason"
+                                                style='display:none;' />
+                                                <div class="invalid-feedback">
+                                                    Please select a valid option
+                                                </div>
+                                        </div>
 
-
+                                        <button type="submit"
+                                            class="btn post mt-4 px-lg-4 px-md-4 px-sm-2 px-2">Permanently Delete my
+                                            Account</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

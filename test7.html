@@ -1,0 +1,30 @@
+<html> 
+<head>  
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+<script type="text/javascript">
+function CheckColors(val){
+ var element=document.getElementById('color');
+ if(val=='pick a color'||val=='others')
+   element.style.display='block';
+ else  
+   element.style.display='none';
+}
+
+</script> 
+</head>
+<body>
+  <select name="color" onchange='CheckColors(this.value);'> 
+    <option>pick a color</option>  
+    <option value="red">RED</option>
+    <option value="blue">BLUE</option>
+    <option value="others">others</option>
+  </select>
+<input type="text" name="color" id="color" style='display:none;'/>
+</body>
+</html>

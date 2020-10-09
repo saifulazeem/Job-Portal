@@ -112,6 +112,11 @@ color:white;
 .dropdown-item:hover{
     background-color: grey;
 }
+/*color the icon of dropdown DASHBOARD.html*/
+.drop {
+  color:black;
+  
+}
  /* Style to change separator  */
  .breadcrumb-item + .breadcrumb-item::before {
     content: ">";
@@ -1635,12 +1640,13 @@ tr{
 .seekdeltable thead td{
   border: 0px;
 }
-.seekdeltable tr{
+.seekdeltable tbody tr{
   border: 2px solid #d9dbda;
 }
 .seekdeltable{
   border-collapse: collapse;
   border-style: hidden;/*hides the boundary*/
+  font-size: 12px;
 }
 .delhov{
   cursor: hand;
@@ -1682,4 +1688,16 @@ tr{
 }
 .dashnav a:hover {
   color: #0BB44F;
+}
+.dashform{
+  background-color: #d9dbda;
+}
+.dashform:focus { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 0.5; /* Firefox */
+}
+
+.dashform::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:black;
+  opacity: 1; /* Firefox */
+  font-size: 12px;
 }

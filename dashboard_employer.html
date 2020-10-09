@@ -12,11 +12,58 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
     <title>Company Admin Panel</title>
+    <style>
+        /*heart images in seeker dashboard*/
+        .im1 {
+            content: url('img/heartempty.png');
+        }
 
+        .im2 {
+            content: url('img/heartfilled.png');
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            //hide or show Heart img
+            $(".imagetog").click(function (event) {
+                $(this).toggleClass("im2");
+            });
+        });
+        function CheckOpt(val) {
+            var element = document.getElementById('reason');
+            if (val == 'others') {
+                element.style.display = 'block';
+                element.required = true;
+            }
+            else//any value
+            {
+                element.style.display = 'none';
+                element.required = false;
+            }
+        }
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
 </head>
 
 <body style="font-family: Segoe UI;">
@@ -111,17 +158,365 @@
 
                 <!----------------------edit profile------------------->
                 <div class="mx-4 myDiv" id="editprofile">
-                    <p class="txt-dark">edit profile</p>
+                    <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Employee Profile</p>
+                    <div class="col-12 my-2" style=" padding-bottom: 170px;">
+                        <div class="container roun bg-white" style="border-radius: 20px;">
+                            <div class="row bg-success seekdiv text-white">
+                                <span class="mx-4 my-3"><b>Details FORM</b></span>
+                            </div>
+                            <form class="col-lg-12">
+                                <!-------------------------------Upload Image----------------------->
+                                <div class="row m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                                    <div class="col-lg-5 ">
+                                        <div class="row mx-2">
+                                            <span class="text-muted font-weight-bold">Add your Image</span>
+                                        </div>
+                                        <div class="row mt-4 mx-2">
+                                            <div class="roun imgboxseek">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!----------------------------Basic Information--------------------------->
+                                <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                                    <div class="seekjobsdiv p-2 col-12">Basic Information</div>
+
+                                    <!------ div-->
+                                    <div class="container mt-4 col-12" style="padding:20px;">
+                                        <div class="row" style="font-size: 15px;">
+                                            <div class="row col-12">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="cname">Company name:</label>
+                                                    <input type="text" class="form-control f" id="cname">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control f" id="email">
+                                                </div>
+                                            </div>
+                                            <div class="row col-12">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="address">Address:</label>
+                                                    <input type="text" class="form-control f" id="address">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="phone">Phone:</label>
+                                                    <input type="number" class="form-control f" id="phone">
+                                                    <small class="text-muted">Digits Only</small>
+                                                </div>
+                                            </div>
+                                            <div class="row col-12">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="ct">Company Type:</label>
+                                                    <input type="text" class="form-control f" id="ct">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="no">No. of Employees:</label>
+                                                    <input type="number" class="form-control f" id="no">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!----------------------------Social Networks--------------------------->
+                                <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                                    <div class="seekjobsdiv p-2 col-12">Social Networks</div>
+
+
+                                    <!------ div-->
+                                    <div class="container mt-4 col-12" style="padding:10px; padding-right:0px;">
+                                        <div class="row " style="font-size: 15px;">
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="google">Google:</label>
+                                                    <input type="text" class="form-control f" id="google">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="facebook">Facebook:</label>
+                                                    <input type="text" class="form-control f" id="facebook">
+                                                </div>
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="twitter">Twitter:</label>
+                                                    <input type="text" class="form-control f" id="twitter">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="linkedin">LinkedIn</label>
+                                                    <input type="text" class="form-control f" id="linkedin">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!----------------------------Update Button--------------------------->
+                                <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                                    <div class="col-lg-3 col-md-4 col-sm-7 col-6 my-3 p-2 btnupdate"
+                                        onclick="document.forms[0].submit()">
+                                        <span class="col-lg-3 col-md-3 col-sm-3 col-3 ml-lg-3 ml-0">Update</span>
+                                        <img class="" src="img/update.png" class="img-responsive">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
                 </div>
 
                 <!----------------------jobs--------------------------->
                 <div class="mx-4 myDiv" id="jobs">
-                    <p class="txt-dark">jobs</p>
+                    <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Jobs Section</p>
+                    <div class="col-12 mx-auto my-2" style=" padding-bottom: 170px;">
+                        <div class="container roun bg-white" style="border-radius: 20px;">
+                            <div class="row bg-success seekdiv text-white">
+                                <span class="mx-4 my-3"><b>Jobs Posted</b></span>
+                            </div>
+                            <!----------New Jobs------->
+                            <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="seekjobsdiv p-2 col-12">New Jobs</div>
+
+                                <!------------------------------------Divs--------------------------------------->
+                                <!------First div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                            <b>Senior Software Quality Assurance Engineer</b>
+                                        </div>
+                                        <div class="col-lg-3 col-md-2 col-sm-9 col-7" style="position: relative;">
+                                            <button type="submit"
+                                                class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
+                                                Jobs</button>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-1">
+                                            <div class="imagetog">
+                                                <img class="im1 mt-sm-2 mt-3" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <img src="img/location.png" class="img-responsive d-inline ">
+                                        <small class="d-inline text-muted">Location</small>
+
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
+                                        industry exp)
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Responsibilities: Provide comprehensive an..
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 p-0 m-0">
+                                            <img src="img/date.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">Sep 04, 2020</small>
+                                        </div>
+                                        <div class="col-lg-2 p-0 m-0">
+                                            <img src="img/yrs.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">3 Years</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!------Second div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                            <b>Senior Software Quality Assurance Engineer</b>
+                                        </div>
+                                        <div class="col-lg-3 col-md-2 col-sm-9 col-7" style="position: relative;">
+                                            <button type="submit"
+                                                class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
+                                                Jobs</button>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-1">
+                                            <div class="imagetog">
+                                                <img class="im1 mt-sm-2 mt-3" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <img src="img/location.png" class="img-responsive d-inline ">
+                                        <small class="d-inline text-muted">Location</small>
+
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
+                                        industry exp)
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Responsibilities: Provide comprehensive an..
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 p-0 m-0">
+                                            <img src="img/date.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">Sep 04, 2020</small>
+                                        </div>
+                                        <div class="col-lg-2 p-0 m-0">
+                                            <img src="img/yrs.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">3 Years</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!----------Upcoming Jobs------->
+                            <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="seekjobsdiv p-2 col-12">Upcoming Jobs</div>
+
+                                <!------------------------------------Divs--------------------------------------->
+                                <!------First div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                            <b>Senior Software Quality Assurance Engineer</b>
+                                        </div>
+                                        <div class="col-lg-3 col-md-2 col-sm-9 col-7" style="position: relative;">
+                                            <button type="submit"
+                                                class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
+                                                Jobs</button>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-1">
+                                            <div class="imagetog">
+                                                <img class="im1 mt-sm-2 mt-3" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <img src="img/location.png" class="img-responsive d-inline ">
+                                        <small class="d-inline text-muted">Location</small>
+
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
+                                        industry exp)
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Responsibilities: Provide comprehensive an..
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 p-0 m-0">
+                                            <img src="img/date.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">Sep 04, 2020</small>
+                                        </div>
+                                        <div class="col-lg-2 p-0 m-0">
+                                            <img src="img/yrs.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">3 Years</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------Second div-->
+                                <div class="container roun shadow mt-4 col-11"
+                                    style="padding:20px 40px; border-radius: 10px;">
+
+                                    <div class="row" style="font-size: 15px;">
+                                        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                            <b>Senior Software Quality Assurance Engineer</b>
+                                        </div>
+                                        <div class="col-lg-3 col-md-2 col-sm-9 col-7" style="position: relative;">
+                                            <button type="submit"
+                                                class="btn btnseeker text-white float-right mt-sm-2 mt-2">Applied
+                                                Jobs</button>
+                                        </div>
+                                        <div class="col-lg-1 col-md-1 col-sm-1 col-1">
+                                            <div class="imagetog">
+                                                <img class="im1 mt-sm-2 mt-3" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <img src="img/location.png" class="img-responsive d-inline ">
+                                        <small class="d-inline text-muted">Location</small>
+
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
+                                        industry exp)
+                                    </div>
+                                    <div class="row" style="font-size: 12px;">
+                                        Responsibilities: Provide comprehensive an..
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 p-0 m-0">
+                                            <img src="img/date.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">Sep 04, 2020</small>
+                                        </div>
+                                        <div class="col-lg-2 p-0 m-0">
+                                            <img src="img/yrs.png" class="img-responsive d-inline">
+                                            <small class="d-inline text-muted">3 Years</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!----------------------delete jobs-------------------->
-                <div class="mx-4 myDiv" id="deletejobs">
-                    <p class="txt-dark">delete jobs</p>
+                <!----------------------delete profile-------------------->
+                <div class="mx-4 myDiv mb-5" id="deletejobs">
+                    <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Delete Profile</p>
+                    <div class="container roun bg-white" style="border-radius: 20px;">
+                        <div class="row bg-success seekdiv text-white">
+                            <span class="mx-4 my-3"><b>Employee</b></span>
+                        </div>
+                        <div class="row text-justify m-1 mt-0 p-lg-4 p-md-4 p-sm-1 p-3 pb-sm-4 mb-5 pb-5">
+                            <div class="row">
+                                <p class="col-lg-8 mx-auto my-auto text-center">When you delete your account, your
+                                    profile, photos, videos, comments, likes and
+                                    followers will be permanently removed.</p>
+                            </div>
+                            <div class="row mt-5 mx-auto roun rounded p-5">
+                                <div class="col-lg-12">
+                                    <form class="needs-validation" novalidate action="login.html">
+                                        <div class="form-group">
+                                            <label for="delacc"><b>Why are you deleting your account?</b></label>
+                                            <select id="delacc" name="reason" class="form-control f"
+                                                onchange='CheckOpt(this.value);' required>
+                                                <option selected disabled value="">Choose...</option>
+                                                <option value="nothing useful">I don't find anything useful here
+                                                </option>
+                                                <option value="noprivacy">No privacy</option>
+                                                <option value="difficult">Difficult to Operate</option>
+                                                <option value="others">Others</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a valid option
+                                            </div>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control f" name="reason" id="reason"
+                                                style='display:none;' />
+                                            <div class="invalid-feedback">
+                                                Please select a valid option
+                                            </div>
+                                        </div>
+
+                                        <button type="submit"
+                                            class="btn post mt-4 px-lg-4 px-md-4 px-sm-2 px-2">Permanently Delete my
+                                            Account</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
