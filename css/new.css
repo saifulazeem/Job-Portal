@@ -33,10 +33,6 @@ body{
     color: #0BB44F;
   }
 
-  .dashnav a:hover {
-    color: #0BB44F;
-  }
-
   .subdashnav a:hover {
     color: white;
   }
@@ -1680,4 +1676,10 @@ tr{
   background-color:#0D2942; 
   color:white;
   border-radius: 10px;
+}
+.dashnav a:active{
+  font-weight: 900;
+}
+.dashnav a:hover {
+  color: #0BB44F;
 }
