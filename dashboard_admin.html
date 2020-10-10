@@ -12,11 +12,109 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/new.css">
   <title>Admin-Dashboard</title>
+  <style>
+    input[type='range'] {
+      -webkit-appearance: none;
+      background-color: white;
+      height: 10px;
+      overflow: hidden;
+      width: 400px;
+    }
 
+    input[type='range']::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      height: 20px;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      box-shadow: -210px 0 0 200px #666;
+      background: #4CAF50;
+      border: 5px solid #0D2942;
+      cursor: pointer;
+
+    }
+
+    .slidecontainer {
+      width: 100%;
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 12px;
+      border-radius: 9px;
+      background: #0D2942;
+      outline: none;
+      opacity: 0.8;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+
+    }
+
+    .slider:hover {
+      opacity: 1;
+      outline: 0px;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 35px;
+      border-radius: 50%;
+      background: #4CAF50;
+      cursor: pointer;
+      margin: -12px 0px 0px 0px;
+    }
+
+    input[type='range']::-moz-range-thumb {
+      background: #333;
+      border-radius: 50%;
+      box-shadow: -1010px 0 0 1000px #666;
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      border: 0;
+    }
+
+    input[type="range"]::-moz-range-track {
+      background-color: #ddd;
+    }
+
+    input[type="range"]::-moz-range-progress {
+      background-color: #666;
+      height: 20px
+    }
+
+    input[type="range"]::-ms-fill-upper {
+      background-color: #ddd;
+    }
+
+    input[type="range"]::-ms-fill-lower {
+      background-color: #666;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $('.dispshm').click(function () {
+        if ($(this).text() == "See Less") {
+          $(this).text("Show More");
+        } else {
+          $(this).text("See Less");
+        }
+      });
+
+    });
+  </script>
 </head>
 
 <body style="font-family: Segoe UI;">
@@ -45,254 +143,213 @@
           </div>
         </div>
 
-        <div class="row row-sm-2" style="font-size: 14px;">
+        <div class="row row-sm-2 d-flex justify-content-center" style="font-size: 14px;">
           <!----------------------------------------Vertical navigation bar------------------------------------------->
-          <nav class="navbar navbar-expand text-white">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse mx-4" id="navbarSupportedContent">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <b class="text-success">ADMIN USER</b>
-                </li>
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/profilelogo.png" class="img-fluid my-2">
-                    Admin User
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#listofadminuser">
-                      <img src="img/viewadmin.png" class="img-fluid">
-                      List of Admin User
-                    </a>
-
-                    <a class="dropdown-item" href="#addadminuser">
-                      <img src="img/addadmin.png" class="img-fluid">
-                      Add Admin User
-                    </a>
-                  </div>
-                </li>
-                <!---------------------modules---------------------------------------------------------->
-
-                <li class="nav-item">
-                  <b class="text-success">MODULES</b>
-                </li>
-
-                <li class="nav-item dropdown dashnav">
-                  <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/jobs.png" class="img-fluid my-2">
-                    Jobs
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addjob">
-                      <img src="img/add.png" class="img-fluid">
-                      Add Job
-                    </a>
-                  </div>
-                </li>
-
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/companies.png" class="img-fluid">
-                    Companies
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addcompanies">
-                      <img src="img/add.png" class="img-fluid">
-                      Add Companies
-                    </a>
-                  </div>
-                </li>
-
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/jobsprofile.png" class="img-fluid">
-                    User Profile
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#adduser">
-                      <img src="img/add.png" class="img-fluid">
-                      Add User
-                    </a>
-                  </div>
-                </li>
-
-                <li class="nav-item dashnav">
-                  <a class="nav-link" href="#cms" role="button" aria-haspopup="true" aria-expanded="false">
-                    <img src="img/cms.png" class="img-fluid">
-                    CMS
-                  </a>
-                </li>
-
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/manageblog.png" class="img-fluid">
-                    Manage Blogs
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addpost">
-                      <img src="img/add.png" class="img-fluid">
-                      Add New Post
-                    </a>
-                  </div>
-                </li>
-
-                <li class="nav-item dashnav">
-                  <a class="nav-link" href="#seo" role="button" aria-haspopup="true" aria-expanded="false">
-                    <img src="img/seo.png" class="img-fluid my-2">
-                    SEO
-                  </a>
-                </li>
-
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/faq.png" class="img-fluid">
-                    FAQ
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addfaq">
-                      <img src="img/add.png" class="img-fluid">
-                      Add FAQs
-                    </a>
-                  </div>
-                </li>
-                <!---------------------packages---------------------------------------------------------->
-
-                <li class="nav-item">
-                  <b class="text-success">USER PACKAGES</b>
-                </li>
-
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/packages.png" class="img-fluid">
-                    Packages
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addpackages">
-                      <img src="img/add.png" class="img-fluid">
-                      Add Packages
-                    </a>
-                  </div>
-                </li>
-
-                <!---------------------manage location---------------------------------------------------------->
-
-                <li class="nav-item">
-                  <b class="text-success">MANAGE LOCATION</b>
-                </li>
-
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/citycountry.png" class="img-fluid">
-                    Countries
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addcountry">
-                      <img src="img/add.png" class="img-fluid">
-                      Add New Countries
-                    </a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/citycountry.png" class="img-fluid">
-                    Cities
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addcity">
-                      <img src="img/add.png" class="img-fluid">
-                      Add New Cities
-                    </a>
-                  </div>
-                </li>
-
-                <!---------------------job attributes---------------------------------------------------------->
-
-                <li class="nav-item">
-                  <b class="text-success">JOB ATTRIBUTES</b>
-                </li>
-
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/clevels.png" class="img-fluid">
-                    Career Levels
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addjob">
-                      <img src="img/add.png" class="img-fluid">
-                      Add Job
-                    </a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/indust.png" class="img-fluid">
-                    Industries
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addindustry">
-                      <img src="img/add.png" class="img-fluid">
-                      Add Industries
-                    </a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/exp.png" class="img-fluid">
-                    Experience
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addexp">
-                      <img src="img/add.png" class="img-fluid">
-                      Add Experience
-                    </a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/skills.png" class="img-fluid">
-                    Job Skills
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addskill">
-                      <img src="img/add.png" class="img-fluid">
-                      Add Skills
-                    </a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown dashnav">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/gender.png" class="img-fluid">
-                    Gender
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#addgender">
-                      <img src="img/add.png" class="img-fluid">
-                      Add Gender
-                    </a>
-                  </div>
-                </li>
-              </ul>
+          <div class="just-padding dashnav">
+            <!--------------------admin---------------------------------------------------------->
+            <div class="list-group list-group-root well">
+              <b class="text-success">ADMIN USER</b>
+              <a href="#adminuser" class="list-group-item">
+                <img src="img/profilelogo.png" class="img-fluid my-2">
+                Admin User
+              </a>
+              <div class="list-group">
+                <a href="#listofadminuser" class="list-group-item">
+                  <img src="img/viewadmin.png" class="img-fluid">
+                  List of Admin User
+                </a>
+                <a href="#addadminuser" class="list-group-item">
+                  <img src="img/addadmin.png" class="img-fluid">
+                  Add Admin User
+                </a>
+              </div>
             </div>
-          </nav>
+
+            <!---------------------modules---------------------------------------------------------->
+            <div class="list-group list-group-root well">
+              <b class="text-success">MODULES</b>
+              <!-------jobs----->
+              <a href="#jobs" class="list-group-item">
+                <img src="img/jobs.png" class="img-fluid my-2">
+                Jobs
+              </a>
+              <div class="list-group">
+                <a href="#addjob" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add Job
+                </a>
+              </div>
+
+
+              <!-------companies----->
+              <a href="#companies" class="list-group-item">
+                <img src="img/companies.png" class="img-fluid">
+                Companies
+              </a>
+              <div class="list-group">
+                <a href="#addcompanies" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add Companies
+                </a>
+              </div>
+
+              <!-------User Profiles----->
+              <a href="#userprof" class="list-group-item">
+                <img src="img/jobsprofile.png" class="img-fluid">
+                User Profile
+              </a>
+              <div class="list-group">
+                <a href="#adduserprof" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add User
+                </a>
+              </div>
+
+              <!-------cms----->
+              <a href="#cms" class="list-group-item">
+                <img src="img/cms.png" class="img-fluid">
+                CMS
+              </a>
+
+              <!-------User Profiles----->
+              <a href="#manageblogs" class="list-group-item">
+                <img src="img/manageblog.png" class="img-fluid">
+                Manage Blogs
+              </a>
+              <div class="list-group">
+                <a href="#addpost" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add New Post
+                </a>
+              </div>
+
+              <!-------seo----->
+              <a href="#seo" class="list-group-item">
+                <img src="img/seo.png" class="img-fluid my-2">
+                SEO
+              </a>
+
+              <!-------User Profiles----->
+              <a href="#faq" class="list-group-item">
+                <img src="img/faq.png" class="img-fluid">
+                FAQ
+              </a>
+              <div class="list-group">
+                <a href="#addfaq" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add FAQs
+                </a>
+              </div>
+
+            </div>
+
+            <!---------------------packages---------------------------------------------------------->
+
+            <div class="list-group list-group-root well">
+              <b class="text-success">USER PACKAGES</b>
+              <a href="#packages" class="list-group-item">
+                <img src="img/packages.png" class="img-fluid">
+                Packages
+              </a>
+              <div class="list-group">
+                <a href="#addpackages" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add Packages
+                </a>
+              </div>
+            </div>
+
+            <!---------------------manage location---------------------------------------------------------->
+            <div class="list-group list-group-root well">
+              <b class="text-success">MANAGE LOCATION</b>
+              <!-------countries----->
+              <a href="#country" class="list-group-item">
+                <img src="img/citycountry.png" class="img-fluid">
+                Countries
+              </a>
+              <div class="list-group">
+                <a href="#addcountry" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add New Countries
+                </a>
+              </div>
+              <!-------cities----->
+              <a href="#city" class="list-group-item">
+                <img src="img/citycountry.png" class="img-fluid">
+                Cities
+              </a>
+              <div class="list-group">
+                <a href="#addcity" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add New Cities
+                </a>
+              </div>
+            </div>
+
+            <!---------------------job attributes---------------------------------------------------------->
+            <div class="list-group list-group-root well">
+              <b class="text-success">JOB ATTRIBUTES</b>
+              <!-------career----->
+              <a href="#career" class="list-group-item">
+                <img src="img/clevels.png" class="img-fluid">
+                Career Levels
+              </a>
+              <div class="list-group">
+                <a href="#careeraddjob" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add Job
+                </a>
+              </div>
+              <!-------industry----->
+              <a href="#industry" class="list-group-item">
+                <img src="img/indust.png" class="img-fluid">
+                Industries
+              </a>
+              <div class="list-group">
+                <a href="#addindustry" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add Industries
+                </a>
+              </div>
+              <!-------experience----->
+              <a href="#exp" class="list-group-item">
+                <img src="img/exp.png" class="img-fluid">
+                Experience
+              </a>
+              <div class="list-group">
+                <a href="#addexp" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add Experience
+                </a>
+              </div>
+              <!-------job skills----->
+              <a href="#skill" class="list-group-item">
+                <img src="img/skills.png" class="img-fluid">
+                Job Skills
+              </a>
+              <div class="list-group">
+                <a href="#addskill" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add Skills
+                </a>
+              </div>
+              <!-------gender----->
+              <a href="#gender" class="list-group-item">
+                <img src="img/gender.png" class="img-fluid">
+                Gender
+              </a>
+              <div class="list-group">
+                <a href="#addgender" class="list-group-item">
+                  <img src="img/add.png" class="img-fluid">
+                  Add Gender
+                </a>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
+
 
       <!------------------------------------------Side bar right---------------------------------------------->
       <div
@@ -304,39 +361,632 @@
             <li class="breadcrumb-item text-white" aria-current="page">JOBS PORTAL Admin Panel</li>
           </ol>
         </nav>
-        <!-----------------------------------pagination------------------------------->
-        <nav class="d-flex align-text-center justify-content-center">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">Previous</span>
-              </a>
-            </li>
-            <li class="page-item disabled ml-2">
-              <a class="page-link" href="#" tabindex="-1">1</a>
-            </li>
 
-            <li class="page-item ml-2"><a class="page-link" href="#">2</a></li>
-            <li class="page-item ml-2"><a class="page-link" href="#">3</a></li>
-            <li class="page-item ml-2">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Next</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
 
+        <!---------------------admin user------------------->
+        <div class="mx-4 myDiv" id="adminuser">
+          <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Job Portal Admin Panel</p>
+          <div class="col-12 my-2" style=" padding-bottom: 170px;">
+            <div class="row m-4 ">
+              <div class="col text-white mb-5">
+                <div class="rounded p-4" style="text-align: center; background-color: #8c8c8b;">
+                  2
+                  <div style="position: relative;">
+                    Today Users
+                  </div>
+                </div>
+              </div>
+
+              <div class="col text-white mb-5">
+                <div class="rounded p-4" style="text-align: center;background-color: #8c8c8b;">
+                  2
+                  <div style="position: relative;">
+                    Active Users
+                  </div>
+                </div>
+              </div>
+              <div class="col text-white mb-5">
+                <div class="rounded p-4" style="text-align: center;background-color: #8c8c8b;">
+                  2
+                  <div style="position: relative;">
+                    Verified Users
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="container roun bg-white" style="border-radius: 20px;">
+              <div class="row bg-success seekdiv text-white">
+                <span class="mx-4 my-3"><b>RECENT REGSITERED USERS</b></span>
+              </div>
+              <div class="row ml-3 mt-3">
+                <ul>
+                  <li>
+                    Lilijishivarim (lili@yahoo.com)
+                  </li>
+                  <li>
+                    Lilijishivarim (lili@yahoo.com)
+                  </li>
+                  <li>
+                    Lilijishivarim (lili@yahoo.com)
+                  </li>
+                  <li>
+                    Lilijishivarim (lili@yahoo.com)
+                  </li>
+                  <li>
+                    Lilijishivarim (lili@yahoo.com)
+                  </li>
+                </ul>
+
+              </div>
+              <div class="row d-flex justify-content-center align-self-center">
+                <a href="" data-toggle="collapse" data-target="#collapsetitle" aria-expanded="false"
+                  aria-controls="collapsetitle">
+                  <div class="dispshm mb-2" style="font-size: 13px;text-decoration:none;">
+                    Show More
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
 
         <!----------------------list of admin user------------------->
         <div class="mx-4 myDiv" id="listofadminuser">
-          <p class="txt-dark">list of admin user</p>
+          <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Manage Admin Users</p>
+          <div class="container roun bg-white" style="border-radius: 20px;">
+            <div class="row bg-success seekdiv text-white">
+              <span class="mx-4 my-3"><b>ADMIN USERS</b></span>
+            </div>
+            <div class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
+              <!------------table -------------->
+              <table class="table table-hover seekdeltable">
+                <thead>
+                  <tr>
+                    <td>
+                      <div class="form-group">
+                        <input type="text" class="text-center form-control dashform ml-lg-2 ml-sm-1 ml-md-2 ml-0"
+                          id="jdesc" placeholder="Search Here">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; background-color: #d9dbda;">
+                          No. of Records
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">Yes</button>
+                          <button class="btn dropdown-item d px-5">No</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="text-center" style="background-color: #0D2942; color: white;">
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mark</td>
+                    <td>example@gmail.com</td>
+                    <td>Admin</td>
+                    <td>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <img src="img/edit-icon.png" class="img-fluid delhov" onclick="">
+                        </div>
+                        <div class="col-lg-6">
+                          <img src="img/deletedash.png" class="img-fluid delhov" onclick="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Mark</td>
+                    <td>example@gmail.com</td>
+                    <td>Admin</td>
+                    <td>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <img src="img/edit-icon.png" class="img-fluid delhov" onclick="">
+                        </div>
+                        <div class="col-lg-6">
+                          <img src="img/deletedash.png" class="img-fluid delhov" onclick="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Mark</td>
+                    <td>example@gmail.com</td>
+                    <td>Admin</td>
+                    <td>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <img src="img/edit-icon.png" class="img-fluid delhov" onclick="">
+                        </div>
+                        <div class="col-lg-6">
+                          <img src="img/deletedash.png" class="img-fluid delhov" onclick="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <!-----------------------------------pagination------------------------------->
+              <nav class="mx-auto mt-5 d-flex align-text-center justify-content-center">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item disabled ml-2">
+                    <a class="page-link" href="#" tabindex="-1">1</a>
+                  </li>
+
+                  <li class="page-item ml-2"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item ml-2"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item ml-2">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
         </div>
 
-        <!----------------------manage user profiles------------------->
+        <!----------------------add admin user------------------->
         <div class="mx-4 myDiv" id="addadminuser">
-          <p class="txt-dark">add admin user</p>
+          <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Add New Admin User</p>
+          <div class="col-12 my-2" style=" padding-bottom: 170px;">
+            <div class="container roun bg-white" style="border-radius: 20px;">
+              <div class="row bg-success seekdiv text-white">
+                <span class="mx-4 my-3"><b>Add New User</b></span>
+              </div>
+              <form class="col-lg-12">
+                <!------ div-->
+                <div class="container mt-4 col-12" style="padding:20px;">
+                  <div class="row" style="font-size: 15px;">
+                    <form class="needs-validation" novalidate>
+                      <div class="row col-12">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                          <label for="modname">Name:<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control f" id="modname">
+                          <div class="invalid-feedback">
+                            Please provide a valid name.
+                          </div>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                          <label for="modemail">Email:<span class="text-danger">*</span></label>
+                          <input type="email" class="form-control f" id="modemail">
+                          <div class="invalid-feedback">
+                            Please provide a valid email.
+                          </div>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row col-12">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                          <label for="modpass1">Password:<span class="text-danger">*</span></label>
+                          <input type="password" class="form-control f" id="modpass1">
+                          <small id="passwordHelpInline" class="text-muted">
+                            Must be 8-20 characters long.
+                          </small>
+                          <div class="invalid-feedback">
+                            Please provide a valid password.
+                          </div>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                          <label for="modpass2">Confirm Password:<span class="text-danger">*</span></label>
+                          <input type="password" oninput="check(this)" class="form-control f" id="modpass2">
+                          <small id="passwordHelpInline" class="text-muted">
+                            Must be 8-20 characters long.
+                          </small>
+                          <div class="invalid-feedback">
+                            Please provide a valid password.
+                          </div>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row col-12 mt-4">
+                        <div class="form-group col-lg-6 col-md-6 col-sm-6 col-12">
+                          <label for="access">Specify Access<span class="text-danger">*</span></label>
+                          <select id="access" class="form-control f" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option value="blogs">Manage Blogs</option>
+                            <option value="userauth">Provide User Authorization</option>
+                            <option value="complains">Manage Complains</option>
+                            <option value="approve">Approve Job Post</option>
+                          </select>
+                          <div class="invalid-feedback">
+                            Please select a valid option.
+                          </div>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="row ">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-10 my-3 ml-2 mt-5 p-2 btnupdate">
+                          <div class="row mx-2">
+                            <div class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                              <span>Update</span>
+                            </div>
+                            <div class="col-lg-4 offset-lg-1 col-md-4 col-sm-2 col-2">
+                              <img src="img/update.png" class="img-responsive">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!----------------------job--------------------------->
+        <div class="mx-4 myDiv" id="jobs">
+          <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Add Job Post</p>
+          <div class="container roun bg-white" style="border-radius: 20px;">
+            <div class="row bg-success seekdiv text-white">
+              <span class="mx-4 my-3"><b>Job Form</b></span>
+            </div>
+            <div class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
+              <!------------table-------------->
+              <table class="table table-sm table-hover seekdeltable">
+                <!---------------------------thead------------------------>
+                <thead>
+                  <tr>
+                    <!----------first row-->
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 5px; padding-right: 2px; background-color: #d9dbda;">
+                          Select Company
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 20px; padding-right: 14px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">A</button>
+                          <button class="btn dropdown-item d px-5">B</button>
+                          <button class="btn dropdown-item d px-5">C</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 15px; padding-right: 3px; background-color: #d9dbda;">
+                          Country
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 10px; padding-right: 14px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">Pakistan</button>
+                          <button class="btn dropdown-item d px-5">India</button>
+                          <button class="btn dropdown-item d px-5">Afghanistan</button>
+                          <button class="btn dropdown-item d px-5">Iran</button>
+                          <button class="btn dropdown-item d px-5">Australia</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 16px; padding-right: 20px; background-color: #d9dbda;">
+                          State
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 10px; padding-right: 16px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">Warn</button>
+                          <button class="btn dropdown-item d px-5">Ban</button>
+                          <button class="btn dropdown-item d px-5">Delete</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 16px; padding-right: 20px; background-color: #d9dbda;">
+                          City
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 10px; padding-right: 16px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">Isl</button>
+                          <button class="btn dropdown-item d px-5">Rwp</button>
+                          <button class="btn dropdown-item d px-5">Lhr</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!----------second row-->
+                    <td>
+                      <div class="rounded n text-white py-2 mt-3 px-3 font-weight-bold" style="font-size: 14px;">
+                        Job Description
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!----------third row-->
+                    <td colspan="4">
+                      <div class="form-group roun rounded">
+                        <textarea class="form-control f" id="jd" rows="3"
+                          placeholder="Type detailed Job description here"></textarea>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!----------fourth row-->
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 5px; padding-right: 2px; background-color: #d9dbda;">
+                          Select Job Skills
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 20px; padding-right: 14px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">A</button>
+                          <button class="btn dropdown-item d px-5">B</button>
+                          <button class="btn dropdown-item d px-5">C</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 5px; padding-right: 2px; background-color: #d9dbda;">
+                          Select Career Level
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 20px; padding-right: 14px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">Beginner</button>
+                          <button class="btn dropdown-item d px-5">Intermediate</button>
+                          <button class="btn dropdown-item d px-5">Expert</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 5px; padding-right: 2px; background-color: #d9dbda;">
+                          Job Type
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 20px; padding-right: 14px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">Part Time</button>
+                          <button class="btn dropdown-item d px-5">Full Time</button>
+                          <button class="btn dropdown-item d px-5">Online</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 5px; padding-right: 2px; background-color: #d9dbda;">
+                          Select Company
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 20px; padding-right: 14px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">A</button>
+                          <button class="btn dropdown-item d px-5">B</button>
+                          <button class="btn dropdown-item d px-5">C</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!----------fifth row-->
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 5px; padding-right: 2px; background-color: #d9dbda;">
+                          Select Currency
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 20px; padding-right: 14px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">Pkr</button>
+                          <button class="btn dropdown-item d px-5">Ind</button>
+                          <button class="btn dropdown-item d px-5">Dollar</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 5px; padding-right: 2px; background-color: #d9dbda;">
+                          Select Gender
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 20px; padding-right: 14px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">Male</button>
+                          <button class="btn dropdown-item d px-5">Female</button>
+                          <button class="btn dropdown-item d px-5">No Preference</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 5px; padding-right: 2px; background-color: #d9dbda;">
+                          Required Degree Level
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 20px; padding-right: 14px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">Part Time</button>
+                          <button class="btn dropdown-item d px-5">Full Time</button>
+                          <button class="btn dropdown-item d px-5">Online</button>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button class="btn" type="button"
+                          style="font-size: 12px;border-radius: 3px 0px 0px 3px; padding-left: 5px; padding-right: 2px; background-color: #d9dbda;">
+                          Required Job Experience
+                        </button>
+                        <button type="button"
+                          style="border-radius: 0px 3px 3px 0px;padding-left: 20px; padding-right: 14px;background-color: #d9dbda;border: 0px;"
+                          class="btn btn-dark dropdown-toggle drop" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                          <button class="btn dropdown-item d px-5">A</button>
+                          <button class="btn dropdown-item d px-5">B</button>
+                          <button class="btn dropdown-item d px-5">C</button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <b style="font-size: 14px;" class="text-muted">Select Salary:</b>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <input type="range" id="rangeInput" class="slider" step="1000" value="5000" min="5000" max="1000000"
+                      oninput="amount.value=rangeInput.value">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                        <output id="amount" name="amount" for="rangeInput" class="text-black float-left ">5,000
+                          </output><span class="float-right"> 1,000,000+</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted font-weight-bold" style="font-size: 14px;">
+                      Is Active:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  colspan="2">
+                      <div class="form-check d-inline">
+                        <input class="form-check-input" type="radio" name="ractive" id="ra1" value="active">
+                        <label class="form-check-label d-flex jutify-content-start" for="ra1">
+                          Active
+                        </label>
+                      </div>
+                      <div class="form-check d-inline">
+                        <input class="form-check-input" type="radio" name="ractive" id="ra2" value="inactive">
+                        <label class="form-check-label" for="ra2">
+                          Inactive
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-muted font-weight-bold" style="font-size: 14px;">
+                      Is Featured:
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <div class="form-check d-inline">
+                        <input class="form-check-input" type="radio" name="ractive" id="ra1" value="active">
+                        <label class="form-check-label" for="ra1">
+                          Featured
+                        </label>
+                      </div>
+                      <div class="form-check d-inline">
+                        <input class="form-check-input" type="radio" name="ractive" id="ra2" value="inactive">
+                        <label class="form-check-label" for="ra2">
+                          Not Featured
+                        </label>
+                      </div>
+                    </td>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
         </div>
 
         <!----------------------add job------------------->
@@ -344,19 +994,34 @@
           <p class="txt-dark">add job</p>
         </div>
 
+        <!----------------------companies------------------->
+        <div class="mx-4 myDiv" id="companies">
+          <p class="txt-dark">companies</p>
+        </div>
+
         <!----------------------add companies------------------->
         <div class="mx-4 myDiv" id="addcompanies">
           <p class="txt-dark">add companies</p>
         </div>
 
+        <!----------------------user profile------------------->
+        <div class="mx-4 myDiv" id="userprof">
+          <p class="txt-dark">user profiles</p>
+        </div>
+
         <!----------------------add user------------------->
-        <div class="mx-4 myDiv" id="adduser">
+        <div class="mx-4 myDiv" id="adduserprof">
           <p class="txt-dark">add user</p>
         </div>
 
         <!----------------------cms------------------->
         <div class="mx-4 myDiv" id="cms">
           <p class="txt-dark">cms</p>
+        </div>
+
+        <!----------------------manage blogs------------------->
+        <div class="mx-4 myDiv" id="manageblogs">
+          <p class="txt-dark">manage blogs</p>
         </div>
 
         <!----------------------add post------------------->
@@ -369,9 +1034,19 @@
           <p class="txt-dark">seo</p>
         </div>
 
+        <!----------------------faq------------------->
+        <div class="mx-4 myDiv" id="faq">
+          <p class="txt-dark">faq</p>
+        </div>
+
         <!----------------------add faq------------------->
         <div class="mx-4 myDiv" id="addfaq">
           <p class="txt-dark">add faq</p>
+        </div>
+
+        <!----------------------packages------------------->
+        <div class="mx-4 myDiv" id="packages">
+          <p class="txt-dark">packages</p>
         </div>
 
         <!----------------------add packages------------------->
@@ -379,9 +1054,19 @@
           <p class="txt-dark">add packages</p>
         </div>
 
+        <!----------------------country------------------->
+        <div class="mx-4 myDiv" id="country">
+          <p class="txt-dark">country</p>
+        </div>
+
         <!----------------------add country------------------->
         <div class="mx-4 myDiv" id="addcountry">
           <p class="txt-dark">add country</p>
+        </div>
+
+        <!----------------------city------------------->
+        <div class="mx-4 myDiv" id="city">
+          <p class="txt-dark">city</p>
         </div>
 
         <!----------------------add city------------------->
@@ -389,9 +1074,19 @@
           <p class="txt-dark">add city</p>
         </div>
 
-        <!----------------------add job------------------->
-        <div class="mx-4 myDiv" id="addjob">
-          <p class="txt-dark">add job</p>
+        <!----------------------career------------------->
+        <div class="mx-4 myDiv" id="career">
+          <p class="txt-dark">career</p>
+        </div>
+
+        <!----------------career add job------------------->
+        <div class="mx-4 myDiv" id="careeraddjob">
+          <p class="txt-dark">career add job</p>
+        </div>
+
+        <!----------------------industry------------------->
+        <div class="mx-4 myDiv" id="industry">
+          <p class="txt-dark">industry</p>
         </div>
 
         <!----------------------add industry------------------->
@@ -399,14 +1094,29 @@
           <p class="txt-dark">add industry</p>
         </div>
 
+        <!----------------------exp------------------->
+        <div class="mx-4 myDiv" id="exp">
+          <p class="txt-dark">exp</p>
+        </div>
+
         <!----------------------add exp------------------->
         <div class="mx-4 myDiv" id="addexp">
           <p class="txt-dark">add exp</p>
         </div>
 
+        <!----------------------skill------------------->
+        <div class="mx-4 myDiv" id="skill">
+          <p class="txt-dark">skill</p>
+        </div>
+
         <!----------------------add skill------------------->
         <div class="mx-4 myDiv" id="addskill">
           <p class="txt-dark">add skill</p>
+        </div>
+
+        <!----------------------gender------------------->
+        <div class="mx-4 myDiv" id="gender">
+          <p class="txt-dark">gender</p>
         </div>
 
         <!----------------------add gender------------------->
