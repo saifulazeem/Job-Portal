@@ -26,6 +26,7 @@
         .im2 {
             content: url('img/heartfilled.png');
         }
+
     </style>
     <script>
         $(document).ready(function () {
@@ -46,6 +47,13 @@
                 element.required = false;
             }
         }
+        $('#no').keyup(function () {
+            if ($(this).val() < 0) {
+                var cnt = document.getElementById('numberofemp');
+                cnt.style.display = 'block';
+                $(this).val('0');
+            }
+        });
         (function () {
             'use strict';
             window.addEventListener('load', function () {
@@ -63,6 +71,7 @@
                 });
             }, false);
         })();
+        
     </script>
 </head>
 
@@ -164,7 +173,7 @@
                             <div class="row bg-success seekdiv text-white">
                                 <span class="mx-4 my-3"><b>Details FORM</b></span>
                             </div>
-                            <form class="col-lg-12">
+                            <form class="needs-validation" novalidate>
                                 <!-------------------------------Upload Image----------------------->
                                 <div class="row m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
                                     <div class="col-lg-5 ">
@@ -185,35 +194,75 @@
                                     <!------ div-->
                                     <div class="container mt-4 col-12" style="padding:20px;">
                                         <div class="row" style="font-size: 15px;">
-                                            <div class="row col-12">
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="cname">Company name:</label>
-                                                    <input type="text" class="form-control f" id="cname">
+                                            <div class="form-row col-12">
+                                                <div class="col">
+                                                    <label for="cname"><b>Company name:</b></label>
+                                                    <input type="text" class="form-control f" id="cname" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid name.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="email">Email:</label>
-                                                    <input type="email" class="form-control f" id="email">
+                                                <div class="col">
+                                                    <label for="email"><b>Email:</b></label>
+                                                    <input type="email" class="form-control f" id="email" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid email.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="row col-12">
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="address">Address:</label>
-                                                    <input type="text" class="form-control f" id="address">
+                                            <div class="form-row col-12">
+                                                <div class="col">
+                                                    <label for="address"><b>Address:</b></label>
+                                                    <input type="text" class="form-control f" id="address" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid Company Address.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="phone">Phone:</label>
-                                                    <input type="number" class="form-control f" id="phone">
+                                                <div class="col">
+                                                    <label for="phone"><b>Phone:</b></label>
+                                                    <input type="number" class="form-control f" id="phone" required>
                                                     <small class="text-muted">Digits Only</small>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid Phone Number.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="row col-12">
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="ct">Company Type:</label>
-                                                    <input type="text" class="form-control f" id="ct">
+                                            <div class="form-row col-12">
+                                                <div class="col">
+                                                    <label for="ct"><b>Company Type:</b></label>
+                                                    <input type="text" class="form-control f" id="ct" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid company type.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="no">No. of Employees:</label>
-                                                    <input type="number" class="form-control f" id="no">
+                                                <div class="col">
+                                                    <label for="no"><b>No. of Employees:</b></label>
+                                                    <input type="number" class="form-control f" id="no" min="0"
+                                                        required>
+                                                    <div id="numberofemp" style="display: none;">
+                                                        Please provide a valid number.
+                                                    </div>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid number of employees.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -228,24 +277,24 @@
                                     <!------ div-->
                                     <div class="container mt-4 col-12" style="padding:10px; padding-right:0px;">
                                         <div class="row " style="font-size: 15px;">
-                                            <div class="row col-lg-12">
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="google">Google:</label>
-                                                    <input type="text" class="form-control f" id="google">
+                                            <div class="form-row col-12">
+                                                <div class="col">
+                                                    <label for="google"><b>Google:</b></label><br>
+                                                    <input type="text" class="controlf px-5 py-2 w-100 rounded" id="google">
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="facebook">Facebook:</label>
-                                                    <input type="text" class="form-control f" id="facebook">
+                                                <div class="col">
+                                                    <label for="facebook"><b>Facebook:</b></label><br>
+                                                    <input type="text" class="controlf px-5 py-2 w-100 rounded" id="facebook">
                                                 </div>
                                             </div>
-                                            <div class="row col-lg-12">
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="twitter">Twitter:</label>
-                                                    <input type="text" class="form-control f" id="twitter">
+                                            <div class="form-row col-12">
+                                                <div class="col">
+                                                    <label for="twitter"><b>Twitter:</b></label><br>
+                                                    <input type="text" class="controlf px-5 py-2 w-100 rounded" id="twitter">
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="linkedin">LinkedIn</label>
-                                                    <input type="text" class="form-control f" id="linkedin">
+                                                <div class="col">
+                                                    <label for="linkedin"><b>LinkedIn:</b></label><br>
+                                                    <input type="text" class="controlf px-5 py-2 w-100 rounded" id="linkedin">
                                                 </div>
                                             </div>
 
@@ -254,12 +303,10 @@
                                 </div>
 
                                 <!----------------------------Update Button--------------------------->
-                                <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
-                                    <div class="col-lg-3 col-md-4 col-sm-7 col-6 my-3 p-2 btnupdate"
-                                        onclick="document.forms[0].submit()">
-                                        <span class="col-lg-3 col-md-3 col-sm-3 col-3 ml-lg-3 ml-0">Update</span>
-                                        <img class="" src="img/update.png" class="img-responsive">
-                                    </div>
+                                <div class="m-4">
+                                    <button type="submit" class="btn text-white bt px-5 my-4">
+                                        <a href="" class="text-white" style="text-decoration: none;">Update</a>
+                                        <img class="" src="img/update.png" class="img-responsive"></button>
                                 </div>
                             </form>
                         </div>

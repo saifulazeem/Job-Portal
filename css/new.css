@@ -79,7 +79,6 @@ color:white;
 }
 .f{
   background-color: #F3F3F3;
-  border: none;
 }
 
 /*home.html placeholder*/
@@ -1692,15 +1691,16 @@ tr{
 }
 .dashform{
   background-color: #d9dbda;
+  
 }
 .dashform:focus { /* Chrome, Firefox, Opera, Safari 10.1+ */
     opacity: 0.5; /* Firefox */
 }
 
 .dashform::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color:black;
   opacity: 1; /* Firefox */
   font-size: 12px;
+  color: black;
 }
 /*dashboard admin*/
 .just-padding {
@@ -1733,4 +1733,8 @@ tr{
 
 .list-group.list-group-root > .list-group > .list-group > .list-group-item {
   padding-left: 45px;
+}
+.controlf{
+  background-color:  #F3F3F3;
+  border:1px solid  #d1d1d1;
 }
