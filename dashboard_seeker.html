@@ -16,6 +16,17 @@
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
     <title>Seeker Admin Panel</title>
     <style>
         /*heart images in seeker dashboard*/
@@ -155,7 +166,8 @@
             </div>
 
             <!------------------------------------------Side bar right---------------------------------------------->
-            <div class="container col-lg-8 col-lg-offset-1 col-md-9 col-md-offset-1 col-sm-9 col-sm-offset-1 col-12 rounded roun  my-lg-0 my-md-0 my-sm-0 my-5">
+            <div
+                class="container col-lg-8 col-lg-offset-1 col-md-9 col-md-offset-1 col-sm-9 col-sm-offset-1 col-12 rounded roun  my-lg-0 my-md-0 my-sm-0 my-5">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb " style="background-color: #969696;">
                         <li class="breadcrumb-item "><a class="text-white" href="#">Home</a></li>
@@ -295,21 +307,25 @@
                                             <div class="form-row col-12">
                                                 <div class="col">
                                                     <label for="google">Google:</label><br>
-                                                    <input type="text" class="controlf px-5 py-2 w-100 rounded" id="google">
+                                                    <input type="text" class="controlf px-5 py-2 w-100 rounded"
+                                                        id="google">
                                                 </div>
                                                 <div class="col">
                                                     <label for="facebook">Facebook:</label><br>
-                                                    <input type="text" class="controlf px-5 py-2 m-0 w-100 rounded" id="facebook">
+                                                    <input type="text" class="controlf px-5 py-2 m-0 w-100 rounded"
+                                                        id="facebook">
                                                 </div>
                                             </div>
                                             <div class="form-row col-12">
                                                 <div class="col">
                                                     <label for="twitter">Twitter:</label><br>
-                                                    <input type="text" class="controlf px-5 py-2 w-100 rounded" id="twitter">
+                                                    <input type="text" class="controlf px-5 py-2 w-100 rounded"
+                                                        id="twitter">
                                                 </div>
                                                 <div class="col">
                                                     <label for="linkedin">LinkedIn</label><br>
-                                                    <input type="text" class="controlf px-5 py-2 w-100 rounded" id="linkedin">
+                                                    <input type="text" class="controlf px-5 py-2 w-100 rounded"
+                                                        id="linkedin">
                                                 </div>
                                             </div>
 
@@ -317,10 +333,13 @@
                                     </div>
                                 </div>
                                 <!----------------------------Update Button--------------------------->
-                                <div class="m-4">
+                                <div class="m-4 delhov">
                                     <button type="submit" class="btn text-white bt px-5 my-4">
-                                        <a href="" class="text-white" style="text-decoration: none;">Update</a>
-                                        <img class="" src="img/update.png" class="img-responsive"></button>
+                                        <div>
+                                            Update
+                                            <img class="" src="img/update.png" class="img-responsive">
+                                        </div>
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -1436,9 +1455,9 @@
                                         <div class="form-group">
                                             <input type="text" class="form-control f" name="reason" id="reason"
                                                 style='display:none;' />
-                                                <div class="invalid-feedback">
-                                                    Please select a valid option
-                                                </div>
+                                            <div class="invalid-feedback">
+                                                Please select a valid option
+                                            </div>
                                         </div>
 
                                         <button type="submit"

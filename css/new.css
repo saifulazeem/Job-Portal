@@ -1712,7 +1712,7 @@ tr{
 
 /*dashboard admin*/
 .just-padding {
-  padding: 15px;
+  padding: 0px 15px;
 }
 
 .list-group.list-group-root {
@@ -1727,21 +1727,15 @@ tr{
 }
 
 .list-group.list-group-root .list-group-item {
-  border-radius: 0;
-  border-width: 1px 0 0 0;
-}
-
-.list-group.list-group-root > .list-group-item:first-child {
-  border-top-width: 0;
+  border: 0px solid;
+  padding-top: 0px;
 }
 
 .list-group.list-group-root > .list-group > .list-group-item {
   padding-left: 30px;
+  padding-top: 0px;
 }
 
-.list-group.list-group-root > .list-group > .list-group > .list-group-item {
-  padding-left: 45px;
-}
 .controlf{
   background-color:  #F3F3F3;
   border:1px solid  #d1d1d1;
