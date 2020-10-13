@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var filePath = $("#spnFilePathimg");
+            $('#img_link').click(function (e) {
+                e.preventDefault();
+                $('#image').trigger('click');
+            });
+
+            $('#image').on('change', function () {
+                myfile = $(this).val();
+                var ext = myfile.split('.').pop();
+                filePath.html("<br>" + "<b>Selected File: </b>" + myfile);
+                if (ext == "png" || ext == "PNG") {
+                    $('#errmsgimg').html("");
+                    readURL(this);
+                } else {
+                    $('#errmsgimg').html("Invalid File Type. Upload only .png");
+                    readURL(this);
+                }
+            });
+        });
+        function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#blah').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]); // convert to base64 string
+                }
+            }
+    </script>
+    <style></style>
+</head>
+
+<body>
+  <!--  <div class="cv"> Would you like to attach you CV? <a href="" id="img_link">Click here</a></div>
+    <input type="file" id="image" style="visibility: hidden">
+    <span id="spnFilePathimg"></span><br>
+    <span id="errmsgimg"></span><br>
+    <img id="blah" src="#" alt="your image" />
+  -->
+  
+        <div class="container">
+                <img src="..." alt="Profile image" id='image' class="profileImg">
+                <input type='file' class='uploader' onchange="readURL(this);" />
+                <div class="overlay">
+                    <i class="fas fa-pencil-alt text"></i>
+                </div>
+            </div>
+        </div>
+  
+</body>
+
+</html>

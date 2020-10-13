@@ -343,7 +343,7 @@ margin:30px;
   width:250px;
   height:300px;
   right:-100px;
-  top:-6px;
+  top:14px;
 }
 .cards{
   background-color: white;
@@ -579,8 +579,8 @@ padding-top: 200px;
   position: absolute;
   width:320px;
   height:350px;
-  right:-50px;
-  top:-140px;
+  right:-90px;
+  top:-160px;
 }
 .cards{
   background-color: white;
@@ -819,7 +819,7 @@ padding-top: 200px;
   }     
   /*career.html cards div*/
 .over{
-  left:-10px;
+  left:-50px;
   top: -610px;
   margin-bottom: -620px;
 }
@@ -1065,7 +1065,7 @@ padding-top: 200px;
 }
 /*career.html cards div*/
 .over{
-  left:-130px;
+  left:-170px;
   top: -610px;
   margin-bottom: -725px;
 }
@@ -1081,9 +1081,9 @@ padding-top: 200px;
  /*career.html circle*/
  .careercir{
   position: absolute;
-  width:450px;
+  width:400px;
   height:450px;
-  right:-370px;
+  right:-190px;
   top:-50px;
 }
 /*career.html above img text*/
@@ -1169,9 +1169,22 @@ padding-top: 200px;
 }
 /*accountancy.html cards div*/
 .aover{
-  top: -2080px;
-  left:0px;
+  top: -2180px;
+  left:60px;
 }
+
+/*accountancy.html sub div*/
+.dover{
+  top: -2060px;
+  margin-bottom: -205px;
+}
+
+/*accountancy.html testimonial*/
+.tover{
+  top: -760px;
+  margin-bottom: -700px;
+}
+
 /*accountancy.html cards*/
 .acards-txt{
   color:black;
@@ -1188,7 +1201,7 @@ padding-top: 200px;
   height:400px;
   position: absolute;
   top: 130px;
-  left:200px;
+  left:370px;
   font-size: 18px;
 }
 /*accountancy.html circle image*/
@@ -1196,15 +1209,10 @@ padding-top: 200px;
   position: absolute;
   width:500px;
   height:520px;
-  right:-390px;
+  right:-320px;
   top:10px;
 }
 
-/*accountancy.html testimonial*/
-.tover{
-  top: -1260px;
-  margin-bottom: -1200px;
-}
 /*green strip on testimonial div*/
 .testdiv
 {
@@ -1212,11 +1220,6 @@ padding-top: 200px;
 }
 .testimg{
   padding-left: 100px; 
-}
-/*accountancy.html sub div*/
-.dover{
-  top: -2060px;
-  margin-bottom: -185px;
 }
 
 /*accountancy.html cards*/
@@ -1694,14 +1697,15 @@ tr{
   
 }
 .dashform:focus { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    opacity: 0.5; /* Firefox */
+    opacity: 1; /* Firefox */
     background-color: #F3F3F3;
+    color:black;
 }
-
 .dashform::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   opacity: 1; /* Firefox */
-  font-size: 12px;
-  color: black;
+  font-size: 14px;
+  color:grey;
+  opacity: 0.7;
 }
 /*Active button*/
 
@@ -1740,3 +1744,14 @@ tr{
   background-color:  #F3F3F3;
   border:1px solid  #d1d1d1;
 }
+.uploader {
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  }
+  
+  .contain {
+  position: relative
+  }
