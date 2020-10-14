@@ -1702,13 +1702,11 @@ tr{
     color:black;
 }
 .dashform::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  opacity: 1; /* Firefox */
-  font-size: 14px;
-  color:grey;
-  opacity: 0.7;
+  opacity: 0.9; /* Firefox */
+  font-size: 12px;
+  color:black;
 }
 /*Active button*/
-
 .dashformact{
   background-color: #0BB44F;
   color: white;
