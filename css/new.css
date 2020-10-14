@@ -31,10 +31,15 @@ body{
   .active {
     border-bottom: 3px solid #0BB44F;
     color: #0BB44F;
+    font-weight: 700;
   }
 
   .subdashnav a:hover {
     color: white;
+  }
+  .subdashnav a:active {
+    color: white;
+    font-weight: 1000;
   }
 .showmore{
   color:white;
@@ -237,7 +242,7 @@ margin:30px;
   /*green strip on testimonial div*/
 .testdiv
 {
-  margin-left:0px; width: 311px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;
+  margin-left:0px; width: 350px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;
 }
 .testimg{
   padding-left: 109px; 
@@ -1521,8 +1526,10 @@ font-size: 12px;
 .holderimg {
   border-radius: 20px;
   position: absolute;
-  margin-top: -25px;
-  margin-left: -25px;
+  margin-top: -55px;
+  margin-left: 125px;
+  background-color: burlywood;
+  padding: 10px;
 }
 .holderimg:hover{
   background-color: #929292;
@@ -1753,3 +1760,14 @@ tr{
   .contain {
   position: relative
   }
+  
+  /*subadmin.html links*/
+.normaltext {
+    font-weight: normal;
+    color: white;
+}
+.boldtext {
+    font-weight: 800;
+    color: #0BB44F;
+}
+   

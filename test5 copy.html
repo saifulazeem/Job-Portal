@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <title>toggleClass demo</title>
+    <style>
+        
+    </style>
+    
+    
+</head>
+
+
+
+<script>
+    $(document).ready(function () {
+        $(".normaltext").click(function (event) {
+
+                //$(event.target.className).not(this).removeClass("normaltext");
+                $(this).siblings().removeClass('boldtext');
+                $(this).addClass("boldtext");
+
+        });
+        /*$( "p" ).click(function() {
+        $( this ).toggleClass( "highlight" );
+            });*/
+    });
+</script>
+
+<body>
+    <nav class="navbar navbar-expand text-white">
+        <div class="collapse navbar-collapse mx-3 dashnav " id="navbarSupportedContent">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link normaltext" href="#approvejobs" role="button">
+                <img src="img/approvejob.png" class="img-fluid my-2">
+                Approve Jobs
+              </a>
+            </li>
+            <!---------------------manage profile---------------------------------------------------------->
+
+            <li class="nav-item dropdown">
+              <a class=" nav-link dropdown-toggle normaltext" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="img/manageprofile.png" class="img-fluid my-2">
+                Manage User Profile
+              </a>
+              <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#manageuserprofiles">
+                  <img src="img/profilelogo.png" class="img-fluid">
+                  User Profile
+                </a>
+                <a class="dropdown-item" href="#managecompanies">
+                  <img src="img/companies.png" class="img-fluid">
+                  Companies
+                </a>
+              </div>
+            </li>
+
+            <li class="nav-item normaltext">
+              <a class="nav-link " href="#manageblogs" role="button">
+                <img src="img/manageblog.png" class="img-fluid">
+                Manage Blogs
+              </a>
+            </li>
+
+            <li class="nav-item normaltext">
+              <a class="nav-link " href="#subadmin" role="button">
+                <img src="img/sunad.png" class="img-fluid">
+                Sub Admin
+              </a>
+            </li>
+
+            <li class="nav-item normaltext">
+              <a class="nav-link " href="#fakereports" role="button">
+                <img src="img/fakerep.png" class="img-fluid">
+                Fake Reports
+              </a>
+            </li>
+            <!---------------------------------------------------Employee--------------------------------------->
+            <li class="nav-item text-center text-success mt-4">EMPLOYEE</li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+</body>
+
+</html>
