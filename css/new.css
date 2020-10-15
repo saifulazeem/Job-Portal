@@ -33,9 +33,12 @@ body{
     color: #0BB44F;
     font-weight: 700;
   }
-
+.subdashnav{
+  background-color: #c2c0c0;
+}
   .subdashnav a:hover {
     color: white;
+    
   }
   .subdashnav a:active {
     color: white;
@@ -1767,7 +1770,7 @@ tr{
     color: white;
 }
 .boldtext {
-    font-weight: 800;
+    font-weight: 700;
     color: #0BB44F;
 }
    

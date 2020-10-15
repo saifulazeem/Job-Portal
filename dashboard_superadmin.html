@@ -116,6 +116,20 @@
     input[type="range"]::-ms-fill-lower {
       background-color: #666;
     }
+
+    .subdashnav {
+      background-color: #c2c0c0;
+    }
+
+    .subdashnav a:hover {
+      color: white;
+
+    }
+
+    .subdashnav a:active {
+      color: white;
+      font-weight: 1000;
+    }
   </style>
   <script>
     function check(input) {
@@ -220,7 +234,7 @@
     }
     $(document).ready(function () {
       $(".normaltext").click(function (event) {
-        $(this).siblings().removeClass('boldtext');
+        $('.normaltext').removeClass('boldtext');
         $(this).addClass("boldtext");
       });
 
@@ -242,157 +256,164 @@
   <div class="my-5 p-lg-5 p-md-1 p-sm-0 p-2">
     <div class="row mx-lg-1 m-md-0 p-md-0 mx-sm-0 p-sm-0 mx-3">
       <!------------------------------------------Side Bar left---------------------------------------------->
-      <div class="container text-white col-lg-3 col-md-4 col-sm-10 col-12 rounded" style="background-color: #0D2942;">
-        <div class="row">
-          <img src="img/home.png" class="img-fluid my-5 mx-auto d-block">
-        </div>
-        <div class="row">
-          <h6 class="text-white mx-auto d-block">Dashboard</h6>
-        </div>
-        <!------------------1st Horizontal Line---------------------------------->
-        <div class="row">
-          <div class="col-md-12">
-            <hr class="divider">
-          </div>
-        </div>
-
-        <div class="row row-sm-2" style="font-size: 14px;">
-          <!--------------------------------------Vertical navigation bar------------------------------------------->
-          <nav class="navbar navbar-expand normalparent">
-            <div class="collapse navbar-collapse mx-3 dashnav " id="navbarSupportedContent">
-              <ul class="nav flex-column">
-                <li class="nav-item normaltext">
-                  <a class="nav-link " href="#approvejobs" role="button">
-                    <img src="img/approvejob.png" class="img-fluid my-2">
-                    Approve Jobs
-                  </a>
-                </li>
-                <!---------------------manage profile---------------------------------------------------------->
-
-                <li class="nav-item dropdown normaltext">
-                  <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="img/manageprofile.png" class="img-fluid my-2">
-                    Manage User Profile
-                  </a>
-                  <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#manageuserprofiles">
-                      <img src="img/profilelogo.png" class="img-fluid">
-                      User Profile
-                    </a>
-                    <a class="dropdown-item" href="#managecompanies">
-                      <img src="img/companies.png" class="img-fluid">
-                      Companies
-                    </a>
+      <div class="container col-lg-3 col-md-4 col-sm-10 col-12 rounded" style="background-color: #0D2942;">
+        <nav class="navbar navbar-expand-lg">
+          <ul class="nav flex-column w-100">
+            <div class="row">
+              <img src="img/home.png" class="img-fluid rounded-pill my-5 mx-auto d-block navbar-toggler"
+                data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                aria-expanded="false" aria-label="Toggle navigation" style="cursor: hand;">
+            </div>
+            <div class="row">
+              <h6 class="text-white mx-auto d-block">Dashboard</h6>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="nav flex-column w-100">
+                <!------------------1st Horizontal Line---------------------------------->
+                <div class="row">
+                  <div class="col-md-12">
+                    <hr class="divider">
                   </div>
-                </li>
+                </div>
 
-                <li class="nav-item normaltext">
-                  <a class="nav-link" href="#manageblogs" role="button">
-                    <img src="img/manageblog.png" class="img-fluid">
-                    Manage Blogs
-                  </a>
-                </li>
+                <div class="row row-sm-2" style="font-size: 14px;">
+                  <!--------------------------------------Vertical navigation bar------------------------------------------->
 
-                <li class="nav-item normaltext">
-                  <a class="nav-link" href="#subadmin" role="button">
-                    <img src="img/sunad.png" class="img-fluid">
-                    Sub Admin
-                  </a>
-                </li>
+                  <div class=" mx-3 dashnav ">
 
-                <li class="nav-item normaltext">
-                  <a class="nav-link" href="#fakereports" role="button">
-                    <img src="img/fakerep.png" class="img-fluid">
-                    Fake Reports
-                  </a>
-                </li>
-                <!---------------------------------------------------Employee--------------------------------------->
-                <li class="nav-item text-center text-success mt-4">EMPLOYEE</li>
+                    <li class="nav-item normaltext">
+                      <a class="nav-link " href="#approvejobs" role="button">
+                        <img src="img/approvejob.png" class="img-fluid my-2">
+                        Approve Jobs
+                      </a>
+                    </li>
+                    <!---------------------manage profile---------------------------------------------------------->
+
+                    <li class="nav-item dropdown normaltext ">
+                      <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/manageprofile.png" class="img-fluid my-2">
+                        Manage User Profile
+                      </a>
+                      <div class="dropdown-menu subdashnav" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#manageuserprofiles">
+                          <img src="img/profilelogo.png" class="img-fluid">
+                          User Profile
+                        </a>
+                        <a class="dropdown-item" href="#managecompanies">
+                          <img src="img/companies.png" class="img-fluid">
+                          Companies
+                        </a>
+                      </div>
+                    </li>
+
+                    <li class="nav-item normaltext">
+                      <a class="nav-link" href="#manageblogs" role="button">
+                        <img src="img/manageblog.png" class="img-fluid">
+                        Manage Blogs
+                      </a>
+                    </li>
+
+                    <li class="nav-item normaltext">
+                      <a class="nav-link" href="#subadmin" role="button">
+                        <img src="img/sunad.png" class="img-fluid">
+                        Sub Admin
+                      </a>
+                    </li>
+
+                    <li class="nav-item normaltext">
+                      <a class="nav-link" href="#fakereports" role="button">
+                        <img src="img/fakerep.png" class="img-fluid">
+                        Fake Reports
+                      </a>
+                    </li>
+                    <!---------------------------------------------------Employee--------------------------------------->
+                    <li class="nav-item text-center text-success mt-4">EMPLOYEE</li>
+
+                  </div>
+                </div>
+
+                <!------------------2nd Horizontal Line---------------------------------->
+                <div class="row">
+                  <div class="col-md-12">
+                    <hr class="divider">
+                  </div>
+                </div>
+
+                <div class="row row-sm-2" style="font-size: 14px;">
+                  <!--------------------------------------Vertical navigation bar------------------------------------------->
+
+                  <div class="mx-3 dashnav">
+
+                    <li class="nav-item normaltext">
+                      <a class="nav-link" href="#employeemaintainprofile" role="button">
+                        <img src="img/maintain.png" class="img-fluid">
+                        Maintain Profile
+                      </a>
+                    </li>
+                    <li class="nav-item normaltext">
+                      <a class="nav-link" href="#appliedjobs" role="button">
+                        <img src="img/applied.png" class="img-fluid">
+                        Applied Jobs
+                      </a>
+                    </li>
+                    <li class="nav-item normaltext">
+                      <a class="nav-link" href="#empreportfake" role="button">
+                        <img src="img/report.png" class="img-fluid">
+                        Report Fake
+                      </a>
+                    </li>
+                    <li class="nav-item normaltext">
+                      <a class="nav-link" href="#deleteprofile" role="button">
+                        <img src="img/delete.png" class="img-fluid">
+                        Delete Profile
+                      </a>
+                    </li>
+
+                    <!---------------------------------------------------Employer--------------------------------------->
+                    <li class="nav-item text-center text-success mt-4">EMPLOYER </li>
+
+                  </div>
+                </div>
+
+                <!------------------3rd Horizontal Line---------------------------------->
+                <div class="row">
+                  <div class="col-md-12">
+                    <hr class="divider">
+                  </div>
+                </div>
+
+                <div class="row row-sm-2" style="font-size: 14px;">
+                  <!--------------------------------------Vertical navigation bar------------------------------------------->
+
+                  <div class=" mx-3 dashnav">
+
+                    <li class="nav-item normaltext">
+                      <a class="nav-link" href="#employermaintainprofile" role="button">
+                        <img src="img/maipro.png" class="img-fluid">
+                        Maintain Profile
+                      </a>
+                    </li>
+                    <li class="nav-item normaltext">
+                      <a class="nav-link" href="#jobsposted" role="button">
+                        <img src="img/jobposted.png" class="img-fluid">
+                        Jobs Posted
+                      </a>
+                    </li>
+                    <li class="nav-item normaltext">
+                      <a class="nav-link" href="#employerreportfake" role="button">
+                        <img src="img/report.png" class="img-fluid">
+                        Report Fake
+                      </a>
+                    </li>
+
+                  </div>
+
+                </div>
               </ul>
             </div>
-          </nav>
-        </div>
-
-        <!------------------2nd Horizontal Line---------------------------------->
-        <div class="row">
-          <div class="col-md-12">
-            <hr class="divider">
-          </div>
-        </div>
-
-        <div class="row row-sm-2" style="font-size: 14px;">
-          <!--------------------------------------Vertical navigation bar------------------------------------------->
-          <nav class="navbar navbar-expand normalparent">
-            <div class="collapse navbar-collapse mx-3 dashnav" id="navbarSupportedContent">
-              <ul class="nav flex-column">
-
-                <li class="nav-item normaltext">
-                  <a class="nav-link" href="#employeemaintainprofile" role="button">
-                    <img src="img/maintain.png" class="img-fluid">
-                    Maintain Profile
-                  </a>
-                </li>
-                <li class="nav-item normaltext">
-                  <a class="nav-link" href="#appliedjobs" role="button">
-                    <img src="img/applied.png" class="img-fluid">
-                    Applied Jobs
-                  </a>
-                </li>
-                <li class="nav-item normaltext">
-                  <a class="nav-link" href="#empreportfake" role="button">
-                    <img src="img/report.png" class="img-fluid">
-                    Report Fake
-                  </a>
-                </li>
-                <li class="nav-item normaltext">
-                  <a class="nav-link" href="#deleteprofile" role="button">
-                    <img src="img/delete.png" class="img-fluid">
-                    Delete Profile
-                  </a>
-                </li>
-
-                <!---------------------------------------------------Employer--------------------------------------->
-                <li class="nav-item text-center text-success mt-4">EMPLOYER </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-
-        <!------------------3rd Horizontal Line---------------------------------->
-        <div class="row">
-          <div class="col-md-12">
-            <hr class="divider">
-          </div>
-        </div>
-
-        <div class="row row-sm-2" style="font-size: 14px;">
-          <!--------------------------------------Vertical navigation bar------------------------------------------->
-          <nav class="navbar navbar-expand normalparent">
-            <div class="collapse navbar-collapse mx-3 dashnav" id="navbarSupportedContent">
-              <ul class="nav flex-column">
-                <li class="nav-item normaltext">
-                  <a class="nav-link" href="#employermaintainprofile" role="button">
-                    <img src="img/maipro.png" class="img-fluid">
-                    Maintain Profile
-                  </a>
-                </li>
-                <li class="nav-item normaltext">
-                  <a class="nav-link" href="#jobsposted" role="button">
-                    <img src="img/jobposted.png" class="img-fluid">
-                    Jobs Posted
-                  </a>
-                </li>
-                <li class="nav-item normaltext">
-                  <a class="nav-link" href="#employerreportfake" role="button">
-                    <img src="img/report.png" class="img-fluid">
-                    Report Fake
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+          </ul>
+        </nav>
       </div>
 
       <!------------------------------------------Side bar right---------------------------------------------->
@@ -1354,112 +1375,112 @@
                   </tbody>
                 </table>
               </div>
-            
-            <!------------table------VERY SMALL VIEW-------->
-            <div class="col-12 table-responsive-xs d-block d-sm-none d-md-none d-lg-none">
-              <table class="table table-hover seekdeltable">
-                <!---------------------------thead------------------------>
-                <thead>
-                  <form>
-                    <!---------FORM--------->
+
+              <!------------table------VERY SMALL VIEW-------->
+              <div class="col-12 table-responsive-xs d-block d-sm-none d-md-none d-lg-none">
+                <table class="table table-hover seekdeltable">
+                  <!---------------------------thead------------------------>
+                  <thead>
+                    <form>
+                      <!---------FORM--------->
+                      <tr>
+                        <!----------first row-->
+                        <td colspan="2">
+                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                            <option value="">Select Company</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                          </select>
+                        </td>
+                        <td colspan="2">
+                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                            <option value="A">Is Featured</option>
+                            <option value="B">Not Featured</option>
+                          </select>
+                        </td>
+                        <td colspan="2">
+                          <select class="selectpicker btn form-control dashform py-1 " style="font-size: 12px;">
+                            <option value="A">Is Active</option>
+                            <option value="B">Not Active</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <div class="form-group p-0 m-0">
+                            <input type="email" class="form-control dashform" id="cmail" placeholder="Company Email"
+                              style="border: 0px;">
+                          </div>
+                        </td>
+                        <td colspan="2">
+                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                            <option value="A">Active</option>
+                            <option value="B">Not Active</option>
+                          </select>
+                        </td>
+                      </tr>
+                    </form>
+                    <!----------second row-->
+                    <tr class="text-center" style="background-color: #0D2942; color: white;">
+                      <th scope="col">Name</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Is Active</th>
+                      <th scope="col">Is Featured</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <!---------------------------------tbody--------------------------->
+                  <tbody>
                     <tr>
                       <!----------first row-->
-                      <td colspan="2">
-                        <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
-                          <option value="">Select Company</option>
-                          <option value="A">A</option>
-                          <option value="B">B</option>
-                          <option value="C">C</option>
-                        </select>
-                      </td>
-                      <td colspan="2">
-                        <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
-                          <option value="A">Is Featured</option>
-                          <option value="B">Not Featured</option>
-                        </select>
-                      </td>
-                      <td colspan="2">
-                        <select class="selectpicker btn form-control dashform py-1 " style="font-size: 12px;">
-                          <option value="A">Is Active</option>
-                          <option value="B">Not Active</option>
+                      <td>Innostark Technologies</td>
+                      <td>example@gmail.com</td>
+                      <td>yes</td>
+                      <td>yes</td>
+                      <td class="delhov">
+                        <select class="selectpicker btn form-control dashformact" style="font-size: 12px;">
+                          <option value="">Action</option>
+                          <option value="A">Warn</option>
+                          <option value="B">Ban</option>
+                          <option value="C">Delete</option>
                         </select>
                       </td>
                     </tr>
                     <tr>
-                      <td colspan="2">
-                        <div class="form-group p-0 m-0">
-                          <input type="email" class="form-control dashform" id="cmail" placeholder="Company Email"
-                            style="border: 0px;">
-                        </div>
-                      </td>
-                      <td colspan="2">
-                        <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
-                          <option value="A">Active</option>
-                          <option value="B">Not Active</option>
+                      <!----------second row-->
+                      <td>Innostark Technologies</td>
+                      <td>example@gmail.com</td>
+                      <td>yes</td>
+                      <td>yes</td>
+                      <td class="delhov">
+                        <select class="selectpicker btn form-control dashformact" style="font-size: 12px;">
+                          <option value="">Action</option>
+                          <option value="A">Warn</option>
+                          <option value="B">Ban</option>
+                          <option value="C">Delete</option>
                         </select>
                       </td>
                     </tr>
-                  </form>
-                  <!----------second row-->
-                  <tr class="text-center" style="background-color: #0D2942; color: white;">
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Is Active</th>
-                    <th scope="col">Is Featured</th>
-                    <th scope="col">Action</th>
-                  </tr>
-                </thead>
-                <!---------------------------------tbody--------------------------->
-                <tbody>
-                  <tr>
-                    <!----------first row-->
-                    <td>Innostark Technologies</td>
-                    <td>example@gmail.com</td>
-                    <td>yes</td>
-                    <td>yes</td>
-                    <td class="delhov">
-                      <select class="selectpicker btn form-control dashformact" style="font-size: 12px;">
-                        <option value="">Action</option>
-                        <option value="A">Warn</option>
-                        <option value="B">Ban</option>
-                        <option value="C">Delete</option>
-                      </select>
-                    </td>
-                  </tr>
-                  <tr>
-                    <!----------second row-->
-                    <td>Innostark Technologies</td>
-                    <td>example@gmail.com</td>
-                    <td>yes</td>
-                    <td>yes</td>
-                    <td class="delhov">
-                      <select class="selectpicker btn form-control dashformact" style="font-size: 12px;">
-                        <option value="">Action</option>
-                        <option value="A">Warn</option>
-                        <option value="B">Ban</option>
-                        <option value="C">Delete</option>
-                      </select>
-                    </td>
-                  </tr>
-                  <tr>
-                    <!----------third row-->
-                    <td>Innostark Technologies</td>
-                    <td>example@gmail.com</td>
-                    <td>yes</td>
-                    <td>yes</td>
-                    <td class="delhov">
-                      <select class="selectpicker btn form-control dashformact" style="font-size: 12px;">
-                        <option value="">Action</option>
-                        <option value="A">Warn</option>
-                        <option value="B">Ban</option>
-                        <option value="C">Delete</option>
-                      </select>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                    <tr>
+                      <!----------third row-->
+                      <td>Innostark Technologies</td>
+                      <td>example@gmail.com</td>
+                      <td>yes</td>
+                      <td>yes</td>
+                      <td class="delhov">
+                        <select class="selectpicker btn form-control dashformact" style="font-size: 12px;">
+                          <option value="">Action</option>
+                          <option value="A">Warn</option>
+                          <option value="B">Ban</option>
+                          <option value="C">Delete</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
 
           </div>
         </div>
@@ -1648,7 +1669,7 @@
                       <div class="form-row">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                           <label for="modname">Name:<span class="text-danger">*</span></label>
-                          <input type="text" class="form-control f" id="modname">
+                          <input type="text" pattern="[a-zA-Z]+" placeholder="Smith" class="form-control f" id="modname" required>
                           <div class="invalid-feedback">
                             Please provide a valid name.
                           </div>
@@ -1658,7 +1679,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                           <label for="modemail">Email:<span class="text-danger">*</span></label>
-                          <input type="email" class="form-control f" id="modemail">
+                          <input type="email" placeholder="example@email.com" class="form-control f" id="modemail" required>
                           <div class="invalid-feedback">
                             Please provide a valid email.
                           </div>
@@ -1670,7 +1691,7 @@
                       <div class="form-row">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                           <label for="modpass1">Password:<span class="text-danger">*</span></label>
-                          <input type="password" class="form-control f" id="modpass1">
+                          <input type="password" placeholder="***********" minlength="8" maxlength="20" class="form-control f" id="modpass1" required>
                           <small id="passwordHelpInline" class="text-muted">
                             Must be 8-20 characters long.
                           </small>
@@ -1683,7 +1704,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                           <label for="modpass2">Confirm Password:<span class="text-danger">*</span></label>
-                          <input type="password" oninput="check(this)" class="form-control f" id="modpass2">
+                          <input type="password" placeholder="***********" minlength="8" maxlength="20" oninput="check(this)" class="form-control f" id="modpass2" required>
                           <small id="passwordHelpInline" class="text-muted">
                             Must be 8-20 characters long.
                           </small>
@@ -1712,19 +1733,16 @@
                             Looks good!
                           </div>
                         </div>
-
                       </div>
-                      <div class="form-row">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-5 my-3 ml-2 mt-5 p-2 btnupdate">
-                          <div class="row mx-2">
-                            <div class=" col-lg-6 col-md-6 col-sm-6 col-6">
-                              <span>Update</span>
-                            </div>
-                            <div class="col-lg-4 offset-lg-1 col-md-4 col-sm-2 col-2">
-                              <img src="img/update.png" class="img-responsive">
-                            </div>
+
+                      <!----------------------------Update Button--------------------------->
+                      <div class="m-4 delhov">
+                        <button type="submit" class="btn text-white bt px-5 my-4">
+                          <div>
+                            Update
+                            <img class="" src="img/update.png" class="img-responsive">
                           </div>
-                        </div>
+                        </button>
                       </div>
                     </form>
                   </div>

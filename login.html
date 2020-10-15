@@ -13,6 +13,26 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
+    <script>
+          //JavaScript for disabling form submissions if there are invalid fields
+     (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
 </head>
 
 <body>
@@ -62,20 +82,32 @@
                 <!--------------------------FORM--------------------------------------------------->
                 <div class="col-lg-5 offset-lg-2 mr-3 ml-3 my-4 ">
                     <div class="row d-flex justify-content-center align-item-center mt-3">
-                        <form>
+                        <form class="needs-validation" novalidate>
                             <div class="form-group">
-                                <label for="exampleInputEmail1" class="d-flex align-items-start mx-2">Email
+                                <label for="em" class="d-flex align-items-start mx-2">Email
                                     Address</label>
-                                <input type="email" size="60" required class="form-control f" id="exampleInputEmail1"
+                                <input type="email" size="60" required class="form-control f" id="em"
                                     placeholder="example@email.com" aria-describedby="emailHelp">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with
                                     anyone else.</small>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1"
+                                <label for="pass"
                                     class="d-flex align-items-start mx-2">Password</label>
-                                <input type="password" size="60" required minlength="8" class="form-control f"
-                                    id="exampleInputPassword1" placeholder="***********">
+                                <input type="password" size="60" required minlength="8" maxlength="20" class="form-control f"
+                                    id="pass" placeholder="***********">
+                                    <div class="invalid-feedback">
+                                        Please provide a valid password.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
                             </div>
                             <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -85,7 +117,7 @@
                             <br><br>
                             <a class="chan2" style="text-decoration: none;" href="register.html">Sign Up</a>
                             <br>
-                            <a class="my-2 chan" style="text-decoration: none;" href="#">Forgot your password?</a>
+                            <a class="my-2 chan" style="text-decoration: none;" href="forgetpassword.html">Forgot your password?</a>
                         </form>
                     </div>
                 </div>
