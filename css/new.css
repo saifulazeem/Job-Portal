@@ -18,6 +18,15 @@ body{
     color:black;
     text-decoration: none;
   }
+  .btnLogin{
+    font-size: 16px;
+    letter-spacing: 0px;
+    background-color: #0BB44F;
+  }
+  .btnLogin:hover{
+    text-decoration: none;
+    background-color: #929292;
+  }
   .s{
     right: 358px;
   }
@@ -25,7 +34,8 @@ body{
 /* Style the links inside the navigation bar */
 .navhov a:hover {
     border-bottom: 3px solid #0BB44F;
-    color: #0BB44F;
+    font-weight: 700;
+    color: white;
   }
   
   .active {
@@ -94,6 +104,8 @@ color:white;
   /* Firefox */
   color:grey;
   padding-left: 20px;
+  font-size: 12px;
+  padding:10px;
 }
 
 /*about.html placeholder*/
@@ -288,8 +300,11 @@ margin:30px;
   padding-left: 3px;
 }
 .homedivtxt{
-  font-size: 20px;
+  font-size: 30px;
   font-weight:600;
+}
+.homedivsubtxt{
+  font-size: 20px;
 }
 /*home.html slider*/
 .homeimgslide{
@@ -770,8 +785,8 @@ padding-top: 200px;
   padding-left: 3px;
 }
 .homepad{
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 240px;
+  padding-right: 150px;
 }
 .homedivtxt{
   font-size: 22px;
@@ -1280,7 +1295,11 @@ padding-top: 200px;
   width:3000px;
 }
 .homeover{
-  margin-top: -200px;
+  margin-top: -700px;
+}
+.homefeat{
+  font-size: 25px;
+  font-weight: 500;
 }
 .hometexttop{
   position: absolute;
@@ -1295,31 +1314,53 @@ padding-top: 200px;
   font-size: 30px;
   font-weight:700;
 }
+.homedivsubtxt{
+  font-size: 20px;
+}
 /*home.html slider*/
 .homeimgslide{
   position: relative; 
   border-radius: 20px;
-  width:200px;
+  width:210px;
   height:200px;
   margin: 0px;
 }
 .homeimgslidetxt{
   font-size:20px;
-  width:200px;
+  width:210px;
   top: 160px; 
   position:absolute;
   text-align:center;
   border-radius: 20px; 
   background-color: #0BB44F;
+  opacity: 0.7;
+  left:17px;
 }
 /*home.html slider "Select category" position button*/
 .homesel{
-  right:-270px;
+  right:-170px;
+}
+
+.btncarousel{
+  font-size:20px; border-radius: 40px;height:40px; width:40px;
+  background-color: #0BB44F;
+  color: white;
+}
+
+.btncarousel:hover{
+  background-color: #ccc;
+  color:#0BB44F;
 }
 /*home.html placeholder*/
 .h::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   /* Firefox */
 font-size: 20px;
+}
+.navpad{
+  margin: 0px 190px 0px 190px;
+}
+.navover{
+  top: -800px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -1392,6 +1433,18 @@ font-size: 20px;
 }
 .empbtn{
   width: 150px; height: 43px; margin-left: 10px;margin-right: -10px; margin-top: 3px;
+  font-size: 14px;
+}
+/*form home.html*/
+.homekey{
+  width: 400px;height:50px;margin-left: 0px;
+}
+.homeloccat{
+  width: 360px;height:50px;margin-left: 0px;
+}
+.homebtn{
+  width: 140px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
+  font-size: 14px;
 }
 /*register.html*/
 /*button*/
@@ -1445,9 +1498,18 @@ font-size: 20px;
 }
 .bt{
   background-color: #0D2942;
+  border-radius: 10px;
 }
 .bt:hover{
 background-color:  #0BB44F;
+}
+.btg{
+  background-color: #0BB44F;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.btg:hover{
+background-color:  #0D2942;
 }
 
 .btnsearchjob1{
@@ -1559,7 +1621,6 @@ font-size: 12px;
 /*home.html form*/
 .tb{
     background-color: white;
-    border-radius: 200px;
 }
 /*blog title change color blog.html*/
 .blogtitle:hover{
@@ -1702,20 +1763,6 @@ tr{
 .dashnav a:hover {
   color: #0BB44F;
 }
-.dashform{
-  background-color: #F3F3F3;
-  
-}
-.dashform:focus { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    opacity: 1; /* Firefox */
-    background-color: #F3F3F3;
-    color:black;
-}
-.dashform::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  opacity: 0.9; /* Firefox */
-  font-size: 12px;
-  color:black;
-}
 /*Active button*/
 .dashformact{
   background-color: #0BB44F;
@@ -1773,4 +1820,53 @@ tr{
     font-weight: 700;
     color: #0BB44F;
 }
-   
+select
+{
+    color: #ccc;
+}
+option
+{
+    color: #000;
+}
+option:first-child
+{
+    color: #ccc;
+}
+
+.dashform{
+  background-color: #F3F3F3;
+  
+}
+.dashform:focus { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 1; /* Firefox */
+    background-color: #F3F3F3;
+}
+.dashform::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 0.5; /* Firefox */
+  font-size: 12px;
+  color:black;
+}
+.dashformselect{
+  background-color: #F3F3F3;
+  color:grey;
+}
+.dashformselect:focus { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 1; /* Firefox */
+    background-color: #F3F3F3;
+}
+.dashformselect::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 0.5; /* Firefox */
+  font-size: 12px;
+}
+
+.hometxt{
+  top:-100px;
+  left: 46px;
+  font-size: 22px;
+}
+.homemaintxt{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  left: 46px;
+  font-size: 56px;
+}

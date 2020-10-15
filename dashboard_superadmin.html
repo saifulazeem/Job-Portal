@@ -239,8 +239,23 @@
       });
 
     });
+    function changeMe(sel) {
+      sel.style.color = "#000";
+    }
   </script>
+  <style>
+    select {
+      color: #ccc;
+    }
 
+    option {
+      color: #000;
+    }
+
+    option:first-child {
+      color: #ccc;
+    }
+  </style>
 </head>
 
 <body style="font-family: Segoe UI;">
@@ -257,10 +272,10 @@
     <div class="row mx-lg-1 m-md-0 p-md-0 mx-sm-0 p-sm-0 mx-3">
       <!------------------------------------------Side Bar left---------------------------------------------->
       <div class="container col-lg-3 col-md-4 col-sm-10 col-12 rounded" style="background-color: #0D2942;">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-md">
           <ul class="nav flex-column w-100">
             <div class="row">
-              <img src="img/home.png" class="img-fluid rounded-pill my-5 mx-auto d-block navbar-toggler"
+              <img src="img/home.png" class="img-fluid bg-white rounded-pill my-5 mx-auto d-block navbar-toggler"
                 data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
                 aria-expanded="false" aria-label="Toggle navigation" style="cursor: hand;">
             </div>
@@ -445,8 +460,8 @@
                     <tr>
                       <!----------first row-->
                       <td>
-                        <select class="selectpicker btn form-control dashform"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect"
+                          style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="">Select Company</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -456,19 +471,19 @@
                       <td>
                         <div class="form-group m-0">
                           <input type="text" class="text-center form-control dashform py-3" id="jtitle"
-                            style="font-size: 12px;color: black; background-color: #d9dbda;" placeholder="Job Title">
+                            style="font-size: 12px; border:0px;" placeholder="Job Title">
                         </div>
                       </td>
                       <td>
                         <div class="form-group m-0">
                           <input type="text" class="text-center form-control dashform py-3" id="jdesc"
-                            style="font-size: 12px;color: black; background-color: #d9dbda;"
+                            style="font-size: 12px; border: 0px;"
                             placeholder="Job Description">
                         </div>
                       </td>
                       <td>
-                        <select class="selectpicker btn form-control dashform"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect"
+                          style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="">Country</option>
                           <option value="A">Iran</option>
                           <option value="B">Pakistan</option>
@@ -476,8 +491,8 @@
                         </select>
                       </td>
                       <td>
-                        <select class="selectpicker btn form-control dashform"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect"
+                          style="font-size: 12px" onchange="changeMe(this)">
                           <option value="">Active</option>
                           <option value="A">Inactive</option>
                         </select>
@@ -489,8 +504,8 @@
                       <td></td>
                       <td></td>
                       <td>
-                        <select class="selectpicker btn form-control dashform py-1"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect py-1"
+                          style="font-size: 12px; border: 0px;" onchange="changeMe(this)">
                           <option value="">State</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -505,8 +520,8 @@
                       <td></td>
                       <td></td>
                       <td>
-                        <select class="selectpicker btn form-control dashform py-1"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect py-1"
+                          style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="">City</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -586,8 +601,8 @@
                     <tr>
                       <!----------first row-->
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashform"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect"
+                          style="font-size: 12px;">
                           <option value="">Select Company</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -596,14 +611,14 @@
                       </td>
                       <td colspan="2">
                         <div class="form-group m-0">
-                          <input type="text" class="text-center form-control dashform py-3" id="jdesc"
-                            style="font-size: 12px;color: black; background-color: #d9dbda;"
+                          <input type="text" class="form-control dashform py-3" id="jdesc"
+                            style="font-size: 12px; border: 0px;"
                             placeholder="Job Description">
                         </div>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashform"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect"
+                          style="font-size: 12px;">
                           <option value="">Country</option>
                           <option value="A">Iran</option>
                           <option value="B">Pakistan</option>
@@ -617,20 +632,20 @@
                       <!----------second row-->
                       <td colspan="2">
                         <div class="form-group m-0">
-                          <input type="text" class="text-center form-control dashform py-3" id="jtitle"
-                            style="font-size: 12px;color: black; background-color: #d9dbda;" placeholder="Job Title">
+                          <input type="text" class="form-control dashform py-3" id="jtitle"
+                            style="font-size: 12px; border: 0px;" placeholder="Job Title">
                         </div>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashform"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect"
+                          style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="">Active</option>
                           <option value="A">Inactive</option>
                         </select>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashform py-1"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect py-1"
+                          style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="">State</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -646,8 +661,8 @@
                       <td></td>
                       <td></td>
                       <td>
-                        <select class="selectpicker btn form-control dashform py-1"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect py-1"
+                          style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="">City</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -726,8 +741,8 @@
                     <tr>
                       <!----------first row-->
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashform"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect"
+                          style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="">Select Company</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -737,13 +752,13 @@
                       <td colspan="2">
                         <div class="form-group m-0">
                           <input type="text" class="form-control dashform py-3" id="jdesc"
-                            style="font-size: 12px;color: black; background-color: #d9dbda;"
+                            style="font-size: 12px;border: 0px;"
                             placeholder="Job Description">
                         </div>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashform"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect"
+                          style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="">Country</option>
                           <option value="A">Iran</option>
                           <option value="B">Pakistan</option>
@@ -758,19 +773,19 @@
                       <td colspan="2">
                         <div class="form-group m-0">
                           <input type="text" class="form-control dashform py-3" id="jtitle"
-                            style="font-size: 12px;color: black; background-color: #d9dbda;" placeholder="Job Title">
+                            style="font-size: 12px;border: 0px;" placeholder="Job Title">
                         </div>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashform"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect"
+                          style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="">Active</option>
                           <option value="A">Inactive</option>
                         </select>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashform py-1"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect py-1"
+                          style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="">State</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -786,8 +801,8 @@
                       <td></td>
                       <td></td>
                       <td>
-                        <select class="selectpicker btn form-control dashform py-1"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;">
+                        <select class="selectpicker btn form-control dashformselect py-1"
+                          style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="">City</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -895,7 +910,7 @@
                         </div>
                       </td>
                       <td>
-                        <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                        <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="A">Active</option>
                           <option value="B">Not Active</option>
                         </select>
@@ -988,7 +1003,7 @@
                         </div>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                        <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                           <option value="A">Active</option>
                           <option value="B">Not Active</option>
                         </select>
@@ -1073,7 +1088,7 @@
                       <form>
                         <!---------FORM--------->
                         <td>
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="">Select Company</option>
                             <option value="A">A</option>
                             <option value="B">B</option>
@@ -1082,24 +1097,24 @@
                         </td>
                         <td>
                           <div class="form-group p-0 m-0">
-                            <input type="email" class="form-control text-center dashform" id="cmail"
+                            <input type="email" class="form-control dashform" id="cmail"
                               placeholder="Company Email" style="border: 0px;">
                           </div>
                         </td>
                         <td>
-                          <select class="selectpicker btn form-control dashform py-1 " style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Is Active</option>
                             <option value="B">Not Active</option>
                           </select>
                         </td>
                         <td>
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Is Featured</option>
                             <option value="B">Not Featured</option>
                           </select>
                         </td>
                         <td>
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1176,7 +1191,7 @@
                       <tr>
                         <!----------first row-->
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="">Select Company</option>
                             <option value="A">A</option>
                             <option value="B">B</option>
@@ -1184,13 +1199,13 @@
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Is Featured</option>
                             <option value="B">Not Featured</option>
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1 " style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Is Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1204,7 +1219,7 @@
                           </div>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1281,7 +1296,7 @@
                       <tr>
                         <!----------first row-->
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="">Select Company</option>
                             <option value="A">A</option>
                             <option value="B">B</option>
@@ -1289,13 +1304,13 @@
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Is Featured</option>
                             <option value="B">Not Featured</option>
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1 " style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Is Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1309,7 +1324,7 @@
                           </div>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1386,7 +1401,7 @@
                       <tr>
                         <!----------first row-->
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="">Select Company</option>
                             <option value="A">A</option>
                             <option value="B">B</option>
@@ -1394,13 +1409,13 @@
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Is Featured</option>
                             <option value="B">Not Featured</option>
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1 " style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Is Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1414,7 +1429,7 @@
                           </div>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashform py-1" style="font-size: 12px;">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
                             <option value="A">Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1501,9 +1516,9 @@
                   <tr>
                     <td>
                       <!----------first row-->
-                      <div class="form-group m-0">
+                      <div class="form-group m-0 mb-2 roun rounded">
                         <input type="text" class="text-center form-control py-3 dashform" id="manblogs"
-                          style="font-size: 12px;color: black; background-color: #d9dbda;" placeholder="Manage Blogs">
+                          style="font-size: 12px; border:0px;" placeholder="Manage Blogs">
                       </div>
                     </td>
                   </tr>
@@ -1583,9 +1598,9 @@
                   <tr>
                     <!----------first row-->
                     <td>
-                      <div class="form-group m-0">
+                      <div class="form-group m-0 mb-2 roun rounded">
                         <input type="text" class="text-center form-control py-3 dashform" id="mancat"
-                          style="font-size: 12px; color: black; background-color: #d9dbda;"
+                          style="font-size: 12px; border: 0px;"
                           placeholder="Manage Categories">
                       </div>
                     </td>
@@ -1669,7 +1684,8 @@
                       <div class="form-row">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                           <label for="modname">Name:<span class="text-danger">*</span></label>
-                          <input type="text" pattern="[a-zA-Z]+" placeholder="Smith" class="form-control f" id="modname" required>
+                          <input type="text" pattern="[a-zA-Z]+" placeholder="Smith" class="form-control f" id="modname"
+                            required>
                           <div class="invalid-feedback">
                             Please provide a valid name.
                           </div>
@@ -1679,7 +1695,8 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                           <label for="modemail">Email:<span class="text-danger">*</span></label>
-                          <input type="email" placeholder="example@email.com" class="form-control f" id="modemail" required>
+                          <input type="email" placeholder="example@email.com" class="form-control f" id="modemail"
+                            required>
                           <div class="invalid-feedback">
                             Please provide a valid email.
                           </div>
@@ -1691,7 +1708,8 @@
                       <div class="form-row">
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                           <label for="modpass1">Password:<span class="text-danger">*</span></label>
-                          <input type="password" placeholder="***********" minlength="8" maxlength="20" class="form-control f" id="modpass1" required>
+                          <input type="password" placeholder="***********" minlength="8" maxlength="20"
+                            class="form-control f" id="modpass1" required>
                           <small id="passwordHelpInline" class="text-muted">
                             Must be 8-20 characters long.
                           </small>
@@ -1704,7 +1722,8 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                           <label for="modpass2">Confirm Password:<span class="text-danger">*</span></label>
-                          <input type="password" placeholder="***********" minlength="8" maxlength="20" oninput="check(this)" class="form-control f" id="modpass2" required>
+                          <input type="password" placeholder="***********" minlength="8" maxlength="20"
+                            oninput="check(this)" class="form-control f" id="modpass2" required>
                           <small id="passwordHelpInline" class="text-muted">
                             Must be 8-20 characters long.
                           </small>
@@ -1768,15 +1787,15 @@
                   <tr>
                     <!----------first row-->
                     <td>
-                      <div class="form-group">
+                      <div class="form-group roun rounded">
                         <input type="text" class="form-control dashform m-0 text-center" id="empname"
-                          placeholder="Name">
+                          placeholder="Name" style="border: 0px;">
                       </div>
                     </td>
                     <td>
-                      <div class="form-group">
+                      <div class="form-group roun rounded">
                         <input type="email" class="form-control dashform m-0 text-center" id="empemail"
-                          placeholder="Email">
+                          placeholder="Email" style="border: 0px;">
                       </div>
                     </td>
                   </tr>
@@ -1856,15 +1875,15 @@
                   <tr>
                     <!----------first row-->
                     <td>
-                      <div class="form-group">
+                      <div class="form-group roun rounded">
                         <input type="text" class="form-control dashform m-0 text-center" id="empname"
-                          placeholder="Name">
+                          placeholder="Name" style="border: 0px;">
                       </div>
                     </td>
                     <td>
-                      <div class="form-group">
+                      <div class="form-group roun rounded">
                         <input type="email" class="form-control dashform m-0 text-center" id="empemail"
-                          placeholder="Email">
+                          placeholder="Email" style="border: 0px;">
                       </div>
                     </td>
                   </tr>
@@ -1934,7 +1953,7 @@
 
         <!-------------------employee maintain profile-------------->
         <div class="mx-lg-4 mx-md-4 mx-sm-2 mx-4 myDiv" id="employeemaintainprofile">
-          <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">Add New User</p>
+          <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px;">User Profile</p>
           <div class="container roun bg-white" style="border-radius: 20px;">
             <div class="row bg-success seekdiv text-white">
               <span class="mx-4 my-3"><b>User Form</b></span>
@@ -1952,13 +1971,13 @@
                       <div class="row m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
                         <div class="col-lg-5 ">
                           <div class="row">
-                            <span class="text-muted font-weight-bold">Add Your Image</span>
+                            <span class="text-muted font-weight-bold mx-4">Add Your Image</span>
                           </div>
                           <div class="row mt-4 mx-2">
                             <div class="roun imgboxseek" id="img_link">
                               <img id="blah" src="" />
                             </div>
-                            <input type="file" id="image" style="visibility: hidden"><br>
+                            <input type="file" id="image" style="visibility: hidden" required><br>
                             <span id="spnFilePathimg"></span><br>
                             <span id="errmsgimg" class="text-danger"></span><br>
                           </div>
@@ -1969,13 +1988,13 @@
                       <!----------second row-->
                       <!----------------------------Basic Information--------------------------->
                       <td colspan="4">
-                        <div class="row mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                        <div class="row mx-lg-4 my-lg-0 mx-md-2 m-sm-1 mx-4 mb-0 mt-0 py-4">
 
                           <!------ div-->
                           <div class="container col-12" style="padding:20px 0px;">
                             <div class="row" style="font-size: 15px;">
-                              <div class="form-row col-12 mt-2">
-                                <div class="col">
+                              <div class="form-row col-12 mt-2 ">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="fname" class="float-left"><b>First name:</b></label>
                                   <input type="text" class="form-control dashform" id="fname" required
                                     placeholder="First Name" style="border: 0px;">
@@ -1986,7 +2005,7 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="lname" class="float-left"><b>Last name:</b></label>
                                   <input type="text" class="form-control dashform" id="lname" required
                                     placeholder="Last Name" style="border: 0px;">
@@ -1999,7 +2018,7 @@
                                 </div>
                               </div>
                               <div class="form-row col-12 mt-2">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="email" class="float-left"><b>Email:</b></label>
                                   <input type="email" class="form-control dashform" id="email" required
                                     placeholder="example@gmail.com" style="border: 0px;">
@@ -2010,7 +2029,7 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="pass" class="float-left"><b>Password:</b></label>
                                   <input type="password" class="form-control dashform" id="pass" required
                                     placeholder="Password" style="border: 0px;">
@@ -2023,9 +2042,9 @@
                                 </div>
                               </div>
                               <div class="form-row col-12 mt-2">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="gend" class="float-left"><b>Gender:</b></label>
-                                  <select class="selectpicker btn form-control dashform py-2" id="gend"
+                                  <select class="selectpicker btn form-control dashformselect" id="gend"
                                     style="font-size: 12px;" style="border: 0px;">
                                     <option value="">Select Gender</option>
                                     <option value="female">Female</option>
@@ -2038,9 +2057,9 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="otype" class="float-left"><b>Date of Birth:</b></label>
-                                  <input type="date" class="form-control dashform" id="otype" min="0" required
+                                  <input type="date" class="form-control dashformselect" id="otype" min="0" required
                                     style="font-size: 12px;border: 0px;">
                                   <div class="invalid-feedback">
                                     Please provide valid date.
@@ -2051,13 +2070,13 @@
                                 </div>
                               </div>
                               <div class="form-row col-12 mt-2">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="mstat" class="float-left"><b>Marital Status:</b></label>
-                                  <select class="selectpicker btn form-control dashform py-2" id="mstat"
+                                  <select class="selectpicker btn form-control dashformselect" id="mstat"
                                     style="font-size: 12px; ">
                                     <option value="">Select Marital Status</option>
                                     <option value="mar">Married</option>
-                                    <option value="unmar">Unmarried</option>
+                                    <option value="unmar">Single</option>
                                   </select>
                                   <div class="invalid-feedback">
                                     Please provide a status.
@@ -2066,9 +2085,9 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="nat" class="float-left"><b>Nationality:</b></label>
-                                  <select class="selectpicker btn form-control dashform py-2" id="nat"
+                                  <select class="selectpicker btn form-control dashformselect" id="nat"
                                     style="font-size: 12px;">
                                     <option value="">Select Nationality</option>
                                     <option value="mar">Pakistani</option>
@@ -2083,9 +2102,9 @@
                                 </div>
                               </div>
                               <div class="form-row col-12 mt-2">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="phone" class="float-left"><b>Phone Number:</b></label>
-                                  <input type="number" class="form-control dashform" id="phone" required
+                                  <input type="number" class="form-control dashformselect" id="phone" required
                                     placeholder="00-000-00000000" style="border: 0px;">
                                   <div class="invalid-feedback">
                                     Please provide a valid phone number.
@@ -2094,9 +2113,9 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="exp" class="float-left"><b>Experience:</b></label>
-                                  <select class="selectpicker btn form-control dashform py-2" id="exp"
+                                  <select class="selectpicker btn form-control dashformselect" id="exp"
                                     style="font-size: 12px;">
                                     <option value="">Select Experience</option>
                                     <option value="mar">1 yr</option>
@@ -2111,9 +2130,9 @@
                                 </div>
                               </div>
                               <div class="form-row col-12 mt-2">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="ind" class="float-left"><b>Industry:</b></label>
-                                  <select class="selectpicker btn form-control dashform py-2" id="ind"
+                                  <select class="selectpicker btn form-control dashformselect" id="ind"
                                     style="font-size: 12px;">
                                     <option value="">Select Industry</option>
                                     <option value="a">A</option>
@@ -2126,9 +2145,9 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="fa" class="float-left"><b>Functional Area:</b></label>
-                                  <select class="selectpicker btn form-control dashform py-2" id="fa"
+                                  <select class="selectpicker btn form-control dashformselect" id="fa"
                                     style="font-size: 12px;">
                                     <option value="">Select Functional Area</option>
                                     <option value="a">A</option>
@@ -2151,11 +2170,11 @@
                     <tr>
                       <!--third row-->
                       <td colspan="4">
-                        <div class="row mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                        <div class="row mx-lg-4 my-lg-0 m-md-2 m-sm-1 my-0 mx-2 py-4">
                           <div class="container col-12" style="padding:20px 0px;">
                             <div class="row">
                               <div class="col">
-                                <select class="selectpicker btn form-control dashform" style="font-size: 12px;">
+                                <select class="selectpicker btn form-control dashformselect" style="font-size: 12px;">
                                   <option class="black" value="">Country</option>
                                   <option class="black" value="1">Afghanistan</option>
                                   <option class="black" value="2">Albania</option>
@@ -2310,7 +2329,7 @@
                                 </select>
                               </div>
                               <div class="col">
-                                <select class="selectpicker btn form-control dashform" style="font-size: 12px;">
+                                <select class="selectpicker btn form-control dashformselect" style="font-size: 12px;">
                                   <option value="">State</option>
                                   <option value="Pakistan">Pakistan</option>
                                   <option value="Afghanistan">Afghanistan</option>
@@ -2318,7 +2337,7 @@
                                 </select>
                               </div>
                               <div class="col">
-                                <select class="selectpicker btn form-control dashform" style="font-size: 12px;">
+                                <select class="selectpicker btn form-control dashformselect" style="font-size: 12px;">
                                   <option class="black" value="">City</option>
                                   <option class="black" value="1180">Islamabad</option>
                                   <option class="black" value="1184">Karachi</option>
@@ -2886,7 +2905,7 @@
                     <tr>
                       <!----------fifth row-->
                       <td colspan="4">
-                        <div class="ml-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 form-group roun rounded">
+                        <div class="mx-lg-4 my-lg-0 m-md-2 m-sm-1 my-0 mx-2 form-group roun rounded">
                           <textarea class="form-control f" id="loc" rows="2" style="font-size: 12px; border: 0px;"
                             placeholder="Add your Location here"></textarea>
                         </div>
@@ -2907,16 +2926,21 @@
                     <tr>
                       <!----------seventh row-->
                       <td colspan="2">
-                        <div class="ml-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 form-group">
-                          <input type="range" id="rangeInput" class="slider float-left" step="1000" value="5000"
-                            min="5000" max="1000000" oninput="amount.value=rangeInput.value" required>
+                        <div class="row">
+                          <div class="mx-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 form-group">
+                            <input type="range" id="rangeInput" class="slider float-left" step="1000" value="5000"
+                              min="5000" max="1000000" oninput="amount.value=rangeInput.value" required>
+                          </div>
                         </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2">
-                        <output id="amount" name="amount" for="rangeInput" class="text-black float-left ">5,000
-                        </output><span class="center"> 1,000,000+</span>
+                        <div class="row col-lg-6 col-md-10 col-sm-10 col-12 mt-2">
+                          <div class="col ">
+                            <output id="amount" name="amount" for="rangeInput" class="text-black float-left">5,000
+                            </output>
+                          </div>
+                          <div class="col ">
+                            <span class="float-right"> 1,000,000+</span>
+                          </div>
+                        </div>
                       </td>
                     </tr>
                     <tr>
@@ -2978,7 +3002,7 @@
                       <td>
                         <div class="row mx-3 mt-3">
                           <div
-                            class="col-2 ml-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded n text-white py-2 mt-3 font-weight-bold"
+                            class="col-lg-2 col-md-4 col-sm-4 col-3 ml-2 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded n text-white py-2 mt-3 font-weight-bold"
                             style="font-size: 14px;">
                             Education
                           </div>
@@ -2999,7 +3023,7 @@
                       <td>
                         <div class="row mx-3 mt-3">
                           <div
-                            class="col-2 ml-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded n text-white py-2 mt-3 font-weight-bold"
+                            class="col-lg-2 col-md-4 col-sm-4 col-3 ml-2 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded n text-white py-2 mt-3 font-weight-bold"
                             style="font-size: 14px;">
                             Projects
                           </div>
@@ -3020,7 +3044,7 @@
                       <td>
                         <div class="row mx-3 mt-3">
                           <div
-                            class="col-2 ml-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded n text-white py-2 mt-3 font-weight-bold"
+                            class="col-lg-2 col-md-4 col-sm-4 col-3 ml-2 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded n text-white py-2 mt-3 font-weight-bold"
                             style="font-size: 14px;">
                             Skills
                           </div>
@@ -3039,7 +3063,7 @@
                     <tr>
                       <td>
                         <!----------------------------Upload CV Button--------------------------->
-                        <div class="my-4 delhov float-left col-3">
+                        <div class="my-4 mx-0 delhov float-left col-lg-3 col-md-4 col-sm-6 col-6">
                           <button type="button" id="resume_link" class="btn text-white bt py-4 px-2 my-4 btnsave">
                             <div style="font-size: 18px;">
                               Upload your CV
@@ -3139,14 +3163,14 @@
                   <tr>
                     <!----------first row-->
                     <td>
-                      <div class="form-group">
+                      <div class="form-group rounded roun">
                         <input type="text" class="form-control dashform m-0 text-center" id="empname"
-                          placeholder="Name">
+                          placeholder="Name" style="border: 0px;">
                       </div>
                     </td>
                     <td>
-                      <div class="form-group">
-                        <input type="number" class="form-control dashform m-0 text-center" id="compid" placeholder="ID">
+                      <div class="form-group rounded roun">
+                        <input type="number" class="form-control dashform m-0 text-center" id="compid" placeholder="ID" style="border: 0px;">
                       </div>
                     </td>
                   </tr>
@@ -3218,21 +3242,21 @@
                 <thead>
                   <tr>
                     <td>
-                      <div class="form-group">
+                      <div class="form-group ">
                         <input type="text" class="text-center form-control dashform ml-lg-2 ml-sm-1 ml-md-2 ml-0"
-                          id="jdesc" placeholder="Name">
+                          id="jdesc" placeholder="Name" style="border: 0px;">
                       </div>
                     </td>
                     <td>
                       <div class="form-group">
                         <input type="text" class="text-center form-control dashform ml-lg-2 ml-sm-1 ml-md-2 ml-0"
-                          id="jdesc" placeholder="Email">
+                          id="jdesc" placeholder="Email"  style="border: 0px;">
                       </div>
                     </td>
                     <td>
                       <div class="form-group">
                         <input type="text" class="text-center form-control dashform ml-lg-2 ml-sm-1 ml-md-2 ml-0"
-                          id="jdesc" placeholder="Id">
+                          id="jdesc" placeholder="Id"  style="border: 0px;">
                       </div>
                     </td>
                   </tr>
@@ -3281,7 +3305,7 @@
             </div>
             <div class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
               <!------------table-------------->
-              <form>
+              <form class="needs-validation" novalidate>
                 <!----FORM------->
                 <table class="table table-sm table-hover seekdeltable">
                   <!---------------------------thead------------------------>
@@ -3292,13 +3316,13 @@
                       <div class="row m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
                         <div class="col-lg-5 ">
                           <div class="row">
-                            <span class="text-muted font-weight-bold">Add Your Image</span>
+                            <span class="text-muted font-weight-bold mx-4">Add Logo</span>
                           </div>
                           <div class="row mt-4 mx-2">
                             <div class="roun imgboxseek" id="img_link2">
                               <img id="blah2" src="" />
                             </div>
-                            <input type="file" id="image2" style="visibility: hidden"><br>
+                            <input type="file" id="image2" style="visibility: hidden" required><br>
                             <span id="spnFilePathimg2"></span><br>
                             <span id="errmsgimg2" class="text-danger"></span><br>
                           </div>
@@ -3309,16 +3333,16 @@
                       <!----------second row-->
                       <!----------------------------Basic Information--------------------------->
                       <td colspan="4">
-                        <div class="row mx-2 mx-lg-2 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                        <div class="row mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 mx-2 py-4">
 
                           <!------ div-->
-                          <div class="container col-12" style="padding:20px;">
+                          <div class="container col-12" style="padding:20px 0px;">
                             <div class="row" style="font-size: 15px;">
                               <div class="form-row col-12">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="cname" class="float-left"><b>Company name:</b></label>
                                   <input type="text" class="form-control dashform" id="cname" required
-                                    style="border: 0px;">
+                                    style="border: 0px;" placeholder="Name of your Company">
                                   <div class="invalid-feedback">
                                     Please provide a valid name.
                                   </div>
@@ -3326,10 +3350,10 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="ceo" class="float-left"><b>Company CEO:</b></label>
                                   <input type="text" class="form-control dashform" id="ceo" required
-                                    style="border: 0px;">
+                                    style="border: 0px;" placeholder="CEO of your Company">
                                   <div class="invalid-feedback">
                                     Please provide a valid name.
                                   </div>
@@ -3339,10 +3363,10 @@
                                 </div>
                               </div>
                               <div class="form-row col-12">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="email" class="float-left"><b>Company Email:</b></label>
                                   <input type="email" class="form-control dashform" id="email" required
-                                    style="border: 0px;">
+                                    style="border: 0px;" placeholder="Email of your Company">
                                   <div class="invalid-feedback">
                                     Please provide a valid Email.
                                   </div>
@@ -3350,11 +3374,17 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
-                                  <label for="phone" class="float-left"><b>Industry:</b></label>
-                                  <input type="number" class="form-control dashform" id="phone" required
-                                    style="border: 0px;">
-                                  <small class="text-muted">Digits Only</small>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                  <label for="ind" class="float-left"><b>Industry:</b></label>
+                                  <select class="selectpicker btn form-control dashformselect" id="yr"
+                                    style="font-size: 12px;" onchange="changeMe(this)" required>
+                                    <option value="">Select Industry</option>
+                                    <option value="2020">A</option>
+                                    <option value="2019">B</option>
+                                    <option value="2018">C</option>
+                                    <option value="2017">D</option>
+                                    <option value="2016">E</option>
+                                  </select>
                                   <div class="invalid-feedback">
                                     Please provide a valid Industry.
                                   </div>
@@ -3364,10 +3394,10 @@
                                 </div>
                               </div>
                               <div class="form-row col-12">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="pass" class="float-left"><b>Password:</b></label>
                                   <input type="password" class="form-control dashform" id="pass" required
-                                    style="border: 0px;">
+                                    style="border: 0px;" placeholder="***********">
                                   <div class="invalid-feedback">
                                     Please provide a valid password.
                                   </div>
@@ -3375,10 +3405,17 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="otype" class="float-left"><b>Ownership Type:</b></label>
-                                  <input type="number" class="form-control dashform" id="otype" min="0" required
-                                    style="border: 0px;">
+                                  <select class="selectpicker btn form-control dashformselect" id="otype"
+                                    style="font-size: 12px;" onchange="changeMe(this)">
+                                    <option value="">Select Ownership Type</option>
+                                    <option value="2020">A</option>
+                                    <option value="2019">B</option>
+                                    <option value="2018">C</option>
+                                    <option value="2017">D</option>
+                                    <option value="2016">E</option>
+                                  </select>
                                   <div class="invalid-feedback">
                                     Please provide valid ownership type.
                                   </div>
@@ -3397,7 +3434,7 @@
                       <td>
                         <div class="row mx-3 mt-3">
                           <div
-                            class="col-2 ml-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded n text-white py-2 mt-3 font-weight-bold"
+                            class="col-lg-2 col-md-4 col-sm-4 col-5 ml-2 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded n text-white py-2 mt-3 font-weight-bold"
                             style="font-size: 14px;">
                             Job Description
                           </div>
@@ -3407,7 +3444,7 @@
                     <tr>
                       <!----------Fourth row-->
                       <td colspan="4">
-                        <div class="ml-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 form-group roun rounded">
+                        <div class="mx-2 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 form-group roun rounded">
                           <textarea class="form-control f" id="jd" rows="6" style="font-size: 12px; border: 0px;"
                             placeholder="Type detailed Job description here"></textarea>
                         </div>
@@ -3428,7 +3465,7 @@
                     <tr>
                       <!----------sixth row-->
                       <td colspan="4">
-                        <div class="ml-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 form-group roun rounded">
+                        <div class="mx-2 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 form-group roun rounded">
                           <textarea class="form-control f" id="loc" rows="2" style="font-size: 12px; border: 0px;"
                             placeholder="Add your Location here"></textarea>
                         </div>
@@ -3438,16 +3475,16 @@
                       <!----------seventh row-->
                       <td colspan="4">
                         <!----------------------------Employer Info--------------------------->
-                        <div class="row mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                        <div class="row mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 mx-2 py-4">
 
                           <!------ div-->
                           <div class="container col-12">
                             <div class="row" style="font-size: 15px;">
                               <div class="form-row col-12">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="numofc" class="float-left"><b>No. of Offices:</b></label>
                                   <input type="number" min="0" class="form-control dashform" id="numofc" required
-                                    style="border: 0px;">
+                                    style="border: 0px;" placeholder="No. of Offices">
                                   <div class="invalid-feedback">
                                     Please provide a valid number.
                                   </div>
@@ -3455,10 +3492,10 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="numemp" class="float-left"><b>No. of Employees:</b></label>
                                   <input type="number" min="0" class="form-control dashform" id="numemp" required
-                                    style="border: 0px;">
+                                    style="border: 0px;" placeholder="No. of Employees">
                                   <div class="invalid-feedback">
                                     Please provide a valid number.
                                   </div>
@@ -3468,10 +3505,10 @@
                                 </div>
                               </div>
                               <div class="form-row col-12">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="web" class="float-left"><b>Company Website:</b></label>
                                   <input type="text" class="form-control dashform" id="web" required
-                                    style="border: 0px;">
+                                    style="border: 0px;" placeholder="Company Website">
                                   <div class="invalid-feedback">
                                     Please provide a valid Company Website.
                                   </div>
@@ -3479,11 +3516,11 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="yr" class="float-left"><b>Established in:</b></label>
-                                  <select class="selectpicker btn form-control dashform" id="yr"
-                                    style="font-size: 12px;">
-                                    <option value="">Established in:</option>
+                                  <select class="selectpicker btn form-control dashformselect" id="yr"
+                                    style="font-size: 12px;" onchange="changeMe(this)">
+                                    <option value="" selected disabled>Established in:</option>
                                     <option value="2020">2020</option>
                                     <option value="2019">2019</option>
                                     <option value="2018">2018</option>
@@ -3545,10 +3582,10 @@
                                 </div>
                               </div>
                               <div class="form-row col-12">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="phone" class="float-left"><b>Phone Number:</b></label>
                                   <input type="number" class="form-control dashform" id="phone" required
-                                    style="border: 0px;">
+                                    style="border: 0px;" placeholder="Phone Number of your Company">
                                   <div class="invalid-feedback">
                                     Please provide a valid phone number.
                                   </div>
@@ -3556,9 +3593,10 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="google" class="float-left"><b>Google:</b></label><br>
-                                  <input type="text" class="form-control dashform" id="google" style="border: 0px;">
+                                  <input type="text" class="form-control dashform" id="google" style="border: 0px;"
+                                    placeholder="Gmail Address">
                                   <div class="invalid-feedback">
                                     Please provide a valid Gmail.
                                   </div>
@@ -3568,9 +3606,10 @@
                                 </div>
                               </div>
                               <div class="form-row col-12">
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="facebook" class="float-left"><b>Facebook:</b></label><br>
-                                  <input type="text" class="form-control dashform" id="facebook" style="border: 0px;">
+                                  <input type="text" class="form-control dashform" id="facebook" style="border: 0px;"
+                                    placeholder="Facebook Address">
                                   <div class="invalid-feedback">
                                     Please provide a valid Facebook Id.
                                   </div>
@@ -3578,9 +3617,10 @@
                                     Looks good!
                                   </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                   <label for="twitter" class="float-left"><b>Twitter:</b></label><br>
-                                  <input type="text" class="form-control dashform" id="twitter" style="border: 0px;">
+                                  <input type="text" class="form-control dashform" id="twitter" style="border: 0px;"
+                                    placeholder="Twitter Address">
                                   <div class="invalid-feedback">
                                     Please provide a valid Facebook Id.
                                   </div>
@@ -3597,10 +3637,10 @@
                     <tr>
                       <!-------eight row----->
                       <td colspan="4">
-                        <div class="row mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                        <div class="row mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 py-4 mx-2">
                           <div class="container col-12" style="padding:20px 0px;">
                             <div class="row">
-                              <div class="col">
+                              <div class="col-lg-3 col-md-6 col-sm-6 col-6 mt-2">
                                 <select class="selectpicker btn form-control dashform" style="font-size: 12px;">
                                   <option value="">Select Company</option>
                                   <option value="xyz">XYZ</option>
@@ -3608,7 +3648,7 @@
                                   <option value="efg">EFG</option>
                                 </select>
                               </div>
-                              <div class="col">
+                              <div class="col-lg-3 col-md-6 col-sm-6 col-6 mt-2">
                                 <select class="selectpicker btn form-control dashform" style="font-size: 12px;">
                                   <option class="black" value="">Country</option>
                                   <option class="black" value="1">Afghanistan</option>
@@ -3763,7 +3803,7 @@
                                   <option class="black" value="112">Zimbabwe</option>
                                 </select>
                               </div>
-                              <div class="col">
+                              <div class="col-lg-3 col-md-6 col-sm-6 col-6 mt-2">
                                 <select class="selectpicker btn form-control dashform" style="font-size: 12px;">
                                   <option value="">State</option>
                                   <option value="Pakistan">Pakistan</option>
@@ -3771,7 +3811,7 @@
                                   <option value="Iran">Iran</option>
                                 </select>
                               </div>
-                              <div class="col">
+                              <div class="col-lg-3 col-md-6 col-sm-6 col-6 mt-2">
                                 <select class="selectpicker btn form-control dashform" style="font-size: 12px;">
                                   <option class="black" value="">City</option>
                                   <option class="black" value="1180">Islamabad</option>
@@ -4325,242 +4365,247 @@
                         </div>
                       </td>
                     </tr>
+
+
+                    <tr>
+                      <!-------next row----->
+                      <td>
+                        <div class="row mt-3">
+                          <div
+                            class="px-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded text-muted py-2 mt-3 px-3 font-weight-bold"
+                            style="font-size: 16px;">
+                            Select Salary:
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!----------next row-->
+                      <td colspan="2">
+                        <div class="row">
+                          <div class="mx-4 mx-lg-4 my-lg-0 mx-md-2 mx-sm-3 my-0 form-group">
+                            <input type="range" id="rangeInput" class="slider float-left" step="1000" value="5000"
+                              min="5000" max="1000000" oninput="amount.value=rangeInput.value" required>
+                          </div>
+                        </div>
+                        <div class="row col-lg-6 col-md-10 col-sm-10 col-12 mt-2">
+                          <div class="col ">
+                            <output id="amount" name="amount" for="rangeInput" class="text-black float-left">5,000
+                            </output>
+                          </div>
+                          <div class="col ">
+                            <span class="float-right"> 1,000,000+</span>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-------next row----->
+                      <td>
+                        <div class="row mt-3">
+                          <div
+                            class="px-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded text-muted py-2 mt-3 px-3 font-weight-bold"
+                            style="font-size: 16px;">
+                            Is Active:
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-------next row----->
+                      <td colspan="2">
+                        <div class="row">
+                          <div class="px-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 py-2 mt-3 px-3">
+                            <div class="custom-control custom-radio custom-control-inline">
+                              <input type="radio" id="act1" name="activeradio" class="custom-control-input" required>
+                              <label class="custom-control-label" for="act1">Active</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                              <input type="radio" id="act2" name="activeradio" class="custom-control-input" required>
+                              <label class="custom-control-label" for="act2">Inactive</label>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-------next row----->
+                      <td>
+                        <div class="row mt-3">
+                          <div
+                            class="px-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded text-muted py-2 mt-3 px-3 font-weight-bold"
+                            style="font-size: 16px;">
+                            Is Featured:
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-------next row----->
+                      <td colspan="2">
+                        <div class="row">
+                          <div class="px-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 py-2 mt-3 px-3">
+                            <div class="custom-control custom-radio custom-control-inline">
+                              <input type="radio" id="act1" name="activeradio" class="custom-control-input" required>
+                              <label class="custom-control-label" for="act1">Featured</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                              <input type="radio" id="act2" name="activeradio" class="custom-control-input" required>
+                              <label class="custom-control-label" for="act2">Not Featured</label>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <!-------next row----->
+                      <td>
+                        <!----------------------------Update Button--------------------------->
+                        <div class="mx-4 delhov float-left">
+                          <button type="submit" class="btn text-white bt px-5">
+                            <div>
+                              Update
+                              <img class="" src="img/update.png" class="img-responsive">
+                            </div>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </thead>
+                </table>
+              </form>
             </div>
-
-            <tr>
-              <!-------next row----->
-              <td>
-                <div class="row mt-3">
-                  <div
-                    class="px-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded text-muted py-2 mt-3 px-3 font-weight-bold"
-                    style="font-size: 16px;">
-                    Select Salary:
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <!----------next row-->
-              <td colspan="2">
-                <div class="ml-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 form-group">
-                  <input type="range" id="rangeInput" class="slider float-left" step="1000" value="5000" min="5000"
-                    max="1000000" oninput="amount.value=rangeInput.value" required>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <!-------next row----->
-              <td colspan="2">
-                <output id="amount" name="amount" for="rangeInput" class="text-black float-left ">5,000
-                </output><span class="center"> 1,000,000+</span>
-              </td>
-            </tr>
-            <tr>
-              <!-------next row----->
-              <td>
-                <div class="row mt-3">
-                  <div
-                    class="px-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded text-muted py-2 mt-3 px-3 font-weight-bold"
-                    style="font-size: 16px;">
-                    Is Active:
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <!-------next row----->
-              <td colspan="2">
-                <div class="row">
-                  <div class="px-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 py-2 mt-3 px-3">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" id="act1" name="activeradio" class="custom-control-input" required>
-                      <label class="custom-control-label" for="act1">Active</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" id="act2" name="activeradio" class="custom-control-input" required>
-                      <label class="custom-control-label" for="act2">Inactive</label>
-                    </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <!-------next row----->
-              <td>
-                <div class="row mt-3">
-                  <div
-                    class="px-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 rounded text-muted py-2 mt-3 px-3 font-weight-bold"
-                    style="font-size: 16px;">
-                    Is Featured:
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <!-------next row----->
-              <td colspan="2">
-                <div class="row">
-                  <div class="px-4 mx-lg-4 my-lg-0 m-md-2 m-sm-1 mb-0 mt-0 py-2 mt-3 px-3">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" id="act1" name="activeradio" class="custom-control-input" required>
-                      <label class="custom-control-label" for="act1">Featured</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" id="act2" name="activeradio" class="custom-control-input" required>
-                      <label class="custom-control-label" for="act2">Not Featured</label>
-                    </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <!-------next row----->
-              <td>
-                <!----------------------------Update Button--------------------------->
-                <div class="mx-4 delhov float-left">
-                  <button type="submit" class="btn text-white bt px-5">
-                    <div>
-                      Update
-                      <img class="" src="img/update.png" class="img-responsive">
-                    </div>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            </thead>
-            </table>
-            </form>
           </div>
         </div>
-      </div>
 
-      <!----------------------jobs posted------------------->
-      <div class="mx-4 myDiv" id="jobsposted">
-        <!--EMPLOYERS SECTION-->
-        <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px; ">Posted Jobs</p>
-        <div class="container roun bg-white" style="border-radius: 20px;">
-          <div class="row bg-success seekdiv text-white">
-            <span class="mx-4 my-3"><b>Details</b></span>
-          </div>
-          <div class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
-            <!------------Employers table-------------->
-            <table class="table table-sm table-hover seekdeltable ">
-              <!---------------------------thead------------------------>
-              <thead>
-                <!----------first row-->
-                <tr class="text-center" style="background-color: #0D2942; color: white;">
-                  <th scope="col">Company Name</th>
-                  <th scope="col"> Job Position</th>
-                  <th scope="col">Posted Date</th>
-                  <th scope="col">Location</th>
-                </tr>
-              </thead>
-              <!---------------------------------tbody--------------------------->
-              <tbody>
-                <tr>
+        <!----------------------jobs posted------------------->
+        <div class="mx-4 myDiv" id="jobsposted">
+          <!--EMPLOYERS SECTION-->
+          <p class=" font-weight-bold" style="color: #797a7a; font-size: 20px; ">Posted Jobs</p>
+          <div class="container roun bg-white" style="border-radius: 20px;">
+            <div class="row bg-success seekdiv text-white">
+              <span class="mx-4 my-3"><b>Details</b></span>
+            </div>
+            <div class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
+              <!------------Employers table-------------->
+              <table class="table table-sm table-hover seekdeltable ">
+                <!---------------------------thead------------------------>
+                <thead>
                   <!----------first row-->
-                  <td>Innostark Technologies</td>
-                  <td>Senior Software Quality Assurance Engineer</td>
-                  <td>Sep 04, 2020</td>
-                  <td>Lahore Pakistan</td>
-                </tr>
-                <tr>
-                  <!----------second row-->
-                  <td>Innostark Technologies</td>
-                  <td>Senior Software Quality Assurance Engineer</td>
-                  <td>Sep 04, 2020</td>
-                  <td>Lahore Pakistan</td>
-                </tr>
-                <tr>
-                  <!----------third row-->
-                  <td>Innostark Technologies</td>
-                  <td>Senior Software Quality Assurance Engineer</td>
-                  <td>Sep 04, 2020</td>
-                  <td>Lahore Pakistan</td>
-                </tr>
-              </tbody>
-            </table>
+                  <tr class="text-center" style="background-color: #0D2942; color: white;">
+                    <th scope="col">Company Name</th>
+                    <th scope="col"> Job Position</th>
+                    <th scope="col">Posted Date</th>
+                    <th scope="col">Location</th>
+                  </tr>
+                </thead>
+                <!---------------------------------tbody--------------------------->
+                <tbody>
+                  <tr>
+                    <!----------first row-->
+                    <td>Innostark Technologies</td>
+                    <td>Senior Software Quality Assurance Engineer</td>
+                    <td>Sep 04, 2020</td>
+                    <td>Lahore Pakistan</td>
+                  </tr>
+                  <tr>
+                    <!----------second row-->
+                    <td>Innostark Technologies</td>
+                    <td>Senior Software Quality Assurance Engineer</td>
+                    <td>Sep 04, 2020</td>
+                    <td>Lahore Pakistan</td>
+                  </tr>
+                  <tr>
+                    <!----------third row-->
+                    <td>Innostark Technologies</td>
+                    <td>Senior Software Quality Assurance Engineer</td>
+                    <td>Sep 04, 2020</td>
+                    <td>Lahore Pakistan</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!----------------------employer report fake------------------->
-      <div class="mx-4 myDiv" id="employerreportfake">
-        <!--EMPLOYERS SECTION-->
-        <div class="container roun bg-white" style="border-radius: 20px;">
-          <div class="row bg-success seekdiv text-white">
-            <span class="mx-4 my-3"><b>Employees</b></span>
-          </div>
-          <div class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
-            <!------------Employers table-------------->
-            <table class="table table-sm table-hover seekdeltable ">
-              <!---------------------------thead------------------------>
-              <thead>
-                <tr>
-                  <!----------first row-->
-                  <td>
-                    <div class="form-group">
-                      <input type="text" class="form-control dashform m-0 text-center" id="empname" placeholder="Name">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group">
-                      <input type="number" class="form-control dashform m-0 text-center" id="empid" placeholder="ID">
-                    </div>
-                  </td>
-                </tr>
-                <!----------second row-->
-                <tr class="text-center" style="background-color: #0D2942; color: white;">
-                  <th scope="col">Name</th>
-                  <th scope="col">ID</th>
-                  <th scope="col">Action</th>
-                </tr>
-              </thead>
-              <!---------------------------------tbody--------------------------->
-              <tbody>
-                <tr>
-                  <!----------first row-->
-                  <td>XYZ</td>
-                  <td>0011</td>
-                  <td>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <img src="img/deletedash.png" class="img-fluid delhov" onclick="">
+        <!----------------------employer report fake------------------->
+        <div class="mx-4 myDiv" id="employerreportfake">
+          <!--EMPLOYERS SECTION-->
+          <div class="container roun bg-white" style="border-radius: 20px;">
+            <div class="row bg-success seekdiv text-white">
+              <span class="mx-4 my-3"><b>Employees</b></span>
+            </div>
+            <div class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
+              <!------------Employers table-------------->
+              <table class="table table-sm table-hover seekdeltable ">
+                <!---------------------------thead------------------------>
+                <thead>
+                  <tr>
+                    <!----------first row-->
+                    <td>
+                      <div class="form-group rounded roun">
+                        <input type="text" class="form-control dashform m-0 text-center" id="empname"
+                          placeholder="Name"  style="border: 0px;">
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
+                    </td>
+                    <td>
+                      <div class="form-group rounded roun">
+                        <input type="number" class="form-control dashform m-0 text-center" id="empid" placeholder="ID"  style="border: 0px;">
+                      </div>
+                    </td>
+                  </tr>
                   <!----------second row-->
-                  <td>XYZ</td>
-                  <td>0011</td>
-                  <td>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <img src="img/deletedash.png" class="img-fluid delhov" onclick="">
+                  <tr class="text-center" style="background-color: #0D2942; color: white;">
+                    <th scope="col">Name</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <!---------------------------------tbody--------------------------->
+                <tbody>
+                  <tr>
+                    <!----------first row-->
+                    <td>XYZ</td>
+                    <td>0011</td>
+                    <td>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <img src="img/deletedash.png" class="img-fluid delhov" onclick="">
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <!----------third row-->
-                  <td>XYZ</td>
-                  <td>0011</td>
-                  <td>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <img src="img/deletedash.png" class="img-fluid delhov" onclick="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <!----------second row-->
+                    <td>XYZ</td>
+                    <td>0011</td>
+                    <td>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <img src="img/deletedash.png" class="img-fluid delhov" onclick="">
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!----------third row-->
+                    <td>XYZ</td>
+                    <td>0011</td>
+                    <td>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <img src="img/deletedash.png" class="img-fluid delhov" onclick="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
   <!-- Optional JavaScript -->
