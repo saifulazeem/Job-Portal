@@ -5,6 +5,9 @@ html,body
 .n {
     background: #0D2942;
   }
+  .addhov:hover{
+    cursor: hand;
+  }
 body{
   font-family: 'Segoe UI';
 }

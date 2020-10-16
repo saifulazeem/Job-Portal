@@ -11,7 +11,8 @@
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
     <style>
@@ -34,6 +35,17 @@
             border: 0px solid;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            $('.regdiv').hide();
+            $('.addhov').hover(function () {
+                $('.regdiv').show();
+            }, function () {
+                $('.regdiv').hide();
+            });
+           
+        });
+    </script>
 </head>
 
 <body>
@@ -75,24 +87,97 @@
                     <button class="btn btn-lg rounded-pill mx-lg-2 px-5 btnLogin">
                         <a href="login.html" class="text-white" style="text-decoration: none;">Login</a>
                     </button>
+                    <div class="addhov">
+                        <img src="img/homeadd.png" class="img-fluid">
+                    </div>
+
                 </div>
             </nav>
         </div>
 
         <!--------------------------------------------------overlay container----------------------------->
-        <div class="container-fluid homeover" style="position: relative; ">
+        <div class="container-fluid homeover homepad" style="position: relative;">
             <div class="row">
-                <div class="col-lg-8 col-md-12 col-sm-12 col-12 homepad hometxt">
+                <div class="col-lg-6 col-md-8 col-sm-8 col-8 hometxt">
                     <p class="text-left homemaintxt text-white "><b>Find your job favorite
                             and immediate</b></p>
                     <p class="text-left text-white">Search for your dream job while on the go
                         with the best job-search web platform available
                     </p>
                 </div>
+                <div class="regdiv col-lg-6 col-md-4 col-sm-8 col-8 hometxt">
+                    <!------------------------------onhover div----------------------------------->
+                    <div class=" row col-12">
+                        <div class="row mt-4 mx-2 roun"
+                            style="border-radius: 13px;padding:30px; margin-bottom: -50px;background-color:#FFFFFF;">
+                            <form class="col-12 needs-validation" novalidate>
+                                <div class="form-row">
+                                    <div class="col-lg-6">
+                                        <div class="delhov">
+                                            <button type="submit" class="btn text-white btg px-4 my-4">
+                                                <div>
+                                                    <img class="" src="img/js.png" class="img-responsive">
+                                                    <span class="mx-1">CANDIDATE</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="delhov">
+                                            <button type="submit" class="btn text-white btg px-4 my-4">
+                                                <div>
+                                                    <img class="" src="img/emp.png" class="img-responsive">
+                                                    <span class="mx-1">EMPLOYER</span>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-------------------------------Username------------------------------------->
+                                <div class="form-group mt-3">
+                                    <input type="text" size="60" class="form-control f h-" id="name"
+                                        placeholder="Username" class="rounded" required>
+
+                                    <div class="invalid-feedback">
+                                        Please provide a valid username.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <!-------------------------------Email------------------------------------->
+                                <div class="form-group mt-3">
+                                    <input type="email" size="60" class="form-control f" id="mail" placeholder="Email"
+                                        class="rounded" required>
+
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+
+
+
+                                <!-------------------------BUTTON------------------------------------->
+                                <div class="d-flex justify-content-center align-self-center mt-3 ">
+                                    <button type="submit" class="btn text-white bt py-2 px-4">
+                                        <a href="#" class="text-white"
+                                            style="text-decoration: none;">Register</a></button>
+                                </div>
+                                <div class="row text-muted mt-4" style="font-size: 20px;">
+                                    Password will be generated and sent to your email address.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="container-fluid">
+            <div class="container-fluid mt-3">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 table-responsive" style="padding: 0px 240px;">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 table-responsive">
                         <table class="table table-borderless table-sm">
                             <tbody>
                                 <tr>
@@ -886,76 +971,6 @@
             </div>
         </div>
     </div>
-
-    <!------------------------------onhover div----------------------------------->
-    <div class="container">
-        <div class="row col-5 mt-4 mx-2 rounded roun" style="padding:30px; margin-bottom: -50px;background-color:#e0e0e0;">
-            <form class="needs-validation" novalidate>
-
-
-                <div class="form-row">
-                    <div class="col-lg-6">
-                        <div class="delhov">
-                            <button type="submit" class="btn text-white btg px-4 my-4">
-                              <div>
-                                <img class="" src="img/js.png" class="img-responsive">
-                                <span class="mx-1">CANDIDATE</span>
-                              </div>
-                            </button>
-                          </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="delhov">
-                            <button type="submit" class="btn text-white btg px-4 my-4">
-                              <div>
-                                <img class="" src="img/emp.png" class="img-responsive">
-                                <span class="mx-1">EMPLOYER</span>
-                              </div>
-                            </button>
-                          </div>
-                    </div>
-                </div>
-
-                <!-------------------------------Username------------------------------------->
-                <div class="form-group mt-3">
-                    <input type="text" size="60" class="form-control f h-" id="name" placeholder="Username" class="rounded"
-                        required>
-
-                    <div class="invalid-feedback">
-                        Please provide a valid username.
-                    </div>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                </div>
-                <!-------------------------------Email------------------------------------->
-                <div class="form-group mt-3">
-                    <input type="email" size="60" class="form-control f" id="mail" placeholder="Email" class="rounded"
-                        required>
-
-                    <div class="invalid-feedback">
-                        Please provide a valid email.
-                    </div>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                </div>
-
-
-
-                <!-------------------------BUTTON------------------------------------->
-                <div class="d-flex justify-content-center align-self-center mt-3 ">
-                    <button type="submit" class="btn text-white bt py-2 px-4">
-                        <a href="#" class="text-white" style="text-decoration: none;">Register</a></button>
-                </div>
-                <div class="row text-muted mt-4">
-                    Password will be generated and sent to your email address.
-                </div>
-            </form>
-        </div>
-    </div>
-    </div>
-
 
     <!-----------------------------------------------------FOOTER----------------------------------------------------------->
     <footer class="container-fluid foot" style="background-color: #323232;">
