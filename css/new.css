@@ -74,12 +74,6 @@ body{
     background-color: aliceblue;
     color: aliceblue;
 }
-.navbar-toggler{
-  background-color: blanchedalmond;
-}
-.navbar-toggler-icon{
-  background-color: black;
-}
 .tag{
   font-size: 25px;
 }
@@ -303,11 +297,12 @@ margin:30px;
   padding-left: 3px;
 }
 .homedivtxt{
-  font-size: 30px;
+  font-size: 18px;
   font-weight:600;
+  text-align: left;
 }
 .homedivsubtxt{
-  font-size: 20px;
+  font-size: 14px;
 }
 /*home.html slider*/
 .homeimgslide{
@@ -324,7 +319,22 @@ margin:30px;
   position:absolute;
   text-align:center;
   border-radius: 15px; 
-  background-color: #0BB44F;
+}
+.hometxt{
+  top:-490px;
+  left:20px;
+  font-size: 18px;
+}
+.homemaintxt{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+.hoverhome{
+  border-radius: 5px;padding:5px;
+}
+.hoverhomerel{
+  position: relative; top:-800px; left:100px;
 }
 /*home.html globe images*/
 .s1{
@@ -418,6 +428,23 @@ padding-top: 200px;
   padding-right: 35px;
   padding-left: 35px;
   border-radius: 4px;
+}
+.navpad{
+  margin: 0px 20px;
+}
+.navover{
+  top: -800px;
+}
+.hovtxt{
+  font-size: 12px;
+}
+.formdiv::placeholder{
+  color:#707070;
+  font-size: 12px;
+}
+.formdiv{
+  height:40px;
+  padding: 0px 3px;
 }
  }
 /***********************************************************************************************************************/
@@ -539,6 +566,7 @@ padding-top: 200px;
 .homedivtxt{
   font-size: 20px;
   font-weight:600;
+  text-align: left;
 }
 /*home.html slider*/
 .homeimgslide{
@@ -556,11 +584,30 @@ padding-top: 200px;
   position:absolute;
   text-align:center;
   border-radius: 15px; 
-  background-color: #0BB44F;
+}
+.homepad{
+  padding-left: 90px;
+  padding-right: 0px;
 }
 /*home.html slider "Select category" position button*/
 .homesel{
   right:-30px;
+}
+.hometxt{
+  top:-490px;
+  left:0px;
+  font-size: 18px;
+}
+.homemaintxt{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+.hoverhome{
+  border-radius: 5px;padding:10px;
+}
+.hoverhomerel{
+  position: relative; top:-800px; left:150px;
 }
 /*home.html globe images*/
 .s1{
@@ -654,6 +701,23 @@ padding-top: 200px;
   padding-right: 45px;
   padding-left: 45px;
   border-radius: 5px;
+}
+.navpad{
+ margin: 0px 90px 0px 90px;
+}
+.navover{
+  top: -800px;
+}
+.hovtxt{
+  font-size: 14px;
+}
+.formdiv::placeholder{
+  color:#707070;
+  font-size: 12px;
+}
+.formdiv{
+  height:40px;
+  padding: 0px 5px;
 }
  }
 /***********************************************************************************************************************/
@@ -788,12 +852,13 @@ padding-top: 200px;
   padding-left: 3px;
 }
 .homepad{
-  padding-left: 240px;
-  padding-right: 150px;
+  padding-left: 70px;
+  padding-right: 0px;
 }
 .homedivtxt{
   font-size: 22px;
   font-weight:620;
+  text-align: left;
 }
 /*home.html slider*/
 .homeimgslide{
@@ -810,11 +875,24 @@ padding-top: 200px;
   position:absolute;
   text-align:center;
   border-radius: 15px; 
-  background-color: #0BB44F;
 }
 /*home.html slider "Select category" position button*/
 .homesel{
   right:-90px;
+}
+.hometxt{
+  top:-490px;
+  left:0px;
+  font-size: 20px;
+}
+.homemaintxt{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  left: 46px;
+  font-size: 46px;
+}
+.hoverhome{
+  border-radius: 5px;padding:0px 0px;margin-bottom: -110px;
 }
 /*home.html globe images*/
 .s1{
@@ -913,6 +991,34 @@ padding-top: 200px;
   padding-right: 55px;
   padding-left: 55px;
   border-radius: 8px;
+}
+.navpad{
+  margin: 0px 90px 0px 90px;
+}
+.navover{
+  top: -800px;
+}
+.hovtxt{
+  font-size: 16px;
+}
+/*form home.html*/
+.homekey{
+  width: 170px;height:50px;margin-left: 0px;
+}
+.homeloccat{
+  width: 155px;height:50px;margin-left: 0px;
+}
+.homebtn{
+  width: 90px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
+  font-size: 14px;
+}
+.formdiv::placeholder{
+  color:#707070;
+  font-size: 14px;
+}
+.formdiv{
+  height:45px;
+  padding: 0px 5px;
 }
  }
  /***********************************************************************************************************************/
@@ -1035,7 +1141,7 @@ padding-top: 200px;
   width:1300px;
 }
 .homeover{
-  margin-top: -250px;
+  margin-top: -650px;
 }
 .hometexttop{
   position: absolute;
@@ -1043,12 +1149,14 @@ padding-top: 200px;
   left: 196px;
 }
 .homepad{
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 140px;
+  padding-right: 80px;
+  top:-40px;
 }
 .homedivtxt{
-  font-size: 26px;
+  font-size: 22px;
   font-weight:650;
+  text-align: left;
 }
 /*home.html slider*/
 .homeimgslide{
@@ -1065,7 +1173,6 @@ padding-top: 200px;
   position:absolute;
   text-align:center;
   border-radius: 20px; 
-  background-color: #0BB44F;
 }
 /*home.html slider "Select category" position button*/
 .homesel{
@@ -1161,6 +1268,55 @@ padding-top: 200px;
   padding-right: 50px;
   padding-left: 50px;
   border-radius: 5px;
+}
+.navpad{
+  margin: 0px 120px 0px 120px;
+}
+.navover{
+  top: -800px;
+}
+.hometxt{
+  top:-150px;
+  left:0px;
+  font-size: 22px;
+}
+
+.homemaintxt{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  left: 46px;
+  font-size: 56px;
+}
+.homekey::placeholder{
+  font-size: 14px;
+}
+.homeloccat::placeholder{
+  font-size: 14px;
+}
+/*form home.html*/
+.homekey{
+  width: 240px;height:50px;margin-left: 0px;
+}
+.homeloccat{
+  width: 240px;height:50px;margin-left: 0px;
+}
+.homebtn{
+  width: 90px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
+  font-size: 14px;
+}
+.hoverhome{
+  border-radius: 9px;padding:1px;margin-bottom: -190px;
+}
+.hovtxt{
+  font-size: 18px;
+}
+.formdiv::placeholder{
+  color:#707070;
+  font-size: 16px;
+}
+.formdiv{
+  height:50px;
+  padding: 0px 5px;
 }
  }
 /***********************************************************************************************************************/
@@ -1281,16 +1437,28 @@ padding-top: 200px;
 }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:900px; top:3300px;
+  position: absolute;left:850px; top:3170px;
+}
+.s1div{
+  position: absolute;left:-60px;width:250px;
 }
 .s2{
   position: absolute; left: 400px; top:3300px;
 }
+.s2div{
+  position: absolute;left:-80px;width:250px;
+}
 .s3{
   position: absolute; right:450px;top:3100px;
 }
+.s3div{
+  position: absolute;left:-80px;width:250px;
+}
 .s4{
-  position: absolute; left:500px; top:3100px;
+  position: absolute; left:580px; top:3050px;
+}
+.s4div{
+  position: absolute;left:-80px;width:250px;
 }
 /*home.html main img top*/ 
 .homeimg{
@@ -1300,22 +1468,20 @@ padding-top: 200px;
 .homeover{
   margin-top: -700px;
 }
-.homefeat{
-  font-size: 25px;
-  font-weight: 500;
-}
+
 .hometexttop{
   position: absolute;
   top: 130px;
   left: 196px;
 }
 .homepad{
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 220px;
+  padding-right: 220px;
 }
 .homedivtxt{
   font-size: 30px;
   font-weight:700;
+  text-align: left;
 }
 .homedivsubtxt{
   font-size: 20px;
@@ -1335,8 +1501,6 @@ padding-top: 200px;
   position:absolute;
   text-align:center;
   border-radius: 20px; 
-  background-color: #0BB44F;
-  opacity: 0.7;
   left:17px;
 }
 /*home.html slider "Select category" position button*/
@@ -1440,10 +1604,16 @@ font-size: 20px;
 }
 /*form home.html*/
 .homekey{
-  width: 400px;height:50px;margin-left: 0px;
+  width: 370px;height:50px;margin-left: 0px;
 }
 .homeloccat{
   width: 360px;height:50px;margin-left: 0px;
+}
+.homekey::placeholder{
+  font-size: 16px;
+}
+.homeloccat::placeholder{
+  font-size: 16px;
 }
 .homebtn{
   width: 140px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
@@ -1456,6 +1626,30 @@ font-size: 20px;
   padding-left: 95px;
   border-radius: 8px;
 }
+.hometxt{
+  top:-100px;
+  font-size: 22px;
+}
+
+.homemaintxt{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 56px;
+}
+.hoverhome{
+  border-radius: 13px;padding:30px;margin-bottom: -220px;
+}
+.hovtxt{
+  font-size: 20px;
+}
+.formdiv::placeholder{
+  color:#707070;
+  font-size: 20px;
+}
+.formdiv{
+  height:60px;
+  padding: 0px 15px;
+}
 }
 /******************************************************************************************/
 .homeemp{
@@ -1466,7 +1660,7 @@ font-size: 20px;
 }
 /*black overlay effect on image*/
 .header {
-  background: black;
+  background:rgba(0, 0, 0, 0.8);
 }
 /*for every centered main images in all pgs*/
  .imag {
@@ -1862,14 +2056,24 @@ option:first-child
   font-size: 12px;
 }
 
-.hometxt{
-  top:-100px;
-  left: 46px;
-  font-size: 22px;
+
+.comment {
+  position: relative;
+  background-color: #fff;
 }
-.homemaintxt{
-  margin-top: 50px;
-  margin-bottom: 30px;
-  left: 46px;
-  font-size: 56px;
+.comment::before{
+content:"";
+position: absolute;
+top:-16px;
+left:115px;
+margin:auto;
+height: 30px;
+width: 30px;
+border:1px solid #fff;
+transform:rotate(45deg);
+background-color:  #fff;
+}
+.homefeat{
+  font-size: 25px;
+  font-weight: 500;
 }
