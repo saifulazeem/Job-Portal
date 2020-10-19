@@ -80,13 +80,7 @@ color: #0BB44F;text-decoration: none; font-size: 16px;
     background-color: aliceblue;
     color: aliceblue;
 }
-.tag{
-  font-size: 25px;
-}
-.text
-{
-  font-size: 16px;
-}
+
 td {
 color:white;
 }
@@ -196,14 +190,15 @@ color:white;
    position: absolute;
    left: -30px;
    }
-    /*Footer form*/
-    .newsform{
-      padding-left:70px;
-     }
-     /*Footer table
-     .foottab{
-      padding-left:10px;
-     }*/
+     /*Footer form*/
+   .newsform{
+    padding-top:0px;
+     padding-left: 0px;
+    }
+    .tablehome td{
+      font-size: 14px;
+      text-align: left;
+    }
 /* Top left text */
 .top-left {
   position: absolute;
@@ -303,8 +298,8 @@ margin:30px;
   padding-left: 3px;
 }
 .homedivtxt{
-  font-size: 18px;
-  font-weight:600;
+  font-size: 22px;
+  font-weight:680;
   text-align: left;
 }
 .homedivsubtxt{
@@ -313,7 +308,7 @@ margin:30px;
 /*home.html slider*/
 .homeimgslide{
   position: relative; 
-  border-radius: 20px;
+  border-radius: 10px;
   width:120px;
   height:120px;
   margin: 0px;
@@ -321,10 +316,28 @@ margin:30px;
 .homeimgslidetxt{
   font-size:12px;
   width:120px;
-  top: 100px; 
+  top: 91px; 
   position:absolute;
   text-align:center;
-  border-radius: 15px; 
+  border-radius: 10px;
+  left:8px; 
+}
+/*home.html slider "Select category" position button*/
+.homesel{
+  right:-30px;
+}
+.btncarousel{
+  font-size:20px; border-radius: 40px;height:30px; width:30px;
+  background-color: #0BB44F;
+  color: white;
+}
+
+.btncarousel:hover{
+  background-color: #ccc;
+  color:#0BB44F;
+}
+.featover{
+  top:-330px;position:relative;margin-bottom: -220px;
 }
 .hometxt{
   top:-490px;
@@ -341,37 +354,86 @@ margin:30px;
 }
 /*form home.html*/
 .homekey{
-  width: 280px;height:50px;margin-left: 0px;
-}
-.homeloccat{
   width: 155px;height:50px;margin-left: 0px;
 }
+.homeloccat{
+  width: 135px;height:50px;margin-left: 0px;
+}
 .homebtn{
-  width: 90px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
+  width: 70px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
   font-size: 14px;
 }
 .searchform{
   top:-400px;
 }
-.hoverhomerel{
-  position: relative; top:-800px; left:100px;
+.hoverdown{
+  border-radius: 10px;padding:0px;margin-bottom: -420px; top:136px;
 }
+.hoverhomerel{
+  position: absolute; left:130px;
+}
+.hovtxt{
+  font-size: 12px;
+}
+.formdiv::placeholder{
+  color:#707070;
+  font-size: 12px;
+}
+.formdiv{
+  height:40px;
+  padding: 0px 15px;
+  border-radius: 3px;
+}
+.boldheader{
+  font-size: 12px;
+}
+.comment::before{
+  content:"";
+  position: absolute;
+  top:-6px;
+  left:75px;
+  margin:auto;
+  height: 20px;
+  width: 20px;
+  border:1px solid #fff;
+  transform:rotate(45deg);
+  background-color:  #fff;
+  }
+  .tag{
+    font-size:16px;
+  }
+  .text
+  {
+    font-size: 14x;
+  }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:400px; top:4250px;
-  width: 60px;height:60px;
+  position: absolute;left:70px; top:0px;
+  width:70px;height: 70px;
+}
+.s1div{
+  position: absolute;left:-60px;width:160px;
 }
 .s2{
-  position: absolute; left:350px; top:4300px;
-  width: 60px;height:60px;
+  position: absolute; left: 240px; top:20px;
+  width:70px;height: 70px;
+}
+.s2div{
+  position: absolute;left:-50px;width:160px;
 }
 .s3{
-  position: absolute; left:190px; top:4350px;
-  width: 60px;height:60px;
+  position: absolute; left:130px;top:130px;
+  width:70px;height: 70px;
+}
+.s3div{
+  position: absolute;left:-50px;width:160px;
 }
 .s4{
-  position: absolute; left:120px; top:4200px;
-  width: 60px;height:60px;
+  position: absolute; left:400px; top:30px;
+  width:70px;height: 70px;
+}
+.s4div{
+  position: absolute;left:-51px;width:160px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -453,33 +515,23 @@ padding-top: 200px;
 .navover{
   top: -800px;
 }
-.hovtxt{
-  font-size: 12px;
-}
-.formdiv::placeholder{
-  color:#707070;
-  font-size: 12px;
-}
-.formdiv{
-  height:40px;
-  padding: 0px 3px;
-}
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
   .resp {
    position: absolute;
-   left: -50px;
+   left: -60px;
    }
     /*Footer form*/
-    .newsform{
-      padding-top:40px;
-      padding-left:120px;
-     }
-     /*Footer table
-     .foottab{
-      padding-left:10px;
-     }*/
+   /*Footer form*/
+   .newsform{
+    padding-left: 0px;
+    padding-top: 40px;
+   }
+   .tablehome td{
+    font-size: 14px;
+    text-align: left;
+  }
   /*home.html main image*/
 .topimg{
   top:-180px;
@@ -583,13 +635,13 @@ padding-top: 200px;
 }
 .homedivtxt{
   font-size: 20px;
-  font-weight:600;
+  font-weight:660;
   text-align: left;
 }
 /*home.html slider*/
 .homeimgslide{
   position: relative; 
-  border-radius: 20px;
+  border-radius: 7px;
   width:150px;
   height:150px;
   margin: 0px;
@@ -598,10 +650,11 @@ padding-top: 200px;
 .homeimgslidetxt{
   font-size:16px;
   width:150px;
-  top: 120px; 
+  top: 115px; 
   position:absolute;
   text-align:center;
-  border-radius: 15px; 
+  border-radius: 8px; 
+  left: 17px;
 }
 .homepad{
   padding-left: 90px;
@@ -611,10 +664,39 @@ padding-top: 200px;
 .homesel{
   right:-30px;
 }
+.btncarousel{
+  font-size:20px; border-radius: 40px;height:30px; width:30px;
+  background-color: #0BB44F;
+  color: white;
+}
+
+.btncarousel:hover{
+  background-color: #ccc;
+  color:#0BB44F;
+}
+.featover{
+  top:-320px;position:relative;margin-bottom: -200px;
+}
 .hometxt{
   top:-490px;
   left:0px;
   font-size: 18px;
+}
+.hoverdown{
+  border-radius: 5px;padding:0px;margin-bottom: -420px; top:130px;
+}
+.hoverhomerel{
+  position: absolute; left:190px;
+}
+.formdiv::placeholder{
+  color:#707070;
+  font-size: 12px;
+}
+.formdiv{
+  height:40px;
+  width:340px;
+  padding: 0px 5px;
+  border-radius: 5px;
 }
 .homemaintxt{
   margin-top: 50px;
@@ -623,9 +705,6 @@ padding-top: 200px;
 }
 .hoverhome{
   border-radius: 5px;padding:10px;
-}
-.hoverhomerel{
-  position: relative; top:-800px; left:150px;
 }
 /*form home.html*/
 .homekey{
@@ -641,22 +720,57 @@ padding-top: 200px;
 .searchform{
   top:-400px;
 }
+.boldheader{
+  font-size: 14px;
+}
+
+.comment::before{
+  content:"";
+  position: absolute;
+  top:-16px;
+  left:115px;
+  margin:auto;
+  height: 30px;
+  width: 30px;
+  border:1px solid #fff;
+  transform:rotate(45deg);
+  background-color:  #fff;
+  }
+  .tag{
+    font-size: 16px;
+  }
+  .text
+  {
+    font-size: 14px;
+  }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:450px; top:3690px;
-  width: 80px;height:80px;
+  position: absolute;left:100px; top:0px;
+  width:90px;height: 90px;
+}
+.s1div{
+  position: absolute;left:-60px;width:250px;
 }
 .s2{
-  position: absolute; left: 350px; top:3600px;
-  width: 80px;height:80px;
+  position: absolute; left: 280px; top:90px;
+  width:90px;height: 90px;
+}
+.s2div{
+  position: absolute;left:-80px;width:250px;
 }
 .s3{
-  position: absolute; right:350px;top:3750px;
-  width: 80px;height:80px;
+  position: absolute; left:130px;top:130px;
+  width:90px;height: 90px;
+}
+.s3div{
+  position: absolute;left:-80px;width:250px;
 }
 .s4{
-  position: absolute; left:500px; top:3600px;
-  width: 80px;height:80px;
+  position: absolute; left:400px; top:30px;
+  width:90px;height: 90px;
+}
+.s4div{
+  position: absolute;left:-80px;width:250px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -740,14 +854,7 @@ padding-top: 200px;
 .hovtxt{
   font-size: 14px;
 }
-.formdiv::placeholder{
-  color:#707070;
-  font-size: 12px;
-}
-.formdiv{
-  height:40px;
-  padding: 0px 5px;
-}
+
  }
 /***********************************************************************************************************************/
 @media (min-width: 768px) {
@@ -757,12 +864,13 @@ padding-top: 200px;
    }
     /*Footer form*/
     .newsform{
-      padding-left: 130px;
+      padding-left: 0px;
+      padding-top: 0px;
      }
-     /*Footer table
-     .foottab{
-       left: -30px;
-     }*/
+     .tablehome td{
+      font-size: 14px;
+      text-align: left;
+    }
 /*home.html main image*/
    .topimg{
     top:-180px;
@@ -886,13 +994,13 @@ padding-top: 200px;
 }
 .homedivtxt{
   font-size: 22px;
-  font-weight:620;
+  font-weight:680;
   text-align: left;
 }
 /*home.html slider*/
 .homeimgslide{
   position: relative; 
-  border-radius: 20px;
+  border-radius: 10px;
   width:150px;
   height:180px;
   margin: 0px;
@@ -900,19 +1008,52 @@ padding-top: 200px;
 .homeimgslidetxt{
   font-size:16px;
   width:150px;
-  top: 150px; 
+  top: 145px; 
   position:absolute;
   text-align:center;
-  border-radius: 15px; 
+  border-radius: 10px; 
+  left: 19px;
 }
 /*home.html slider "Select category" position button*/
 .homesel{
-  right:-90px;
+  right:-80px;
+}
+.btncarousel{
+  font-size:20px; border-radius: 40px;height:30px; width:30px;
+  background-color: #0BB44F;
+  color: white;
+}
+
+.btncarousel:hover{
+  background-color: #ccc;
+  color:#0BB44F;
+}
+.featover{
+  top:-250px;position:relative;margin-bottom: -100px;
 }
 .hometxt{
   top:-490px;
   left:0px;
   font-size: 20px;
+}
+.hoverdown{
+  border-radius: 5px;padding:0px;margin-bottom: -420px; top:130px;
+}
+.hoverhomerel{
+  position: absolute; left:320px;
+}
+.hovtxt{
+  font-size: 12px;
+}
+.formdiv::placeholder{
+  color:#707070;
+  font-size: 12px;
+}
+.formdiv{
+  height:40px;
+  width:340px;
+  padding: 0px 5px;
+  border-radius: 5px;
 }
 .homemaintxt{
   margin-top: 50px;
@@ -926,22 +1067,53 @@ padding-top: 200px;
 .hoverhome{
   border-radius: 5px;padding:0px 0px;margin-bottom: -110px;
 }
+.boldheader{
+  font-size: 14px;
+}
+
+.comment::before{
+  content:"";
+  position: absolute;
+  top:-16px;
+  left:115px;
+  margin:auto;
+  height: 30px;
+  width: 30px;
+  border:1px solid #fff;
+  transform:rotate(45deg);
+  background-color:  #fff;
+  }
+  .tag{
+    font-size: 20px;
+  }
+  .text
+  {
+    font-size: 14px;
+  }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:700px; top:3600px;
-  width: 100px;height:100px;
+  position: absolute;left:140px; top:0px;
+}
+.s1div{
+  position: absolute;left:-60px;width:250px;
 }
 .s2{
-  position: absolute; left: 400px; top:3500px;
-  width: 100px;height:100px;
+  position: absolute; left: 380px; top:90px;
+}
+.s2div{
+  position: absolute;left:-80px;width:250px;
 }
 .s3{
-  position: absolute; right:350px;top:3450px;
-  width: 100px;height:100px;
+  position: absolute; left:160px;top:180px;
+}
+.s3div{
+  position: absolute;left:-80px;width:250px;
 }
 .s4{
-  position: absolute; left:500px; top:3600px;
-  width: 100px;height:100px;
+  position: absolute; left:570px; top:30px;
+}
+.s4div{
+  position: absolute;left:-80px;width:250px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -1027,9 +1199,7 @@ padding-top: 200px;
 .navover{
   top: -800px;
 }
-.hovtxt{
-  font-size: 16px;
-}
+
 /*form home.html*/
 .homekey{
   width: 200px;height:50px;margin-left: 0px;
@@ -1041,14 +1211,6 @@ padding-top: 200px;
   width: 90px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
   font-size: 14px;
 }
-.formdiv::placeholder{
-  color:#707070;
-  font-size: 14px;
-}
-.formdiv{
-  height:45px;
-  padding: 0px 5px;
-}
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
@@ -1058,8 +1220,12 @@ padding-top: 200px;
    }
    /*Footer form*/
    .newsform{
-     top:-40px;
+    padding-top:0px;
      padding-left: 0px;
+    }
+    .tablehome td{
+      font-size: 16px;
+      text-align: left;
     }
    
   /*home.html main image*/
@@ -1199,23 +1365,72 @@ padding-top: 200px;
   position:absolute;
   text-align:center;
   border-radius: 20px; 
+  left:15px;
 }
 /*home.html slider "Select category" position button*/
 .homesel{
-  right:-200px;
+  right:-130px;
 }
+.btncarousel{
+  font-size:20px; border-radius: 40px;height:40px; width:40px;
+  background-color: #0BB44F;
+  color: white;
+}
+
+.btncarousel:hover{
+  background-color: #ccc;
+  color:#0BB44F;
+}
+.featover{
+  top:-150px;position:relative;margin-bottom: -100px;
+}
+.boldheader{
+  font-size: 18px;
+}
+
+.comment::before{
+  content:"";
+  position: absolute;
+  top:-16px;
+  left:115px;
+  margin:auto;
+  height: 30px;
+  width: 30px;
+  border:1px solid #fff;
+  transform:rotate(45deg);
+  background-color:  #fff;
+  }
+  .tag{
+    font-size: 22px;
+  }
+  .text
+  {
+    font-size: 14px;
+  }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:900px; top:3300px;
+  position: absolute;left:180px; top:30px;
+}
+.s1div{
+  position: absolute;left:-60px;width:250px;
 }
 .s2{
-  position: absolute; left: 400px; top:3300px;
+  position: absolute; left: 550px; top:150px;
+}
+.s2div{
+  position: absolute;left:-80px;width:250px;
 }
 .s3{
-  position: absolute; right:350px;top:3250px;
+  position: absolute; left:290px;top:190px;
+}
+.s3div{
+  position: absolute;left:-80px;width:250px;
 }
 .s4{
-  position: absolute; left:500px; top:3100px;
+  position: absolute; left:740px; top:30px;
+}
+.s4div{
+  position: absolute;left:-80px;width:250px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -1310,6 +1525,22 @@ padding-top: 200px;
   left: 46px;
   font-size: 56px;
 }
+.hoverdown{
+  border-radius: 5px;padding:0px;margin-bottom: -420px; top:50px;
+}
+.hoverhomerel{
+  position: absolute; left:700px;
+}
+.formdiv::placeholder{
+  color:#707070;
+  font-size: 14px;
+}
+.formdiv{
+  height:40px;
+  width:340px;
+  padding: 0px 5px;
+  border-radius: 5px;
+}
 .homekey::placeholder{
   font-size: 14px;
 }
@@ -1331,18 +1562,10 @@ padding-top: 200px;
   font-size: 14px;
 }
 .hoverhome{
-  border-radius: 9px;padding:1px;margin-bottom: -190px;
+  border-radius: 5px;padding:1px;margin-bottom: -190px;
 }
 .hovtxt{
-  font-size: 18px;
-}
-.formdiv::placeholder{
-  color:#707070;
-  font-size: 16px;
-}
-.formdiv{
-  height:50px;
-  padding: 0px 5px;
+  font-size: 14px;
 }
  }
 /***********************************************************************************************************************/
@@ -1352,14 +1575,12 @@ padding-top: 200px;
    position: absolute;
    left: -150px;
    }
-   /*Footer form
+   /*Footer form*/
    .newsform{
-     padding-left: 30px;
-    }*/
-    /*Footer table
-    .foottab{
-      left: -30px;
-    }*/
+    padding-top:0px;
+     padding-left: 50px;
+     
+    }
    /*home.html main image*/
    .topimg{
     top:-250px;
@@ -1461,27 +1682,55 @@ padding-top: 200px;
 .over-about{
   top:-150px;
 }
+
+.tablehome td{
+  font-size: 16px;
+  text-align: left;
+}
+.tag{
+  font-size: 25px;
+}
+.text
+{
+  font-size: 16px;
+}
+/*home.html globe */
+.boldheader{
+  font-size: 20px;
+}
+.comment::before{
+  content:"";
+  position: absolute;
+  top:-16px;
+  left:115px;
+  margin:auto;
+  height: 30px;
+  width: 30px;
+  border:1px solid #fff;
+  transform:rotate(45deg);
+  background-color:  #fff;
+  }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:850px; top:3170px;
+  position: absolute;left:180px; top:30px;
 }
 .s1div{
   position: absolute;left:-60px;width:250px;
 }
 .s2{
-  position: absolute; left: 400px; top:3300px;
+  position: absolute; left: 550px; top:150px;
 }
 .s2div{
   position: absolute;left:-80px;width:250px;
 }
 .s3{
-  position: absolute; right:450px;top:3100px;
+  position: absolute; left:290px;top:190px;
 }
 .s3div{
   position: absolute;left:-80px;width:250px;
 }
 .s4{
-  position: absolute; left:580px; top:3050px;
+  position: absolute; left:740px; top:30px;
 }
 .s4div{
   position: absolute;left:-80px;width:250px;
@@ -1527,8 +1776,9 @@ padding-top: 200px;
   position:absolute;
   text-align:center;
   border-radius: 20px; 
-  left:17px;
+  left:9px;
 }
+
 /*home.html slider "Select category" position button*/
 .homesel{
   right:-170px;
@@ -1542,6 +1792,9 @@ padding-top: 200px;
 .btncarousel:hover{
   background-color: #ccc;
   color:#0BB44F;
+}
+.featover{
+  top:0px;position: relative;margin-bottom: -20px;
 }
 /*home.html placeholder*/
 .h::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -1625,7 +1878,7 @@ font-size: 20px;
   font-size: 14px;
 }
 .searchform{
-  top:-150px;
+  top:-130px;
 }
 /*form home.html*/
 .homekey{
@@ -1652,8 +1905,8 @@ font-size: 20px;
   border-radius: 8px;
 }
 .hometxt{
-  top:-100px;
-  font-size: 22px;
+  top:-110px;
+  font-size: 20px;
 }
 
 .homemaintxt{
@@ -1662,21 +1915,23 @@ font-size: 20px;
   font-size: 56px;
 }
 .hoverdown{
-  border-radius: 20px;padding:30px;margin-bottom: -420px; top:66px;
+  border-radius: 10px;padding:30px;margin-bottom: -420px; top:56px;
 }
 .hoverhomerel{
-  position: absolute; left:850px;
+  position: absolute; left:970px;
 }
 .hovtxt{
-  font-size: 20px;
+  font-size: 18px;
 }
 .formdiv::placeholder{
   color:#707070;
-  font-size: 20px;
+  font-size: 18px;
+  padding: 0px 15px;
 }
 .formdiv{
   height:60px;
   padding: 0px 15px;
+  border-radius: 10px;
 }
 .padleft{
   left:230px;
@@ -2095,19 +2350,7 @@ option:first-child
   position: relative;
   background-color: #fff;
 }
-.comment::before{
-content:"";
-position: absolute;
-top:-16px;
-left:115px;
-margin:auto;
-height: 30px;
-width: 30px;
-border:1px solid #fff;
-transform:rotate(45deg);
-background-color:  #fff;
-}
 .homefeat{
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 400;
 }
