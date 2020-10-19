@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <script>
+        $(document).ready(function () {
+            $(".myclass").hide();
+            $("div").hover(function () {
+                $(".myclass").hide();
+                $("#" + this.id + 1).show();
+            }, function () {
+                $("#" + this.id + 1).hide();
+            });
+        });
+    </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="firstdiv">First div
+        <div class="myclass" id="firstdiv1">Content1 Here</div>
+    </div>
+    <div id="seconddiv">Second div
+        <div class="myclass" id="seconddiv1">Content2 Here</div>
+    </div>
+    <div id="thirddiv">Third div
+        <div class="myclass" id="thirddiv1">Content3 Here</div>
+    </div>
+</body>
+
+</html>

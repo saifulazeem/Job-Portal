@@ -6,8 +6,9 @@ html,body
     background: #0D2942;
   }
   .addhov:hover{
-    cursor: hand;
+    cursor: pointer;
   }
+  
 body{
   font-family: 'Segoe UI';
 }
@@ -22,13 +23,18 @@ body{
     text-decoration: none;
   }
   .btnLogin{
-    font-size: 16px;
-    letter-spacing: 0px;
-    background-color: #0BB44F;
+    background-color: white;
+    color: #0BB44F;text-decoration: none; font-size: 16px;
   }
   .btnLogin:hover{
-    text-decoration: none;
-    background-color: #929292;
+    background-color: #0BB44F;
+    color: white;
+  }
+  .btnLogintxt{
+color: #0BB44F;text-decoration: none; font-size: 16px;
+  }
+  .btnLogintxt:hover{
+    color: white;
   }
   .s{
     right: 358px;
@@ -194,10 +200,10 @@ color:white;
     .newsform{
       padding-left:70px;
      }
-     /*Footer table*/
+     /*Footer table
      .foottab{
       padding-left:10px;
-     }
+     }*/
 /* Top left text */
 .top-left {
   position: absolute;
@@ -331,7 +337,21 @@ margin:30px;
   font-size: 36px;
 }
 .hoverhome{
-  border-radius: 5px;padding:5px;
+  border-radius: 5px;padding:3px;
+}
+/*form home.html*/
+.homekey{
+  width: 280px;height:50px;margin-left: 0px;
+}
+.homeloccat{
+  width: 155px;height:50px;margin-left: 0px;
+}
+.homebtn{
+  width: 90px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
+  font-size: 14px;
+}
+.searchform{
+  top:-400px;
 }
 .hoverhomerel{
   position: relative; top:-800px; left:100px;
@@ -429,9 +449,7 @@ padding-top: 200px;
   padding-left: 35px;
   border-radius: 4px;
 }
-.navpad{
-  margin: 0px 20px;
-}
+
 .navover{
   top: -800px;
 }
@@ -458,10 +476,10 @@ padding-top: 200px;
       padding-top:40px;
       padding-left:120px;
      }
-     /*Footer table*/
+     /*Footer table
      .foottab{
       padding-left:10px;
-     }
+     }*/
   /*home.html main image*/
 .topimg{
   top:-180px;
@@ -609,6 +627,20 @@ padding-top: 200px;
 .hoverhomerel{
   position: relative; top:-800px; left:150px;
 }
+/*form home.html*/
+.homekey{
+  width: 145px;height:50px;margin-left: 0px;
+}
+.homeloccat{
+  width: 135px;height:50px;margin-left: 0px;
+}
+.homebtn{
+  width: 90px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
+  font-size: 14px;
+}
+.searchform{
+  top:-400px;
+}
 /*home.html globe images*/
 .s1{
   position: absolute;left:450px; top:3690px;
@@ -702,9 +734,6 @@ padding-top: 200px;
   padding-left: 45px;
   border-radius: 5px;
 }
-.navpad{
- margin: 0px 90px 0px 90px;
-}
 .navover{
   top: -800px;
 }
@@ -730,10 +759,10 @@ padding-top: 200px;
     .newsform{
       padding-left: 130px;
      }
-     /*Footer table*/
+     /*Footer table
      .foottab{
        left: -30px;
-     }
+     }*/
 /*home.html main image*/
    .topimg{
     top:-180px;
@@ -891,6 +920,9 @@ padding-top: 200px;
   left: 46px;
   font-size: 46px;
 }
+.searchform{
+  top:-370px;
+}
 .hoverhome{
   border-radius: 5px;padding:0px 0px;margin-bottom: -110px;
 }
@@ -992,9 +1024,6 @@ padding-top: 200px;
   padding-left: 55px;
   border-radius: 8px;
 }
-.navpad{
-  margin: 0px 90px 0px 90px;
-}
 .navover{
   top: -800px;
 }
@@ -1003,10 +1032,10 @@ padding-top: 200px;
 }
 /*form home.html*/
 .homekey{
-  width: 170px;height:50px;margin-left: 0px;
+  width: 200px;height:50px;margin-left: 0px;
 }
 .homeloccat{
-  width: 155px;height:50px;margin-left: 0px;
+  width: 195px;height:50px;margin-left: 0px;
 }
 .homebtn{
   width: 90px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
@@ -1032,10 +1061,7 @@ padding-top: 200px;
      top:-40px;
      padding-left: 0px;
     }
-    /*Footer table*/
-    .foottab{
-      left: -30px;
-    }
+   
   /*home.html main image*/
 .topimg{
   top:-180px;
@@ -1269,9 +1295,6 @@ padding-top: 200px;
   padding-left: 50px;
   border-radius: 5px;
 }
-.navpad{
-  margin: 0px 120px 0px 120px;
-}
 .navover{
   top: -800px;
 }
@@ -1293,15 +1316,18 @@ padding-top: 200px;
 .homeloccat::placeholder{
   font-size: 14px;
 }
+.searchform{
+  top:-160px;
+}
 /*form home.html*/
 .homekey{
-  width: 240px;height:50px;margin-left: 0px;
+  width: 280px;height:50px;margin-left: 0px;
 }
 .homeloccat{
-  width: 240px;height:50px;margin-left: 0px;
+  width: 260px;height:50px;margin-left: 0px;
 }
 .homebtn{
-  width: 90px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
+  width: 115px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
   font-size: 14px;
 }
 .hoverhome{
@@ -1326,14 +1352,14 @@ padding-top: 200px;
    position: absolute;
    left: -150px;
    }
-   /*Footer form*/
+   /*Footer form
    .newsform{
      padding-left: 30px;
-    }
-    /*Footer table*/
+    }*/
+    /*Footer table
     .foottab{
       left: -30px;
-    }
+    }*/
    /*home.html main image*/
    .topimg{
     top:-250px;
@@ -1475,8 +1501,8 @@ padding-top: 200px;
   left: 196px;
 }
 .homepad{
-  padding-left: 220px;
-  padding-right: 220px;
+  padding-left: 20px;
+  padding-right: 0px;
 }
 .homedivtxt{
   font-size: 30px;
@@ -1507,7 +1533,6 @@ padding-top: 200px;
 .homesel{
   right:-170px;
 }
-
 .btncarousel{
   font-size:20px; border-radius: 40px;height:40px; width:40px;
   background-color: #0BB44F;
@@ -1522,9 +1547,6 @@ padding-top: 200px;
 .h::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   /* Firefox */
 font-size: 20px;
-}
-.navpad{
-  margin: 0px 190px 0px 190px;
 }
 .navover{
   top: -800px;
@@ -1602,12 +1624,15 @@ font-size: 20px;
   width: 150px; height: 43px; margin-left: 10px;margin-right: -10px; margin-top: 3px;
   font-size: 14px;
 }
+.searchform{
+  top:-150px;
+}
 /*form home.html*/
 .homekey{
-  width: 370px;height:50px;margin-left: 0px;
+  width: 340px;height:50px;margin-left: 0px;
 }
 .homeloccat{
-  width: 360px;height:50px;margin-left: 0px;
+  width: 320px;height:50px;margin-left: 0px;
 }
 .homekey::placeholder{
   font-size: 16px;
@@ -1616,8 +1641,8 @@ font-size: 20px;
   font-size: 16px;
 }
 .homebtn{
-  width: 140px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
-  font-size: 14px;
+  width: 120px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
+  font-size: 16px;
 }
 /*register.html*/
 /*button*/
@@ -1632,12 +1657,15 @@ font-size: 20px;
 }
 
 .homemaintxt{
-  margin-top: 50px;
+  margin-top: 90px;
   margin-bottom: 30px;
   font-size: 56px;
 }
-.hoverhome{
-  border-radius: 13px;padding:30px;margin-bottom: -220px;
+.hoverdown{
+  border-radius: 20px;padding:30px;margin-bottom: -420px; top:66px;
+}
+.hoverhomerel{
+  position: absolute; left:850px;
 }
 .hovtxt{
   font-size: 20px;
@@ -1649,6 +1677,12 @@ font-size: 20px;
 .formdiv{
   height:60px;
   padding: 0px 15px;
+}
+.padleft{
+  left:230px;
+}
+.padright{
+  right:230px;
 }
 }
 /******************************************************************************************/

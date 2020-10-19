@@ -24,166 +24,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="bg-danger">
 
-    <div class="container text-white col-lg-3 col-md-4 col-sm-10 col-12 rounded" style="background-color: #0D2942;">
-        <nav class="navbar navbar-expand-lg">
-            <ul class="nav flex-column w-100">
-                <div class="row">
-                    <img src="img/home.png" class="img-fluid rounded-pill my-5 mx-auto d-block navbar-toggler" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                </div>
-                <div class="row">
-                    <h6 class="text-white mx-auto d-block">Dashboard</h6>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="nav flex-column w-100">
-                        <!------------------1st Horizontal Line---------------------------------->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <hr class="divider">
-                            </div>
-                        </div>
+    <nav class="navbar navbar-expand navover flex-column flex-md-row bd-navbar n"
+    style="border-bottom: 3px solid white;position: relative;">
+    <div class="">
+        <div>
+            <a class="navbar-brand mr-0 mr-md-2" href="#">
+                <img src="img/logo.png" class="img-fluid navbar-brand navbar-nav d-block">
+            </a>
+        </div>
 
-                        <div class="row row-sm-2" style="font-size: 14px;">
-                            <!--------------------------------------Vertical navigation bar------------------------------------------->
-
-                            <div class=" mx-3 dashnav ">
-
-                                <li class="nav-item normaltext">
-                                    <a class="nav-link " href="#approvejobs" role="button">
-                                        <img src="img/approvejob.png" class="img-fluid my-2">
-                                        Approve Jobs
-                                    </a>
-                                </li>
-                                <!---------------------manage profile---------------------------------------------------------->
-
-                                <li class="nav-item dropdown normaltext">
-                                    <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img src="img/manageprofile.png" class="img-fluid my-2">
-                                        Manage User Profile
-                                    </a>
-                                    <div class="dropdown-menu bg-success subdashnav" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#manageuserprofiles">
-                                            <img src="img/profilelogo.png" class="img-fluid">
-                                            User Profile
-                                        </a>
-                                        <a class="dropdown-item" href="#managecompanies">
-                                            <img src="img/companies.png" class="img-fluid">
-                                            Companies
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li class="nav-item normaltext">
-                                    <a class="nav-link" href="#manageblogs" role="button">
-                                        <img src="img/manageblog.png" class="img-fluid">
-                                        Manage Blogs
-                                    </a>
-                                </li>
-
-                                <li class="nav-item normaltext">
-                                    <a class="nav-link" href="#subadmin" role="button">
-                                        <img src="img/sunad.png" class="img-fluid">
-                                        Sub Admin
-                                    </a>
-                                </li>
-
-                                <li class="nav-item normaltext">
-                                    <a class="nav-link" href="#fakereports" role="button">
-                                        <img src="img/fakerep.png" class="img-fluid">
-                                        Fake Reports
-                                    </a>
-                                </li>
-                                <!---------------------------------------------------Employee--------------------------------------->
-                                <li class="nav-item text-center text-success mt-4">EMPLOYEE</li>
-
-                            </div>
-                        </div>
-
-                        <!------------------2nd Horizontal Line---------------------------------->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <hr class="divider">
-                            </div>
-                        </div>
-
-                        <div class="row row-sm-2" style="font-size: 14px;">
-                            <!--------------------------------------Vertical navigation bar------------------------------------------->
-
-                            <div class="mx-3 dashnav">
-
-                                <li class="nav-item normaltext">
-                                    <a class="nav-link" href="#employeemaintainprofile" role="button">
-                                        <img src="img/maintain.png" class="img-fluid">
-                                        Maintain Profile
-                                    </a>
-                                </li>
-                                <li class="nav-item normaltext">
-                                    <a class="nav-link" href="#appliedjobs" role="button">
-                                        <img src="img/applied.png" class="img-fluid">
-                                        Applied Jobs
-                                    </a>
-                                </li>
-                                <li class="nav-item normaltext">
-                                    <a class="nav-link" href="#empreportfake" role="button">
-                                        <img src="img/report.png" class="img-fluid">
-                                        Report Fake
-                                    </a>
-                                </li>
-                                <li class="nav-item normaltext">
-                                    <a class="nav-link" href="#deleteprofile" role="button">
-                                        <img src="img/delete.png" class="img-fluid">
-                                        Delete Profile
-                                    </a>
-                                </li>
-
-                                <!---------------------------------------------------Employer--------------------------------------->
-                                <li class="nav-item text-center text-success mt-4">EMPLOYER </li>
-
-                            </div>
-                        </div>
-
-                        <!------------------3rd Horizontal Line---------------------------------->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <hr class="divider">
-                            </div>
-                        </div>
-
-                        <div class="row row-sm-2" style="font-size: 14px;">
-                            <!--------------------------------------Vertical navigation bar------------------------------------------->
-
-                            <div class=" mx-3 dashnav">
-
-                                <li class="nav-item normaltext">
-                                    <a class="nav-link" href="#employermaintainprofile" role="button">
-                                        <img src="img/maipro.png" class="img-fluid">
-                                        Maintain Profile
-                                    </a>
-                                </li>
-                                <li class="nav-item normaltext">
-                                    <a class="nav-link" href="#jobsposted" role="button">
-                                        <img src="img/jobposted.png" class="img-fluid">
-                                        Jobs Posted
-                                    </a>
-                                </li>
-                                <li class="nav-item normaltext">
-                                    <a class="nav-link" href="#employerreportfake" role="button">
-                                        <img src="img/report.png" class="img-fluid">
-                                        Report Fake
-                                    </a>
-                                </li>
-
-                            </div>
-
-                        </div>
-                    </ul>
-                </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav justify-content-end ml-auto">
+                <li class="nav-item navhov">
+                    <a class="nav-link " href="about.html">ABOUT US </a>
+                </li>
+                <li class="nav-item navhov">
+                    <a class="nav-link" href="Employer.html">EMPLOYERS PROFILE</a>
+                </li>
+                <li class="nav-item navhov">
+                    <a class="nav-link" href="careers.html">CAREERS GUIDE</a>
+                </li>
+                <li class="nav-item navhov">
+                    <a class="nav-link active" href="#">BLOG</a>
+                </li>
             </ul>
-        </nav>
+        </div>
+        <button class="btn bg-white btn-lg rounded-pill " style="padding-left: 30px; padding-right: 30px;">
+            <a href="login.html" class="b">Login</a>
+        </button>
     </div>
+  </nav>
 </body>
 
 </html>
