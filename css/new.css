@@ -367,10 +367,10 @@ margin:30px;
   top:-400px;
 }
 .hoverdown{
-  border-radius: 10px;padding:0px;margin-bottom: -420px; top:136px;
+  border-radius: 10px;margin-bottom: -420px; top:156px;
 }
 .hoverhomerel{
-  position: absolute; left:130px;
+  position: absolute; left:160px;
 }
 .hovtxt{
   font-size: 12px;
@@ -683,7 +683,7 @@ padding-top: 200px;
   font-size: 18px;
 }
 .hoverdown{
-  border-radius: 5px;padding:0px;margin-bottom: -420px; top:130px;
+  border-radius: 5px;margin-bottom: -420px; top:130px;
 }
 .hoverhomerel{
   position: absolute; left:190px;
@@ -1037,10 +1037,10 @@ padding-top: 200px;
   font-size: 20px;
 }
 .hoverdown{
-  border-radius: 5px;padding:0px;margin-bottom: -420px; top:130px;
+  border-radius: 5px;margin-bottom: -420px; top:130px;
 }
 .hoverhomerel{
-  position: absolute; left:320px;
+  position: absolute; left:360px;
 }
 .hovtxt{
   font-size: 12px;
@@ -1526,10 +1526,10 @@ padding-top: 200px;
   font-size: 56px;
 }
 .hoverdown{
-  border-radius: 5px;padding:0px;margin-bottom: -420px; top:50px;
+  border-radius: 5px;margin-bottom: -420px; top:90px;
 }
 .hoverhomerel{
-  position: absolute; left:700px;
+  position: absolute; left:520px;
 }
 .formdiv::placeholder{
   color:#707070;
@@ -1915,10 +1915,10 @@ font-size: 20px;
   font-size: 56px;
 }
 .hoverdown{
-  border-radius: 10px;padding:30px;margin-bottom: -420px; top:56px;
+  border-radius: 10px;margin-bottom: -420px; top:96px;
 }
 .hoverhomerel{
-  position: absolute; left:970px;
+  position: absolute; left:850px;
 }
 .hovtxt{
   font-size: 18px;
