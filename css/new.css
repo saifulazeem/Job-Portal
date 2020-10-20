@@ -2,6 +2,11 @@ html,body
 {
     overflow-x: hidden; 
 }
+  .form-control:focus {
+    box-shadow: none!important;
+    outline:none!important;
+    border:1px solid #c2c0c0!important;
+  }
 .n {
     background: #0D2942;
   }
@@ -104,13 +109,14 @@ color:white;
   font-size: 12px;
   padding:10px;
 }
-
-/*about.html placeholder*/
-.for::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  /* Firefox */
-  color:grey;
+.hovtab:hover {
+  border:2px solid #0BB44F;
+  border-radius: 20px;
+  cursor: pointer;
 }
-
+.hovtab:hover .homeemp{
+opacity: 1;
+}
 .chan2
 {
   color: black;
@@ -119,6 +125,15 @@ color:white;
 .chan
 {
   color: #0BB44F;
+}
+.advancesearch
+{
+  color: #0BB44F;
+}
+.advancesearch:hover
+{
+  color: #0BB44F;
+  border-bottom: 2px solid #0BB44F;
 }
 .txt
 {
@@ -139,9 +154,8 @@ color:white;
     color: white;
 }
 .roun{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
 }
-
 .link:hover{
   color: #0BB44F;
   }
@@ -298,12 +312,12 @@ margin:30px;
   padding-left: 3px;
 }
 .homedivtxt{
-  font-size: 22px;
+  font-size: 18px;
   font-weight:680;
   text-align: left;
 }
 .homedivsubtxt{
-  font-size: 14px;
+  font-size: 12px;
 }
 /*home.html slider*/
 .homeimgslide{
@@ -328,13 +342,13 @@ margin:30px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:30px; width:30px;
-  background-color: #0BB44F;
-  color: white;
+  background-color: #ccc;
+  color:#0BB44F;
 }
 
 .btncarousel:hover{
-  background-color: #ccc;
-  color:#0BB44F;
+  background-color: #0BB44F;
+  color: white;
 }
 .featover{
   top:-330px;position:relative;margin-bottom: -220px;
@@ -352,22 +366,37 @@ margin:30px;
 .hoverhome{
   border-radius: 5px;padding:3px;
 }
+.homeemp{/*featured employers*/
+  font-size: 36px;
+  font-weight: 600;
+  color: #0BB44F;
+  opacity: 50%;
+}
 /*form home.html*/
-.homekey{
-  width: 155px;height:50px;margin-left: 0px;
+.homesearch{
+  width: 140px;height:50px;margin-left: 0px;font-size: 12px;
 }
-.homeloccat{
-  width: 135px;height:50px;margin-left: 0px;
+.homesearch::placeholder{
+  font-size: 12px;
+  color:grey;
 }
-.homebtn{
-  width: 70px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
-  font-size: 14px;
+
+#clear {
+  position: absolute;
+  border-radius: 5px;
+  right: 2px;
+  top:3px;
+  z-index: 2px;
+  border: none;
+  width: 70px;
+  height: 43px;
+  margin-left: 0px;
 }
 .searchform{
   top:-400px;
 }
 .hoverdown{
-  border-radius: 10px;margin-bottom: -420px; top:156px;
+  border-radius: 10px;margin-bottom: -420px; top:126px;
 }
 .hoverhomerel{
   position: absolute; left:160px;
@@ -666,13 +695,12 @@ padding-top: 200px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:30px; width:30px;
-  background-color: #0BB44F;
-  color: white;
-}
-
-.btncarousel:hover{
   background-color: #ccc;
   color:#0BB44F;
+}
+
+.btncarousel:hover{background-color: #0BB44F;
+  color: white;
 }
 .featover{
   top:-320px;position:relative;margin-bottom: -200px;
@@ -686,7 +714,7 @@ padding-top: 200px;
   border-radius: 5px;margin-bottom: -420px; top:130px;
 }
 .hoverhomerel{
-  position: absolute; left:190px;
+  position: absolute; left:240px;
 }
 .formdiv::placeholder{
   color:#707070;
@@ -706,16 +734,30 @@ padding-top: 200px;
 .hoverhome{
   border-radius: 5px;padding:10px;
 }
+.homeemp{/*featured employers*/
+  font-size: 36px;
+  font-weight: 600;
+  color: #0BB44F;
+  opacity: 50%;
+}
 /*form home.html*/
-.homekey{
-  width: 145px;height:50px;margin-left: 0px;
+.homesearch{
+  width: 140px;height:50px;margin-left: 0px;font-size: 12px;
 }
-.homeloccat{
-  width: 135px;height:50px;margin-left: 0px;
+.homesearch::placeholder{
+  font-size: 12px;
+  color:grey;
 }
-.homebtn{
-  width: 90px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
-  font-size: 14px;
+#clear {
+  position: absolute;
+  border-radius: 5px;
+  right: 2px;
+  top:3px;
+  z-index: 2px;
+  border: none;
+  width: 70px;
+  height: 43px;
+  margin-left: 0px;
 }
 .searchform{
   top:-400px;
@@ -1020,13 +1062,13 @@ padding-top: 200px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:30px; width:30px;
-  background-color: #0BB44F;
-  color: white;
+  background-color: #ccc;
+  color:#0BB44F;
 }
 
 .btncarousel:hover{
-  background-color: #ccc;
-  color:#0BB44F;
+  background-color: #0BB44F;
+  color: white;
 }
 .featover{
   top:-250px;position:relative;margin-bottom: -100px;
@@ -1037,10 +1079,10 @@ padding-top: 200px;
   font-size: 20px;
 }
 .hoverdown{
-  border-radius: 5px;margin-bottom: -420px; top:130px;
+  border-radius: 5px;margin-bottom: -420px; top:90px;
 }
 .hoverhomerel{
-  position: absolute; left:360px;
+  position: absolute; left:450px;
 }
 .hovtxt{
   font-size: 12px;
@@ -1199,24 +1241,37 @@ padding-top: 200px;
 .navover{
   top: -800px;
 }
-
+.homeemp{/*featured employers*/
+  font-size: 36px;
+  font-weight: 600;
+  color: #0BB44F;
+  opacity: 50%;
+}
 /*form home.html*/
-.homekey{
-  width: 200px;height:50px;margin-left: 0px;
+.homesearch{
+  width: 210px;height:50px;margin-left: 0px;font-size: 14px;
 }
-.homeloccat{
-  width: 195px;height:50px;margin-left: 0px;
-}
-.homebtn{
-  width: 90px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
+.homesearch::placeholder{
   font-size: 14px;
+  color:grey;
+}
+#clear {
+  position: absolute;
+  border-radius: 5px;
+  right: 2px;
+  top:4px;
+  z-index: 2px;
+  border: none;
+  width: 70px;
+  height: 43px;
+  margin-left: 0px;
 }
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
   .resp {    
    position: absolute;
-   left: -100px;
+   left: -70px;
    }
    /*Footer form*/
    .newsform{
@@ -1373,13 +1428,13 @@ padding-top: 200px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:40px; width:40px;
-  background-color: #0BB44F;
-  color: white;
+  background-color: #ccc;
+  color:#0BB44F;
 }
 
 .btncarousel:hover{
-  background-color: #ccc;
-  color:#0BB44F;
+  background-color: #0BB44F;
+  color: white;
 }
 .featover{
   top:-150px;position:relative;margin-bottom: -100px;
@@ -1529,7 +1584,7 @@ padding-top: 200px;
   border-radius: 5px;margin-bottom: -420px; top:90px;
 }
 .hoverhomerel{
-  position: absolute; left:520px;
+  position: absolute; left:580px;
 }
 .formdiv::placeholder{
   color:#707070;
@@ -1541,25 +1596,33 @@ padding-top: 200px;
   padding: 0px 5px;
   border-radius: 5px;
 }
-.homekey::placeholder{
-  font-size: 14px;
-}
-.homeloccat::placeholder{
-  font-size: 14px;
-}
 .searchform{
   top:-160px;
 }
 /*form home.html*/
-.homekey{
-  width: 280px;height:50px;margin-left: 0px;
+.homesearch{
+  width: 270px;height:50px;margin-left: 0px;font-size: 14px;
 }
-.homeloccat{
-  width: 260px;height:50px;margin-left: 0px;
-}
-.homebtn{
-  width: 115px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
+.homesearch::placeholder{
   font-size: 14px;
+  color:grey;
+}
+.homeemp{/*featured employers*/
+  font-size: 46px;
+  font-weight: 600;
+  color: #0BB44F;
+  opacity: 50%;
+}
+#clear {
+  position: absolute;
+  border-radius: 5px;
+  right: 2px;
+  top:4px;
+  z-index: 2px;
+  border: none;
+  width: 110px;
+  height: 43px;
+  margin-left: 0px;
 }
 .hoverhome{
   border-radius: 5px;padding:1px;margin-bottom: -190px;
@@ -1578,8 +1641,7 @@ padding-top: 200px;
    /*Footer form*/
    .newsform{
     padding-top:0px;
-     padding-left: 50px;
-     
+     padding-left: 0px;
     }
    /*home.html main image*/
    .topimg{
@@ -1688,7 +1750,7 @@ padding-top: 200px;
   text-align: left;
 }
 .tag{
-  font-size: 25px;
+  font-size: 22px;
 }
 .text
 {
@@ -1754,12 +1816,12 @@ padding-top: 200px;
   padding-right: 0px;
 }
 .homedivtxt{
-  font-size: 30px;
+  font-size: 28px;
   font-weight:700;
   text-align: left;
 }
 .homedivsubtxt{
-  font-size: 20px;
+  font-size: 18px;
 }
 /*home.html slider*/
 .homeimgslide{
@@ -1784,14 +1846,14 @@ padding-top: 200px;
   right:-170px;
 }
 .btncarousel{
-  font-size:20px; border-radius: 40px;height:40px; width:40px;
-  background-color: #0BB44F;
-  color: white;
+  font-size:20px; border-radius: 40px;height:40px; width:40px;text-align: center;
+  background-color: #ccc;
+  color:#0BB44F;
 }
 
 .btncarousel:hover{
-  background-color: #ccc;
-  color:#0BB44F;
+  background-color: #0BB44F;
+  color: white;
 }
 .featover{
   top:0px;position: relative;margin-bottom: -20px;
@@ -1881,21 +1943,29 @@ font-size: 20px;
   top:-130px;
 }
 /*form home.html*/
-.homekey{
-  width: 340px;height:50px;margin-left: 0px;
+.homesearch{
+  width: 345px;height:50px;margin-left: 0px;font-size: 16px;
 }
-.homeloccat{
-  width: 320px;height:50px;margin-left: 0px;
-}
-.homekey::placeholder{
+.homesearch::placeholder{
   font-size: 16px;
+  color:grey;
 }
-.homeloccat::placeholder{
-  font-size: 16px;
+#clear {
+  position: absolute;
+  border-radius: 5px;
+  right: 4px;
+  top:3px;
+  z-index: 2px;
+  border: none;
+  width: 110px;
+  height: 43px;
+  margin-left: 0px;
 }
-.homebtn{
-  width: 120px; height: 43px; margin-left: 3px;margin-right: 3px; margin-top: 3px;
-  font-size: 16px;
+.homeemp{/*featured employers*/
+  font-size: 56px;
+  font-weight: 600;
+  color: #0BB44F;
+  opacity: 50%;
 }
 /*register.html*/
 /*button*/
@@ -1939,17 +2009,13 @@ font-size: 20px;
 .padright{
   right:230px;
 }
+
 }
 /******************************************************************************************/
-.homeemp{
-  font-size: 40px;
-  font-weight: 800;
-  color: #0BB44F;
-  opacity: 50%;
-}
+
 /*black overlay effect on image*/
 .header {
-  background:rgba(0, 0, 0, 0.8);
+  background:rgba(0, 0, 0, 1);
 }
 /*for every centered main images in all pgs*/
  .imag {
@@ -1972,10 +2038,7 @@ font-size: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative;
 }
-.shadow
-{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+
 /*button*/
 .ex {
     padding-right: 70px;
@@ -2036,9 +2099,11 @@ font-size: 12px;
 
 }
 
-.for {
-    border-radius: 15px;
-    height: auto;
+.formpost {
+    border-radius: 15px;border: 0px;padding-left: 35px;
+}
+.formpost::placeholder{
+  color:#929292;
 }
 .list-group-item {
     background-color:#0D2942;
