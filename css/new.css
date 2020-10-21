@@ -7,6 +7,11 @@ html,body
     outline:none!important;
     border:1px solid #c2c0c0!important;
   }
+  .form-control:visited{
+    box-shadow: none!important;
+    outline:none!important;
+    border:1px solid #c2c0c0!important;
+  }
 .n {
     background: #0D2942;
   }
@@ -109,10 +114,15 @@ color:white;
   font-size: 12px;
   padding:10px;
 }
+.hovtab {
+  border:1px solid transparent;
+}
 .hovtab:hover {
-  border:2px solid #0BB44F;
+  border:1px solid #0BB44F;
   border-radius: 20px;
   cursor: pointer;
+  height: inherit;
+  transition: 300ms;
 }
 .hovtab:hover .homeemp{
 opacity: 1;
@@ -155,6 +165,10 @@ opacity: 1;
 }
 .roun{
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+}
+.featshad
+{
+  box-shadow: 1px 5px 6px 1px rgba(0, 0, 0, 0.1);
 }
 .link:hover{
   color: #0BB44F;
@@ -202,8 +216,22 @@ opacity: 1;
   /*footer circle image*/
   .resp {
    position: absolute;
-   left: -30px;
+   left: -90px;
    }
+   .respimg{
+    width: 150px;
+    height: 150px;
+  }
+   .footerform{
+    border-radius: 7px;background-color: #818181; border:0px; color: white;height: 35px;
+  }
+  .btnsub{
+    color:#CCCCCC;
+    border-radius: 7px;
+    height: 35px;
+    margin-left: 5px;
+    padding: 0px 14px;
+  }
      /*Footer form*/
    .newsform{
     padding-top:0px;
@@ -374,7 +402,7 @@ margin:30px;
 }
 /*form home.html*/
 .homesearch{
-  width: 140px;height:50px;margin-left: 0px;font-size: 12px;
+  width: 140px;height:50px;margin-left: 0px;font-size: 12px;padding-left: 3px;padding-right: 3px;
 }
 .homesearch::placeholder{
   font-size: 12px;
@@ -549,9 +577,21 @@ padding-top: 200px;
 @media (min-width: 576px) {
   .resp {
    position: absolute;
-   left: -60px;
+   left: -80px;
    }
-    /*Footer form*/
+   .respimg{
+    width: 150px;
+    height: 150px;
+  }
+   .footerform{
+    border-radius: 7px;background-color: #818181; border:0px; color: white;height: 40px;
+  }
+  .btnsub{
+    color:#CCCCCC;
+    border-radius: 7px;
+    height: 40px;
+    padding: 0px 14px;
+  }
    /*Footer form*/
    .newsform{
     padding-left: 0px;
@@ -742,7 +782,7 @@ padding-top: 200px;
 }
 /*form home.html*/
 .homesearch{
-  width: 140px;height:50px;margin-left: 0px;font-size: 12px;
+  width: 140px;height:50px;margin-left: 0px;font-size: 12px;padding-left: 8px;padding-right: 8px;
 }
 .homesearch::placeholder{
   font-size: 12px;
@@ -902,8 +942,21 @@ padding-top: 200px;
 @media (min-width: 768px) {
   .resp {
    position: absolute;
-   left: -60px;
+   left: -80px;
    }
+   .respimg{
+    width: 200px;
+    height: 200px;
+  }
+   .footerform{
+    border-radius: 7px;background-color: #818181; border:0px; color: white;height: 40px;
+  }
+  .btnsub{
+    color:#CCCCCC;
+    border-radius: 7px;
+    height: 40px;
+    padding: 0px 4px;
+  }
     /*Footer form*/
     .newsform{
       padding-left: 0px;
@@ -1249,7 +1302,7 @@ padding-top: 200px;
 }
 /*form home.html*/
 .homesearch{
-  width: 210px;height:50px;margin-left: 0px;font-size: 14px;
+  width: 210px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 12px;padding-right: 12px;
 }
 .homesearch::placeholder{
   font-size: 14px;
@@ -1273,6 +1326,19 @@ padding-top: 200px;
    position: absolute;
    left: -70px;
    }
+   .respimg{
+    width: 200px;
+    height: 200px;
+  }
+   .footerform{
+    border-radius: 10px;background-color: #818181; border:0px; color: white;height: 45px;
+  }
+  .btnsub{
+    color:#CCCCCC;
+    border-radius: 10px;
+    height: 45px;
+    padding: 0px 14px;
+  }
    /*Footer form*/
    .newsform{
     padding-top:0px;
@@ -1601,7 +1667,7 @@ padding-top: 200px;
 }
 /*form home.html*/
 .homesearch{
-  width: 270px;height:50px;margin-left: 0px;font-size: 14px;
+  width: 270px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 18px;padding-right: 18px;
 }
 .homesearch::placeholder{
   font-size: 14px;
@@ -1636,12 +1702,25 @@ padding-top: 200px;
    /*Footer circle image*/
   .resp {
    position: absolute;
-   left: -150px;
+   left: -90px;
+   }
+   .respimg{
+     width: 200px;
+     height: 200px;
    }
    /*Footer form*/
    .newsform{
     padding-top:0px;
      padding-left: 0px;
+    }
+    .footerform{
+      border-radius: 10px;background-color: #818181; border:0px; color: white;height: 45px;
+    }
+    .btnsub{
+      color:#CCCCCC;
+      border-radius: 10px;
+      height: 45px;
+      padding: 0px 10px;
     }
    /*home.html main image*/
    .topimg{
@@ -1751,6 +1830,8 @@ padding-top: 200px;
 }
 .tag{
   font-size: 22px;
+  margin-bottom: -6px;
+  margin-top: 4px;
 }
 .text
 {
@@ -1774,28 +1855,28 @@ padding-top: 200px;
   }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:180px; top:30px;
+  position: absolute;left:160px; top:40px;
 }
 .s1div{
-  position: absolute;left:-60px;width:250px;
+  position: absolute;left:-80px;width:250px;top:13px;
 }
 .s2{
-  position: absolute; left: 550px; top:150px;
+  position: absolute; left: 575px; top:150px;
 }
 .s2div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-80px;width:250px;top:-4px;
 }
 .s3{
-  position: absolute; left:290px;top:190px;
+  position: absolute; left:330px;top:190px;
 }
 .s3div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-80px;width:250px;top:-4px;
 }
 .s4{
   position: absolute; left:740px; top:30px;
 }
 .s4div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-80px;width:250px;top:-3px;
 }
 /*home.html main img top*/ 
 .homeimg{
@@ -1944,8 +2025,9 @@ font-size: 20px;
 }
 /*form home.html*/
 .homesearch{
-  width: 345px;height:50px;margin-left: 0px;font-size: 16px;
+  width: 345px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 24px;padding-right: 24px;
 }
+
 .homesearch::placeholder{
   font-size: 16px;
   color:grey;
@@ -2417,5 +2499,13 @@ option:first-child
 }
 .homefeat{
   font-size: 30px;
+  font-weight: 400;
+}
+.formposttxt{
+  font-size: 40px;
+  font-weight: 600;
+}
+.formpostsubtxt{
+  font-size: 25px;
   font-weight: 400;
 }
