@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .pickme {
+    background: blue;
+}
+.pickme:nth-child(2) {
+    background: lightsteelblue;
+}
+/*form home.html*/
+.homesearch{
+  width: 345px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 24px;padding-right: 24px;background: brown;
+}
+.homesearch::placeholder{
+  font-size: 16px;
+  color:grey;
+}
+.homesearch:nth-child(3){
+    background: #bbbbbb;
+    padding-left: 50px; padding-right: 135px;
+}
+table tr td:nth-child(4) input {
+    background-color: red;
+    padding-right: 150px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <div class="example">
+            <ul>
+                <li class="pickme">.pickme</li>
+                <li class="pickme">.pickme</li>
+                <li class="pickme">.pickme</li>
+            </ul>
+        </div>
+    </div>
+    <table>
+        <tr class="tb">
+            <!---------Second row------------->
+            <!------------------------FORM-----------------------------------
+
+            <form class="form-inline nchild">
+
+                <td>
+                    <input type="text" class="form-control homesearch " id="keywords" placeholder="Keywords">
+                </td>
+                <td>
+                    <input type="text" class="form-control homesearch" id="location" placeholder="Location">
+                </td>
+                <td>
+                    <input type="text" class="form-control homesearch" id="categories" placeholder="All Categories" >
+                </td>
+            </form>-->
+        </tr>
+    </table>
+    <table>
+        <tr class="tb">
+            <form class="form-inline">
+            <td>
+                <input type="text" class="form-control homesearch" id="keywords" placeholder="Keywords">
+            </td>
+            <td>
+                <input type="text" class="form-control homesearch" id="keywords" placeholder="Keywords">
+            </td>
+            <td>
+                <input type="text" class="form-control homesearch" id="keywords" placeholder="Keywords">
+            </td>
+            </form>
+        </tr>
+    </table>
+</body>
+</html>

@@ -11,6 +11,7 @@ html,body
     box-shadow: none!important;
     outline:none!important;
     border:1px solid #c2c0c0!important;
+    background-color: transparent;
   }
 .n {
     background: #0D2942;
@@ -51,7 +52,10 @@ color: #0BB44F;text-decoration: none; font-size: 16px;
   }
   
 /* Style the links inside the navigation bar */
-.navhov a:hover {
+.navhov{
+  color: white;
+}
+.navhov:hover {
     border-bottom: 3px solid #0BB44F;
     font-weight: 700;
     color: white;
@@ -176,7 +180,17 @@ opacity: 1;
 .link{
     color: #929292;
     }
-
+.weightedtext:hover{
+color: #FFFFFF;
+text-decoration: none;
+}
+.weightedtext{
+  text-decoration: none;
+  color: #929292;
+  }
+  .curhov:hover{
+    cursor: context-menu;
+  }
     /*career.html cards*/
     .cards-txt:hover{
       color:white;
@@ -408,7 +422,9 @@ margin:30px;
   font-size: 12px;
   color:grey;
 }
-
+.addhome{
+  margin-left: 15px;
+}
 #clear {
   position: absolute;
   border-radius: 5px;
@@ -424,10 +440,10 @@ margin:30px;
   top:-400px;
 }
 .hoverdown{
-  border-radius: 10px;margin-bottom: -420px; top:126px;
+  border-radius: 10px;margin-bottom: -420px; top:366px;
 }
 .hoverhomerel{
-  position: absolute; left:160px;
+  position: absolute; left:70px;
 }
 .hovtxt{
   font-size: 12px;
@@ -461,7 +477,7 @@ margin:30px;
   }
   .text
   {
-    font-size: 14x;
+    font-size: 14px;
   }
 /*home.html globe images*/
 .s1{
@@ -496,6 +512,17 @@ margin:30px;
 .formalert{
   border-radius: 20px 20px 0px 0px;
   height:340px;
+}
+.formposttxt{
+  font-size: 30px;
+  font-weight: 600;
+}
+.formpostsubtxt{
+  font-size: 20px;
+  font-weight: 350;
+}
+.formpost {
+  border-radius: 15px;border: 0px;padding-left: 45px;
 }
 /*career.html cards*/
 .cards-txt{
@@ -751,10 +778,10 @@ padding-top: 200px;
   font-size: 18px;
 }
 .hoverdown{
-  border-radius: 5px;margin-bottom: -420px; top:130px;
+  border-radius: 5px;margin-bottom: -420px; top:365px;
 }
 .hoverhomerel{
-  position: absolute; left:240px;
+  position: absolute; left:120px;
 }
 .formdiv::placeholder{
   color:#707070;
@@ -787,6 +814,9 @@ padding-top: 200px;
 .homesearch::placeholder{
   font-size: 12px;
   color:grey;
+}
+.addhome{
+  margin-left: -15px;
 }
 #clear {
   position: absolute;
@@ -859,6 +889,17 @@ padding-top: 200px;
   border-radius: 20px 20px 0px 0px;
   height:340px;
   width: 1900px;
+}
+.formposttxt{
+  font-size: 30px;
+  font-weight: 600;
+}
+.formpostsubtxt{
+  font-size: 20px;
+  font-weight: 350;
+}
+.formpost {
+  border-radius: 15px;border: 0px;padding-left: 45px;
 }
 /*career.html cards*/
 .cards-txt{
@@ -1215,6 +1256,17 @@ padding-top: 200px;
   border-radius: 20px 0px 0px 20px;
   height:360px;
 }
+.formposttxt{
+  font-size: 30px;
+  font-weight: 600;
+}
+.formpostsubtxt{
+  font-size: 20px;
+  font-weight: 350;
+}
+.formpost {
+  border-radius: 15px;border: 0px;padding-left: 45px;
+}
 /*career.html cards*/
 .cards-txt{
   color:black;
@@ -1307,6 +1359,9 @@ padding-top: 200px;
 .homesearch::placeholder{
   font-size: 14px;
   color:grey;
+}
+.addhome{
+  margin-left: 0px;
 }
 #clear {
   position: absolute;
@@ -1558,6 +1613,17 @@ padding-top: 200px;
   border-radius: 20px 0px 0px 20px;
   height:360px;
 }
+.formposttxt{
+  font-size: 35px;
+  font-weight: 650;
+}
+.formpostsubtxt{
+  font-size: 20px;
+  font-weight: 350;
+}
+.formpost {
+  border-radius: 15px;border: 0px;padding-left: 45px;
+}
 /*career.html cards div*/
 .over{
   left:-170px;
@@ -1672,6 +1738,9 @@ padding-top: 200px;
 .homesearch::placeholder{
   font-size: 14px;
   color:grey;
+}
+.addhome{
+  margin-left: 0px;
 }
 .homeemp{/*featured employers*/
   font-size: 46px;
@@ -1829,9 +1898,7 @@ padding-top: 200px;
   text-align: left;
 }
 .tag{
-  font-size: 22px;
-  margin-bottom: -6px;
-  margin-top: 4px;
+  font-size: 25px;
 }
 .text
 {
@@ -1951,7 +2018,17 @@ font-size: 20px;
 .formalert{
   border-radius: 20px 0px 0px 20px;
 }
-
+.formposttxt{
+  font-size: 40px;
+  font-weight: 700;
+}
+.formpostsubtxt{
+  font-size: 25px;
+  font-weight: 400;
+}
+.formpost {
+  border-radius: 20px;border: 0px;padding-left: 55px; font-size: 14px;
+}
 /*career.html above img text*/
 .careertxt{
   font-size: 25px;
@@ -2027,10 +2104,12 @@ font-size: 20px;
 .homesearch{
   width: 345px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 24px;padding-right: 24px;
 }
-
 .homesearch::placeholder{
   font-size: 16px;
   color:grey;
+}
+.addhome{
+  margin-left: 0px;
 }
 #clear {
   position: absolute;
@@ -2117,7 +2196,6 @@ font-size: 20px;
 }
 
 .top {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: relative;
 }
 
@@ -2181,11 +2259,10 @@ font-size: 12px;
 
 }
 
-.formpost {
-    border-radius: 15px;border: 0px;padding-left: 35px;
-}
+
 .formpost::placeholder{
-  color:#929292;
+  color:#939292;
+  text-shadow: 0.5px 0.1px #939292;
 }
 .list-group-item {
     background-color:#0D2942;
@@ -2199,9 +2276,11 @@ font-size: 12px;
 .foot{
   background-color:#0D2942;
   color: gainsboro; 
-  padding-top: 20px;
+  padding-top: 8px;
 }
-
+.foottop{
+  font-weight: 350;
+}
 .hov:hover {
   color:  #0BB44F;
 }
@@ -2499,13 +2578,5 @@ option:first-child
 }
 .homefeat{
   font-size: 30px;
-  font-weight: 400;
-}
-.formposttxt{
-  font-size: 40px;
-  font-weight: 600;
-}
-.formpostsubtxt{
-  font-size: 25px;
   font-weight: 400;
 }

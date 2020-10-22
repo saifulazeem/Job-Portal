@@ -58,6 +58,24 @@
             outline: none;
             border-radius: 5px;
         }
+
+        tr.spaceUnder>td {
+            padding-bottom: 0em;
+        }
+
+        tr.space>td {
+            padding-top: 1em;
+        }
+
+        tr.nospace>td {
+            padding-top: 0em;
+            padding-bottom: 0em;
+        }
+
+        .nospace {
+            margin-bottom: -15px;
+            margin-top: -5px;
+        }
     </style>
     <script>
         $(document).ready(function () {
@@ -109,109 +127,116 @@
     </div>
     <!-------------------------------------NAVIGATION BAR----------------------------------------------->
 
-    <nav class="navbar navbar-expand navover navbar-transparent flex-column flex-row bd-navbar"
+    <nav class="navbar navbar-expand-md navover flex-column flex-row mt-xl-4 mt-lg-3 mt-md-3 mt-sm-3 mt-3"
         style="border-bottom: 2px solid white;position: relative;">
-        <div class="container">
-            <a class="navbar-brand mr-0 mr-md-2" href="home.html">
+        <div class="container d-flex align-items-end">
+            <a class="navbar-brand mr-0 mr-md-2 mb-xl-2 mb-lg-2 mb-md-2 mb-sm-2 mb-2" href="home.html">
                 <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block">
             </a>
 
+            <button class="navbar-toggler navbar-dark mb-3" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <img class="img-fluid" src="img/lines.png">
+            </button>
 
-            <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                    -->
-            <ul class="nav navbar-nav navbar-right justify-content-end ml-md-auto">
-                <li class="nav-item navhov mx-lg-2">
-                    <a class="nav-link" href="about.html" style="display: block;">ABOUT US </a>
-                </li>
-                <li class="nav-item navhov mx-lg-2">
-                    <a class="nav-link" href="#">EMPLOYERS PROFILE</a>
-                </li>
-                <li class="nav-item navhov mx-lg-2">
-                    <a class="nav-link" href="careers.html">CAREERS GUIDE</a>
-                </li>
-                <li class="nav-item navhov mx-lg-2">
-                    <a class="nav-link" href="blog.html">BLOG</a>
-                </li>
-            </ul>
-
-            <div class="nav navbar-nav navbar-right mt-2 ml-2 ml-lg-0">
-                <a href="login.html"
-                    class="btn btn-lg rounded-pill px-4 px-md-4 px-sm-4 px-lg-5 btnLogin align-self-center">
-                    Login</a>
-
-                <div class="addhov px-4 px-md-2 px-sm-4 px-lg-3">
-                    <div class="row">
-                        <img src="img/homeadd.png" class="img-fluid" style="position: relative; ">
-                    </div>
-                    <!------------------------------onhover div----------------------------------->
-                    <div class="row col-xl-4 col-lg-5 col-md-5 col-sm-6 col-8 my-2 hoverdown hoverhomerel roun regdiv"
-                        style="z-index: 9; background: rgba(255,255,255,.9);">
-                        <form class="col-12 needs-validation my-lg-3 my-md-3 my-sm-3 my-3 mx-0" novalidate>
-                            <div class="form-row no-gutters col-12 p-0 m-0 ">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
-                                    <div class="delhov">
-                                        <button type="button"
-                                            class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
-                                            <img class="" src="img/js.png" class="img-responsive">
-                                            <span class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">CANDIDATE</span>
-                                        </button>
-                                    </div>
+            <div class="collapse navbar-collapse navbar-right justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-4 ml-lg-0 ml-xl-0 ml-md-0 navhome">
+                    <li class="nav-item  mx-lg-2 mt-2">
+                        <a class="nav-link" href="about.html" style="display: block;"><span class="navhov">ABOUT US
+                            </span></a>
+                    </li>
+                    <li class="nav-item mx-lg-2 mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0">
+                        <a class="nav-link" href="#"><span class="navhov">EMPLOYERS PROFILE</span></a>
+                    </li>
+                    <li class="nav-item mx-lg-2 mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0">
+                        <a class="nav-link" href="careers.html"><span class="navhov">CAREERS GUIDE</span></a>
+                    </li>
+                    <li class="nav-item mx-lg-2 mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0">
+                        <a class="nav-link" href="blog.html"><span class="navhov">BLOG</span></a>
+                    </li>
+                    <li class="">
+                        <div class="nav navbar-nav navbar-right ml-2 ml-lg-0">
+                            <div class="d-inline"><a href="login.html"
+                                    class="btn btn-lg rounded-pill px-md-4 px-sm-4 px-lg-5 btnLogin mt-2">
+                                    Login</a>
+                            </div>
+                            <div class="addhov d-inline px-4 px-md-2 px-sm-4 px-lg-3">
+                                <div class="row">
+                                    <img src="img/homeadd.png" class="img-fluid mb-3" style="position: relative; ">
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
-                                    <div class="delhov float-right">
-                                        <button type="button"
-                                            class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
-                                            <img class="" src="img/emp.png" class="img-responsive">
-                                            <span class="mx-lg-0 mx-0 hovtxt mx-md-0">EMPLOYER</span>
-                                        </button>
-                                    </div>
-                                </div>
+                                <!------------------------------onhover div----------------------------------->
+                                <div class="row col-xl-4 col-lg-5 col-md-5 col-sm-6 col-8 my-2 hoverdown hoverhomerel roun regdiv"
+                                    style="z-index: 9; background: rgba(255,255,255,.9);">
+                                    <form class="col-12 needs-validation my-lg-3 my-md-3 my-sm-3 my-3 mx-0" novalidate>
+                                        <div class="form-row no-gutters col-12 p-0 m-0 ">
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
+                                                <div class="delhov">
+                                                    <button type="button"
+                                                        class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
+                                                        <img class="" src="img/js.png" class="img-responsive">
+                                                        <span
+                                                            class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">CANDIDATE</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
+                                                <div class="delhov float-right">
+                                                    <button type="button"
+                                                        class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
+                                                        <img class="" src="img/emp.png" class="img-responsive">
+                                                        <span class="mx-lg-0 mx-0 hovtxt mx-md-0">EMPLOYER</span>
+                                                    </button>
+                                                </div>
+                                            </div>
 
 
-                                <!-------------------------------Username------------------------------------->
-                                <div class="form-group mt-4">
-                                    <input type="text" size="60" class="form-control formdiv roun py-2 hovtxt w-100"
-                                        id="name" placeholder="Username" class="rounded" required>
+                                            <!-------------------------------Username------------------------------------->
+                                            <div class="form-group mt-4">
+                                                <input type="text" size="60"
+                                                    class="form-control formdiv roun py-2 hovtxt w-100" id="name"
+                                                    placeholder="Username" class="rounded" required>
 
-                                    <div class="invalid-feedback">
-                                        Please provide a valid username.
-                                    </div>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                </div>
-                                <!-------------------------------Email------------------------------------->
-                                <div class="form-group mt-2">
-                                    <input type="email" size="60" class="form-control formdiv roun py-2 hovtxt w-100"
-                                        id="mail" placeholder="Email" class="rounded" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid username.
+                                                </div>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
+                                            <!-------------------------------Email------------------------------------->
+                                            <div class="form-group mt-2">
+                                                <input type="email" size="60"
+                                                    class="form-control formdiv roun py-2 hovtxt w-100" id="mail"
+                                                    placeholder="Email" class="rounded" required>
 
-                                    <div class="invalid-feedback">
-                                        Please provide a valid email.
-                                    </div>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                </div>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid email.
+                                                </div>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
+                                            </div>
 
-                                <!-------------------------BUTTON------------------------------------->
-                                <div class="form-group mx-auto mt-0 d-flex justify-content-center align-self-center">
-                                    <button type="submit"
-                                        class="btn text-white bt py-lg-3 px-lg-5 py-md-1 px-md-4 py-md-2 px-sm-4 py-sm-2 px-4 py-2">
-                                        <a href="#" class="text-white hovtxt"
-                                            style="text-decoration: none;">Register</a></button>
-                                </div>
-                                <div class="row mb-lg-0 mb-2 mt-0 mx-2 hovtxt d-flex justify-content-center align-self-center"
-                                    style="color: #707070;">
-                                    Password will be generated and sent to your email address.
+                                            <!-------------------------BUTTON------------------------------------->
+                                            <div
+                                                class="form-group mx-auto mt-0 d-flex justify-content-center align-self-center">
+                                                <button type="submit"
+                                                    class="btn text-white bt py-lg-3 px-lg-5 py-md-1 px-md-4 py-md-2 px-sm-4 py-sm-2 px-4 py-2">
+                                                    <a href="#" class="text-white hovtxt"
+                                                        style="text-decoration: none;">Register</a></button>
+                                            </div>
+                                            <div class="row mb-lg-0 mb-2 mt-0 mx-2 hovtxt d-flex justify-content-center align-self-center"
+                                                style="color: #707070;">
+                                                Password will be generated and sent to your email address.
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -253,7 +278,7 @@
                             <!---------Second row------------->
                             <!------------------------FORM------------------------------------->
 
-                            <form class="form-inline">
+                            <form class="form-inline nchild">
 
                                 <td class=" p-0">
                                     <input type="text" class="form-control homesearch " id="keywords"
@@ -372,7 +397,7 @@
 
         <!----------------------------------------------CONTAINER------------------------------------------>
         <div class="row col-12 my-4 mx-2" style="padding-top:90px; ">
-            <div class="container-fluid shadow roun">
+            <div class="container-fluid roun" style="border-radius: 20px;">
                 <div class="row mx-4 my-4">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                         <p class="d-flex align-self-center homedivtxt" style="float: left;font-size: 25px;">
@@ -880,17 +905,17 @@
                             <!-------------------------------------------First Row-------------------------------------------->
                             <tr>
                                 <td>
-                                    <div class="shadow p-2" style="text-align: center;border-radius: 15px;">
+                                    <div class="roun p-2" style="text-align: center;border-radius: 15px;">
                                         <img src="img/goog.png" class="img-responsive">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="p-2 shadow" style="text-align: center;border-radius: 15px;">
+                                    <div class="p-2 roun" style="text-align: center;border-radius: 15px;">
                                         <img src="img/fb.png" class="img-responsive">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="pt-4 shadow pr-2 pl-2 pb-2"
+                                    <div class="pt-4 roun pr-2 pl-2 pb-2"
                                         style="text-align: center;border-radius: 15px;">
                                         <img src="img/ama.png" class="img-responsive">
                                     </div>
@@ -899,17 +924,17 @@
                             <!-------------------------------------------Second Row-------------------------------------------->
                             <tr>
                                 <td>
-                                    <div class="shadow p-2" style="text-align: center;border-radius: 15px;">
+                                    <div class="roun p-2" style="text-align: center;border-radius: 15px;">
                                         <img src="img/quo.png" class="img-responsive">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="p-2 shadow py-4" style="text-align: center;border-radius: 15px;">
+                                    <div class="p-2 roun py-4" style="text-align: center;border-radius: 15px;">
                                         <img src="img/hp.png" class="img-responsive mt-2">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="shadow py-4 pb-5 d-flex align-self-center justify-content-center"
+                                    <div class="roun py-4 pb-5 d-flex align-self-center justify-content-center"
                                         style="border-radius: 15px;">
                                         <img src="img/sam.png" class="img-responsive mt-3">
                                     </div>
@@ -919,7 +944,6 @@
                     </table>
                 </div>
 
-
                 <!----------------------------MEDIUM VIEW-------------------->
                 <div class="table-responsive-md d-md-block d-sm-none d-lg-none d-none p-4">
                     <table class="table table-md table-borderless text-dark">
@@ -927,18 +951,18 @@
                             <!-------------------------------------------First Row-------------------------------------------->
                             <tr>
                                 <td>
-                                    <div class="shadow py-1 px-0" style="text-align: center; border-radius: 15px;">
+                                    <div class="roun py-1 px-0" style="text-align: center; border-radius: 15px;">
                                         <img src="img/goog.png" class="img-responsive"
                                             style="width: 75px; height:100px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="py-1 shadow px-0" style="text-align: center;border-radius: 15px;">
+                                    <div class="py-1 roun px-0" style="text-align: center;border-radius: 15px;">
                                         <img src="img/fb.png" class="img-responsive" style="width: 75px; height:100px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="py-2 shadow px-1" style="text-align: center;border-radius: 15px;">
+                                    <div class="py-2 roun px-1" style="text-align: center;border-radius: 15px;">
                                         <img src="img/ama.png" class="img-responsive" style="width: 75px; height:90px;">
                                     </div>
                                 </td>
@@ -946,18 +970,18 @@
                             <!-------------------------------------------Second Row-------------------------------------------->
                             <tr>
                                 <td>
-                                    <div class="shadow p-2" style="text-align: center; border-radius: 15px;">
+                                    <div class="roun p-2" style="text-align: center; border-radius: 15px;">
                                         <img src="img/quo.png" class="img-responsive"
                                             style="width: 75px; height:100px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="py-3 shadow" style="text-align: center; border-radius: 15px;">
+                                    <div class="py-3 roun" style="text-align: center; border-radius: 15px;">
                                         <img src="img/hp.png" class="img-responsive" style="width: 75px; height:80px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="py-3  shadow" style="text-align: center;border-radius: 15px;">
+                                    <div class="py-3 roun" style="text-align: center;border-radius: 15px;">
                                         <img src="img/sam.png" class="img-responsive" style="width: 75px; height:80px;">
                                     </div>
                                 </td>
@@ -973,13 +997,13 @@
                             <!-------------------------------------------First Row-------------------------------------------->
                             <tr>
                                 <td>
-                                    <div class="shadow py-1 px-0" style="text-align: center; border-radius: 15px;">
+                                    <div class="roun py-1 px-0" style="text-align: center; border-radius: 15px;">
                                         <img src="img/goog.png" class="img-responsive"
                                             style="width: 75px; height:100px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="py-1 shadow px-0" style="text-align: center;border-radius: 15px;">
+                                    <div class="py-1 roun px-0" style="text-align: center;border-radius: 15px;">
                                         <img src="img/fb.png" class="img-responsive" style="width: 75px; height:100px;">
                                     </div>
                                 </td>
@@ -987,12 +1011,12 @@
                             <!-------------------------------------------Second Row-------------------------------------------->
                             <tr>
                                 <td>
-                                    <div class="py-2 shadow px-1" style="text-align: center;border-radius: 15px;">
+                                    <div class="py-2 roun px-1" style="text-align: center;border-radius: 15px;">
                                         <img src="img/ama.png" class="img-responsive" style="width: 75px; height:90px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="shadow p-2" style="text-align: center; border-radius: 15px;">
+                                    <div class="roun p-2" style="text-align: center; border-radius: 15px;">
                                         <img src="img/quo.png" class="img-responsive"
                                             style="width: 75px; height:100px;">
                                     </div>
@@ -1002,12 +1026,12 @@
                             <!-------------------------------------------Third Row-------------------------------------------->
                             <tr>
                                 <td>
-                                    <div class="py-3 shadow" style="text-align: center; border-radius: 15px;">
+                                    <div class="py-3 roun" style="text-align: center; border-radius: 15px;">
                                         <img src="img/hp.png" class="img-responsive" style="width: 75px; height:80px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="py-3  shadow" style="text-align: center;border-radius: 15px;">
+                                    <div class="py-3  roun" style="text-align: center;border-radius: 15px;">
                                         <img src="img/sam.png" class="img-responsive" style="width: 75px; height:80px;">
                                     </div>
                                 </td>
@@ -1023,19 +1047,19 @@
                             <!-------------------------------------------First Row-------------------------------------------->
                             <tr>
                                 <td>
-                                    <div class="shadow p-2" style="text-align: center;border-radius: 10px;">
+                                    <div class="roun p-2" style="text-align: center;border-radius: 10px;">
                                         <img src="img/goog.png" class="img-responsive"
                                             style="width: 120px; height:120px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="p-2 shadow" style="text-align: center;border-radius: 10px;">
+                                    <div class="p-2 roun" style="text-align: center;border-radius: 10px;">
                                         <img src="img/fb.png" class="img-responsive"
                                             style="width: 120px; height:120px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="pt-4 shadow pr-2 pl-2 pb-2"
+                                    <div class="pt-4 roun pr-2 pl-2 pb-2"
                                         style="text-align: center;border-radius: 10px;">
                                         <img src="img/ama.png" class="img-responsive"
                                             style="width: 120px; height:100px;">
@@ -1045,19 +1069,19 @@
                             <!-------------------------------------------Second Row-------------------------------------------->
                             <tr>
                                 <td>
-                                    <div class="rounded shadow p-2" style="text-align: center;border-radius: 10px;">
+                                    <div class="rounded roun p-2" style="text-align: center;border-radius: 10px;">
                                         <img src="img/quo.png" class="img-responsive"
                                             style="width: 120px; height:120px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="rounded p-2 shadow pt-4 pb-4"
+                                    <div class="rounded p-2 roun pt-4 pb-4"
                                         style="text-align: center;border-radius: 10px;">
                                         <img src="img/hp.png" class="img-responsive" style="width: 120px; height:90px;">
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="rounded pt-4 shadow pt-4 pb-4"
+                                    <div class="rounded pt-4 roun pt-4 pb-4"
                                         style="text-align: center;height: 130px;border-radius: 10px;">
                                         <img src="img/sam.png" class="img-responsive"
                                             style="width: 120px; height:90px;">
@@ -1071,18 +1095,18 @@
         </div>
         <!------------------------------------FORM------------------------>
         <div class="row rounded" style="padding-bottom: 20px; padding-top: 70px;">
-            <div class="top" style="margin-left:30px;margin-right:30px;border-radius: 20px;">
-                <div class="row">
+            <div class="top roun" style="margin: 0px 30px;border-radius: 20px 20px 0px 20px;">
+                <div class="row ">
                     <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
-                        <img src="img/hiring.png" class="img-fluid formalert" alt="Responsive image">
+                        <img src="img/hiring.png" class="img-fluid formalert h-100" alt="Responsive image">
                     </div>
                     <div class="col-lg-4 col-md-5 col-sm-11 col-xs-12" style="margin:20px;">
                         <form class="needs-validation" novalidate>
-                            <p class="text-center formposttxt">POST A JOB</p>
-                            <p class="text-center formpostsubtxt">SIGN UP FOR JOB ALERTS</p>
+                            <p class="text-center formposttxt" style="margin-bottom: 0px;">POST A JOB</p>
+                            <p class="text-center formpostsubtxt" style="margin-top: 0px;">SIGN UP FOR JOB ALERTS</p>
                             <div class="form-group mt-4">
-                                <input type="email" class="roun form-control formpost" placeholder="Email" id="email"
-                                    aria-describedby="emailHelp" required>
+                                <input type="email" class="roun form-control formpost py-4" placeholder="Email"
+                                    id="email" aria-describedby="emailHelp" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid email address with '@' and '.'.
                                 </div>
@@ -1091,7 +1115,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="roun form-control formpost" placeholder="Keywords"
+                                <input type="text" class="roun form-control formpost py-4" placeholder="Keywords"
                                     id="keywords" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid keyword.
@@ -1101,7 +1125,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="roun form-control formpost" placeholder="Location"
+                                <input type="text" class="roun form-control formpost py-4" placeholder="Location"
                                     id="location" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid location.
@@ -1217,21 +1241,21 @@
     <!-----------------------------------------------------FOOTER----------------------------------------------------------->
     <footer class="container-fluid foot pb-5" style="background-color: #323232; ">
         <div class="container">
-            <div class="row mb-3">
+            <div class="row">
                 <div class="col-lg-7 d-flex align-self-center col-md-6 col-sm-6 col-6">
                     <img src="img/logo.png" class="img-fluid d-block">
                     <!--logo-->
                 </div>
                 <div class="col-xl-5 offset-xl-0 col-lg-5 offset-lg-0 col-md-6 col-sm-6 col-5">
-                    <div class="row pl-xl-0 pl-lg-0 ml-lg-4 pl-0 ml-0">
+                    <div class="row pl-xl-0 pl-lg-0 ml-lg-4 pl-0 ml-0 curhov">
                         <div
                             class="col-xl-1 offset-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-2 offset-sm-2 px-0 my-2">
                             <img src="img/joblisting.png" class="img-fluid mt-2">
                         </div>
-                        <div class="ml-1 col-xl-3 col-lg-4 col-md-2 col-sm-1 col-1 px-0">
+                        <div class="ml-1 col-xl-3 col-lg-4 col-md-2 col-sm-1 col-1 px-0 ">
                             <p class="tag d-flex justify-content font-weight-bold"
                                 style="color: #FFFFFF;margin-bottom:0px;">1124</p>
-                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:0px;">Job Listing</p>
+                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Job Listing</p>
                         </div>
                         <div
                             class="col-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-2 offset-sm-2 px-0 my-2">
@@ -1241,7 +1265,7 @@
                             class="ml-sm-1 ml-xl-0 ml-lg-0 ml-md-0 ml-2 col-xl-4 col-lg-3 col-md-2 col-sm-1 col-1 px-0">
                             <p class="tag d-flex justify-content font-weight-bold"
                                 style="color: #FFFFFF;margin-bottom:0px;">444</p>
-                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:0px;">Resumes Posted</p>
+                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Resumes Posted</p>
                         </div>
                     </div>
                 </div>
@@ -1270,67 +1294,67 @@
                         <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 table-responsive"
                             style="text-align: left;">
                             <table class="table table-sm table-borderless"
-                                style="border-spacing: 0; border-width: 0; padding: 0; border-width: 0;">
+                                style="border-spacing: 0; border-width: 0; border-width: 0;">
                                 <tbody>
-                                    <tr>
+                                    <tr class="spaceUnder">
                                         <td>
-                                            <p class="tag"> For
+                                            <p class="tag foottop"> For
                                                 Candidates
                                             </p>
                                         </td>
                                         <td>
-                                            <p class="tag">For Employers
+                                            <p class="tag foottop">For Employers
                                             </p>
                                         </td>
                                         <td>
-                                            <p class="tag">Other</p>
+                                            <p class="tag foottop">Other</p>
                                         </td>
                                         <td>
-                                            <p class="tag">Legal</p>
+                                            <p class="tag foottop">Legal</p>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td><a class="link" href="singlejobpage.html">Browse Jobs</a>
+                                    <tr class="">
+                                        <td><a class="weightedtext" href="singlejobpage.html">Browse Jobs</a>
                                         </td>
-                                        <td><a class="link" href="#">Browse
+                                        <td><a class="weightedtext" href="#">Browse
                                                 Candidates</a>
                                         </td>
-                                        <td><a class="link" href="singlejobpage.html">Job Page</a></td>
-                                        <td><a class="link" href="#">Privacy Policy</a>
+                                        <td><a class="weightedtext" href="singlejobpage.html">Job Page</a></td>
+                                        <td><a class="weightedtext" href="#">Privacy Policy</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a class="link" href="#">Browse
+                                        <td><a class="weightedtext" href="#">Browse
                                                 Categories</a>
                                         </td>
-                                        <td><a class="link" href="#">Employer
+                                        <td><a class="weightedtext" href="#">Employer
                                                 Dashboard</a>
                                         </td>
-                                        <td><a class="link" href="#" style="text-align: left;">Job Page
+                                        <td><a class="weightedtext" href="#" style="text-align: left;">Job Page
                                                 Alternative</a></td>
-                                        <td><a class="link" href="#">Terms of Use</a>
+                                        <td><a class="weightedtext" href="#">Terms of Use</a>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a class="link" href="#">Candidate
+                                        <td><a class="weightedtext" href="#">Candidate
                                                 Dashboard</a>
                                         </td>
-                                        <td><a class="link" href="#">Add Job</a></td>
-                                        <td><a class="link" href="#">Resume Page</a>
+                                        <td><a class="weightedtext" href="#">Add Job</a></td>
+                                        <td><a class="weightedtext" href="#">Resume Page</a>
                                         </td>
-                                        <td><a class="link" href="#">FAQ</a></td>
+                                        <td><a class="weightedtext" href="#">FAQ</a></td>
                                     </tr>
                                     <tr>
-                                        <td><a class="link" href="#">Job Alerts</a></td>
-                                        <td><a class="link" href="packages.html">Job Packages</a>
+                                        <td><a class="weightedtext" href="#">Job Alerts</a></td>
+                                        <td><a class="weightedtext" href="packages.html">Job Packages</a>
                                         </td>
-                                        <td><a class="link" href="blog.html">Blog</a></td>
+                                        <td><a class="weightedtext" href="blog.html">Blog</a></td>
                                     </tr>
                                     <tr>
-                                        <td><a class="link" href="#">My Bookmarks</a>
+                                        <td><a class="weightedtext" href="#">My Bookmarks</a>
                                         </td>
-                                        <td><a class="link" href="#"></a></td>
-                                        <td><a class="link" href="#">Contact</a></td>
+                                        <td><a class="weightedtext" href="#"></a></td>
+                                        <td><a class="weightedtext" href="#">Contact</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1338,17 +1362,19 @@
 
                         <!-------------------------------------FORM--------------------------------------------------->
                         <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12 table-responsive newsform">
-                            <table class="table table-sm table-borderless mr-0">
+                            <table class="table table-sm table-borderless mt-2 mr-0">
                                 <tbody class="mt-sm-4 mt-lg-0 mt-md-0 mt-4">
-                                    <tr class="float-left">
-                                        <td><img src="img/newsletter.png" class="img-fluid"></td>
-                                        <td class="text-left tag" colspan="3">Sign Up For a
+                                    <tr class="float-left nospace py-0 my-0 ">
+                                        <td><img src="img/newsletter.png" class="img-fluid nospace"></td>
+                                        <td class="text-left tag nospace" colspan="3" style="font-size: Proxima Nova;">
+                                            Sign Up For a
                                             Newsletter
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <tr class="space">
                                         <td colspan="4">
-                                            <p class="link text text-left  ml-xl-2 ml-lg-2 ml-md-2 ml-sm-0 ml-0">
+                                            <p class="text-left ml-xl-2 ml-lg-2 ml-md-2 ml-sm-0 ml-0"
+                                                style="line-height: normal; color:#929292;font-size: 15px;">
                                                 Weekly breaking news, analysis and cutting edge
                                                 advices on job searching.</p>
                                         </td>
@@ -1372,20 +1398,6 @@
     </footer>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
