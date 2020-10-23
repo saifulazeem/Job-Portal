@@ -13,25 +13,49 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
+    <style>
+        .custom-control-label:before {
+            background-color: #0D2942;
+        }
+
+        .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+            background-color: #0D2942;
+        }
+
+        .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='white' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+        }
+
+        .custom-control-input:active~.custom-control-label::before {
+            background-color: green;
+        }
+
+        /** focus shadow pinkish **/
+        .custom-checkbox .custom-control-input:focus~.custom-control-label::before {
+            box-shadow: none !important;
+            outline: none !important;
+            border: 1px solid #c2c0c0 !important;
+        }
+    </style>
     <script>
-          //JavaScript for disabling form submissions if there are invalid fields
-     (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-          form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
+        //JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
     </script>
 </head>
 
@@ -46,17 +70,17 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav justify-content-end ml-auto">
-                <li class="nav-item navhov">
-                    <a class="nav-link" href="about.html">ABOUT US <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html"><span class="navhov">ABOUT US</span></a>
                 </li>
-                <li class="nav-item navhov">
-                    <a class="nav-link" href="Employer.html">EMPLOYERS PROFILE</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="Employer.html"><span class="navhov">EMPLOYERS PROFILE</span></a>
                 </li>
-                <li class="nav-item navhov">
-                    <a class="nav-link" href="careers.html">CAREERS GUIDE<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="careers.html"><span class="navhov">CAREERS GUIDE</span></a>
                 </li>
-                <li class="nav-item navhov">
-                    <a class="nav-link" href="blog.html">BLOG</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html"><span class="navhov">BLOG</span></a>
                 </li>
             </ul>
         </div>
@@ -80,74 +104,83 @@
                 </div>
 
                 <!--------------------------FORM--------------------------------------------------->
-                <div class="col-lg-5 offset-lg-2 mr-3 ml-3 my-4 ">
-                    <div class="row d-flex justify-content-center align-item-center mt-3">
+                <div class="col-lg-5 offset-lg-2 mx-3 my-5 ">
+                    <div class="row d-flex justify-content-center mt-5">
                         <form class="needs-validation" novalidate>
                             <div class="form-group">
-                                <label for="em" class="d-flex align-items-start mx-2">Email
+                                <label for="em" class="d-flex align-items-start mx-0 px-0" style="font-size: 18px;">Email
                                     Address</label>
                                 <input type="email" size="60" required class="form-control f" id="em"
-                                    placeholder="example@email.com" aria-describedby="emailHelp">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-                                    anyone else.</small>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid email.
-                                    </div>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                      </div>
+                                    placeholder="example@email.com" aria-describedby="emailHelp" style="border: 0px;">
+                                <div class="invalid-feedback">
+                                    Please provide a valid email.
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="pass"
-                                    class="d-flex align-items-start mx-2">Password</label>
-                                <input type="password" size="60" required minlength="8" maxlength="20" class="form-control f"
-                                    id="pass" placeholder="***********">
-                                    <div class="invalid-feedback">
-                                        Please provide a valid password.
-                                    </div>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                      </div>
+                                <label for="pass" class="d-flex align-items-start mx-0 px-0"
+                                    style="font-size: 18px;">Password</label>
+                                <input type="password" size="60" required minlength="8" maxlength="20"
+                                    class="form-control f" id="pass" placeholder="***********" style="border: 0px;">
+                                <div class="invalid-feedback">
+                                    Please provide a valid password.
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
                             </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                            <div class="d-flex align-items-start m-0 p-0 custom-control form-control-lg custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="remember">
+                                <label class="custom-control-label ml-4" for="remember">Remember Me</label>
                             </div>
-                            <button type="submit" class="btn bt ex text-white">Login</button>
-                            <br><br>
-                            <a class="chan2" style="text-decoration: none;" href="register.html">Sign Up</a>
-                            <br>
-                            <a class="my-2 chan" style="text-decoration: none;" href="forgetpassword.html">Forgot your password?</a>
+                            <div class=" mt-4">
+                                <button type="submit" class="btn ex text-white"
+                                    style="font-size: 22px;background-color: #0D2942;">Login</button>
+                                <br><br>
+                                <a style="text-decoration: none;font-size: 18px;color:#0D2942 ;"
+                                    href="register.html">Sign
+                                    Up</a>
+                                <br>
+                                <a class="my-2" style="text-decoration: none;font-size: 18px; color: #0BB44F;"
+                                    href="forgetpassword.html">Forgot your password?</a>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-----------------------------------------------------FOOTER----------------------------------------------------------->
-    <footer class="container-fluid foot" style="background-color: #323232;">
+    <footer class="container-fluid foot pb-5" style="background-color: #323232; ">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-lg-7 d-flex align-self-center col-md-6 col-sm-6 col-6">
                     <img src="img/logo.png" class="img-fluid d-block">
                     <!--logo-->
                 </div>
-                <div class="col my-auto">
-                    <div class="row">
-                        <div class="col-lg-1 offset-lg-2 col-md-1 offset-md-2 col-sm-1 offset-sm-2 px-0 my-2">
-                            <img src="img/joblisting.png" class="img-fluid d-flex justify-content ">
+                <div class="col-xl-5 offset-xl-0 col-lg-5 offset-lg-0 col-md-6 col-sm-6 col-5">
+                    <div class="row pl-xl-0 pl-lg-0 ml-lg-4 pl-0 ml-0 curhov">
+                        <div
+                            class="col-xl-1 offset-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-2 offset-sm-2 px-0 my-2">
+                            <img src="img/joblisting.png" class="img-fluid mt-2">
                         </div>
-                        <div class="col-lg-2 col-md-1 col-sm-1 hov px-0">
-                            <p class="tag d-flex justify-content">1124</p>
-                            <p class="text d-flex justify-content py-0">Job Listing</p>
+                        <div class="ml-1 col-xl-3 col-lg-4 col-md-2 col-sm-1 col-1 px-0 ">
+                            <p class="tag d-flex justify-content font-weight-bold"
+                                style="color: #FFFFFF;margin-bottom:0px;">1124</p>
+                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Job Listing</p>
                         </div>
-                        <div class="col-lg-1 offset-lg-2 col-md-1 offset-md-2 col-sm-1 offset-sm-2 px-0 my-2">
-                            <img src="img/resumeposted.png" class="img-fluid d-flex justify-content">
+                        <div
+                            class="col-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-2 offset-sm-2 px-0 my-2">
+                            <img src="img/resumeposted.png" class="img-fluid mt-2">
                         </div>
-                        <div class="col-lg-4 col-md-1 col-sm-1 hov px-0">
-                            <p class="tag d-flex justify-content">444</p>
-                            <p class="text d-flex justify-content py-0">Resumes Posted</p>
+                        <div
+                            class="ml-sm-1 ml-xl-0 ml-lg-0 ml-md-0 ml-2 col-xl-4 col-lg-3 col-md-2 col-sm-1 col-1 px-0">
+                            <p class="tag d-flex justify-content font-weight-bold"
+                                style="color: #FFFFFF;margin-bottom:0px;">444</p>
+                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Resumes Posted</p>
                         </div>
                     </div>
                 </div>
@@ -155,7 +188,7 @@
         </div>
 
         <!-----------------------------------------------HORIZONTAL LINE------------------------------------->
-        <div class="row">
+        <div class="row p-0">
             <div class="col-md-12">
                 <hr style="background-color: green; height: 1.2px;" class="p-0 m-0">
             </div>
@@ -163,111 +196,120 @@
 
         <!-------------------------------------------NEXT ROW------------------------------------------------>
 
-        <div class="row mt-4 pt-4">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-2 resp" style="position: relative;">
-                <img src="img/circle.png" class="img-fluid ">
+        <div class="row mt-5" style="position: relative;">
+            <div class="resp">
+                <img src="img/circle.png" class="img-fluid respimg">
             </div>
 
-            <!------------------------------------------------tables and form-------------------------------->
-            <!-------------------------------------TABLE--------------------------------------------------->
-            <div class="col-lg-6 col-md-9 col-sm-9 col-9 foottab table-responsive" style="text-align: justify;">
-                <table class="table table-sm table-borderless" style="border-spacing: 0; border-width: 0; padding: 0; border-width: 0;">
-                    <tbody>
-                        <tr>
-                            <td >
-                                <p style="font-size: 18px;"> For
-                                    Candidates
-                                </p>
-                            </td>
-                            <td>
-                                <p style="font-size: 18px;">For Employers
-                                </p>
-                            </td>
-                            <td>
-                                <p style="font-size: 18px;">Other</p>
-                            </td>
-                            <td>
-                                <p style="font-size: 18px;">Legal</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Browse Jobs</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Browse
-                                    Candidates</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Page</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Privacy Policy</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Browse
-                                    Categories</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Employer
-                                    Dashboard</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Page
-                                    Alternative</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Terms of Use</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Candidate
-                                    Dashboard</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Add Job</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Resume Page</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">FAQ</a></td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Alerts</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Packages</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Blog</a></td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">My Bookmarks</a>
-                            </td>
-                            <td><a class="link" href="#"></a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Contact</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <div class="container " style="position: relative;">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="row mx-2">
+                        <!------------------------------------------------tables and form-------------------------------->
+                        <!-------------------------------------TABLE--------------------------------------------------->
+                        <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 table-responsive"
+                            style="text-align: left;">
+                            <table class="table table-sm table-borderless"
+                                style="border-spacing: 0; border-width: 0; border-width: 0;">
+                                <tbody>
+                                    <tr class="spaceUnder">
+                                        <td>
+                                            <p class="tag foottop"> For
+                                                Candidates
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="tag foottop">For Employers
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="tag foottop">Other</p>
+                                        </td>
+                                        <td>
+                                            <p class="tag foottop">Legal</p>
+                                        </td>
+                                    </tr>
+                                    <tr class="">
+                                        <td><a class="weightedtext" href="singlejobpage.html">Browse Jobs</a>
+                                        </td>
+                                        <td><a class="weightedtext" href="#">Browse
+                                                Candidates</a>
+                                        </td>
+                                        <td><a class="weightedtext" href="singlejobpage.html">Job Page</a></td>
+                                        <td><a class="weightedtext" href="#">Privacy Policy</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="weightedtext" href="#">Browse
+                                                Categories</a>
+                                        </td>
+                                        <td><a class="weightedtext" href="#">Employer
+                                                Dashboard</a>
+                                        </td>
+                                        <td><a class="weightedtext" href="#" style="text-align: left;">Job Page
+                                                Alternative</a></td>
+                                        <td><a class="weightedtext" href="#">Terms of Use</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="weightedtext" href="#">Candidate
+                                                Dashboard</a>
+                                        </td>
+                                        <td><a class="weightedtext" href="#">Add Job</a></td>
+                                        <td><a class="weightedtext" href="#">Resume Page</a>
+                                        </td>
+                                        <td><a class="weightedtext" href="#">FAQ</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="weightedtext" href="#">Job Alerts</a></td>
+                                        <td><a class="weightedtext" href="packages.html">Job Packages</a>
+                                        </td>
+                                        <td><a class="weightedtext" href="blog.html">Blog</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="weightedtext" href="#">My Bookmarks</a>
+                                        </td>
+                                        <td><a class="weightedtext" href="#"></a></td>
+                                        <td><a class="weightedtext" href="#">Contact</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-            <!-------------------------------------FORM--------------------------------------------------->
-            <div class="col-lg-3 col-md-9 col-sm-9 col-10 table-responsive newsform">
-                <table class="table table-sm table-borderless">
-                    <tbody>
-                        <tr>
-                            <td><img src="img/newsletter.png" class="img-fluid"></td>
-                            <td class="text-justify" colspan="3" style="font-size: 20px;">Sign Up For a
-                                Newsletter
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <p class="link text text-justify" style="font-size: 14px;">
-                                    Weekly breaking news, analysis and cutting edge
-                                    advices on job searching.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <form class="form-inline my-2 my-lg-0 ml-2">
-                                    <input class="form-control mr-sm-2" type="email" size="22"
-                                        style=" background-color: #818181; font-size: 14px;" placeholder="Enter your Email here...">
-                                    <button class="btn btn-success rounded my-2" style="width:min-content;font-size: 14px;"
-                                        type="submit">SUBSCRIBE</button>
-                                </form>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <!-------------------------------------FORM--------------------------------------------------->
+                        <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12 table-responsive newsform">
+                            <table class="table table-sm table-borderless mt-2 mr-0">
+                                <tbody class="mt-sm-4 mt-lg-0 mt-md-0 mt-4">
+                                    <tr class="float-left nospace py-0 my-0 ">
+                                        <td><img src="img/newsletter.png" class="img-fluid nospace"></td>
+                                        <td class="text-left tag nospace" colspan="3" style="font-size: Proxima Nova;">
+                                            Sign Up For a
+                                            Newsletter
+                                        </td>
+                                    </tr>
+                                    <tr class="space">
+                                        <td colspan="4">
+                                            <p class="text-left ml-xl-2 ml-lg-2 ml-md-2 ml-sm-0 ml-0"
+                                                style="line-height: normal; color:#929292;font-size: 15px;">
+                                                Weekly breaking news, analysis and cutting edge
+                                                advices on job searching.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            <form class="form-inline ml-lg-2 ml-md-2 ml-sm-0 ml-0 my-2 my-lg-0">
+                                                <input class="form-control footerform col-xl-8  col-8 mr-sm-2 text"
+                                                    type="email" size="22" placeholder="Enter your Email here...">
+                                                <button class="btn btn-success my-2 text btnsub"
+                                                    type="submit">Subscribe</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
     </footer>
 
 

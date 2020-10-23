@@ -105,6 +105,7 @@ color:white;
 .f::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color:grey;
   opacity: 0.7; /* Firefox */
+  font-size: 14px;
 }
 .f{
   background-color: #F3F3F3;
@@ -226,7 +227,7 @@ text-decoration: none;
   padding: 0px;
 }
 /***********************************************************************************************************************/
-@media (max-width: 575.98px) {
+@media (min-width: 300px) {
   /*footer circle image*/
   .resp {
    position: absolute;
@@ -342,7 +343,7 @@ margin:30px;
   width:1300px;
 }
 .homeover{
-  margin-top: -250px;
+  margin-top: -365px;
 }
 .hometexttop{
   position: absolute;
@@ -393,10 +394,13 @@ margin:30px;
   color: white;
 }
 .featover{
-  top:-330px;position:relative;margin-bottom: -220px;
+  top:30px;position:relative;margin-bottom: -220px;
+}
+.featsub{
+  margin:0px -15px;
 }
 .hometxt{
-  top:-490px;
+  top:-70px;
   left:20px;
   font-size: 18px;
 }
@@ -416,31 +420,401 @@ margin:30px;
 }
 /*form home.html*/
 .homesearch{
-  width: 140px;height:50px;margin-left: 0px;font-size: 12px;padding-left: 3px;padding-right: 3px;
+  width: 140px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 20px;padding-right: 20px;
+  border-radius: 8px;
 }
 .homesearch::placeholder{
-  font-size: 12px;
+  font-size: 14px;
   color:grey;
+}
+.homebt{
+  width: 150px; height: 43px; margin-top: 15px;
 }
 .addhome{
   margin-left: 15px;
 }
-#clear {
-  position: absolute;
-  border-radius: 5px;
-  right: 2px;
-  top:3px;
-  z-index: 2px;
-  border: none;
-  width: 70px;
-  height: 43px;
-  margin-left: 0px;
-}
 .searchform{
-  top:-400px;
+  top:-50px;
+}
+.findjobs{
+  padding-top: 600px;
 }
 .hoverdown{
-  border-radius: 10px;margin-bottom: -420px; top:366px;
+  border-radius: 10px;margin-bottom: -420px; top:296px;
+}
+.hoverhomerel{
+  position: absolute; left:70px;
+}
+.hovtxt{
+  font-size: 12px;
+}
+.formdiv::placeholder{
+  color:#707070;
+  font-size: 12px;
+}
+.formdiv{
+  height:40px;
+  padding: 0px 15px;
+  border-radius: 3px;
+}
+.boldheader{
+  font-size: 12px;
+}
+.comment::before{
+  content:"";
+  position: absolute;
+  top:-6px;
+  left:75px;
+  margin:auto;
+  height: 20px;
+  width: 20px;
+  border:1px solid #fff;
+  transform:rotate(45deg);
+  background-color:  #fff;
+  }
+  .tag{
+    font-size:16px;
+  }
+  .text
+  {
+    font-size: 14px;
+  }
+/*home.html globe images*/
+.s1{
+  position: absolute;left:70px; top:0px;
+  width:70px;height: 70px;
+}
+.s1div{
+  position: absolute;left:-60px;width:160px;
+}
+.s2{
+  position: absolute; left: 240px; top:20px;
+  width:70px;height: 70px;
+}
+.s2div{
+  position: absolute;left:-50px;width:160px;
+}
+.s3{
+  position: absolute; left:130px;top:130px;
+  width:70px;height: 70px;
+}
+.s3div{
+  position: absolute;left:-50px;width:160px;
+}
+.s4{
+  position: absolute; left:400px; top:30px;
+  width:70px;height: 70px;
+}
+.s4div{
+  position: absolute;left:-51px;width:160px;
+}
+/*Alert form in home.html and about.html*/ 
+.formalert{
+  border-radius: 20px 20px 0px 0px;
+  height:340px;
+}
+.formposttxt{
+  font-size: 30px;
+  font-weight: 600;
+}
+.formpostsubtxt{
+  font-size: 20px;
+  font-weight: 350;
+}
+.formpost {
+  border-radius: 15px;border: 0px;padding-left: 45px;
+}
+/*career.html cards*/
+.cards-txt{
+  color:black;
+  font-size: 12px;
+  }     
+  /*career.html cards div*/
+.over{
+  left:0px;
+  top: -770px;
+  margin-bottom: -755px;
+}
+/*career.html blue rectangle*/
+.hg{
+  height: 720px;
+}
+   /*career.html circle*/
+ .careercir{
+  position: absolute;
+  width:250px;
+  height:300px;
+  right:-100px;
+  top:14px;
+}
+.cards{
+  background-color: white;
+  height:160px;
+  width:120px;
+  } 
+        /*blog.html div*/
+.bover-about{
+  top:-60px;
+}
+/*blog page pagination*/
+.blogpg{
+bottom: -1700px;
+padding-top: 200px;
+}
+/*blog main text*/
+.blogtext{
+ top:240px;
+}
+.blogsubtext{
+  letter-spacing: 2px;font-size: 16px;
+}
+/*Employer.html*/
+.empdivs{
+  border-radius: 12px;
+  padding-left: 19px;
+  padding-right: 19px;
+  font-size: 12px;
+  padding-top: 10px;
+}
+.txtemp{
+  font-size: 16px;
+}
+/*form Employer.html*/
+.empkey{
+  width: 250px;height:40px;margin-left: 50px;
+}
+.emploccat{
+  width: 250px;height:40px;margin-left: 50px;
+}
+.empbtn{
+  width: 150px; height: 43px; margin-left: 6px;margin-left: 150px; margin-top: 15px;
+}
+/*register.html button*/
+.regbtn {
+  padding-right: 35px;
+  padding-left: 35px;
+  border-radius: 4px;
+}
+
+.navover{
+  top: -800px;
+}
+ }
+/***********************************************************************************************************************/
+@media (min-width: 500px) {
+  /*footer circle image*/
+  .resp {
+   position: absolute;
+   left: -90px;
+   }
+   .respimg{
+    width: 150px;
+    height: 150px;
+  }
+   .footerform{
+    border-radius: 7px;background-color: #818181; border:0px; color: white;height: 35px;
+  }
+  .btnsub{
+    color:#CCCCCC;
+    border-radius: 7px;
+    height: 35px;
+    margin-left: 5px;
+    padding: 0px 14px;
+  }
+     /*Footer form*/
+   .newsform{
+    padding-top:0px;
+     padding-left: 0px;
+    }
+    .tablehome td{
+      font-size: 14px;
+      text-align: left;
+    }
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 180px;
+  left: 66px;
+}
+/*home.html main image*/
+.topimg{
+  top:-40px;
+}
+/*accountancy.html cards div*/
+.aover{
+  top: -920px;
+margin:30px;
+}
+.ag{
+  height:900px;
+  top:50px;
+}
+/*accountancy.html sub div*/
+.dover{
+  top: -860px;
+  margin-bottom: -100px;
+}
+
+/*accountancy.html  circle*/
+.cir{
+  position: absolute;
+  width:150px;
+  height:170px;
+  right:-40px;
+  top:-140px;
+}
+/*accountancy main text over image*/
+.cent {
+  width:400px;
+  height:400px;
+  position: absolute;
+  top: 170px;
+  left:20px;
+  font-size:12px; 
+  
+}
+/*accountancy.html cards*/
+.acards-txt{
+  color:black;
+  font-size: 10px;
+  }     
+.acards{
+  background-color: white;
+  height:165px;
+  width:100px;
+  } 
+  /*green strip on testimonial div*/
+.testdiv
+{
+  margin-left:0px; width: 350px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;
+}
+.testimg{
+  padding-left: 109px; 
+}
+/*accountancy.html cards*/
+.subcards-txt{
+  color:black;
+  font-size:10px;
+  }     
+  
+.subcards{
+  background-color: white;
+  height:150px;
+  width:130px;
+  } 
+  .subtext{
+    width:470px;
+    font-size:12px;
+    padding-left:50px;
+  }
+/*about.html text*/
+.t{
+  margin-top: 90px;
+}
+/*home.html main img top*/ 
+.homeimg{
+  height:580px;
+  width:1300px;
+}
+.homeover{
+  margin-top: -280px;
+}
+.hometexttop{
+  position: absolute;
+  top: 220px;
+  left: 16px;
+}
+.h::placeholder{
+  font-size: 12px;
+  padding-left: 3px;
+}
+.homedivtxt{
+  font-size: 18px;
+  font-weight:680;
+  text-align: left;
+}
+.homedivsubtxt{
+  font-size: 12px;
+}
+/*home.html slider*/
+.homeimgslide{
+  position: relative; 
+  border-radius: 10px;
+  width:120px;
+  height:120px;
+  margin: 0px;
+}
+.homeimgslidetxt{
+  font-size:12px;
+  width:120px;
+  top: 91px; 
+  position:absolute;
+  text-align:center;
+  border-radius: 10px;
+  left:8px; 
+}
+/*home.html slider "Select category" position button*/
+.homesel{
+  right:-30px;
+}
+.btncarousel{
+  font-size:20px; border-radius: 40px;height:30px; width:30px;
+  background-color: #ccc;
+  color:#0BB44F;
+}
+
+.btncarousel:hover{
+  background-color: #0BB44F;
+  color: white;
+}
+.featover{
+  top:20px;position:relative;margin-bottom: -220px;
+}
+.featsub{
+  margin:0px -10px ;
+}
+.hometxt{
+  top:-70px;
+  left:20px;
+  font-size: 18px;
+}
+.homemaintxt{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+.hoverhome{
+  border-radius: 5px;padding:3px;
+}
+.homeemp{/*featured employers*/
+  font-size: 36px;
+  font-weight: 600;
+  color: #0BB44F;
+  opacity: 50%;
+}
+/*form home.html*/
+.homesearch{
+  width: 140px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 20px;padding-right: 20px;
+  border-radius: 8px;
+}
+.homesearch::placeholder{
+  font-size: 14px;
+  color:grey;
+}
+.homebt{
+  width: 150px; height: 43px; margin-top: 15px;
+}
+.addhome{
+  margin-left: 15px;
+}
+.searchform{
+  top:-60px;
+}
+.findjobs{
+  padding-top: 400px;
+}
+.hoverdown{
+  border-radius: 10px;margin-bottom: -420px; top:296px;
 }
 .hoverhomerel{
   position: absolute; left:70px;
@@ -718,7 +1092,7 @@ padding-top: 200px;
   width:1300px;
 }
 .homeover{
-  margin-top: -250px;
+  margin-top: -290px;
 }
 .hometexttop{
   position: absolute;
@@ -770,15 +1144,15 @@ padding-top: 200px;
   color: white;
 }
 .featover{
-  top:-320px;position:relative;margin-bottom: -200px;
+  top:30px;position:relative;margin-bottom: -70px;
 }
 .hometxt{
-  top:-490px;
+  top:-70px;
   left:0px;
   font-size: 18px;
 }
 .hoverdown{
-  border-radius: 5px;margin-bottom: -420px; top:365px;
+  border-radius: 5px;margin-bottom: -420px; top:335px;
 }
 .hoverhomerel{
   position: absolute; left:120px;
@@ -809,28 +1183,25 @@ padding-top: 200px;
 }
 /*form home.html*/
 .homesearch{
-  width: 140px;height:50px;margin-left: 0px;font-size: 12px;padding-left: 8px;padding-right: 8px;
+  width: 140px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 28px;padding-right: 28px;
+  border-radius: 8px;
 }
 .homesearch::placeholder{
-  font-size: 12px;
+  font-size: 14px;
   color:grey;
+}
+.homebt{
+  width: 150px; height: 43px; margin-top: 15px;
 }
 .addhome{
   margin-left: -15px;
 }
-#clear {
-  position: absolute;
-  border-radius: 5px;
-  right: 2px;
-  top:3px;
-  z-index: 2px;
-  border: none;
-  width: 70px;
-  height: 43px;
-  margin-left: 0px;
-}
 .searchform{
-  top:-400px;
+  top:-50px;
+  left:-20px;
+}
+.findjobs{
+  padding-top: 400px;
 }
 .boldheader{
   font-size: 14px;
@@ -1165,10 +1536,10 @@ padding-top: 200px;
   color: white;
 }
 .featover{
-  top:-250px;position:relative;margin-bottom: -100px;
+  top:50px;position:relative;margin-bottom: -70px;
 }
 .hometxt{
-  top:-490px;
+  top:-90px;
   left:0px;
   font-size: 20px;
 }
@@ -1198,7 +1569,10 @@ padding-top: 200px;
   font-size: 46px;
 }
 .searchform{
-  top:-370px;
+  top:-70px;
+}
+.findjobs{
+  padding-top:280px;
 }
 .hoverhome{
   border-radius: 5px;padding:0px 0px;margin-bottom: -110px;
@@ -1355,10 +1729,15 @@ padding-top: 200px;
 /*form home.html*/
 .homesearch{
   width: 210px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 12px;padding-right: 12px;
+  border-radius: 8px;
 }
 .homesearch::placeholder{
   font-size: 14px;
   color:grey;
+}
+
+table.sec tr td:nth-child(4) input {
+  padding-right: 82px;
 }
 .addhome{
   margin-left: 0px;
@@ -1558,7 +1937,10 @@ padding-top: 200px;
   color: white;
 }
 .featover{
-  top:-150px;position:relative;margin-bottom: -100px;
+  top:0px;position:relative;margin-bottom: -100px;
+}
+.featsub{
+  margin:0px 5px;
 }
 .boldheader{
   font-size: 18px;
@@ -1701,7 +2083,7 @@ padding-top: 200px;
   top: -800px;
 }
 .hometxt{
-  top:-150px;
+  top:-80px;
   left:0px;
   font-size: 22px;
 }
@@ -1729,7 +2111,7 @@ padding-top: 200px;
   border-radius: 5px;
 }
 .searchform{
-  top:-160px;
+  top:-120px;
 }
 /*form home.html*/
 .homesearch{
@@ -1738,6 +2120,9 @@ padding-top: 200px;
 .homesearch::placeholder{
   font-size: 14px;
   color:grey;
+}
+table.sec tr td:nth-child(4) input {
+  padding-right: 130px;
 }
 .addhome{
   margin-left: 0px;
@@ -2004,7 +2389,10 @@ padding-top: 200px;
   color: white;
 }
 .featover{
-  top:0px;position: relative;margin-bottom: -20px;
+  top:0px;position: relative;margin-bottom: -50px;
+}
+.featsub{
+  margin:0px 5px;
 }
 /*home.html placeholder*/
 .h::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -2108,6 +2496,9 @@ font-size: 20px;
   font-size: 16px;
   color:grey;
 }
+table.sec tr td:nth-child(4) input {
+  padding-right: 150px;
+}
 .addhome{
   margin-left: 0px;
 }
@@ -2169,6 +2560,9 @@ font-size: 20px;
 }
 .padright{
   right:230px;
+}
+.packhead{
+  font-size: 18px;font-weight: 600;
 }
 
 }
@@ -2313,7 +2707,7 @@ font-size: 12px;
 }
 /*for packages.html*/
 .divs{
-  background-color: #d6d6d4;
+  background-color: #F9F9F9;
 }
 
 /*button packages.html*/

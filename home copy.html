@@ -25,9 +25,11 @@
             margin-right: -7px;
         }
 
-        /*main image
+        /*main image*/
         .bg-img {
+            /* The image used */
             background-image: url("img/homemain.png");
+            /* Center and scale the image nicely */
             background-position: center;
             background-size: cover;
             height: 800px;
@@ -35,12 +37,6 @@
             opacity: 1;
             filter: brightness(60%);
             position: relative;
-        }*/
-        .bg-img{
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(img/homemain.png);
-            opacity: 1;
-            background-position: center;
-            background-size: cover;
         }
 
         .active {
@@ -130,11 +126,11 @@
 <body>
     <!-------------------------------------Main Image----------------------------------------------->
     <div class="container-fluid ">
-        <div class="bg-img">
+        <img class="bg-img">
         <!-------------------------------------NAVIGATION BAR----------------------------------------------->
 
-        <nav class="navbar navbar-expand-md flex-column flex-row"
-            style="border-bottom: 2px solid white;">
+        <nav class="navbar navbar-expand-md navover flex-column flex-row mt-xl-4 mt-lg-3 mt-md-3 mt-sm-3 mt-3"
+            style="border-bottom: 2px solid white; position: relative;">
             <div class="container d-flex align-items-end">
                 <a class="navbar-brand mr-0 mr-md-2 mb-xl-2 mb-lg-2 mb-md-2 mb-sm-2 mb-2" href="home.html">
                     <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block">
@@ -251,10 +247,10 @@
         </nav>
 
         <!--------------------------------------------------overlay container----------------------------->
-        <div class="container">
-            <div class="row mb-0 mt-5">
+        <div class="container homeover" style="position: relative;">
+            <div class="row mb-0">
                 <div class="col-xl-7 col-lg-8 col-md-8 col-sm-10 col-10 hometxt">
-                    <p class="text-left homemaintxt text-white"><b>Find your job favorite
+                    <p class="text-left homemaintxt text-white "><b>Find your job favorite
                             and immediate</b></p>
                     <p class="text-left text-white">Search for your dream job while on the go
                         with the best job-search web platform available
@@ -288,26 +284,22 @@
                             <tr class="tb">
                                 <!---------Second row------------->
                                 <!------------------------FORM------------------------------------->
-
-                                <form class="form-inline">
-
-                                    <td class=" p-0">
+                                <td colspan="">
+                                    <form class="form-inline">
                                         <input type="text" class="form-control homesearch " id="keywords"
-                                            placeholder="Keywords">
-                                    </td>
-                                    <td class=" p-0">
+                                            placeholder="Keywords" style="border:;">
                                         <input type="text" class="form-control homesearch" id="location"
                                             placeholder="Location">
-                                    </td>
-                                    <td class="buttonIn w-100  p-0">
-                                        <input type="text" class="form-control homesearch" id="categories"
-                                            placeholder="All Categories">
-                                        <button id="clear" class="btn btn-success homebtn">
-                                            <span class="search">Search</span>
-                                            <img src="img/search.png" class="img-fluid imgsearch">
-                                        </button>
-                                    </td>
-                                </form>
+                                        <div class="buttonIn">
+                                            <input type="text" class="form-control homesearch" id="categories"
+                                                placeholder="All Categories">
+                                            <button id="clear" class="btn btn-success homebtn">
+                                                <span class="search">Search</span>
+                                                <img src="img/search.png" class="img-fluid imgsearch">
+                                            </button>
+                                        </div>
+                                    </form>
+                                </td>
                             </tr>
                             <tr>
                                 <!--------Third row------------->
@@ -389,7 +381,8 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
+
     <!------------------------------------------------CONTAINER-------------------------------------------->
     <div class="container featover" style="position:relative;">
         <div class="row my-lg-5 my-md-0 my-sm-0 my-0">
