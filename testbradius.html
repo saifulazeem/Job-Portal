@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <style>
+table.sec {
+  border-collapse: collapse;
+}
+
+table.sec td {
+  border: 0px solid;
+}
+table.sec td > *{
+  border: 0px solid #000000;
+}
+
+table.sec  td:nth-child(2) input {
+  border-radius: 20px 0 0 20px;
+}
+
+table.sec  td:nth-child(3) input {
+  border-radius: 0;
+}
+
+table.sec td:nth-child(4) input {
+  border-radius: 0 20px 20px 0;
+}
+    </style>
+</head>
+
+<body style="background-color: antiquewhite;">
+    <table class="table table-borderless table-sm sec">
+        <tbody>
+            <tr>
+                <!--------First row------------->
+                <td>
+                    <p class="text-white float-left" style="margin:0px;">What Job You Are Looking
+                        For?<img src="img/arrow.png" class="img-fluid">
+                    </p>
+                </td>
+                <td>
+                    <p class="text-white float-left" style="margin:0px;">Where?<img src="img/arrow.png"
+                            class="img-fluid">
+                    </p>
+                </td>
+                <td>
+                    <p class="text-white float-left" style="margin:0px;">Categories<img
+                            src="img/arrow.png" class="img-fluid"></p>
+                </td>
+                <td></td>
+            </tr>
+            <tr class="">
+                <!---------Second row------------->
+                <!------------------------FORM------------------------------------->
+
+                <form class="form-inline">
+
+                    <td class=" p-0">
+                        <input type="text" class="form-control homesearch " id="keywords"
+                            placeholder="Keywords">
+                    </td>
+                    <td class=" p-0">
+                        <input type="text" class="form-control homesearch" id="location"
+                            placeholder="Location">
+                    </td>
+                    <td class="buttonIn w-100  p-0">
+                        <input type="text" class="form-control homesearch" id="categories"
+                            placeholder="All Categories">
+                        <button id="clear" class="btn btn-success homebtn">
+                            <span class="search">Search</span>
+                            <img src="img/search.png" class="img-fluid imgsearch">
+                        </button>
+                    </td>
+                </form>
+            </tr>
+            <tr>
+                <!--------Third row------------->
+                <td colspan="3" class="text-white">
+                    <span class="float-left">Need more search options?<a href="#" class="advancesearch"
+                            style="text-decoration: none;">&nbsp;ADVANCE
+                            SEARCH</a></span>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tr class="tb">
+            <td>One</td>
+            <td>Two</td>
+            <td>Three</td>
+        </tr>
+    </table>
+</body>
+
+</html>

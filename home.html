@@ -18,13 +18,12 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
     <style>
-        .navbar-nav>li>a {
+         .navbar-nav>li>a {
             padding-left: 0px;
             padding-right: 0px;
             margin-left: 0px;
             margin-right: -7px;
         }
-
         /*main image
         .bg-img {
             background-image: url("img/homemain.png");
@@ -66,7 +65,6 @@
         #categories {
             width: 100%;
             outline: none;
-            border-radius: 5px;
         }
 
         tr.spaceUnder>td {
@@ -75,6 +73,11 @@
 
         tr.space>td {
             padding-top: 1em;
+        }
+
+        tr.heading>td>p {
+            margin-top: 10px;
+            margin-bottom: -7px;
         }
 
         tr.nospace>td {
@@ -86,15 +89,40 @@
             margin-bottom: -15px;
             margin-top: -5px;
         }
+
         select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: transparent;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-  background-repeat: no-repeat;
-  background-position-x: 90%;
-  background-position-y: 5px;
-}
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: transparent;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: 90%;
+            background-position-y: 5px;
+        }
+
+        table.fir {
+            border-collapse: inherit;
+            border-spacing: none;
+        }
+
+        table.fir td>* {
+            border: 0px;
+            border-radius: 0px;
+        }
+
+        table.fir tr td:nth-child(2) input {
+            border-radius: 5px 0 0 5px;
+            border-right: 1px solid #A7A7A7;
+        }
+
+        table.fir tr td:nth-child(4) input {
+            border-radius: 0 5px 5px 0;
+            border-left: 1px solid #A7A7A7;
+        }
+
+        table.sec td>* {
+            border-radius: 5px;
+        }
     </style>
     <script>
         $(document).ready(function () {
@@ -188,23 +216,23 @@
                                             <form class="col-12 needs-validation my-lg-3 my-md-3 my-sm-3 my-3 mx-0"
                                                 novalidate>
                                                 <div class="form-row no-gutters col-12 p-0 m-0 ">
-                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
-                                                        <div class="delhov">
+                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
+                                                        <div class="delhov float-left">
                                                             <button type="button"
-                                                                class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
+                                                                class="btn text-white btg btn1">
                                                                 <img class="" src="img/js.png" class="img-responsive">
                                                                 <span
                                                                     class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">CANDIDATE</span>
                                                             </button>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
+                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
                                                         <div class="delhov float-right">
                                                             <button type="button"
-                                                                class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
+                                                                class="btn text-white btg btn1">
                                                                 <img class="" src="img/emp.png" class="img-responsive">
                                                                 <span
-                                                                    class="mx-lg-0 mx-0 hovtxt mx-md-0">EMPLOYER</span>
+                                                                    class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">EMPLOYER</span>
                                                             </button>
                                                         </div>
                                                     </div>
@@ -241,11 +269,11 @@
                                                     <div
                                                         class="form-group mx-auto mt-0 d-flex justify-content-center align-self-center">
                                                         <button type="submit"
-                                                            class="btn text-white bt py-lg-3 px-lg-5 py-md-1 px-md-4 py-md-2 px-sm-4 py-sm-2 px-4 py-2">
+                                                            class="btn text-white bt btn2">
                                                             <a href="#" class="text-white hovtxt"
                                                                 style="text-decoration: none;">Register</a></button>
                                                     </div>
-                                                    <div class="row mb-lg-0 mb-2 mt-0 mx-2 hovtxt d-flex justify-content-center align-self-center"
+                                                    <div class="row mb-lg-0 mb-2 mt-0 mx-2 d-flex justify-content-center align-self-center"
                                                         style="color: #707070;">
                                                         Password will be generated and sent to your email address.
                                                     </div>
@@ -275,32 +303,31 @@
                 <div class="row searchform mt-lg-5 mx-lg-0 mx-md-0 mx-sm-0" style="position: relative; ">
                     <!--------------Large and Medium View--------->
                     <div class="col-lg-12 col-md-12 table-responsive d-lg-block d-md-block d-sm-none d-none">
-                        <table class="table table-borderless table-sm sec">
+                        <table class="table table-borderless table-sm fir" style="border: none;" cellspacing="0"
+                            cellpadding="0">
                             <tbody>
                                 <tr>
                                     <!--------First row------------->
-                                    <td>
+                                    <td class=" p-0">
                                         <p class="text-white float-left" style="margin:0px;">What Job You Are Looking
                                             For?<img src="img/arrow.png" class="img-fluid">
                                         </p>
                                     </td>
-                                    <td>
+                                    <td class=" p-0">
                                         <p class="text-white float-left" style="margin:0px;">Where?<img
                                                 src="img/arrow.png" class="img-fluid">
                                         </p>
                                     </td>
-                                    <td>
+                                    <td class=" p-0">
                                         <p class="text-white float-left" style="margin:0px;">Categories<img
                                                 src="img/arrow.png" class="img-fluid"></p>
                                     </td>
                                     <td></td>
                                 </tr>
-                                <tr class="tb">
+                                <tr class="">
                                     <!---------Second row------------->
                                     <!------------------------FORM------------------------------------->
-
                                     <form class="form-inline">
-
                                         <td class=" p-0">
                                             <input type="text" class="form-control homesearch " id="keywords"
                                                 placeholder="Keywords">
@@ -309,7 +336,7 @@
                                             <input type="text" class="form-control homesearch" id="location"
                                                 placeholder="Location">
                                         </td>
-                                        <td class="buttonIn w-100  p-0">
+                                        <td class="buttonIn w-100 p-0">
                                             <input type="text" class="form-control homesearch" id="categories"
                                                 placeholder="All Categories">
                                             <button id="clear" class="btn btn-success homebtn">
@@ -373,7 +400,7 @@
                                     <tr>
                                         <td class="p-0">
                                             <input type="text" class="form-control homesearch  w-100" id="categories"
-                                                placeholder="All Categories" style="border-radius: 8px;">
+                                                placeholder="All Categories">
                                         </td>
                                     </tr>
                                     <tr>
@@ -403,11 +430,11 @@
         </div>
         <!------------------------------------------------CONTAINER-------------------------------------------->
         <div class="container featover" style="position:relative;">
-            <div class="row my-lg-5 my-md-0 my-sm-0 my-0">
+            <div class="row mx-2 my-lg-5 my-md-0 my-sm-0 my-0">
                 <div class="row col-12">
-                    <p class="homefeat mx-4 mx-xl-4">FEATURED EMPLOYER's</p>
+                    <p class="homefeat">FEATURED EMPLOYER's</p>
                 </div>
-                <div class="row col-12 my-5 ml-xl-5 ml-lg-4 ml-md-3 ml-sm-0 ml-2"
+                <div class="row col-12 my-5 ml-xl-5 ml-lg-4 ml-md-3 ml-sm-0"
                     style=" position: absolute; padding-top:20px;">
                     <div class="col featshad hovtab ml-4 ml-lg-2 mt-md-4 mt-sm-4 mt-4 featsub"
                         style="border-radius: 20px;">
@@ -465,21 +492,21 @@
             </div>
 
             <!----------------------------------------------CONTAINER------------------------------------------>
-            <div class="row my-5 mx-5 ml-lg-4 ml-md-0 mx-lg-0 mx-md-0 mx-sm-0 findjobs">
+            <div class="row mx-5 ml-lg-4 ml-md-0 mx-lg-0 mx-md-0 mx-sm-0 findjobs">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6 col-12 my-auto">
                         <img src="img/homediv.png" class="img-fluid float-left align-middle d-flex"
                             alt="Responsive image">
                     </div>
                     <div
-                        class="col-xl-7 col-lg-7 col-md-6 col-sm-5 col-9 ml-xl-5 my-xl-5 ml-lg-4 my-lg-5 ml-md-3 my-md-5 ml-md-2 my-sm-2 ml-sm-2 ml-4 my-4 ">
+                        class="col-xl-7 col-lg-7 col-md-6 col-sm-5 col-12 ml-xl-5 my-xl-5 ml-lg-4 my-lg-5 ml-md-3 my-md-5 ml-md-2 my-sm-2 ml-sm-2 ">
                         <div class="row float-left mt-xl-5 mt-lg-3 mt-md-0 mt-sm-0 mt-3">
                             <p class="homedivtxt ">
                                 Find million of jobs and achieve success.
                             </p>
                         </div>
                         <div class="row float-left">
-                            <p class="text-muted text-justify my-0 homedivsubtxt">
+                            <p class="text-muted text-justify my-0">
                                 Find a job and achieve success and a high salary is not the Value. But your work is
                                 most important to achieve success. You can work according to your achieved success .
                             </p>
@@ -489,7 +516,7 @@
             </div>
 
             <!----------------------------------------------CONTAINER------------------------------------------>
-            <div class="row col-12 my-4 mx-2" style="padding-top:90px; ">
+            <div class="row col-12 mx-2 categpad">
                 <div class="container-fluid roun" style="border-radius: 20px;">
                     <div class="row mx-4 my-4">
                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-6 col-12">
@@ -497,7 +524,7 @@
                                 Explore by choose category
                             </p>
                         </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-7">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
                             <!-- <div class="btn-group homesel">
                             <button class="btn px-lg-3 pr-lg-5 px-lg-3 pr-md-5 px-md-3 pr-sm-1 px-sm-3 px-3 pr-2"
                                 type="button"
@@ -516,14 +543,16 @@
                                 <button class="btn dropdown-item d">App Developer</button>
                             </div>
                         </div>-->
-
-                            <select class="homesel selectpicker btn form-control dashformact px-3"
-                                style="font-size: 16px;">
-                                <option value="">Select Category</option>
-                                <option value="A">UI/UX Designer</option>
-                                <option value="B">Web Developer</option>
-                                <option value="C">Illustrator</option>
-                            </select>
+                            <div class="row d-flex justify-content-center align-self-center">
+                                <select
+                                    class="homesel col-xs-12 col-xl-12 col-lg-12 col-md-12 col-sm-12  selectpicker btn form-control dashformact px-3"
+                                    style="font-size: 16px;">
+                                    <option value="">Select Category</option>
+                                    <option value="A">UI/UX Designer</option>
+                                    <option value="B">Web Developer</option>
+                                    <option value="C">Illustrator</option>
+                                </select>
+                            </div>
                         </div>
 
                         <!-------------------------------------------Slider-------------------------------------->
@@ -785,34 +814,22 @@
                                 </div>
 
                                 <!-----------------------------------Small view-------------------------------------->
-                                <div class="col-sm-9 p-0 m-0 d-sm-block d-none d-lg-none d-md-none">
+                                <div class="col-sm-9 col-8 p-0 m-0 d-sm-block d-block d-lg-none d-md-none">
                                     <!-------------------slider---------------------->
                                     <div id="carouselExampleControlssm" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <div class="row no-gutters">
-                                                    <div class="col">
+                                                    <div class="col d-flex justify-content-center align-self-center">
                                                         <div style="padding: 5px 0px;">
-                                                            <div class="container">
-                                                                <img src="img/Webdesign.png" class="homeimgslide">
-                                                            </div>
-                                                            <div class="rounded-top homeimgslidetxt"
-                                                                style="background: rgba(11,180,79,.6);">
-                                                                <p class="font-weight-bold text-white ">WebDesigner
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div style="padding: 5px 0px;">
-                                                            <div class="container">
-                                                                <img src="img/grap.png" class="homeimgslide">
-                                                            </div>
-                                                            <div class="rounded-top homeimgslidetxt"
-                                                                style="background: rgba(11,180,79,.6);">
-                                                                <p class="font-weight-bold text-white ">Graphic
-                                                                    Designer
-                                                                </p>
+                                                            <div class=" homeimgslide"
+                                                                style="background: url(img/grap.png); background-repeat: no-repeat;">
+                                                                <div class="rounded-top homeimgslidetxt"
+                                                                    style="background: rgba(11,180,79,.6);">
+                                                                    <p class="font-weight-bold text-white ">Graphic
+                                                                        Designer
+                                                                    </p>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -822,28 +839,16 @@
 
                                             <div class="carousel-item">
                                                 <div class="row no-gutters">
-                                                    <div class="col">
+                                                    <div class="col d-flex justify-content-center align-self-center">
                                                         <div style="padding: 5px 0px;">
-                                                            <div class="container">
-                                                                <img src="img/illust.png" class="homeimgslide">
-                                                            </div>
-                                                            <div class="rounded-top homeimgslidetxt"
-                                                                style="background: rgba(11,180,79,.6);">
-                                                                <p class="font-weight-bold text-white ">Illustration
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div style="padding: 5px 0px;">
-                                                            <div class="container">
-                                                                <img src="img/uiDesign.png" class="homeimgslide">
-                                                            </div>
-                                                            <div class="rounded-top homeimgslidetxt"
-                                                                style="background: rgba(11,180,79,.6);">
-                                                                <p class="font-weight-bold text-white ">Ui/UX
-                                                                    Designer
-                                                                </p>
+                                                            <div class=" homeimgslide"
+                                                                style="background: url(img/grap.png); background-repeat: no-repeat;">
+                                                                <div class="rounded-top homeimgslidetxt"
+                                                                    style="background: rgba(11,180,79,.6);">
+                                                                    <p class="font-weight-bold text-white ">Graphic
+                                                                        Designer
+                                                                    </p>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -853,98 +858,7 @@
                                     </div>
                                 </div>
 
-                                <!-----------------------------------VERY SMALL VIEW-------------------------------------->
-                                <div class="col-10 p-0 m-0 d-block d-sm-none d-md-none d-lg-none">
-                                    <!-------------------slider---------------------->
-                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <div class="row no-gutters">
-                                                    <div class="col-4">
-                                                        <div style="padding: 5px 0px;">
-                                                            <div class="container">
-                                                                <img src="img/illust.png" class="homeimgslide">
-                                                            </div>
-                                                            <div class="rounded-top homeimgslidetxt"
-                                                                style="background: rgba(11,180,79,.6);">
-                                                                <p class="font-weight-bold text-white ">Illustration
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <div style="padding: 5px 0px;">
-                                                            <div class="container">
-                                                                <img src="img/uiDesign.png" class="homeimgslide">
-                                                            </div>
-                                                            <div class="rounded-top homeimgslidetxt"
-                                                                style="background: rgba(11,180,79,.6);">
-                                                                <p class="font-weight-bold text-white ">Ui/UX
-                                                                    Designer
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <div style="padding: 5px 0px;">
-                                                            <div class="container">
-                                                                <img src="img/illust.png" class="homeimgslide">
-                                                            </div>
-                                                            <div class="rounded-top homeimgslidetxt"
-                                                                style="background: rgba(11,180,79,.6);">
-                                                                <p class="font-weight-bold text-white ">Illustration
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!---------------------------------NEXT SLIDER------------------------->
 
-                                            <div class="carousel-item">
-                                                <div class="row no-gutters">
-                                                    <div class="col-4">
-                                                        <div style="padding: 5px 0px;">
-                                                            <div class="container">
-                                                                <img src="img/illust.png" class="homeimgslide">
-                                                            </div>
-                                                            <div class="rounded-top homeimgslidetxt"
-                                                                style="background: rgba(11,180,79,.6);">
-                                                                <p class="font-weight-bold text-white ">Illustration
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <div style="padding: 5px 0px;">
-                                                            <div class="container">
-                                                                <img src="img/uiDesign.png" class="homeimgslide">
-                                                            </div>
-                                                            <div class="rounded-top homeimgslidetxt"
-                                                                style="background: rgba(11,180,79,.6);">
-                                                                <p class="font-weight-bold text-white ">Ui/UX
-                                                                    Designer
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <div style="padding: 5px 0px;">
-                                                            <div class="container">
-                                                                <img src="img/illust.png" class="homeimgslide">
-                                                            </div>
-                                                            <div class="rounded-top homeimgslidetxt"
-                                                                style="background: rgba(11,180,79,.6);">
-                                                                <p class="font-weight-bold text-white ">Illustration
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <!-------------------next button---------------------->
                                 <div
@@ -988,7 +902,7 @@
 
             <!----------------------------------------------------CONTAINER--------------------------->
 
-            <div class="row mt-4 no-gutters mx-lg-0 mx-md-0 mx-sm-0 mx-4" style="padding-top:90px;">
+            <div class="row no-gutters mx-lg-0 mx-md-0 mx-sm-0 mx-4 tablepad">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <p class="text-left t homedivtxt" style="color:#0D2942;">We are trusted by more than 800+
                         companies</p>
@@ -1006,7 +920,7 @@
                 </div>
 
                 <!-------------------------------------TABLE--------------------------------------------------->
-                <div class="col-lg-6 col-md-5 col-sm-5 col-5">
+                <div class="col-lg-6 col-md-5 col-sm-5 col-12">
                     <!----------------------------LARGE VIEW-------------------->
                     <div class="table-responsive-lg d-lg-block d-md-none d-sm-none d-none p-2">
                         <table class="table table-lg table-borderless text-dark">
@@ -1166,43 +1080,47 @@
                                     <td>
                                         <div class="roun p-2" style="text-align: center;border-radius: 10px;">
                                             <img src="img/goog.png" class="img-responsive"
-                                                style="width: 120px; height:120px;">
+                                                style="width: 100px; height:100px;">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="p-2 roun" style="text-align: center;border-radius: 10px;">
                                             <img src="img/fb.png" class="img-responsive"
-                                                style="width: 120px; height:120px;">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="pt-4 roun pr-2 pl-2 pb-2"
-                                            style="text-align: center;border-radius: 10px;">
-                                            <img src="img/ama.png" class="img-responsive"
-                                                style="width: 120px; height:100px;">
+                                                style="width: 100px; height:100px;">
                                         </div>
                                     </td>
                                 </tr>
                                 <!-------------------------------------------Second Row-------------------------------------------->
                                 <tr>
                                     <td>
-                                        <div class="rounded roun p-2" style="text-align: center;border-radius: 10px;">
-                                            <img src="img/quo.png" class="img-responsive"
-                                                style="width: 120px; height:120px;">
+                                        <div class="pt-4 roun pr-2 pl-2 pb-2"
+                                            style="text-align: center;border-radius: 10px;">
+                                            <img src="img/ama.png" class="img-responsive"
+                                                style="width: 100px; height:90px;">
                                         </div>
                                     </td>
+                                    <td>
+                                        <div class="rounded roun p-2" style="text-align: center;border-radius: 10px;">
+                                            <img src="img/quo.png" class="img-responsive"
+                                                style="width: 100px; height:100px;">
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-------------------------------------------Third Row-------------------------------------------->
+                                <tr>
                                     <td>
                                         <div class="rounded p-2 roun pt-4 pb-4"
                                             style="text-align: center;border-radius: 10px;">
                                             <img src="img/hp.png" class="img-responsive"
-                                                style="width: 120px; height:90px;">
+                                                style="width: 100px; height:70px;">
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="rounded pt-4 roun pt-4 pb-4"
-                                            style="text-align: center;height: 130px;border-radius: 10px;">
+                                        <div class="rounded pt-4 roun pb-0"
+                                            style="text-align: center;height: 120px;border-radius: 10px;">
                                             <img src="img/sam.png" class="img-responsive"
-                                                style="width: 120px; height:90px;">
+                                                style="width: 100px; height:60px;">
                                         </div>
                                     </td>
                                 </tr>
@@ -1212,11 +1130,11 @@
                 </div>
             </div>
             <!------------------------------------FORM------------------------>
-            <div class="row rounded" style="padding-bottom: 20px; padding-top: 70px;">
+            <div class="row rounded formpad">
                 <div class="top roun" style="margin: 0px 30px;border-radius: 20px 20px 0px 20px;">
                     <div class="row ">
                         <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
-                            <img src="img/hiring.png" class="img-fluid formalert h-100" alt="Responsive image">
+                            <img src="img/hiring.png" class="img-fluid formalert h-100">
                         </div>
                         <div class="col-lg-4 col-md-5 col-sm-11 col-xs-12" style="margin:20px;">
                             <form class="needs-validation" novalidate>
@@ -1359,28 +1277,29 @@
         <!-----------------------------------------------------FOOTER----------------------------------------------------------->
         <footer class="container-fluid foot pb-5" style="background-color: #323232; ">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 d-flex align-self-center col-md-6 col-sm-6 col-6">
-                        <img src="img/logo.png" class="img-fluid d-block">
+                <div class="row d-flex align-items-end mb-2">
+                    <div
+                        class="col-xl-7 ol-lg-5 d-flex align-self-center col-md-3 col-sm-3 col-3 mx-2 mx-lg-0 mx-xl-0 mx-md-0 mx-sm-0">
+                        <img src="img/logo.png" class="img-fluid">
                         <!--logo-->
                     </div>
-                    <div class="col-xl-5 offset-xl-0 col-lg-5 offset-lg-0 col-md-6 col-sm-6 col-5">
-                        <div class="row pl-xl-0 pl-lg-0 ml-lg-4 pl-0 ml-0 curhov">
+                    <div
+                        class="col-xl-5 offset-xl-0 col-lg-6 offset-lg-1 col-md-7 offset-md-2 col-sm-7 offset-sm-2 offset-0 col-8">
+                        <div class="row mrow pl-xl-0 pl-lg-0 ml-lg-4 pl-0 ml-0 curhov justify-content-start">
                             <div
-                                class="col-xl-1 offset-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-2 offset-sm-2 px-0 my-2">
-                                <img src="img/joblisting.png" class="img-fluid mt-2">
+                                class="col-xl-1 offset-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-0 offset-sm-2 px-0 my-2">
+                                <img src="img/joblisting.png" class="img-fluid mt-0 mt-sm-0 mt-md-2 mt-lg-2 mt-xl-2">
                             </div>
-                            <div class="ml-1 col-xl-3 col-lg-4 col-md-2 col-sm-1 col-1 px-0 ">
+                            <div class="ml-1 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4 px-0 ">
                                 <p class="tag d-flex justify-content font-weight-bold"
                                     style="color: #FFFFFF;margin-bottom:0px;">1124</p>
                                 <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Job Listing</p>
                             </div>
-                            <div
-                                class="col-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-2 offset-sm-2 px-0 my-2">
-                                <img src="img/resumeposted.png" class="img-fluid mt-2">
+                            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 px-0 my-2">
+                            <img src="img/resumeposted.png" class="img-fluid mt-0 mt-sm-0 mt-md-2 mt-lg-2 mt-xl-2">
                             </div>
                             <div
-                                class="ml-sm-1 ml-xl-0 ml-lg-0 ml-md-0 ml-2 col-xl-4 col-lg-3 col-md-2 col-sm-1 col-1 px-0">
+                                class="ml-sm-1 ml-xl-0 ml-lg-0 ml-md-0 ml-2 col-xl-4 col-lg-3 col-md-3 col-sm-4 col-5 px-0">
                                 <p class="tag d-flex justify-content font-weight-bold"
                                     style="color: #FFFFFF;margin-bottom:0px;">444</p>
                                 <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Resumes Posted
@@ -1405,12 +1324,13 @@
                     <img src="img/circle.png" class="img-fluid respimg">
                 </div>
 
-                <div class="container " style="position: relative;">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="container" style="position: relative;">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-10">
                         <div class="row mx-2">
                             <!------------------------------------------------tables and form-------------------------------->
                             <!-------------------------------------TABLE--------------------------------------------------->
-                            <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 table-responsive"
+                            <!------------LARGE and X-LARGE VIEW-->
+                            <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 table-responsive d-xl-block d-lg-block d-md-none d-sm-none d-none"
                                 style="text-align: left;">
                                 <table class="table table-sm table-borderless"
                                     style="border-spacing: 0; border-width: 0; border-width: 0;">
@@ -1479,16 +1399,194 @@
                                 </table>
                             </div>
 
+                            <!------------MEDIUM VIEW-->
+                            <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 table-responsive d-xl-none d-lg-none d-md-block d-sm-none d-none"
+                                style="text-align: left;">
+                                <table class="table table-sm table-borderless"
+                                    style="border-spacing: 0; border-width: 0; border-width: 0;">
+                                    <tbody>
+                                        <tr class="heading"><!--First Row-->
+                                            <td>
+                                                <p class="tag foottop"> For
+                                                    Candidates
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p class="tag foottop">For Employers
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="singlejobpage.html">Browse Jobs</a>
+                                            </td>
+                                            <td><a class="weightedtext" href="#">Browse
+                                                    Candidates</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="#">Browse
+                                                    Categories</a>
+                                            </td>
+                                            <td><a class="weightedtext" href="#">Employer
+                                                    Dashboard</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="#">Candidate
+                                                Dashboard</a>
+                                        </td>
+                                        <td><a class="weightedtext" href="#">Add Job</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="#">Job Alerts</a></td>
+                                            <td><a class="weightedtext" href="packages.html">Job Packages</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="#">My Bookmarks</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="heading"><!--Second Row-->
+                                            <td>
+                                                <p class="tag foottop">Other</p>
+                                            </td>
+                                            <td>
+                                                <p class="tag foottop">Legal</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="singlejobpage.html">Job Page</a></td>
+                                            <td><a class="weightedtext" href="#">Privacy Policy</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="#" style="text-align: left;">Job Page
+                                                    Alternative</a></td>
+                                            <td><a class="weightedtext" href="#">Terms of Use</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="#">Resume Page</a>
+                                            </td>
+                                            <td><a class="weightedtext" href="#">FAQ</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="blog.html">Blog</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="#">Contact</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!------------SMALL and V-SMALL VIEW-->
+                            <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 table-responsive d-xl-none d-lg-none d-md-none d-sm-block d-block"
+                                style="text-align: center;">
+                                <table class="table table-sm table-borderless"
+                                    style="border-spacing: 0; border-width: 0; border-width: 0;">
+                                    <tbody>
+                                        <tr class="heading"><!--First Row-->
+                                            <td>
+                                                <b class="tag foottop"> For
+                                                    Candidates
+                                                </b>
+                                            </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" href="singlejobpage.html" style="font-size: 16px;">Browse Jobs</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Browse
+                                                Candidates</a>
+                                        </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Candidate
+                                                Dashboard</a>
+                                        </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Job Alerts</a></td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">My Bookmarks</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="heading"><!--Second Row-->
+                                            <td>
+                                                <p class="tag foottop">For Employers
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Browse
+                                                Categories</a>
+                                        </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Employer
+                                                    Dashboard</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                        <td><a class="weightedtext" style="font-size: 16px;" href="#">Add Job</a></td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="packages.html">Job Packages</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="heading"><!--Third Row-->
+                                            <td>
+                                                <p class="tag foottop">Other</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="singlejobpage.html">Job Page</a></td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#" >Job Page
+                                                Alternative</a></td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Resume Page</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="blog.html">Blog</a></td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Contact</a></td>
+                                        </tr>
+                                        <tr class="heading"><!--Fourth Row-->
+                                            <td>
+                                                <p class="tag foottop">Legal</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Privacy Policy</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Terms of Use</a>
+                                            </td>
+                                        </tr>
+                                        <tr class="nospace">
+                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">FAQ</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
                             <!-------------------------------------FORM--------------------------------------------------->
                             <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12 table-responsive newsform">
-                                <table class="table table-sm table-borderless mt-2 mr-0">
+                                <table class=" table table-sm table-borderless mt-2 align-self-center">
                                     <tbody class="mt-sm-4 mt-lg-0 mt-md-0 mt-4">
-                                        <tr class="float-left nospace py-0 my-0 ">
+                                        <tr class="nospace py-0 my-0 align-self-center">
                                             <td><img src="img/newsletter.png" class="img-fluid nospace"></td>
-                                            <td class="text-left tag nospace" colspan="3"
-                                                style="font-size: Proxima Nova;">
-                                                Sign Up For a
-                                                Newsletter
+                                            <td class="text-left tag nospace foottop" colspan="3">
+                                                Sign Up For a Newsletter
                                             </td>
                                         </tr>
                                         <tr class="space">
@@ -1502,7 +1600,7 @@
                                         <tr>
                                             <td colspan="4">
                                                 <form class="form-inline ml-lg-2 ml-md-2 ml-sm-0 ml-0 my-2 my-lg-0">
-                                                    <input class="form-control footerform col-xl-8  col-8 mr-sm-2 text"
+                                                    <input class="form-control footerform col-xl-8 col-8 mr-sm-2 text"
                                                         type="email" size="22" placeholder="Enter your Email here...">
                                                     <button class="btn btn-success my-2 text btnsub"
                                                         type="submit">Subscribe</button>

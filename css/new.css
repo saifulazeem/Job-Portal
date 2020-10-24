@@ -23,16 +23,6 @@ html,body
 body{
   font-family: 'Segoe UI';
 }
-  .b {
-    font: normal normal normal 16px/21px Segoe UI;
-    letter-spacing: 0px;
-    color: #0BB44F;
-    font-weight: 500;
-  }
-  .b:hover{
-    color:black;
-    text-decoration: none;
-  }
   .btnLogin{
     background-color: white;
     color: #0BB44F;text-decoration: none; font-size: 16px;
@@ -60,11 +50,15 @@ color: #0BB44F;text-decoration: none; font-size: 16px;
     font-weight: 700;
     color: white;
   }
-  
-  .active {
+  .navhov .active:hover {
     border-bottom: 3px solid #0BB44F;
-    color: #0BB44F;
     font-weight: 700;
+    color: white;
+  }
+  .navhov .active {
+    border-bottom: 3px solid #0BB44F;
+    font-weight: 700;
+    color: white;
   }
 .subdashnav{
   background-color: #c2c0c0;
@@ -238,19 +232,20 @@ text-decoration: none;
     height: 150px;
   }
    .footerform{
-    border-radius: 7px;background-color: #818181; border:0px; color: white;height: 35px;
+    border-radius: 5px;background-color: #818181; border:0px; color: white;height: 35px;
   }
+  .mrow{margin-bottom: -14px;}
   .btnsub{
     color:#CCCCCC;
-    border-radius: 7px;
+    border-radius: 5px;
     height: 35px;
     margin-left: 5px;
-    padding: 0px 14px;
+    padding: 0px 9px;
   }
      /*Footer form*/
    .newsform{
     padding-top:0px;
-     padding-left: 0px;
+     padding-left: 60px;
     }
     .tablehome td{
       font-size: 14px;
@@ -364,26 +359,26 @@ margin:30px;
 }
 /*home.html slider*/
 .homeimgslide{
-  position: relative; 
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;
+  width:140px;
   border-radius: 10px;
-  width:120px;
-  height:120px;
-  margin: 0px;
 }
 .homeimgslidetxt{
-  font-size:12px;
-  width:120px;
-  top: 91px; 
-  position:absolute;
-  text-align:center;
+  font-size: 12px;
+  width: auto;
+  height: 30px;
+  top: 122px;
+  position: relative;
+  text-align: center;
   border-radius: 10px;
-  left:8px; 
+  left: 0px;
 }
 /*home.html slider "Select category" position button*/
 .homesel{
-  right:-30px;
   border-radius: 30px;
-  margin-bottom: 4px;
+  margin-bottom: 4px;width: 200px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:30px; width:30px;
@@ -400,6 +395,15 @@ margin:30px;
 }
 .featsub{
   margin:0px -15px;
+}
+.categpad{
+  padding-top:10px;
+}
+.tablepad{
+  padding-top:-10px;
+}
+.formpad{
+  padding-bottom: 0px; padding-top: 20px;
 }
 .hometxt{
   top:-70px;
@@ -423,12 +427,12 @@ margin:30px;
 /*form home.html*/
 .homesearch{
   width: 140px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 20px;padding-right: 20px;
-  border-radius: 8px;
 }
 .homesearch::placeholder{
   font-size: 14px;
   color:grey;
 }
+
 .homebt{
   width: 150px; height: 43px; margin-top: 15px;
 }
@@ -439,7 +443,7 @@ margin:30px;
   top:-50px;
 }
 .findjobs{
-  padding-top: 600px;
+  padding-top: 550px;
 }
 .hoverdown{
   border-radius: 10px;margin-bottom: -420px; top:296px;
@@ -447,8 +451,14 @@ margin:30px;
 .hoverhomerel{
   position: absolute; left:70px;
 }
+.btn1{
+  padding:7px 10px;
+}
+.btn2{
+  padding:7px 40px;
+}
 .hovtxt{
-  font-size: 12px;
+  font-size: 13px;
 }
 .formdiv::placeholder{
   color:#707070;
@@ -475,11 +485,11 @@ margin:30px;
   background-color:  #fff;
   }
   .tag{
-    font-size:16px;
+    font-size:18px;
   }
   .text
   {
-    font-size: 14px;
+    font-size: 12px;
   }
 /*home.html globe images*/
 .s1{
@@ -626,7 +636,7 @@ padding-top: 200px;
      /*Footer form*/
    .newsform{
     padding-top:0px;
-     padding-left: 0px;
+     padding-left: 40px;
     }
     .tablehome td{
       font-size: 14px;
@@ -740,25 +750,26 @@ margin:30px;
 }
 /*home.html slider*/
 .homeimgslide{
-  position: relative; 
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
   border-radius: 10px;
-  width:120px;
-  height:120px;
-  margin: 0px;
+  width:200px;
 }
 .homeimgslidetxt{
-  font-size:12px;
-  width:120px;
-  top: 91px; 
-  position:absolute;
-  text-align:center;
+  font-size: 12px;
+  width: auto;
+  height: 30px;
+  top: 170px;
+  position: relative;
+  text-align: center;
   border-radius: 10px;
-  left:8px; 
+  left: 0px;
 }
 /*home.html slider "Select category" position button*/
 .homesel{
-  right:-30px;
   border-radius: 30px;
+  width: 250px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:30px; width:30px;
@@ -775,6 +786,15 @@ margin:30px;
 }
 .featsub{
   margin:0px -10px ;
+}
+.categpad{
+  padding-top:30px;
+}
+.tablepad{
+  padding-top:0px;
+}
+.formpad{
+  padding-bottom: 0px; padding-top: 40px;
 }
 .hometxt{
   top:-70px;
@@ -798,7 +818,6 @@ margin:30px;
 /*form home.html*/
 .homesearch{
   width: 140px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 20px;padding-right: 20px;
-  border-radius: 8px;
 }
 .homesearch::placeholder{
   font-size: 14px;
@@ -814,16 +833,28 @@ margin:30px;
   top:-60px;
 }
 .findjobs{
-  padding-top: 400px;
+  padding-top: 340px;
 }
 .hoverdown{
   border-radius: 10px;margin-bottom: -420px; top:296px;
 }
 .hoverhomerel{
-  position: absolute; left:70px;
+  position: absolute; left:40px;
+}
+.btn1{
+  padding:7px 20px;
+}
+.btn2{
+  padding:7px 50px;
+}
+.btn1{
+  padding:7px 20px;
+}
+.btn2{
+  padding:7px 50px;
 }
 .hovtxt{
-  font-size: 12px;
+  font-size: 13px;
 }
 .formdiv::placeholder{
   color:#707070;
@@ -850,7 +881,7 @@ margin:30px;
   background-color:  #fff;
   }
   .tag{
-    font-size:16px;
+    font-size:18px;
   }
   .text
   {
@@ -1113,21 +1144,19 @@ padding-top: 200px;
 }
 /*home.html slider*/
 .homeimgslide{
-  position: relative; 
-  border-radius: 7px;
-  width:150px;
-  height:150px;
-  margin: 0px;
-  
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
 }
 .homeimgslidetxt{
-  font-size:16px;
-  width:150px;
-  top: 115px; 
-  position:absolute;
-  text-align:center;
-  border-radius: 8px; 
-  left: 17px;
+  font-size: 12px;
+  width: auto;
+  height: 30px;
+  top: 170px;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  left: 0px;
 }
 .homepad{
   padding-left: 90px;
@@ -1135,7 +1164,6 @@ padding-top: 200px;
 }
 /*home.html slider "Select category" position button*/
 .homesel{
-  right:-30px;
   border-radius: 30px;
 }
 .btncarousel{
@@ -1150,13 +1178,22 @@ padding-top: 200px;
 .featover{
   top:30px;position:relative;margin-bottom: 120px;
 }
+.categpad{
+  padding-top:50px;
+}
+.tablepad{
+  padding-top:30px;
+}
+.formpad{
+  padding-bottom: 20px; padding-top: 20px;
+}
 .hometxt{
   top:-70px;
   left:0px;
   font-size: 18px;
 }
 .hoverdown{
-  border-radius: 5px;margin-bottom: -420px; top:335px;
+  border-radius: 5px;margin-bottom: -420px; top:295px;
 }
 .hoverhomerel{
   position: absolute; left:120px;
@@ -1188,7 +1225,6 @@ padding-top: 200px;
 /*form home.html*/
 .homesearch{
   width: 140px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 28px;padding-right: 28px;
-  border-radius: 8px;
 }
 .homesearch::placeholder{
   font-size: 14px;
@@ -1205,7 +1241,7 @@ padding-top: 200px;
   left:-20px;
 }
 .findjobs{
-  padding-top: 400px;
+  padding-top: 340px;
 }
 .boldheader{
   font-size: 14px;
@@ -1224,7 +1260,7 @@ padding-top: 200px;
   background-color:  #fff;
   }
   .tag{
-    font-size: 16px;
+    font-size: 18px;
   }
   .text
   {
@@ -1349,10 +1385,15 @@ padding-top: 200px;
 .navover{
   top: -800px;
 }
-.hovtxt{
-  font-size: 14px;
+.btn1{
+  padding:7px 25px;
 }
-
+.btn2{
+  padding:7px 50px;
+}
+.hovtxt{
+  font-size: 13px;
+}
  }
 /***********************************************************************************************************************/
 @media (min-width: 768px) {
@@ -1367,6 +1408,7 @@ padding-top: 200px;
    .footerform{
     border-radius: 7px;background-color: #818181; border:0px; color: white;height: 40px;
   }
+  .mrow{margin-bottom: -12px;}
   .btnsub{
     color:#CCCCCC;
     border-radius: 7px;
@@ -1519,7 +1561,7 @@ padding-top: 200px;
 .homeimgslidetxt{
   font-size:16px;
   width:150px;
-  top: 145px; 
+  top: 155px; 
   position:absolute;
   text-align:center;
   border-radius: 10px; 
@@ -1527,7 +1569,6 @@ padding-top: 200px;
 }
 /*home.html slider "Select category" position button*/
 .homesel{
-  right:-80px;
   border-radius: 30px;
 }
 .btncarousel{
@@ -1540,8 +1581,26 @@ padding-top: 200px;
   background-color: #0BB44F;
   color: white;
 }
+.categpad{
+  padding-top:120px;
+}
+.tablepad{
+  padding-top:100px;
+}
+.formpad{
+  padding-bottom: 20px; padding-top: 80px;
+}
 .featover{
   top:50px;position:relative;margin-bottom: 100px;
+}
+.categpad{
+  padding-top:120px;
+}
+.tablepad{
+  padding-top:100px;
+}
+.formpad{
+  padding-bottom: 20px; padding-top: 80px;
 }
 .hometxt{
   top:-90px;
@@ -1554,8 +1613,14 @@ padding-top: 200px;
 .hoverhomerel{
   position: absolute; left:450px;
 }
+.btn1{
+  padding:7px 15px;
+}
+.btn2{
+  padding:7px 50px;
+}
 .hovtxt{
-  font-size: 12px;
+  font-size: 13px;
 }
 .formdiv::placeholder{
   color:#707070;
@@ -1577,7 +1642,7 @@ padding-top: 200px;
   top:-70px;
 }
 .findjobs{
-  padding-top:280px;
+  padding-top:380px;
 }
 .hoverhome{
   border-radius: 5px;padding:0px 0px;margin-bottom: -110px;
@@ -1734,7 +1799,6 @@ padding-top: 200px;
 /*form home.html*/
 .homesearch{
   width: 210px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 12px;padding-right: 12px;
-  border-radius: 8px;
 }
 .homesearch::placeholder{
   font-size: 14px;
@@ -1743,6 +1807,7 @@ padding-top: 200px;
 
 table.sec tr td:nth-child(4) input {
   padding-right: 82px;
+  border-radius: 0px;
 }
 .addhome{
   margin-left: 0px;
@@ -1913,23 +1978,22 @@ table.sec tr td:nth-child(4) input {
 /*home.html slider*/
 .homeimgslide{
   position: relative; 
-  border-radius: 20px;
+  border-radius: 15px;
   width:160px;
-  height:200px;
+  height:170px;
   margin: 0px;
 }
 .homeimgslidetxt{
   font-size:18px;
   width:160px;
-  top: 163px; 
+  top: 145px; 
   position:absolute;
   text-align:center;
-  border-radius: 20px; 
+  border-radius: 15px; 
   left:15px;
 }
 /*home.html slider "Select category" position button*/
 .homesel{
-  right:-130px;
   border-radius: 30px;
 }
 .btncarousel{
@@ -1941,6 +2005,15 @@ table.sec tr td:nth-child(4) input {
 .btncarousel:hover{
   background-color: #0BB44F;
   color: white;
+}
+.categpad{
+  padding-top:100px;
+}
+.tablepad{
+  padding-top:100px;
+}
+.formpad{
+  padding-bottom: 20px; padding-top: 80px;
 }
 .featover{
   top:0px;position:relative;margin-bottom: -100px;
@@ -2119,6 +2192,9 @@ table.sec tr td:nth-child(4) input {
 .searchform{
   top:-120px;
 }
+.findjobs{
+  padding-top:210px;
+}
 /*form home.html*/
 .homesearch{
   width: 270px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 18px;padding-right: 18px;
@@ -2129,10 +2205,12 @@ table.sec tr td:nth-child(4) input {
 }
 table.sec tr td:nth-child(4) input {
   padding-right: 130px;
+  border-radius: 0px;
 }
 .addhome{
   margin-left: 0px;
 }
+
 .homeemp{/*featured employers*/
   font-size: 46px;
   font-weight: 600;
@@ -2153,8 +2231,14 @@ table.sec tr td:nth-child(4) input {
 .hoverhome{
   border-radius: 5px;padding:1px;margin-bottom: -190px;
 }
+.btn1{
+  padding:10px 30px;
+}
+.btn2{
+  padding:12px 60px;
+}
 .hovtxt{
-  font-size: 14px;
+  font-size: 15px;
 }
  }
 /***********************************************************************************************************************/
@@ -2373,7 +2457,7 @@ table.sec tr td:nth-child(4) input {
 .homeimgslidetxt{
   font-size:20px;
   width:210px;
-  top: 160px; 
+  top: 174px; 
   position:absolute;
   text-align:center;
   border-radius: 20px; 
@@ -2382,7 +2466,6 @@ table.sec tr td:nth-child(4) input {
 
 /*home.html slider "Select category" position button*/
 .homesel{
-  right:-170px;
   border-radius: 30px;
 }
 .btncarousel{
@@ -2505,9 +2588,20 @@ font-size: 20px;
 }
 table.sec tr td:nth-child(4) input {
   padding-right: 150px;
+  border-radius: 0px;
 }
 .addhome{
   margin-left: 0px;
+}
+
+.categpad{
+  padding-top:90px;
+}
+.tablepad{
+  padding-top:90px;
+}
+.formpad{
+  padding-bottom: 20px; padding-top: 70px;
 }
 #clear {
   position: absolute;
@@ -2547,10 +2641,16 @@ table.sec tr td:nth-child(4) input {
   border-radius: 10px;margin-bottom: -420px; top:96px;
 }
 .hoverhomerel{
-  position: absolute; left:850px;
+  position: absolute; left:800px;
+}
+.btn1{
+  padding:10px 40px;
+}
+.btn2{
+  padding:12px 60px;
 }
 .hovtxt{
-  font-size: 18px;
+  font-size: 15px;
 }
 .formdiv::placeholder{
   color:#707070;
@@ -2680,7 +2780,7 @@ font-size: 12px;
   padding-top: 8px;
 }
 .foottop{
-  font-weight: 350;
+  font-weight: 500;
 }
 .hov:hover {
   color:  #0BB44F;
@@ -2974,8 +3074,6 @@ option:first-child
   opacity: 0.5; /* Firefox */
   font-size: 12px;
 }
-
-
 .comment {
   position: relative;
   background-color: #fff;
