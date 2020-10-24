@@ -36,8 +36,8 @@
             filter: brightness(60%);
             position: relative;
         }*/
-        .bg-img{
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(img/homemain.png);
+        .bg-img {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/homemain.png);
             opacity: 1;
             background-position: center;
             background-size: cover;
@@ -86,6 +86,15 @@
             margin-bottom: -15px;
             margin-top: -5px;
         }
+        select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 5px;
+}
     </style>
     <script>
         $(document).ready(function () {
@@ -131,239 +140,184 @@
     <!-------------------------------------Main Image----------------------------------------------->
     <div class="container-fluid ">
         <div class="bg-img">
-        <!-------------------------------------NAVIGATION BAR----------------------------------------------->
+            <!-------------------------------------NAVIGATION BAR----------------------------------------------->
 
-        <nav class="navbar navbar-expand-md flex-column flex-row"
-            style="border-bottom: 2px solid white;">
-            <div class="container d-flex align-items-end">
-                <a class="navbar-brand mr-0 mr-md-2 mb-xl-2 mb-lg-2 mb-md-2 mb-sm-2 mb-2" href="home.html">
-                    <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block">
-                </a>
+            <nav class="navbar navbar-expand-md flex-column flex-row" style="border-bottom: 2px solid white;">
+                <div class="container d-flex align-items-end">
+                    <a class="navbar-brand mr-0 mr-md-2 mb-xl-2 mb-lg-2 mb-md-2 mb-sm-2 mb-2" href="home.html">
+                        <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block">
+                    </a>
 
-                <button class="navbar-toggler navbar-dark mb-3" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <img class="img-fluid" src="img/lines.png">
-                </button>
+                    <button class="navbar-toggler navbar-dark mb-3" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <img class="img-fluid" src="img/lines.png">
+                    </button>
 
-                <div class="collapse navbar-collapse navbar-right justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 ml-4 ml-lg-0 ml-xl-0 ml-md-0 navhome">
-                        <li class="nav-item  mx-md-0 mx-lg-2 mx-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                            <a class="nav-link mx-md-0" href="about.html" style="display: block;"><span
-                                    class="navhov float-left">ABOUT US
-                                </span></a>
-                        </li>
-                        <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                            <a class="nav-link" href="#"><span class="navhov float-left">EMPLOYERS PROFILE</span></a>
-                        </li>
-                        <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                            <a class="nav-link" href="careers.html"><span class="navhov float-left">CAREERS
-                                    GUIDE</span></a>
-                        </li>
-                        <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                            <a class="nav-link" href="blog.html"><span class="navhov float-left">BLOG</span></a>
-                        </li>
-                        <li class="nav-item mx-xl-3 mx-lg-3 mx-md-3">
-                            <div class="row d-flex align-items-center">
-                                <a href="login.html"
-                                    class="btn btn-lg rounded-pill px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 btnLogin mt-1">
-                                    Login</a>
-                                <div class="addhov">
-                                    <div class="row mx-lg-1 mx-md-0 mt-2 mx-sm-2 mx-2">
-                                        <img src="img/homeadd.png" class="img-fluid">
-                                    </div>
+                    <div class="collapse navbar-collapse navbar-right justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 ml-4 ml-lg-0 ml-xl-0 ml-md-0 navhome">
+                            <li class="nav-item  mx-md-0 mx-lg-2 mx-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
+                                <a class="nav-link mx-md-0" href="about.html" style="display: block;"><span
+                                        class="navhov float-left">ABOUT US
+                                    </span></a>
+                            </li>
+                            <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
+                                <a class="nav-link" href="#"><span class="navhov float-left">EMPLOYERS
+                                        PROFILE</span></a>
+                            </li>
+                            <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
+                                <a class="nav-link" href="careers.html"><span class="navhov float-left">CAREERS
+                                        GUIDE</span></a>
+                            </li>
+                            <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
+                                <a class="nav-link" href="blog.html"><span class="navhov float-left">BLOG</span></a>
+                            </li>
+                            <li class="nav-item mx-xl-3 mx-lg-3 mx-md-3">
+                                <div class="row d-flex align-items-center">
+                                    <a href="login.html"
+                                        class="btn btn-lg rounded-pill px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 btnLogin mt-1">
+                                        Login</a>
+                                    <div class="addhov">
+                                        <div class="row mx-lg-1 mx-md-0 mt-2 mx-sm-2 mx-2">
+                                            <img src="img/homeadd.png" class="img-fluid">
+                                        </div>
 
-                                    <!------------------------------onhover div----------------------------------->
-                                    <div class="row col-xl-4 col-lg-5 col-md-5 col-sm-6 col-8 my-2 hoverdown hoverhomerel roun regdiv"
-                                        style="z-index: 9; background: rgba(255,255,255,.9);">
-                                        <form class="col-12 needs-validation my-lg-3 my-md-3 my-sm-3 my-3 mx-0"
-                                            novalidate>
-                                            <div class="form-row no-gutters col-12 p-0 m-0 ">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
-                                                    <div class="delhov">
-                                                        <button type="button"
-                                                            class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
-                                                            <img class="" src="img/js.png" class="img-responsive">
-                                                            <span
-                                                                class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">CANDIDATE</span>
-                                                        </button>
+                                        <!------------------------------onhover div----------------------------------->
+                                        <div class="row col-xl-4 col-lg-5 col-md-5 col-sm-6 col-8 my-2 hoverdown hoverhomerel roun regdiv"
+                                            style="z-index: 9; background: rgba(255,255,255,.9);">
+                                            <form class="col-12 needs-validation my-lg-3 my-md-3 my-sm-3 my-3 mx-0"
+                                                novalidate>
+                                                <div class="form-row no-gutters col-12 p-0 m-0 ">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
+                                                        <div class="delhov">
+                                                            <button type="button"
+                                                                class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
+                                                                <img class="" src="img/js.png" class="img-responsive">
+                                                                <span
+                                                                    class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">CANDIDATE</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
+                                                        <div class="delhov float-right">
+                                                            <button type="button"
+                                                                class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
+                                                                <img class="" src="img/emp.png" class="img-responsive">
+                                                                <span
+                                                                    class="mx-lg-0 mx-0 hovtxt mx-md-0">EMPLOYER</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <!-------------------------------Username------------------------------------->
+                                                    <div class="form-group mt-4">
+                                                        <input type="text" size="60"
+                                                            class="form-control formdiv roun py-2 hovtxt w-100"
+                                                            id="name" placeholder="Username" class="rounded" required>
+
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid username.
+                                                        </div>
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+                                                    <!-------------------------------Email------------------------------------->
+                                                    <div class="form-group mt-2">
+                                                        <input type="email" size="60"
+                                                            class="form-control formdiv roun py-2 hovtxt w-100"
+                                                            id="mail" placeholder="Email" class="rounded" required>
+
+                                                        <div class="invalid-feedback">
+                                                            Please provide a valid email.
+                                                        </div>
+                                                        <div class="valid-feedback">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+
+                                                    <!-------------------------BUTTON------------------------------------->
+                                                    <div
+                                                        class="form-group mx-auto mt-0 d-flex justify-content-center align-self-center">
+                                                        <button type="submit"
+                                                            class="btn text-white bt py-lg-3 px-lg-5 py-md-1 px-md-4 py-md-2 px-sm-4 py-sm-2 px-4 py-2">
+                                                            <a href="#" class="text-white hovtxt"
+                                                                style="text-decoration: none;">Register</a></button>
+                                                    </div>
+                                                    <div class="row mb-lg-0 mb-2 mt-0 mx-2 hovtxt d-flex justify-content-center align-self-center"
+                                                        style="color: #707070;">
+                                                        Password will be generated and sent to your email address.
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
-                                                    <div class="delhov float-right">
-                                                        <button type="button"
-                                                            class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
-                                                            <img class="" src="img/emp.png" class="img-responsive">
-                                                            <span class="mx-lg-0 mx-0 hovtxt mx-md-0">EMPLOYER</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-
-
-                                                <!-------------------------------Username------------------------------------->
-                                                <div class="form-group mt-4">
-                                                    <input type="text" size="60"
-                                                        class="form-control formdiv roun py-2 hovtxt w-100" id="name"
-                                                        placeholder="Username" class="rounded" required>
-
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid username.
-                                                    </div>
-                                                    <div class="valid-feedback">
-                                                        Looks good!
-                                                    </div>
-                                                </div>
-                                                <!-------------------------------Email------------------------------------->
-                                                <div class="form-group mt-2">
-                                                    <input type="email" size="60"
-                                                        class="form-control formdiv roun py-2 hovtxt w-100" id="mail"
-                                                        placeholder="Email" class="rounded" required>
-
-                                                    <div class="invalid-feedback">
-                                                        Please provide a valid email.
-                                                    </div>
-                                                    <div class="valid-feedback">
-                                                        Looks good!
-                                                    </div>
-                                                </div>
-
-                                                <!-------------------------BUTTON------------------------------------->
-                                                <div
-                                                    class="form-group mx-auto mt-0 d-flex justify-content-center align-self-center">
-                                                    <button type="submit"
-                                                        class="btn text-white bt py-lg-3 px-lg-5 py-md-1 px-md-4 py-md-2 px-sm-4 py-sm-2 px-4 py-2">
-                                                        <a href="#" class="text-white hovtxt"
-                                                            style="text-decoration: none;">Register</a></button>
-                                                </div>
-                                                <div class="row mb-lg-0 mb-2 mt-0 mx-2 hovtxt d-flex justify-content-center align-self-center"
-                                                    style="color: #707070;">
-                                                    Password will be generated and sent to your email address.
-                                                </div>
-                                            </div>
-                                        </form>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-        <!--------------------------------------------------overlay container----------------------------->
-        <div class="container">
-            <div class="row mb-0 mt-5">
-                <div class="col-xl-7 col-lg-8 col-md-8 col-sm-10 col-10 hometxt">
-                    <p class="text-left homemaintxt text-white"><b>Find your job favorite
-                            and immediate</b></p>
-                    <p class="text-left text-white">Search for your dream job while on the go
-                        with the best job-search web platform available
-                    </p>
-                </div>
-            </div>
-
-            <div class="row searchform mt-lg-5 mx-lg-0 mx-md-0 mx-sm-0" style="position: relative; ">
-                <!--------------Large and Medium View--------->
-                <div class="col-lg-12 col-md-12 table-responsive d-lg-block d-md-block d-sm-none d-none">
-                    <table class="table table-borderless table-sm sec">
-                        <tbody>
-                            <tr>
-                                <!--------First row------------->
-                                <td>
-                                    <p class="text-white float-left" style="margin:0px;">What Job You Are Looking
-                                        For?<img src="img/arrow.png" class="img-fluid">
-                                    </p>
-                                </td>
-                                <td>
-                                    <p class="text-white float-left" style="margin:0px;">Where?<img src="img/arrow.png"
-                                            class="img-fluid">
-                                    </p>
-                                </td>
-                                <td>
-                                    <p class="text-white float-left" style="margin:0px;">Categories<img
-                                            src="img/arrow.png" class="img-fluid"></p>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr class="tb">
-                                <!---------Second row------------->
-                                <!------------------------FORM------------------------------------->
-
-                                <form class="form-inline">
-
-                                    <td class=" p-0">
-                                        <input type="text" class="form-control homesearch " id="keywords"
-                                            placeholder="Keywords">
-                                    </td>
-                                    <td class=" p-0">
-                                        <input type="text" class="form-control homesearch" id="location"
-                                            placeholder="Location">
-                                    </td>
-                                    <td class="buttonIn w-100  p-0">
-                                        <input type="text" class="form-control homesearch" id="categories"
-                                            placeholder="All Categories">
-                                        <button id="clear" class="btn btn-success homebtn">
-                                            <span class="search">Search</span>
-                                            <img src="img/search.png" class="img-fluid imgsearch">
-                                        </button>
-                                    </td>
-                                </form>
-                            </tr>
-                            <tr>
-                                <!--------Third row------------->
-                                <td colspan="3" class="text-white">
-                                    <span class="float-left">Need more search options?<a href="#" class="advancesearch"
-                                            style="text-decoration: none;">&nbsp;ADVANCE
-                                            SEARCH</a></span>
-                                </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!--------------------------------------------------overlay container----------------------------->
+            <div class="container">
+                <div class="row mb-0 mt-5">
+                    <div class="col-xl-7 col-lg-8 col-md-8 col-sm-10 col-10 hometxt">
+                        <p class="text-left homemaintxt text-white"><b>Find your job favorite
+                                and immediate</b></p>
+                        <p class="text-left text-white">Search for your dream job while on the go
+                            with the best job-search web platform available
+                        </p>
+                    </div>
                 </div>
 
-                <!--------------Small and Very Small View--------->
-                <div class="col-sm-12 col-12 table-responsive d-lg-none d-md-none d-sm-block d-block">
-                    <table class="mx-2 mx-sm-0 mx-md-0 mx-lg-0 mx-xl-0 table table-borderless table-sm sec ">
-                        <form class="form-inline">
+                <div class="row searchform mt-lg-5 mx-lg-0 mx-md-0 mx-sm-0" style="position: relative; ">
+                    <!--------------Large and Medium View--------->
+                    <div class="col-lg-12 col-md-12 table-responsive d-lg-block d-md-block d-sm-none d-none">
+                        <table class="table table-borderless table-sm sec">
                             <tbody>
                                 <tr>
+                                    <!--------First row------------->
                                     <td>
                                         <p class="text-white float-left" style="margin:0px;">What Job You Are Looking
-                                            For?
+                                            For?<img src="img/arrow.png" class="img-fluid">
                                         </p>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 ">
-                                        <input type="text" class="form-control homesearch w-100" id="keywords"
-                                            placeholder="Keywords">
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td>
-                                        <p class="text-white float-left pt-3" style="margin:0px;">Where?
+                                        <p class="text-white float-left" style="margin:0px;">Where?<img
+                                                src="img/arrow.png" class="img-fluid">
                                         </p>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0">
-                                        <input type="text" class="form-control homesearch  w-100" id="location"
-                                            placeholder="Location">
-                                    </td>
-                                </tr>
-                                <tr>
                                     <td>
-                                        <p class="text-white float-left pt-3" style="margin:0px;">Categories</p>
+                                        <p class="text-white float-left" style="margin:0px;">Categories<img
+                                                src="img/arrow.png" class="img-fluid"></p>
                                     </td>
                                     <td></td>
                                 </tr>
-                                <tr>
-                                    <td class="p-0">
-                                        <input type="text" class="form-control homesearch  w-100" id="categories"
-                                            placeholder="All Categories" style="border-radius: 8px;">
-                                    </td>
+                                <tr class="tb">
+                                    <!---------Second row------------->
+                                    <!------------------------FORM------------------------------------->
+
+                                    <form class="form-inline">
+
+                                        <td class=" p-0">
+                                            <input type="text" class="form-control homesearch " id="keywords"
+                                                placeholder="Keywords">
+                                        </td>
+                                        <td class=" p-0">
+                                            <input type="text" class="form-control homesearch" id="location"
+                                                placeholder="Location">
+                                        </td>
+                                        <td class="buttonIn w-100  p-0">
+                                            <input type="text" class="form-control homesearch" id="categories"
+                                                placeholder="All Categories">
+                                            <button id="clear" class="btn btn-success homebtn">
+                                                <span class="search">Search</span>
+                                                <img src="img/search.png" class="img-fluid imgsearch">
+                                            </button>
+                                        </td>
+                                    </form>
                                 </tr>
                                 <tr>
                                     <!--------Third row------------->
@@ -375,114 +329,176 @@
                                     <td></td>
                                     <td></td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <button class="btn btn-success homebt mt-1">
-                                            <span class="search">Search</span>
-                                            <img src="img/search.png" class="img-fluid imgsearch">
-                                        </button>
-                                    </td>
-                                </tr>
                             </tbody>
-                        </form>
-                    </table>
-                </div>
-            </div>
-        </div>
-        </div>
-    <!------------------------------------------------CONTAINER-------------------------------------------->
-    <div class="container featover" style="position:relative;">
-        <div class="row my-lg-5 my-md-0 my-sm-0 my-0">
-            <div class="row col-12">
-                <p class="homefeat mx-4 mx-xl-4">FEATURED EMPLOYER's</p>
-            </div>
-            <div class="row col-12 my-5 ml-xl-5 ml-lg-4 ml-md-3 ml-sm-0 ml-2"
-                style=" position: absolute; padding-top:20px;">
-                <div class="col featshad hovtab ml-4 ml-lg-2 mt-md-4 mt-sm-4 mt-4 featsub" style="border-radius: 20px;">
-                    <div class="d-flex flex-row">
-                        <div class="flex-column ">
-                            <div class="px-2 homeemp align-self-start"><b>1.</b></div>
-                            <div class="p-2 ml-2">Unilever</div>
-                        </div>
-                        <div
-                            class="flex-column ml-xl-5 ml-lg-4 ml-md-5 ml-sm-4 ml-4 ml-2 my-2 justify-content-center align-self-center">
-                            <img src="img/comp1.png">
-                        </div>
+                        </table>
                     </div>
-                </div>
-                <div class="col featshad hovtab ml-4 ml-lg-2 mt-md-4 mt-sm-4 mt-4 featsub" style="border-radius: 20px;">
-                    <div class="d-flex flex-row ">
-                        <div class="d-flex flex-column ">
-                            <div class="px-2 homeemp align-self-start"><b>1.</b></div>
-                            <div class="p-2">Unilever</div>
-                        </div>
-                        <div
-                            class="d-flex flex-column ml-xl-5 ml-lg-4 ml-md-5 ml-sm-4 ml-4 ml-2 my-2 justify-content-center align-self-center">
-                            <img src="img/comp1.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="col featshad hovtab ml-4 ml-lg-2 mt-md-4 mt-sm-4 mt-4 featsub" style="border-radius: 20px;">
-                    <div class="d-flex flex-row ">
-                        <div class="d-flex flex-column ">
-                            <div class="px-2 homeemp align-self-start"><b>1.</b></div>
-                            <div class="p-2">Unilever</div>
-                        </div>
-                        <div
-                            class="d-flex flex-column ml-xl-5 ml-lg-4 ml-md-5 ml-sm-4 ml-4 ml-2 my-2 justify-content-center align-self-center">
-                            <img src="img/comp1.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="col featshad hovtab ml-4 ml-lg-2 mt-md-4 mt-sm-4 mt-4 featsub" style="border-radius: 20px;">
-                    <div class="d-flex flex-row ">
-                        <div class="d-flex flex-column ">
-                            <div class="px-2 homeemp align-self-start"><b>1.</b></div>
-                            <div class="p-2">Unilever</div>
-                        </div>
-                        <div
-                            class="d-flex flex-column ml-xl-5 ml-lg-4 ml-md-5 ml-sm-4 ml-4 ml-2 my-2 justify-content-center align-self-center">
-                            <img src="img/comp1.png">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!----------------------------------------------CONTAINER------------------------------------------>
-        <div class="row my-5 mx-5 ml-lg-4 ml-md-0 mx-lg-0 mx-md-0 mx-sm-0 findjobs">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6 col-12 my-auto">
-                    <img src="img/homediv.png" class="img-fluid float-left align-middle d-flex" alt="Responsive image">
-                </div>
-                <div
-                    class="col-xl-7 col-lg-7 col-md-6 col-sm-5 col-9 ml-xl-5 my-xl-5 ml-lg-4 my-lg-5 ml-md-3 my-md-5 ml-md-2 my-sm-2 ml-sm-2 ml-4 my-4 ">
-                    <div class="row float-left mt-xl-5 mt-lg-3 mt-md-0 mt-sm-0 mt-3">
-                        <p class="homedivtxt ">
-                            Find million of jobs and achieve success.
-                        </p>
-                    </div>
-                    <div class="row float-left">
-                        <p class="text-muted text-justify my-0 homedivsubtxt">
-                            Find a job and achieve success and a high salary is not the Value. But your work is
-                            most important to achieve success. You can work according to your achieved success .
-                        </p>
+                    <!--------------Small and Very Small View--------->
+                    <div class="col-sm-12 col-12 table-responsive d-lg-none d-md-none d-sm-block d-block">
+                        <table class="mx-2 mx-sm-0 mx-md-0 mx-lg-0 mx-xl-0 table table-borderless table-sm sec ">
+                            <form class="form-inline">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p class="text-white float-left" style="margin:0px;">What Job You Are
+                                                Looking
+                                                For?
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 ">
+                                            <input type="text" class="form-control homesearch w-100" id="keywords"
+                                                placeholder="Keywords">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="text-white float-left pt-3" style="margin:0px;">Where?
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0">
+                                            <input type="text" class="form-control homesearch  w-100" id="location"
+                                                placeholder="Location">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="text-white float-left pt-3" style="margin:0px;">Categories</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-0">
+                                            <input type="text" class="form-control homesearch  w-100" id="categories"
+                                                placeholder="All Categories" style="border-radius: 8px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <!--------Third row------------->
+                                        <td colspan="3" class="text-white">
+                                            <span class="float-left">Need more search options?<a href="#"
+                                                    class="advancesearch" style="text-decoration: none;">&nbsp;ADVANCE
+                                                    SEARCH</a></span>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button class="btn btn-success homebt mt-1">
+                                                <span class="search">Search</span>
+                                                <img src="img/search.png" class="img-fluid imgsearch">
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </form>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!----------------------------------------------CONTAINER------------------------------------------>
-        <div class="row col-12 my-4 mx-2" style="padding-top:90px; ">
-            <div class="container-fluid roun" style="border-radius: 20px;">
-                <div class="row mx-4 my-4">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                        <p class="d-flex align-self-center homedivtxt" style="float: left;font-size: 25px;">
-                            Explore by choose category
-                        </p>
+        <!------------------------------------------------CONTAINER-------------------------------------------->
+        <div class="container featover" style="position:relative;">
+            <div class="row my-lg-5 my-md-0 my-sm-0 my-0">
+                <div class="row col-12">
+                    <p class="homefeat mx-4 mx-xl-4">FEATURED EMPLOYER's</p>
+                </div>
+                <div class="row col-12 my-5 ml-xl-5 ml-lg-4 ml-md-3 ml-sm-0 ml-2"
+                    style=" position: absolute; padding-top:20px;">
+                    <div class="col featshad hovtab ml-4 ml-lg-2 mt-md-4 mt-sm-4 mt-4 featsub"
+                        style="border-radius: 20px;">
+                        <div class="d-flex flex-row">
+                            <div class="flex-column ">
+                                <div class="px-2 homeemp align-self-start"><b>1.</b></div>
+                                <div class="p-2 ml-2">Unilever</div>
+                            </div>
+                            <div
+                                class="flex-column ml-xl-5 ml-lg-4 ml-md-5 ml-sm-4 ml-4 ml-2 my-2 justify-content-center align-self-center">
+                                <img src="img/comp1.png">
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                        <div class="btn-group homesel">
+                    <div class="col featshad hovtab ml-4 ml-lg-2 mt-md-4 mt-sm-4 mt-4 featsub"
+                        style="border-radius: 20px;">
+                        <div class="d-flex flex-row ">
+                            <div class="d-flex flex-column ">
+                                <div class="px-2 homeemp align-self-start"><b>1.</b></div>
+                                <div class="p-2">Unilever</div>
+                            </div>
+                            <div
+                                class="d-flex flex-column ml-xl-5 ml-lg-4 ml-md-5 ml-sm-4 ml-4 ml-2 my-2 justify-content-center align-self-center">
+                                <img src="img/comp1.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col featshad hovtab ml-4 ml-lg-2 mt-md-4 mt-sm-4 mt-4 featsub"
+                        style="border-radius: 20px;">
+                        <div class="d-flex flex-row ">
+                            <div class="d-flex flex-column ">
+                                <div class="px-2 homeemp align-self-start"><b>1.</b></div>
+                                <div class="p-2">Unilever</div>
+                            </div>
+                            <div
+                                class="d-flex flex-column ml-xl-5 ml-lg-4 ml-md-5 ml-sm-4 ml-4 ml-2 my-2 justify-content-center align-self-center">
+                                <img src="img/comp1.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col featshad hovtab ml-4 ml-lg-2 mt-md-4 mt-sm-4 mt-4 featsub"
+                        style="border-radius: 20px;">
+                        <div class="d-flex flex-row ">
+                            <div class="d-flex flex-column ">
+                                <div class="px-2 homeemp align-self-start"><b>1.</b></div>
+                                <div class="p-2">Unilever</div>
+                            </div>
+                            <div
+                                class="d-flex flex-column ml-xl-5 ml-lg-4 ml-md-5 ml-sm-4 ml-4 ml-2 my-2 justify-content-center align-self-center">
+                                <img src="img/comp1.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------------------------------------CONTAINER------------------------------------------>
+            <div class="row my-5 mx-5 ml-lg-4 ml-md-0 mx-lg-0 mx-md-0 mx-sm-0 findjobs">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6 col-12 my-auto">
+                        <img src="img/homediv.png" class="img-fluid float-left align-middle d-flex"
+                            alt="Responsive image">
+                    </div>
+                    <div
+                        class="col-xl-7 col-lg-7 col-md-6 col-sm-5 col-9 ml-xl-5 my-xl-5 ml-lg-4 my-lg-5 ml-md-3 my-md-5 ml-md-2 my-sm-2 ml-sm-2 ml-4 my-4 ">
+                        <div class="row float-left mt-xl-5 mt-lg-3 mt-md-0 mt-sm-0 mt-3">
+                            <p class="homedivtxt ">
+                                Find million of jobs and achieve success.
+                            </p>
+                        </div>
+                        <div class="row float-left">
+                            <p class="text-muted text-justify my-0 homedivsubtxt">
+                                Find a job and achieve success and a high salary is not the Value. But your work is
+                                most important to achieve success. You can work according to your achieved success .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------------------------------------CONTAINER------------------------------------------>
+            <div class="row col-12 my-4 mx-2" style="padding-top:90px; ">
+                <div class="container-fluid roun" style="border-radius: 20px;">
+                    <div class="row mx-4 my-4">
+                        <div class="col-xl-9 col-lg-9 col-md-8 col-sm-6 col-12">
+                            <p class="d-flex align-self-center homedivtxt" style="float: left;font-size: 25px;">
+                                Explore by choose category
+                            </p>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-7">
+                            <!-- <div class="btn-group homesel">
                             <button class="btn px-lg-3 pr-lg-5 px-lg-3 pr-md-5 px-md-3 pr-sm-1 px-sm-3 px-3 pr-2"
                                 type="button"
                                 style="border-radius: 50px 0px 0px 50px;background-color: #0BB44F; color:white; ">
@@ -499,979 +515,1007 @@
                                 <button class="btn dropdown-item d">Web Developer</button>
                                 <button class="btn dropdown-item d">App Developer</button>
                             </div>
+                        </div>-->
+
+                            <select class="homesel selectpicker btn form-control dashformact px-3"
+                                style="font-size: 16px;">
+                                <option value="">Select Category</option>
+                                <option value="A">UI/UX Designer</option>
+                                <option value="B">Web Developer</option>
+                                <option value="C">Illustrator</option>
+                            </select>
+                        </div>
+
+                        <!-------------------------------------------Slider-------------------------------------->
+                        <div class="container">
+                            <div class="row">
+                                <div
+                                    class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-lg-block d-md-none d-sm-none d-none">
+                                    <!-------------------prev button---------------------->
+                                    <a class="carousel-control-prev " href="#carouselExampleControlslg" role="button"
+                                        data-slide="prev" style="height:70px; width:70px; opacity: 1; border: 0px;">
+                                        <span class="btncarousel pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">
+                                            < </span>
+                                                <span class="sr-only mx-auto "></span>
+                                    </a>
+                                </div>
+                                <div
+                                    class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-md-block d-sm-none d-lg-none d-none">
+                                    <!-------------------prev button---------------------->
+                                    <a class="carousel-control-prev " href="#carouselExampleControlsmd" role="button"
+                                        data-slide="prev" style="height:70px; width:70px; opacity: 1; border: 0px;">
+                                        <span class="btncarousel pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">
+                                            < </span>
+                                                <span class="sr-only mx-auto "></span>
+                                    </a>
+                                </div>
+                                <div
+                                    class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-sm-block d-none d-lg-none d-md-none">
+                                    <!-------------------prev button---------------------->
+                                    <a class="carousel-control-prev " href="#carouselExampleControlssm" role="button"
+                                        data-slide="prev" style="height:70px; width:70px; opacity: 1; border: 0px;">
+                                        <span class="btncarousel pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">
+                                            < </span>
+                                                <span class="sr-only mx-auto "></span>
+                                    </a>
+                                </div>
+                                <div
+                                    class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-block d-sm-none d-md-none d-lg-none">
+                                    <!-------------------prev button---------------------->
+                                    <a class="carousel-control-prev " href="#carouselExampleControls" role="button"
+                                        data-slide="prev" style="height:70px; width:70px; opacity: 1; border: 0px;">
+                                        <span class="btncarousel pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">
+                                            < </span>
+                                                <span class="sr-only mx-auto "></span>
+                                    </a>
+                                </div>
+                                <!------------------------------------Larger view-------------------------------------->
+                                <div class="col-lg-10 p-0 m-0 d-lg-block d-md-none d-sm-none d-none">
+                                    <!-------------------slider---------------------->
+                                    <div id="carouselExampleControlslg" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row no-gutters">
+                                                    <div class="col">
+                                                        <div style="padding: 5px 1px;">
+                                                            <div class="container">
+                                                                <img src="img/Webdesign.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">WebDesigner
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 1px;">
+                                                            <div class="container">
+                                                                <img src="img/uiDesign.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Ui/UX
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 1px;">
+                                                            <div class="container">
+                                                                <img src="img/grap.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Graphic
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 1px;">
+                                                            <div class="container">
+                                                                <img src="img/illust.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white"
+                                                                    style="opacity: 1;">
+                                                                    Illustration</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!---------------------------------NEXT SLIDER------------------------->
+
+                                            <div class="carousel-item">
+                                                <div class="row no-gutters">
+                                                    <div class="col">
+                                                        <div style="padding: 5px 1px;">
+                                                            <div class="container">
+                                                                <img src="img/Webdesign.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">WebDesigner
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 1px;">
+                                                            <div class="container">
+                                                                <img src="img/uiDesign.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Ui/UX
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 1px;">
+                                                            <div class="container">
+                                                                <img src="img/grap.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Graphic
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 1px;">
+                                                            <div class="container">
+                                                                <img src="img/illust.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Illustration
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!------------------------------------Medium view-------------------------------------->
+                                <div class="col-md-10 p-0 m-0 d-md-block d-sm-none d-lg-none d-none">
+                                    <!-------------------slider---------------------->
+                                    <div id="carouselExampleControlsmd" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row no-gutters">
+                                                    <div class="col">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/Webdesign.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">WebDesigner
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/uiDesign.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Ui/UX
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/grap.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Graphic
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!---------------------------------NEXT SLIDER------------------------->
+
+                                            <div class="carousel-item">
+                                                <div class="row no-gutters">
+                                                    <div class="col">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/grap.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Graphic
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/illust.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Illustration
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/uiDesign.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Ui/UX
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-----------------------------------Small view-------------------------------------->
+                                <div class="col-sm-9 p-0 m-0 d-sm-block d-none d-lg-none d-md-none">
+                                    <!-------------------slider---------------------->
+                                    <div id="carouselExampleControlssm" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row no-gutters">
+                                                    <div class="col">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/Webdesign.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">WebDesigner
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/grap.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Graphic
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!---------------------------------NEXT SLIDER------------------------->
+
+                                            <div class="carousel-item">
+                                                <div class="row no-gutters">
+                                                    <div class="col">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/illust.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Illustration
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/uiDesign.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Ui/UX
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-----------------------------------VERY SMALL VIEW-------------------------------------->
+                                <div class="col-10 p-0 m-0 d-block d-sm-none d-md-none d-lg-none">
+                                    <!-------------------slider---------------------->
+                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row no-gutters">
+                                                    <div class="col-4">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/illust.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Illustration
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/uiDesign.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Ui/UX
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/illust.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Illustration
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!---------------------------------NEXT SLIDER------------------------->
+
+                                            <div class="carousel-item">
+                                                <div class="row no-gutters">
+                                                    <div class="col-4">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/illust.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Illustration
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/uiDesign.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Ui/UX
+                                                                    Designer
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div style="padding: 5px 0px;">
+                                                            <div class="container">
+                                                                <img src="img/illust.png" class="homeimgslide">
+                                                            </div>
+                                                            <div class="rounded-top homeimgslidetxt"
+                                                                style="background: rgba(11,180,79,.6);">
+                                                                <p class="font-weight-bold text-white ">Illustration
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-------------------next button---------------------->
+                                <div
+                                    class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-lg-block d-md-none d-sm-none d-none">
+                                    <a class="carousel-control-next" href="#carouselExampleControlslg" role="button"
+                                        data-slide="next" style="height:70px; width:70px;opacity: 1;">
+                                        <span class="btncarousel  pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">></span>
+                                        <span class="sr-only mx-auto ml-2">Next</span>
+                                    </a>
+                                </div>
+                                <div
+                                    class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-md-block d-sm-none d-lg-none d-none">
+                                    <a class="carousel-control-next" href="#carouselExampleControlsmd" role="button"
+                                        data-slide="next" style="height:70px; width:70px;opacity: 1;">
+                                        <span class="btncarousel  pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">></span>
+                                        <span class="sr-only mx-auto ml-2">Next</span>
+                                    </a>
+                                </div>
+                                <div
+                                    class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-sm-block d-none d-lg-none d-md-none">
+                                    <a class="carousel-control-next" href="#carouselExampleControlssm" role="button"
+                                        data-slide="next" style="height:70px; width:70px;opacity: 1;">
+                                        <span class="btncarousel  pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">></span>
+                                        <span class="sr-only mx-auto ml-2">Next</span>
+                                    </a>
+                                </div>
+                                <div
+                                    class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4  d-block d-sm-none d-md-none d-lg-none">
+                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                                        data-slide="next" style="height:70px; width:70px;opacity: 1;">
+                                        <span class="btncarousel  pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">></span>
+                                        <span class="sr-only mx-auto ml-2">Next</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-------------------------------------------Slider-------------------------------------->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-lg-block d-md-none d-sm-none d-none">
-                                <!-------------------prev button---------------------->
-                                <a class="carousel-control-prev " href="#carouselExampleControlslg" role="button"
-                                    data-slide="prev" style="height:70px; width:70px; opacity: 1; border: 0px;">
-                                    <span class="btncarousel pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">
-                                        < </span>
-                                            <span class="sr-only mx-auto "></span>
-                                </a>
-                            </div>
-                            <div class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-md-block d-sm-none d-lg-none d-none">
-                                <!-------------------prev button---------------------->
-                                <a class="carousel-control-prev " href="#carouselExampleControlsmd" role="button"
-                                    data-slide="prev" style="height:70px; width:70px; opacity: 1; border: 0px;">
-                                    <span class="btncarousel pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">
-                                        < </span>
-                                            <span class="sr-only mx-auto "></span>
-                                </a>
-                            </div>
-                            <div class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-sm-block d-none d-lg-none d-md-none">
-                                <!-------------------prev button---------------------->
-                                <a class="carousel-control-prev " href="#carouselExampleControlssm" role="button"
-                                    data-slide="prev" style="height:70px; width:70px; opacity: 1; border: 0px;">
-                                    <span class="btncarousel pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">
-                                        < </span>
-                                            <span class="sr-only mx-auto "></span>
-                                </a>
-                            </div>
-                            <div class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-block d-sm-none d-md-none d-lg-none">
-                                <!-------------------prev button---------------------->
-                                <a class="carousel-control-prev " href="#carouselExampleControls" role="button"
-                                    data-slide="prev" style="height:70px; width:70px; opacity: 1; border: 0px;">
-                                    <span class="btncarousel pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">
-                                        < </span>
-                                            <span class="sr-only mx-auto "></span>
-                                </a>
-                            </div>
-                            <!------------------------------------Larger view-------------------------------------->
-                            <div class="col-lg-10 p-0 m-0 d-lg-block d-md-none d-sm-none d-none">
-                                <!-------------------slider---------------------->
-                                <div id="carouselExampleControlslg" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="row no-gutters">
-                                                <div class="col">
-                                                    <div style="padding: 5px 1px;">
-                                                        <div class="container">
-                                                            <img src="img/Webdesign.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">WebDesigner
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 1px;">
-                                                        <div class="container">
-                                                            <img src="img/uiDesign.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Ui/UX
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 1px;">
-                                                        <div class="container">
-                                                            <img src="img/grap.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Graphic
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 1px;">
-                                                        <div class="container">
-                                                            <img src="img/illust.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white" style="opacity: 1;">
-                                                                Illustration</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!---------------------------------NEXT SLIDER------------------------->
 
-                                        <div class="carousel-item">
-                                            <div class="row no-gutters">
-                                                <div class="col">
-                                                    <div style="padding: 5px 1px;">
-                                                        <div class="container">
-                                                            <img src="img/Webdesign.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">WebDesigner
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 1px;">
-                                                        <div class="container">
-                                                            <img src="img/uiDesign.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Ui/UX
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 1px;">
-                                                        <div class="container">
-                                                            <img src="img/grap.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Graphic
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 1px;">
-                                                        <div class="container">
-                                                            <img src="img/illust.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Illustration
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+            <!----------------------------------------------------CONTAINER--------------------------->
+
+            <div class="row mt-4 no-gutters mx-lg-0 mx-md-0 mx-sm-0 mx-4" style="padding-top:90px;">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <p class="text-left t homedivtxt" style="color:#0D2942;">We are trusted by more than 800+
+                        companies</p>
+                    <p class="text-justify">Find a job and achive success and a high salary
+                        is not the value.But your work is more important to achive the success . You can work
+                        according to
+                        your achive success...<a href="">More</a>. Find a job and achive success and a high
+                        salary
+                        is not
+                        the value.But
+                        your work is more important to achive the success . You can work according to your
+                        achive
+                        success...
+                        <a href="">More</a></p>
+                </div>
+
+                <!-------------------------------------TABLE--------------------------------------------------->
+                <div class="col-lg-6 col-md-5 col-sm-5 col-5">
+                    <!----------------------------LARGE VIEW-------------------->
+                    <div class="table-responsive-lg d-lg-block d-md-none d-sm-none d-none p-2">
+                        <table class="table table-lg table-borderless text-dark">
+                            <tbody>
+                                <!-------------------------------------------First Row-------------------------------------------->
+                                <tr>
+                                    <td>
+                                        <div class="roun p-2" style="text-align: center;border-radius: 15px;">
+                                            <img src="img/goog.png" class="img-responsive">
                                         </div>
+                                    </td>
+                                    <td>
+                                        <div class="p-2 roun" style="text-align: center;border-radius: 15px;">
+                                            <img src="img/fb.png" class="img-responsive">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="pt-4 roun pr-2 pl-2 pb-2"
+                                            style="text-align: center;border-radius: 15px;">
+                                            <img src="img/ama.png" class="img-responsive">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-------------------------------------------Second Row-------------------------------------------->
+                                <tr>
+                                    <td>
+                                        <div class="roun p-2" style="text-align: center;border-radius: 15px;">
+                                            <img src="img/quo.png" class="img-responsive">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="p-2 roun py-4" style="text-align: center;border-radius: 15px;">
+                                            <img src="img/hp.png" class="img-responsive mt-2">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="roun py-4 pb-5 d-flex align-self-center justify-content-center"
+                                            style="border-radius: 15px;">
+                                            <img src="img/sam.png" class="img-responsive mt-3">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!----------------------------MEDIUM VIEW-------------------->
+                    <div class="table-responsive-md d-md-block d-sm-none d-lg-none d-none p-4">
+                        <table class="table table-md table-borderless text-dark">
+                            <tbody>
+                                <!-------------------------------------------First Row-------------------------------------------->
+                                <tr>
+                                    <td>
+                                        <div class="roun py-1 px-0" style="text-align: center; border-radius: 15px;">
+                                            <img src="img/goog.png" class="img-responsive"
+                                                style="width: 75px; height:100px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="py-1 roun px-0" style="text-align: center;border-radius: 15px;">
+                                            <img src="img/fb.png" class="img-responsive"
+                                                style="width: 75px; height:100px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="py-2 roun px-1" style="text-align: center;border-radius: 15px;">
+                                            <img src="img/ama.png" class="img-responsive"
+                                                style="width: 75px; height:90px;">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-------------------------------------------Second Row-------------------------------------------->
+                                <tr>
+                                    <td>
+                                        <div class="roun p-2" style="text-align: center; border-radius: 15px;">
+                                            <img src="img/quo.png" class="img-responsive"
+                                                style="width: 75px; height:100px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="py-3 roun" style="text-align: center; border-radius: 15px;">
+                                            <img src="img/hp.png" class="img-responsive"
+                                                style="width: 75px; height:80px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="py-3 roun" style="text-align: center;border-radius: 15px;">
+                                            <img src="img/sam.png" class="img-responsive"
+                                                style="width: 75px; height:80px;">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!----------------------------SMALL VIEW-------------------->
+                    <div class="table-responsive-sm d-sm-block d-none d-lg-none d-md-none p-2">
+                        <table class="table table-lg table-borderless text-dark">
+                            <tbody>
+                                <!-------------------------------------------First Row-------------------------------------------->
+                                <tr>
+                                    <td>
+                                        <div class="roun py-1 px-0" style="text-align: center; border-radius: 15px;">
+                                            <img src="img/goog.png" class="img-responsive"
+                                                style="width: 75px; height:100px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="py-1 roun px-0" style="text-align: center;border-radius: 15px;">
+                                            <img src="img/fb.png" class="img-responsive"
+                                                style="width: 75px; height:100px;">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-------------------------------------------Second Row-------------------------------------------->
+                                <tr>
+                                    <td>
+                                        <div class="py-2 roun px-1" style="text-align: center;border-radius: 15px;">
+                                            <img src="img/ama.png" class="img-responsive"
+                                                style="width: 75px; height:90px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="roun p-2" style="text-align: center; border-radius: 15px;">
+                                            <img src="img/quo.png" class="img-responsive"
+                                                style="width: 75px; height:100px;">
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-------------------------------------------Third Row-------------------------------------------->
+                                <tr>
+                                    <td>
+                                        <div class="py-3 roun" style="text-align: center; border-radius: 15px;">
+                                            <img src="img/hp.png" class="img-responsive"
+                                                style="width: 75px; height:80px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="py-3  roun" style="text-align: center;border-radius: 15px;">
+                                            <img src="img/sam.png" class="img-responsive"
+                                                style="width: 75px; height:80px;">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!----------------------------Very Small VIEW-------------------->
+                    <div class="table-responsive-xs d-block d-sm-none d-md-none d-lg-none p-2">
+                        <table class="table table-lg table-borderless text-dark">
+                            <tbody>
+                                <!-------------------------------------------First Row-------------------------------------------->
+                                <tr>
+                                    <td>
+                                        <div class="roun p-2" style="text-align: center;border-radius: 10px;">
+                                            <img src="img/goog.png" class="img-responsive"
+                                                style="width: 120px; height:120px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="p-2 roun" style="text-align: center;border-radius: 10px;">
+                                            <img src="img/fb.png" class="img-responsive"
+                                                style="width: 120px; height:120px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="pt-4 roun pr-2 pl-2 pb-2"
+                                            style="text-align: center;border-radius: 10px;">
+                                            <img src="img/ama.png" class="img-responsive"
+                                                style="width: 120px; height:100px;">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-------------------------------------------Second Row-------------------------------------------->
+                                <tr>
+                                    <td>
+                                        <div class="rounded roun p-2" style="text-align: center;border-radius: 10px;">
+                                            <img src="img/quo.png" class="img-responsive"
+                                                style="width: 120px; height:120px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="rounded p-2 roun pt-4 pb-4"
+                                            style="text-align: center;border-radius: 10px;">
+                                            <img src="img/hp.png" class="img-responsive"
+                                                style="width: 120px; height:90px;">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="rounded pt-4 roun pt-4 pb-4"
+                                            style="text-align: center;height: 130px;border-radius: 10px;">
+                                            <img src="img/sam.png" class="img-responsive"
+                                                style="width: 120px; height:90px;">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------FORM------------------------>
+            <div class="row rounded" style="padding-bottom: 20px; padding-top: 70px;">
+                <div class="top roun" style="margin: 0px 30px;border-radius: 20px 20px 0px 20px;">
+                    <div class="row ">
+                        <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
+                            <img src="img/hiring.png" class="img-fluid formalert h-100" alt="Responsive image">
+                        </div>
+                        <div class="col-lg-4 col-md-5 col-sm-11 col-xs-12" style="margin:20px;">
+                            <form class="needs-validation" novalidate>
+                                <p class="text-center formposttxt" style="margin-bottom: 0px;">POST A JOB</p>
+                                <p class="text-center formpostsubtxt" style="margin-top: 0px;">SIGN UP FOR JOB ALERTS
+                                </p>
+                                <div class="form-group mt-4">
+                                    <input type="email" class="roun form-control formpost py-4" placeholder="Email"
+                                        id="email" aria-describedby="emailHelp" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address with '@' and '.'.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
                                     </div>
                                 </div>
-                            </div>
-
-                            <!------------------------------------Medium view-------------------------------------->
-                            <div class="col-md-10 p-0 m-0 d-md-block d-sm-none d-lg-none d-none">
-                                <!-------------------slider---------------------->
-                                <div id="carouselExampleControlsmd" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="row no-gutters">
-                                                <div class="col">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/Webdesign.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">WebDesigner
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/uiDesign.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Ui/UX
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/grap.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Graphic
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!---------------------------------NEXT SLIDER------------------------->
-
-                                        <div class="carousel-item">
-                                            <div class="row no-gutters">
-                                                <div class="col">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/grap.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Graphic
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/illust.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Illustration
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/uiDesign.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Ui/UX
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="form-group">
+                                    <input type="text" class="roun form-control formpost py-4" placeholder="Keywords"
+                                        id="keywords" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid keyword.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-----------------------------------Small view-------------------------------------->
-                            <div class="col-sm-9 p-0 m-0 d-sm-block d-none d-lg-none d-md-none">
-                                <!-------------------slider---------------------->
-                                <div id="carouselExampleControlssm" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="row no-gutters">
-                                                <div class="col">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/Webdesign.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">WebDesigner
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/grap.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Graphic
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!---------------------------------NEXT SLIDER------------------------->
-
-                                        <div class="carousel-item">
-                                            <div class="row no-gutters">
-                                                <div class="col">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/illust.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Illustration
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/uiDesign.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Ui/UX
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="form-group">
+                                    <input type="text" class="roun form-control formpost py-4" placeholder="Location"
+                                        id="location" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid location.
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
                                     </div>
                                 </div>
-                            </div>
+                                <button type="submit" class="btn text-white ex btg text-center d-flex mx-auto my-3"
+                                    style="font-size: 18px;">Create
+                                    Alert</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                            <!-----------------------------------VERY SMALL VIEW-------------------------------------->
-                            <div class="col-10 p-0 m-0 d-block d-sm-none d-md-none d-lg-none">
-                                <!-------------------slider---------------------->
-                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="row no-gutters">
-                                                <div class="col-4">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/illust.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Illustration
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/uiDesign.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Ui/UX
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/illust.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Illustration
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!---------------------------------NEXT SLIDER------------------------->
-
-                                        <div class="carousel-item">
-                                            <div class="row no-gutters">
-                                                <div class="col-4">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/illust.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Illustration
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/uiDesign.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Ui/UX
-                                                                Designer
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-4">
-                                                    <div style="padding: 5px 0px;">
-                                                        <div class="container">
-                                                            <img src="img/illust.png" class="homeimgslide">
-                                                        </div>
-                                                        <div class="rounded-top homeimgslidetxt"
-                                                            style="background: rgba(11,180,79,.6);">
-                                                            <p class="font-weight-bold text-white ">Illustration
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+            <!------------------------------------------------GLOBE-------------------------------------------------->
+            <div class="row my-lg-5 py-lg-5 mb-0 mx-5" style="padding-top: 60px;">
+                <div class="container " style=" padding-top:20px;">
+                    <div class="row" style="position: relative;">
+                        <img src="img/globe.png" class="img-fluid">
+                        <div class="s1">
+                            <img src="img/s1.png" class="img-fluid" id="s1">
+                            <!--------------------------onhover div ------------------->
+                            <!----------s1----------->
+                            <div class="roun comment s1div myclass bg-white text-dark p-4 rounded" id="s1div">
+                                <div class="row font-weight-bold d-flex justify-content-center">
+                                    <span class="boldheader">Jhon Wick</span>
+                                </div>
+                                <div class="row">
+                                    <span style="font-size: 12px;">This job portal help me to find a good
+                                        job.</span>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
                                 </div>
                             </div>
+                        </div>
+                        <div class="s2">
+                            <img src="img/s2.png" id="s2" class="img-fluid">
+                            <!--------------------------onhover div ------------------->
+                            <!----------s2----------->
+                            <div class="roun comment s2div myclass bg-white text-dark p-4 mt-4 rounded" id="s2div">
+                                <div class="row font-weight-bold d-flex justify-content-center">
+                                    <span class="boldheader">Jhon Wick</span>
+                                </div>
+                                <div class="row">
+                                    <span style="font-size: 12px;">This job portal help me to find a good
+                                        job.</span>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s3">
+                            <img src="img/s3.png" id="s3" class="img-fluid">
+                            <!--------------------------onhover div ------------------->
+                            <!----------s3----------->
+                            <div class="roun comment s3div myclass bg-white text-dark p-4 mt-4 rounded" id="s3div">
+                                <div class="row font-weight-bold d-flex justify-content-center">
+                                    <span class="boldheader">Jhon Wick</span>
+                                </div>
+                                <div class="row">
+                                    <span style="font-size: 12px;">This job portal help me to find a good
+                                        job.</span>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s4">
+                            <img src="img/s4.png" id="s4" class="img-fluid">
+                            <!--------------------------onhover div ------------------->
+                            <!----------s4----------->
+                            <div class="roun comment s4div myclass bg-white text-dark p-4 mt-4 rounded" id="s4div">
+                                <div class="row font-weight-bold d-flex justify-content-center">
+                                    <span class="boldheader">Jhon Wick</span>
+                                </div>
+                                <div class="row">
+                                    <span style="font-size: 12px;">This job portal help me to find a good
+                                        job.</span>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                    <img class="img-fluid" src="img/star.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                            <!-------------------next button---------------------->
-                            <div class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-lg-block d-md-none d-sm-none d-none">
-                                <a class="carousel-control-next" href="#carouselExampleControlslg" role="button"
-                                    data-slide="next" style="height:70px; width:70px;opacity: 1;">
-                                    <span class="btncarousel  pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">></span>
-                                    <span class="sr-only mx-auto ml-2">Next</span>
-                                </a>
+        <!-----------------------------------------------------FOOTER----------------------------------------------------------->
+        <footer class="container-fluid foot pb-5" style="background-color: #323232; ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 d-flex align-self-center col-md-6 col-sm-6 col-6">
+                        <img src="img/logo.png" class="img-fluid d-block">
+                        <!--logo-->
+                    </div>
+                    <div class="col-xl-5 offset-xl-0 col-lg-5 offset-lg-0 col-md-6 col-sm-6 col-5">
+                        <div class="row pl-xl-0 pl-lg-0 ml-lg-4 pl-0 ml-0 curhov">
+                            <div
+                                class="col-xl-1 offset-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-2 offset-sm-2 px-0 my-2">
+                                <img src="img/joblisting.png" class="img-fluid mt-2">
                             </div>
-                            <div class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-md-block d-sm-none d-lg-none d-none">
-                                <a class="carousel-control-next" href="#carouselExampleControlsmd" role="button"
-                                    data-slide="next" style="height:70px; width:70px;opacity: 1;">
-                                    <span class="btncarousel  pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">></span>
-                                    <span class="sr-only mx-auto ml-2">Next</span>
-                                </a>
-                            </div>
-                            <div class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4 d-sm-block d-none d-lg-none d-md-none">
-                                <a class="carousel-control-next" href="#carouselExampleControlssm" role="button"
-                                    data-slide="next" style="height:70px; width:70px;opacity: 1;">
-                                    <span class="btncarousel  pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">></span>
-                                    <span class="sr-only mx-auto ml-2">Next</span>
-                                </a>
+                            <div class="ml-1 col-xl-3 col-lg-4 col-md-2 col-sm-1 col-1 px-0 ">
+                                <p class="tag d-flex justify-content font-weight-bold"
+                                    style="color: #FFFFFF;margin-bottom:0px;">1124</p>
+                                <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Job Listing</p>
                             </div>
                             <div
-                                class="col my-xl-5 my-lg-5 my-md-5 my-sm-5 my-4  d-block d-sm-none d-md-none d-lg-none">
-                                <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                                    data-slide="next" style="height:70px; width:70px;opacity: 1;">
-                                    <span class="btncarousel  pt-xl-1 pt-lg-1 pt-md-0" aria-hidden="true">></span>
-                                    <span class="sr-only mx-auto ml-2">Next</span>
-                                </a>
+                                class="col-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-2 offset-sm-2 px-0 my-2">
+                                <img src="img/resumeposted.png" class="img-fluid mt-2">
+                            </div>
+                            <div
+                                class="ml-sm-1 ml-xl-0 ml-lg-0 ml-md-0 ml-2 col-xl-4 col-lg-3 col-md-2 col-sm-1 col-1 px-0">
+                                <p class="tag d-flex justify-content font-weight-bold"
+                                    style="color: #FFFFFF;margin-bottom:0px;">444</p>
+                                <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Resumes Posted
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-
-        <!----------------------------------------------------CONTAINER--------------------------->
-
-        <div class="row mt-4 no-gutters mx-lg-0 mx-md-0 mx-sm-0 mx-4" style="padding-top:90px;">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <p class="text-left t homedivtxt" style="color:#0D2942;">We are trusted by more than 800+
-                    companies</p>
-                <p class="text-justify">Find a job and achive success and a high salary
-                    is not the value.But your work is more important to achive the success . You can work
-                    according to
-                    your achive success...<a href="">More</a>. Find a job and achive success and a high
-                    salary
-                    is not
-                    the value.But
-                    your work is more important to achive the success . You can work according to your
-                    achive
-                    success...
-                    <a href="">More</a></p>
-            </div>
-
-            <!-------------------------------------TABLE--------------------------------------------------->
-            <div class="col-lg-6 col-md-5 col-sm-5 col-5">
-                <!----------------------------LARGE VIEW-------------------->
-                <div class="table-responsive-lg d-lg-block d-md-none d-sm-none d-none p-2">
-                    <table class="table table-lg table-borderless text-dark">
-                        <tbody>
-                            <!-------------------------------------------First Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <div class="roun p-2" style="text-align: center;border-radius: 15px;">
-                                        <img src="img/goog.png" class="img-responsive">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="p-2 roun" style="text-align: center;border-radius: 15px;">
-                                        <img src="img/fb.png" class="img-responsive">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="pt-4 roun pr-2 pl-2 pb-2"
-                                        style="text-align: center;border-radius: 15px;">
-                                        <img src="img/ama.png" class="img-responsive">
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-------------------------------------------Second Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <div class="roun p-2" style="text-align: center;border-radius: 15px;">
-                                        <img src="img/quo.png" class="img-responsive">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="p-2 roun py-4" style="text-align: center;border-radius: 15px;">
-                                        <img src="img/hp.png" class="img-responsive mt-2">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="roun py-4 pb-5 d-flex align-self-center justify-content-center"
-                                        style="border-radius: 15px;">
-                                        <img src="img/sam.png" class="img-responsive mt-3">
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!----------------------------MEDIUM VIEW-------------------->
-                <div class="table-responsive-md d-md-block d-sm-none d-lg-none d-none p-4">
-                    <table class="table table-md table-borderless text-dark">
-                        <tbody>
-                            <!-------------------------------------------First Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <div class="roun py-1 px-0" style="text-align: center; border-radius: 15px;">
-                                        <img src="img/goog.png" class="img-responsive"
-                                            style="width: 75px; height:100px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="py-1 roun px-0" style="text-align: center;border-radius: 15px;">
-                                        <img src="img/fb.png" class="img-responsive" style="width: 75px; height:100px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="py-2 roun px-1" style="text-align: center;border-radius: 15px;">
-                                        <img src="img/ama.png" class="img-responsive" style="width: 75px; height:90px;">
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-------------------------------------------Second Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <div class="roun p-2" style="text-align: center; border-radius: 15px;">
-                                        <img src="img/quo.png" class="img-responsive"
-                                            style="width: 75px; height:100px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="py-3 roun" style="text-align: center; border-radius: 15px;">
-                                        <img src="img/hp.png" class="img-responsive" style="width: 75px; height:80px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="py-3 roun" style="text-align: center;border-radius: 15px;">
-                                        <img src="img/sam.png" class="img-responsive" style="width: 75px; height:80px;">
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!----------------------------SMALL VIEW-------------------->
-                <div class="table-responsive-sm d-sm-block d-none d-lg-none d-md-none p-2">
-                    <table class="table table-lg table-borderless text-dark">
-                        <tbody>
-                            <!-------------------------------------------First Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <div class="roun py-1 px-0" style="text-align: center; border-radius: 15px;">
-                                        <img src="img/goog.png" class="img-responsive"
-                                            style="width: 75px; height:100px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="py-1 roun px-0" style="text-align: center;border-radius: 15px;">
-                                        <img src="img/fb.png" class="img-responsive" style="width: 75px; height:100px;">
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-------------------------------------------Second Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <div class="py-2 roun px-1" style="text-align: center;border-radius: 15px;">
-                                        <img src="img/ama.png" class="img-responsive" style="width: 75px; height:90px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="roun p-2" style="text-align: center; border-radius: 15px;">
-                                        <img src="img/quo.png" class="img-responsive"
-                                            style="width: 75px; height:100px;">
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-------------------------------------------Third Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <div class="py-3 roun" style="text-align: center; border-radius: 15px;">
-                                        <img src="img/hp.png" class="img-responsive" style="width: 75px; height:80px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="py-3  roun" style="text-align: center;border-radius: 15px;">
-                                        <img src="img/sam.png" class="img-responsive" style="width: 75px; height:80px;">
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!----------------------------Very Small VIEW-------------------->
-                <div class="table-responsive-xs d-block d-sm-none d-md-none d-lg-none p-2">
-                    <table class="table table-lg table-borderless text-dark">
-                        <tbody>
-                            <!-------------------------------------------First Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <div class="roun p-2" style="text-align: center;border-radius: 10px;">
-                                        <img src="img/goog.png" class="img-responsive"
-                                            style="width: 120px; height:120px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="p-2 roun" style="text-align: center;border-radius: 10px;">
-                                        <img src="img/fb.png" class="img-responsive"
-                                            style="width: 120px; height:120px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="pt-4 roun pr-2 pl-2 pb-2"
-                                        style="text-align: center;border-radius: 10px;">
-                                        <img src="img/ama.png" class="img-responsive"
-                                            style="width: 120px; height:100px;">
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-------------------------------------------Second Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <div class="rounded roun p-2" style="text-align: center;border-radius: 10px;">
-                                        <img src="img/quo.png" class="img-responsive"
-                                            style="width: 120px; height:120px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="rounded p-2 roun pt-4 pb-4"
-                                        style="text-align: center;border-radius: 10px;">
-                                        <img src="img/hp.png" class="img-responsive" style="width: 120px; height:90px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="rounded pt-4 roun pt-4 pb-4"
-                                        style="text-align: center;height: 130px;border-radius: 10px;">
-                                        <img src="img/sam.png" class="img-responsive"
-                                            style="width: 120px; height:90px;">
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!-----------------------------------------------HORIZONTAL LINE------------------------------------->
+            <div class="row p-0">
+                <div class="col-md-12">
+                    <hr style="background-color: green; height: 1.2px;" class="p-0 m-0">
                 </div>
             </div>
-        </div>
-        <!------------------------------------FORM------------------------>
-        <div class="row rounded" style="padding-bottom: 20px; padding-top: 70px;">
-            <div class="top roun" style="margin: 0px 30px;border-radius: 20px 20px 0px 20px;">
-                <div class="row ">
-                    <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
-                        <img src="img/hiring.png" class="img-fluid formalert h-100" alt="Responsive image">
-                    </div>
-                    <div class="col-lg-4 col-md-5 col-sm-11 col-xs-12" style="margin:20px;">
-                        <form class="needs-validation" novalidate>
-                            <p class="text-center formposttxt" style="margin-bottom: 0px;">POST A JOB</p>
-                            <p class="text-center formpostsubtxt" style="margin-top: 0px;">SIGN UP FOR JOB ALERTS</p>
-                            <div class="form-group mt-4">
-                                <input type="email" class="roun form-control formpost py-4" placeholder="Email"
-                                    id="email" aria-describedby="emailHelp" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid email address with '@' and '.'.
-                                </div>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="roun form-control formpost py-4" placeholder="Keywords"
-                                    id="keywords" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid keyword.
-                                </div>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="roun form-control formpost py-4" placeholder="Location"
-                                    id="location" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid location.
-                                </div>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                            </div>
-                            <button type="submit" class="btn text-white ex btg text-center d-flex mx-auto my-3"
-                                style="font-size: 18px;">Create
-                                Alert</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!------------------------------------------------GLOBE-------------------------------------------------->
-        <div class="row my-lg-5 py-lg-5 mb-0 mx-5" style="padding-top: 60px;">
-            <div class="container " style=" padding-top:20px;">
-                <div class="row" style="position: relative;">
-                    <img src="img/globe.png" class="img-fluid">
-                    <div class="s1">
-                        <img src="img/s1.png" class="img-fluid" id="s1">
-                        <!--------------------------onhover div ------------------->
-                        <!----------s1----------->
-                        <div class="roun comment s1div myclass bg-white text-dark p-4 rounded" id="s1div">
-                            <div class="row font-weight-bold d-flex justify-content-center">
-                                <span class="boldheader">Jhon Wick</span>
+            <!-------------------------------------------NEXT ROW------------------------------------------------>
+
+            <div class="row mt-5" style="position: relative;">
+                <div class="resp">
+                    <img src="img/circle.png" class="img-fluid respimg">
+                </div>
+
+                <div class="container " style="position: relative;">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="row mx-2">
+                            <!------------------------------------------------tables and form-------------------------------->
+                            <!-------------------------------------TABLE--------------------------------------------------->
+                            <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 table-responsive"
+                                style="text-align: left;">
+                                <table class="table table-sm table-borderless"
+                                    style="border-spacing: 0; border-width: 0; border-width: 0;">
+                                    <tbody>
+                                        <tr class="spaceUnder">
+                                            <td>
+                                                <p class="tag foottop"> For
+                                                    Candidates
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p class="tag foottop">For Employers
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <p class="tag foottop">Other</p>
+                                            </td>
+                                            <td>
+                                                <p class="tag foottop">Legal</p>
+                                            </td>
+                                        </tr>
+                                        <tr class="">
+                                            <td><a class="weightedtext" href="singlejobpage.html">Browse Jobs</a>
+                                            </td>
+                                            <td><a class="weightedtext" href="#">Browse
+                                                    Candidates</a>
+                                            </td>
+                                            <td><a class="weightedtext" href="singlejobpage.html">Job Page</a></td>
+                                            <td><a class="weightedtext" href="#">Privacy Policy</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="#">Browse
+                                                    Categories</a>
+                                            </td>
+                                            <td><a class="weightedtext" href="#">Employer
+                                                    Dashboard</a>
+                                            </td>
+                                            <td><a class="weightedtext" href="#" style="text-align: left;">Job Page
+                                                    Alternative</a></td>
+                                            <td><a class="weightedtext" href="#">Terms of Use</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="#">Candidate
+                                                    Dashboard</a>
+                                            </td>
+                                            <td><a class="weightedtext" href="#">Add Job</a></td>
+                                            <td><a class="weightedtext" href="#">Resume Page</a>
+                                            </td>
+                                            <td><a class="weightedtext" href="#">FAQ</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="#">Job Alerts</a></td>
+                                            <td><a class="weightedtext" href="packages.html">Job Packages</a>
+                                            </td>
+                                            <td><a class="weightedtext" href="blog.html">Blog</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a class="weightedtext" href="#">My Bookmarks</a>
+                                            </td>
+                                            <td><a class="weightedtext" href="#"></a></td>
+                                            <td><a class="weightedtext" href="#">Contact</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="row">
-                                <span style="font-size: 12px;">This job portal help me to find a good
-                                    job.</span>
-                            </div>
-                            <div class="row d-flex justify-content-center">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="s2">
-                        <img src="img/s2.png" id="s2" class="img-fluid">
-                        <!--------------------------onhover div ------------------->
-                        <!----------s2----------->
-                        <div class="roun comment s2div myclass bg-white text-dark p-4 mt-4 rounded" id="s2div">
-                            <div class="row font-weight-bold d-flex justify-content-center">
-                                <span class="boldheader">Jhon Wick</span>
-                            </div>
-                            <div class="row">
-                                <span style="font-size: 12px;">This job portal help me to find a good
-                                    job.</span>
-                            </div>
-                            <div class="row d-flex justify-content-center">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="s3">
-                        <img src="img/s3.png" id="s3" class="img-fluid">
-                        <!--------------------------onhover div ------------------->
-                        <!----------s3----------->
-                        <div class="roun comment s3div myclass bg-white text-dark p-4 mt-4 rounded" id="s3div">
-                            <div class="row font-weight-bold d-flex justify-content-center">
-                                <span class="boldheader">Jhon Wick</span>
-                            </div>
-                            <div class="row">
-                                <span style="font-size: 12px;">This job portal help me to find a good
-                                    job.</span>
-                            </div>
-                            <div class="row d-flex justify-content-center">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="s4">
-                        <img src="img/s4.png" id="s4" class="img-fluid">
-                        <!--------------------------onhover div ------------------->
-                        <!----------s4----------->
-                        <div class="roun comment s4div myclass bg-white text-dark p-4 mt-4 rounded" id="s4div">
-                            <div class="row font-weight-bold d-flex justify-content-center">
-                                <span class="boldheader">Jhon Wick</span>
-                            </div>
-                            <div class="row">
-                                <span style="font-size: 12px;">This job portal help me to find a good
-                                    job.</span>
-                            </div>
-                            <div class="row d-flex justify-content-center">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
-                                <img class="img-fluid" src="img/star.png">
+
+                            <!-------------------------------------FORM--------------------------------------------------->
+                            <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12 table-responsive newsform">
+                                <table class="table table-sm table-borderless mt-2 mr-0">
+                                    <tbody class="mt-sm-4 mt-lg-0 mt-md-0 mt-4">
+                                        <tr class="float-left nospace py-0 my-0 ">
+                                            <td><img src="img/newsletter.png" class="img-fluid nospace"></td>
+                                            <td class="text-left tag nospace" colspan="3"
+                                                style="font-size: Proxima Nova;">
+                                                Sign Up For a
+                                                Newsletter
+                                            </td>
+                                        </tr>
+                                        <tr class="space">
+                                            <td colspan="4">
+                                                <p class="text-left ml-xl-2 ml-lg-2 ml-md-2 ml-sm-0 ml-0"
+                                                    style="line-height: normal; color:#929292;font-size: 15px;">
+                                                    Weekly breaking news, analysis and cutting edge
+                                                    advices on job searching.</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <form class="form-inline ml-lg-2 ml-md-2 ml-sm-0 ml-0 my-2 my-lg-0">
+                                                    <input class="form-control footerform col-xl-8  col-8 mr-sm-2 text"
+                                                        type="email" size="22" placeholder="Enter your Email here...">
+                                                    <button class="btn btn-success my-2 text btnsub"
+                                                        type="submit">Subscribe</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-----------------------------------------------------FOOTER----------------------------------------------------------->
-    <footer class="container-fluid foot pb-5" style="background-color: #323232; ">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 d-flex align-self-center col-md-6 col-sm-6 col-6">
-                    <img src="img/logo.png" class="img-fluid d-block">
-                    <!--logo-->
-                </div>
-                <div class="col-xl-5 offset-xl-0 col-lg-5 offset-lg-0 col-md-6 col-sm-6 col-5">
-                    <div class="row pl-xl-0 pl-lg-0 ml-lg-4 pl-0 ml-0 curhov">
-                        <div
-                            class="col-xl-1 offset-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-2 offset-sm-2 px-0 my-2">
-                            <img src="img/joblisting.png" class="img-fluid mt-2">
-                        </div>
-                        <div class="ml-1 col-xl-3 col-lg-4 col-md-2 col-sm-1 col-1 px-0 ">
-                            <p class="tag d-flex justify-content font-weight-bold"
-                                style="color: #FFFFFF;margin-bottom:0px;">1124</p>
-                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Job Listing</p>
-                        </div>
-                        <div
-                            class="col-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-2 offset-sm-2 px-0 my-2">
-                            <img src="img/resumeposted.png" class="img-fluid mt-2">
-                        </div>
-                        <div
-                            class="ml-sm-1 ml-xl-0 ml-lg-0 ml-md-0 ml-2 col-xl-4 col-lg-3 col-md-2 col-sm-1 col-1 px-0">
-                            <p class="tag d-flex justify-content font-weight-bold"
-                                style="color: #FFFFFF;margin-bottom:0px;">444</p>
-                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Resumes Posted</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-----------------------------------------------HORIZONTAL LINE------------------------------------->
-        <div class="row p-0">
-            <div class="col-md-12">
-                <hr style="background-color: green; height: 1.2px;" class="p-0 m-0">
-            </div>
-        </div>
-
-        <!-------------------------------------------NEXT ROW------------------------------------------------>
-
-        <div class="row mt-5" style="position: relative;">
-            <div class="resp">
-                <img src="img/circle.png" class="img-fluid respimg">
-            </div>
-
-            <div class="container " style="position: relative;">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <div class="row mx-2">
-                        <!------------------------------------------------tables and form-------------------------------->
-                        <!-------------------------------------TABLE--------------------------------------------------->
-                        <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 table-responsive"
-                            style="text-align: left;">
-                            <table class="table table-sm table-borderless"
-                                style="border-spacing: 0; border-width: 0; border-width: 0;">
-                                <tbody>
-                                    <tr class="spaceUnder">
-                                        <td>
-                                            <p class="tag foottop"> For
-                                                Candidates
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p class="tag foottop">For Employers
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p class="tag foottop">Other</p>
-                                        </td>
-                                        <td>
-                                            <p class="tag foottop">Legal</p>
-                                        </td>
-                                    </tr>
-                                    <tr class="">
-                                        <td><a class="weightedtext" href="singlejobpage.html">Browse Jobs</a>
-                                        </td>
-                                        <td><a class="weightedtext" href="#">Browse
-                                                Candidates</a>
-                                        </td>
-                                        <td><a class="weightedtext" href="singlejobpage.html">Job Page</a></td>
-                                        <td><a class="weightedtext" href="#">Privacy Policy</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="weightedtext" href="#">Browse
-                                                Categories</a>
-                                        </td>
-                                        <td><a class="weightedtext" href="#">Employer
-                                                Dashboard</a>
-                                        </td>
-                                        <td><a class="weightedtext" href="#" style="text-align: left;">Job Page
-                                                Alternative</a></td>
-                                        <td><a class="weightedtext" href="#">Terms of Use</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="weightedtext" href="#">Candidate
-                                                Dashboard</a>
-                                        </td>
-                                        <td><a class="weightedtext" href="#">Add Job</a></td>
-                                        <td><a class="weightedtext" href="#">Resume Page</a>
-                                        </td>
-                                        <td><a class="weightedtext" href="#">FAQ</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="weightedtext" href="#">Job Alerts</a></td>
-                                        <td><a class="weightedtext" href="packages.html">Job Packages</a>
-                                        </td>
-                                        <td><a class="weightedtext" href="blog.html">Blog</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="weightedtext" href="#">My Bookmarks</a>
-                                        </td>
-                                        <td><a class="weightedtext" href="#"></a></td>
-                                        <td><a class="weightedtext" href="#">Contact</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-------------------------------------FORM--------------------------------------------------->
-                        <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12 table-responsive newsform">
-                            <table class="table table-sm table-borderless mt-2 mr-0">
-                                <tbody class="mt-sm-4 mt-lg-0 mt-md-0 mt-4">
-                                    <tr class="float-left nospace py-0 my-0 ">
-                                        <td><img src="img/newsletter.png" class="img-fluid nospace"></td>
-                                        <td class="text-left tag nospace" colspan="3" style="font-size: Proxima Nova;">
-                                            Sign Up For a
-                                            Newsletter
-                                        </td>
-                                    </tr>
-                                    <tr class="space">
-                                        <td colspan="4">
-                                            <p class="text-left ml-xl-2 ml-lg-2 ml-md-2 ml-sm-0 ml-0"
-                                                style="line-height: normal; color:#929292;font-size: 15px;">
-                                                Weekly breaking news, analysis and cutting edge
-                                                advices on job searching.</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <form class="form-inline ml-lg-2 ml-md-2 ml-sm-0 ml-0 my-2 my-lg-0">
-                                                <input class="form-control footerform col-xl-8  col-8 mr-sm-2 text"
-                                                    type="email" size="22" placeholder="Enter your Email here...">
-                                                <button class="btn btn-success my-2 text btnsub"
-                                                    type="submit">Subscribe</button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </footer>
+        </footer>
 
 
 </body>

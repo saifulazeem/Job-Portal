@@ -382,6 +382,8 @@ margin:30px;
 /*home.html slider "Select category" position button*/
 .homesel{
   right:-30px;
+  border-radius: 30px;
+  margin-bottom: 4px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:30px; width:30px;
@@ -394,7 +396,7 @@ margin:30px;
   color: white;
 }
 .featover{
-  top:30px;position:relative;margin-bottom: -220px;
+  top:30px;position:relative;margin-bottom: 130px;
 }
 .featsub{
   margin:0px -15px;
@@ -481,29 +483,29 @@ margin:30px;
   }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:70px; top:0px;
-  width:70px;height: 70px;
+  position: absolute;left:10px; top:0px;
+  width:50px;height: 50px;
 }
 .s1div{
   position: absolute;left:-60px;width:160px;
 }
 .s2{
-  position: absolute; left: 240px; top:20px;
-  width:70px;height: 70px;
+  position: absolute; left: 100px; top:-20px;
+  width:50px;height: 50px;
 }
 .s2div{
   position: absolute;left:-50px;width:160px;
 }
 .s3{
-  position: absolute; left:130px;top:130px;
-  width:70px;height: 70px;
+  position: absolute; left:130px;top:50px;
+  width:50px;height: 50px;
 }
 .s3div{
   position: absolute;left:-50px;width:160px;
 }
 .s4{
-  position: absolute; left:400px; top:30px;
-  width:70px;height: 70px;
+  position: absolute; left:200px; top:30px;
+  width:50px;height: 50px;
 }
 .s4div{
   position: absolute;left:-51px;width:160px;
@@ -756,6 +758,7 @@ margin:30px;
 /*home.html slider "Select category" position button*/
 .homesel{
   right:-30px;
+  border-radius: 30px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:30px; width:30px;
@@ -768,7 +771,7 @@ margin:30px;
   color: white;
 }
 .featover{
-  top:20px;position:relative;margin-bottom: -220px;
+  top:20px;position:relative;margin-bottom: 130px;
 }
 .featsub{
   margin:0px -10px ;
@@ -1133,6 +1136,7 @@ padding-top: 200px;
 /*home.html slider "Select category" position button*/
 .homesel{
   right:-30px;
+  border-radius: 30px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:30px; width:30px;
@@ -1144,7 +1148,7 @@ padding-top: 200px;
   color: white;
 }
 .featover{
-  top:30px;position:relative;margin-bottom: -70px;
+  top:30px;position:relative;margin-bottom: 120px;
 }
 .hometxt{
   top:-70px;
@@ -1524,6 +1528,7 @@ padding-top: 200px;
 /*home.html slider "Select category" position button*/
 .homesel{
   right:-80px;
+  border-radius: 30px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:30px; width:30px;
@@ -1536,7 +1541,7 @@ padding-top: 200px;
   color: white;
 }
 .featover{
-  top:50px;position:relative;margin-bottom: -70px;
+  top:50px;position:relative;margin-bottom: 100px;
 }
 .hometxt{
   top:-90px;
@@ -1925,6 +1930,7 @@ table.sec tr td:nth-child(4) input {
 /*home.html slider "Select category" position button*/
 .homesel{
   right:-130px;
+  border-radius: 30px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:40px; width:40px;
@@ -2377,6 +2383,7 @@ table.sec tr td:nth-child(4) input {
 /*home.html slider "Select category" position button*/
 .homesel{
   right:-170px;
+  border-radius: 30px;
 }
 .btncarousel{
   font-size:20px; border-radius: 40px;height:40px; width:40px;text-align: center;
@@ -2874,7 +2881,10 @@ tr{
   background-color: #0BB44F;
   color: white;
 }
-
+.dashformact:hover{
+  color: white;
+  background-color: #939292;
+}
 /*dashboard admin*/
 .just-padding {
   padding: 0px 15px;
