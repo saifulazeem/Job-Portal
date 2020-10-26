@@ -40,22 +40,36 @@ color: #0BB44F;text-decoration: none; font-size: 16px;
   .s{
     right: 358px;
   }
-  
+  .navbar-nav>li>a {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: -7px;
+}
 /* Style the links inside the navigation bar */
-.navhov{
+.navbar-nav{
   color: white;
 }
-.navhov:hover {
+
+  .navbar-nav .sp:hover {
     border-bottom: 3px solid #0BB44F;
     font-weight: 700;
     color: white;
   }
-  .navhov .active:hover {
-    border-bottom: 3px solid #0BB44F;
-    font-weight: 700;
-    color: white;
+  
+  .navbar-nav p{
+    margin:-4px;
   }
-  .navhov .active {
+
+.nav-link{
+  text-decoration: none;
+  color: white;
+}
+.nav-link:hover{
+  text-decoration: none;
+  color: white;
+}
+  .activelink {
     border-bottom: 3px solid #0BB44F;
     font-weight: 700;
     color: white;
@@ -244,8 +258,8 @@ text-decoration: none;
   }
      /*Footer form*/
    .newsform{
-    padding-top:0px;
-     padding-left: 60px;
+    padding-top:30px;
+     padding-left: 30px;
     }
     .tablehome td{
       font-size: 14px;
@@ -331,6 +345,15 @@ margin:30px;
 /*about.html text*/
 .t{
   margin-top: 90px;
+}
+/*about.html div*/
+.over-about{
+  top:0px;
+}
+.aboutmaintxt{
+  margin-top: 130px;
+  margin-bottom: 150px;
+  font-size: 30px;
 }
 /*home.html main img top*/ 
 .homeimg{
@@ -463,6 +486,7 @@ margin:30px;
 .formdiv::placeholder{
   color:#707070;
   font-size: 12px;
+
 }
 .formdiv{
   height:40px;
@@ -635,8 +659,8 @@ padding-top: 200px;
   }
      /*Footer form*/
    .newsform{
-    padding-top:0px;
-     padding-left: 40px;
+    padding-top:30px;
+     padding-left: 30px;
     }
     .tablehome td{
       font-size: 14px;
@@ -722,6 +746,15 @@ margin:30px;
 /*about.html text*/
 .t{
   margin-top: 90px;
+}
+/*about.html div*/
+.over-about{
+  top:0px;
+}
+.aboutmaintxt{
+  margin-top: 130px;
+  margin-bottom: 260px;
+  font-size: 30px;
 }
 /*home.html main img top*/ 
 .homeimg{
@@ -1029,7 +1062,7 @@ padding-top: 200px;
   }
    /*Footer form*/
    .newsform{
-    padding-left: 0px;
+    padding-left: 20px;
     padding-top: 40px;
    }
    .tablehome td{
@@ -1117,9 +1150,14 @@ padding-top: 200px;
 }
 /*about.html div*/
 .over-about{
-  top:-80px;
+  top:-120px;
+  margin-bottom: -70px;
 }
-
+.aboutmaintxt{
+  margin-top: 130px;
+  margin-bottom: 260px;
+  font-size: 40px;
+}
 /*home.html main img top*/ 
 .homeimg{
   height:580px;
@@ -1205,7 +1243,7 @@ padding-top: 200px;
 .formdiv{
   height:40px;
   width:340px;
-  padding: 0px 5px;
+  padding: 0px 20px;
   border-radius: 5px;
 }
 .homemaintxt{
@@ -1451,9 +1489,14 @@ padding-top: 200px;
 }
 /*about.html div*/
 .over-about{
-  top:-120px;
+  top:-190px;
+  margin-bottom: -100px;
 }
-
+.aboutmaintxt{
+  margin-top: 130px;
+  margin-bottom: 330px;
+  font-size: 48px;
+}
 /*accountancy.html blue rectangle*/
 .ag{
   height: 700px;
@@ -1629,7 +1672,7 @@ padding-top: 200px;
 .formdiv{
   height:40px;
   width:340px;
-  padding: 0px 5px;
+  padding: 0px 25px;
   border-radius: 5px;
 }
 .homemaintxt{
@@ -1874,6 +1917,12 @@ table.sec tr td:nth-child(4) input {
 /*about.html div*/
 .over-about{
   top:-180px;
+  margin-bottom: -100px;
+}
+.aboutmaintxt{
+  margin-top: 130px;
+  margin-bottom: 330px;
+  font-size: 52px;
 }
 /*accountancy.html blue rectangle*/
 .ag{
@@ -2186,7 +2235,7 @@ table.sec tr td:nth-child(4) input {
 .formdiv{
   height:40px;
   width:340px;
-  padding: 0px 5px;
+  padding: 0px 25px;
   border-radius: 5px;
 }
 .searchform{
@@ -2365,9 +2414,14 @@ table.sec tr td:nth-child(4) input {
 
 /*about.html div*/
 .over-about{
-  top:-150px;
+  top:-220px;
+  margin-bottom: -100px;
 }
-
+.aboutmaintxt{
+  margin-top: 130px;
+  margin-bottom: 330px;
+  font-size: 56px;
+}
 .tablehome td{
   font-size: 16px;
   text-align: left;
@@ -2549,10 +2603,16 @@ font-size: 20px;
 }
 /*blog page*/
 .blogpg{
-  padding-top: 300px; margin-bottom: -500px;
+  padding-top: 200px; margin-bottom: -450px;
 }
 .blogtext{
-  letter-spacing: 4px;font-size: 25px;
+  font-size:70px;font-weight: 700; letter-spacing: 4px;
+}
+.blogsubtext{
+  font-size:25px;letter-spacing: 4px;
+}
+.blogmar{
+  margin: 360px 0px;
 }
 /*Employer.html*/
 .empdivs{
@@ -2644,7 +2704,7 @@ table.sec tr td:nth-child(4) input {
   position: absolute; left:800px;
 }
 .btn1{
-  padding:10px 40px;
+  padding:10px 60px;
 }
 .btn2{
   padding:12px 60px;
@@ -2655,11 +2715,10 @@ table.sec tr td:nth-child(4) input {
 .formdiv::placeholder{
   color:#707070;
   font-size: 18px;
-  padding: 0px 15px;
 }
 .formdiv{
   height:60px;
-  padding: 0px 15px;
+  padding: 0px 30px;
   border-radius: 10px;
 }
 .padleft{
@@ -2675,15 +2734,6 @@ table.sec tr td:nth-child(4) input {
 }
 /******************************************************************************************/
 
-/*black overlay effect on image*/
-.header {
-  background:rgba(0, 0, 0, 1);
-}
-/*for every centered main images in all pgs*/
- .imag {
-  object-fit: cover;
-  opacity: 0.4;
-}
 /* Centered text */
 .centered {
     font-size: xx-large;
@@ -2696,8 +2746,11 @@ table.sec tr td:nth-child(4) input {
     text-align: center;
 }
 
-.top {
+.aboutbody {
     position: relative;
+    background-color: white; 
+    border-radius: 10px;
+    padding:40px;
 }
 
 /*button*/
@@ -3000,6 +3053,9 @@ tr{
   margin-bottom: 0;
   padding-left: 35px;
 }
+.list-group-item {
+  border: 0px;
+}
 
 .list-group.list-group-root .list-group-item {
   border: 0px solid;
@@ -3081,4 +3137,20 @@ option:first-child
 .homefeat{
   font-size: 30px;
   font-weight: 400;
+}
+.jobpost{
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+}
+.cname{
+  color: #9B9B9B;
+  font-size: 16px;
+}
+.loc{
+  color: #757575;
+  font-size: 14px;
+}
+.ljobs{
+  font-size: 25px;color: white;letter-spacing: 4px;margin-bottom: -7px;
 }
