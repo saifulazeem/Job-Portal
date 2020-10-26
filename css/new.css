@@ -245,16 +245,20 @@ text-decoration: none;
     width: 150px;
     height: 150px;
   }
-   .footerform{
-    border-radius: 5px;background-color: #818181; border:0px; color: white;height: 35px;
-  }
   .mrow{margin-bottom: -14px;}
+  .footerform{
+    border-radius: 5px;background-color: #818181; border:0px; color: white;height: 40px;font-size: 12px;
+  }
   .btnsub{
     color:#CCCCCC;
     border-radius: 5px;
-    height: 35px;
-    margin-left: 5px;
-    padding: 0px 9px;
+    height: 40px;
+    padding: 0px 8px;
+    font-size: 12px;
+    margin-left:4px;
+  }
+  .footerform::placeholder{
+    font-size: 12px;
   }
      /*Footer form*/
    .newsform{
@@ -417,7 +421,7 @@ margin:30px;
   top:30px;position:relative;margin-bottom: 130px;
 }
 .featsub{
-  margin:0px -15px;
+  margin:0px 15px;
 }
 .categpad{
   padding-top:10px;
@@ -455,7 +459,18 @@ margin:30px;
   font-size: 14px;
   color:grey;
 }
-
+/*home.html footer list*/
+.one{
+  text-align: center;
+}
+/*form singlejobpage.html*/
+.empsearch{
+  width: 210px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 20px;padding-right: 20px;
+}
+.empsearch::placeholder{
+  font-size: 16px;
+  color:grey;
+}
 .homebt{
   width: 150px; height: 43px; margin-top: 15px;
 }
@@ -475,7 +490,7 @@ margin:30px;
   position: absolute; left:70px;
 }
 .btn1{
-  padding:7px 10px;
+  padding:3px 10px;
 }
 .btn2{
   padding:7px 40px;
@@ -500,10 +515,10 @@ margin:30px;
   content:"";
   position: absolute;
   top:-6px;
-  left:75px;
+  left:50px;
   margin:auto;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border:1px solid #fff;
   transform:rotate(45deg);
   background-color:  #fff;
@@ -517,32 +532,32 @@ margin:30px;
   }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:10px; top:0px;
-  width:50px;height: 50px;
+  position: absolute;left:10px; top:10px;
+  width:35px;height: 50px;
 }
 .s1div{
-  position: absolute;left:-60px;width:160px;
+  position: absolute;left:-40px;width:130px;
 }
 .s2{
-  position: absolute; left: 100px; top:-20px;
-  width:50px;height: 50px;
+  position: absolute; left: 135px; top:30px;
+  width:35px;height: 50px;
 }
 .s2div{
-  position: absolute;left:-50px;width:160px;
+  position: absolute;left:-40px;width:130px; top:-15px;
 }
 .s3{
-  position: absolute; left:130px;top:50px;
-  width:50px;height: 50px;
+  position: absolute; left:60px;top:50px;
+  width:35px;height: 50px;
 }
 .s3div{
-  position: absolute;left:-50px;width:160px;
+  position: absolute;left:-40px;width:130px;top:-15px;
 }
 .s4{
-  position: absolute; left:200px; top:30px;
-  width:50px;height: 50px;
+  position: absolute; left:210px; top:10px;
+  width:35px;height: 50px;
 }
 .s4div{
-  position: absolute;left:-51px;width:160px;
+  position: absolute;left:-40px;width:130px;top:-15px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -590,19 +605,440 @@ margin:30px;
   } 
         /*blog.html div*/
 .bover-about{
-  top:-60px;
+  top:-140px;
 }
 /*blog page pagination*/
 .blogpg{
-bottom: -1700px;
-padding-top: 200px;
+  padding-top: 200px; margin-bottom: -20px;
 }
-/*blog main text*/
 .blogtext{
- top:240px;
+  font-size:56px;font-weight: 700; letter-spacing: 4px;margin-top:-80px;
 }
 .blogsubtext{
-  letter-spacing: 2px;font-size: 16px;
+  font-size:20px;letter-spacing: 4px;margin-bottom: 200px;
+}
+.blogmar{
+  margin: 160px 0px 70px 0px;
+}
+/*Employer.html*/
+.empdivs{
+  border-radius: 12px;
+  padding-left: 19px;
+  padding-right: 19px;
+  font-size: 12px;
+  padding-top: 10px;
+}
+.txtemp{
+  font-size: 16px;
+}
+/*form Employer.html*/
+.empkey{
+  width: 250px;height:40px;margin-left: 50px;
+}
+.emploccat{
+  width: 250px;height:40px;margin-left: 50px;
+}
+.empbtn{
+  width: 150px; height: 43px; margin-left: 6px;margin-left: 150px; margin-top: 15px;
+}
+/*register.html button*/
+.regbtn {
+  padding-right: 35px;
+  padding-left: 35px;
+  border-radius: 4px;
+}
+
+.navover{
+  top: -800px;
+}
+ }
+ /***********************************************************************************************************************/
+@media (min-width: 400px) {
+  /*footer circle image*/
+  .resp {
+   position: absolute;
+   left: -90px;
+   }
+   .respimg{
+    width: 150px;
+    height: 150px;
+  }
+  .mrow{margin-bottom: -14px;}
+  .footerform{
+    border-radius: 5px;background-color: #818181; border:0px; color: white;height: 40px;font-size: 12px;
+  }
+  .btnsub{
+    color:#CCCCCC;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0px 8px;
+    font-size: 12px;
+  }
+  .footerform::placeholder{
+    font-size: 12px;
+  }
+     /*Footer form*/
+   .newsform{
+    padding-top:30px;
+     padding-left: 30px;
+     margin-left: 20px;
+    }
+    .tablehome td{
+      font-size: 14px;
+      text-align: left;
+    }
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 180px;
+  left: 66px;
+}
+/*home.html main image*/
+.topimg{
+  top:-40px;
+}
+/*accountancy.html cards div*/
+.aover{
+  top: -920px;
+margin:30px;
+}
+.ag{
+  height:900px;
+  top:50px;
+}
+/*accountancy.html sub div*/
+.dover{
+  top: -860px;
+  margin-bottom: -100px;
+}
+
+/*accountancy.html  circle*/
+.cir{
+  position: absolute;
+  width:150px;
+  height:170px;
+  right:-40px;
+  top:-140px;
+}
+/*accountancy main text over image*/
+.cent {
+  width:400px;
+  height:400px;
+  position: absolute;
+  top: 170px;
+  left:20px;
+  font-size:12px; 
+  
+}
+/*accountancy.html cards*/
+.acards-txt{
+  color:black;
+  font-size: 10px;
+  }     
+.acards{
+  background-color: white;
+  height:165px;
+  width:100px;
+  } 
+  /*green strip on testimonial div*/
+.testdiv
+{
+  margin-left:0px; width: 350px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;
+}
+.testimg{
+  padding-left: 109px; 
+}
+/*accountancy.html cards*/
+.subcards-txt{
+  color:black;
+  font-size:10px;
+  }     
+  
+.subcards{
+  background-color: white;
+  height:150px;
+  width:130px;
+  } 
+  .subtext{
+    width:470px;
+    font-size:12px;
+    padding-left:50px;
+  }
+/*about.html text*/
+.t{
+  margin-top: 90px;
+}
+/*about.html div*/
+.over-about{
+  top:0px;
+}
+.aboutmaintxt{
+  margin-top: 130px;
+  margin-bottom: 150px;
+  font-size: 30px;
+}
+/*home.html main img top*/ 
+.homeimg{
+  height:580px;
+  width:1300px;
+}
+.homeover{
+  margin-top: -365px;
+}
+.hometexttop{
+  position: absolute;
+  top: 220px;
+  left: 16px;
+}
+.h::placeholder{
+  font-size: 12px;
+  padding-left: 3px;
+}
+.homedivtxt{
+  font-size: 18px;
+  font-weight:680;
+  text-align: left;
+}
+.homedivsubtxt{
+  font-size: 12px;
+}
+/*home.html slider*/
+.homeimgslide{
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 150px;
+  width:140px;
+  border-radius: 10px;
+}
+.homeimgslidetxt{
+  font-size: 12px;
+  width: auto;
+  height: 30px;
+  top: 122px;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  left: 0px;
+}
+/*home.html slider "Select category" position button*/
+.homesel{
+  border-radius: 30px;
+  margin-bottom: 4px;width: 200px;
+}
+.btncarousel{
+  font-size:20px; border-radius: 40px;height:30px; width:30px;
+  background-color: #ccc;
+  color:#0BB44F;
+}
+
+.btncarousel:hover{
+  background-color: #0BB44F;
+  color: white;
+}
+.featover{
+  top:30px;position:relative;margin-bottom: 130px;
+}
+.featsub{
+  margin:0px 45px;
+}
+.categpad{
+  padding-top:10px;
+}
+.tablepad{
+  padding-top:-10px;
+}
+.formpad{
+  padding-bottom: 0px; padding-top: 20px;
+}
+.hometxt{
+  top:-70px;
+  left:20px;
+  font-size: 18px;
+}
+.homemaintxt{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+.hoverhome{
+  border-radius: 5px;padding:3px;
+}
+.homeemp{/*featured employers*/
+  font-size: 36px;
+  font-weight: 600;
+  color: #0BB44F;
+  opacity: 50%;
+}
+
+/*home.html footer list*/
+.one{
+  text-align: center;
+}
+/*form home.html*/
+.homesearch{
+  width: 140px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 20px;padding-right: 20px;
+}
+.homesearch::placeholder{
+  font-size: 14px;
+  color:grey;
+}
+
+/*form singlejobpage.html*/
+.empsearch{
+  width: 180px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 20px;padding-right: 20px;
+}
+.empsearch::placeholder{
+  font-size: 14px;
+  color:grey;
+}
+.homebt{
+  width: 150px; height: 43px; margin-top: 15px;
+}
+.addhome{
+  margin-left: 15px;
+}
+.searchform{
+  top:-50px;
+}
+.findjobs{
+  padding-top: 550px;
+}
+.hoverdown{
+  border-radius: 10px;margin-bottom: -420px; top:296px;
+}
+.hoverhomerel{
+  position: absolute; left:70px;
+}
+.btn1{
+  padding:3px 10px;
+}
+.btn2{
+  padding:7px 40px;
+}
+.hovtxt{
+  font-size: 13px;
+}
+.formdiv::placeholder{
+  color:#707070;
+  font-size: 12px;
+
+}
+.formdiv{
+  height:40px;
+  padding: 0px 15px;
+  border-radius: 3px;
+}
+.boldheader{
+  font-size: 12px;
+}
+.comment::before{
+  content:"";
+  position: absolute;
+  top:-6px;
+  left:60px;
+  margin:auto;
+  height: 15px;
+  width: 15px;
+  border:1px solid #fff;
+  transform:rotate(45deg);
+  background-color:  #fff;
+  }
+  .tag{
+    font-size:18px;
+  }
+  .text
+  {
+    font-size: 12px;
+  }
+/*home.html globe images*/
+.s1{
+  position: absolute;left:10px; top:40px;
+  width:40px;height: 50px;
+}
+.s1div{
+  position: absolute;left:-60px;width:140px;
+}
+.s2{
+  position: absolute; left: 190px; top:50px;
+  width:40px;height: 50px;
+}
+.s2div{
+  position: absolute;left:-50px;width:140px;top:-20px;
+}
+.s3{
+  position: absolute; left:70px;top:70px;
+  width:40px;height: 50px;
+}
+.s3div{
+  position: absolute;left:-50px;width:140px;top:-21px;
+}
+.s4{
+  position: absolute; left:290px; top:30px;
+  width:40px;height: 50px;
+}
+.s4div{
+  position: absolute;left:-55px;width:140px;
+}
+/*Alert form in home.html and about.html*/ 
+.formalert{
+  border-radius: 20px 20px 0px 0px;
+  height:340px;
+}
+.formposttxt{
+  font-size: 30px;
+  font-weight: 600;
+}
+.formpostsubtxt{
+  font-size: 20px;
+  font-weight: 350;
+}
+.formpost {
+  border-radius: 15px;border: 0px;padding-left: 45px;
+}
+/*career.html cards*/
+.cards-txt{
+  color:black;
+  font-size: 12px;
+  }     
+  /*career.html cards div*/
+.over{
+  left:0px;
+  top: -770px;
+  margin-bottom: -755px;
+}
+/*career.html blue rectangle*/
+.hg{
+  height: 720px;
+}
+   /*career.html circle*/
+ .careercir{
+  position: absolute;
+  width:250px;
+  height:300px;
+  right:-100px;
+  top:14px;
+}
+.cards{
+  background-color: white;
+  height:160px;
+  width:120px;
+  } 
+        /*blog.html div*/
+.bover-about{
+  top:-140px;
+}
+/*blog page pagination*/
+.blogpg{
+  padding-top: 200px; margin-bottom: -20px;
+}
+.blogtext{
+  font-size:56px;font-weight: 700; letter-spacing: 4px;margin-top:-80px;
+}
+.blogsubtext{
+  font-size:20px;letter-spacing: 4px;margin-bottom: 200px;
+}
+.blogmar{
+  margin: 160px 0px 70px 0px;
 }
 /*Employer.html*/
 .empdivs{
@@ -647,20 +1083,24 @@ padding-top: 200px;
     width: 150px;
     height: 150px;
   }
-   .footerform{
-    border-radius: 7px;background-color: #818181; border:0px; color: white;height: 35px;
+  .footerform{
+    border-radius: 5px;background-color: #818181; border:0px; color: white;height: 40px;font-size: 12px;
   }
   .btnsub{
     color:#CCCCCC;
-    border-radius: 7px;
-    height: 35px;
-    margin-left: 5px;
-    padding: 0px 14px;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0px 8px;
+    font-size: 12px;
+  }
+  .footerform::placeholder{
+    font-size: 12px;
   }
      /*Footer form*/
    .newsform{
     padding-top:30px;
      padding-left: 30px;
+     margin-left: 40px;
     }
     .tablehome td{
       font-size: 14px;
@@ -818,7 +1258,7 @@ margin:30px;
   top:20px;position:relative;margin-bottom: 130px;
 }
 .featsub{
-  margin:0px -10px ;
+  margin:0px 0px ;
 }
 .categpad{
   padding-top:30px;
@@ -848,6 +1288,11 @@ margin:30px;
   color: #0BB44F;
   opacity: 50%;
 }
+
+/*home.html footer list*/
+.one{
+  text-align: center;
+}
 /*form home.html*/
 .homesearch{
   width: 140px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 20px;padding-right: 20px;
@@ -858,6 +1303,14 @@ margin:30px;
 }
 .homebt{
   width: 150px; height: 43px; margin-top: 15px;
+}
+/*form singlejobpage.html*/
+.empsearch{
+  width: 210px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 20px;padding-right: 20px;
+}
+.empsearch::placeholder{
+  font-size: 16px;
+  color:grey;
 }
 .addhome{
   margin-left: 15px;
@@ -873,12 +1326,6 @@ margin:30px;
 }
 .hoverhomerel{
   position: absolute; left:40px;
-}
-.btn1{
-  padding:7px 20px;
-}
-.btn2{
-  padding:7px 50px;
 }
 .btn1{
   padding:7px 20px;
@@ -904,10 +1351,10 @@ margin:30px;
 .comment::before{
   content:"";
   position: absolute;
-  top:-6px;
-  left:75px;
+  top:-4px;
+  left:60px;
   margin:auto;
-  height: 20px;
+  height: 10px;
   width: 20px;
   border:1px solid #fff;
   transform:rotate(45deg);
@@ -923,31 +1370,31 @@ margin:30px;
 /*home.html globe images*/
 .s1{
   position: absolute;left:70px; top:0px;
-  width:70px;height: 70px;
+  width:50px;height: 50px;
 }
 .s1div{
-  position: absolute;left:-60px;width:160px;
+  position: absolute;left:-40px;width:140px;top:8px;
 }
 .s2{
-  position: absolute; left: 240px; top:20px;
-  width:70px;height: 70px;
+  position: absolute; left: 230px; top:80px;
+  width:50px;height: 50px;
 }
 .s2div{
-  position: absolute;left:-50px;width:160px;
+  position: absolute;left:-40px;width:140px;top:-19px;
 }
 .s3{
-  position: absolute; left:130px;top:130px;
-  width:70px;height: 70px;
+  position: absolute; left:100px;top:90px;
+  width:50px;height: 50px;
 }
 .s3div{
-  position: absolute;left:-50px;width:160px;
+  position: absolute;left:-40px;width:140px;top:-19px;
 }
 .s4{
-  position: absolute; left:400px; top:30px;
-  width:70px;height: 70px;
+  position: absolute; left:370px; top:30px;
+  width:50px;height: 50px;
 }
 .s4div{
-  position: absolute;left:-51px;width:160px;
+  position: absolute;left:-40px;width:140px;top:-19px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -995,19 +1442,20 @@ margin:30px;
   } 
         /*blog.html div*/
 .bover-about{
-  top:-60px;
+  top:-130px;
 }
 /*blog page pagination*/
 .blogpg{
-bottom: -1700px;
-padding-top: 200px;
+  padding-top: 200px; margin-bottom: -20px;
 }
-/*blog main text*/
 .blogtext{
- top:240px;
+  font-size:56px;font-weight: 700; letter-spacing: 4px;margin-top:-80px;
 }
 .blogsubtext{
-  letter-spacing: 2px;font-size: 16px;
+  font-size:20px;letter-spacing: 4px;margin-bottom: 200px;
+}
+.blogmar{
+  margin: 160px 0px 70px 0px;
 }
 /*Employer.html*/
 .empdivs{
@@ -1051,19 +1499,24 @@ padding-top: 200px;
     width: 150px;
     height: 150px;
   }
-   .footerform{
-    border-radius: 7px;background-color: #818181; border:0px; color: white;height: 40px;
+  .footerform{
+    border-radius: 5px;background-color: #818181; border:0px; color: white;height: 40px;font-size: 12px;
   }
   .btnsub{
     color:#CCCCCC;
-    border-radius: 7px;
+    border-radius: 5px;
     height: 40px;
-    padding: 0px 14px;
+    padding: 0px 8px;
+    font-size: 12px;
+  }
+  .footerform::placeholder{
+    font-size: 12px;
   }
    /*Footer form*/
    .newsform{
-    padding-left: 20px;
+    padding-left: 0px;
     padding-top: 40px;
+    margin-right: 0px;
    }
    .tablehome td{
     font-size: 14px;
@@ -1260,6 +1713,11 @@ padding-top: 200px;
   color: #0BB44F;
   opacity: 50%;
 }
+
+/*home.html footer list*/
+.one{
+  text-align: center;
+}
 /*form home.html*/
 .homesearch{
   width: 140px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 28px;padding-right: 28px;
@@ -1267,6 +1725,25 @@ padding-top: 200px;
 .homesearch::placeholder{
   font-size: 14px;
   color:grey;
+}
+/*form singlejobpage.html*/
+.empsearch{
+  width: 210px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 10px;padding-right: 10px;
+}
+.empsearch::placeholder{
+  font-size: 14px;
+  color:grey;
+}
+#empsearchbtn {
+  position: absolute;
+  border-radius: 5px;
+  right: -10px;
+  top:3px;
+  z-index: 2px;
+  border: none;
+  width: 90px;
+  height: 43px;
+  margin-left: 10px;
 }
 .homebt{
   width: 150px; height: 43px; margin-top: 15px;
@@ -1288,11 +1765,11 @@ padding-top: 200px;
 .comment::before{
   content:"";
   position: absolute;
-  top:-16px;
-  left:115px;
+  top:-10px;
+  left:100px;
   margin:auto;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   border:1px solid #fff;
   transform:rotate(45deg);
   background-color:  #fff;
@@ -1306,32 +1783,32 @@ padding-top: 200px;
   }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:100px; top:0px;
-  width:90px;height: 90px;
+  position: absolute;left:80px; top:0px;
+  width:50px;height: 70px;
 }
 .s1div{
-  position: absolute;left:-60px;width:250px;
+  position: absolute;left:-90px;width:220px;top:10px;
 }
 .s2{
   position: absolute; left: 280px; top:90px;
-  width:90px;height: 90px;
+  width:50px;height: 70px;
 }
 .s2div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-80px;width:220px;top:-20px;
 }
 .s3{
   position: absolute; left:130px;top:130px;
-  width:90px;height: 90px;
+  width:50px;height: 70px;
 }
 .s3div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-80px;width:220px;top:-20px;
 }
 .s4{
   position: absolute; left:400px; top:30px;
-  width:90px;height: 90px;
+  width:50px;height: 70px;
 }
 .s4div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-80px;width:220px;top:-20px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -1380,19 +1857,20 @@ padding-top: 200px;
   } 
       /*blog.html div*/
 .bover-about{
-  top:-210px;
+  top:-300px;
 }
 /*blog page pagination*/
 .blogpg{
-  bottom: -1700px;
-padding-top: 200px;
+  padding-top: 200px; margin-bottom: -200px;
 }
-/*blog main text*/
 .blogtext{
- top:240px;
+  font-size:56px;font-weight: 700; letter-spacing: 4px;margin-top:-80px;
 }
 .blogsubtext{
-  letter-spacing: 2px;font-size: 16px;
+  font-size:20px;letter-spacing: 4px;margin-bottom: 300px;
+}
+.blogmar{
+  margin: 160px 0px 70px 0px;
 }
 /*Employer.html*/
 .empdivs{
@@ -1443,9 +1921,6 @@ padding-top: 200px;
     width: 200px;
     height: 200px;
   }
-   .footerform{
-    border-radius: 7px;background-color: #818181; border:0px; color: white;height: 40px;
-  }
   .mrow{margin-bottom: -12px;}
   .btnsub{
     color:#CCCCCC;
@@ -1453,10 +1928,24 @@ padding-top: 200px;
     height: 40px;
     padding: 0px 4px;
   }
+  .footerform{
+    border-radius: 5px;background-color: #818181; border:0px; color: white;height: 40px;font-size: 12px;
+  }
+  .btnsub{
+    color:#CCCCCC;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0px 8px;
+    font-size: 12px;
+  }
+  .footerform::placeholder{
+    font-size: 12px;
+  }
     /*Footer form*/
     .newsform{
       padding-left: 0px;
       padding-top: 0px;
+      margin-left: 0px;
      }
      .tablehome td{
       font-size: 14px;
@@ -1634,7 +2123,7 @@ padding-top: 200px;
   padding-bottom: 20px; padding-top: 80px;
 }
 .featover{
-  top:50px;position:relative;margin-bottom: 100px;
+  top:50px;position:relative;margin-bottom: 140px;
 }
 .categpad{
   padding-top:120px;
@@ -1657,7 +2146,7 @@ padding-top: 200px;
   position: absolute; left:450px;
 }
 .btn1{
-  padding:7px 15px;
+  padding:7px 35px;
 }
 .btn2{
   padding:7px 50px;
@@ -1698,7 +2187,7 @@ padding-top: 200px;
   content:"";
   position: absolute;
   top:-16px;
-  left:115px;
+  left:105px;
   margin:auto;
   height: 30px;
   width: 30px;
@@ -1716,27 +2205,31 @@ padding-top: 200px;
 /*home.html globe images*/
 .s1{
   position: absolute;left:140px; top:0px;
+  height: 80px; width: 70px;
 }
 .s1div{
-  position: absolute;left:-60px;width:250px;
+  position: absolute;left:-90px;width:230px; top:10px;
 }
 .s2{
   position: absolute; left: 380px; top:90px;
+  height: 80px; width: 70px;
 }
 .s2div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-85px;width:230px;top:-17px;
 }
 .s3{
   position: absolute; left:160px;top:180px;
+  height: 80px; width: 70px;
 }
 .s3div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-80px;width:230px;top:-18px;
 }
 .s4{
   position: absolute; left:570px; top:30px;
+  height: 80px; width: 70px;
 }
 .s4div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-80px;width:230px;top:-8px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -1786,17 +2279,18 @@ padding-top: 200px;
 .bover-about{
   top:-290px;
 }
-/*blog page pagination*/
+/*blog page*/
 .blogpg{
-bottom: 200px;
-padding-top: 200px;
+  padding-top: 200px; margin-bottom: -200px;
 }
-/*blog main text*/
 .blogtext{
- top:240px; 
+  font-size:60px;font-weight: 700; letter-spacing: 4px;margin-top:-80px;
 }
 .blogsubtext{
-   letter-spacing: 4px;font-size: 25px;
+  font-size:22px;letter-spacing: 4px;margin-bottom: 300px;
+}
+.blogmar{
+  margin: 160px 0px 70px 0px;
 }
 /*Employer.html*/
 .empdivs{
@@ -1839,6 +2333,11 @@ padding-top: 200px;
   color: #0BB44F;
   opacity: 50%;
 }
+
+/*home.html footer list*/
+.one{
+  text-align: left;
+}
 /*form home.html*/
 .homesearch{
   width: 210px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 12px;padding-right: 12px;
@@ -1848,8 +2347,31 @@ padding-top: 200px;
   color:grey;
 }
 
+/*form singlejobpage.html*/
+.empsearch{
+  width: 210px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 18px;padding-right: 18px;
+}
+.empsearch::placeholder{
+  font-size: 16px;
+  color:grey;
+}
+#empsearchbtn {
+  position: absolute;
+  border-radius: 5px;
+  right: -10px;
+  top:3px;
+  z-index: 2px;
+  border: none;
+  width: 90px;
+  height: 43px;
+  margin-left: 10px;
+}
 table.sec tr td:nth-child(4) input {
-  padding-right: 82px;
+  padding-right: 150px;
+  border-radius: 0px;
+}
+table.fir tr td:nth-child(4) input {
+  padding-right: 95px;
   border-radius: 0px;
 }
 .addhome{
@@ -1877,19 +2399,24 @@ table.sec tr td:nth-child(4) input {
     width: 200px;
     height: 200px;
   }
-   .footerform{
-    border-radius: 10px;background-color: #818181; border:0px; color: white;height: 45px;
+  .footerform{
+    border-radius: 5px;background-color: #818181; border:0px; color: white;height: 40px;font-size: 14px;
   }
   .btnsub{
     color:#CCCCCC;
-    border-radius: 10px;
-    height: 45px;
-    padding: 0px 14px;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 14px;
+  }
+  .footerform::placeholder{
+    font-size: 14px;
   }
    /*Footer form*/
    .newsform{
     padding-top:0px;
      padding-left: 0px;
+     margin-left: -20px;
     }
     .tablehome td{
       font-size: 16px;
@@ -2065,7 +2592,7 @@ table.sec tr td:nth-child(4) input {
   padding-bottom: 20px; padding-top: 80px;
 }
 .featover{
-  top:0px;position:relative;margin-bottom: -100px;
+  top:0px;position:relative;margin-bottom: -40px;
 }
 .featsub{
   margin:0px 5px;
@@ -2077,11 +2604,11 @@ table.sec tr td:nth-child(4) input {
 .comment::before{
   content:"";
   position: absolute;
-  top:-16px;
+  top:-10px;
   left:115px;
   margin:auto;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   border:1px solid #fff;
   transform:rotate(45deg);
   background-color:  #fff;
@@ -2095,28 +2622,32 @@ table.sec tr td:nth-child(4) input {
   }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:180px; top:30px;
+  position: absolute;left:160px; top:30px;
+  height: 90px; width: 90px;
 }
 .s1div{
-  position: absolute;left:-60px;width:250px;
+  position: absolute;left:-100px;width:240px; top:13px;
 }
 .s2{
-  position: absolute; left: 550px; top:150px;
+  position: absolute; left: 550px; top:100px;
+  height: 90px; width: 90px;
 }
 .s2div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-100px;width:240px; top:-13px;
 }
 .s3{
-  position: absolute; left:290px;top:190px;
+  position: absolute; left:270px;top:160px;
+  height: 90px; width: 90px;
 }
 .s3div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-100px;width:240px; top:-15px;
 }
 .s4{
   position: absolute; left:740px; top:30px;
+  height: 90px; width: 90px;
 }
 .s4div{
-  position: absolute;left:-80px;width:250px;
+  position: absolute;left:-100px;width:240px; top:-13px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -2169,16 +2700,20 @@ table.sec tr td:nth-child(4) input {
   }  
   /*blog.html div*/
 .bover-about{
-  top:-380px;
+  top:-420px;
 }
 /*blog page pagination*/
 .blogpg{
-  padding-top: 300px; margin-bottom: -300px;
+  padding-top: 200px; margin-bottom: -350px;
 }
-/*blog main text*/
 .blogtext{
- top:290px; 
-  letter-spacing: 4px;font-size: 25px;
+  font-size:70px;font-weight: 700; letter-spacing: 4px;margin-top:-100px;
+}
+.blogsubtext{
+  font-size:25px;letter-spacing: 4px;margin-bottom: 400px;
+}
+.blogmar{
+  margin: 160px 0px 90px 0px;
 }
 /*Employer.html*/
 .empdivs{
@@ -2244,6 +2779,11 @@ table.sec tr td:nth-child(4) input {
 .findjobs{
   padding-top:210px;
 }
+
+/*home.html footer list*/
+.one{
+  text-align: left;
+}
 /*form home.html*/
 .homesearch{
   width: 270px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 18px;padding-right: 18px;
@@ -2252,7 +2792,30 @@ table.sec tr td:nth-child(4) input {
   font-size: 14px;
   color:grey;
 }
+/*form singlejobpage.html*/
+.empsearch{
+  width: 325px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 24px;padding-right: 24px;
+}
+.empsearch::placeholder{
+  font-size: 16px;
+  color:grey;
+}
+#empsearchbtn {
+  position: absolute;
+  border-radius: 5px;
+  right: -10px;
+  top:3px;
+  z-index: 2px;
+  border: none;
+  width: 110px;
+  height: 43px;
+  margin-left: 10px;
+}
 table.sec tr td:nth-child(4) input {
+  padding-right: 130px;
+  border-radius: 0px;
+}
+table.fir tr td:nth-child(4) input {
   padding-right: 130px;
   border-radius: 0px;
 }
@@ -2281,7 +2844,7 @@ table.sec tr td:nth-child(4) input {
   border-radius: 5px;padding:1px;margin-bottom: -190px;
 }
 .btn1{
-  padding:10px 30px;
+  padding:10px 50px;
 }
 .btn2{
   padding:12px 60px;
@@ -2305,15 +2868,20 @@ table.sec tr td:nth-child(4) input {
    .newsform{
     padding-top:0px;
      padding-left: 0px;
+     margin-left: -50px;
     }
     .footerform{
-      border-radius: 10px;background-color: #818181; border:0px; color: white;height: 45px;
+      border-radius: 5px;background-color: #818181; border:0px; color: white;height: 45px;font-size: 14px;
     }
     .btnsub{
       color:#CCCCCC;
-      border-radius: 10px;
+      border-radius: 5px;
       height: 45px;
-      padding: 0px 10px;
+      padding: 0px 15px;
+      font-size: 14px;
+    }
+    .footerform::placeholder{
+      font-size: 14px;
     }
    /*home.html main image*/
    .topimg{
@@ -2441,7 +3009,7 @@ table.sec tr td:nth-child(4) input {
   content:"";
   position: absolute;
   top:-16px;
-  left:115px;
+  left:100px;
   margin:auto;
   height: 30px;
   width: 30px;
@@ -2451,28 +3019,32 @@ table.sec tr td:nth-child(4) input {
   }
 /*home.html globe images*/
 .s1{
-  position: absolute;left:160px; top:40px;
+  position: absolute;left:150px; top:60px;
+  width:100px;height: 100px;
 }
 .s1div{
-  position: absolute;left:-80px;width:250px;top:13px;
+  position: absolute;left:-70px;width:250px;top:13px;
 }
 .s2{
   position: absolute; left: 575px; top:150px;
+  width:100px;height: 100px;
 }
 .s2div{
-  position: absolute;left:-80px;width:250px;top:-4px;
+  position: absolute;left:-70px;width:250px;top:-12px;
 }
 .s3{
   position: absolute; left:330px;top:190px;
+  width:100px;height: 100px;
 }
 .s3div{
-  position: absolute;left:-80px;width:250px;top:-4px;
+  position: absolute;left:-70px;width:250px;top:-12px;
 }
 .s4{
-  position: absolute; left:740px; top:30px;
+  position: absolute; left:790px; top:30px;
+  width:100px;height: 100px;
 }
 .s4div{
-  position: absolute;left:-80px;width:250px;top:-3px;
+  position: absolute;left:-70px;width:250px;top:-12px;
 }
 /*home.html main img top*/ 
 .homeimg{
@@ -2599,20 +3171,20 @@ font-size: 20px;
   }  
   /*blog.html div*/
 .bover-about{
-  top:-550px;
+  top:-590px;
 }
 /*blog page*/
 .blogpg{
-  padding-top: 200px; margin-bottom: -450px;
+  padding-top: 200px; margin-bottom: -350px;
 }
 .blogtext{
-  font-size:70px;font-weight: 700; letter-spacing: 4px;
+  font-size:70px;font-weight: 700; letter-spacing: 4px;margin-top:-60px;
 }
 .blogsubtext{
-  font-size:25px;letter-spacing: 4px;
+  font-size:25px;letter-spacing: 4px;margin-bottom: 600px;
 }
 .blogmar{
-  margin: 360px 0px;
+  margin: 160px 0px 70px 0px;
 }
 /*Employer.html*/
 .empdivs{
@@ -2623,6 +3195,15 @@ font-size: 20px;
 }
 .txtemp{
   font-size: 16px;
+}
+.job{
+  font-size: 16px;
+  text-align: left;
+  font-weight: 700;
+}
+.subjob{
+  font-size: 12px;
+  font-style: normal;
 }
 /*form Employer.html*/
 .empkey{
@@ -2635,8 +3216,21 @@ font-size: 20px;
   width: 150px; height: 43px; margin-left: 10px;margin-right: -10px; margin-top: 3px;
   font-size: 14px;
 }
+/*form singlejobpage.html*/
+.empsearch{
+  width: 330px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 24px;padding-right: 24px;
+}
+.empsearch::placeholder{
+  font-size: 16px;
+  color:grey;
+}
 .searchform{
   top:-130px;
+}
+
+/*home.html footer list*/
+.one{
+  text-align: left;
 }
 /*form home.html*/
 .homesearch{
@@ -2645,6 +3239,25 @@ font-size: 20px;
 .homesearch::placeholder{
   font-size: 16px;
   color:grey;
+}
+/*form singlejobpage.html*/
+.empsearch{
+  width: 325px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 24px;padding-right: 24px;
+}
+.empsearch::placeholder{
+  font-size: 16px;
+  color:grey;
+}
+#empsearchbtn {
+  position: absolute;
+  border-radius: 5px;
+  right: -10px;
+  top:3px;
+  z-index: 2px;
+  border: none;
+  width: 110px;
+  height: 43px;
+  margin-left: 10px;
 }
 table.sec tr td:nth-child(4) input {
   padding-right: 150px;
@@ -2672,7 +3285,7 @@ table.sec tr td:nth-child(4) input {
   border: none;
   width: 110px;
   height: 43px;
-  margin-left: 0px;
+  margin-left: 10px;
 }
 .homeemp{/*featured employers*/
   font-size: 56px;
@@ -2704,7 +3317,7 @@ table.sec tr td:nth-child(4) input {
   position: absolute; left:800px;
 }
 .btn1{
-  padding:10px 60px;
+  padding:10px 40px;
 }
 .btn2{
   padding:12px 60px;
@@ -2779,24 +3392,15 @@ background-color:  #0D2942;
   background-color: #0BB44F;
   color:white;
   border-radius: 6px;
-  padding:10px 23px;
-  font-size: 16px;
+  padding:10px 32px;
+  font-size: 14px;
 }
-.btnsearchjob1:hover{
-background-color: white;
-color:#0BB44F;
-}
-
 .btnsearchjob2{
   background-color: white;
 color:#0BB44F;
 border-radius: 6px;
-  padding:10px 30px;
-  font-size: 16px;
-}
-.btnsearchjob2:hover{
-  background-color: #0BB44F;
-  color:white;
+  padding:10px 38px;
+  font-size: 14px;
 }
 .smallfont{
 font-size: 12px;
@@ -2833,7 +3437,9 @@ font-size: 12px;
   padding-top: 8px;
 }
 .foottop{
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
 }
 .hov:hover {
   color:  #0BB44F;
@@ -3137,6 +3743,7 @@ option:first-child
 .homefeat{
   font-size: 30px;
   font-weight: 400;
+  text-align: left;
 }
 .jobpost{
   color: #FFFFFF;
@@ -3153,4 +3760,44 @@ option:first-child
 }
 .ljobs{
   font-size: 25px;color: white;letter-spacing: 4px;margin-bottom: -7px;
+}
+
+/*SEARCH BOX home.html and singlejobpg.html*/
+table.fir {
+  border-collapse: inherit;
+  border-spacing: none;
+}
+
+table.fir td>* {
+  border: 0px;
+  border-radius: 0px;
+}
+
+table.fir tr td:nth-child(2) input {
+  border-radius: 5px 0 0 5px;
+  border-right: 1px solid #A7A7A7;
+}
+
+table.fir tr td:nth-child(4) input {
+  border-radius: 0 5px 5px 0;
+  border-left: 1px solid #A7A7A7;
+}
+
+table.sec td>* {
+  border-radius: 5px;
+}
+
+.buttonIn {
+  position: relative;
+}
+.imgsearch {
+  src: "img/search.png";
+}
+#categories {
+  width: 100%;
+  outline: none;
+}
+.fontform{
+  font-weight: 200;
+  font-size: 14px;
 }
