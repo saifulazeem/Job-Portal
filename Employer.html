@@ -12,44 +12,76 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
     <title>Employer</title>
+    <style>
+        table.fir tr:nth-child(2) {
+            box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 9px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".imgsearch").hide();
+            $(".homebtn").hover(function () {
+                $(".search").hide();
+                $(".imgsearch").show();
+            }, function () {
+                $(".search").show();
+                $(".imgsearch").hide();
+            });
+        });
+    </script>
 </head>
 
-<body style="font-family: Segoe UI;">
-    <!------------------------------------------Navbar---------------------------------------------------------->
-    <nav class="navbar navbar-expand flex-column flex-md-row bd-navbar n text">
-        <div>
-            <a class="navbar-brand mr-0 mr-md-2" href="#">
-                <img src="img/logo.png" class="img-fluid navbar-brand navbar-nav d-block">
-            </a>
-        </div>
+<body>
+     <!---------------------------------------------CONTAINER--------------------------------------------->
+     <div class="container-fluid ">
+        <!-------------------------------------NAVIGATION BAR----------------------------------------------->
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav justify-content-end ml-auto">
-                <li class="nav-item navhov">
-                    <a class="nav-link" href="about.html">ABOUT US</a>
-                </li>
-                <li class="nav-item navhov">
-                    <a class="nav-link active" href="#">EMPLOYERS PROFILE</a>
-                </li>
-                <li class="nav-item navhov">
-                    <a class="nav-link " href="careers.html">CAREERS GUIDE</a>
-                </li>
-                <li class="nav-item navhov">
-                    <a class="nav-link" href="blog.html">BLOG</a>
-                </li>
-            </ul>
-        </div>
-        <button class="btn bg-white btn-lg rounded-pill " style="padding-left: 30px; padding-right: 30px;">
-            <a href="login.html" class="b">Login</a>
-        </button>
-    </nav>
+        <nav class="navbar navbar-expand-md flex-column flex-row n" style="border-bottom: 2px solid white;">
+            <div class="container">
+                <a class="navbar-brand mr-0 mr-md-2 mb-xl-2 mb-lg-2 mb-md-2 mb-sm-2 mb-2" href="home.html">
+                    <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block">
+                </a>
 
+                <button class="navbar-toggler navbar-dark mb-3" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <img class="img-fluid" src="img/lines.png">
+                </button>
+
+                <div class="collapse navbar-collapse navbar-right justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 ml-4 ml-lg-0 ml-xl-0 ml-md-0">
+                        <li class="nav-item mx-md-0 mx-lg-2 mx-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
+                            <a class="nav-link " href="about.html" style="display: block;"><span
+                                    class="float-left sp ">ABOUT US
+                                </span></a>
+                        </li>
+                        <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
+                            <a class="nav-link " href="Employer.html"><span class="float-left sp activelink">EMPLOYERS
+                                    PROFILE</span></a>
+                        </li>
+                        <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
+                            <a class="nav-link" href="careers.html"><span class="float-left sp">CAREERS
+                                    GUIDE</span></a>
+                        </li>
+                        <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
+                            <a class="nav-link" href="blog.html"><span class="float-left sp">BLOG</span></a>
+                        </li>
+                        <li class="nav-item mx-xl-3 mx-lg-3 mx-md-3">
+                            <div class="row d-flex align-items-center">
+                                <a href="login.html"
+                                    class="btn btn-lg rounded-pill px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 btnLogin mt-3">
+                                    Login</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
     <!------------------------------------------Body---------------------------------------------------------->
     <div class="container my-5">
@@ -57,54 +89,55 @@
             <div class="row">
                 <!--------------Large and Medium View--------->
                 <div class="col-lg-12 col-md-12 table-responsive d-lg-block d-md-block d-sm-none d-none">
-                    <table class="table table-borderless table-sm">
+                    <table class="table table-borderless table-sm fir" style="border: none;" cellspacing="0"
+                        cellpadding="0">
                         <tbody>
                             <tr>
                                 <!--------First row------------->
-                                <td>
-                                    <p class="text-dark" style="margin:0px;">What Job You Are Looking For?<img
+                                <td class=" p-0">
+                                    <p class="text-dark float-left" style="margin:0px;">What Job You Are Looking
+                                        For?<img src="img/arrowblack.png" class="img-fluid">
+                                    </p>
+                                </td>
+                                <td class=" p-0">
+                                    <p class="text-dark float-left" style="margin:0px;">Where?<img
                                             src="img/arrowblack.png" class="img-fluid">
                                     </p>
                                 </td>
-                                <td>
-                                    <p class="text-dark" style="margin:0px;">Where?<img src="img/arrowblack.png"
-                                            class="img-fluid">
-                                    </p>
-                                </td>
-                                <td>
-                                    <p class="text-dark" style="margin:0px;">Categories<img src="img/arrowblack.png"
-                                            class="img-fluid"></p>
+                                <td class=" p-0">
+                                    <p class="text-dark float-left" style="margin:0px;">Categories<img
+                                            src="img/arrowblack.png" class="img-fluid"></p>
                                 </td>
                                 <td></td>
                             </tr>
-                            <tr class="shadow">
+                            <tr>
                                 <!---------Second row------------->
                                 <!------------------------FORM------------------------------------->
                                 <form class="form-inline">
-                                    <td style="padding:0px;">
-                                        <input type="text" class="form-control h empkey" id="keywords"
+                                    <td class=" p-0">
+                                        <input type="text" class="form-control empsearch " id="keywords"
                                             placeholder="Keywords">
                                     </td>
-                                    <td style="padding:0px;">
-                                        <input type="text" class="form-control h emploccat" id="location"
+                                    <td class=" p-0">
+                                        <input type="text" class="form-control empsearch" id="location"
                                             placeholder="Location">
                                     </td>
-                                    <td style="padding:0px;">
-                                        <input type="text" class="form-control h emploccat" id="categories"
+                                    <td class="buttonIn w-100 p-0">
+                                        <input type="text" class="form-control empsearch" id="categories"
                                             placeholder="All Categories">
-                                    </td>
-                                    <td style="padding:0px;">
-                                        <button type="submit" class="btn btn-success empbtn"><img src="img/search.png"
-                                                class="img-fluid"></button>
+                                        <button id="empsearchbtn" class="btn btn-success homebtn">
+                                            <span class="search">Search</span>
+                                            <img src="img/search.png" class="img-fluid imgsearch">
+                                        </button>
                                     </td>
                                 </form>
                             </tr>
                             <tr>
                                 <!--------Third row------------->
                                 <td colspan="3" class="text-dark">
-                                    Need more search options?<a href="#" class="chan"
-                                        style="text-decoration: none;">&nbsp;ADVANCE
-                                        SEARCH</a>
+                                    <span class="float-left">Need more search options?<a href="#" class="advancesearch"
+                                            style="text-decoration: none;">&nbsp;ADVANCE
+                                            SEARCH</a></span>
                                 </td>
                                 <td></td>
                                 <td></td>
@@ -113,67 +146,71 @@
                     </table>
                 </div>
 
-                <!--------------Small View--------->
+                <!--------------Small and Very Small View--------->
                 <div class="col-sm-12 col-12 table-responsive d-lg-none d-md-none d-sm-block d-block">
-                    <table class="table table-borderless table-sm">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <p class="text-dark" style="margin:0px;">What Job You Are Looking For?<img
-                                            src="img/arrowblack.png" class="img-fluid">
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding:0px;">
-                                    <input type="text" class="form-control h empkey" id="keywords"
-                                        placeholder="Keywords">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="text-dark" style="margin:0px;">Where?<img src="img/arrowblack.png"
-                                            class="img-fluid">
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding:0px;">
-                                    <input type="text" class="form-control h emploccat" id="location"
-                                        placeholder="Location">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p class="text-dark" style="margin:0px;">Categories<img src="img/arrowblack.png"
-                                            class="img-fluid"></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding:0px;">
-                                    <input type="text" class="form-control h emploccat" id="categories"
-                                        placeholder="All Categories">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="padding:0px;">
-                                    <button type="submit" class="btn btn-success empbtn"><img src="img/search.png"
-                                            class="img-fluid"></button>
-                                </td>
-                            </tr>
-                            <!--------Third row------------->
-                            <td colspan="3" class="text-dark">
-                                Need more search options?<a href="#" class="chan"
-                                    style="text-decoration: none;">&nbsp;ADVANCE
-                                    SEARCH</a>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            </tr>
-                        </tbody>
+                    <table class="mx-2 mx-sm-0 mx-md-0 mx-lg-0 mx-xl-0 table table-borderless table-sm sec ">
+                        <form class="form-inline">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p class="text-dark float-left" style="margin:0px;">What Job You Are
+                                            Looking
+                                            For?
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0 ">
+                                        <input type="text" class="form-control empsearch w-100" id="keywords"
+                                            placeholder="Keywords">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="text-dark float-left pt-3" style="margin:0px;">Where?
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class=" p-0">
+                                        <input type="text" class="form-control empsearch  w-100" id="location"
+                                            placeholder="Location">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="text-dark float-left pt-3" style="margin:0px;">Categories</p>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-0">
+                                        <input type="text" class="form-control empsearch w-100" id="categories"
+                                            placeholder="All Categories">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!--------Third row------------->
+                                    <td colspan="3" class="text-dark">
+                                        <span class="float-left">Need more search options?<a href="#"
+                                                class="advancesearch" style="text-decoration: none;">&nbsp;ADVANCE
+                                                SEARCH</a></span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="btn btn-success homebt mt-1">
+                                            <span class="search">Search</span>
+                                            <img src="img/search.png" class="img-fluid imgsearch">
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </form>
                     </table>
                 </div>
-
             </div>
         </div>
 
@@ -247,7 +284,7 @@
 
             <!------------------------------------------Side bar right---------------------------------------------->
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-10 mx-2 my-4">
-                <div class="row">
+                <div class="row text-left">
                     <div class="col-lg-5 tag font-weight-bold">
                         All Employers
                     </div>
@@ -256,7 +293,7 @@
                             <div class="d-inline text">
                                 Best Match
                             </div>
-                            <div class="d-inline dropdown-toggle text-success" data-toggle="dropdown"
+                            <div class="d-inline mt-2 float-right dropdown-toggle text-success" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" id="drop">
 
                                 <div class="dropdown-menu" aria-labelledby="drop">
@@ -365,10 +402,8 @@
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
                                                             We, at Assignmenthelp.ae, providing the writing services to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
+                                                            the students. We have been helping college and university
+                                                            students for more than 7 years....</p>
                                                     </div>
                                                 </div>
                                             </td>
@@ -701,8 +736,10 @@
                                                     </div>
                                                 </div>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <td>
-                                                <!-------------------------Second Col----------------------------------->
+                                                <!-------------------------Second Row----------------------------------->
                                                 <div class="container roun empdivs ">
                                                     <div class="row m-4">
                                                         <p class="text-dark m-auto" style="height: 50px;">
@@ -732,7 +769,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <!------------Second row-->
+                                            <!------------Third row-->
                                             <td>
                                                 <!-------------------------Third Col----------------------------------->
                                                 <div class="container roun empdivs ">
@@ -762,21 +799,23 @@
                                                     </div>
                                                 </div>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <td>
                                                 <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
+                                                <div class="container roun empdivs">
                                                     <div class="row m-4">
                                                         <p class="text-dark m-auto" style="height: 50px;">
                                                             <img src="img/c1.png" class="img-fluid w-100">
                                                         </p>
                                                     </div>
-                                                    <div class="row">
+                                                    <div class="row text-center">
                                                         <h1 class="text-dark txtemp mx-4"> Academic Writing
                                                             Assistance</h1>
                                                     </div>
                                                     <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
+                                                        <div class="bg-primary d-flex align-self-center">
+                                                            <img src="img/location.png" class="d-inline">
                                                             <small class="d-inline text-muted">Location</small>
                                                         </div>
                                                     </div>
@@ -1889,150 +1928,8 @@
             </div>
         </div>
     </div>
-
-    <footer class="container-fluid foot" style="background-color: #323232;">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="img/logo.png" class="img-fluid d-block">
-                    <!--logo-->
-                </div>
-                <div class="col my-auto">
-                    <div class="row">
-                        <div class="col-lg-1 offset-lg-2 col-md-1 offset-md-2 col-sm-1 offset-sm-2 px-0 my-2">
-                            <img src="img/joblisting.png" class="img-fluid d-flex justify-content ">
-                        </div>
-                        <div class="col-lg-2 col-md-1 col-sm-1 hov px-0">
-                            <p class="tag d-flex justify-content">1124</p>
-                            <p class="text d-flex justify-content py-0">Job Listing</p>
-                        </div>
-                        <div class="col-lg-1 offset-lg-2 col-md-1 offset-md-2 col-sm-1 offset-sm-2 px-0 my-2">
-                            <img src="img/resumeposted.png" class="img-fluid d-flex justify-content">
-                        </div>
-                        <div class="col-lg-4 col-md-1 col-sm-1 hov px-0">
-                            <p class="tag d-flex justify-content">444</p>
-                            <p class="text d-flex justify-content py-0">Resumes Posted</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-----------------------------------------------HORIZONTAL LINE------------------------------------->
-        <div class="row">
-            <div class="col-md-12">
-                <hr style="background-color: green; height: 1.2px;" class="p-0 m-0">
-            </div>
-        </div>
-
-        <!-------------------------------------------NEXT ROW------------------------------------------------>
-
-        <div class="row mt-4 pt-4">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-2 resp" style="position: relative;">
-                <img src="img/circle.png" class="img-fluid ">
-            </div>
-
-            <!------------------------------------------------tables and form-------------------------------->
-            <!-------------------------------------TABLE--------------------------------------------------->
-            <div class="col-lg-6 col-md-9 col-sm-9 col-9 foottab table-responsive" style="text-align: justify;">
-                <table class="table table-sm table-borderless" style="border-spacing: 0; border-width: 0; padding: 0; border-width: 0;">
-                    <tbody>
-                        <tr>
-                            <td >
-                                <p style="font-size: 18px;"> For
-                                    Candidates
-                                </p>
-                            </td>
-                            <td>
-                                <p style="font-size: 18px;">For Employers
-                                </p>
-                            </td>
-                            <td>
-                                <p style="font-size: 18px;">Other</p>
-                            </td>
-                            <td>
-                                <p style="font-size: 18px;">Legal</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Browse Jobs</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Browse
-                                    Candidates</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Page</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Privacy Policy</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Browse
-                                    Categories</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Employer
-                                    Dashboard</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Page
-                                    Alternative</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Terms of Use</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Candidate
-                                    Dashboard</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Add Job</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Resume Page</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">FAQ</a></td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Alerts</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Packages</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Blog</a></td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">My Bookmarks</a>
-                            </td>
-                            <td><a class="link" href="#"></a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Contact</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-------------------------------------FORM--------------------------------------------------->
-            <div class="col-lg-3 col-md-9 col-sm-9 col-10 table-responsive newsform">
-                <table class="table table-sm table-borderless">
-                    <tbody>
-                        <tr>
-                            <td><img src="img/newsletter.png" class="img-fluid"></td>
-                            <td class="text-justify" colspan="3" style="font-size: 20px;">Sign Up For a
-                                Newsletter
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <p class="link text text-justify" style="font-size: 14px;">
-                                    Weekly breaking news, analysis and cutting edge
-                                    advices on job searching.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <form class="form-inline my-2 my-lg-0 ml-2">
-                                    <input class="form-control mr-sm-2" type="email" size="22"
-                                        style=" background-color: #818181; font-size: 14px;" placeholder="Enter your Email here...">
-                                    <button class="btn btn-success rounded my-2" style="width:min-content;font-size: 14px;"
-                                        type="submit">SUBSCRIBE</button>
-                                </form>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </footer>
+</div>
+   
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

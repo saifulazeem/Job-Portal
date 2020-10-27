@@ -40,23 +40,32 @@ color: #0BB44F;text-decoration: none; font-size: 16px;
   .s{
     right: 358px;
   }
-  .navbar-nav>li>a {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-left: 0px;
+  .nav-link {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 10px;
     margin-right: -7px;
+    display: inline;
 }
-/* Style the links inside the navigation bar */
-.navbar-nav{
+
+.nav-link:hover {
+  border-bottom: 3px solid #0BB44F;
+  font-weight: 700;
   color: white;
 }
 
-  .navbar-nav .sp:hover {
-    border-bottom: 3px solid #0BB44F;
-    font-weight: 700;
-    color: white;
+  .navbar-nav p{
+    margin:-4px;
   }
-  
+
+.nav-link{
+  text-decoration: none;
+  color: white;
+}
+.nav-link:hover{
+  text-decoration: none;
+  color: white;
+}
   .navbar-nav p{
     margin:-4px;
   }
@@ -239,11 +248,19 @@ text-decoration: none;
   /*footer circle image*/
   .resp {
    position: absolute;
-   left: -90px;
+   left: -60px;
+   }
+   .newsfooter{
+    list-style-type:none;
+    text-align: center;
    }
    .respimg{
     width: 150px;
     height: 150px;
+  }
+  .logo{
+    width:80px;
+    height:40px;
   }
   .mrow{margin-bottom: -14px;}
   .footerform{
@@ -253,7 +270,7 @@ text-decoration: none;
     color:#CCCCCC;
     border-radius: 5px;
     height: 40px;
-    padding: 0px 8px;
+    padding: 0px 12px;
     font-size: 12px;
     margin-left:4px;
   }
@@ -524,11 +541,11 @@ margin:30px;
   background-color:  #fff;
   }
   .tag{
-    font-size:18px;
+    font-size:14px;
   }
   .text
   {
-    font-size: 12px;
+    font-size: 10px;
   }
 /*home.html globe images*/
 .s1{
@@ -651,13 +668,31 @@ margin:30px;
 .navover{
   top: -800px;
 }
+.logintxt{
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-weight: 650;
+}
+.btnlog{
+  font-size: 16px;
+  background-color: #0D2942;
+  padding:6px 50px;
+  border-radius: 7px;
+}
+.reftxtlogin{
+  font-size: 14px;
+}
  }
  /***********************************************************************************************************************/
 @media (min-width: 400px) {
   /*footer circle image*/
   .resp {
    position: absolute;
-   left: -90px;
+   left: -60px;
+   }
+   .newsfooter{
+    list-style-type:none;
+    text-align: center;
    }
    .respimg{
     width: 150px;
@@ -944,11 +979,11 @@ margin:30px;
   background-color:  #fff;
   }
   .tag{
-    font-size:18px;
+    font-size:16px;
   }
   .text
   {
-    font-size: 12px;
+    font-size: 10px;
   }
 /*home.html globe images*/
 .s1{
@@ -1071,13 +1106,32 @@ margin:30px;
 .navover{
   top: -800px;
 }
+.logintxt{
+  font-size: 60px;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+.btnlog{
+  font-size: 16px;
+  background-color: #0D2942;
+  padding:4px 50px;
+  border-radius: 7px;
+}
+.reftxtlogin{
+  font-size: 14px;
+}
  }
 /***********************************************************************************************************************/
 @media (min-width: 500px) {
+  .
   /*footer circle image*/
   .resp {
    position: absolute;
-   left: -90px;
+   left: -60px;
+   }
+   .newsfooter{
+    list-style-type:none;
+    text-align: center;
    }
    .respimg{
     width: 150px;
@@ -1086,6 +1140,7 @@ margin:30px;
   .footerform{
     border-radius: 5px;background-color: #818181; border:0px; color: white;height: 40px;font-size: 12px;
   }
+  .mrow{margin-bottom: -14px;}
   .btnsub{
     color:#CCCCCC;
     border-radius: 5px;
@@ -1488,12 +1543,30 @@ margin:30px;
 .navover{
   top: -800px;
 }
+.logintxt{
+  font-size: 60px;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+.btnlog{
+  font-size: 18px;
+  background-color: #0D2942;
+  padding:6px 50px;
+  border-radius: 7px;
+}
+.reftxtlogin{
+  font-size: 14px;
+}
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
   .resp {
    position: absolute;
-   left: -80px;
+   left: -60px;
+   }
+   .newsfooter{
+    list-style-type:none;
+    text-align: left;
    }
    .respimg{
     width: 150px;
@@ -1501,6 +1574,10 @@ margin:30px;
   }
   .footerform{
     border-radius: 5px;background-color: #818181; border:0px; color: white;height: 40px;font-size: 12px;
+  }
+  .logo{
+    width:100px;
+    height:55px;
   }
   .btnsub{
     color:#CCCCCC;
@@ -1910,6 +1987,20 @@ margin:30px;
 .hovtxt{
   font-size: 13px;
 }
+.logintxt{
+  font-size: 70px;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+.btnlog{
+  font-size: 20px;
+  background-color: #0D2942;
+  padding:6px 50px;
+  border-radius: 7px;
+}
+.reftxtlogin{
+  font-size: 16px;
+}
  }
 /***********************************************************************************************************************/
 @media (min-width: 768px) {
@@ -1917,11 +2008,15 @@ margin:30px;
    position: absolute;
    left: -80px;
    }
+   .newsfooter{
+    list-style-type:none;
+    text-align: left;
+   }
    .respimg{
     width: 200px;
     height: 200px;
   }
-  .mrow{margin-bottom: -12px;}
+  .mrow{margin-bottom: -11px;}
   .btnsub{
     color:#CCCCCC;
     border-radius: 7px;
@@ -2388,17 +2483,39 @@ table.fir tr td:nth-child(4) input {
   height: 43px;
   margin-left: 0px;
 }
+.logintxt{
+  font-size: 70px;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+.btnlog{
+  font-size: 22px;
+  background-color: #0D2942;
+  padding:6px 50px;
+  border-radius: 7px;
+}
+.reftxtlogin{
+  font-size: 16px;
+}
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
   .resp {    
    position: absolute;
-   left: -70px;
+   left: -90px;
+   }
+   .mar{
+    margin-left: -40px;
+  }
+   .newsfooter{
+    list-style-type:none;
+    text-align: left;
    }
    .respimg{
     width: 200px;
     height: 200px;
   }
+  .mrow{margin-bottom: -19px;}
   .footerform{
     border-radius: 5px;background-color: #818181; border:0px; color: white;height: 40px;font-size: 14px;
   }
@@ -2852,13 +2969,34 @@ table.fir tr td:nth-child(4) input {
 .hovtxt{
   font-size: 15px;
 }
+.logintxt{
+  font-size: 70px;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+.btnlog{
+  font-size: 22px;
+  background-color: #0D2942;
+  padding:4px 50px;
+  border-radius: 7px;
+}
+.reftxtlogin{
+  font-size: 18px;
+}
  }
 /***********************************************************************************************************************/
  @media (min-width: 1200px) {
    /*Footer circle image*/
   .resp {
    position: absolute;
-   left: -90px;
+   left: -100px;
+   }
+   .mar{
+     margin-left: -40px;
+   }
+   .newsfooter{
+    list-style-type:none;
+    text-align: left;
    }
    .respimg{
      width: 200px;
@@ -3189,8 +3327,8 @@ font-size: 20px;
 /*Employer.html*/
 .empdivs{
   border-radius: 12px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   font-size: 12px;
 }
 .txtemp{
@@ -3343,7 +3481,20 @@ table.sec tr td:nth-child(4) input {
 .packhead{
   font-size: 18px;font-weight: 600;
 }
-
+.logintxt{
+  font-size: 70px;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+.btnlog{
+  font-size: 22px;
+  background-color: #0D2942;
+  padding:7px 60px;
+  border-radius: 7px;
+}
+.reftxtlogin{
+  font-size: 18px;
+}
 }
 /******************************************************************************************/
 
@@ -3357,6 +3508,7 @@ table.sec tr td:nth-child(4) input {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    top: 40%; 
 }
 
 .aboutbody {
@@ -3388,20 +3540,11 @@ background-color:  #0BB44F;
 background-color:  #0D2942;
 }
 
-.btnsearchjob1{
-  background-color: #0BB44F;
-  color:white;
+.btnjob{
   border-radius: 6px;
-  padding:10px 32px;
-  font-size: 14px;
+  font-size: 12px;
 }
-.btnsearchjob2{
-  background-color: white;
-color:#0BB44F;
-border-radius: 6px;
-  padding:10px 38px;
-  font-size: 14px;
-}
+
 .smallfont{
 font-size: 12px;
 }
