@@ -3535,13 +3535,18 @@ tr{
 }
 
 /*jobs.html page*/
-.formjob{
+.formjob, .formjob:focus{
   background-color: #0D2942;
   color: white;
+  opacity: 0.5;
+  font-size: 12px;
 }
-.formjob:focus{
+
+.formjob option{
   background-color: white;
+  opacity: 1;
 }
+
 .jd{
   font-size:14px;
 }
@@ -3636,14 +3641,15 @@ tr{
   color: #0BB44F;
 }
 /*Active button*/
-.dashformact{
+.dashformact, .dashformact:focus{
   background-color: #0BB44F;
   color: white;
 }
-.dashformact:hover{
-  color: white;
-  background-color: #939292;
+.dashformact option{
+  color: black;
+  background-color: #ceebda;
 }
+
 /*dashboard admin*/
 .just-padding {
   padding: 0px 15px;
@@ -3735,6 +3741,10 @@ option:first-child
 .dashformselect::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   opacity: 0.5; /* Firefox */
   font-size: 12px;
+}
+.dashformselect option{
+  color: black;
+  background-color: #ceebda;
 }
 .comment {
   position: relative;
