@@ -11,120 +11,100 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/new.css">
+    <link rel="stylesheet" href="/css/new.css">
+    <style>
+        
+        .navbar-nav a{
+            text-decoration: none;
+            position: relative;
+        }
+        .navbar-nav a:before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 0;
+            height: 2px;
+            background-color: #0BB44F;
+            transition: all 0.5s linear;
+            color: white;
+        }
+        .navbar-nav a:hover:before{
+            width: 100%;
+            font-weight: 1500;
+            color: white;
+        }
+        ul {
+			font:normal 20px;
+		}
+		li, a {
+			display:inline-block;
+			text-align:center;
+		}
+		a {
+			padding:4px 0px;
+			text-decoration:none;
+			color:#333;
+		}
+        a:hover {
+            font-weight:bold;
+            color: white;
+            margin-left: 0px ;
+		}
+		a::before {
+			display: block;
+			content: attr(title);
+			font-weight: bold;
+            height: 0;
+            margin:0px 2px;
+		}
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand navbar-transparent flex-column flex-row bd-navbar"
-        style="border-bottom: 2px solid white;position: relative;">
-        <div class="container">
+    <nav class="navbar navbar-expand-md n flex-row" style="border-bottom: 2px solid white;">
+        <div class="container d-flex align-items-end">
             <a class="navbar-brand mr-0 mr-md-2" href="home.html">
-                <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block">
+                <img src="/img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block">
             </a>
 
+            <button class="navbar-toggler navbar-dark mb-3" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <img class="img-fluid" src="/img/lines.png">
+            </button>
 
-            <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="collapse navbar-collapse navbar-right justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav" >
+                    <li class="nav-item mt-2">
+                        <a class="nav-link" href="about.html">ABOUT US</a>
+                    </li>
+                    <li class="nav-item mt-2">
+                        <a class="nav-link" href="Employer.html">EMPLOYERS
+                            PROFILE</a>
+                    </li>
+                    <li class="nav-item mt-2">
+                        <a class="nav-link" href="careers.html">CAREERS
+                                GUIDE</a>
+                    </li>
+                    <li class="nav-item mt-2">
+                        <a class="nav-link mr-3" href="blog.html">BLOG</a>
+                    </li>
+                    <li class="nav-item mt-2">
+                        <div class="row d-flex align-items-center">
+                            <a href="login.html"
+                                class="btn btn-lg rounded-pill px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 btnLogin">
+                                Login</a>
+                            <div class="addhov">
+                                <div class="row mx-lg-1 mx-md-0 mt-2 mx-sm-2 mx-2">
+                                    <img src="/img/homeadd.png" class="img-fluid">
+                                </div>
 
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                    -->
-            <ul class="nav navbar-nav navbar-right justify-content-end ml-md-auto">
-                <li class="nav-item navhov mx-lg-2">
-                    <a class="nav-link" href="about.html" style="display: block;">ABOUT US </a>
-                </li>
-                <li class="nav-item navhov mx-lg-2">
-                    <a class="nav-link" href="#">EMPLOYERS PROFILE</a>
-                </li>
-                <li class="nav-item navhov mx-lg-2">
-                    <a class="nav-link" href="careers.html">CAREERS GUIDE</a>
-                </li>
-                <li class="nav-item navhov mx-lg-2">
-                    <a class="nav-link" href="blog.html">BLOG</a>
-                </li>
-
-                <li>
-                    <div class="nav navbar-nav navbar-right mt-2 ml-2 ml-lg-0">
-                        <a href="login.html"
-                            class="btn btn-lg rounded-pill px-4 px-md-4 px-sm-4 px-lg-5 btnLogin align-self-center">
-                            Login</a>
-
-                        <div class="addhov px-4 px-md-2 px-sm-4 px-lg-3">
-                            <div class="row">
-                                <img src="img/homeadd.png" class="img-fluid" style="position: relative; ">
-                            </div>
-                            <!------------------------------onhover div----------------------------------->
-                            <div class="row col-xl-4 col-lg-5 col-md-5 col-sm-6 col-8 my-2 hoverdown hoverhomerel roun regdiv"
-                                style="z-index: 9; background: rgba(255,255,255,.9);">
-                                <form class="col-12 needs-validation my-lg-3 my-md-3 my-sm-3 my-3 mx-0" novalidate>
-                                    <div class="form-row no-gutters col-12 p-0 m-0 ">
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
-                                            <div class="delhov">
-                                                <button type="button"
-                                                    class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
-                                                    <img class="" src="img/js.png" class="img-responsive">
-                                                    <span
-                                                        class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">CANDIDATE</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-6 p-0">
-                                            <div class="delhov float-right">
-                                                <button type="button"
-                                                    class="btn text-white btg px-xl-5 py-xl-3 px-lg-5 py-lg-2 px-md-4 py-md-1 px-sm-4 py-sm-1 px-4 ">
-                                                    <img class="" src="img/emp.png" class="img-responsive">
-                                                    <span class="mx-lg-0 mx-0 hovtxt mx-md-0">EMPLOYER</span>
-                                                </button>
-                                            </div>
-                                        </div>
-
-
-                                        <!-------------------------------Username------------------------------------->
-                                        <div class="form-group mt-4">
-                                            <input type="text" size="60"
-                                                class="form-control formdiv roun py-2 hovtxt w-100" id="name"
-                                                placeholder="Username" class="rounded" required>
-
-                                            <div class="invalid-feedback">
-                                                Please provide a valid username.
-                                            </div>
-                                            <div class="valid-feedback">
-                                                Looks good!
-                                            </div>
-                                        </div>
-                                        <!-------------------------------Email------------------------------------->
-                                        <div class="form-group mt-2">
-                                            <input type="email" size="60"
-                                                class="form-control formdiv roun py-2 hovtxt w-100" id="mail"
-                                                placeholder="Email" class="rounded" required>
-
-                                            <div class="invalid-feedback">
-                                                Please provide a valid email.
-                                            </div>
-                                            <div class="valid-feedback">
-                                                Looks good!
-                                            </div>
-                                        </div>
-
-                                        <!-------------------------BUTTON------------------------------------->
-                                        <div
-                                            class="form-group mx-auto mt-0 d-flex justify-content-center align-self-center">
-                                            <button type="submit"
-                                                class="btn text-white bt py-lg-3 px-lg-5 py-md-1 px-md-4 py-md-2 px-sm-4 py-sm-2 px-4 py-2">
-                                                <a href="#" class="text-white hovtxt"
-                                                    style="text-decoration: none;">Register</a></button>
-                                        </div>
-                                        <div class="row mb-lg-0 mb-2 mt-0 mx-2 hovtxt d-flex justify-content-center align-self-center"
-                                            style="color: #707070;">
-                                            Password will be generated and sent to your email address.
-                                        </div>
-                                    </div>
-                                </form>
                             </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </body>
