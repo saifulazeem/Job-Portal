@@ -23,6 +23,7 @@ html,body
 body{
   font-family: 'Segoe UI';
 }
+
   .btnLogin{
     background-color: white;
     color: #0BB44F;text-decoration: none; font-size: 16px;
@@ -39,40 +40,80 @@ color: #0BB44F;text-decoration: none; font-size: 16px;
   }
   .s{
     right: 358px;
-  }/*
-  .nav-link {
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: 10px;
-    margin-right: -7px;
-    display: inline;
+  }
+ 
+/*
+.navbar-nav span:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: #0BB44F;
+    transition: all 0.5s linear;
+    color: white;
+    
 }
-
-.nav-link:hover {
-  border-bottom: 3px solid #0BB44F;
-  font-weight: 700;
+.navbar-nav> li:last-child span:hover:before{
+ width: 0%;
+}
+.navbar-nav span:hover:before{
+    width: 100%;
+    transform: scale(1);
+    color: white;
+}
+.navbar-nav span{
+  text-decoration: none;
   color: white;
+  display: inline-block;
+  position: relative;
 }
-
-  .navbar-nav p{
+.navbar-nav span:hover{
+  color: white;
+  transform: scale(1.2);
+  -webkit-text-stroke: 1px white;
+}
+.navbar-nav> li:last-child span{
+text-decoration: none;
+ }
+ .navbar-nav> li:last-child span:hover{
+  transform: none;
+  border-bottom: none;
+ }*/
+ .nav-item{
+   max-width: 1000px;
+ }
+ .navbar-nav span{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  position: relative;
+  background-color: violet;
+  max-width: 600px;
+}
+ .navbar-nav span:hover{
+font-weight: 700;
+display: inline-block;
+}
+.nav-item{
+  background-color: wheat;
+}
+ .navbar-nav p{
     margin:-4px;
   }
-}
 
-
-.nav-link{
-  text-decoration: none;
-  color: white;
-}
-.nav-link:hover{
-  text-decoration: none;
-  color: white;
-}
   .activelink {
     border-bottom: 3px solid #0BB44F;
-    font-weight: 700;
+    -webkit-text-stroke: 0.8px white;
     color: white;
-  }*/
+    transform: scale(1.1);
+  }
+  .activelink:hover {
+    color: white;
+    transition: none;
+  }
+
 .subdashnav{
   background-color: #c2c0c0;
 }
@@ -3261,36 +3302,45 @@ font-size: 20px;
 .formpost {
   border-radius: 20px;border: 0px;padding-left: 55px; font-size: 14px;
 }
+.careermar{
+  width: 100%;
+  height: 100vh;
+}
 /*career.html above img text*/
 .careertxt{
-  font-size: 25px;
-  width:600px;
+  margin-top: 10px;
+  font-size: 70px;
+  font-weight: 700;
+  margin-left: 20px;
 }
-
+.careersubtxt{
+  font-size: 25px;
+  margin-left: 20px;
+}
+  /*career.html circle*/
+  .careercir{
+    position: absolute;
+    width:600px;
+    height:600px;
+    right:-205px;
+    top:-200px;
+  }
+  /*career.html cards div*/
+  .over{
+    left:0px;
+    top: -350px;
+  }
+  /*career.html blue rectangle*/
+  .hg{
+    height: 250px;
+  }
+  
 /*career.html cards*/
 .cards-txt{
   color:black;
   font-size: 12px;
   }     
   
-  /*career.html circle*/
- .careercir{
-  position: absolute;
-  width:600px;
-  height:600px;
-  right:-205px;
-  top:-200px;
-}
-/*career.html cards div*/
-.over{
-  left:0px;
-  top: -700px;
-  margin-bottom: -775px;
-}
-/*career.html blue rectangle*/
-.hg{
-  height: 350px;
-}
 
 .cards{
   background-color: white;
