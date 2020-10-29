@@ -25,11 +25,10 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
     <style>
-        .bg-img-about {
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/about.png);
-            opacity: 1;
-            background-position: center;
-            background-size: cover;
+        li span {
+            position: relative;
+            top: -1px;
+            left: -2px;
         }
     </style>
 </head>
@@ -54,70 +53,66 @@
     })();
 </script>
 
-<body>
+<body class="bg-img-about">
     <!---------------------------------------------CONTAINER--------------------------------------------->
     <div class="container-fluid ">
-        <!---------Image-------------->
-        <div class="bg-img-about">
-            <!-------------------------------------NAVIGATION BAR----------------------------------------------->
+        <!-------------------------------------NAVIGATION BAR----------------------------------------------->
 
-            <nav class="navbar navbar-expand-md flex-column flex-row n" style="border-bottom: 2px solid white;">
-                <div class="container">
-                    <a class="navbar-brand mr-0 mr-md-2 mb-xl-2 mb-lg-2 mb-md-2 mb-sm-2 mb-2" href="home.html">
-                        <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block">
-                    </a>
+        <nav class="navbar navbar-expand-md flex-column flex-row n" style="border-bottom: 2px solid white;">
+            <div class="container  mt-3">
+                <a class="navbar-brand mr-0 mr-md-2 mb-2" href="home.html">
+                    <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block">
+                </a>
 
-                    <button class="navbar-toggler navbar-dark mb-3" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <img class="img-fluid" src="img/lines.png">
-                    </button>
+                <button class="navbar-toggler navbar-dark mt-2" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <img class="img-fluid" src="img/lines.png">
+                </button>
 
-                    <div class="collapse navbar-collapse navbar-right justify-content-end" id="navbarSupportedContent">
-                        <ul class="navbar-nav mb-2 ml-4 ml-lg-0 ml-xl-0 ml-md-0">
-                            <li class="nav-item mx-md-0 mx-lg-2 mx-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                                <a class="nav-link " href="about.html" style="display: block;"><span
-                                        class="float-left sp activelink">ABOUT US
-                                    </span></a>
-                            </li>
-                            <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                                <a class="nav-link " href="Employer.html"><span class="float-left sp">EMPLOYERS
-                                        PROFILE</span></a>
-                            </li>
-                            <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                                <a class="nav-link" href="careers.html"><span class="float-left sp">CAREERS
-                                        GUIDE</span></a>
-                            </li>
-                            <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                                <a class="nav-link" href="blog.html"><span class="float-left sp">BLOG</span></a>
-                            </li>
-                            <li class="nav-item mx-xl-3 mx-lg-3 mx-md-3">
-                                <div class="row d-flex align-items-center">
-                                    <a href="login.html"
-                                        class="btn btn-lg rounded-pill px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 btnLogin mt-3">
-                                        Login</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="collapse mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0 navbar-collapse navbar-right  justify-content-end"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-md-center">
+                        <li class="nav-item navone">
+                            <a class="nav-link" href="about.html"><span class="float-left activelink">ABOUT US</span></a>
+                        </li>
+                        <li class="nav-item navtwo">
+                            <a class="nav-link" href="Employer.html"><span class="float-left">EMPLOYERS
+                                    PROFILE</span></a>
+                        </li>
+                        <li class="nav-item navthree">
+                            <a class="nav-link" href="careers.html"><span class="float-left">CAREERS
+                                    GUIDE</span></a>
+                        </li>
+                        <li class="nav-item navfour mr-xl-5 mr-lg-5 mr-md-4">
+                            <a class="nav-link" href="blog.html"><span class="float-left">BLOG</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="row d-flex align-items-center">
+                                <a href="login.html"
+                                    class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1">
+                                    Login</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
 
-            <div class="container">
-                <div class="row mb-0">
-                    <div class="col-12">
-                        <p class="text-center aboutmaintxt text-white"><b>ABOUT US</b></p>
-                    </div>
+        <div class="container">
+            <div class="row mb-0">
+                <div class="col-12">
+                    <p class="text-center aboutmaintxt text-white"><b>ABOUT US</b></p>
                 </div>
             </div>
         </div>
 
         <div class="container over-about aboutbody roun">
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12">
                     <div class="row my-3 mx-2">
-                        <p class="font-weight-bold tag">Who we are</p>
-                        <p class="text text-justify">The Tab is the voice of students and the UK’s largest and most
+                        <p class="font-weight-bold headabout">Who we are</p>
+                        <p class="text-justify bodyabout">The Tab is the voice of students and the UK’s largest and most
                             influential
                             student media brand.
                             We have three million monthly unique users in the UK - the largest student audience in
@@ -126,8 +121,8 @@
                     </div>
 
                     <div class="row my-3 mx-2">
-                        <p class="font-weight-bold tag">Why</p>
-                        <p class="text text-justify">We know that trying to find a decent internship or graduate
+                        <p class="font-weight-bold headabout">Why</p>
+                        <p class="text-justify bodyabout">We know that trying to find a decent internship or graduate
                             scheme is long. It
                             can take hours of scrolling
                             through mind-numbingly dull job posts to find something that looks even mildly
@@ -144,35 +139,46 @@
                     </div>
 
                     <div class="row my-3 mx-2">
-                        <p class="font-weight-bold tag">What</p>
-                        <dl class="row text text-left">
-                            <dt class="col-sm-3">Specialisation:</dt>
-                            <dd class="col-sm-9 text-justify">Cut the BS and get specialised job alerts based on
-                                your career
-                                preferences
-                            </dd>
+                        <p class="font-weight-bold headabout">What</p>
+                        <dl class="row col-12 ml-1 text-justify bodyabout">
+                            <div class="row">
+                                <dt class="d-inline">Specialisation:</dt>
+                                <dd class="d-inline text-justify ml-1"> Cut the BS and get specialised job alerts based
+                                    on
+                                    your career
+                                    preferences
+                                </dd>
+                            </div>
+                            <div class="row">
+                                <dt class="d-inline">Quality:</dt>
+                                <dd class="d-inline text-justify ml-1"> Get access to the best student and
+                                    graduate-focused
+                                    job offers and
+                                    employers</dd>
+                            </div>
 
-                            <dt class="col-sm-3">Quality:</dt>
-                            <dd class="col-sm-9 text-justify"> Get access to the best student and graduate-focused
-                                job offers and
-                                employers</dd>
+                            <div class="row">
+                                <dt class="d-inline">Effort: </dt>
+                                <dd class="d-inline text-justify ml-1">Let the companies contact you too, this job hunt
+                                    doesn’t need to be
+                                    one-sided
+                                </dd>
 
-                            <dt class="col-sm-3">Effort: </dt>
-                            <dd class="col-sm-9 text-justify">Let the companies contact you too, this job hunt
-                                doesn’t need to be
-                                one-sided
-                            </dd>
-
-                            <dt class="col-sm-3">Cheatsheet:</dt>
-                            <dd class="col-sm-9 text-justify"> Tips and tricks on our blog will help you ace your
-                                applications and
-                                interviews</dd>
+                            </div>
+                            <div class="row">
+                                <dt class="d-inline">Cheatsheet:</dt>
+                                <dd class="d-inline text-justify ml-1"> Tips and tricks on our blog will help you ace
+                                    your
+                                    applications and
+                                    interviews</dd>
+                            </div>
                         </dl>
                     </div>
 
                     <div class="row my-3 mx-2">
-                        <p class="font-weight-bold tag">How</p>
-                        <p class="text text-justify">Sign up by scrolling down to the form below.
+                        <p class="font-weight-bold headabout">How</p>
+                        <p class="text-justify bodyabout" style="font-style: normal;">Sign up by scrolling down to the
+                            form below.
                             <br><br>
                             For the sake of inputting one measly email address and clicking a
                             few boxes, you could cut the boredom down to half (don’t quote us on that).
@@ -181,41 +187,59 @@
                 </div>
 
                 <!----------------------list of LATEST JOBS------------------->
-                <div class="col mr-2">
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12">
                     <div class="container"
-                        style="background-color:#0D2942; color: white;font-size:26px; border-radius: 8px; padding:2px 20px; position: relative;">
+                        style="background-color:#0D2942; color: white;font-size:20px; border-radius: 8px; padding:2px 0px; position: relative;">
                         <p class="font-weight-normal text-center pt-3 ljobs">LATEST JOBs
                         </p>
-                        <div class="list-group borderless">
-                            <ul class="text-left">
+                        <div class="list-group borderless " style="color: white;">
+                            <ul class="text-left mt-3">
                                 <li>
-                                    <a href="#" class="list-group-item list-group-item-action">
-                                        <p class="mb-1 jobpost">Job Post</p>
-                                        <p class="mb-1 cname">Company Name</p>
-                                        <div style="margin-top: -15px;">
-                                            <img src="img/location.png">
-                                            <small class="loc">Location</small>
-                                        </div>
+                                    <a href="#" class="" style="text-decoration: none;">
+                                        <span class="">
+                                            <p class="mb-1 jobpost">Graduate Commercial Business Analyst</p>
+                                            <p class="mb-1 cname">Graduate Recruitment Bureau</p>
+                                            <div style="margin-top: -10px;" class="ml-1">
+                                                <img src="img/location.png">
+                                                <small class="loc">Wiltshire, South West</small>
+                                            </div>
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="list-group-item list-group-item-action">
-                                        <p class="mb-1 jobpost">Job Post</p>
-                                        <p class="mb-1 cname">Company Name</p>
-                                        <div style="margin-top: -15px;">
-                                            <img src="img/location.png">
-                                            <small class="loc">Location</small>
-                                        </div>
+                                    <a href="#" class="" style="text-decoration: none;">
+                                        <span class="">
+                                            <p class="mb-1 jobpost">International Sales& Marketing Exec</p>
+                                            <p class="mb-1 cname">Graduate Recruitment Bureau</p>
+                                            <div style="margin-top: -10px;" class="ml-1">
+                                                <img src="img/location.png">
+                                                <small class="loc">Wiltshire, South West</small>
+                                            </div>
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="list-group-item list-group-item-action">
-                                        <p class="mb-1 jobpost">Job Post</p>
-                                        <p class="mb-1 cname">Company Name</p>
-                                        <div style="margin-top: -15px;">
-                                            <img src="img/location.png">
-                                            <small class="loc">Location</small>
-                                        </div>
+                                    <a href="#" class="" style="text-decoration: none;">
+                                        <span class="">
+                                            <p class="mb-1 jobpost">Personal Tutor</p>
+                                            <p class="mb-1 cname">Graduate Recruitment Bureau</p>
+                                            <div style="margin-top: -10px;" class="ml-1">
+                                                <img src="img/location.png">
+                                                <small class="loc">Wiltshire, South West</small>
+                                            </div>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="" style="text-decoration: none;">
+                                        <span class="">
+                                            <p class="mb-1 jobpost">Graduate Field Sales Rep</p>
+                                            <p class="mb-1 cname">Graduate Recruitment Bureau</p>
+                                            <div style="margin-top: -10px;" class="ml-1">
+                                                <img src="img/location.png">
+                                                <small class="loc">Location</small>
+                                            </div>
+                                        </span>
                                     </a>
                                 </li>
                             </ul>
@@ -226,8 +250,8 @@
 
             <!------------------------------------FORM------------------------>
             <div class="row formpad">
-                <div class="top roun" style="margin: 0px 30px;border-radius: 20px 20px 0px 20px;">
-                    <div class="row ">
+                <div class="top roun" style="margin: 0px 10px;border-radius: 20px 20px 0px 20px;">
+                    <div class="row">
                         <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12">
                             <img src="img/hiring.png" class="img-fluid formalert h-100">
                         </div>
@@ -266,7 +290,8 @@
                                         Looks good!
                                     </div>
                                 </div>
-                                <button type="submit" class="btn text-white ex btg text-center d-flex mx-auto my-3"
+                                <button type="submit"
+                                    class="btn text-white btnabout btnpad text-center d-flex mx-auto my-3"
                                     style="font-size: 18px;">Create
                                     Alert</button>
                             </form>
@@ -279,20 +304,19 @@
         <!-----------------------------------------------------FOOTER----------------------------------------------------------->
         <footer class="container-fluid foot pb-5" style="background-color: #323232; ">
             <div class="container">
-                <div class="row d-flex align-items-end mb-2">
-                    <div
-                        class="col-xl-7 ol-lg-5 d-flex align-self-center col-md-3 col-sm-3 col-3 mx-2 mx-lg-0 mx-xl-0 mx-md-0 mx-sm-0">
-                        <img src="img/logo.png" class="img-fluid">
+                <div class="row mb-2">
+                    <div class=" col-xl-7 col-lg-5 d-flex align-self-center col-md-3 col-sm-3 col-3">
+                        <img src="img/logo.png" class="logo ml-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3">
                         <!--logo-->
                     </div>
                     <div
-                        class="col-xl-5 offset-xl-0 col-lg-6 offset-lg-1 col-md-7 offset-md-2 col-sm-7 offset-sm-2 offset-0 col-8">
+                        class="col-xl-5 offset-xl-0 col-lg-6 offset-lg-1 col-md-7 offset-md-2 col-sm-7 offset-sm-2 offset-1 col-8">
                         <div class="row mrow pl-xl-0 pl-lg-0 ml-lg-4 pl-0 ml-0 curhov justify-content-start">
                             <div
-                                class="col-xl-1 offset-xl-1 col-lg-1 offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-0 offset-sm-2 px-0 my-2">
+                                class="col-xl-1 offset-xl-1 col-lg-1  offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-0 offset-sm-2 px-0 my-2">
                                 <img src="img/joblisting.png" class="img-fluid mt-0 mt-sm-0 mt-md-2 mt-lg-2 mt-xl-2">
                             </div>
-                            <div class="ml-1 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4 px-0 ">
+                            <div class="ml-1 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4 px-0 mt-1">
                                 <p class="tag d-flex justify-content font-weight-bold"
                                     style="color: #FFFFFF;margin-bottom:0px;">1124</p>
                                 <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Job Listing</p>
@@ -301,7 +325,7 @@
                                 <img src="img/resumeposted.png" class="img-fluid mt-0 mt-sm-0 mt-md-2 mt-lg-2 mt-xl-2">
                             </div>
                             <div
-                                class="ml-sm-1 ml-xl-0 ml-lg-0 ml-md-0 ml-2 col-xl-4 col-lg-3 col-md-3 col-sm-4 col-5 px-0">
+                                class="ml-sm-1 ml-xl-0 ml-lg-0 ml-md-0 ml-2 col-xl-4 col-lg-3 col-md-3 col-sm-4 col-5 px-0 mt-1">
                                 <p class="tag d-flex justify-content font-weight-bold"
                                     style="color: #FFFFFF;margin-bottom:0px;">444</p>
                                 <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Resumes Posted
@@ -326,312 +350,138 @@
                     <img src="img/circle.png" class="img-fluid respimg">
                 </div>
 
-                <div class="container" style="position: relative;">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-10">
-                        <div class="row mx-2">
-                            <!------------------------------------------------tables and form-------------------------------->
-                            <!-------------------------------------TABLE--------------------------------------------------->
-                            <!------------LARGE and X-LARGE VIEW-->
-                            <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 table-responsive d-xl-block d-lg-block d-md-none d-sm-none d-none"
-                                style="text-align: left;">
-                                <table class="table table-sm table-borderless"
-                                    style="border-spacing: 0; border-width: 0; border-width: 0;">
-                                    <tbody>
-                                        <tr class="spaceUnder">
-                                            <td>
+                <div class="container">
+                    <div class="row mar">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-10">
+                            <div class="row no-gutters">
+                                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                    <div class="list-group borderless" style="color: #323232;">
+                                        <ul class="one">
+                                            <li>
                                                 <p class="tag foottop"> For
                                                     Candidates
                                                 </p>
-                                            </td>
-                                            <td>
-                                                <p class="tag foottop">For Employers
-                                                </p>
-                                            </td>
-                                            <td>
-                                                <p class="tag foottop">Other</p>
-                                            </td>
-                                            <td>
-                                                <p class="tag foottop">Legal</p>
-                                            </td>
-                                        </tr>
-                                        <tr class="">
-                                            <td><a class="weightedtext" href="singlejobpage.html">Browse Jobs</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="#">Browse
-                                                    Candidates</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="singlejobpage.html">Job Page</a></td>
-                                            <td><a class="weightedtext" href="#">Privacy Policy</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="#">Browse
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="singlejobpage.html">Browse Jobs</a>
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">Browse
                                                     Categories</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="#">Employer
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">Candidate
                                                     Dashboard</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="#" style="text-align: left;">Job Page
-                                                    Alternative</a></td>
-                                            <td><a class="weightedtext" href="#">Terms of Use</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="#">Candidate
-                                                    Dashboard</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="#">Add Job</a></td>
-                                            <td><a class="weightedtext" href="#">Resume Page</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="#">FAQ</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="#">Job Alerts</a></td>
-                                            <td><a class="weightedtext" href="packages.html">Job Packages</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="blog.html">Blog</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="#">My Bookmarks</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="#"></a></td>
-                                            <td><a class="weightedtext" href="#">Contact</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!------------MEDIUM VIEW-->
-                            <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 table-responsive d-xl-none d-lg-none d-md-block d-sm-none d-none"
-                                style="text-align: left;">
-                                <table class="table table-sm table-borderless"
-                                    style="border-spacing: 0; border-width: 0; border-width: 0;">
-                                    <tbody>
-                                        <tr class="heading">
-                                            <!--First Row-->
-                                            <td>
-                                                <p class="tag foottop"> For
-                                                    Candidates
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">Job Alerts</a>
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">My Bookmarks</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                    <div class="d-inline list-group borderless" style="color: #323232;">
+                                        <ul class="one">
+                                            <li>
+                                                <p class="tag foottop"> For Employers
                                                 </p>
-                                            </td>
-                                            <td>
-                                                <p class="tag foottop">For Employers
-                                                </p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="singlejobpage.html">Browse Jobs</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="#">Browse
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">Browse
                                                     Candidates</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="#">Browse
-                                                    Categories</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="#">Employer
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">Employer
                                                     Dashboard</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="#">Candidate
-                                                    Dashboard</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="#">Add Job</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="#">Job Alerts</a></td>
-                                            <td><a class="weightedtext" href="packages.html">Job Packages</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="#">My Bookmarks</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="heading">
-                                            <!--Second Row-->
-                                            <td>
-                                                <p class="tag foottop">Other</p>
-                                            </td>
-                                            <td>
-                                                <p class="tag foottop">Legal</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="singlejobpage.html">Job Page</a></td>
-                                            <td><a class="weightedtext" href="#">Privacy Policy</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="#" style="text-align: left;">Job Page
-                                                    Alternative</a></td>
-                                            <td><a class="weightedtext" href="#">Terms of Use</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="#">Resume Page</a>
-                                            </td>
-                                            <td><a class="weightedtext" href="#">FAQ</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="blog.html">Blog</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a class="weightedtext" href="#">Contact</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!------------SMALL and V-SMALL VIEW-->
-                            <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 col-12 table-responsive d-xl-none d-lg-none d-md-none d-sm-block d-block"
-                                style="text-align: center;">
-                                <table class="table table-sm table-borderless"
-                                    style="border-spacing: 0; border-width: 0; border-width: 0;">
-                                    <tbody>
-                                        <tr class="heading">
-                                            <!--First Row-->
-                                            <td>
-                                                <b class="tag foottop"> For
-                                                    Candidates
-                                                </b>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" href="singlejobpage.html"
-                                                    style="font-size: 16px;">Browse Jobs</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Browse
-                                                    Candidates</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Candidate
-                                                    Dashboard</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Job Alerts</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">My
-                                                    Bookmarks</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="heading">
-                                            <!--Second Row-->
-                                            <td>
-                                                <p class="tag foottop">For Employers
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">Add Job</a>
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="packages.html">Job Packages</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                    <div class="d-inline list-group borderless" style="color: #323232;">
+                                        <ul class="one">
+                                            <li>
+                                                <p class="tag foottop"> Other
                                                 </p>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Browse
-                                                    Categories</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Employer
-                                                    Dashboard</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Add Job</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;"
-                                                    href="packages.html">Job Packages</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="heading">
-                                            <!--Third Row-->
-                                            <td>
-                                                <p class="tag foottop">Other</p>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;"
-                                                    href="singlejobpage.html">Job Page</a></td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Job Page
-                                                    Alternative</a></td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Resume
-                                                    Page</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;"
-                                                    href="blog.html">Blog</a></td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Contact</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="heading">
-                                            <!--Fourth Row-->
-                                            <td>
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="singlejobpage.html">Job Page</a>
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#" style="text-align: left;">Job Page
+                                                    Alternative</a>
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">Resume Page</a>
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="blog.html">Blog</a>
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                    <div class="d-inline list-group borderless" style="color: #323232;">
+                                        <ul class="one">
+                                            <li>
                                                 <p class="tag foottop">Legal</p>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Privacy
-                                                    Policy</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">Terms of
-                                                    Use</a>
-                                            </td>
-                                        </tr>
-                                        <tr class="nospace">
-                                            <td><a class="weightedtext" style="font-size: 16px;" href="#">FAQ</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-------------------------------------FORM--------------------------------------------------->
-                            <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12 table-responsive newsform">
-                                <table class=" table table-sm table-borderless mt-2 align-self-center">
-                                    <tbody class="mt-sm-4 mt-lg-0 mt-md-0 mt-4">
-                                        <tr class="nospace py-0 my-0 align-self-center">
-                                            <td><img src="img/newsletter.png" class="img-fluid nospace"></td>
-                                            <td class="text-left tag nospace foottop" colspan="3">
-                                                Sign Up For a Newsletter
-                                            </td>
-                                        </tr>
-                                        <tr class="space">
-                                            <td colspan="4">
-                                                <p class="text-left ml-xl-2 ml-lg-2 ml-md-2 ml-sm-0 ml-0"
-                                                    style="line-height: normal; color:#929292;font-size: 15px;">
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">Privacy Policy</a>
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">Terms of Use</a>
+                                            </li>
+                                            <li>
+                                                <a class="weightedtext" href="#">FAQ</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-------------------------------------FORM--------------------------------------------------->
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 newsform mr-3">
+                                    <div class="list-group borderless  mr-3" style="color: #323232;">
+                                        <ul class="newsfooter">
+                                            <li>
+                                                <img src="img/newsletter.png" class="img-fluid nospace">
+                                                <span class="text-white text-left foottop align-middle">Sign Up For a
+                                                    Newsletter</span>
+                                            </li>
+                                            <li>
+                                                <p class="mt-2 ml-xl-2 ml-lg-2 ml-md-2 ml-sm-0 ml-0 mt-3"
+                                                    style="line-height: normal; color:#929292;font-size: 14px;">
                                                     Weekly breaking news, analysis and cutting edge
                                                     advices on job searching.</p>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="4">
-                                                <form class="form-inline ml-lg-2 ml-md-2 ml-sm-0 ml-0 my-2 my-lg-0">
-                                                    <input class="form-control footerform col-xl-8 col-8 mr-sm-2 text"
-                                                        type="email" size="22" placeholder="Enter your Email here...">
-                                                    <button class="btn btn-success my-2 text btnsub"
+                                            </li>
+                                            <li>
+                                                <form class="form-inline ml-lg-2 ml-md-2 ml-sm-3 ml-4 my-2 my-lg-0">
+                                                    <input
+                                                        class="form-control footerform col-xl-8 col-lg-7 col-md-8 col-sm-8 col-7"
+                                                        type="email" placeholder="Enter your Email here...">
+                                                    <button class="btn btn-success my-2 btnsub"
                                                         type="submit">Subscribe</button>
                                                 </form>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </footer>
 
     </div>
