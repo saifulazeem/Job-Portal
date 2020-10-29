@@ -41,8 +41,26 @@ color: #0BB44F;text-decoration: none; font-size: 16px;
   .s{
     right: 358px;
   }
- 
-/*
+  /* Navigation links */
+  .navbar .nav-item  {
+    color: white;
+    text-decoration: none;
+    width: 200px;
+  }
+  .navbar .nav-item :hover{
+  font-weight: 700;
+  color: white;
+    text-decoration: none;
+  }
+  .navbar-nav> li:last-child :hover{
+    font-weight: normal;
+    text-decoration: none;
+   }
+   
+   .navbar-nav span{
+    text-decoration: none;
+     position: relative;
+  }
 .navbar-nav span:before{
     content: "";
     position: absolute;
@@ -60,9 +78,8 @@ color: #0BB44F;text-decoration: none; font-size: 16px;
 }
 .navbar-nav span:hover:before{
     width: 100%;
-    transform: scale(1);
     color: white;
-}
+}/*
 .navbar-nav span{
   text-decoration: none;
   color: white;
@@ -80,29 +97,27 @@ text-decoration: none;
  .navbar-nav> li:last-child span:hover{
   transform: none;
   border-bottom: none;
- }*/
+ }
  .nav-item{
    max-width: 1000px;
  }
  .navbar-nav span{
   text-decoration: none;
   color: white;
-  display: inline-block;
-  position: relative;
   background-color: violet;
-  max-width: 600px;
+   position: relative;
 }
  .navbar-nav span:hover{
 font-weight: 700;
-display: inline-block;
 }
 .nav-item{
   background-color: wheat;
+  max-width: 400px;
 }
  .navbar-nav p{
     margin:-4px;
   }
-
+*/
   .activelink {
     border-bottom: 3px solid #0BB44F;
     -webkit-text-stroke: 0.8px white;
