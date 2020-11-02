@@ -311,13 +311,13 @@ text-decoration: none;
 }
 /***********************************************************************************************************************/
 @media (min-width: 300px) {
-  .bg-img-about {
+ /* .bg-img-about {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/about.png);
     opacity: 1;
     background-size:200% 90%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-}
+}*/
 .bg-img-blog {
   background: url(/img/blogmain.png);
   background-size:100% 100%;
@@ -800,13 +800,13 @@ margin:30px;
  }
  /***********************************************************************************************************************/
 @media (min-width: 400px) {
-  .bg-img-about {
+  /*.bg-img-about {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/about.png);
     opacity: 1;
     background-size:100% 60%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-}
+}*/
   /*footer circle image*/
   .resp {
    position: absolute;
@@ -1714,13 +1714,13 @@ margin:30px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
-  .bg-img-about {
+ /* .bg-img-about {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/about.png);
     opacity: 1;
     background-size:100% 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-}
+}*/
   .btnpad {
     padding-right: 30px;
     padding-left: 30px;
@@ -2194,14 +2194,14 @@ margin:30px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 768px) {
-  .bg-img-about {
+/*  .bg-img-about {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/about.png);
     opacity: 1;
     background-size: cover;
     background-position:center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-}
+}*/
   .btnpad {
     padding-right: 35px;
     padding-left: 35px;
@@ -2729,14 +2729,14 @@ table.fir tr td:nth-child(4) input {
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
-  .bg-img-about {
+/*  .bg-img-about {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/about.png);
     opacity: 1;
     background-size:100% 100%;
     background-position:center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-}
+}*/
    /*button*/
 .btnpad {
   padding-right: 50px;
@@ -3254,15 +3254,22 @@ table.fir tr td:nth-child(4) input {
  }
 /***********************************************************************************************************************/
  @media (min-width: 1200px) {
-  .bg-img-about {
+  .bg-img {
+    background: linear-gradient(0deg, rgba(13, 41, 66, 0.4), rgba(0, 0, 0, 0.4)), url(/img/about.png);
+    opacity: 1;
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+  /*.bg-img-about {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/about.png);
     opacity: 1;
     background-size:100% 100%;
     background-position:center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-}
-
+}*/
    /*button*/
 .btnpad {
   padding-right: 70px;
