@@ -2806,9 +2806,8 @@ table.fir tr td:nth-child(4) input {
     background-position:center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-<<<<<<< HEAD
+
 }*/
-=======
 }
 .bg-img-career {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/homecenter.png);
@@ -2818,7 +2817,6 @@ table.fir tr td:nth-child(4) input {
   background-repeat: no-repeat;
   background-size:100% 100%;
 }
->>>>>>> 4445ca0ecd26bbc562c49a5ebd43a36735c6bb9d
    /*button*/
 .btnpad {
   padding-right: 70px;
@@ -3876,9 +3874,6 @@ table.sec td>* {
   margin-bottom: 5px;
   list-style-type: none;
 }
-<<<<<<< HEAD
-=======
 .careertable a {
   text-decoration: none;
 }
->>>>>>> 4445ca0ecd26bbc562c49a5ebd43a36735c6bb9d
