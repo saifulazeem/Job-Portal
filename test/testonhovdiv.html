@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <script>
+
+        $(document).ready(function () {
+            $(".sub2").hide();
+            $(".sub").hover(function (event) {
+                $var = $(this).attr("id");
+                $var1=$var+'s';
+                $('.main2').find('#'+$var1).show();
+            },function (event) {
+                $var = $(this).attr("id");
+                $var1=$var+'s';
+                $('.main2').find('#'+$var1).hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="sub bg-success" id="one">
+            ccccccccccccccccccccc
+        </div>
+        <div class="sub bg-primary mt-1" id="two">
+            sssssssssssssssssss
+        </div>
+    </div>
+    <div class="main2">
+        <div class="sub2" id="ones">
+            sss
+            sss
+            sss
+            sss
+        </div>
+        <div class="sub2" id="twos">
+            xxx
+            xxx
+            xxx
+        </div>
+    </div>
+</body>
+
+</html>

@@ -11,1160 +11,661 @@
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
-    
+    <script>
+        $(document).ready(function () {
+            //toggle image on cards
+            $(".cards").hover(function (event) {
+                $(this).find('img').toggle();
+            });
+           //show div on hover
+           $(".hovtabs2").hide();
+            $(".hovtabs").hover(function (event) {
+                $var = $(this).attr("id");
+                $var1=$var+'s';
+                $('.main2').find('#'+$var1).show();
+            },function (event) {
+                $var = $(this).attr("id");
+                $var1=$var+'s';
+                $('.main2').find('#'+$var1).hide();
+            }
+            );
+        });
+    </script>
+
 </head>
 
 <body style="background-color: #0D2942;">
-    <!-------------------------------------NAVIGATION BAR----------------------------------------------->
-
-    <nav class="navbar navbar-expand flex-column flex-md-row bd-navbar n">
-        <div>
-            <a class="navbar-brand mr-0 mr-md-2" href="#">
-                <img src="img/logo.png" class="img-fluid navbar-brand navbar-nav d-block">
-            </a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav justify-content-end ml-auto">
-                <li class="nav-item navhov">
-                    <a class="nav-link" href="about.html">ABOUT US </a>
-                </li>
-                <li class="nav-item navhov">
-                    <a class="nav-link" href="Employer.html">EMPLOYERS PROFILE</a>
-                </li>
-                <li class="nav-item navhov">
-                    <a class="nav-link" href="careers.html">CAREERS GUIDE</a>
-                </li>
-                <li class="nav-item navhov">
-                    <a class="nav-link" href="blog.html">BLOG</a>
-                </li>
-            </ul>
-        </div>
-        <button class="btn bg-white btn-lg rounded-pill " style="padding-left: 30px; padding-right: 30px;">
-            <a href="login.html" class="b">Login</a>
-        </button>
-    </nav>
     <!---------------------------------------------CONTAINER--------------------------------------------->
     <div class="container-fluid">
-        <div class="header">
-            <img src="img/homecenter.png" style="text-align: center; opacity: 0.7;" class="imag img-fluid">
-            <div class="cent">
-                <p style="font-size:4vw;" class="t text-white"><b>Accountancy</b></p>
-                <p class="text-white text-justify">
-                    Accountancy is the measurement, processing and communication of financial information for
-                    businesses and corporations.Accountants can work in any industry – whether it’s in an
-                    accountancy firm, a financial institution, a professional services firm or even within a
-                    startup, accountants are essential to ensure any business is successful. Accountants not only
-                    have to be excellent with numbers but also creative – if this sounds interesting, this may be
-                    the career path for you.
-                </p>
-            </div>
-        </div>
-        <!--------------------------------------------------RECTANGLE----------------------------->
-        <div class="topimg" style="position: relative;">
-            <img src="img/Rectangle.png" class="img-fluid ag" alt="Responsive image">
-        </div>
-    </div>
+        <!---------Image-------------->
+        <div class="bg-img-career" style="position: relative;">
+            <!-------------------------------------NAVIGATION BAR----------------------------------------------->
+            <nav class="navbar navbar-expand-md flex-column flex-row n" style="border-bottom: 2px solid white;">
+                <div class="container  mt-3">
+                    <a class="navbar-brand mr-0 mr-md-2 mb-2" href="home.html" style="border: none; outline: none;">
+                        <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block"
+                            style="border: none; outline: none;">
+                    </a>
 
+                    <button class="navbar-toggler navbar-dark mt-2" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation" style="border: none; outline: none;">
+                        <img class="img-fluid" src="img/lines.png">
+                    </button>
 
-    <!--------------------------------------------------overlay container----------------------------->
-    <div class="container-fluid aover" style="position: relative;">
-        <div class="row">
-            <!---------first col-->
-            <!----------------------------LARGE VIEW-------------------->
-            <div class="col-lg-7 offset-lg-2 table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
-
-                <!-------------------------------------TABLE--------------------------------------------------->
-
-                <table class="table table-md table-borderless text-dark">
-                    <tbody>
-                        <!-------------------------------------------First Row-------------------------------------------->
-                        <tr>
-                            <td>
-                                <a href="#for" style="text-decoration: none;">
-                                    <div class="acards rounded pt-4 pb-3 px-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsefor" aria-expanded="false"
-                                        aria-controls="collapsefor">
-                                        <img src="img/forensic.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">FORENSIC <br>ACCOUNTING</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#tax" style="text-decoration: none;">
-                                    <div class="acards rounded py-4" style="text-align: center;" data-toggle="collapse"
-                                        data-target="#collapsetax" aria-expanded="false" aria-controls="collapsetax">
-                                        <img src="img/tax.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">TAX ACCOUNTING</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#fin" style="text-decoration: none;">
-                                    <div class="acards rounded p-2 px-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsefin" aria-expanded="false"
-                                        aria-controls="collapsefin">
-                                        <img src="img/financial.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">FINANCIAL <br>ACCOUNTING
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#man" style="text-decoration: none;">
-                                    <div class="acards rounded px-2 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseman" aria-expanded="false"
-                                        aria-controls="collapseman">
-                                        <img src="img/management.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">MANAGEMENT <br>ACCOUNTING
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#aud" style="text-decoration: none;">
-                                    <div class="acards rounded px-4 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseaud" aria-expanded="false"
-                                        aria-controls="collapseaud">
-                                        <img src="img/audit.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">AUDIT</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!----------------------------MEDIUM  VIEW-------------------->
-            <div class="col-md-6 offset-md-1 table-responsive-md d-md-block d-sm-none d-lg-none d-none">
-
-                <!-------------------------------------TABLE--------------------------------------------------->
-
-                <table class="table table-md table-borderless text-dark">
-                    <tbody>
-                        <!-------------------------------------------First Row-------------------------------------------->
-                        <tr>
-                            <td>
-                                <a href="#for" style="text-decoration: none;">
-                                    <div class="acards rounded pt-4 pb-3 px-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsefor" aria-expanded="false"
-                                        aria-controls="collapsefor">
-                                        <img src="img/forensic.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">FORENSIC <br>ACCOUNTING</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#tax" style="text-decoration: none;">
-                                    <div class="acards rounded py-4" style="text-align: center;" data-toggle="collapse"
-                                        data-target="#collapsetax" aria-expanded="false" aria-controls="collapsetax">
-                                        <img src="img/tax.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">TAX ACCOUNTING</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#fin" style="text-decoration: none;">
-                                    <div class="acards rounded p-2 px-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsefin" aria-expanded="false"
-                                        aria-controls="collapsefin">
-                                        <img src="img/financial.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">FINANCIAL <br>ACCOUNTING
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#man" style="text-decoration: none;">
-                                    <div class="acards rounded px-2 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseman" aria-expanded="false"
-                                        aria-controls="collapseman">
-                                        <img src="img/management.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">MANAGEMENT <br>ACCOUNTING
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#aud" style="text-decoration: none;">
-                                    <div class="acards rounded px-4 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseaud" aria-expanded="false"
-                                        aria-controls="collapseaud">
-                                        <img src="img/audit.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">AUDIT</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!----------------------------SMALL VIEW-------------------->
-            <div class="col-sm-6 table-responsive-sm d-sm-block d-none d-lg-none d-md-none">
-
-                <!-------------------------------------TABLE--------------------------------------------------->
-
-                <table class="table table-md table-borderless text-dark">
-                    <tbody>
-                        <!-------------------------------------------First Row-------------------------------------------->
-                        <tr>
-                            <td>
-                                <a href="#for" style="text-decoration: none;">
-                                    <div class="acards rounded pt-4 pb-3 px-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsefor" aria-expanded="false"
-                                        aria-controls="collapsefor">
-                                        <img src="img/forensic.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">FORENSIC <br>ACCOUNTING</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#tax" style="text-decoration: none;">
-                                    <div class="acards rounded py-4" style="text-align: center;" data-toggle="collapse"
-                                        data-target="#collapsetax" aria-expanded="false" aria-controls="collapsetax">
-                                        <img src="img/tax.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">TAX ACCOUNTING</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#fin" style="text-decoration: none;">
-                                    <div class="acards rounded p-2 px-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsefin" aria-expanded="false"
-                                        aria-controls="collapsefin">
-                                        <img src="img/financial.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">FINANCIAL <br>ACCOUNTING
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#man" style="text-decoration: none;">
-                                    <div class="acards rounded px-2 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseman" aria-expanded="false"
-                                        aria-controls="collapseman">
-                                        <img src="img/management.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">MANAGEMENT <br>ACCOUNTING
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#aud" style="text-decoration: none;">
-                                    <div class="acards rounded px-4 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseaud" aria-expanded="false"
-                                        aria-controls="collapseaud">
-                                        <img src="img/audit.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">AUDIT</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!----------------------------VERY SMALL VIEW-------------------->
-            <div class="col-xs-4 table-responsive-xs d-block d-sm-none d-md-none d-lg-none mx-auto">
-
-                <!-------------------------------------TABLE--------------------------------------------------->
-
-                <table class="table table-md table-borderless text-dark">
-                    <tbody>
-                        <!-------------------------------------------First Row-------------------------------------------->
-                        <tr>
-                            <td>
-                                <a href="#for" style="text-decoration: none;">
-                                    <div class="acards rounded pt-4 pb-3 px-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsefor" aria-expanded="false"
-                                        aria-controls="collapsefor">
-                                        <img src="img/forensic.png" class="img-fluid">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">FORENSIC <br>ACCOUNTING</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#tax" style="text-decoration: none;">
-                                    <div class="acards rounded py-4" style="text-align: center;" data-toggle="collapse"
-                                        data-target="#collapsetax" aria-expanded="false" aria-controls="collapsetax">
-                                        <img src="img/tax.png" class="img-fluid">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">TAX ACCOUNTING</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#fin" style="text-decoration: none;">
-                                    <div class="acards rounded p-2 px-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsefin" aria-expanded="false"
-                                        aria-controls="collapsefin">
-                                        <img src="img/financial.png" class="img-fluid">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">FINANCIAL <br>ACCOUNTING
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <a href="#man" style="text-decoration: none;">
-                                    <div class="acards rounded px-2 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseman" aria-expanded="false"
-                                        aria-controls="collapseman">
-                                        <img src="img/management.png" class="img-fluid">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">MANAGEMENT <br>ACCOUNTING
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#aud" style="text-decoration: none;">
-                                    <div class="acards rounded px-4 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseaud" aria-expanded="false"
-                                        aria-controls="collapseaud">
-                                        <img src="img/audit.png" class="img-responsive">
-                                        <div style="position: relative;">
-                                            <div class="acards-txt">
-                                                <p class="t my-2">AUDIT</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!---------second col-->
-            <!----------------------------------------------Circle image---------------------------------------->
-            <div class="col-lg-2 col-md-2 col-sm-2 col-2 ">
-                <div class="container float-right" style="position: relative;">
-                    <img src="img/homeimg.png" class="cir">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="myGroup" class="container dover" style="position: relative;">
-        <!-------------------------------------------FORENSIC ACCOUNTING--------------------------------------->
-        <div class="collapse" id="collapsefor" data-parent="#myGroup">
-            <div class="row ">
-                <div class="subtext">
-                    <p style="font-size:4vw; padding-top: 70px;" class="t text-white text-center mb-0"><b>Forensic
-                            Accounting</b></p>
-                    <p class="t text-white mx-auto mt-2 text-justify">
-                        Forensic accountants lead detailed investigation and data analysis into things that have
-                        gone wrong: preventing, uncovering and solving fraud, bribery, corruption, regulatory
-                        breaches, and accounting misstatement. This career will suit those who have exceptional
-                        numeracy skills, attention to detail and a keen investigative streak.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <!-------------------------------------TABLE--------------------------------------------------->
-                <!----------------------------LARGE VIEW-------------------->
-                <div class="col-lg-8 offset-lg-2 table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
-                    <table class="table d-flex justify-content-center table-md table-borderless text-dark">
-                        <tbody>
-                            <!-------------------------------------------First Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <a href="#grad" style="text-decoration: none;">
-                                        <div class="subcards rounded pt-4 pb-3 px-3" style="text-align: center;"
-                                            data-toggle="collapse" data-target="#collapsegrad" aria-expanded="false"
-                                            aria-controls="collapsegrad">
-                                            <img src="img/grad.png" class="img-responsive">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-0">AS A GRAD</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-
-                                <td>
-                                    <a href="#sal" style="text-decoration: none;">
-                                        <div class="subcards rounded py-4" style="text-align: center;"
-                                            data-toggle="collapse" data-target="#collapsesal" aria-expanded="false"
-                                            aria-controls="collapsesal">
-                                            <img src="img/sal.png" class="img-responsive">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t mt-2">SALARY BANDS <br>
-                                                        AND HOURS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#train" style="text-decoration: none;">
-                                        <div class="subcards rounded p-2 px-3 pt-4" style="text-align: center;"
-                                            data-toggle="collapse" data-target="#collapsetrain" aria-expanded="false"
-                                            aria-controls="collapsetrain">
-                                            <img src="img/train.png" class="img-responsive">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t mt-3">TRAINING
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#prog" style="text-decoration: none;">
-                                        <div class="subcards rounded px-2 py-4" style="text-align: center;"
-                                            data-toggle="collapse" data-target="#collapseprog" aria-expanded="false"
-                                            aria-controls="collapseprog">
-                                            <img src="img/prog.png" class="img-responsive">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-4">PROGRESSION
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#skills" style="text-decoration: none;">
-                                        <div class="subcards rounded px-4 py-3" style="text-align: center;"
-                                            data-toggle="collapse" data-target="#collapseskills" aria-expanded="false"
-                                            aria-controls="collapseskills">
-                                            <img src="img/audit.png" class="img-responsive">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-2">NECESSARY SKILLS
-                                                        <br>& REQUIREMENTS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#tips" style="text-decoration: none;">
-                                        <div class="subcards rounded px-4 py-3" style="text-align: center;"
-                                            data-toggle="collapse" data-target="#collapsetips" aria-expanded="false"
-                                            aria-controls="collapsetips">
-                                            <img src="img/tips.png" class="img-responsive">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-2">TOP TIPS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-
-                <!----------------------------MEDIUM VIEW-------------------->
-                <div class="col-md-8 offset-md-1 table-responsive-md d-md-block d-sm-none d-lg-none d-none">
-                    <table class="table d-flex justify-content-center table-md table-borderless text-dark">
-                        <tbody>
-                            <!-------------------------------------------First Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <a href="#grad" style="text-decoration: none;">
-                                        <div class="subcards rounded pt-4 pb-3 px-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsegrad" aria-expanded="false"
-                                        aria-controls="collapsegrad">
-                                            <img src="img/grad.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-0" class="">AS A GRAD</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#sal" style="text-decoration: none;">
-                                        <div class="subcards rounded py-4" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsesal" aria-expanded="false"
-                                            aria-controls="collapsesal">
-                                            <img src="img/sal.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t mt-2">SALARY BANDS <br>
-                                                        AND HOURS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#train" style="text-decoration: none;">
-                                        <div class="subcards rounded p-2 px-3 pt-4" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsetrain" aria-expanded="false"
-                                            aria-controls="collapsetrain">
-                                            <img src="img/train.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t mt-3">TRAINING
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#prog" style="text-decoration: none;">
-                                        <div class="subcards rounded px-2 py-4" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseprog" aria-expanded="false"
-                                            aria-controls="collapseprog">
-                                            <img src="img/prog.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-4">PROGRESSION
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#skills" style="text-decoration: none;">
-                                        <div class="subcards rounded px-4 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseskills" aria-expanded="false"
-                                            aria-controls="collapseskills">
-                                            <img src="img/audit.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-2">NECESSARY SKILLS
-                                                        <br>& REQUIREMENTS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#tips" style="text-decoration: none;">
-                                        <div class="subcards rounded px-4 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsetips" aria-expanded="false"
-                                            aria-controls="collapsetips">
-                                            <img src="img/tips.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-2">TOP TIPS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!----------------------------SMALL VIEW-------------------->
-                <div class="col-sm-6 m-auto table-responsive-sm d-sm-block d-none d-lg-none d-md-none">
-                    <table class="table d-flex justify-content-center table-md table-borderless text-dark">
-                        <tbody>
-                            <!-------------------------------------------First Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <a href="#grad" style="text-decoration: none;">
-                                        <div class="subcards rounded pt-4 pb-3 px-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsegrad" aria-expanded="false"
-                                        aria-controls="collapsegrad">
-                                            <img src="img/grad.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-0">AS A GRAD</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#sal" style="text-decoration: none;">
-                                        <div class="subcards rounded py-4" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsesal" aria-expanded="false"
-                                            aria-controls="collapsesal">
-                                            <img src="img/sal.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t mt-2">SALARY BANDS <br>
-                                                        AND HOURS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#train" style="text-decoration: none;">
-                                        <div class="subcards rounded p-2 px-3 pt-4" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsetrain" aria-expanded="false"
-                                            aria-controls="collapsetrain">
-                                            <img src="img/train.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t mt-3">TRAINING
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#prog" style="text-decoration: none;">
-                                        <div class="subcards rounded px-2 py-4" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseprog" aria-expanded="false"
-                                            aria-controls="collapseprog">
-                                            <img src="img/prog.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-4">PROGRESSION
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#skills" style="text-decoration: none;">
-                                        <div class="subcards rounded px-4 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseskills" aria-expanded="false"
-                                            aria-controls="collapseskills">
-                                            <img src="img/audit.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-2">NECESSARY SKILLS
-                                                        <br>& REQUIREMENTS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#tips" style="text-decoration: none;">
-                                        <div class="subcards rounded px-4 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsetips" aria-expanded="false"
-                                            aria-controls="collapsetips">
-                                            <img src="img/tips.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-2">TOP TIPS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!----------------------------VERY SMALL VIEW-------------------->
-                <div class="col-xs-4 table-responsive-xs d-block d-sm-none d-md-none d-lg-none m-auto">
-
-                    <table class="table d-flex justify-content-center table-md table-borderless text-dark">
-                        <tbody>
-                            <!-------------------------------------------First Row-------------------------------------------->
-                            <tr>
-                                <td>
-                                    <a href="#grad" style="text-decoration: none;">
-                                        <div class="subcards rounded pt-4 pb-3 px-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsegrad" aria-expanded="false"
-                                        aria-controls="collapsegrad">
-                                            <img src="img/grad.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-0">AS A GRAD</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#sal" style="text-decoration: none;">
-                                        <div class="subcards rounded py-4" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsesal" aria-expanded="false"
-                                            aria-controls="collapsesal">
-                                            <img src="img/sal.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t mt-2">SALARY BANDS <br>
-                                                        AND HOURS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#train" style="text-decoration: none;">
-                                        <div class="subcards rounded p-2 px-3 pt-4" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsetrain" aria-expanded="false"
-                                            aria-controls="collapsetrain">
-                                            <img src="img/train.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t mt-3">TRAINING
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#prog" style="text-decoration: none;">
-                                        <div class="subcards rounded px-2 py-4" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseprog" aria-expanded="false"
-                                            aria-controls="collapseprog">
-                                            <img src="img/prog.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-4">PROGRESSION
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#skills" style="text-decoration: none;">
-                                        <div class="subcards rounded px-4 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapseskills" aria-expanded="false"
-                                            aria-controls="collapseskills">
-                                            <img src="img/audit.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-2">NECESSARY SKILLS
-                                                        <br>& REQUIREMENTS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#tips" style="text-decoration: none;">
-                                        <div class="subcards rounded px-4 py-3" style="text-align: center;"
-                                        data-toggle="collapse" data-target="#collapsetips" aria-expanded="false"
-                                            aria-controls="collapsetips">
-                                            <img src="img/tips.png" class="img-fluid">
-                                            <div style="position: relative;">
-                                                <div class="subcards-txt">
-                                                    <p class="t my-2">TOP TIPS</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-            
-            <!------------------------------onclick divs--------------------------->
-            <div class="row">
-                <div id="subGroup">
-                    <!-----------------As a grad------->
-                    <div class="col-10 offset-1 text-white collapse" id="collapsegrad"
-                        data-parent="#subGroup">
-                        <div class="container p-4">
-                            <div class="row">
-                                <b> AS A GRAD</b>
-                            </div>
-                            <div class="row">
-                                As a grad, you’ll search through payments, following and finding money, using data
-                                entries
-                                and
-                                specific accounting theory to know how to spot mistakes that have lead or could lead to
-                                bigger
-                                consequences. You’ll also assist in conducting interviews with people, like financial
-                                agents,
-                                police and lawyers.
-                            </div>
-                        </div>
+                    <div class="collapse mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0 navbar-collapse navbar-right  justify-content-end"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-md-center">
+                            <li class="nav-item navone">
+                                <a class="nav-link" href="about.html"><span class="float-left">ABOUT US</span></a>
+                            </li>
+                            <li class="nav-item navtwo">
+                                <a class="nav-link" href="Employer.html"><span class="float-left">EMPLOYERS
+                                        PROFILE</span></a>
+                            </li>
+                            <li class="nav-item navthree">
+                                <a class="nav-link" href="careers.html"><span class="float-left">CAREERS
+                                        GUIDE</span></a>
+                            </li>
+                            <li class="nav-item navfour mr-xl-5 mr-lg-5 mr-md-4">
+                                <a class="nav-link" href="blog.html"><span class="float-left ">BLOG</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="row d-flex align-items-center">
+                                    <a href="login.html"
+                                        class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1">
+                                        Login</a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <!-----------------sal------->
-                    <div class="col-10 offset-1 text-white collapse" id="collapsesal"
-                        data-parent="#subGroup">
-                        <div class="container p-4">
-                            <div class="row">
-                                <b>SALARY BANDS AND HOURS</b>
-                            </div>
-                            <div class="row">
-                                Aside from all of the standard accountancy qualifications, forensic accountants need to
-                                have
-                                an
-                                in-depth knowledge of each individual financial statement and be able to know how they
-                                interact
-                                with each other to reveal a certain result in uncovering mistakes or fraudulent
-                                intervention.
-                                You'll also become comfortable with forensic software such as Encase, IEF, UFED and
-                                Splunk.
-                            </div>
-                        </div>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row mb-0">
+                    <div class="col-12 text-center text-white accmar">
+                        <p class="acctxt">Accountancy</p>
+                        <p class="accsubtxt">Accountancy is the measurement, processing and communication of
+                            financial information for
+                            businesses and corporations.Accountants can work in any industry – whether it’s in an
+                            accountancy firm, a financial institution, a professional services firm or even within a
+                            startup, accountants are essential to ensure any business is successful. Accountants not
+                            only
+                            have to be excellent with numbers but also creative – if this sounds interesting, this may
+                            be
+                            the career path for you.</p>
                     </div>
-                    <!-----------------training------->
-                    <div class="col-10 offset-1 text-white collapse" id="collapsetrain"
-                        data-parent="#subGroup">
-                        <div class="container p-4">
-                            <div class="row">
-                                <b> TRAINING</b>
-                            </div>
-                            <div class="row">
-                                Aside from all of the standard accountancy qualifications, forensic accountants need to
-                                have
-                                an
-                                in-depth knowledge of each individual financial statement and be able to know how they
-                                interact
-                                with each other to reveal a certain result in uncovering mistakes or fraudulent
-                                intervention.
-                                You'll also become comfortable with forensic software such as Encase, IEF, UFED and
-                                Splunk.
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="bg-success w-100" style="bottom: 0; position: absolute;">
+                <img src="img/Rectangle.png" class="w-100 img-fluid ">
+            </div>
+            <div class="container aover" style="position: relative;">
+                <div class="row">
+                    <!----------------------------LARGE VIEW-------------------->
+                    <div class="col table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
+                        <!-------------------------------------TABLE--------------------------------------------------->
+                        <table class="table careertable table-md table-borderless text-dark">
+                            <tbody>
+                                <!-------------------------------------------First Row-------------------------------------------->
+                                <tr>
+                                    <td>
+                                        <a href="#for">
+                                            <div class="d-flex flex-column justify-content-center cards cards-txt"
+                                                data-toggle="collapse" data-target="#collapsefor" aria-expanded="false"
+                                                aria-controls="collapsefor">
+                                                <div>
+                                                    <img src="img/forensic.png">
+                                                    <img src="img/forensicwhite.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:30px;">
+                                                    <span>FORENSIC <br>ACCOUNTING</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#tax">
+                                            <div class="d-flex flex-column justify-content-center cards cards-txt"
+                                                data-toggle="collapse" data-target="#collapsetax" aria-expanded="false"
+                                                aria-controls="collapsetax">
+                                                <div>
+                                                    <img src="img/tax.png">
+                                                    <img src="img/taxwhite.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:10px;">
+                                                    <span>TAX ACCOUNTING</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#fin">
+                                            <div class="d-flex flex-column justify-content-center cards cards-txt"
+                                                data-toggle="collapse" data-target="#collapsefin" aria-expanded="false"
+                                                aria-controls="collapsefin">
+                                                <div>
+                                                    <img src="img/financial.png">
+                                                    <img src="img/financialwhite.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:15px;">
+                                                    <span>FINANCIAL <br>ACCOUNTING</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#man">
+                                            <div class="d-flex flex-column justify-content-center cards cards-txt"
+                                                data-toggle="collapse" data-target="#collapseman" aria-expanded="false"
+                                                aria-controls="collapseman">
+                                                <div>
+                                                    <img src="img/management.png">
+                                                    <img src="img/managementwhite.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:30px;">
+                                                    <span>MANAGEMENT <br>ACCOUNTING</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#aud">
+                                            <div class="d-flex flex-column justify-content-center cards cards-txt"
+                                                data-toggle="collapse" data-target="#collapseaud" aria-expanded="false"
+                                                aria-controls="collapseaud">
+                                                <div>
+                                                    <img src="img/audit.png">
+                                                    <img src="img/audit.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:10px;">
+                                                    <span>AUDIT</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <!-----------------progression------->
-                    <div class="col-10 offset-1 text-white collapse" id="collapseprog"
-                        data-parent="#subGroup">
-                        <div class="container p-4">
-                            <div class="row">
-                                <b> PROGRESSION</b>
-                            </div>
-                            <div class="row">
-                                Most graduates start their rotational training in auditing or financial accounting, then
-                                specialise in forensic accounting. As it is quite a niche area, once you’ve chosen this
-                                field,
-                                you pretty much stick to it. Many companies need a forensic accountant, so to advance in
-                                this
-                                career means having different management roles within a team – rising from accountant to
-                                manager, to head of department, and balancing experience in the field with project
-                                management of
-                                the team and clients. After being qualified for five years, you can join ICFA (Institute
-                                of
-                                Certified Forensic Accountants), which is the leading advisory service developing and
-                                promoting
-                                the field of forensic accounting. After being qualified for a number of years, you could
-                                start
-                                your own independent firm.
-                            </div>
-                        </div>
-                    </div>
-                    <!-----------------skills------->
-                    <div class="col-10 offset-1 text-white collapse" id="collapseskills"
-                        data-parent="#subGroup">
-                        <div class="container p-4">
-                            <div class="row">
-                                <b> NECESSARY SKILLS AND REQUIREMENTS</b>
-                            </div>
-                            <div class="row">
-                                <b>Skills:</b>
-                            </div>
-                            <div class="row">
-                                <ul>
-                                    <li>
-                                        Be proficient in databases and Microsoft Office packages
-                                    </li>
-                                    <li>
-                                        Have excellent attention to detail
-                                    </li>
-                                    <li>
-                                        Be adaptable and have a great memory
-                                    </li>
-                                    <li>
-                                        Good written and verbal communication skills
-                                    </li>
-                                    <li>
-                                        Excellent negotiation skills, especially to solve disputes
-                                    </li>
-                                    <li>
-                                        Be trustworthy, and have the ability to understand the meaning of discretion
-                                    </li>
-                                    <li>
-                                        Have the ability to be impartial to events occurring outside of your control
-                                    </li>
-                                    <li>
-                                        Be able to flourish in a high-pressure environment, with excellent time
-                                        management
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="row">
-                                <b>Requirements:</b>
-                            </div>
-                            <div class="row">
-                                <ul>
-                                    <li>
-                                        Generally, employers will look for a 2:1 degree or the equivalent from an
-                                        international
-                                        qualification. You also need to be willing to do both administrative tasks and
-                                        have
-                                        a
-                                        professional
-                                        disposition to meet clients.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-----------------tips------->
-                    <div class="col-10 offset-1 text-white collapse" id="collapsetips"
-                        data-parent="#subGroup">
-                        <div class="container p-4">
-                            <div class="row">
-                                <b> TOP TIPS</b>
-                            </div>
-                            <div class="row">
-                                Become interested in criminal justice, specifically economic and fraudulent activity, as
-                                working
-                                out
-                                the answer to some of these complex internet-based issues can be tiresome and require a
-                                passion
-                                for
-                                solving them.
-                            </div>
-                        </div>
+                    <!----------------------------------------------Circle image---------------------------------------->
+                    <div class="acc">
+                        <img src="img/homeimg.png" class="accimg img-fluid">
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-------------------------------------------TAX ACCOUNTING--------------------------------------->
-        <div class="collapse" id="collapsetax" data-parent="#myGroup">
-            <div class="row ">
-                <div class="subtext">
-                    <p style="font-size:4vw; padding-top: 70px;" class="t text-white text-center mb-0"><b>TAX
-                            ACCOUNTING</b></p>
-                    <p class="t text-white mx-auto mt-2 text-justify">
-                        Forensic accountants lead detailed investigation and data analysis into things that have
-                        gone wrong: preventing, uncovering and solving fraud, bribery, corruption, regulatory
-                        breaches, and accounting misstatement. This career will suit those who have exceptional
-                        numeracy skills, attention to detail and a keen investigative streak.
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        <!-------------------------------------------FINANCIAL ACCOUNTING--------------------------------------->
-        <div class="collapse" id="collapsefin" data-parent="#myGroup">
-            <div class="row ">
-                <div class="subtext">
-                    <p style="font-size:4vw; padding-top: 70px;" class="t text-white text-center mb-0"><b>FINANCIAL
-                            ACCOUNTING</b></p>
-                    <p class="t text-white mx-auto mt-2 text-justify">
-                        Forensic accountants lead detailed investigation and data analysis into things that have
-                        gone wrong: preventing, uncovering and solving fraud, bribery, corruption, regulatory
-                        breaches, and accounting misstatement. This career will suit those who have exceptional
-                        numeracy skills, attention to detail and a keen investigative streak.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-------------------------------------------MANAGEMENT ACCOUNTING--------------------------------------->
-        <div class="collapse" id="collapseman" data-parent="#myGroup">
-            <div class="row ">
-                <div class="subtext">
-                    <p style="font-size:4vw; padding-top: 70px;" class="t text-white text-center mb-0"><b>MANAGEMENT
-                            ACCOUNTING</b></p>
-                    <p class="t text-white mx-auto mt-2 text-justify">
-                        Forensic accountants lead detailed investigation and data analysis into things that have
-                        gone wrong: preventing, uncovering and solving fraud, bribery, corruption, regulatory
-                        breaches, and accounting misstatement. This career will suit those who have exceptional
-                        numeracy skills, attention to detail and a keen investigative streak.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-------------------------------------------AUDIT--------------------------------------->
-        <div class="collapse" id="collapseaud" data-parent="#myGroup">
-            <div class="row ">
-                <div class="subtext">
-                    <p style="font-size:4vw; padding-top: 70px;" class="t text-white text-center mb-0"><b>AUDIT</b></p>
-                    <p class="t text-white mx-auto mt-2 text-justify">
-                        Forensic accountants lead detailed investigation and data analysis into things that have
-                        gone wrong: preventing, uncovering and solving fraud, bribery, corruption, regulatory
-                        breaches, and accounting misstatement. This career will suit those who have exceptional
-                        numeracy skills, attention to detail and a keen investigative streak.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-------------------------TESTIMONIAL----------------------------------->
-    <div class="container tover" style="position: relative;">
-        <div class="row">
-            <div class=" mx-auto">
-                <p style="font-weight: 900; letter-spacing: 2px;font-size: 50px; color:white;">
-                    TESTIMONIALS
-                </p>
-            </div>
-        </div>
-        <div class="row col-lg-8 offset-lg-2">
-            <div class="col-lg-5 col-md-5 offset-md-1 col-sm-6 col-9 mx-auto my-2">
-                <div class="container roun bg-white" style="border-radius: 20px;">
-                    <div class="row bg-success testdiv">
-
-                    </div>
-                    <div class="row testimg">
-                        <div><img src="img/s1.png" class="img-fluid"></div>
-                    </div>
-                    <div class="row">
-                        <p class="2vw text-dark m-auto mb-0 "><b> Name</b></p>
-                    </div>
-                    <div class="row">
-                        <p class="text-dark m-auto text-sm text-muted" style="font-size: small;">Audit Senerio at EY
-                        </p>
-                    </div>
-                    <div class="row text-justify m-4 mb-0 mt-0 p-4">
-                        <p class="text-dark m-auto text-sm" style="font-size: small;">
-                            Booker provides software that helps retailers manage their stores. This company
-                            leverages
-                            their customers to tell the story of what makes their software great, making this page a
-                            focal point of their website's main navigation. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-5 col-sm-6 col-9 mx-auto my-2">
-                <div class="container roun bg-white" style="border-radius: 20px;">
-                    <div class="row bg-success testdiv">
-
-                    </div>
-                    <div class="row testimg">
-                        <div><img src="img/s1.png" class="img-fluid"></div>
-                    </div>
-                    <div class="row">
-                        <p class="2vw text-dark m-auto mb-0 "><b> Name</b></p>
-                    </div>
-                    <div class="row">
-                        <p class="text-dark m-auto text-sm text-muted" style="font-size: small;">Audit Senerio at EY
-                        </p>
-                    </div>
-                    <div class="row text-justify m-4 mb-0 mt-0 p-4">
-                        <p class="text-dark m-auto text-sm" style="font-size: small;">
-                            Booker provides software that helps retailers manage their stores. This company
-                            leverages
-                            their customers to tell the story of what makes their software great, making this page a
-                            focal point of their website's main navigation. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-----------------------------------------------------FOOTER----------------------------------------------------------->
-    <footer class="container-fluid foot" style="background-color: #323232;">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <img src="img/logo.png" class="img-fluid d-block">
+            <div id="myGroup" class="dover" style="position: relative;">
+                <!-------------------------------------------FORENSIC ACCOUNTING--------------------------------------->
+                <div class="collapse" id="collapsefor" data-parent="#myGroup">
+                    <div class="row mt-5">
+                        <div class="text-white text-center">
+                            <p class="accsubhead"><b>Forensic
+                                    Accounting</b></p>
+                            <p class="mt-2 accsubtxt">
+                                Forensic accountants lead detailed investigation and data analysis into things that have
+                                gone wrong: preventing, uncovering and solving fraud, bribery, corruption, regulatory
+                                breaches, and accounting misstatement. This career will suit those who have exceptional
+                                numeracy skills, attention to detail and a keen investigative streak.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-------------------------------------TABLE--------------------------------------------------->
+                        <!----------------------------LARGE VIEW-------------------->
+                        <div class="col table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
+                            <table
+                                class="table careertable d-flex justify-content-center table-md table-borderless text-dark">
+                                <tbody>
+                                    <!-------------------------------------------First Row-------------------------------------------->
+                                    <tr>
+                                        <td>
+                                            <a href="#grad">
+                                                <div class="d-flex flex-column cards cards-txt hovtabs justify-content-center align-items-center"
+                                                    id="collapsegrad">
+                                                    <div>
+                                                        <img src="img/grad.png">
+                                                        <img src="img/gradwhite.png" style="display: none;">
+                                                    </div>
+                                                    <div style="position: relative; top:10px;">
+                                                        <span>AS A GRAD</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+
+                                        <td>
+                                            <a href="#sal">
+                                                <div class="d-flex flex-column cards cards-txt hovtabs justify-content-center align-items-center"
+                                                    id="collapsesal">
+                                                    <div>
+                                                        <img src="img/sal.png">
+                                                        <img src="img/salwhite.png" style="display: none;">
+                                                    </div>
+                                                    <div style="position: relative; top:20px;">
+                                                        <span>SALARY BANDS <br>
+                                                            AND HOURS</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#train">
+                                                <div class="d-flex flex-column cards cards-txt hovtabs justify-content-center align-items-center"
+                                                    id="collapsetrain">
+                                                    <div>
+                                                        <img src="img/train.png">
+                                                        <img src="img/trainwhite.png" style="display: none;">
+                                                    </div>
+                                                    <div style="position: relative; top:10px;">
+                                                        <span>TRAINING</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#prog">
+                                                <div class="d-flex flex-column cards cards-txt hovtabs justify-content-center align-items-center"
+                                                    id="collapseprog">
+                                                    <div>
+                                                        <img src="img/prog.png">
+                                                        <img src="img/progwhite.png" style="display: none;">
+                                                    </div>
+                                                    <div style="position: relative; top:10px;">
+                                                        <span>PROGRESSION</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#skills">
+                                                <div class="d-flex flex-column cards cards-txt hovtabs justify-content-center align-items-center"
+                                                    id="collapseskill">
+                                                    <div>
+                                                        <img src="img/skill.png">
+                                                        <img src="img/skillwhite.png" style="display: none;">
+                                                    </div>
+                                                    <div style="position: relative; top:20px;">
+                                                        <span>NECESSARY SKILLS
+                                                            <br>& REQUIREMENTS</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#tips">
+                                                <div class="d-flex flex-column cards cards-txt hovtabs justify-content-center align-items-center"
+                                                    id="collapsetip">
+                                                    <div>
+                                                        <img src="img/tips.png">
+                                                        <img src="img/tipswhite.png" style="display: none;">
+                                                    </div>
+                                                    <div>
+                                                        <span>TOP TIPS</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!------------------------------onhover divs--------------------------->
+                    <div class="row mt-5 main2">
+                            <!-----------------As a grad------->
+                            <div class="col text-white hovtabs2 text-left" id="collapsegrads">
+                                <div class="row">
+                                    <span class="accsubdeschead"> AS A GRAD</span>
+                                </div>
+                                <div class="row accsubdesctxt">
+                                    As a grad, you’ll search through payments, following and finding money, using data
+                                    entries
+                                    and
+                                    specific accounting theory to know how to spot mistakes that have lead or could lead
+                                    to
+                                    bigger
+                                    consequences. You’ll also assist in conducting interviews with people, like
+                                    financial
+                                    agents,
+                                    police and lawyers.
+                                </div>
+                            </div>
+                            <!-----------------sal------->
+                            <div class="col text-white hovtabs2 text-left" id="collapsesals" >
+                                <div class="container p-4">
+                                    <div class="row">
+                                        <span class="accsubdeschead">SALARY BANDS AND HOURS</span>
+                                    </div>
+                                    <div class="row accsubdesctxt">
+                                        Aside from all of the standard accountancy qualifications, forensic accountants
+                                        need
+                                        to
+                                        have
+                                        an
+                                        in-depth knowledge of each individual financial statement and be able to know
+                                        how
+                                        they
+                                        interact
+                                        with each other to reveal a certain result in uncovering mistakes or fraudulent
+                                        intervention.
+                                        You'll also become comfortable with forensic software such as Encase, IEF, UFED
+                                        and
+                                        Splunk.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-----------------training------->
+                            <div class="col text-white hovtabs2 text-left" id="collapsetrains">
+                                <div class="container p-4">
+                                    <div class="row">
+                                        <span class="accsubdeschead">TRAINING</span>
+                                    </div>
+                                    <div class="row accsubdesctxt">
+                                        Aside from all of the standard accountancy qualifications, forensic accountants
+                                        need
+                                        to
+                                        have
+                                        an
+                                        in-depth knowledge of each individual financial statement and be able to know
+                                        how
+                                        they
+                                        interact
+                                        with each other to reveal a certain result in uncovering mistakes or fraudulent
+                                        intervention.
+                                        You'll also become comfortable with forensic software such as Encase, IEF, UFED
+                                        and
+                                        Splunk.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-----------------progression------->
+                            <div class="col text-white hovtabs2 text-left" id="collapseprogs">
+                                <div class="container p-4">
+                                    <div class="row">
+                                        <span class="accsubdeschead"> PROGRESSION</span>
+                                    </div>
+                                    <div class="row accsubdesctxt">
+                                        Most graduates start their rotational training in auditing or financial
+                                        accounting,
+                                        then
+                                        specialise in forensic accounting. As it is quite a niche area, once you’ve
+                                        chosen
+                                        this
+                                        field,
+                                        you pretty much stick to it. Many companies need a forensic accountant, so to
+                                        advance in
+                                        this
+                                        career means having different management roles within a team – rising from
+                                        accountant to
+                                        manager, to head of department, and balancing experience in the field with
+                                        project
+                                        management of
+                                        the team and clients. After being qualified for five years, you can join ICFA
+                                        (Institute
+                                        of
+                                        Certified Forensic Accountants), which is the leading advisory service
+                                        developing
+                                        and
+                                        promoting
+                                        the field of forensic accounting. After being qualified for a number of years,
+                                        you
+                                        could
+                                        start
+                                        your own independent firm.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-----------------skills------->
+                            <div class="col text-white hovtabs2 text-left" id="collapseskills">
+                                <div class="container p-4">
+                                    <div class="row">
+                                        <span class="accsubdeschead"> NECESSARY SKILLS AND REQUIREMENTS</span>
+                                    </div>
+                                    <div class="row">
+                                        <b>Skills:</b>
+                                    </div>
+                                    <div class="row accsubdesctxt">
+                                        <ul>
+                                            <li>
+                                                Be proficient in databases and Microsoft Office packages
+                                            </li>
+                                            <li>
+                                                Have excellent attention to detail
+                                            </li>
+                                            <li>
+                                                Be adaptable and have a great memory
+                                            </li>
+                                            <li>
+                                                Good written and verbal communication skills
+                                            </li>
+                                            <li>
+                                                Excellent negotiation skills, especially to solve disputes
+                                            </li>
+                                            <li>
+                                                Be trustworthy, and have the ability to understand the meaning of
+                                                discretion
+                                            </li>
+                                            <li>
+                                                Have the ability to be impartial to events occurring outside of your
+                                                control
+                                            </li>
+                                            <li>
+                                                Be able to flourish in a high-pressure environment, with excellent time
+                                                management
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="row">
+                                        <b>Requirements:</b>
+                                    </div>
+                                    <div class="row accsubdesctxt">
+                                        <ul>
+                                            <li>
+                                                Generally, employers will look for a 2:1 degree or the equivalent from
+                                                an
+                                                international
+                                                qualification. You also need to be willing to do both administrative
+                                                tasks
+                                                and
+                                                have
+                                                a
+                                                professional
+                                                disposition to meet clients.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-----------------tips------->
+                            <div class="col text-white hovtabs2 text-left" id="collapsetips">
+                                <div class="container p-4">
+                                    <div class="row">
+                                        <span class="accsubdeschead"> TOP TIPS</span>
+                                    </div>
+                                    <div class="row accsubdesctxt">
+                                        Become interested in criminal justice, specifically economic and fraudulent
+                                        activity, as
+                                        working
+                                        out
+                                        the answer to some of these complex internet-based issues can be tiresome and
+                                        require a
+                                        passion
+                                        for
+                                        solving them.
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <!-------------------------------------------TAX ACCOUNTING--------------------------------------->
+                <div class="collapse" id="collapsetax" data-parent="#myGroup">
+                    <div class="row mt-5">
+                        <div class="text-white text-center">
+                            <p class="accsubhead"><b>Tax
+                                    Accounting</b></p>
+                            <p class="mt-2 accsubtxt">
+                                Forensic accountants lead detailed investigation and data analysis into things that have
+                                gone wrong: preventing, uncovering and solving fraud, bribery, corruption, regulatory
+                                breaches, and accounting misstatement. This career will suit those who have exceptional
+                                numeracy skills, attention to detail and a keen investigative streak.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-------------------------------------------FINANCIAL ACCOUNTING--------------------------------------->
+                <div class="collapse" id="collapsefin" data-parent="#myGroup">
+                    <div class="row mt-5">
+                        <div class="text-white text-center">
+                            <p class="accsubhead"><b>Financial
+                                    Accounting</b></p>
+                            <p class="mt-2 accsubtxt">
+                                Forensic accountants lead detailed investigation and data analysis into things that have
+                                gone wrong: preventing, uncovering and solving fraud, bribery, corruption, regulatory
+                                breaches, and accounting misstatement. This career will suit those who have exceptional
+                                numeracy skills, attention to detail and a keen investigative streak.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-------------------------------------------MANAGEMENT ACCOUNTING--------------------------------------->
+                <div class="collapse" id="collapseman" data-parent="#myGroup">
+                    <div class="row mt-5">
+                        <div class="text-white text-center">
+                            <p class="accsubhead"><b>Management
+                                    Accounting</b></p>
+                            <p class="mt-2 accsubtxt">
+                                Forensic accountants lead detailed investigation and data analysis into things that have
+                                gone wrong: preventing, uncovering and solving fraud, bribery, corruption, regulatory
+                                breaches, and accounting misstatement. This career will suit those who have exceptional
+                                numeracy skills, attention to detail and a keen investigative streak.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-------------------------------------------AUDIT--------------------------------------->
+                <div class="collapse" id="collapseaud" data-parent="#myGroup">
+                    <div class="row mt-5">
+                        <div class="text-white text-center">
+                            <p class="accsubhead"><b>Audit</b></p>
+                            <p class="mt-2 accsubtxt">
+                                Forensic accountants lead detailed investigation and data analysis into things that have
+                                gone wrong: preventing, uncovering and solving fraud, bribery, corruption, regulatory
+                                breaches, and accounting misstatement. This career will suit those who have exceptional
+                                numeracy skills, attention to detail and a keen investigative streak.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------TESTIMONIAL----------------------------------->
+            <div class="container tover" style="position: relative;">
+                <div class="row">
+                    <div class=" mx-auto">
+                        <p style="font-weight: 900; letter-spacing: 2px;font-size: 50px; color:white;">
+                            TESTIMONIALS
+                        </p>
+                    </div>
+                </div>
+                <div class="row col-lg-8 offset-lg-2">
+                    <div class="col-lg-5 col-md-5 offset-md-1 col-sm-6 col-9 mx-auto my-2">
+                        <div class="container roun bg-white" style="border-radius: 20px;">
+                            <div class="row bg-success testdiv">
+                            </div>
+                            <div class="row testimg">
+                                <div><img src="img/s1.png" class="img-fluid"></div>
+                            </div>
+                            <div class="row">
+                                <p class="2vw text-dark m-auto mb-0 "><b> Name</b></p>
+                            </div>
+                            <div class="row">
+                                <p class="text-dark m-auto text-sm text-muted" style="font-size: small;">Audit Senerio
+                                    at EY
+                                </p>
+                            </div>
+                            <div class="row text-justify m-4 mb-0 mt-0 p-4">
+                                <p class="text-dark m-auto text-sm" style="font-size: small;">
+                                    Booker provides software that helps retailers manage their stores. This company
+                                    leverages
+                                    their customers to tell the story of what makes their software great, making this
+                                    page a
+                                    focal point of their website's main navigation. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6 col-9 mx-auto my-2">
+                        <div class="container roun bg-white" style="border-radius: 20px;">
+                            <div class="row bg-success testdiv">
+
+                            </div>
+                            <div class="row testimg">
+                                <div><img src="img/s1.png" class="img-fluid"></div>
+                            </div>
+                            <div class="row">
+                                <p class="2vw text-dark m-auto mb-0 "><b> Name</b></p>
+                            </div>
+                            <div class="row">
+                                <p class="text-dark m-auto text-sm text-muted" style="font-size: small;">Audit Senerio
+                                    at EY
+                                </p>
+                            </div>
+                            <div class="row text-justify m-4 mb-0 mt-0 p-4">
+                                <p class="text-dark m-auto text-sm" style="font-size: small;">
+                                    Booker provides software that helps retailers manage their stores. This company
+                                    leverages
+                                    their customers to tell the story of what makes their software great, making this
+                                    page a
+                                    focal point of their website's main navigation. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------------------------------FOOTER----------------------------------------------------------->
+    <footer class="container-fluid foot pb-5 pt-4" style="background-color: #323232; ">
+        <div class="container">
+            <div class="row mb-2">
+                <div class=" col-xl-7 col-lg-5 d-flex align-self-center col-md-3 col-sm-3 col-3">
+                    <img src="img/logo.png" class="logo ml-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3">
                     <!--logo-->
                 </div>
-                <div class="col my-auto">
-                    <div class="row">
-                        <div class="col-lg-1 offset-lg-2 col-md-1 offset-md-2 col-sm-1 offset-sm-2 px-0 my-2">
-                            <img src="img/joblisting.png" class="img-fluid d-flex justify-content ">
+                <div
+                    class="col-xl-5 offset-xl-0 col-lg-6 offset-lg-1 col-md-7 offset-md-2 col-sm-7 offset-sm-2 offset-1 col-8">
+                    <div class="row mrow pl-xl-0 pl-lg-0 ml-lg-4 pl-0 ml-0 curhov justify-content-start">
+                        <div
+                            class="col-xl-1 offset-xl-1 col-lg-1  offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-0 offset-sm-2 px-0 my-2">
+                            <img src="img/joblisting.png" class="img-fluid mt-0 mt-sm-0 mt-md-2 mt-lg-2 mt-xl-2">
                         </div>
-                        <div class="col-lg-2 col-md-1 col-sm-1 hov px-0">
-                            <p class="tag d-flex justify-content">1124</p>
-                            <p class="text d-flex justify-content py-0">Job Listing</p>
+                        <div class="ml-1 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4 px-0 mt-1">
+                            <p class="tag d-flex justify-content font-weight-bold"
+                                style="color: #FFFFFF;margin-bottom:0px;">1124</p>
+                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Job Listing
+                            </p>
                         </div>
-                        <div class="col-lg-1 offset-lg-2 col-md-1 offset-md-2 col-sm-1 offset-sm-2 px-0 my-2">
-                            <img src="img/resumeposted.png" class="img-fluid d-flex justify-content">
+                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 px-0 my-2">
+                            <img src="img/resumeposted.png" class="img-fluid mt-0 mt-sm-0 mt-md-2 mt-lg-2 mt-xl-2">
                         </div>
-                        <div class="col-lg-4 col-md-1 col-sm-1 hov px-0">
-                            <p class="tag d-flex justify-content">444</p>
-                            <p class="text d-flex justify-content py-0">Resumes Posted</p>
+                        <div
+                            class="ml-sm-1 ml-xl-0 ml-lg-0 ml-md-0 ml-2 col-xl-4 col-lg-3 col-md-3 col-sm-4 col-5 px-0 mt-1">
+                            <p class="tag d-flex justify-content font-weight-bold"
+                                style="color: #FFFFFF;margin-bottom:0px;">444</p>
+                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Resumes
+                                Posted
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1172,7 +673,7 @@
         </div>
 
         <!-----------------------------------------------HORIZONTAL LINE------------------------------------->
-        <div class="row">
+        <div class="row p-0">
             <div class="col-md-12">
                 <hr style="background-color: green; height: 1.2px;" class="p-0 m-0">
             </div>
@@ -1180,126 +681,145 @@
 
         <!-------------------------------------------NEXT ROW------------------------------------------------>
 
-        <div class="row mt-4 pt-4">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-2 resp" style="position: relative;">
-                <img src="img/circle.png" class="img-fluid ">
+        <div class="row mt-5 " style="position: relative;">
+            <div class="resp">
+                <img src="img/circle.png" class="img-fluid respimg">
             </div>
 
-            <!------------------------------------------------tables and form-------------------------------->
-            <!-------------------------------------TABLE--------------------------------------------------->
-            <div class="col-lg-6 col-md-9 col-sm-9 col-9 foottab table-responsive" style="text-align: justify;">
-                <table class="table table-sm table-borderless"
-                    style="border-spacing: 0; border-width: 0; padding: 0; border-width: 0;">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <p style="font-size: 18px;"> For
-                                    Candidates
-                                </p>
-                            </td>
-                            <td>
-                                <p style="font-size: 18px;">For Employers
-                                </p>
-                            </td>
-                            <td>
-                                <p style="font-size: 18px;">Other</p>
-                            </td>
-                            <td>
-                                <p style="font-size: 18px;">Legal</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Browse Jobs</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Browse
-                                    Candidates</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Page</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Privacy Policy</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Browse
-                                    Categories</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Employer
-                                    Dashboard</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Page
-                                    Alternative</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Terms of Use</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Candidate
-                                    Dashboard</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Add Job</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Resume Page</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">FAQ</a></td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Alerts</a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Job Packages</a>
-                            </td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Blog</a></td>
-                        </tr>
-                        <tr>
-                            <td><a class="link" href="#" style="font-size: 14px;">My Bookmarks</a>
-                            </td>
-                            <td><a class="link" href="#"></a></td>
-                            <td><a class="link" href="#" style="font-size: 14px;">Contact</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-------------------------------------FORM--------------------------------------------------->
-            <div class="col-lg-3 col-md-9 col-sm-9 col-10 table-responsive newsform">
-                <table class="table table-sm table-borderless">
-                    <tbody>
-                        <tr>
-                            <td><img src="img/newsletter.png" class="img-fluid"></td>
-                            <td class="text-justify" colspan="3" style="font-size: 20px;">Sign Up For a
-                                Newsletter
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <p class="link text text-justify" style="font-size: 14px;">
-                                    Weekly breaking news, analysis and cutting edge
-                                    advices on job searching.</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <form class="form-inline my-2 my-lg-0 ml-2">
-                                    <input class="form-control mr-sm-2" type="email" size="22"
-                                        style=" background-color: #818181; font-size: 14px;"
-                                        placeholder="Enter your Email here...">
-                                    <button class="btn btn-success rounded my-2"
-                                        style="width:min-content;font-size: 14px;" type="submit">SUBSCRIBE</button>
-                                </form>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="container">
+                <div class="row mar">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-10">
+                        <div class="row no-gutters">
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop"> For
+                                                Candidates
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="singlejobpage.html">Browse Jobs</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Browse
+                                                Categories</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Candidate
+                                                Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Job Alerts</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">My Bookmarks</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="d-inline list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop"> For Employers
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Browse
+                                                Candidates</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Employer
+                                                Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Add Job</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="packages.html">Job Packages</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="d-inline list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop"> Other
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="singlejobpage.html">Job Page</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#" style="text-align: left;">Job Page
+                                                Alternative</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Resume Page</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="blog.html">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="d-inline list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop">Legal</p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Privacy Policy</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Terms of Use</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">FAQ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-------------------------------------FORM--------------------------------------------------->
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 newsform mr-3">
+                                <div class="list-group borderless  mr-3" style="color: #323232;">
+                                    <ul class="newsfooter">
+                                        <li>
+                                            <img src="img/newsletter.png" class="img-fluid nospace">
+                                            <span class="text-white text-left foottop align-middle">Sign Up For
+                                                a
+                                                Newsletter</span>
+                                        </li>
+                                        <li>
+                                            <p class="mt-2 ml-xl-2 ml-lg-2 ml-md-2 ml-sm-0 ml-0 mt-3"
+                                                style="line-height: normal; color:#929292;font-size: 14px;">
+                                                Weekly breaking news, analysis and cutting edge
+                                                advices on job searching.</p>
+                                        </li>
+                                        <li>
+                                            <form class="form-inline ml-lg-2 ml-md-2 ml-sm-3 ml-4 my-2 my-lg-0">
+                                                <input
+                                                    class="form-control footerform col-xl-8 col-lg-7 col-md-8 col-sm-8 col-7"
+                                                    type="email" placeholder="Enter your Email here...">
+                                                <button class="btn btn-success my-2 btnsub"
+                                                    type="submit">Subscribe</button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
