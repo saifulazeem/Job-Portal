@@ -2,7 +2,10 @@ html,body
 {
     overflow-x: hidden; 
 }
-
+.btn{
+    box-shadow: none!important;
+    outline:none!important;
+    }
 .pagination a {
   border-radius: 5px;
   border:none;
@@ -28,16 +31,20 @@ html,body
     outline:none!important;
 }
   .form-control:focus {
-    box-shadow: none!important;
-    outline:none!important;
-    border:1px solid #c2c0c0!important;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    border: 0px;
+    outline: none;
   }
   .form-control:visited{
-    box-shadow: none!important;
-    outline:none!important;
-    border:1px solid #c2c0c0!important;
-    background-color: transparent;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    outline: none;
+    border: 0px;
   }
+  .valid-feedback,.invalid-feedback {
+    text-align: left;
+    margin-left: 10px;
+}
+
 .n {
     background: #0D2942;
   }
@@ -67,7 +74,7 @@ color: #0BB44F;text-decoration: none; font-size: 16px;
     right: 358px;
   }
   .activelink {
-    border-bottom: 3px solid #0BB44F;
+    border-bottom: 2px solid #0BB44F;
     color: white;
     font-weight: 700;
   }
@@ -75,16 +82,16 @@ color: #0BB44F;text-decoration: none; font-size: 16px;
     color: white;
     transition: none;
   }
-  .navbar .nav-item :hover{
+  .navbar .sp :hover{
     font-weight: 700;
     color: white;
-      text-decoration: none;
+    text-decoration: none;
     }
-    .navbar-nav> li:last-child :hover{
+    
+    .navbar-nav> .nav-item:last-child :hover{
       font-weight: normal;
       text-decoration: none;
      }
-     
     .navbar-nav span{
       text-decoration: none;
        position: relative;
@@ -284,6 +291,12 @@ text-decoration: none;
         background-color: #0BB44F;
         text-decoration: none;
         }
+        
+.cards{
+  background-color: white;
+  border-radius: 6px;
+  height:150px;
+  } 
        /*career.html cards*/
     .subcards-txt:hover{
       color:white;
@@ -398,10 +411,6 @@ text-decoration: none;
   top: 180px;
   left: 66px;
 }
-/*home.html main image*/
-.topimg{
-  top:-40px;
-}
   /*green strip on testimonial div*/
 .testdiv
 {
@@ -411,13 +420,13 @@ text-decoration: none;
   padding-left: 109px; 
 }
 
-/*about.html div*/
 .over-about{
-  top:180px;
-  margin-bottom: 120px;
+  top:50px;
+  margin-bottom: 80px;
 }
+
 .aboutmaintxt{
-  margin-top: 90px;
+  margin-top: 70px;
   font-size: 40px;
 }
 .aboutbody {
@@ -575,6 +584,7 @@ text-decoration: none;
   padding: 0px 15px;
   border-radius: 3px;
 }
+
 .boldheader{
   font-size: 12px;
 }
@@ -642,23 +652,49 @@ text-decoration: none;
 .formpost {
   border-radius: 15px;border: 0px;padding-left: 45px;
 }
+/*career.html rectangle*/
+.topimg{
+  height:700px;
+}
 /*career.html cards*/
 .cards-txt{
   color:black;
   font-size: 12px;
   }     
-  /*career.html cards div*/
-  .over{
-    left:0px;
-    top: 0px;
-    margin-bottom: 0px;
+  .careermar{
+    width: 100%;
+    height: 100vh;
+    margin-left: 20px;
   }
-
-.cards{
-  background-color: white;
-  height:160px;
-  width:120px;
-  } 
+  /*career.html above img text*/
+  .careertxt{
+    margin-top: 120px;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 6px;
+  }
+  .careersubtxt{
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-style: normal;
+  }
+  /*career.html circle div*/
+  .cir{
+    position: absolute;
+    right:-160px;
+    top:-280px;
+  }
+    /*career.html circle image*/
+    .cirimg{
+      width:300px;
+      height:300px;
+    }
+    /*career.html cards div*/
+    .over{
+      left:0px;
+      top: -60px;
+      margin-bottom: 0px;
+    }
   .bover-about{
     top:-220px;
     border-radius: 0px;
@@ -778,10 +814,6 @@ text-decoration: none;
   top: 180px;
   left: 66px;
 }
-/*home.html main image*/
-.topimg{
-  top:-40px;
-}
 
   /*green strip on testimonial div*/
 .testdiv
@@ -792,12 +824,13 @@ text-decoration: none;
   padding-left: 109px; 
 }
 .over-about{
-  top:100px;
-  margin-bottom: 120px;
+  top:70px;
+  margin-bottom: 100px;
 }
+
 .aboutmaintxt{
-  margin-top: 130px;
-  font-size: 40px;
+  margin-top: 100px;
+  font-size: 52px;
 }
 .aboutbody {
   position: relative;
@@ -1023,23 +1056,49 @@ text-decoration: none;
 .formpost {
   border-radius: 15px;border: 0px;padding-left: 45px;
 }
+/*career.html rectangle*/
+.topimg{
+  height:700px;
+}
 /*career.html cards*/
 .cards-txt{
   color:black;
   font-size: 12px;
   }     
-  /*career.html cards div*/
-  .over{
-    left:0px;
-    top: 0px;
-    margin-bottom: 0px;
+  .careermar{
+    width: 100%;
+    height: 100vh;
+    margin-left: 20px;
   }
- 
-.cards{
-  background-color: white;
-  height:160px;
-  width:120px;
-  } 
+  /*career.html above img text*/
+  .careertxt{
+    margin-top: 120px;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 6px;
+  }
+  .careersubtxt{
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-style: normal;
+  }
+  /*career.html circle div*/
+  .cir{
+    position: absolute;
+    right:-160px;
+    top:-350px;
+  }
+    /*career.html circle image*/
+    .cirimg{
+      width:360px;
+      height:360px;
+    }
+    /*career.html cards div*/
+    .over{
+      left:0px;
+      top: -60px;
+      margin-bottom: 0px;
+    }
   .bover-about{
     top:-220px;
     border-radius: 0px;
@@ -1172,11 +1231,6 @@ text-decoration: none;
   top: 180px;
   left: 66px;
 }
-/*home.html main image*/
-.topimg{
-  top:-40px;
-}
-
   /*green strip on testimonial div*/
 .testdiv
 {
@@ -1186,12 +1240,12 @@ text-decoration: none;
   padding-left: 109px; 
 }
 .over-about{
-  top:100px;
-  margin-bottom: 120px;
+  top:70px;
+  margin-bottom: 100px;
 }
 
 .aboutmaintxt{
-  margin-top: 130px;
+  margin-top: 100px;
   font-size: 52px;
 }
 .aboutbody {
@@ -1416,23 +1470,49 @@ text-decoration: none;
 .formpost {
   border-radius: 15px;border: 0px;padding-left: 45px;
 }
+/*career.html rectangle*/
+.topimg{
+  height:700px;
+}
 /*career.html cards*/
 .cards-txt{
   color:black;
   font-size: 12px;
   }     
-  /*career.html cards div*/
-  .over{
-    left:0px;
-    top: 0px;
-    margin-bottom: 0px;
+  .careermar{
+    width: 100%;
+    height: 100vh;
+    margin-left: 20px;
   }
-   
-.cards{
-  background-color: white;
-  height:160px;
-  width:120px;
-  } 
+  /*career.html above img text*/
+  .careertxt{
+    margin-top: 120px;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 6px;
+  }
+  .careersubtxt{
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-style: normal;
+  }
+  /*career.html circle div*/
+  .cir{
+    position: absolute;
+    right:-180px;
+    top:-390px;
+  }
+    /*career.html circle image*/
+    .cirimg{
+      width:400px;
+      height:400px;
+    }
+    /*career.html cards div*/
+    .over{
+      left:0px;
+      top: -60px;
+      margin-bottom: 0px;
+    }
   .bover-about{
     top:-220px;
     border-radius: 0px;
@@ -1567,10 +1647,6 @@ text-decoration: none;
     font-size: 14px;
     text-align: left;
   }
-  /*home.html main image*/
-.topimg{
-  top:-180px;
-}
 /* Top left text */
 .top-left {
   position: absolute;
@@ -1587,11 +1663,11 @@ text-decoration: none;
 }
 /*about.html div*/
 .over-about{
-  top:100px;
-  margin-bottom: 120px;
+  top:60px;
+  margin-bottom: 90px;
 }
 .aboutmaintxt{
-  margin-top: 130px;
+  margin-top: 90px;
   font-size: 52px;
 }
 .aboutbody {
@@ -1816,23 +1892,49 @@ text-decoration: none;
 .formpost {
   border-radius: 15px;border: 0px;padding-left: 45px;
 }
+/*career.html rectangle*/
+.topimg{
+  height:700px;
+}
 /*career.html cards*/
 .cards-txt{
   color:black;
   font-size: 12px;
   }     
-  /*career.html cards div*/
-  .over{
-    left:0px;
-    top: 0px;
-    margin-bottom: 0px;
+  .careermar{
+    width: 100%;
+    height: 100vh;
+    margin-left: 0px;
   }
-
-.cards{
-  background-color: white;
-  height:160px;
-  width:120px;
-  } 
+  /*career.html above img text*/
+  .careertxt{
+    margin-top: 120px;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 6px;
+  }
+  .careersubtxt{
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-style: normal;
+  }
+  /*career.html circle div*/
+  .cir{
+    position: absolute;
+    right:-280px;
+    top:-100px;
+  }
+    /*career.html circle image*/
+    .cirimg{
+      width:400px;
+      height:400px;
+    }
+    /*career.html cards div*/
+    .over{
+      left:0px;
+      top: -60px;
+      margin-bottom: 0px;
+    }
   .bover-about{
     top:-320px;
     border-radius: 10px;
@@ -1980,11 +2082,6 @@ text-decoration: none;
       font-size: 14px;
       text-align: left;
     }
-/*home.html main image*/
-   .topimg{
-    top:-180px;
-  }
-
 /* Top left text */
 .top-left {
   position: absolute;
@@ -1998,8 +2095,8 @@ text-decoration: none;
 
 /*about.html div*/
 .over-about{
-  top:100px;
-  margin-bottom: 120px;
+  top:60px;
+  margin-bottom: 100px;
 }
 .aboutbody {
   position: relative;
@@ -2008,7 +2105,7 @@ text-decoration: none;
   padding:40px 30px;
 }
 .aboutmaintxt{
-  margin-top: 130px;
+  margin-top: 80px;
   font-size: 52px;
 }
 
@@ -2212,23 +2309,59 @@ text-decoration: none;
 .formpost {
   border-radius: 15px;border: 0px;padding-left: 45px;
 }
+/*career.html cards div*/
+.over{
+  left:0px;
+  top: 0px;
+  margin-bottom: 0px;
+}
+/*career.html rectangle*/
+.topimg{
+  height:300px;
+}
+  /*career.html rectangle*/
+.topimg{
+  height:300px;
+}
 /*career.html cards*/
 .cards-txt{
   color:black;
   font-size: 12px;
   }     
-  /*career.html cards div*/
-  .over{
-    left:0px;
-    top: 0px;
-    margin-bottom: 0px;
+  .careermar{
+    width: 100%;
+    height: 100vh;
+    margin-left: -15px;
   }
- 
-.cards{
-  background-color: white;
-  height:170px;
-  width:120px;
-  } 
+  /*career.html above img text*/
+  .careertxt{
+    margin-top: 120px;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+  }
+  .careersubtxt{
+    letter-spacing: 2px;
+    font-size: 22px;
+    font-style: normal;
+  }
+  /*career.html circle div*/
+  .cir{
+    position: absolute;
+    right:-380px;
+    top:-170px;
+  }
+    /*career.html circle image*/
+    .cirimg{
+      width:480px;
+      height:480px;
+    }
+    /*career.html cards div*/
+    .over{
+      left:0px;
+      top: 0px;
+      margin-bottom: 0px;
+    }
   .bover-about{
     top:-320px;
     border-radius: 10px;
@@ -2322,8 +2455,12 @@ table.sec tr td:nth-child(4) input {
   padding-right: 150px;
   border-radius: 0px;
 }
-table.fir tr td:nth-child(4) input {
+table.firemp tr td:nth-child(4) input {
   padding-right: 95px;
+  border-radius: 0px;
+}
+table.firhome tr td:nth-child(4) input {
+  padding-right: 105px;
   border-radius: 0px;
 }
 .addhome{
@@ -2336,7 +2473,7 @@ table.fir tr td:nth-child(4) input {
   top:4px;
   z-index: 2px;
   border: none;
-  width: 70px;
+  width: 90px;
   height: 43px;
   margin-left: 0px;
 }
@@ -2430,10 +2567,6 @@ table.fir tr td:nth-child(4) input {
       text-align: left;
     }
    
-  /*home.html main image*/
-.topimg{
-  top:-180px;
-}
 
 /* Top left text */
 .top-left {
@@ -2446,8 +2579,8 @@ table.fir tr td:nth-child(4) input {
 }
 /*about.html div*/
 .over-about{
-  top:210px;
-  margin-bottom: 120px;
+  top:110px;
+  margin-bottom: 150px;
 }
 .aboutmaintxt{
   margin-top: 130px;
@@ -2612,12 +2745,49 @@ table.fir tr td:nth-child(4) input {
   top: 0px;
   margin-bottom: 0px;
 }
+/*career.html rectangle*/
+.topimg{
+  height:300px;
+}
 /*career.html cards*/
 .cards-txt{
   color:black;
   font-size: 12px;
   }     
-
+  .careermar{
+    width: 100%;
+    height: 100vh;
+    margin-left: -15px;
+  }
+  /*career.html above img text*/
+  .careertxt{
+    margin-top: 120px;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+  }
+  .careersubtxt{
+    letter-spacing: 2px;
+    font-size: 22px;
+    font-style: normal;
+  }
+  /*career.html circle div*/
+  .cir{
+    position: absolute;
+    right:-350px;
+    top:-100px;
+  }
+    /*career.html circle image*/
+    .cirimg{
+      width:500px;
+      height:500px;
+    }
+    /*career.html cards div*/
+    .over{
+      left:0px;
+      top: -40px;
+      margin-bottom: 0px;
+    }
    /*blog.html div*/
 .bover-about{
   top:-420px;
@@ -2705,7 +2875,7 @@ margin-bottom: -370px;
 }
 /*form home.html*/
 .homesearch{
-  width: 270px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 18px;padding-right: 18px;
+  width: 270px;height:50px;margin-left: 0px;font-size: 14px;padding-left: 18px;padding-right: 10px;
 }
 .homesearch::placeholder{
   font-size: 14px;
@@ -2713,7 +2883,7 @@ margin-bottom: -370px;
 }
 /*form singlejobpage.html*/
 .empsearch{
-  width: 325px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 24px;padding-right: 24px;
+  width: 315px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 20px;padding-right: 10px;
 }
 .empsearch::placeholder{
   font-size: 16px;
@@ -2734,8 +2904,12 @@ table.sec tr td:nth-child(4) input {
   padding-right: 130px;
   border-radius: 0px;
 }
-table.fir tr td:nth-child(4) input {
-  padding-right: 130px;
+table.firemp tr td:nth-child(4) input {
+  padding-right: 115px;
+  border-radius: 0px;
+}
+table.firhome tr td:nth-child(4) input {
+  padding-right: 125px;
   border-radius: 0px;
 }
 .addhome{
@@ -2791,14 +2965,6 @@ table.fir tr td:nth-child(4) input {
  }
 /***********************************************************************************************************************/
  @media (min-width: 1200px) {
-  .bg-img {
-    background: linear-gradient(0deg, rgba(13, 41, 66, 0.4), rgba(0, 0, 0, 0.4)), url(/img/about.png);
-    opacity: 1;
-    background-size: 100% 100%;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
   /*.bg-img-about {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/about.png);
     opacity: 1;
@@ -2808,15 +2974,8 @@ table.fir tr td:nth-child(4) input {
     background-repeat: no-repeat;
 
 }*/
-}
-.bg-img-career {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/homecenter.png);
-  opacity: 1;
-  background-position: 0px 100px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-size:100% 100%;
-}
+
+
    /*button*/
 .btnpad {
   padding-right: 70px;
@@ -2901,11 +3060,11 @@ table.fir tr td:nth-child(4) input {
 }
 /*about.html div*/
 .over-about{
-  top:200px;
-  margin-bottom: 250px;
+  top:100px;
+  margin-bottom: 150px;
 }
 .aboutmaintxt{
-  margin-top: 131px;
+  margin-top: 120px;
   font-size: 56px;
 }
 .aboutbody {
@@ -3109,7 +3268,7 @@ font-size: 20px;
   right:-760px;
   top:100px;
 }
-  /*career.html circle image*/
+  /*accountancy.html circle image*/
   .accimg{
     width:740px;
     height:740px;
@@ -3117,53 +3276,46 @@ font-size: 20px;
 .careermar{
   width: 100%;
   height: 100vh;
-  margin-left: -20px;
+  margin-left: -15px;
 }
 /*career.html above img text*/
 .careertxt{
   margin-top: 120px;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 700;
   letter-spacing: 8px;
 }
 .careersubtxt{
   letter-spacing: 2px;
-  font-size: 25px;
+  font-size: 22px;
   font-style: normal;
 }
 /*career.html circle div*/
 .cir{
   position: absolute;
-  right:-760px;
-  top:-240px;
+  right:-590px;
+  top:-200px;
 }
   /*career.html circle image*/
   .cirimg{
-    width:740px;
-    height:740px;
+    width:600px;
+    height:600px;
   }
   /*career.html cards div*/
   .over{
     left:0px;
-    top: -100px;
+    top: -40px;
     margin-bottom: 0px;
   }
   /*career.html rectangle*/
-  .topimg{
-    top:380px;
-    position: relative;
-  }
+.topimg{
+  height:300px;
+}
 /*career.html cards*/
 .cards-txt{
   color:black;
-  font-size: 20px;
+  font-size: 14px;
   text-decoration: none;
-  }     
-.cards{
-  background-color: white;
-  border-radius: 10px;
-  width: 200px;
-  height: 200px;
   }  
   /*blog.html div*/
 .bover-about{
@@ -3229,7 +3381,7 @@ margin-bottom: -370px;
 }
 /*form home.html*/
 .homesearch{
-  width: 345px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 24px;padding-right: 24px;
+  width: 345px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 24px;padding-right: 20px;
 }
 .homesearch::placeholder{
   font-size: 16px;
@@ -3237,7 +3389,7 @@ margin-bottom: -370px;
 }
 /*form singlejobpage.html*/
 .empsearch{
-  width: 325px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 24px;padding-right: 24px;
+  width: 330px;height:50px;margin-left: 0px;font-size: 16px;padding-left: 24px;padding-right: 20px;
 }
 .empsearch::placeholder{
   font-size: 16px;
@@ -3250,12 +3402,16 @@ margin-bottom: -370px;
   top:3px;
   z-index: 2px;
   border: none;
-  width: 110px;
+  width: 120px;
   height: 43px;
   margin-left: 10px;
 }
-table.sec tr td:nth-child(4) input {
-  padding-right: 150px;
+table.firemp tr td:nth-child(4) input {
+  padding-right: 130px;
+  border-radius: 0px;
+}
+table.firhome tr td:nth-child(4) input {
+  padding-right: 140px;
   border-radius: 0px;
 }
 .addhome{
@@ -3278,7 +3434,7 @@ table.sec tr td:nth-child(4) input {
   top:3px;
   z-index: 2px;
   border: none;
-  width: 135px;
+  width: 120px;
   height: 45px;
   margin-left: 10px;
 }
@@ -3309,7 +3465,7 @@ table.sec tr td:nth-child(4) input {
   border-radius: 10px;margin-bottom: -420px; top:116px;
 }
 .hoverhomerel{
-  position: absolute; left:800px;
+  position: absolute; left:1000px;
 }
 .btn1{
   padding:10px 40px;
@@ -3388,14 +3544,6 @@ background-color:  #0BB44F;
 }
 .btg:hover{
 background-color:  #0D2942;
-}
-.btnabout{
-  background-color: #0BB44F;
-  font-size: 16px;
-}
-.btnabout:hover{
-  transform: scale(1.03);
-  background-color: #0D2942;
 }
 .btnjob{
   border-radius: 6px;

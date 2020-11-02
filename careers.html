@@ -11,8 +11,17 @@
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
     <script>
@@ -22,6 +31,16 @@
             });
         });
     </script>
+    <style>
+
+        .bg-img-career {
+            background: linear-gradient(0deg, rgba(13, 41, 66, 0.9), rgba(0, 0, 0, 0.4)), url(img/homecenter.png);
+            opacity: 1;
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,18 +65,18 @@
                     <div class="collapse mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0 navbar-collapse navbar-right  justify-content-end"
                         id="navbarSupportedContent">
                         <ul class="navbar-nav align-items-md-center">
-                            <li class="nav-item navone">
+                            <li class="nav-item navone sp">
                                 <a class="nav-link" href="about.html"><span class="float-left">ABOUT US</span></a>
                             </li>
-                            <li class="nav-item navtwo">
+                            <li class="nav-item navtwo sp">
                                 <a class="nav-link" href="Employer.html"><span class="float-left">EMPLOYERS
                                         PROFILE</span></a>
                             </li>
-                            <li class="nav-item navthree">
+                            <li class="nav-item navthree sp">
                                 <a class="nav-link" href="careers.html"><span class="float-left activelink">CAREERS
                                         GUIDE</span></a>
                             </li>
-                            <li class="nav-item navfour mr-xl-5 mr-lg-5 mr-md-4">
+                            <li class="nav-item navfour sp mr-xl-5 mr-lg-5 mr-md-4">
                                 <a class="nav-link" href="blog.html"><span class="float-left ">BLOG</span></a>
                             </li>
                             <li class="nav-item">
@@ -74,21 +93,21 @@
             <!---------------------------------------------CONTAINER--------------------------------------------->
             <div class="container">
                 <div class="row mb-0">
-                    <div class="col-8 text-left text-white careermar">
+                    <div class="col-xl-7 col-lg-9 col-md-11 col-sm-12 col-11 text-left text-white careermar">
                         <p class="careertxt">The Tab's Careers Guide</p>
                         <p class="careersubtxt">Bringing you the info you actually need to
                             know about your first job</p>
                     </div>
                 </div>
             </div>
-            <div class="bg-success w-100" style="bottom: 0; position: absolute;">
-                <img src="img/Rectangle.png" class="w-100 img-fluid ">
+            <div class="w-100" style="bottom: 0; position: absolute;">
+                <img src="img/Rectangle.png" class="topimg w-100">
             </div>
             <!--------------------------------------------------overlay container----------------------------->
             <div class="container over" style="position: relative;">
                 <div class="row">
                     <!----------------------------LARGE VIEW-------------------->
-                    <div class="col table-responsive-lg d-lg-block d-md-block d-sm-none d-none">
+                    <div class="col-xl-11 col-lg-10 table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
 
                         <!-------------------------------------TABLE--------------------------------------------------->
                         <table class="table careertable table-borderless text-dark" style=" border-collapse: collapse;">
@@ -97,7 +116,8 @@
                                 <tr>
                                     <td>
                                         <a href="accountancy.html">
-                                            <div class="d-flex flex-column justify-content-center cards cards-txt">
+                                            <div
+                                                class="d-flex flex-column justify-content-center cards cards-txt ">
                                                 <div>
                                                     <img src="img/custgoods.png">
                                                     <img src="img/custgoodswhite.png" style="display: none;">
@@ -110,7 +130,8 @@
                                     </td>
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center">
                                                 <div>
                                                     <img src="img/banking.png">
                                                     <img src="img/bankingwhite.png" style="display: none;">
@@ -123,7 +144,8 @@
                                     </td>
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center">
                                                 <div>
                                                     <img src="img/betting.png">
                                                     <img src="img/bettingwhite.png" style="display: none;">
@@ -137,7 +159,8 @@
                                     </td>
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center">
                                                 <div>
                                                     <img src="img/property.png">
                                                     <img src="img/propertywhite.png" style="display: none;">
@@ -151,7 +174,8 @@
                                     </td>
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center">
                                                 <div>
                                                     <img src="img/consultancy.png">
                                                     <img src="img/consultancywhite.png" style="display: none;">
@@ -169,7 +193,145 @@
                                     <td></td>
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center">
+                                                <div>
+                                                    <img src="img/custgoods.png">
+                                                    <img src="img/custgoodswhite.png" style="display: none;">
+                                                </div>
+                                                <div>
+                                                    <span>FAST MOVING
+                                                        <br>CUSTOMER
+                                                        <br>GOODS</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                    <td>
+                                        <a href="#">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center">
+                                                <div>
+                                                    <img src="img/retail.png">
+                                                    <img src="img/retailwhite.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:10px;">
+                                                    <span>RETAIL</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+
+                                    <td>
+                                        <a href="#">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center">
+                                                <div>
+                                                    <img src="img/social.png">
+                                                    <img src="img/socialwhite.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:10px;">
+                                                    <span>SOCIAL WORK</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!----------------------------MEDIUM VIEW-------------------->
+                    <div class="col-md-10 table-responsive-md d-lg-none d-md-block d-sm-none d-none">
+
+                        <!-------------------------------------TABLE--------------------------------------------------->
+                        <table class="table table-sm careertable table-borderless text-dark"
+                            style=" border-collapse: collapse;">
+                            <tbody>
+                                <!-------------------------------------------First Row-------------------------------------------->
+                                <tr>
+                                    <td>
+                                        <a href="accountancy.html">
+                                            <div
+                                                class="d-flex flex-column justify-content-center cards cards-txt w-100">
+                                                <div>
+                                                    <img src="img/custgoods.png">
+                                                    <img src="img/custgoodswhite.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:10px;">
+                                                    <span>ACCOUNTANCY</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
+                                                <div>
+                                                    <img src="img/banking.png">
+                                                    <img src="img/bankingwhite.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:10px;">
+                                                    <span>BANKING</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
+                                                <div>
+                                                    <img src="img/betting.png">
+                                                    <img src="img/bettingwhite.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:10px;">
+                                                    <span>BETTING & <br>GAMING
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
+                                                <div>
+                                                    <img src="img/property.png">
+                                                    <img src="img/propertywhite.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:10px;">
+                                                    <span>COMMERCIAL <br>PROPERTY
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
+                                                <div>
+                                                    <img src="img/consultancy.png">
+                                                    <img src="img/consultancywhite.png" style="display: none;">
+                                                </div>
+                                                <div style="position: relative; top:10px;">
+                                                    <span>CONSULTANCY</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <!-------------------------------------------Second Row-------------------------------------------->
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <a href="#">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
                                                 <div>
                                                     <img src="img/custgoods.png">
                                                     <img src="img/custgoodswhite.png" style="display: none;">
@@ -185,7 +347,8 @@
 
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
                                                 <div>
                                                     <img src="img/retail.png">
                                                     <img src="img/retailwhite.png" style="display: none;">
@@ -199,7 +362,8 @@
 
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
                                                 <div>
                                                     <img src="img/social.png">
                                                     <img src="img/socialwhite.png" style="display: none;">
@@ -216,7 +380,7 @@
                     </div>
 
                     <!----------------------------SMALL VIEW-------------------->
-                    <div class="col table-responsive-lg d-lg-none d-md-none d-sm-block d-block">
+                    <div class="col-sm-8 col-12 table-responsive d-lg-none d-md-none d-sm-block d-block">
 
                         <!-------------------------------------TABLE--------------------------------------------------->
                         <table class="table careertable table-borderless text-dark" style=" border-collapse: collapse;">
@@ -225,7 +389,8 @@
                                 <tr>
                                     <td>
                                         <a href="accountancy.html">
-                                            <div class="d-flex flex-column justify-content-center cards cards-txt">
+                                            <div
+                                                class="d-flex flex-column justify-content-center cards cards-txt w-100">
                                                 <div>
                                                     <img src="img/custgoods.png">
                                                     <img src="img/custgoodswhite.png" style="display: none;">
@@ -238,7 +403,8 @@
                                     </td>
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
                                                 <div>
                                                     <img src="img/banking.png">
                                                     <img src="img/bankingwhite.png" style="display: none;">
@@ -253,7 +419,8 @@
                                 <tr>
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
                                                 <div>
                                                     <img src="img/betting.png">
                                                     <img src="img/bettingwhite.png" style="display: none;">
@@ -267,7 +434,8 @@
                                     </td>
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
                                                 <div>
                                                     <img src="img/property.png">
                                                     <img src="img/propertywhite.png" style="display: none;">
@@ -283,7 +451,8 @@
                                 <tr>
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
                                                 <div>
                                                     <img src="img/consultancy.png">
                                                     <img src="img/consultancywhite.png" style="display: none;">
@@ -296,7 +465,8 @@
                                     </td>
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
                                                 <div>
                                                     <img src="img/custgoods.png">
                                                     <img src="img/custgoodswhite.png" style="display: none;">
@@ -313,7 +483,8 @@
                                 <tr>
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
                                                 <div>
                                                     <img src="img/retail.png">
                                                     <img src="img/retailwhite.png" style="display: none;">
@@ -324,9 +495,11 @@
                                             </div>
                                         </a>
                                     </td>
+
                                     <td>
                                         <a href="#">
-                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div
+                                                class="d-flex flex-column cards cards-txt justify-content-center w-100">
                                                 <div>
                                                     <img src="img/social.png">
                                                     <img src="img/socialwhite.png" style="display: none;">
@@ -534,18 +707,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

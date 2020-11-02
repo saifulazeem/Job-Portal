@@ -17,10 +17,11 @@
     <link rel="stylesheet" href="css/new.css">
     <title>Employer</title>
     <style>
-        table.fir tr:nth-child(2) {
+        table.firemp tr:nth-child(2) {
             box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
             border-radius: 9px;
         }
+        
     </style>
     <script>
         $(document).ready(function () {
@@ -37,42 +38,44 @@
 </head>
 
 <body>
-     <!---------------------------------------------CONTAINER--------------------------------------------->
-     <div class="container-fluid ">
+    <!---------------------------------------------CONTAINER--------------------------------------------->
+    <div class="container-fluid ">
         <!-------------------------------------NAVIGATION BAR----------------------------------------------->
 
         <nav class="navbar navbar-expand-md flex-column flex-row n" style="border-bottom: 2px solid white;">
-            <div class="container">
-                <a class="navbar-brand mr-0 mr-md-2 mb-xl-2 mb-lg-2 mb-md-2 mb-sm-2 mb-2" href="home.html">
-                    <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block">
+            <div class="container  mt-3">
+                <a class="navbar-brand mr-0 mr-md-2 mb-2" href="home.html" style="border: none; outline: none;">
+                    <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block"
+                        style="border: none; outline: none;">
                 </a>
 
-                <button class="navbar-toggler navbar-dark mb-3" type="button" data-toggle="collapse"
+                <button class="navbar-toggler navbar-dark mt-2" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    aria-label="Toggle navigation" style="border: none; outline: none;">
                     <img class="img-fluid" src="img/lines.png">
                 </button>
 
-                <div class="collapse navbar-collapse navbar-right justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 ml-4 ml-lg-0 ml-xl-0 ml-md-0">
-                        <li class="nav-item mt-4 mx-2">
-                            <a class="nav-link" href="about.html">ABOUT US</a>
+                <div class="collapse mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0 navbar-collapse navbar-right  justify-content-end"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-md-center">
+                        <li class="nav-item navone sp">
+                            <a class="nav-link" href="about.html"><span class="float-left">ABOUT US</span></a>
                         </li>
-                        <li class="nav-item mt-4 mx-2">
-                            <a class="nav-link activelink" href="Employer.html">EMPLOYERS
-                                PROFILE</a>
+                        <li class="nav-item navtwo sp">
+                            <a class="nav-link" href="Employer.html"><span class="float-left activelink">EMPLOYERS
+                                    PROFILE</span></a>
                         </li>
-                        <li class="nav-item mt-4 mx-2">
-                            <a class="nav-link" href="careers.html">CAREERS
-                                    GUIDE</a>
+                        <li class="nav-item navthree sp">
+                            <a class="nav-link" href="careers.html"><span class="float-left">CAREERS
+                                    GUIDE</span></a>
                         </li>
-                        <li class="nav-item mt-4 mx-2">
-                            <a class="nav-link mr-3 " href="blog.html">BLOG</a>
+                        <li class="nav-item navfour sp mr-xl-5 mr-lg-5 mr-md-4">
+                            <a class="nav-link" href="blog.html"><span class="float-left ">BLOG</span></a>
                         </li>
-                        <li class="nav-item mx-xl-3 mx-lg-3 mx-md-3">
+                        <li class="nav-item">
                             <div class="row d-flex align-items-center">
                                 <a href="login.html"
-                                    class="btn btn-lg rounded-pill px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 btnLogin mt-3">
+                                    class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1">
                                     Login</a>
                             </div>
                         </li>
@@ -81,13 +84,12 @@
             </div>
         </nav>
 
-    <!------------------------------------------Body---------------------------------------------------------->
-    <div class="container my-5">
-        <div class="container-fluid">
-            <div class="row">
+        <!------------------------------------------Body---------------------------------------------------------->
+        <div class="container my-5">
+            <div class="row col-12">
                 <!--------------Large and Medium View--------->
                 <div class="col-lg-12 col-md-12 table-responsive d-lg-block d-md-block d-sm-none d-none">
-                    <table class="table table-borderless table-sm fir" style="border: none;" cellspacing="0"
+                    <table class="table table-borderless table-sm fir firemp" style="border: none;" cellspacing="0"
                         cellpadding="0">
                         <tbody>
                             <tr>
@@ -210,7 +212,6 @@
                     </table>
                 </div>
             </div>
-        </div>
 
 
         <!-------------------------------------NEXT CONTAINER--------------------------->
@@ -281,12 +282,12 @@
             </div>
 
             <!------------------------------------------Side bar right---------------------------------------------->
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-10 mx-2 my-4">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-10 mx-2 my-4">
                 <div class="row text-left">
-                    <div class="col-lg-5 tag font-weight-bold">
+                    <div class="col-lg-5 col-md-6 col-sm-6 col-10  tag font-weight-bold">
                         All Employers
                     </div>
-                    <div class="col-lg-3 offset-lg-4">
+                    <div class="col-lg-3 offset-lg-4 col-md-4 offset-md-2 col-sm-6 offset-sm-0 col-10  ">
                         <div class=" border-success border-bottom border-3">
                             <div class="d-inline text">
                                 Best Match
@@ -341,7 +342,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -370,7 +372,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -399,8 +402,10 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
-                                                            the students. We have been helping college and university
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
+                                                            the students. We have been helping college and
+                                                            university
                                                             students for more than 7 years....</p>
                                                     </div>
                                                 </div>
@@ -426,7 +431,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -466,7 +472,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -495,7 +502,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -527,7 +535,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -556,7 +565,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -596,7 +606,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -625,7 +636,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -657,7 +669,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -686,7 +699,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -726,7 +740,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -757,7 +772,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -789,7 +805,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -820,7 +837,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -873,7 +891,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -902,7 +921,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -931,7 +951,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -960,7 +981,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1000,7 +1022,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1029,7 +1052,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1061,7 +1085,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1090,7 +1115,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1130,7 +1156,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1159,7 +1186,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1191,7 +1219,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1220,7 +1249,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1260,7 +1290,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1289,7 +1320,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1321,7 +1353,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1350,7 +1383,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1403,7 +1437,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1432,7 +1467,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1461,7 +1497,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1490,7 +1527,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1530,7 +1568,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1559,7 +1598,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1591,7 +1631,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1620,7 +1661,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1660,7 +1702,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1689,7 +1732,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1721,7 +1765,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1750,7 +1795,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1790,7 +1836,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1819,7 +1866,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1851,7 +1899,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1880,7 +1929,8 @@
                                                     <div class="row">
                                                         <p class="text-dark text-sm  m-4 text-justify"
                                                             style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services to
+                                                            We, at Assignmenthelp.ae, providing the writing services
+                                                            to
                                                             the
                                                             students. We have been helping college and university
                                                             students
@@ -1926,8 +1976,189 @@
             </div>
         </div>
     </div>
-</div>
-   
+    </div>
+    <!-----------------------------------------------------FOOTER----------------------------------------------------------->
+    <footer class="container-fluid foot pb-5 pt-4" style="background-color: #323232; ">
+        <div class="container">
+            <div class="row mb-2">
+                <div class=" col-xl-7 col-lg-5 d-flex align-self-center col-md-3 col-sm-3 col-3">
+                    <img src="img/logo.png" class="logo ml-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3">
+                    <!--logo-->
+                </div>
+                <div
+                    class="col-xl-5 offset-xl-0 col-lg-6 offset-lg-1 col-md-7 offset-md-2 col-sm-7 offset-sm-2 offset-1 col-8">
+                    <div class="row mrow pl-xl-0 pl-lg-0 ml-lg-4 pl-0 ml-0 curhov justify-content-start">
+                        <div
+                            class="col-xl-1 offset-xl-1 col-lg-1  offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-0 offset-sm-2 px-0 my-2">
+                            <img src="img/joblisting.png" class="img-fluid mt-0 mt-sm-0 mt-md-2 mt-lg-2 mt-xl-2">
+                        </div>
+                        <div class="ml-1 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4 px-0 mt-1">
+                            <p class="tag d-flex justify-content font-weight-bold"
+                                style="color: #FFFFFF;margin-bottom:0px;">1124</p>
+                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Job Listing</p>
+                        </div>
+                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 px-0 my-2">
+                            <img src="img/resumeposted.png" class="img-fluid mt-0 mt-sm-0 mt-md-2 mt-lg-2 mt-xl-2">
+                        </div>
+                        <div
+                            class="ml-sm-1 ml-xl-0 ml-lg-0 ml-md-0 ml-2 col-xl-4 col-lg-3 col-md-3 col-sm-4 col-5 px-0 mt-1">
+                            <p class="tag d-flex justify-content font-weight-bold"
+                                style="color: #FFFFFF;margin-bottom:0px;">444</p>
+                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Resumes Posted
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------------------------------HORIZONTAL LINE------------------------------------->
+        <div class="row p-0">
+            <div class="col-md-12">
+                <hr style="background-color: green; height: 1.2px;" class="p-0 m-0">
+            </div>
+        </div>
+
+        <!-------------------------------------------NEXT ROW------------------------------------------------>
+
+        <div class="row mt-5 " style="position: relative;">
+            <div class="resp">
+                <img src="img/circle.png" class="img-fluid respimg">
+            </div>
+
+            <div class="container">
+                <div class="row mar">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-10">
+                        <div class="row no-gutters">
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop"> For
+                                                Candidates
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="singlejobpage.html">Browse Jobs</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Browse
+                                                Categories</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Candidate
+                                                Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Job Alerts</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">My Bookmarks</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="d-inline list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop"> For Employers
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Browse
+                                                Candidates</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Employer
+                                                Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Add Job</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="packages.html">Job Packages</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="d-inline list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop"> Other
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="singlejobpage.html">Job Page</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#" style="text-align: left;">Job Page
+                                                Alternative</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Resume Page</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="blog.html">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="d-inline list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop">Legal</p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Privacy Policy</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Terms of Use</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">FAQ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-------------------------------------FORM--------------------------------------------------->
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 newsform mr-3">
+                                <div class="list-group borderless  mr-3" style="color: #323232;">
+                                    <ul class="newsfooter">
+                                        <li>
+                                            <img src="img/newsletter.png" class="img-fluid nospace">
+                                            <span class="text-white text-left foottop align-middle">Sign Up For a
+                                                Newsletter</span>
+                                        </li>
+                                        <li>
+                                            <p class="mt-2 ml-xl-2 ml-lg-2 ml-md-2 ml-sm-0 ml-0 mt-3"
+                                                style="line-height: normal; color:#929292;font-size: 14px;">
+                                                Weekly breaking news, analysis and cutting edge
+                                                advices on job searching.</p>
+                                        </li>
+                                        <li>
+                                            <form class="form-inline ml-lg-2 ml-md-2 ml-sm-3 ml-4 my-2 my-lg-0">
+                                                <input
+                                                    class="form-control footerform col-xl-8 col-lg-7 col-md-8 col-sm-8 col-7"
+                                                    type="email" placeholder="Enter your Email here...">
+                                                <button class="btn btn-success my-2 btnsub"
+                                                    type="submit">Subscribe</button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
