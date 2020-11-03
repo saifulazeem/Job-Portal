@@ -3737,17 +3737,6 @@ tr{
 .delhov{
   cursor: hand;
 }
-.content {
-  display: none;
-  margin: 15px;
-}
-.activator:hover {
-  width: 500px;
-}
-.activator:hover .content {
-  display: block;
-}
-
 .resumetable td{
   font-size: 12px;
   color:black;
@@ -4014,10 +4003,25 @@ font-style: normal;
 }
 .main1{
   color: #5E5E5E;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 18px;
 }
 .empsidebartxt a{
   text-decoration: none;
   color: white;
+}
+.txtdescjob{
+  color:#808080;
+  font-size: 12px;
+}
+.subtxtdescjob{
+  color: #BFBFBF;
+  font-size: 8px;
+}
+.txtpl{
+  font-size: 10px;
+  color: #0D2942;
+}
+.txtpl:hover{
+  color: #0D2942;
 }

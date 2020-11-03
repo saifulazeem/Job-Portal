@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <style>
+        #items { 
+     width:300px; 
+    
+}
+
+.item {
+    background-color: navajowhite; 
+    width:100px; 
+    border:solid 1px #ccc;
+    float:left;
+    height:20px;
+    z-index:0;
+    overflow:hidden;
+    position:relative; 
+}  
+
+.item:hover {
+    overflow:visible;
+    z-index:100;
+}
+
+.item:hover .inner { 
+    z-index: 100;
+}
+
+.inner { 
+    position: absolute;
+    background: white;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <div id="items">    
+        <div class="item"><div class="inner">text 1<br>text 1<br>text 1</div></div>
+        <div class="item"><div class="inner">text 2<br>text 2<br>text 2</div></div>
+        <div class="item"><div class="inner">text 3<br>text 3<br>text 3</div></div>
+        <div class="item"><div class="inner">text 4<br>text 4<br>text 4</div></div>
+        <div class="item"><div class="inner">text 5<br>text 5<br>text 5</div></div>
+        <div class="item"><div class="inner">text 6<br>text 6<br>text 6</div></div>
+        <div class="item"><div class="inner">text 7<br>text 7<br>text 7</div></div>
+        <div class="item"><div class="inner">text 8<br>text 8<br>text 8</div></div>
+        <div class="item"><div class="inner">text 9<br>text 9<br>text 9</div></div>
+        <div class="item"><div class="inner">text 10<br>text 10<br>text 10</div></div>
+    </div>
+</body>
+</html>
