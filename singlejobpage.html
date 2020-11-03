@@ -25,21 +25,14 @@
         }
         $(document).ready(function () {
             //SHOW MORE
-            $('.dispshm').click(function () {
-                if ($(this).text() == "See Less") {
-                    $(this).text("Show More");
+            $('.divshm').click(function () {
+                if ($(this).find('.dispshm').text() == "See Less") {
+                    $(this).find('.dispshm').text("Show More");
                 } else {
-                    $(this).text("See Less");
+                    $(this).find('.dispshm').text("See Less");
                 }
             });
-            //SHOW MORE BUTTON
-            /*$('.dispbtnmore').click(function () {
-                if ($('.dispshm').text() == "See Less") {
-                    $('.dispshm').text("Show More");
-                } else {
-                    $('.dispshm').text("See Less");
-                }
-            });*/
+
             $(".imgsearch").hide();
             $(".homebtn").hover(function () {
                 $(".search").hide();
@@ -168,39 +161,43 @@
         <!-------------------------------------NAVIGATION BAR----------------------------------------------->
 
         <nav class="navbar navbar-expand-md flex-column flex-row n" style="border-bottom: 2px solid white;">
-            <div class="container">
-                <a class="navbar-brand mr-0 mr-md-2 mb-xl-2 mb-lg-2 mb-md-2 mb-sm-2 mb-2" href="home.html">
-                    <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block">
+            <div class="container  mt-3">
+                <a class="navbar-brand mr-0 mr-md-2 mb-2" href="home.html" style="border: none; outline: none;">
+                    <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block"
+                        style="border: none; outline: none;">
                 </a>
 
-                <button class="navbar-toggler navbar-dark mb-3" type="button" data-toggle="collapse"
+                <button class="navbar-toggler navbar-dark mt-2" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    aria-label="Toggle navigation" style="border: none; outline: none;">
                     <img class="img-fluid" src="img/lines.png">
                 </button>
 
-                <div class="collapse navbar-collapse navbar-right justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 ml-4 ml-lg-0 ml-xl-0 ml-md-0">
-                        <li class="nav-item mx-md-0 mx-lg-2 mx-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                            <a class="nav-link " href="about.html" style="display: block;"><span
-                                    class="float-left sp ">ABOUT US
-                                </span></a>
+                <div class="collapse mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0 navbar-collapse navbar-right  justify-content-end"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-md-center">
+                        <li class="nav-item navone sp">
+                            <a class="nav-link" href="about.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">ABOUT US</span></a>
                         </li>
-                        <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                            <a class="nav-link " href="Employer.html"><span class="float-left sp activelink">EMPLOYERS
+                        <li class="nav-item navtwo sp">
+                            <a class="nav-link" href="Employer.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">EMPLOYERS
                                     PROFILE</span></a>
                         </li>
-                        <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                            <a class="nav-link" href="careers.html"><span class="float-left sp">CAREERS
+                        <li class="nav-item navthree sp">
+                            <a class="nav-link" href="careers.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">CAREERS
                                     GUIDE</span></a>
                         </li>
-                        <li class="nav-item mx-lg-2 mx-md-0 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-0 mt-0">
-                            <a class="nav-link" href="blog.html"><span class="float-left sp">BLOG</span></a>
+                        <li class="nav-item navfour sp mr-xl-5 mr-lg-5 mr-md-4">
+                            <a class="nav-link" href="blog.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">BLOG</span></a>
                         </li>
-                        <li class="nav-item mx-xl-3 mx-lg-3 mx-md-3">
+                        <li class="nav-item">
                             <div class="row d-flex align-items-center">
                                 <a href="login.html"
-                                    class="btn btn-lg rounded-pill px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 btnLogin mt-3">
+                                    class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3">
                                     Login</a>
                             </div>
                         </li>
@@ -216,7 +213,7 @@
                 <div class="row">
                     <!--------------Large and Medium View--------->
                     <div class="col-lg-12 col-md-12 table-responsive d-lg-block d-md-block d-sm-none d-none">
-                        <table class="table table-borderless table-sm fir" style="border: none;" cellspacing="0"
+                        <table class="table table-borderless table-sm fir firemp" style="border: none;" cellspacing="0"
                             cellpadding="0">
                             <tbody>
                                 <tr>
@@ -262,9 +259,9 @@
                                 <tr>
                                     <!--------Third row------------->
                                     <td colspan="3" class="text-dark">
-                                        <span class="float-left">Need more search options?<a href="#"
-                                                class="advancesearch" style="text-decoration: none;">&nbsp;ADVANCE
-                                                SEARCH</a></span>
+                                        <span class="float-left textadvance">Need more search options?<a href="#"
+                                            class="advancesearch" style="text-decoration: none;">&nbsp;ADVANCE
+                                            SEARCH</a></span>
                                     </td>
                                     <td></td>
                                     <td></td>
@@ -361,7 +358,8 @@
                             max="1000000" oninput="amount.value=rangeInput.value">
                     </div>
                     <div class="row mb-4 mx-4">
-                        <div class="col-lg-7 offset-lg-6 col-md-7 offset-md-6 col-sm-7 offset-sm-8 col-7 offset-8">
+                        <div
+                            class="col-xl-8 col-lg-8 offset-lg-6 col-md-7 offset-md-6 col-sm-7 offset-sm-8 col-7 offset-8">
                             <div class="d-inline ">
                                 <output id="amount" name="amount" for="rangeInput" class="text-white "><span
                                         style="font-size: 12px;">5,000
@@ -371,8 +369,7 @@
                     </div>
 
                     <!--------------------------------------------JOB TITLE-------------------------------->
-                    <div class="row my-2 mx-auto" style="border-bottom: 1px solid #707070;">
-
+                    <div class="row my-2 mx-auto " style="border-bottom: 1px solid #707070;">
                         <div class="col-xl-9 col-lg-9 col-md-8 col-sm-10 col-10">
                             <a href="" data-toggle="collapse" data-target="#collapsemaintitle" aria-expanded="false"
                                 aria-controls="collapsemaintitle" style="text-decoration: none;" class="d-inline colap">
@@ -388,11 +385,23 @@
 
                     <!-------------------------------------------LIST(collapse on click)------------------------------------>
                     <!------------Next Row-->
-                    <div class="collapse panel-collapse show mx-auto " id="collapsemaintitle" data-parent="#myGroup">
-                        <div class="row ml-0 mt-5 jtitle mx-auto bg" style="font-size: 10px;">
+                    <div class="collapse panel-collapse show mx-auto mt-2" id="collapsemaintitle" data-parent="#myGroup">
+                        <div class="row ml-0 mt-0 jtitle mx-auto bg" style="font-size: 10px;">
                             <div class="col-xl-9 ml-2 ">
-                                <input type="checkbox" class="form-check-input" id="chk">
-                                <label class="subjob " for="chk">
+                                <input type="checkbox" class="form-check-input" id="j1">
+                                <label class="subjob " for="j1">
+                                    Software Quality Assurance En..
+                                </label>
+                            </div>
+                            <div class="col-xl-2 subjob">
+                                <span>(24)</span>
+                            </div>
+                        </div>
+                        <!------------Next Row-->
+                        <div class="row  mt-0 jtitle mx-auto bg" style="font-size: 10px;">
+                            <div class="col-xl-9 ml-2 ">
+                                <input type="checkbox" class="form-check-input" id="j2">
+                                <label class="subjob " for="j2">
                                     Software Quality Assurance En..
                                 </label>
                             </div>
@@ -404,8 +413,8 @@
                         <!------------Next Row-->
                         <div class="row  mt-0 jtitle mx-auto bg" style="font-size: 10px;">
                             <div class="col-xl-9 ml-2 ">
-                                <input type="checkbox" class="form-check-input" id="chk">
-                                <label class="subjob " for="chk">
+                                <input type="checkbox" class="form-check-input" id="j3">
+                                <label class="subjob " for="j3">
                                     Software Quality Assurance En..
                                 </label>
                             </div>
@@ -417,21 +426,8 @@
                         <!------------Next Row-->
                         <div class="row  mt-0 jtitle mx-auto bg" style="font-size: 10px;">
                             <div class="col-xl-9 ml-2 ">
-                                <input type="checkbox" class="form-check-input" id="chk">
-                                <label class="subjob " for="chk">
-                                    Software Quality Assurance En..
-                                </label>
-                            </div>
-                            <div class="col-xl-2 subjob">
-                                <span>(24)</span>
-                            </div>
-                        </div>
-
-                        <!------------Next Row-->
-                        <div class="row  mt-0 jtitle mx-auto bg" style="font-size: 10px;">
-                            <div class="col-xl-9 ml-2 ">
-                                <input type="checkbox" class="form-check-input" id="chk">
-                                <label class="subjob " for="chk">
+                                <input type="checkbox" class="form-check-input" id="j4">
+                                <label class="subjob " for="j4">
                                     Software Quality Assurance En..
                                 </label>
                             </div>
@@ -445,8 +441,8 @@
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto bg" style="font-size: 10px;">
                                 <div class="col-xl-9 ml-2 ">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                    <input type="checkbox" class="form-check-input" id="j5">
+                                    <label class="subjob " for="j5">
                                         Software Quality Assurance En..
                                     </label>
                                 </div>
@@ -458,8 +454,8 @@
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto bg" style="font-size: 10px;">
                                 <div class="col-xl-9 ml-2 ">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                    <input type="checkbox" class="form-check-input" id="j6">
+                                    <label class="subjob " for="j6">
                                         Software Quality Assurance En..
                                     </label>
                                 </div>
@@ -474,9 +470,9 @@
                         <div class="row ml-3" style="font-size: 12px;">
                             <a href="" data-toggle="collapse" data-target="#collapsetitle" aria-expanded="false"
                                 aria-controls="collapsetitle" style="text-decoration: none;">
-                                <div class="d-flex flex-row dispbtnmore">
-                                    <img src="img/addgreen.png" class="img-fluid dispbtnmore">
-                                    <span class="showmore dispshm d-flex align-items-center mx-2"
+                                <div class="d-flex flex-row divshm">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                    <span class="showmore dispshm d-flex align-items-end mx-2 mb-1"
                                         style="font-size: 13px;text-decoration:none;">
                                         Show More
                                     </span>
@@ -588,9 +584,9 @@
                         <div class="row ml-3" style="font-size: 12px;">
                             <a href="" data-toggle="collapse" data-target="#collapsecity" aria-expanded="false"
                                 aria-controls="collapsecity" style="text-decoration: none;">
-                                <div class="d-flex flex-row dispbtnmore">
-                                    <img src="img/addgreen.png" class="img-fluid dispbtnmore">
-                                    <span class="showmore dispshm d-flex align-items-center mx-2"
+                                <div class="d-flex flex-row divshm">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                    <span class="showmore dispshm d-flex align-items-end mx-2 mb-1"
                                         style="font-size: 13px;text-decoration:none;">
                                         Show More
                                     </span>
@@ -702,9 +698,9 @@
                         <div class="row ml-3" style="font-size: 12px;">
                             <a href="" data-toggle="collapse" data-target="#collapseexp" aria-expanded="false"
                                 aria-controls="collapseexp" style="text-decoration: none;">
-                                <div class="d-flex flex-row dispbtnmore">
-                                    <img src="img/addgreen.png" class="img-fluid dispbtnmore">
-                                    <span class="showmore dispshm d-flex align-items-center mx-2"
+                                <div class="d-flex flex-row divshm">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                    <span class="showmore dispshm d-flex align-items-end mx-2 mb-1"
                                         style="font-size: 13px;text-decoration:none;">
                                         Show More
                                     </span>
@@ -817,9 +813,9 @@
                         <div class="row ml-3" style="font-size: 12px;">
                             <a href="" data-toggle="collapse" data-target="#collapsetype" aria-expanded="false"
                                 aria-controls="collapsetype" style="text-decoration: none;">
-                                <div class="d-flex flex-row dispbtnmore">
-                                    <img src="img/addgreen.png" class="img-fluid dispbtnmore">
-                                    <span class="showmore dispshm d-flex align-items-center mx-2"
+                                <div class="d-flex flex-row divshm">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                    <span class="showmore dispshm d-flex align-items-end mx-2 mb-1"
                                         style="font-size: 13px;text-decoration:none;">
                                         Show More
                                     </span>
@@ -931,9 +927,9 @@
                         <div class="row ml-3" style="font-size: 12px;">
                             <a href="" data-toggle="collapse" data-target="#collapseskills" aria-expanded="false"
                                 aria-controls="collapseskills" style="text-decoration: none;">
-                                <div class="d-flex flex-row dispbtnmore">
-                                    <img src="img/addgreen.png" class="img-fluid dispbtnmore">
-                                    <span class="showmore dispshm d-flex align-items-center mx-2"
+                                <div class="d-flex flex-row divshm">
+                                    <img src="img/addgreen.png" class="img-fluid ">
+                                    <span class="showmore dispshm d-flex align-items-end mx-2 mb-1"
                                         style="font-size: 13px;text-decoration:none;">
                                         Show More
                                     </span>
@@ -1045,9 +1041,9 @@
                         <div class="row ml-3" style="font-size: 12px;">
                             <a href="" data-toggle="collapse" data-target="#collapseind" aria-expanded="false"
                                 aria-controls="collapseind" style="text-decoration: none;">
-                                <div class="d-flex flex-row dispbtnmore">
-                                    <img src="img/addgreen.png" class="img-fluid dispbtnmore">
-                                    <span class="showmore dispshm d-flex align-items-center mx-2"
+                                <div class="d-flex flex-row divshm">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                    <span class="showmore dispshm d-flex align-items-end mx-2 mb-1"
                                         style="font-size: 13px;text-decoration:none;">
                                         Show More
                                     </span>
@@ -1133,9 +1129,9 @@
                         <div class="row ml-3" style="font-size: 12px;">
                             <a href="" data-toggle="collapse" data-target="#collapsegend" aria-expanded="false"
                                 aria-controls="collapsegend" style="text-decoration: none;">
-                                <div class="d-flex flex-row dispbtnmore">
-                                    <img src="img/addgreen.png" class="img-fluid dispbtnmore">
-                                    <span class="showmore dispshm d-flex align-items-center mx-2"
+                                <div class="d-flex flex-row divshm">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                    <span class="showmore dispshm d-flex align-items-end mx-2 mb-1"
                                         style="font-size: 13px;text-decoration:none;">
                                         Show More
                                     </span>
@@ -1250,9 +1246,9 @@
                         <div class="row ml-3" style="font-size: 12px;">
                             <a href="" data-toggle="collapse" data-target="#collapsearea" aria-expanded="false"
                                 aria-controls="collapsearea" style="text-decoration: none;">
-                                <div class="d-flex flex-row dispbtnmore">
-                                    <img src="img/addgreen.png" class="img-fluid dispbtnmore">
-                                    <span class="showmore dispshm d-flex align-items-center mx-2"
+                                <div class="d-flex flex-row divshm">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                    <span class="showmore dispshm d-flex align-items-end mx-2 mb-1"
                                         style="font-size: 13px;text-decoration:none;">
                                         Show More
                                     </span>
@@ -1364,9 +1360,9 @@
                         <div class="row ml-3" style="font-size: 12px;">
                             <a href="" data-toggle="collapse" data-target="#collapsecomp" aria-expanded="false"
                                 aria-controls="collapsecomp" style="text-decoration: none;">
-                                <div class="d-flex flex-row dispbtnmore">
-                                    <img src="img/addgreen.png" class="img-fluid dispbtnmore">
-                                    <span class="showmore dispshm d-flex align-items-center mx-2"
+                                <div class="d-flex flex-row divshm">
+                                    <img src="img/addgreen.png" class="img-fluid">
+                                    <span class="showmore dispshm d-flex align-items-end mx-2 mb-1"
                                         style="font-size: 13px;text-decoration:none;">
                                         Show More
                                     </span>
@@ -1378,13 +1374,13 @@
                     <!-------------------------BUTTON------------------------------------->
                     <div class="row mt-3 mx-0">
                         <div class="col-6">
-                            <button type="button" class="btn btnjob bg-success w-100 px-3 py-2">
-                                <a href="#" class=" text-white " style="text-decoration: none;">Search</a></button>
+                            <button type="button" class="btn btnjob w-100 px-3 py-2" style="background-color: #0BB44F; ">
+                                <a href="#" style="text-decoration: none; color:#FFFFFF ;">Search</a></button>
                         </div>
 
                         <div class="col-6">
-                            <button type="submit" class="btn btnjob bg-white w-100 px-3 py-2">
-                                <a href="" class=" text-success" style="text-decoration: none;">Reset</a></button>
+                            <button type="submit" class="btn btnjob w-100 px-3 py-2" style="background-color: #FFFFFF; ">
+                                <a href="" style="text-decoration: none;color: #0BB44F;">Reset</a></button>
                         </div>
                     </div>
                 </div>
@@ -1394,16 +1390,14 @@
                 <div class="col-lg-6 col-md-8 col-sm-12 col-xs-10">
 
                     <!-------first div-->
-
-                    <div class="container roun empdivs" style="padding:20px 40px;">
+                    <div class="container roun empdivs" style="padding:20px 40px; border-radius: 10px;">
                         <div class="activator">
-                            <div class="row" style="font-size: 18px;">
+                            <div class="row main1">
                                 <b>Senior Software Quality Assurance Engineer</b>
                             </div>
                             <div class="row">
-                                <img src="img/location.png" class="img-responsive d-inline mr-2">
-                                <small class="d-inline text-muted">Location</small>
-
+                                <img src="img/locgrey.png" class="d-inline mr-3">
+                                <span class="d-inline txtsubemp">Location</span>
                             </div>
                             <div class="row" style="font-size: 12px;">
                                 Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry exp)
@@ -1625,8 +1619,7 @@
                     </div>
 
                     <!-------second div-->
-
-                    <div class="container roun empdivs mt-4" style="padding:20px 40px;">
+                    <div class="container roun empdivs mt-4" style="padding:20px 40px;border-radius: 10px;">
                         <div class="activator">
                             <div class="row" style="font-size: 18px;">
                                 <b>Senior Software Quality Assurance Engineer</b>
@@ -1855,10 +1848,8 @@
                         </div>
                     </div>
 
-
                     <!-------third div-->
-
-                    <div class="container roun empdivs mt-4" style="padding:20px 40px;">
+                    <div class="container roun empdivs mt-4" style="padding:20px 40px;border-radius: 10px;">
                         <div class="activator">
                             <div class="row" style="font-size: 18px;">
                                 <b>Senior Software Quality Assurance Engineer</b>
@@ -2105,26 +2096,26 @@
                                     The Keyword you entered is a*
                                 </div>
                                 <!----------------------------CHECK BOXES------------------>
-                                <div class="form-group form-check" required>
-                                    <div class="d-flex flex-row mt-2">
-                                        <div class="d-inline pr-4">
+                                <div class="form-group form-check mx-3" required>
+                                    <div class="d-flex mt-2 justify-content-between">
+                                        <div class="">
                                             <input type="checkbox" value="Title" class="form-check-input in"
                                                 id="chktitle" name="jobalert">
-                                            <label class="form-check-label" class="fontform" for="chktitle">Job
+                                            <label class="form-check-label fontform" for="chktitle">Job
                                                 Title</label>
                                         </div>
 
-                                        <div class="d-inline pl-4">
+                                        <div class="mr-4">
                                             <input type="checkbox" value="Skills" class="form-check-input"
                                                 id="chkskills" name="jobalert">
-                                            <label class="form-check-label" class="fontform"
+                                            <label class="form-check-label fontform"
                                                 for="chkskills">Skills</label>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-row mt-2">
                                         <input type="checkbox" value="Company" class="form-check-input" id="chkcompany"
                                             name="jobalert">
-                                        <label class="form-check-label" class="fontform"
+                                        <label class="form-check-label fontform"
                                             for="chkcompany">Company</label>
                                         <!--<div class="errMessage text-white bg-success">hghg</div>
                                 -->
@@ -2798,8 +2789,8 @@
                                         placeholder="you@example.com" required>
                                 </div>
 
-                                <button type="submit" class="btn btn-success px-5"
-                                    style="font-size: 14px;">Save</button>
+                                <button type="submit" class="btn btnjob px-5 py-2" style="background-color: #0BB44F;color: white;"
+                                    >Save</button>
                             </form>
                         </div>
                     </div>

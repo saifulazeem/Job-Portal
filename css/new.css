@@ -234,6 +234,8 @@ opacity: 1;
 .advancesearch
 {
   color: #0BB44F;
+  font-size: 20px;
+  font-style: normal;
 }
 .advancesearch:hover
 {
@@ -246,7 +248,7 @@ opacity: 1;
     align-items: left;
 }
 .dropdown-item:hover{
-    background-color: grey;
+    background-color: #DADADA;
 }
 /*color the icon of dropdown DASHBOARD.html*/
 .drop {
@@ -260,6 +262,9 @@ opacity: 1;
 }
 .roun{
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+}
+.roundiv{
+  box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.1);
 }
 .featshad
 {
@@ -295,26 +300,8 @@ text-decoration: none;
 .cards{
   background-color: white;
   border-radius: 6px;
-  height:150px;
+  height:160px;
   } 
-       /*career.html cards*/
-    .subcards-txt:hover{
-      color:white;
-      text-decoration: none;
-      }
-      .subcards:hover{
-        background-color: #0BB44F;
-        text-decoration: none;
-        }
-        /*accountancy.html cards*/
-    .acards-txt:hover{
-      color:white;
-      text-decoration: none;
-      }
-      .acards:hover{
-        background-color: #0BB44F;
-        text-decoration: none;
-        }
 .container-fluid {
     padding: 0px;
     text-align: center;
@@ -545,8 +532,9 @@ text-decoration: none;
 }
 .empsearch::placeholder{
   font-size: 16px;
-  color:grey;
+  color:#707070;
 }
+
 .homebt{
   width: 150px; height: 43px; margin-top: 15px;
 }
@@ -709,14 +697,6 @@ text-decoration: none;
 }
 .blogmar{
   margin: 160px 0px 70px 0px;
-}
-/*Employer.html*/
-.empdivs{
-  border-radius: 12px;
-  padding-left: 19px;
-  padding-right: 19px;
-  font-size: 12px;
-  padding-top: 10px;
 }
 .txtemp{
   font-size: 16px;
@@ -950,7 +930,7 @@ text-decoration: none;
 }
 .empsearch::placeholder{
   font-size: 14px;
-  color:grey;
+  color:#707070;
 }
 .homebt{
   width: 150px; height: 43px; margin-top: 15px;
@@ -1113,14 +1093,6 @@ text-decoration: none;
 }
 .blogmar{
   margin: 160px 0px 70px 0px;
-}
-/*Employer.html*/
-.empdivs{
-  border-radius: 12px;
-  padding-left: 19px;
-  padding-right: 19px;
-  font-size: 12px;
-  padding-top: 10px;
 }
 .txtemp{
   font-size: 16px;
@@ -1368,7 +1340,7 @@ text-decoration: none;
 }
 .empsearch::placeholder{
   font-size: 16px;
-  color:grey;
+  color:#707070;
 }
 .addhome{
   margin-left: 15px;
@@ -1527,14 +1499,6 @@ text-decoration: none;
 }
 .blogmar{
   margin: 160px 0px 70px 0px;
-}
-/*Employer.html*/
-.empdivs{
-  border-radius: 12px;
-  padding-left: 19px;
-  padding-right: 19px;
-  font-size: 12px;
-  padding-top: 10px;
 }
 .txtemp{
   font-size: 16px;
@@ -1797,7 +1761,7 @@ text-decoration: none;
 }
 .empsearch::placeholder{
   font-size: 14px;
-  color:grey;
+  color:#707070;
 }
 #empsearchbtn {
   position: absolute;
@@ -1949,13 +1913,6 @@ text-decoration: none;
 }
 .blogmar{
   margin: 160px 0px 70px 0px;
-}
-/*Employer.html*/
-.empdivs{
-  border-radius: 12px;
-  padding-left: 19px;
-  padding-right: 19px;
-  font-size: 12px;
 }
 .txtemp{
   font-size: 16px;
@@ -2377,18 +2334,6 @@ text-decoration: none;
 .blogmar{
   margin: 160px 0px 70px 0px;
 }
-/*Employer.html*/
-.empdivs{
-  border-radius: 14px;
-  font-size:12px;
-}
-/*Employer.html*/
-.empdivs{
-  border-radius: 12px;
-  padding-left: 19px;
-  padding-right: 19px;
-  font-size: 12px;
-}
 .txtemp{
   font-size: 16px;
 }
@@ -2438,7 +2383,7 @@ text-decoration: none;
 }
 .empsearch::placeholder{
   font-size: 16px;
-  color:grey;
+  color:#707070;
 }
 #empsearchbtn {
   position: absolute;
@@ -2804,13 +2749,6 @@ margin-bottom: -370px;
 .blogmar{
   margin: 160px 0px 90px 0px;
 }
-/*Employer.html*/
-.empdivs{
-  border-radius: 12px;
-  padding-left: 14px;
-  padding-right: 14px;
-  font-size: 12px;
-}
 .txtemp{
   font-size: 16px;
 }
@@ -2887,7 +2825,7 @@ margin-bottom: -370px;
 }
 .empsearch::placeholder{
   font-size: 16px;
-  color:grey;
+  color:#707070;
 }
 #empsearchbtn {
   position: absolute;
@@ -2974,8 +2912,6 @@ table.firhome tr td:nth-child(4) input {
     background-repeat: no-repeat;
 
 }*/
-
-
    /*button*/
 .btnpad {
   padding-right: 70px;
@@ -3333,16 +3269,7 @@ margin-bottom: -370px;
 .blogmar{
   margin: 160px 0px 70px 0px;
 }
-/*Employer.html*/
-.empdivs{
-  border-radius: 12px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 12px;
-}
-.txtemp{
-  font-size: 16px;
-}
+
 .job{
   font-size: 16px;
   text-align: left;
@@ -3369,7 +3296,7 @@ margin-bottom: -370px;
 }
 .empsearch::placeholder{
   font-size: 16px;
-  color:grey;
+  color:#707070;
 }
 .searchform{
   top:-130px;
@@ -3406,6 +3333,7 @@ margin-bottom: -370px;
   height: 43px;
   margin-left: 10px;
 }
+
 table.firemp tr td:nth-child(4) input {
   padding-right: 130px;
   border-radius: 0px;
@@ -3529,7 +3457,21 @@ table.firhome tr td:nth-child(4) input {
 
 
 
-
+.btncollapseemp{
+  background-color: #0BB44F; color: white;
+}
+.btncollapseemp:hover{
+  background-color: #DADADA; color: black;
+}
+.btncollapseemp2{
+  background-color: #DADADA; color: black;
+}
+.btncollapseemp2:hover{
+  background-color: #0BB44F; color: white;
+}
+.inputcol{
+  width: 250px;
+}
 .bt{
   background-color: #0D2942;
   border-radius: 10px;
@@ -3546,8 +3488,8 @@ background-color:  #0BB44F;
 background-color:  #0D2942;
 }
 .btnjob{
-  border-radius: 6px;
-  font-size: 12px;
+  border-radius: 8px;
+  font-size: 14px;
 }
 
 .smallfont{
@@ -3749,9 +3691,6 @@ tr{
 }
 .collapsedivs{
   color:white;
-}
-.collapsedivs:hover{
-  color:#0BB44F;
 }
 /*seeker dashboard*/
 .seekdiv
@@ -4024,4 +3963,61 @@ table.sec td>* {
 }
 .careertable a {
   text-decoration: none;
+}
+.textadvance{
+  margin-top: 6px;
+  font-size: 20px;
+}
+table.firemp p{
+  color: #0D2942;
+}
+.reftxt{
+  font-size: 20px;
+  font-style: normal;
+  letter-spacing: 1px;
+
+}
+.empsidebartxt{
+font-size: 14px;
+font-style: normal;
+}
+.empcattxt{
+  color: #0D2942;
+  font-size: 18px;
+  font-style: normal;
+}
+.txtemp{
+  font-size: 16px;
+  font-style: bold;
+  color: #5E5E5E;
+}
+.txtsubemp{
+  color: #BFBFBF;
+  font-size: 12px;
+  font-style: normal;
+}
+.txtdescemp{
+  color: #808080;
+  font-size: 12px;
+  font-style: normal;
+  text-align: justify;
+}
+.emphead{
+  font-size: 25px;
+  font-weight: bold;
+  color: #5E5E5E;
+}
+.emptxtsub{
+  color: #707070;
+  font-size: 18px;
+  font-style: normal;
+}
+.main1{
+  color: #5E5E5E;
+  font-weight: 500;
+  font-size: 18px;
+}
+.empsidebartxt a{
+  text-decoration: none;
+  color: white;
 }

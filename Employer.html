@@ -21,7 +21,6 @@
             box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
             border-radius: 9px;
         }
-        
     </style>
     <script>
         $(document).ready(function () {
@@ -32,6 +31,21 @@
             }, function () {
                 $(".search").show();
                 $(".imgsearch").hide();
+            });
+            //SHOW MORE
+            $('.dispshm').click(function () {
+                if ($(this).text() == "Less") {
+                    $(this).text("More");
+                } else {
+                    $(this).text("Less");
+                }
+            });
+            $('.imgshm').click(function () {
+                if ($('.dispshm').text() == "Less") {
+                    $('.dispshm').text("More");
+                } else {
+                    $('.dispshm').text("Less");
+                }
             });
         });
     </script>
@@ -59,23 +73,27 @@
                     id="navbarSupportedContent">
                     <ul class="navbar-nav align-items-md-center">
                         <li class="nav-item navone sp">
-                            <a class="nav-link" href="about.html"><span class="float-left">ABOUT US</span></a>
+                            <a class="nav-link" href="about.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">ABOUT US</span></a>
                         </li>
                         <li class="nav-item navtwo sp">
-                            <a class="nav-link" href="Employer.html"><span class="float-left activelink">EMPLOYERS
+                            <a class="nav-link" href="Employer.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2 activelink">EMPLOYERS
                                     PROFILE</span></a>
                         </li>
                         <li class="nav-item navthree sp">
-                            <a class="nav-link" href="careers.html"><span class="float-left">CAREERS
+                            <a class="nav-link" href="careers.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">CAREERS
                                     GUIDE</span></a>
                         </li>
                         <li class="nav-item navfour sp mr-xl-5 mr-lg-5 mr-md-4">
-                            <a class="nav-link" href="blog.html"><span class="float-left ">BLOG</span></a>
+                            <a class="nav-link" href="blog.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">BLOG</span></a>
                         </li>
                         <li class="nav-item">
                             <div class="row d-flex align-items-center">
                                 <a href="login.html"
-                                    class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1">
+                                    class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3">
                                     Login</a>
                             </div>
                         </li>
@@ -95,18 +113,18 @@
                             <tr>
                                 <!--------First row------------->
                                 <td class=" p-0">
-                                    <p class="text-dark float-left" style="margin:0px;">What Job You Are Looking
+                                    <p class="float-left" style="margin:0px;">What Job You Are Looking
                                         For?<img src="img/arrowblack.png" class="img-fluid">
                                     </p>
                                 </td>
                                 <td class=" p-0">
-                                    <p class="text-dark float-left" style="margin:0px;">Where?<img
-                                            src="img/arrowblack.png" class="img-fluid">
+                                    <p class="float-left" style="margin:0px;">Where?<img src="img/arrowblack.png"
+                                            class="img-fluid">
                                     </p>
                                 </td>
                                 <td class=" p-0">
-                                    <p class="text-dark float-left" style="margin:0px;">Categories<img
-                                            src="img/arrowblack.png" class="img-fluid"></p>
+                                    <p class="float-left" style="margin:0px;">Categories<img src="img/arrowblack.png"
+                                            class="img-fluid"></p>
                                 </td>
                                 <td></td>
                             </tr>
@@ -135,8 +153,8 @@
                             <tr>
                                 <!--------Third row------------->
                                 <td colspan="3" class="text-dark">
-                                    <span class="float-left">Need more search options?<a href="#" class="advancesearch"
-                                            style="text-decoration: none;">&nbsp;ADVANCE
+                                    <span class="float-left textadvance">Need more search options?<a href="#"
+                                            class="advancesearch" style="text-decoration: none;">&nbsp;ADVANCE
                                             SEARCH</a></span>
                                 </td>
                                 <td></td>
@@ -214,1768 +232,515 @@
             </div>
 
 
-        <!-------------------------------------NEXT CONTAINER--------------------------->
-        <div class="row mx-4 text shadow my-4 roun">
-            <!------------------------------------------Side Bar left---------------------------------------------->
-            <div class="container text-white col-lg-3 col-md-3 col-sm-10 rounded col-10 my-4" style="background-color: #0D2942;margin-bottom:40px;position:relative;
-                padding-bottom: 200px;">
+            <!-------------------------------------NEXT CONTAINER--------------------------->
+            <div class="row col-12 px-lg-4 px-xl-3 px-md-1 px-sm-2 px-2 mx-auto text my-4 roun"
+                style="border-radius: 8px;">
+                <!------------------------------------------Side Bar left---------------------------------------------->
+                <div class="text-white col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12 my-4 empsidebartxt" style="background-color: #0D2942;margin-bottom:40px;position:relative;
+                padding-bottom: 200px; border-radius: 7px;">
 
-                <div class="row tag my-auto mx-auto d-flex justify-content-center" style="padding-top:30px;">
-                    REFINE YOUR SEARCH
-                </div>
+                    <div class="row my-auto d-flex justify-content-center reftxt" style="padding-top:30px;">
+                        REFINE YOUR SEARCH
+                    </div>
 
-                <div class="row my-2 mx-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
-                        City
+                    <div class="d-flex justify-content-between mt-3 mx-2">
+                        <div>
+                            City
+                        </div>
+                        <div>
+                            (24)
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
-                        (24)
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <hr class="divider ">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hr style="background-color: #707070;">
+                        </div>
                     </div>
-                </div>
 
-                <div class="row my-2 mx-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
-                        City
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
-                        (24)
-                    </div>
-                </div>
-                <div class="row my-2 mx-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
-                        City
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
-                        (24)
-                    </div>
-                </div>
-                <div class="row my-2 mx-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
-                        City
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
-                        (24)
-                    </div>
-                </div>
-                <div class="row my-2 mx-2">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
-                        City
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
-                        (24)
-                    </div>
-                </div>
+                    <a href="" class="d-flex justify-content-between my-1 mx-2">
+                        <div>
+                            LONDON
+                        </div>
+                        <div>
+                            (24)
+                        </div>
+                    </a>
 
-                <div class="row my-2 mx-4">
-                    <div class="col-lg-4 col-md-5 col-sm-6 col-1 offset-1">
+                    <a href="" class="d-flex justify-content-between my-1 mt-3 mx-2">
+                        <div>
+                            BATAM
+                        </div>
+                        <div>
+                            (24)
+                        </div>
+                    </a>
 
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-2 offset-sm-2 col-2 offset-5">
-                    </div>
-                </div>
-            </div>
+                    <a href="" class="d-flex justify-content-between my-1 mt-3 mx-2">
+                        <div>
+                            NEW YORK
+                        </div>
+                        <div>
+                            (24)
+                        </div>
+                    </a>
 
-            <!------------------------------------------Side bar right---------------------------------------------->
-            <div class="col-lg-8 col-md-8 col-sm-8 col-10 mx-2 my-4">
-                <div class="row text-left">
-                    <div class="col-lg-5 col-md-6 col-sm-6 col-10  tag font-weight-bold">
-                        All Employers
-                    </div>
-                    <div class="col-lg-3 offset-lg-4 col-md-4 offset-md-2 col-sm-6 offset-sm-0 col-10  ">
-                        <div class=" border-success border-bottom border-3">
-                            <div class="d-inline text">
-                                Best Match
+                    <a href="" class="d-flex justify-content-between my-1 mt-3 mx-2">
+                        <div>
+                            SYDNEY
+                        </div>
+                        <div>
+                            (24)
+                        </div>
+                    </a>
+
+                    <!------------collapse div-->
+                    <div id="collapsemore" class="collapse">
+                        <a href="" class="d-flex justify-content-between my-1 mt-3 mx-2">
+                            <div>
+                                BATAM
                             </div>
-                            <div class="d-inline mt-2 float-right dropdown-toggle text-success" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false" id="drop">
+                            <div>
+                                (24)
+                            </div>
+                        </a>
 
-                                <div class="dropdown-menu" aria-labelledby="drop">
-                                    <a class="dropdown-item text" href="#">Web Developer</a>
-                                    <a class="dropdown-item text" href="#">Content Writer</a>
-                                    <a class="dropdown-item text" href="#">Graphics</a>
+                        <a href="" class="d-flex justify-content-between my-1 mt-3 mx-2">
+                            <div>
+                                NEW YORK
+                            </div>
+                            <div>
+                                (24)
+                            </div>
+                        </a>
+
+                        <a href="" class="d-flex justify-content-between my-1 mt-3 mx-2">
+                            <div>
+                                SYDNEY
+                            </div>
+                            <div>
+                                (24)
+                            </div>
+                        </a>
+                    </div>
+
+                    <a href="" class="mx-2 mt-2 d-flex flex-row" data-toggle="collapse" data-target="#collapsemore"
+                        aria-expanded="false" aria-controls="collapsemore">
+                        <img src="img/addgreen.png" class="img-fluid imgshm">
+                        <span class="showmore dispshm d-flex align-items-end mx-2 mb-1" style="text-decoration:none;">
+                            More
+                        </span>
+                    </a>
+                </div>
+
+                <!------------------------------------------Side bar right---------------------------------------------->
+                <div class="col-xl-9 col-lg-9 col-md-8 col-sm-12 col-12 my-4 ">
+                    <div class="row text-left ml-xl-2 ml-lg-2 ml-md-0 ml-sm-0 ml-0">
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-12 ">
+                            <span class="emphead">All Employers</span>
+                        </div>
+                        <div
+                            class="col-lg-3 offset-lg-4 col-md-4 offset-md-2 col-sm-6 offset-sm-0 col-6 mt-3 mt-sm-0 offset-0">
+                            <div class=" border-success border-bottom border-3">
+                                <div class="d-inline emptxtsub">
+                                    Best Match
+                                </div>
+                                <div class="d-inline mt-2 float-right dropdown-toggle text-success"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="drop"
+                                    style="font-size: 20px;">
+
+                                    <div class="dropdown-menu" aria-labelledby="drop">
+                                        <a class="dropdown-item text" href="#">Web Developer</a>
+                                        <a class="dropdown-item text" href="#">Content Writer</a>
+                                        <a class="dropdown-item text" href="#">Graphics</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                        <!-------------------------------------------A Category------------------------------------->
+                        <div>
+                            <div class="row mt-2 mx-xl-2 mx-lg-2 mx-md-0 mx-sm-0 mx-0">
+                                <div class="col-xl-12 col-lg-12 col-md-11 col-sm-12 col-12 rounded"
+                                    style="background-color: #DADADA;">
+                                    <span class="empcattxt">A</span>
+                                </div>
+                            </div>
 
-                    <!-------------------------------------------A Category------------------------------------->
-                    <div>
-                        <div class="row my-4 mx-2">
-                            <div class="col-12 mx-2 text-md rounded" style="background-color: #F5F5F5;">
-                                A
+                            <div class="row mt-2">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-11">
+                                    <!-------------------------------------first row---------------------------------->
+                                    <div class="row my-3 mx-xl-4 mx-lg-4 mx-md-5 mx-sm-3 mx-3 ">
+                                        <!-------first col------->
+                                        <div class="col roundiv py-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3 mt-sm-0 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
+                                                </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
+                                                </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
+                                                </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-------second col------->
+                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-sm-0 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
+                                                </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
+                                                </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
+                                                </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-------third col------->
+                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-0 ml-sm-3 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
+                                                </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
+                                                </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
+                                                </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-------fourth col------->
+                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
+                                                </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
+                                                </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
+                                                </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-
-                        <div class="row ">
-                            <!----------------------------LARGE VIEW-------------------->
-                            <div class="col-lg-12 table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Second Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the students. We have been helping college and
-                                                            university
-                                                            students for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <!-------------------------------------------B Category------------------------------------->
+                        <div>
+                            <div class="row mt-2 mx-xl-2 mx-lg-2 mx-md-0 mx-sm-0 mx-0">
+                                <div class="col-xl-12 col-lg-12 col-md-11 col-sm-12 col-12 rounded"
+                                    style="background-color: #DADADA;">
+                                    <span class="empcattxt">B</span>
+                                </div>
                             </div>
 
-                            <!----------------------------MEDIUM VIEW-------------------->
-                            <div class="col-md-12 table-responsive-md d-md-block d-sm-none d-lg-none d-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
+                            <div class="row mt-2">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-11">
+                                    <!-------------------------------------first row---------------------------------->
+                                    <div class="row my-3 mx-xl-4 mx-lg-4 mx-md-5 mx-sm-3 mx-3 ">
+                                        <!-------first col------->
+                                        <div class="col roundiv py-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3 mt-sm-0 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
                                                 </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Second Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
                                                 </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <!------------Second row-->
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
                                                 </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
                                                 </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                            </div>
+                                        </div>
+                                        <!-------second col------->
+                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-sm-0 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
+                                                </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
+                                                </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
+                                                </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-------third col------->
+                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-0 ml-sm-3 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
+                                                </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
+                                                </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
+                                                </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-------fourth col------->
+                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
+                                                </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
+                                                </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
+                                                </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------------------------------------------C Category------------------------------------->
+                        <div>
+                            <div class="row mt-2 mx-2">
+                                <div class="col-xl-12 col-lg-12 col-md-11 col-sm-12 col-12 rounded"
+                                    style="background-color: #DADADA;">
+                                    <span class="empcattxt">C</span>
+                                </div>
                             </div>
 
-                            <!----------------------------SMALL VIEW-------------------->
-                            <div class="col-sm-12 table-responsive-sm d-sm-block d-none d-lg-none d-md-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
+                            <div class="row mt-2">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-11">
+                                    <!-------------------------------------first row---------------------------------->
+                                    <div class="row my-3 mx-xl-4 mx-lg-4 mx-md-5 mx-sm-3 mx-3 ">
+                                        <!-------first col------->
+                                        <div class="col roundiv py-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3 mt-sm-0 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
                                                 </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Second Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
                                                 </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <!------------Second row-->
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
                                                 </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
                                                 </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                            </div>
+                                        </div>
+                                        <!-------second col------->
+                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-sm-0 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
+                                                </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
+                                                </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
+                                                </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-------third col------->
+                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-0 ml-sm-3 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
+                                                </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
+                                                </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
+                                                </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-------fourth col------->
+                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                            style="border-radius: 10px;">
+                                            <div class="d-flex flex-column text-left mx-2">
+                                                <div class=" d-flex justify-content-center align-items-center">
+                                                    <img src="img/c1.png" class="img-fluid">
+                                                </div>
+                                                <div class="">
+                                                    <h1 class="txtemp"> Academic Writing
+                                                        Assistance</h1>
+                                                </div>
+                                                <div class="">
+                                                    <img src="img/locgrey.png" class="d-inline">
+                                                    <small class="d-inline txtsubemp">Location</small>
+                                                </div>
+                                                <div class="txtdescemp">
+                                                    We, at Assignmenthelp.ae, providing the writing services
+                                                    to
+                                                    the
+                                                    students. We have been helping college and university
+                                                    students
+                                                    for more than 7 years....
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <!-----------------------VERY SMALL VIEW-------------------->
-                            <div class="col-sm-12 table-responsive-xs d-block d-sm-none d-md-none d-lg-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <!-------------------------Second Row----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <!------------Third row-->
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row text-center">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="bg-primary d-flex align-self-center">
-                                                            <img src="img/location.png" class="d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <div class="row mx-4 mt-5 d-flex justify-content-center">
+                                <!------------pagination-->
+                                <nav class="d-flex align-text-center justify-content-center">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item disabled ml-2">
+                                            <a class="page-link" href="#" tabindex="-1">1</a>
+                                        </li>
 
+                                        <li class="page-item ml-2"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item ml-2"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item ml-2">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
-
-                    <!-------------------------------------------B Category------------------------------------->
-                    <div>
-                        <div class="row my-4 mx-2">
-                            <div class="col-12 mx-2 text-md rounded" style="background-color: #F5F5F5;">
-                                B
-                            </div>
-                        </div>
-
-
-                        <div class="row ">
-                            <!----------------------------LARGE VIEW-------------------->
-                            <div class="col-lg-12 table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Second Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!----------------------------MEDIUM VIEW-------------------->
-                            <div class="col-md-12 table-responsive-md d-md-block d-sm-none d-lg-none d-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Second Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <!------------Second row-->
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!----------------------------SMALL VIEW-------------------->
-                            <div class="col-sm-12 table-responsive-sm d-sm-block d-none d-lg-none d-md-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Second Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <!------------Second row-->
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-----------------------VERY SMALL VIEW-------------------->
-                            <div class="col-sm-12 table-responsive-xs d-block d-sm-none d-md-none d-lg-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Second Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <!------------Second row-->
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-------------------------------------------C Category------------------------------------->
-                    <div>
-                        <div class="row my-4 mx-2">
-                            <div class="col-12 mx-2 text-md rounded" style="background-color: #F5F5F5;">
-                                C
-                            </div>
-                        </div>
-
-
-                        <div class="row ">
-                            <!----------------------------LARGE VIEW-------------------->
-                            <div class="col-lg-12 table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Second Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!----------------------------MEDIUM VIEW-------------------->
-                            <div class="col-md-12 table-responsive-md d-md-block d-sm-none d-lg-none d-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Second Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <!------------Second row-->
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!----------------------------SMALL VIEW-------------------->
-                            <div class="col-sm-12 table-responsive-sm d-sm-block d-none d-lg-none d-md-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Second Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <!------------Second row-->
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-----------------------VERY SMALL VIEW-------------------->
-                            <div class="col-sm-12 table-responsive-xs d-block d-sm-none d-md-none d-lg-none">
-                                <table class="table table-sm table-borderless">
-                                    <tbody>
-                                        <!--------------------------------------First Row----------------------------------->
-                                        <tr>
-                                            <td>
-                                                <!-------------------------First Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4 ">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Second Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <!------------Second row-->
-                                            <td>
-                                                <!-------------------------Third Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <!-------------------------Fourth Col----------------------------------->
-                                                <div class="container roun empdivs ">
-                                                    <div class="row m-4">
-                                                        <p class="text-dark m-auto" style="height: 50px;">
-                                                            <img src="img/c1.png" class="img-fluid w-100">
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <h1 class="text-dark txtemp mx-4"> Academic Writing
-                                                            Assistance</h1>
-                                                    </div>
-                                                    <div class="row ">
-                                                        <div class="mx-4">
-                                                            <img src="img/location.png" class="img-responsive d-inline">
-                                                            <small class="d-inline text-muted">Location</small>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p class="text-dark text-sm  m-4 text-justify"
-                                                            style="font-size: small;">
-                                                            We, at Assignmenthelp.ae, providing the writing services
-                                                            to
-                                                            the
-                                                            students. We have been helping college and university
-                                                            students
-                                                            for more than 7 years....</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-
-                        <div class="row mx-4 my-4 d-flex justify-content-center">
-                            <!------------pagination-->
-                            <nav class="d-flex align-text-center justify-content-center">
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item disabled ml-2">
-                                        <a class="page-link" href="#" tabindex="-1">1</a>
-                                    </li>
-
-                                    <li class="page-item ml-2"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item ml-2"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item ml-2">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!-----------------------------------------------------FOOTER----------------------------------------------------------->
     <footer class="container-fluid foot pb-5 pt-4" style="background-color: #323232; ">
