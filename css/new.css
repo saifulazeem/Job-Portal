@@ -3737,16 +3737,6 @@ tr{
 .delhov{
   cursor: hand;
 }
-.content {
-  display: none;
-  margin: 15px;
-}
-.activator:hover {
-  width: 500px;
-}
-.activator:hover .content {
-  display: block;
-}
 
 .resumetable td{
   font-size: 12px;
