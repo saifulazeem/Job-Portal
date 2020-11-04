@@ -47,6 +47,11 @@
                     $('.dispshm').text("Less");
                 }
             });
+
+            $('.txtdescemp').map(function () {
+                var myval = ($(this).attr('id'));
+                $('#' + myval).text($('#' + myval).text().substring(0, 550) + '...');
+            });
         });
     </script>
 </head>
@@ -91,7 +96,8 @@
                                     class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">BLOG</span></a>
                         </li>
                         <li class="nav-item">
-                            <div class="row d-flex align-items-center">
+                            <div
+                                class="row d-flex align-items-center mt-md-0 mt-sm-1 my-1 mb-2 mb-xl-0 mb-lg-0 mb-md-0 mb-sm-2">
                                 <a href="login.html"
                                     class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3">
                                     Login</a>
@@ -359,117 +365,103 @@
                         </div>
 
                         <!-------------------------------------------A Category------------------------------------->
-                        <div>
-                            <div class="row mt-2 mx-xl-2 mx-lg-2 mx-md-0 mx-sm-0 mx-0">
+                        <div class="mt-2">
+                            <div class="row mt-2 mx-xl-2 mx-lg-2 mx-md-0 mx-sm-0 mx-0 my-4">
                                 <div class="col-xl-12 col-lg-12 col-md-11 col-sm-12 col-12 rounded"
                                     style="background-color: #DADADA;">
                                     <span class="empcattxt">A</span>
                                 </div>
                             </div>
 
-                            <div class="row mt-2">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-11">
-                                    <!-------------------------------------first row---------------------------------->
-                                    <div class="row my-3 mx-xl-4 mx-lg-4 mx-md-5 mx-sm-3 mx-3 ">
-                                        <!-------first col------->
-                                        <div class="col roundiv py-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3 mt-sm-0 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                            <div class="row col-12 mt-2 mb-3 mx-auto">
+                                <!-------------------------------------first row---------------------------------->
+                                <!-------first col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-sm-0 mt-3 w-100"
+                                    style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
                                         </div>
-                                        <!-------second col------->
-                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-sm-0 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
                                         </div>
-                                        <!-------third col------->
-                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-0 ml-sm-3 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
                                         </div>
-                                        <!-------fourth col------->
-                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                                        <div class="txtdescemp" id="txtone">
+                                            We, at Assignmenthelp.ae, providing the writing services
+                                            to
+                                            the
+                                            students. We have been helping college and university
+                                            students
+                                            for more than 7 years
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-------second col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-sm-0 mt-3" style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
+                                        </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
+                                        </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
+                                        </div>
+                                        <div class="txtdescemp" id="txttwo">
+                                            AlphaSights provides bespoke B2B knowledge solutions to leading
+                                            professionals in investment management, private equity, management
+                                            consulting, global
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-------third col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                    style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
+                                        </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
+                                        </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
+                                        </div>
+                                        <div class="txtdescemp" id="txtthree">
+                                            Otro de los mejores cursos que ofrecemos es el curso de creación y
+                                            gestión de pymes, o este de competencias de ciberseguridad para
+                                            usuarios. Este curso
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-------fourth col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                    style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
+                                        </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
+                                        </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
+                                        </div>
+                                        <div class="txtdescemp" id="txtfour">
+                                            Aanmeegam (ஆன்மீகம்) is one of the best Tamil Aanmeegam websites. At
+                                            Anmigam, our mission is to distribute the value of worshiping GOD to
+                                            the Tamil
                                         </div>
                                     </div>
                                 </div>
@@ -485,109 +477,95 @@
                                 </div>
                             </div>
 
-                            <div class="row mt-2">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-11">
-                                    <!-------------------------------------first row---------------------------------->
-                                    <div class="row my-3 mx-xl-4 mx-lg-4 mx-md-5 mx-sm-3 mx-3 ">
-                                        <!-------first col------->
-                                        <div class="col roundiv py-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3 mt-sm-0 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                            <div class="row col-12 mt-2 mb-3 mx-auto">
+                                <!-------------------------------------first row---------------------------------->
+                                <!-------first col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-sm-0 mt-3 w-100"
+                                    style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
                                         </div>
-                                        <!-------second col------->
-                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-sm-0 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
                                         </div>
-                                        <!-------third col------->
-                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-0 ml-sm-3 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
                                         </div>
-                                        <!-------fourth col------->
-                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                                        <div class="txtdescemp" id="txt2one">
+                                            We, at Assignmenthelp.ae, providing the writing services
+                                            to
+                                            the
+                                            students. We have been helping college and university
+                                            students
+                                            for more than 7 years
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-------second col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-sm-0 mt-3" style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
+                                        </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
+                                        </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
+                                        </div>
+                                        <div class="txtdescemp" id="txt2two">
+                                            AlphaSights provides bespoke B2B knowledge solutions to leading
+                                            professionals in investment management, private equity, management
+                                            consulting, global
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-------third col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                    style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
+                                        </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
+                                        </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
+                                        </div>
+                                        <div class="txtdescemp" id="txt2three">
+                                            Otro de los mejores cursos que ofrecemos es el curso de creación y
+                                            gestión de pymes, o este de competencias de ciberseguridad para
+                                            usuarios. Este curso
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-------fourth col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                    style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
+                                        </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
+                                        </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
+                                        </div>
+                                        <div class="txtdescemp" id="txt2four">
+                                            Aanmeegam (ஆன்மீகம்) is one of the best Tamil Aanmeegam websites. At
+                                            Anmigam, our mission is to distribute the value of worshiping GOD to
+                                            the Tamil
                                         </div>
                                     </div>
                                 </div>
@@ -603,109 +581,95 @@
                                 </div>
                             </div>
 
-                            <div class="row mt-2">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-11">
-                                    <!-------------------------------------first row---------------------------------->
-                                    <div class="row my-3 mx-xl-4 mx-lg-4 mx-md-5 mx-sm-3 mx-3 ">
-                                        <!-------first col------->
-                                        <div class="col roundiv py-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3 mt-sm-0 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                            <div class="row col-12 mt-2 mb-3 mx-auto">
+                                <!-------------------------------------first row---------------------------------->
+                                <!-------first col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-sm-0 mt-3 w-100"
+                                    style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
                                         </div>
-                                        <!-------second col------->
-                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-sm-0 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
                                         </div>
-                                        <!-------third col------->
-                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-0 ml-sm-3 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
                                         </div>
-                                        <!-------fourth col------->
-                                        <div class="col roundiv py-3 ml-xl-3 ml-lg-1 ml-md-3 ml-sm-2 ml-3 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
-                                            style="border-radius: 10px;">
-                                            <div class="d-flex flex-column text-left mx-2">
-                                                <div class=" d-flex justify-content-center align-items-center">
-                                                    <img src="img/c1.png" class="img-fluid">
-                                                </div>
-                                                <div class="">
-                                                    <h1 class="txtemp"> Academic Writing
-                                                        Assistance</h1>
-                                                </div>
-                                                <div class="">
-                                                    <img src="img/locgrey.png" class="d-inline">
-                                                    <small class="d-inline txtsubemp">Location</small>
-                                                </div>
-                                                <div class="txtdescemp">
-                                                    We, at Assignmenthelp.ae, providing the writing services
-                                                    to
-                                                    the
-                                                    students. We have been helping college and university
-                                                    students
-                                                    for more than 7 years....
-                                                </div>
-                                            </div>
+                                        <div class="txtdescemp" id="txt3one">
+                                            We, at Assignmenthelp.ae, providing the writing services
+                                            to
+                                            the
+                                            students. We have been helping college and university
+                                            students
+                                            for more than 7 years
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-------second col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-sm-0 mt-3" style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
+                                        </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
+                                        </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
+                                        </div>
+                                        <div class="txtdescemp" id="txt3two">
+                                            AlphaSights provides bespoke B2B knowledge solutions to leading
+                                            professionals in investment management, private equity, management
+                                            consulting, global
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-------third col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                    style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
+                                        </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
+                                        </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
+                                        </div>
+                                        <div class="txtdescemp" id="txt3three">
+                                            Otro de los mejores cursos que ofrecemos es el curso de creación y
+                                            gestión de pymes, o este de competencias de ciberseguridad para
+                                            usuarios. Este curso
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-------fourth col------->
+                                <div class="col roundiv externalpad py-3 ml-xl-3 ml-lg-2 ml-md-3 ml-sm-4 ml-4 mt-lg-0 mt-md-3 mt-sm-3 mt-3"
+                                    style="border-radius: 10px;">
+                                    <div class="d-flex flex-column text-left internalpad">
+                                        <div class=" d-flex justify-content-center align-items-center">
+                                            <img src="img/c1.png" class="img-fluid">
+                                        </div>
+                                        <div class="">
+                                            <h1 class="txtemp"> Academic Writing
+                                                Assistance</h1>
+                                        </div>
+                                        <div class="">
+                                            <img src="img/locgrey.png" class="d-inline">
+                                            <small class="d-inline txtsubemp">Location</small>
+                                        </div>
+                                        <div class="txtdescemp" id="txt3four">
+                                            Aanmeegam (ஆன்மீகம்) is one of the best Tamil Aanmeegam websites. At
+                                            Anmigam, our mission is to distribute the value of worshiping GOD to
+                                            the Tamil
                                         </div>
                                     </div>
                                 </div>
