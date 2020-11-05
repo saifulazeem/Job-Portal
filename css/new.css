@@ -6,6 +6,13 @@ html,body
     box-shadow: none!important;
     outline:none!important;
     }
+    .dots{
+      color: #0BB44F;
+      font-size: 40px;
+    }
+    .dots:hover{
+      cursor: context-menu;
+    }
 .pagination a {
   border-radius: 5px;
   border:none;
@@ -296,7 +303,7 @@ text-decoration: none;
       color:white;
       text-decoration: none;
       }
-      .cards:hover{
+      .cards:hover, .acccards:hover{
         background-color: #0BB44F;
         text-decoration: none;
         }
@@ -306,6 +313,7 @@ text-decoration: none;
   border-radius: 6px;
   height:160px;
   } 
+  
 .container-fluid {
     padding: 0px;
     text-align: center;
@@ -315,14 +323,9 @@ text-decoration: none;
 }
 /***********************************************************************************************************************/
 @media (min-width: 300px) {
-.bg-img-blog {
-  background: url(/img/blogmain.png);
-  background-size:100% 100%;
-    background-position:center;
-    background-repeat: no-repeat;
-}
 .externalpad{
   margin:0px 20px;
+  left: 0px;
 }
   .btnpad {
     padding-right: 20px;
@@ -397,15 +400,6 @@ text-decoration: none;
   top: 180px;
   left: 66px;
 }
-  /*green strip on testimonial div*/
-.testdiv
-{
-  margin-left:0px; width: 350px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;
-}
-.testimg{
-  padding-left: 109px; 
-}
-
 .over-about{
   top:50px;
   margin-bottom: 80px;
@@ -756,7 +750,8 @@ margin:0px 120px;
 @media (min-width: 400px) {
 
 .externalpad{
-  margin:0px 120px;
+  margin:0px 100px;
+  left: 30px;
 }
   /*footer circle image*/
   .resp {
@@ -802,14 +797,6 @@ margin:0px 120px;
   left: 66px;
 }
 
-  /*green strip on testimonial div*/
-.testdiv
-{
-  margin-left:0px; width: 350px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;
-}
-.testimg{
-  padding-left: 109px; 
-}
 .over-about{
   top:70px;
   margin-bottom: 100px;
@@ -1142,7 +1129,8 @@ margin:0px 120px;
 /***********************************************************************************************************************/
 @media (min-width: 500px) {
   .externalpad{
-    margin:0px 120px;
+    margin:0px 140px;
+    left: 40px;
   }
   .btnpad {
     padding-right: 25px;
@@ -1212,14 +1200,6 @@ margin:0px 120px;
   position: absolute;
   top: 180px;
   left: 66px;
-}
-  /*green strip on testimonial div*/
-.testdiv
-{
-  margin-left:0px; width: 350px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;
-}
-.testimg{
-  padding-left: 109px; 
 }
 .over-about{
   top:70px;
@@ -1551,7 +1531,8 @@ margin:0px 120px;
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
   .externalpad{
-    margin:0px 33px;
+    margin:0px 40px;
+    left: 0px;
   }
   .btnpad {
     padding-right: 30px;
@@ -1622,14 +1603,6 @@ margin:0px 120px;
   position: absolute;
   top: 180px;
   left: 66px;
-}
-/*green strip on testimonial div*/
-.testdiv
-{
-  margin-left:0px; width: 225px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;
-}
-.testimg{
-  padding-left: 70px; 
 }
 /*about.html div*/
 .over-about{
@@ -2067,15 +2040,6 @@ margin:0px 120px;
   font-size: 52px;
 }
 
-/*green strip on testimonial div*/
-.testdiv
-{
-  margin-left:0px; width: 258px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;
-}
-.testimg{
-  padding-left: 90px; 
-}  
-
 /*home.html main img top*/ 
 .homeimg{
   height:660px;
@@ -2286,6 +2250,73 @@ margin:0px 120px;
   color:black;
   font-size: 12px;
   }     
+  .acccards{
+    background-color: white;
+    border-radius: 6px;
+    height:140px;
+    width: 135px;
+    }  
+/*accountancy.html cards div*/
+.aover{
+  top: -560px;
+}
+/*accountancy.html sub div*/
+.dover{
+top: -380px;
+}
+/*accountancy.html testimonial*/
+.tover{
+padding-top: 700px;
+}
+
+.accmar{
+width: 100%;
+height: 100vh;
+margin-bottom: 270px;
+}
+/*career.html above img text*/
+.acctxt{
+margin-top: 130px;
+font-size: 55px;
+font-weight: 750;
+letter-spacing: 6px;
+}
+.accsubtxt{
+margin-top: 30px;
+font-size: 18px;
+font-style: normal;
+line-height: 1.5;
+}
+.accsubhead{
+font-size: 40px;
+letter-spacing: 3px;
+font-style: normal;
+}
+.accsubdeschead{
+font-size: 20px;
+letter-spacing: 2px;
+font-weight: bold;
+}
+.accsubdesctxt{
+font-size: 15px;
+font-style: normal;
+}
+/*career.html circle div*/
+.acc{
+position: absolute;
+right:-340px;
+top:150px;
+}
+/*accountancy.html circle image*/
+.accimg{
+  width:450px;
+  height:450px;
+}
+/*acc.html rectangle*/
+.acctopimg{
+  height:390px;
+}
+
   .careermar{
     width: 100%;
     height: 100vh;
@@ -2534,15 +2565,6 @@ table.firhome tr td:nth-child(4) input {
   padding:40px;
 }
 
-/*green strip on testimonial div*/
-.testdiv
-{
-  margin-left:-2px; width: 227px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;
-}
-.testimg{
-  padding-left: 70px; 
-}
-
 /*home.html main img top*/ 
 .homeimg{
   height:600px;
@@ -2695,6 +2717,73 @@ table.firhome tr td:nth-child(4) input {
   color:black;
   font-size: 12px;
   }     
+  .acccards{
+    background-color: white;
+    border-radius: 6px;
+    height:160px;
+    width: 160px;
+    }  
+/*accountancy.html cards div*/
+.aover{
+  top: -560px;
+}
+/*accountancy.html sub div*/
+.dover{
+top: -300px;
+}
+/*accountancy.html testimonial*/
+.tover{
+padding-top: 700px;
+}
+
+.accmar{
+width: 100%;
+height: 100vh;
+margin-bottom: 270px;
+}
+/*career.html above img text*/
+.acctxt{
+margin-top: 130px;
+font-size: 60px;
+font-weight: 750;
+letter-spacing: 8px;
+}
+.accsubtxt{
+margin-top: 30px;
+font-size: 17px;
+font-style: normal;
+line-height: normal;
+}
+.accsubhead{
+font-size: 40px;
+letter-spacing: 4px;
+font-style: normal;
+}
+.accsubdeschead{
+font-size: 22px;
+letter-spacing: 2px;
+font-weight: bold;
+}
+.accsubdesctxt{
+font-size: 16px;
+font-style: normal;
+}
+/*career.html circle div*/
+.acc{
+position: absolute;
+right:-320px;
+top:180px;
+}
+/*accountancy.html circle image*/
+.accimg{
+  width:500px;
+  height:500px;
+}
+/*acc.html rectangle*/
+.acctopimg{
+  height:280px;
+}
+
   .careermar{
     width: 100%;
     height: 100vh;
@@ -2899,9 +2988,6 @@ table.firhome tr td:nth-child(4) input {
  }
 /***********************************************************************************************************************/
  @media (min-width: 1200px) {
-  .externalpad{
-
-  }
    /*button*/
 .btnpad {
   padding-right: 70px;
@@ -2971,16 +3057,6 @@ table.firhome tr td:nth-child(4) input {
   top: 130px;
   left: 196px;
 }
-
-/*green strip on testimonial div*/
-.testdiv
-{
-  margin-left:-2px; width: 278px; margin-bottom: -50px; height: 60px; border-radius: 20px 20px 0px 0px;
-}
-.testimg{
-  padding-left: 100px; 
-}
-
 .img-resp{
   height:600px;
 }
@@ -3145,60 +3221,64 @@ font-size: 20px;
 
 /*accountancy.html cards div*/
 .aover{
-    top: -650px;
+    top: -620px;
 }
-
 /*accountancy.html sub div*/
 .dover{
   top: -400px;
 }
 /*accountancy.html testimonial*/
 .tover{
- margin-top: 400px;
+ padding-top: 600px;
 }
 
 .accmar{
   width: 100%;
   height: 100vh;
-  margin-bottom: 320px;
+  margin-bottom: 270px;
 }
 /*career.html above img text*/
 .acctxt{
-  margin-top: 150px;
+  margin-top: 130px;
   font-size: 70px;
-  font-weight: 700;
+  font-weight: 750;
   letter-spacing: 8px;
 }
 .accsubtxt{
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 17px;
   font-style: normal;
+  line-height: normal;
 }
 .accsubhead{
   font-size: 50px;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   font-style: normal;
 }
 .accsubdeschead{
-  font-size: 25px;
+  font-size: 22px;
   letter-spacing: 2px;
   font-weight: bold;
 }
 .accsubdesctxt{
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
 }
 /*career.html circle div*/
 .acc{
   position: absolute;
-  right:-760px;
-  top:100px;
+  right:-500px;
+  top:120px;
 }
   /*accountancy.html circle image*/
   .accimg{
-    width:740px;
-    height:740px;
+    width:600px;
+    height:600px;
   }
+  /*acc.html rectangle*/
+.acctopimg{
+  height:400px;
+}
 .careermar{
   width: 100%;
   height: 100vh;
@@ -3219,7 +3299,7 @@ font-size: 20px;
 /*career.html circle div*/
 .cir{
   position: absolute;
-  right:-590px;
+  right:-510px;
   top:-200px;
 }
   /*career.html circle image*/
@@ -3237,12 +3317,19 @@ font-size: 20px;
 .topimg{
   height:300px;
 }
+
 /*career.html cards*/
 .cards-txt{
   color:black;
   font-size: 14px;
   text-decoration: none;
   }  
+  .acccards{
+    background-color: white;
+    border-radius: 6px;
+    height:170px;
+    width: 170px;
+    } 
   /*blog.html div*/
 .bover-about{
   top:-600px;
@@ -4032,6 +4119,10 @@ font-style: normal;
   font-weight: bold;
   font-size: 18px;
 }
+.main2{
+  position: absolute;
+  left:60px;
+}
 .empsidebartxt a{
   text-decoration: none;
   color: white;
@@ -4050,4 +4141,34 @@ font-style: normal;
 }
 .txtpl:hover{
   color: #0D2942;
+}
+/*accountancy.html*/
+/*green strip on testimonial div*/
+.ttop{
+  z-index: 9; top:-30px; position: relative;bottom: -20px;
+}
+.testdiv{
+  background-color: #0BB44F;
+  height: 80px;
+  position: relative;
+  border-radius: 10px 10px 0px 0px;
+}
+.tname{
+font-size: 16px;
+font-weight: bold;
+color: #404040;
+}
+.tdesig{
+font-size: 12px;
+font-style: normal;
+color: #808080;
+}
+.tdesc{
+  font-family: Sitka Text;
+  font-size: 14px;
+  color: #404040;
+  line-height: 1.7;
+}
+.imgheight{
+  height: 40px;
 }
