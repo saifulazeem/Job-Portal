@@ -14,6 +14,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
+    <style>
+.bg-img-blog {
+  background: url(img/blogmain.png);
+  background-size:100% 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+    </style>
 </head>
 
 <body>
@@ -28,34 +36,39 @@
                         <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block"
                             style="border: none; outline: none;">
                     </a>
-
+    
                     <button class="navbar-toggler navbar-dark mt-2" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation" style="border: none; outline: none;">
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation" style="border: none; outline: none;">
                         <img class="img-fluid" src="img/lines.png">
                     </button>
-
+    
                     <div class="collapse mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0 navbar-collapse navbar-right  justify-content-end"
                         id="navbarSupportedContent">
                         <ul class="navbar-nav align-items-md-center">
                             <li class="nav-item navone sp">
-                                <a class="nav-link" href="about.html"><span class="float-left">ABOUT US</span></a>
+                                <a class="nav-link" href="about.html"><span
+                                        class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">ABOUT US</span></a>
                             </li>
                             <li class="nav-item navtwo sp">
-                                <a class="nav-link" href="Employer.html"><span class="float-left">EMPLOYERS
+                                <a class="nav-link" href="Employer.html"><span
+                                        class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">EMPLOYERS
                                         PROFILE</span></a>
                             </li>
                             <li class="nav-item navthree sp">
-                                <a class="nav-link" href="careers.html"><span class="float-left">CAREERS
+                                <a class="nav-link" href="careers.html"><span
+                                        class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">CAREERS
                                         GUIDE</span></a>
                             </li>
                             <li class="nav-item navfour sp mr-xl-5 mr-lg-5 mr-md-4">
-                                <a class="nav-link" href="blog.html"><span class="float-left activelink">BLOG</span></a>
+                                <a class="nav-link" href="blog.html"><span
+                                        class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2 activelink">BLOG</span></a>
                             </li>
                             <li class="nav-item">
-                                <div class="row d-flex align-items-center">
+                                <div
+                                    class="row d-flex align-items-center mt-md-0 mt-sm-1 my-1 mb-2 mb-xl-0 mb-lg-0 mb-md-0 mb-sm-2">
                                     <a href="login.html"
-                                        class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1">
+                                        class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3">
                                         Login</a>
                                 </div>
                             </li>
@@ -81,12 +94,11 @@
 
         <div class="container bover-about roun bg-white " style="position: relative;">
             <div class="row">
+                <div class="row col-12 my-3 mx-xl-2 mx-lg-3 mx-md-2 mx-sm-2 mx-2 mx-md-0">
+                    <p class="txtbloghead">LATEST BLOGs</p>
+                </div>
                 <!--xlarge large and medium view-->
-                <div
-                    class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
-                    <div class="row my-3 mx-xl-2 mx-lg-3 mx-md-2 mx-sm-2 mx-2 mx-md-0">
-                        <p class="txtbloghead">LATEST BLOGs</p>
-                    </div>
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
                     <!-------------------------------------first row---------------------------------->
                     <div class="row my-3 mx-xl-2 mx-lg-1 mx-md-2 mx-sm-2 mx-2 ">
                         <!-------first blog------->
@@ -315,7 +327,7 @@
                 </div>
 
                 <!-------------------------------------------------list of LATEST JOBS----------------------------------------->
-                <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12 col-12 mt-xl-0 mt-lg-0 mt-md-4 mt-sm-3 mt-3">
+                <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12 col-12 mt-3">
                     <!----------------------list of LATEST JOBS------------------->
                     <div class="container"
                         style="background-color:#0D2942; color: white;font-size:20px; border-radius: 8px; padding:2px 0px; position: relative;">
@@ -381,7 +393,7 @@
             <div class="row col-12 d-flex justify-content-center align-items-center" style="position: absolute;
                 bottom: 0;">
                 <nav>
-                    <ul class="pagination">
+                    <ul class="pagination d-flex align-items-baseline">
                         <li class="page-item">
                             <a class="page-link" href="#" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
@@ -389,11 +401,13 @@
                             </a>
                         </li>
                         <li class="page-item ml-2">
-                            <a class="page-link active-link active disabled" href="#" tabindex="-1">1</a>
+                            <a class="page-link active" href="#" tabindex="-1">1</a>
                         </li>
 
-                        <li class="page-item ml-2 "><a class="page-link" href="#">2</a></li>
+                        <li class="page-item ml-2"><a class="page-link" href="#">2</a></li>
                         <li class="page-item ml-2"><a class="page-link" href="#">3</a></li>
+                        <li><span class="dots mx-2 align-self-end">......</span></li>
+                        <li class="page-item ml-2"><a class="page-link" href="#">10</a></li>
                         <li class="page-item ml-2">
                             <a class="page-link" href="#" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>

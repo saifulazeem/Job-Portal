@@ -32,22 +32,22 @@
         });
     </script>
     <style>
-
         .bg-img-career {
             background: linear-gradient(0deg, rgba(13, 41, 66, 0.9), rgba(0, 0, 0, 0.4)), url(img/homecenter.png);
             opacity: 1;
             background-size: cover;
             background-position: top center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
         }
     </style>
 </head>
 
-<body>
+<body class="bg-img-career">
     <!---------------------------------------------CONTAINER--------------------------------------------->
     <div class="container-fluid">
         <!---------Image-------------->
-        <div class="bg-img-career" style="position: relative;">
+        <div style="position: relative;">
             <!-------------------------------------NAVIGATION BAR----------------------------------------------->
             <nav class="navbar navbar-expand-md flex-column flex-row n" style="border-bottom: 2px solid white;">
                 <div class="container  mt-3">
@@ -66,23 +66,28 @@
                         id="navbarSupportedContent">
                         <ul class="navbar-nav align-items-md-center">
                             <li class="nav-item navone sp">
-                                <a class="nav-link" href="about.html"><span class="float-left">ABOUT US</span></a>
+                                <a class="nav-link" href="about.html"><span
+                                        class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">ABOUT US</span></a>
                             </li>
                             <li class="nav-item navtwo sp">
-                                <a class="nav-link" href="Employer.html"><span class="float-left">EMPLOYERS
+                                <a class="nav-link" href="Employer.html"><span
+                                        class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2 activelink">EMPLOYERS
                                         PROFILE</span></a>
                             </li>
                             <li class="nav-item navthree sp">
-                                <a class="nav-link" href="careers.html"><span class="float-left activelink">CAREERS
+                                <a class="nav-link" href="careers.html"><span
+                                        class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">CAREERS
                                         GUIDE</span></a>
                             </li>
                             <li class="nav-item navfour sp mr-xl-5 mr-lg-5 mr-md-4">
-                                <a class="nav-link" href="blog.html"><span class="float-left ">BLOG</span></a>
+                                <a class="nav-link" href="blog.html"><span
+                                        class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">BLOG</span></a>
                             </li>
                             <li class="nav-item">
-                                <div class="row d-flex align-items-center">
+                                <div
+                                    class="row d-flex align-items-center mt-md-0 mt-sm-1 my-1 mb-2 mb-xl-0 mb-lg-0 mb-md-0 mb-sm-2">
                                     <a href="login.html"
-                                        class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1">
+                                        class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3">
                                         Login</a>
                                 </div>
                             </li>
@@ -100,27 +105,27 @@
                     </div>
                 </div>
             </div>
-            <div class="w-100" style="bottom: 0; position: absolute;">
+            <!--  <div class="w-100" style="bottom: 0; position: absolute;">
                 <img src="img/Rectangle.png" class="topimg w-100">
-            </div>
+            </div>-->
             <!--------------------------------------------------overlay container----------------------------->
-            <div class="container over" style="position: relative;">
-                <div class="row">
+            <div class="container over">
+                <div class="row" style="position: relative;">
                     <!----------------------------LARGE VIEW-------------------->
-                    <div class="col-xl-11 col-lg-10 table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
+                    <div class="col-xl-10 col-lg-10 table-responsive-lg d-lg-block d-md-none d-sm-none d-none">
 
                         <!-------------------------------------TABLE--------------------------------------------------->
-                        <table class="table careertable table-borderless text-dark" style=" border-collapse: collapse;">
+                        <table class="table careertable table-borderless text-dark table-sm"
+                            style=" border-collapse: collapse;">
                             <tbody>
                                 <!-------------------------------------------First Row-------------------------------------------->
                                 <tr>
                                     <td>
                                         <a href="accountancy.html">
-                                            <div
-                                                class="d-flex flex-column justify-content-center cards cards-txt ">
+                                            <div class="d-flex flex-column justify-content-center cards cards-txt ">
                                                 <div>
-                                                    <img src="img/custgoods.png">
-                                                    <img src="img/custgoodswhite.png" style="display: none;">
+                                                    <img src="img/acc.png">
+                                                    <img src="img/accwhite.png" style="display: none;">
                                                 </div>
                                                 <div style="position: relative; top:10px;">
                                                     <span>ACCOUNTANCY</span>
@@ -130,8 +135,7 @@
                                     </td>
                                     <td>
                                         <a href="#">
-                                            <div
-                                                class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
                                                 <div>
                                                     <img src="img/banking.png">
                                                     <img src="img/bankingwhite.png" style="display: none;">
@@ -144,8 +148,7 @@
                                     </td>
                                     <td>
                                         <a href="#">
-                                            <div
-                                                class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
                                                 <div>
                                                     <img src="img/betting.png">
                                                     <img src="img/bettingwhite.png" style="display: none;">
@@ -159,8 +162,7 @@
                                     </td>
                                     <td>
                                         <a href="#">
-                                            <div
-                                                class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
                                                 <div>
                                                     <img src="img/property.png">
                                                     <img src="img/propertywhite.png" style="display: none;">
@@ -174,8 +176,7 @@
                                     </td>
                                     <td>
                                         <a href="#">
-                                            <div
-                                                class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
                                                 <div>
                                                     <img src="img/consultancy.png">
                                                     <img src="img/consultancywhite.png" style="display: none;">
@@ -193,8 +194,7 @@
                                     <td></td>
                                     <td>
                                         <a href="#">
-                                            <div
-                                                class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
                                                 <div>
                                                     <img src="img/custgoods.png">
                                                     <img src="img/custgoodswhite.png" style="display: none;">
@@ -210,8 +210,7 @@
 
                                     <td>
                                         <a href="#">
-                                            <div
-                                                class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
                                                 <div>
                                                     <img src="img/retail.png">
                                                     <img src="img/retailwhite.png" style="display: none;">
@@ -225,8 +224,7 @@
 
                                     <td>
                                         <a href="#">
-                                            <div
-                                                class="d-flex flex-column cards cards-txt justify-content-center">
+                                            <div class="d-flex flex-column cards cards-txt justify-content-center">
                                                 <div>
                                                     <img src="img/social.png">
                                                     <img src="img/socialwhite.png" style="display: none;">
@@ -517,8 +515,9 @@
 
                     <!----------------------------------------------Circle image---------------------------------------->
 
-                    <div class="cir">
-                        <img src="img/homeimg.png" class="cirimg img-fluid">
+                        <div class="circarsub">
+                            <img src="img/homeimg.png">
+                        </div>
                     </div>
                 </div>
             </div>
