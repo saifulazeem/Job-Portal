@@ -659,16 +659,14 @@ text-decoration: none;
     font-size: 20px;
     font-style: normal;
   }
-  /*career.html circle div*/
-  .cir{
-    position: absolute;
-    right:-160px;
-    top:-280px;
-  }
+
     /*career.html circle image*/
     .cirimg{
-      width:300px;
-      height:300px;
+      width:350px;
+      height:350px;
+      position: absolute;
+      right:-200px;
+      top:-500px;
     }
     /*career.html cards div*/
     .over{
@@ -1056,17 +1054,7 @@ margin:0px 120px;
     font-size: 20px;
     font-style: normal;
   }
-  /*career.html circle div*/
-  .cir{
-    position: absolute;
-    right:-160px;
-    top:-350px;
-  }
-    /*career.html circle image*/
-    .cirimg{
-      width:360px;
-      height:360px;
-    }
+ 
     /*career.html cards div*/
     .over{
       left:0px;
@@ -1529,16 +1517,14 @@ height:250px;
     font-size: 20px;
     font-style: normal;
   }
-  /*career.html circle div*/
-  .cir{
-    position: absolute;
-    right:-180px;
-    top:-390px;
-  }
+
     /*career.html circle image*/
     .cirimg{
       width:400px;
       height:400px;
+      position: absolute;
+      right:-220px;
+      top:-500px;
     }
     /*career.html cards div*/
     .over{
@@ -2004,16 +1990,14 @@ top:210px;
     font-size: 20px;
     font-style: normal;
   }
-  /*career.html circle div*/
-  .cir{
-    position: absolute;
-    right:-190px;
-    top:-100px;
-  }
+
     /*career.html circle image*/
     .cirimg{
-      width:400px;
-      height:400px;
+      width:500px;
+      height:500px;
+      position: absolute;
+      right:-280px;
+      top:-500px;
     }
     /*career.html cards div*/
     .over{
@@ -2081,34 +2065,7 @@ top:210px;
 .reftxtlogin{
   font-size: 16px;
 }
-
  }
- @media (min-width: 600px) {
- /*career.html circle div*/
- .cir{
-  position: absolute;
-  right:-190px;
-  top:-100px;
-}
-  /*career.html circle image*/
-  .cirimg{
-    width:400px;
-    height:400px;
-  }
-}
-@media (min-width: 680px) {
-   /*career.html circle div*/
- .cir{
-  position: absolute;
-  right:-220px;
-  top:-100px;
-}
-  /*career.html circle image*/
-  .cirimg{
-    width:400px;
-    height:400px;
-  }
-}
 /***********************************************************************************************************************/
 @media (min-width: 768px) {
   .externalpad{
@@ -2504,16 +2461,14 @@ top:150px;
     font-size: 22px;
     font-style: normal;
   }
-  /*career.html circle div*/
-  .cir{
-    position: absolute;
-    right:-280px;
-    top:-390px;
-  }
+
     /*career.html circle image*/
     .cirimg{
-      width:480px;
-      height:480px;
+      width:500px;
+      height:500px;
+      position: absolute;
+      right:-280px;
+      top:-500px;
     }
     /*career.html cards div*/
     .over{
@@ -2970,16 +2925,14 @@ top:180px;
     font-size: 22px;
     font-style: normal;
   }
-  /*career.html circle div*/
-  .cir{
-    position: absolute;
-    right:-280px;
-    top:-150px;
-  }
+
     /*career.html circle image*/
     .cirimg{
-      width:500px;
-      height:500px;
+      width:600px;
+      height:600px;
+      position: absolute;
+      right:-300px;
+      top:-600px;
     }
     /*career.html cards div*/
     .over{
@@ -3464,16 +3417,14 @@ font-size: 20px;
   font-size: 22px;
   font-style: normal;
 }
-/*career.html circle div*/
-.cir{
-  position: absolute;
-  right:-550px;
-  top:-250px;
-}
+
   /*career.html circle image*/
   .cirimg{
     width:600px;
     height:600px;
+    position: absolute;
+    right:-300px;
+    top:-600px;
   }
   /*career.html cards div*/
   .over{
@@ -4339,11 +4290,4 @@ color: #808080;
 }
 .imgheight{
   height: 40px;
-}
-.circarsub {
-  position: absolute;
-  left:76%;
-  height: 10%;
-  min-width: 80%;
-top:-60%;
 }

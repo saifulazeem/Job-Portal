@@ -41,7 +41,7 @@
                 $(".search").show();
                 $(".imgsearch").hide();
             });
-
+            
             //limit the number of characters
             $('.subjob').map(function () {
                 var myval = ($(this).attr('id'));
@@ -148,6 +148,7 @@
 
         .empdivs {
             margin-top: 15px;
+            background-color: white;
         }
 
         .empdivs:first-child {
@@ -163,13 +164,16 @@
             display: block;
             cursor: context-menu;
         }
-       
         .content {
             display: none;
             margin: 15px 15px 15px 0px;
             position: absolute;
         }
 
+        .outerdiv{
+            padding: 20px 20px 200px 20px;
+            border-radius: 10px;
+        }
         .divsli ul li {
             list-style-type: disc;
             margin-left: 2em;
@@ -364,7 +368,7 @@
             </div>
 
             <!-------------------------------------NEXT CONTAINER--------------------------->
-            <div class="row my-4 roun" style="border-radius: 10px; padding: 20px; padding-bottom:200px;">
+            <div class="row my-4 roun outerdiv">
                 <!------------------------------------------Side Bar left---------------------------------------------->
                 <div class="container text-white col-lg-3 col-md-3 col-sm-10 col-10"
                     style="border-radius:10px;background-color: #0D2942;padding-bottom: 40px;">
