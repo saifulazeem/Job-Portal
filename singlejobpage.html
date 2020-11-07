@@ -41,11 +41,37 @@
                 $(".search").show();
                 $(".imgsearch").hide();
             });
-            
+
             //limit the number of characters
             $('.subjob').map(function () {
                 var myval = ($(this).attr('id'));
                 $('#' + myval).text($('#' + myval).text().substring(0, 62) + '...');
+            });
+
+            $(".content").hide();
+            $(".empdivs").hover(function (event) {
+                $(this).find('.content').show();
+                $(this).find('.content').css('position', 'absolute');
+                if (window.matchMedia('(min-width: 1200px)').matches) {
+                    $('.outerdiv').css('padding-bottom', '400px');
+                }
+                if (window.matchMedia('(min-width: 992px)').matches) {
+                    $('.outerdiv').css('padding-bottom', '1300px');
+                }
+                if (window.matchMedia('(min-width: 768px)').matches) {
+                    $('.outerdiv').css('padding-bottom', '800px');
+                }
+                if (window.matchMedia('(min-width: 576px)').matches) {
+                    $('.outerdiv').css('padding-bottom', '1500px');
+                }
+                if (window.matchMedia('(min-width: 300px)').matches) {
+                    $('.outerdiv').css('padding-bottom', '1800px');
+                }
+
+            }, function (event) {
+                $(this).find('.content').hide();
+                $(this).find('.content').css('position', 'none');
+                $('.outerdiv').css('padding-bottom', '100px');
             });
         });
 
@@ -161,19 +187,20 @@
         }
 
         .empdivs:hover .content {
-            display: block;
             cursor: context-menu;
         }
+
         .content {
             display: none;
             margin: 15px 15px 15px 0px;
             position: absolute;
         }
 
-        .outerdiv{
-            padding: 20px 20px 200px 20px;
+        .outerdiv {
+            padding: 20px 20px 100px 20px;
             border-radius: 10px;
         }
+
         .divsli ul li {
             list-style-type: disc;
             margin-left: 2em;
@@ -370,14 +397,13 @@
             <!-------------------------------------NEXT CONTAINER--------------------------->
             <div class="row my-4 roun outerdiv">
                 <!------------------------------------------Side Bar left---------------------------------------------->
-                <div class="container text-white col-lg-3 col-md-3 col-sm-10 col-10"
+                <div class="container text-white col-xl-3 col-lg-3 col-md-4 col-sm-10 col-10"
                     style="border-radius:10px;background-color: #0D2942;padding-bottom: 40px;">
 
-                    <div class="row my-auto mx-auto d-flex justify-content-center tag"
-                        style="padding-top:30px; letter-spacing: 2px;">
+                    <div class="row my-auto mx-auto d-flex justify-content-center jfil" style="padding-top:30px;">
                         FILTERS
                     </div>
-                    <div class="mx-4">
+                    <div class="mx-xl-4 mx-lg-4 mx-md-3 mx-sm-3 mx-3">
                         <div class="row my-2 mt-3 mx-0" style="font-size: 18px;">
                             <b class="text-left">Min. Salary</b>
                         </div>
@@ -385,9 +411,8 @@
                             <input type="range" id="rangeInput" class="slider" step="1000" value="5000" min="5000"
                                 max="1000000" oninput="amount.value=rangeInput.value">
                         </div>
-                        <div class="row mb-4">
-                            <div
-                                class="col-xl-7 col-lg-8 offset-lg-6 col-md-7 offset-md-6 col-sm-7 offset-sm-8 col-7 offset-8">
+                        <div class="row mb-4 float-right">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="d-inline ">
                                     <output id="amount" name="amount" for="rangeInput" class="text-white "><span
                                             style="font-size: 12px;">5,000
@@ -397,14 +422,14 @@
                         </div>
 
                         <!--------------------------------------------JOB TITLE-------------------------------->
-                        <div class="row d-flex justify-content-between mx-0 mt-4 mb-3"
+                        <div class="row d-flex justify-content-between mx-0 mt-5 mb-3"
                             style="border-bottom: 1px solid #707070;">
                             <div class="">
                                 <a href="" data-toggle="collapse" data-target="#collapsemaintitle" aria-expanded="false"
                                     aria-controls="collapsemaintitle" style="text-decoration: none;" class="colap">
                                     <p class="collapsedivs job m-0">Job Title</p>
                             </div>
-                            <div class="m-0 mt-2" style="font-size: 25px;">
+                            <div class="m-0 mt-2 arrow">
                                 <div class="dropdown-toggle text-white m-0" aria-expanded="false">
                                 </div>
                             </div>
@@ -414,52 +439,52 @@
                         <!-------------------------------------------LIST(collapse on click)------------------------------------>
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show mt-2" id="collapsemaintitle" data-parent="#myGroup">
-                            <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                            <div class="row mt-0 jtitle mx-auto " style="font-size: 10px;">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk" id="txtone">
                                         Software Quality Assurance En
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 col-md-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk" id="txttwo">
                                         Software Quality Assurance En
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk" id="txtthree">
                                         Software Quality Assurance En
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk" id="txtfour">
                                         Software Quality Assurance En
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
@@ -468,26 +493,26 @@
                             <div class="collapse" id="collapsetitle" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk" id="txtfive">
                                             Software Quality Assurance En
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk" id="txtsix">
                                             Software Quality Assurance En
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
@@ -518,7 +543,7 @@
                                     aria-controls="collapsemaincity" style="text-decoration: none;" class="colap">
                                     <p class="collapsedivs job m-0">City</p>
                             </div>
-                            <div class="m-0 mt-2" style="font-size: 25px;">
+                            <div class="m-0 mt-2 arrow">
                                 <div class="dropdown-toggle text-white m-0" aria-expanded="false">
                                 </div>
                             </div>
@@ -528,52 +553,52 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemaincity" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Lahore
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Lahore
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Lahore
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Lahore
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
@@ -582,26 +607,26 @@
                             <div class="collapse" id="collapsecity" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             Lahore
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             Lahore
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
@@ -630,7 +655,7 @@
                                     aria-controls="collapsemainexp" style="text-decoration: none;" class="colap">
                                     <p class="collapsedivs job m-0">Experience</p>
                             </div>
-                            <div class="m-0 mt-2" style="font-size: 25px;">
+                            <div class="m-0 mt-2 arrow">
                                 <div class="dropdown-toggle text-white m-0" aria-expanded="false">
                                 </div>
                             </div>
@@ -640,51 +665,51 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemainexp" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         1 Year
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         1 Year
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         1 Year
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
-                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                            <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         1 Year
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
@@ -692,27 +717,27 @@
                             <!-----------------------------------------DIV to be Collapsed------------------------------------->
                             <div class="collapse" id="collapseexp" data-parent="#myGroup">
                                 <!------------Next Row-->
-                                <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="row mt-0 jtitle mx-auto" style="font-size: 10px;">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             1 Year
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             1 Year
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
@@ -744,7 +769,7 @@
                                     aria-controls="collapsemaintype" style="text-decoration: none;" class="colap">
                                     <p class="collapsedivs job m-0">Job Type</p>
                             </div>
-                            <div class="m-0 mt-2" style="font-size: 25px;">
+                            <div class="m-0 mt-2 arrow">
                                 <div class="dropdown-toggle text-white m-0" aria-expanded="false">
                                 </div>
                             </div>
@@ -755,52 +780,52 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemaintype" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Full Time/Permanent
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Full Time/Permanent
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Full Time/Permanent
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Full Time/Permanent
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
@@ -809,26 +834,26 @@
                             <div class="collapse" id="collapsetype" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             Full Time/Permanent
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             Full Time/Permanent
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
@@ -859,7 +884,7 @@
                                     style="text-decoration: none;" class="colap">
                                     <p class="collapsedivs job m-0">Skills</p>
                             </div>
-                            <div class="m-0 mt-2" style="font-size: 25px;">
+                            <div class="m-0 mt-2 arrow">
                                 <div class="dropdown-toggle text-white m-0" aria-expanded="false">
                                 </div>
                             </div>
@@ -870,52 +895,52 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemainskills" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Javascript
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Javascript
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Javascript
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Javascript
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
@@ -924,26 +949,26 @@
                             <div class="collapse" id="collapseskills" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             Javascript
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             Javascript
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
@@ -973,7 +998,7 @@
                                     aria-controls="collapsemainind" style="text-decoration: none;" class="colap">
                                     <p class="collapsedivs job m-0">Industry</p>
                             </div>
-                            <div class="m-0 mt-2" style="font-size: 25px;">
+                            <div class="m-0 mt-2 arrow">
                                 <div class="dropdown-toggle text-white m-0" aria-expanded="false">
                                 </div>
                             </div>
@@ -984,52 +1009,52 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemainind" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk" id="txt2one">
                                         Information Technology
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk" id="txt2two">
                                         Information Technology
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk" id="txt2three">
                                         Information Technology
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk" id="txt2four">
                                         Information Technology
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
@@ -1038,26 +1063,26 @@
                             <div class="collapse" id="collapseind" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto bg" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk" id="txt2five">
                                             Information Technology
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk" id="txt2six">
                                             Information Technology
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
@@ -1086,7 +1111,7 @@
                                     aria-controls="collapsemaingend" style="text-decoration: none;" class="colap">
                                     <p class="collapsedivs job m-0">Gender</p>
                             </div>
-                            <div class="m-0 mt-2" style="font-size: 25px;">
+                            <div class="m-0 mt-2 arrow">
                                 <div class="dropdown-toggle text-white m-0" aria-expanded="false">
                                 </div>
                             </div>
@@ -1097,25 +1122,25 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemaingend" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Male
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Male
                                     </label>
                                 </div>
-                                <div class="col-xl-2 subjob">
+                                <div class="col-2 subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
@@ -1124,26 +1149,26 @@
                             <div class="collapse" id="collapsegend" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             Male
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             Male
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 subjob">
+                                    <div class="col-2 subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
@@ -1173,7 +1198,7 @@
                                     aria-controls="collapsemainarea" style="text-decoration: none;" class="colap">
                                     <p class="collapsedivs job m-0">Functional Area</p>
                             </div>
-                            <div class="m-0 mt-2" style="font-size: 25px;">
+                            <div class="m-0 mt-2 arrow">
                                 <div class="dropdown-toggle text-white m-0" aria-expanded="false">
                                 </div>
                             </div>
@@ -1184,51 +1209,51 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemainarea" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob" for="chk" id="txt3one">
                                         Software & Web Development
                                     </label>
                                 </div>
-                                <div class="col-xl-2 d-flex justify-content-end subjob">
+                                <div class="col-2 d-flex justify-content-end subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk" id="txt3two">
                                         Software & Web Development
                                     </label>
                                 </div>
-                                <div class="col-xl-2 d-flex justify-content-end subjob">
+                                <div class="col-2 d-flex justify-content-end subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk" id="txt3three">
                                         Software & Web Development
                                     </label>
                                 </div>
-                                <div class="col-xl-2 d-flex justify-content-end subjob">
+                                <div class="col-2 d-flex justify-content-end subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk" id="txt3four">
                                         Software & Web Development
                                     </label>
                                 </div>
-                                <div class="col-xl-2 d-flex justify-content-end subjob">
+                                <div class="col-2 d-flex justify-content-end subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
@@ -1237,26 +1262,26 @@
                             <div class="collapse" id="collapsearea" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk" id="txt3five">
                                             Software & Web Development
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 d-flex justify-content-end subjob">
+                                    <div class="col-2 d-flex justify-content-end subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk" id="txt3six">
                                             Software & Web Development
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 d-flex justify-content-end subjob">
+                                    <div class="col-2 d-flex justify-content-end subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
@@ -1286,7 +1311,7 @@
                                     aria-controls="collapsemaincomp" style="text-decoration: none;" class="colap">
                                     <p class="collapsedivs job m-0">Company</p>
                             </div>
-                            <div class="m-0 mt-2" style="font-size: 25px;">
+                            <div class="m-0 mt-2 arrow">
                                 <div class="dropdown-toggle text-white m-0" aria-expanded="false">
                                 </div>
                             </div>
@@ -1296,52 +1321,52 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemaincomp" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Contour Software
                                     </label>
                                 </div>
-                                <div class="col-xl-2 d-flex justify-content-end subjob">
+                                <div class="col-2 d-flex justify-content-end subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Contour Software
                                     </label>
                                 </div>
-                                <div class="col-xl-2 d-flex justify-content-end subjob">
+                                <div class="col-2 d-flex justify-content-end subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Contour Software
                                     </label>
                                 </div>
-                                <div class="col-xl-2 d-flex justify-content-end subjob">
+                                <div class="col-2 d-flex justify-content-end subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-xl-10 d-flex justify-content-start">
+                                <div class="col-10 d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input" id="chk">
                                     <label class="subjob " for="chk">
                                         Contour Software
                                     </label>
                                 </div>
-                                <div class="col-xl-2 d-flex justify-content-end subjob">
+                                <div class="col-2 d-flex justify-content-end subjob">
                                     <span>(24)</span>
                                 </div>
                             </div>
@@ -1350,26 +1375,26 @@
                             <div class="collapse" id="collapsecomp" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             Contour Software
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 d-flex justify-content-end subjob">
+                                    <div class="col-2 d-flex justify-content-end subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-xl-10 d-flex justify-content-start">
+                                    <div class="col-10 d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input" id="chk">
                                         <label class="subjob " for="chk">
                                             Contour Software
                                         </label>
                                     </div>
-                                    <div class="col-xl-2 d-flex justify-content-end subjob">
+                                    <div class="col-2 d-flex justify-content-end subjob">
                                         <span>(24)</span>
                                     </div>
                                 </div>
@@ -1408,7 +1433,7 @@
                 </div>
 
                 <!------------------------------------------Center----------------------------------------------------->
-                <div class="col-lg-6 col-md-8 col-sm-12 col-xs-10 divsli">
+                <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-xs-10 divsli">
                     <!-------first div-->
                     <div class="roun empdivs" style="border-radius: 10px;">
                         <div class="activator" style="padding:20px 40px; ">
@@ -2289,8 +2314,8 @@
                         </div>
                     </div>
 
-                     <!-------first div-->
-                     <div class="roun empdivs" style="border-radius: 10px;">
+                    <!-------first div-->
+                    <div class="roun empdivs" style="border-radius: 10px;">
                         <div class="activator" style="padding:20px 40px; ">
                             <div class="row ">
                                 <span class="main1">Senior Software Quality Assurance Engineer</span>
@@ -2509,8 +2534,8 @@
                         </div>
                     </div>
 
-                     <!-------first div-->
-                     <div class="roun empdivs" style="border-radius: 10px;">
+                    <!-------first div-->
+                    <div class="roun empdivs" style="border-radius: 10px;">
                         <div class="activator" style="padding:20px 40px; ">
                             <div class="row ">
                                 <span class="main1">Senior Software Quality Assurance Engineer</span>
@@ -2731,11 +2756,10 @@
                 </div>
 
                 <!------------------------------------------Side bar right---------------------------------------------->
-                <div class="container text-white col-lg-3 col-md-3 col-sm-10 col-10 h-75"
+                <div class="container text-white col-xl-3 col-lg-3 col-md-4 col-sm-11 col-11 h-75 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-4 ml-4"
                     style="border-radius:10px;background-color: #0D2942;padding-bottom: 30px;">
 
-                    <div class="row my-auto mx-auto d-flex justify-content-center tag"
-                        style="padding-top:30px;letter-spacing: 4px;">
+                    <div class="row my-auto mx-auto d-flex justify-content-center jalert" style="padding-top:30px;">
                         Create Job Alert
                     </div>
 

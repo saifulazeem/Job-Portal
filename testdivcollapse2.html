@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <style>
+        .container{
+            position: relative;
+            padding:20px;
+        }
+        .grandparent {
+            background-color: #CCCCCC;
+        }
+
+        .parent {
+            background-color: navajowhite;
+            padding: 80px 10px;
+        }
+
+        .child {
+            background-color: #666666;
+            z-index: 10;
+            margin-top: 170px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".child").hide();
+            $(".parent").hover(function (event) {
+                $(this).parent().find('.child').show();
+                $(this).parent().find('.child').css('position', 'absolute');
+                $('.container').css('padding-bottom','500px');
+            }, function (event) {
+                $(this).parent().find('.child').hide();
+                $(this).parent().find('.child').css('position', 'none');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container bg-warning">
+        <div class="grandparent row mt-5">
+            <div class="parent row">
+                first div
+            </div>
+            <div class="child row">
+                <div class="col-12">
+                    <div class="row ">
+                        <span class="main1">Senior Software Quality Assurance Engineer</span>
+                    </div>
+                    <div class="row">
+                        <img src="img/locgrey.png" class="d-inline mr-3">
+                        <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
+                    </div>
+                    <div class="row txtdescjob mt-2">
+                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry exp)
+                    </div>
+                    <div class="row txtdescjob">
+                        Responsibilities: Provide comprehensive an..
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grandparent row  mt-5">
+            <div class="parent row">
+                first div
+            </div>
+            <div class="child row">child
+                <div class="col-12">
+                    <div class="row ">
+                        <span class="main1">Senior Software Quality Assurance Engineer</span>
+                    </div>
+                    <div class="row">
+                        <img src="img/locgrey.png" class="d-inline mr-3">
+                        <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
+                    </div>
+                    <div class="row txtdescjob mt-2">
+                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry exp)
+                    </div>
+                    <div class="row txtdescjob">
+                        Responsibilities: Provide comprehensive an..
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grandparent row  mt-5">
+            <div class="parent row">
+                first div
+            </div>
+            <div class="child row">child
+                <div class="col-12">
+                    <div class="row ">
+                        <span class="main1">Senior Software Quality Assurance Engineer</span>
+                    </div>
+                    <div class="row">
+                        <img src="img/locgrey.png" class="d-inline mr-3">
+                        <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
+                    </div>
+                    <div class="row txtdescjob mt-2">
+                        Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry exp)
+                    </div>
+                    <div class="row txtdescjob">
+                        Responsibilities: Provide comprehensive an..
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

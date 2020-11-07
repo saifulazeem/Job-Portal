@@ -680,7 +680,7 @@ margin-bottom: 1000px; position: relative;
     }  
     .main2{
       position: absolute;
-      left:70px;
+      left:50px;
     }
 /*accountancy.html cards div*/
 .aover{
@@ -692,7 +692,7 @@ top: -270px;
 }
 /*accountancy.html testimonial*/
 .tover{
-margin-bottom: 1740px; position: relative;
+margin-bottom: 1550px; position: relative;
 }
 .testtxt{
   font-weight: 800; letter-spacing: 1px;font-size: 38px; color:white;
@@ -741,7 +741,7 @@ height:390px;
   background-color: white;
   border-radius: 6px;
   height:150px;
-  width: 140px;
+  width: 145px;
   } 
 /*career.html cards*/
 .cards-txt{
@@ -765,14 +765,22 @@ height:390px;
     font-size: 20px;
     font-style: normal;
   }
-
+  .over{
+    top:-100px;
+  }
+  .carheight{
+    max-height:45rem;
+  }
+  .cartxtheight{
+    max-height:30rem;
+  }
     /*career.html circle image*/
     .cirimg{
       width:350px;
       height:350px;
       position: absolute;
       right:-190px;
-      top:-1170px;
+      top:-1070px;
     }
        /*accountancy.html circle image*/
   .accimg{
@@ -782,12 +790,7 @@ height:390px;
     right:-180px;
     top:-610px;
   }
-    /*career.html cards div*/
-    .over{
-      left:0px;
-      top: -60px;
-      margin-bottom: 0px;
-    }
+
   .bover-about{
     top:-220px;
     border-radius: 0px;
@@ -802,6 +805,18 @@ height:390px;
 }
 .blogmar{
   margin: 160px 0px 70px 0px;
+}
+.job{
+  font-size: 16px;
+  text-align: left;
+  font-weight: 700;
+}
+.subjob{
+  font-size: 14px;
+  font-style: normal;
+}
+.arrow{
+  font-size: 20px;
 }
 .txtemp{
   font-size: 16px;
@@ -1168,7 +1183,7 @@ top: -270px;
 }
 /*accountancy.html testimonial*/
 .tover{
-margin-bottom: 1540px; position: relative;
+margin-bottom: 1400px; position: relative;
 }
 .testtxt{
   font-weight: 800; letter-spacing: 2px;font-size: 40px; color:white;
@@ -1218,6 +1233,12 @@ height:390px;
   color:black;
   font-size: 12px;
   }     
+  .cards{
+    background-color: white;
+    border-radius: 6px;
+    height:160px;
+    width: 160px;
+    } 
   .careermar{
     width: 100%;
     height: 100vh;
@@ -1235,20 +1256,24 @@ height:390px;
     font-size: 20px;
     font-style: normal;
   }
+  .over{
+    top:-100px;
+  }
+  .carheight{
+    max-height:45rem;
+  }
+  .cartxtheight{
+    max-height:30rem;
+  }
  /*career.html circle image*/
  .cirimg{
   width:400px;
   height:400px;
   position: absolute;
   right:-195px;
-  top:-1150px;
+  top:-1170px;
 }
-    /*career.html cards div*/
-    .over{
-      left:0px;
-      top: -60px;
-      margin-bottom: 0px;
-    }
+
   .bover-about{
     top:-220px;
     border-radius: 0px;
@@ -1263,6 +1288,18 @@ height:390px;
 }
 .blogmar{
   margin: 160px 0px 70px 0px;
+}
+.job{
+  font-size: 16px;
+  text-align: left;
+  font-weight: 700;
+}
+.subjob{
+  font-size: 14px;
+  font-style: normal;
+}
+.arrow{
+  font-size: 20px;
 }
 .txtemp{
   font-size: 16px;
@@ -1634,7 +1671,7 @@ top: -270px;
 }
 /*accountancy.html testimonial*/
 .tover{
-margin-bottom: 1350px; position: relative;
+margin-bottom: 1400px; position: relative;
 }
 .testtxt{
   font-weight: 800; letter-spacing: 2px;font-size: 44px; color:white;
@@ -1684,6 +1721,12 @@ height:350px;
   color:black;
   font-size: 12px;
   }     
+  .cards{
+    background-color: white;
+    border-radius: 6px;
+    height:160px;
+    width: 160px;
+    }
   .careermar{
     width: 100%;
     height: 100vh;
@@ -1701,14 +1744,22 @@ height:350px;
     font-size: 20px;
     font-style: normal;
   }
-
+  .over{
+    top:-100px;
+  }
+  .carheight{
+    max-height:55rem;
+  }
+  .cartxtheight{
+    max-height:25rem;
+  }
     /*career.html circle image*/
     .cirimg{
-      width:400px;
-      height:400px;
+      width:390px;
+      height:380px;
       position: absolute;
-      right:-195px;
-      top:-1250px;
+      right:-220px;
+      top:-820px;
     }
        /*accountancy.html circle image*/
   .accimg{
@@ -1718,12 +1769,7 @@ height:350px;
     right:-220px;
     top:-610px;
   }
-    /*career.html cards div*/
-    .over{
-      left:0px;
-      top: -60px;
-      margin-bottom: 0px;
-    }
+
   .bover-about{
     top:-220px;
     border-radius: 0px;
@@ -1738,6 +1784,18 @@ height:350px;
 }
 .blogmar{
   margin: 160px 0px 70px 0px;
+}
+.job{
+  font-size: 16px;
+  text-align: left;
+  font-weight: 700;
+}
+.subjob{
+  font-size: 14px;
+  font-style: normal;
+}
+.arrow{
+  font-size: 20px;
 }
 .txtemp{
   font-size: 16px;
@@ -2098,7 +2156,7 @@ height:350px;
       }  
       .main2{
         position: absolute;
-        left:55px;
+        left:45px;
       }
 /*accountancy.html cards div*/
 .aover{
@@ -2110,7 +2168,7 @@ top: -300px;
 }
 /*accountancy.html testimonial*/
 .tover{
-  margin-bottom: 1000px; position: relative;
+  margin-bottom: 1100px; position: relative;
 }
 .testtxt{
   font-weight: 900; letter-spacing: 2px;font-size: 44px; color:white;
@@ -2177,14 +2235,22 @@ font-style: normal;
     font-size: 20px;
     font-style: normal;
   }
-
+  .over{
+    top:-240px;
+  }
+  .carheight{
+    max-height:55rem;
+  }
+  .cartxtheight{
+    max-height:25rem;
+  }
     /*career.html circle image*/
     .cirimg{
       width:500px;
       height:500px;
       position: absolute;
       right:-280px;
-      top:-1000px;
+      top:-800px;
     }
        /*accountancy.html circle image*/
   .accimg{
@@ -2194,12 +2260,7 @@ font-style: normal;
     right:-220px;
     top:-610px;
   }
-    /*career.html cards div*/
-    .over{
-      left:0px;
-      top: -60px;
-      margin-bottom: 0px;
-    }
+
   .bover-about{
     top:-320px;
     border-radius: 10px;
@@ -2214,6 +2275,18 @@ font-style: normal;
 }
 .blogmar{
   margin: 160px 0px 70px 0px;
+}
+.job{
+  font-size: 16px;
+  text-align: left;
+  font-weight: 700;
+}
+.subjob{
+  font-size: 14px;
+  font-style: normal;
+}
+.arrow{
+  font-size: 20px;
 }
 .txtemp{
   font-size: 16px;
@@ -2552,12 +2625,7 @@ font-style: normal;
 .formpost {
   border-radius: 15px;border: 0px;padding-left: 45px;
 }
-/*career.html cards div*/
-.over{
-  left:0px;
-  top: 0px;
-  margin-bottom: 0px;
-}   
+
   .acccards{
     background-color: white;
     border-radius: 6px;
@@ -2572,7 +2640,7 @@ font-style: normal;
       }  
       .main2{
         position: absolute;
-        left:80px;
+        left:100px;
       }
 /*accountancy.html cards div*/
 .aover{
@@ -2651,14 +2719,22 @@ font-style: normal;
     font-size: 22px;
     font-style: normal;
   }
-
+  .over{
+    top:-300px;
+  }
+  .carheight{
+    max-height:35rem;
+  }
+  .cartxtheight{
+    max-height:25rem;
+  }
     /*career.html circle image*/
     .cirimg{
       width:500px;
       height:500px;
       position: absolute;
       right:-280px;
-      top:-1000px;
+      top:-700px;
     }
       /*accountancy.html circle image*/
   .accimg{
@@ -2668,12 +2744,7 @@ font-style: normal;
     right:-280px;
     top:-600px;
   }
-    /*career.html cards div*/
-    .over{
-      left:0px;
-      top: 0px;
-      margin-bottom: 0px;
-    }
+
   .bover-about{
     top:-320px;
     border-radius: 10px;
@@ -2688,6 +2759,18 @@ font-style: normal;
 }
 .blogmar{
   margin: 160px 0px 70px 0px;
+}
+.job{
+  font-size: 15px;
+  text-align: left;
+  font-weight: 700;
+}
+.subjob{
+  font-size: 12px;
+  font-style: normal;
+}
+.arrow{
+  font-size: 20px;
 }
 .txtemp{
   font-size: 16px;
@@ -3025,12 +3108,6 @@ table.firhome tr td:nth-child(4) input {
 .formpost {
   border-radius: 15px;border: 0px;padding-left: 45px;
 }
-/*career.html cards div*/
-.over{
-  left:0px;
-  top: 0px;
-  margin-bottom: 0px;
-}  
   .acccards{
     background-color: white;
     border-radius: 6px;
@@ -3039,7 +3116,7 @@ table.firhome tr td:nth-child(4) input {
     }  
     .main2{
       position: absolute;
-      left:0px;
+      left:10px;
     }
 /*accountancy.html cards div*/
 .aover{
@@ -3124,14 +3201,22 @@ font-style: normal;
     font-size: 22px;
     font-style: normal;
   }
-
+  .over{
+    top:-350px;
+  }
+  .carheight{
+    max-height:25rem;
+  }
+  .cartxtheight{
+    max-height:25rem;
+  }
     /*career.html circle image*/
     .cirimg{
-      width:550px;
-      height:550px;
+      width:560px;
+      height:560px;
       position: absolute;
       right:-300px;
-      top:-600px;
+      top:-550px;
     }
     /*accountancy.html circle image*/
   .accimg{
@@ -3141,12 +3226,6 @@ font-style: normal;
     right:-300px;
     top:-700px;
   }
-    /*career.html cards div*/
-    .over{
-      left:0px;
-      top: -40px;
-      margin-bottom: 0px;
-    }
    /*blog.html div*/
 .bover-about{
   top:-420px;
@@ -3162,6 +3241,18 @@ margin-bottom: -370px;
 }
 .blogmar{
   margin: 160px 0px 90px 0px;
+}
+.job{
+  font-size: 17px;
+  text-align: left;
+  font-weight: 700;
+}
+.subjob{
+  font-size: 12px;
+  font-style: normal;
+}
+.arrow{
+  font-size: 22px;
 }
 .txtemp{
   font-size: 16px;
@@ -3550,7 +3641,7 @@ font-size: 20px;
 
 .main2{
   position: absolute;
-  left:60px;
+  left:10px;
 }
 /*accountancy.html cards div*/
 .aover{
@@ -3621,14 +3712,22 @@ font-size: 20px;
   font-size: 22px;
   font-style: normal;
 }
-
+.over{
+  top:-100px;
+}
+.carheight{
+  max-height:25rem;
+}
+.cartxtheight{
+  max-height:25rem;
+}
   /*career.html circle image*/
   .cirimg{
-    width:600px;
-    height:600px;
+    width:580px;
+    height:580px;
     position: absolute;
     right:-300px;
-    top:-600px;
+    top:-580px;
   }
   /*accountancy.html circle image*/
   .accimg{
@@ -3638,12 +3737,7 @@ font-size: 20px;
     right:-300px;
     top:-700px;
   }
-  /*career.html cards div*/
-  .over{
-    left:0px;
-    top: -40px;
-    margin-bottom: 0px;
-  }
+
   /*career.html rectangle*/
 .topimg{
   height:300px;
@@ -3683,6 +3777,7 @@ margin-bottom: -370px;
 .blogmar{
   margin: 160px 0px 70px 0px;
 }
+
 .jobtxt{
   font-size: 16px;
   color: #808080;
@@ -3705,6 +3800,9 @@ margin-bottom: -370px;
 .subjob{
   font-size: 14px;
   font-style: normal;
+}
+.arrow{
+  font-size: 25px;
 }
 /*form Employer.html*/
 .empkey{
@@ -4509,4 +4607,12 @@ color: #808080;
 .accsub{
   font-size: 20px;
   font-weight: bold;
+}
+.jfil{
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+.jalert{
+  letter-spacing: 4px;
+  font-size: 25px;
 }
