@@ -249,6 +249,9 @@ opacity: 1;
   color: #0BB44F;
   border-bottom: 2px solid #0BB44F;
 }
+.featover a {
+  text-decoration: none;
+}
 .txt
 {
     font-size: small;
@@ -267,6 +270,19 @@ opacity: 1;
     content: ">";
     color: white;
 }
+.bfont{
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+}
+.dashtxt{
+  font-size: 14px;
+}
+.dashhead{
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
 .roun{
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
 }
@@ -280,6 +296,11 @@ opacity: 1;
 .featshad
 {
   box-shadow: 1px 5px 6px 1px rgba(0, 0, 0, 0.1);
+}
+.txtfeat{
+  color: #5E5E5E;
+  font-size: 20px;
+  font-style: normal;
 }
 .link:hover{
   color: #0BB44F;
@@ -298,6 +319,11 @@ text-decoration: none;
   .curhov:hover{
     cursor: context-menu;
   }
+  .cards-txt{
+    color:black;
+    font-size: 14px;
+    text-decoration: none;
+    } 
     /*career.html cards*/
     .cards-txt:hover{
       color:white;
@@ -484,7 +510,7 @@ text-decoration: none;
   padding-top:10px;
 }
 .tablepad{
-  padding-top:-10px;
+  padding-top:20px;
 }
 .formpad{
   padding-bottom: 0px; padding-top: 20px;
@@ -688,7 +714,7 @@ top: -600px;
 }
 /*accountancy.html sub div*/
 .dover{
-top: -270px;
+top: -100px;
 }
 /*accountancy.html testimonial*/
 .tover{
@@ -731,24 +757,20 @@ font-style: normal;
 }
 /*acc.html rectangle*/
 .acctopimg{
-height:390px;
+height:90px;
 }
 /*career.html rectangle*/
 .topimg{
   height:700px;
 }
+/*career.html cards*/
 .cards{
   background-color: white;
   border-radius: 6px;
   height:150px;
   width: 145px;
   } 
-/*career.html cards*/
-.cards-txt{
-  color:black;
-  font-size: 12px;
-  }     
-  .careermar{
+.careermar{
     width: 100%;
     height: 100vh;
     margin-left: 20px;
@@ -772,25 +794,11 @@ height:390px;
     max-height:45rem;
   }
   .cartxtheight{
-    max-height:30rem;
+    max-height:28rem;
   }
-    /*career.html circle image*/
-    .cirimg{
-      width:350px;
-      height:350px;
-      position: absolute;
-      right:-190px;
-      top:-1070px;
-    }
-       /*accountancy.html circle image*/
-  .accimg{
-    width:400px;
-    height:400px;
-    position: absolute;
-    right:-180px;
-    top:-610px;
+  .sidebarpad{
+    padding-bottom: 20px;
   }
-
   .bover-about{
     top:-220px;
     border-radius: 0px;
@@ -811,10 +819,7 @@ height:390px;
   text-align: left;
   font-weight: 700;
 }
-.subjob{
-  font-size: 14px;
-  font-style: normal;
-}
+
 .arrow{
   font-size: 20px;
 }
@@ -1179,7 +1184,7 @@ top: -600px;
 }
 /*accountancy.html sub div*/
 .dover{
-top: -270px;
+top: -100px;
 }
 /*accountancy.html testimonial*/
 .tover{
@@ -1222,17 +1227,13 @@ font-style: normal;
 }
 /*acc.html rectangle*/
 .acctopimg{
-height:390px;
+height:120px;
 }
 /*career.html rectangle*/
 .topimg{
   height:700px;
 }
-/*career.html cards*/
-.cards-txt{
-  color:black;
-  font-size: 12px;
-  }     
+/*career.html cards*/     
   .cards{
     background-color: white;
     border-radius: 6px;
@@ -1263,16 +1264,8 @@ height:390px;
     max-height:45rem;
   }
   .cartxtheight{
-    max-height:30rem;
+    max-height:27rem;
   }
- /*career.html circle image*/
- .cirimg{
-  width:400px;
-  height:400px;
-  position: absolute;
-  right:-195px;
-  top:-1170px;
-}
 
   .bover-about{
     top:-220px;
@@ -1294,10 +1287,7 @@ height:390px;
   text-align: left;
   font-weight: 700;
 }
-.subjob{
-  font-size: 14px;
-  font-style: normal;
-}
+
 .arrow{
   font-size: 20px;
 }
@@ -1497,7 +1487,7 @@ height:390px;
   padding-top:30px;
 }
 .tablepad{
-  padding-top:0px;
+  padding-top:20px;
 }
 .formpad{
   padding-bottom: 0px; padding-top: 40px;
@@ -1667,7 +1657,7 @@ top: -560px;
 }
 /*accountancy.html sub div*/
 .dover{
-top: -270px;
+top: -100px;
 }
 /*accountancy.html testimonial*/
 .tover{
@@ -1710,17 +1700,13 @@ font-style: normal;
 }
 /*acc.html rectangle*/
 .acctopimg{
-height:350px;
+height:130px;
 }
 /*career.html rectangle*/
 .topimg{
   height:700px;
 }
 /*career.html cards*/
-.cards-txt{
-  color:black;
-  font-size: 12px;
-  }     
   .cards{
     background-color: white;
     border-radius: 6px;
@@ -1751,25 +1737,8 @@ height:350px;
     max-height:55rem;
   }
   .cartxtheight{
-    max-height:25rem;
+    max-height:23rem;
   }
-    /*career.html circle image*/
-    .cirimg{
-      width:390px;
-      height:380px;
-      position: absolute;
-      right:-220px;
-      top:-820px;
-    }
-       /*accountancy.html circle image*/
-  .accimg{
-    width:400px;
-    height:400px;
-    position: absolute;
-    right:-220px;
-    top:-610px;
-  }
-
   .bover-about{
     top:-220px;
     border-radius: 0px;
@@ -1790,10 +1759,7 @@ height:350px;
   text-align: left;
   font-weight: 700;
 }
-.subjob{
-  font-size: 14px;
-  font-style: normal;
-}
+
 .arrow{
   font-size: 20px;
 }
@@ -2164,7 +2130,7 @@ height:350px;
 }
 /*accountancy.html sub div*/
 .dover{
-top: -300px;
+top: -60px;
 }
 /*accountancy.html testimonial*/
 .tover{
@@ -2207,17 +2173,13 @@ font-style: normal;
 }
 /*acc.html rectangle*/
 .acctopimg{
-  height:390px;
+  height:140px;
 }
 /*career.html rectangle*/
 .topimg{
   height:700px;
 }
-/*career.html cards*/
-.cards-txt{
-  color:black;
-  font-size: 12px;
-  }   
+/*career.html cards*/  
   .careermar{
     width: 100%;
     height: 100vh;
@@ -2242,23 +2204,26 @@ font-style: normal;
     max-height:55rem;
   }
   .cartxtheight{
-    max-height:25rem;
+    max-height:23rem;
   }
-    /*career.html circle image*/
-    .cirimg{
-      width:500px;
-      height:500px;
-      position: absolute;
-      right:-280px;
-      top:-800px;
-    }
+  .sidebarpad{
+    padding-bottom: 400px;
+  }
+  /*career.html circle image*/
+  .cirimg{
+    width:500px;
+    height:500px;
+    position: absolute;
+    right:-290px;
+    top:-700px;
+  }
        /*accountancy.html circle image*/
   .accimg{
     width:400px;
     height:400px;
     position: absolute;
     right:-220px;
-    top:-610px;
+    top:-350px;
   }
 
   .bover-about{
@@ -2281,10 +2246,7 @@ font-style: normal;
   text-align: left;
   font-weight: 700;
 }
-.subjob{
-  font-size: 14px;
-  font-style: normal;
-}
+
 .arrow{
   font-size: 20px;
 }
@@ -2648,7 +2610,7 @@ font-style: normal;
 }
 /*accountancy.html sub div*/
 .dover{
-top: -380px;
+top: -300px;
 }
 /*accountancy.html testimonial*/
 .tover{
@@ -2691,17 +2653,14 @@ font-style: normal;
 }
 /*acc.html rectangle*/
 .acctopimg{
-  height:390px;
+  height:300px;
 }
 /*career.html rectangle*/
 .topimg{
   height:300px;
 }
 /*career.html cards*/
-.cards-txt{
-  color:black;
-  font-size: 12px;
-  }  
+ 
   .careermar{
     width: 100%;
     height: 100vh;
@@ -2728,6 +2687,9 @@ font-style: normal;
   .cartxtheight{
     max-height:25rem;
   }
+  .sidebarpad{
+    padding-bottom: 600px;
+  }
     /*career.html circle image*/
     .cirimg{
       width:500px;
@@ -2738,11 +2700,11 @@ font-style: normal;
     }
       /*accountancy.html circle image*/
   .accimg{
-    width:500px;
-    height:500px;
+    width:490px;
+    height:480px;
     position: absolute;
     right:-280px;
-    top:-600px;
+    top:-630px;
   }
 
   .bover-about{
@@ -2765,10 +2727,7 @@ font-style: normal;
   text-align: left;
   font-weight: 700;
 }
-.subjob{
-  font-size: 12px;
-  font-style: normal;
-}
+
 .arrow{
   font-size: 20px;
 }
@@ -3124,7 +3083,7 @@ table.firhome tr td:nth-child(4) input {
 }
 /*accountancy.html sub div*/
 .dover{
-top: -300px;
+top: -200px;
 }
 /*accountancy.html testimonial*/
 .tover{
@@ -3142,7 +3101,7 @@ margin-bottom: 270px;
 .acctxt{
 margin-top: 160px;
 font-size: 60px;
-font-weight: 750;
+font-weight: 800;
 letter-spacing: 8px;
 }
 .accsubtxt{
@@ -3167,17 +3126,14 @@ font-style: normal;
 }
 /*acc.html rectangle*/
 .acctopimg{
-  height:380px;
+  height:300px;
 }
 /*career.html rectangle*/
 .topimg{
   height:300px;
 }
 /*career.html cards*/
-.cards-txt{
-  color:black;
-  font-size: 12px;
-  }   
+  
   .cards{
     background-color: white;
     border-radius: 6px;
@@ -3210,6 +3166,9 @@ font-style: normal;
   .cartxtheight{
     max-height:25rem;
   }
+  .sidebarpad{
+    padding-bottom: 700px;
+  }
     /*career.html circle image*/
     .cirimg{
       width:560px;
@@ -3220,11 +3179,11 @@ font-style: normal;
     }
     /*accountancy.html circle image*/
   .accimg{
-    width:600px;
-    height:600px;
+    width:590px;
+    height:590px;
     position: absolute;
-    right:-300px;
-    top:-700px;
+    right:-320px;
+    top:-580px;
   }
    /*blog.html div*/
 .bover-about{
@@ -3247,10 +3206,7 @@ margin-bottom: -370px;
   text-align: left;
   font-weight: 700;
 }
-.subjob{
-  font-size: 12px;
-  font-style: normal;
-}
+
 .arrow{
   font-size: 22px;
 }
@@ -3649,7 +3605,7 @@ font-size: 20px;
 }
 /*accountancy.html sub div*/
 .dover{
-  top: -400px;
+  top: -200px;
 }
 /*accountancy.html testimonial*/
 .tover{
@@ -3665,9 +3621,9 @@ font-size: 20px;
 }
 /*career.html above img text*/
 .acctxt{
-  margin-top: 180px;
+  margin-top: 160px;
   font-size: 70px;
-  font-weight: 750;
+  font-weight: 800;
   letter-spacing: 8px;
 }
 .accsubtxt{
@@ -3693,7 +3649,7 @@ font-size: 20px;
 
   /*acc.html rectangle*/
 .acctopimg{
-  height:400px;
+  height:300px;
 }
 .careermar{
   width: 100%;
@@ -3721,6 +3677,12 @@ font-size: 20px;
 .cartxtheight{
   max-height:25rem;
 }
+.leftbarpad{
+  padding-bottom: 600px;
+}
+.rightbarpad{
+  padding-bottom: 1000px;
+}
   /*career.html circle image*/
   .cirimg{
     width:580px;
@@ -3734,8 +3696,8 @@ font-size: 20px;
     width:600px;
     height:600px;
     position: absolute;
-    right:-300px;
-    top:-700px;
+    right:-330px;
+    top:-590px;
   }
 
   /*career.html rectangle*/
@@ -3744,11 +3706,7 @@ font-size: 20px;
 }
 
 /*career.html cards*/
-.cards-txt{
-  color:black;
-  font-size: 14px;
-  text-decoration: none;
-  }  
+ 
   .cards{
     background-color: white;
     border-radius: 6px;
@@ -3797,10 +3755,7 @@ margin-bottom: -370px;
   text-align: left;
   font-weight: 700;
 }
-.subjob{
-  font-size: 14px;
-  font-style: normal;
-}
+
 .arrow{
   font-size: 25px;
 }
@@ -4082,7 +4037,9 @@ font-size: 12px;
 .myDiv{
   display: none;
 }
-
+.myDiv a{
+  text-decoration: none;
+}
 .myDiv:target{
   display:block !important;
   color:black;
@@ -4351,10 +4308,6 @@ tr{
   padding-top: 0px;
 }
 
-.controlf{
-  background-color:  #F3F3F3;
-  border:1px solid  #d1d1d1;
-}
 .uploader {
   opacity: 0;
   position: absolute;
@@ -4615,4 +4568,9 @@ color: #808080;
 .jalert{
   letter-spacing: 4px;
   font-size: 25px;
+}
+.subjob{
+  font-size: 14px;
+  font-style: normal;
+  text-align: left;
 }
