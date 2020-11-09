@@ -718,7 +718,7 @@ top: -100px;
 }
 /*accountancy.html testimonial*/
 .tover{
-margin-bottom: 1550px; position: relative;
+margin-bottom: 1740px; position: relative;
 }
 .testtxt{
   font-weight: 800; letter-spacing: 1px;font-size: 38px; color:white;
@@ -1188,7 +1188,7 @@ top: -100px;
 }
 /*accountancy.html testimonial*/
 .tover{
-margin-bottom: 1400px; position: relative;
+margin-bottom: 1580px; position: relative;
 }
 .testtxt{
   font-weight: 800; letter-spacing: 2px;font-size: 40px; color:white;
@@ -1661,7 +1661,7 @@ top: -100px;
 }
 /*accountancy.html testimonial*/
 .tover{
-margin-bottom: 1400px; position: relative;
+margin-bottom: 1450px; position: relative;
 }
 .testtxt{
   font-weight: 800; letter-spacing: 2px;font-size: 44px; color:white;
@@ -2134,7 +2134,7 @@ top: -60px;
 }
 /*accountancy.html testimonial*/
 .tover{
-  margin-bottom: 1100px; position: relative;
+  margin-bottom: 1350px; position: relative;
 }
 .testtxt{
   font-weight: 900; letter-spacing: 2px;font-size: 44px; color:white;
@@ -2704,9 +2704,8 @@ font-style: normal;
     height:480px;
     position: absolute;
     right:-280px;
-    top:-630px;
+    top:-560px;
   }
-
   .bover-about{
     top:-320px;
     border-radius: 10px;
@@ -3605,7 +3604,7 @@ font-size: 20px;
 }
 /*accountancy.html sub div*/
 .dover{
-  top: -200px;
+  top: -280px;
 }
 /*accountancy.html testimonial*/
 .tover{
@@ -3649,7 +3648,7 @@ font-size: 20px;
 
   /*acc.html rectangle*/
 .acctopimg{
-  height:300px;
+  height:310px;
 }
 .careermar{
   width: 100%;
@@ -3693,8 +3692,8 @@ font-size: 20px;
   }
   /*accountancy.html circle image*/
   .accimg{
-    width:600px;
-    height:600px;
+    width:580px;
+    height:580px;
     position: absolute;
     right:-330px;
     top:-590px;
