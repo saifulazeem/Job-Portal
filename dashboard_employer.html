@@ -28,7 +28,6 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
     <title>Company Admin Panel</title>
-    </style>
     <script>
         function CheckOpt(val) {
             var element = document.getElementById('reason');
@@ -100,12 +99,24 @@
             }
         }
         $(document).ready(function () {
-            $(".normaltext").click(function (event) {
-                $(this).siblings().removeClass('boldtext');
-                $(this).addClass("boldtext");
-            });
+            /*if(localStorage.getItem('myid')!=null){
+                alert(localStorage.getItem('myid'));
+            }
+*/
+            var x = window.location.href;
+            var x1 = x.split('#');
 
-            
+            if(x1[1]!=null){
+             //   alert(x1[1].substring(0,1));
+                $('#'+x1[1].substring(0,1)).addClass("boldtext");
+            }
+
+            $("#tabs li a").click(function (event) {
+                $("#tabs li a").removeClass('boldtext');
+                $(this).addClass("boldtext");
+                //var ses = localStorage.setItem('myid', $(this).attr('href'));
+                //alert(localStorage.getItem('myid') +" "+$(this).attr('href'));
+            });
 
             //limit the number of characters
             $(window).resize(function () {
@@ -200,9 +211,9 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="d-flex collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav flex-column ">
+                            <ul class="nav flex-column" id="tabs">
                                 <li class="nav-item dashnav normaltext ml-0">
-                                    <a class=" nav-link" href="#editprofile" role="button" aria-haspopup="true"
+                                    <a class=" nav-link" href="#editprofile" id="e" role="button" aria-haspopup="true"
                                         aria-expanded="false">
                                         <img src="img/profilelogo.png" class="img-fluid">
                                         <span class="dashtxt ml-2">Edit Profile</span>
@@ -210,7 +221,7 @@
                                 </li>
 
                                 <li class="nav-item dashnav normaltext ml-0">
-                                    <a class="nav-link" href="#jobs" role="button" aria-haspopup="true"
+                                    <a class="nav-link" href="#jobs" id="j" role="button" aria-haspopup="true"
                                         aria-expanded="false">
                                         <img src="img/jobposted.png" class="img-fluid">
                                         <span class="dashtxt ml-2">Jobs</span>
@@ -218,7 +229,7 @@
                                 </li>
 
                                 <li class="nav-item dashnav normaltext ml-0">
-                                    <a class="nav-link" href="#deletejobs" role="button" aria-haspopup="true"
+                                    <a class="nav-link" href="#deletejobs" id="d" role="button" aria-haspopup="true"
                                         aria-expanded="false">
                                         <img src="img/delete.png" class="img-fluid my-2">
                                         <span class="dashtxt ml-2">Delete Profile</span>
