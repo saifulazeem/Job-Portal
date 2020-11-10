@@ -6,32 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" href="img/logo.png">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
     <style>
+        .limitchar span {
+            text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+        }
     </style>
     <script>
-        $(document).ready(function () {
-             $('.class').map(function () {
-                var myval= ($(this).attr('id'));
+        /*$(document).ready(function () {
+            $('.class').map(function () {
+                var myval = ($(this).attr('id'));
                 //$('#'+myval).text('new text');
-                $('#'+myval).text($('#'+myval).text().substring(0, 5) + '...');
+                $('#' + myval).text($('#' + myval).text().substring(0, 15) + '...');
             });
             //alert(ids);
 
-        });
+        });*/
     </script>
 </head>
 
 <body>
-    <div class="class" id="1">cmmmmmmmmmmmmmmmmmmmmmmmcc</div>
-    <div class="class" id="2">ccccccc</div>
-    <div class="class" id="3">xxxx</div>
+    <div class="container ">
+        <div class="row class col-1 bg-primary" id="1">cmmmmmmmmmmmmmmmmmmmmmmmcc</div>
+        <div class="row col-4 bg-success" id="2">ccccccc</div>
+        <div class="row col-4 bg-warning" id="3">xxxx</div>
+        <div class="row col-12 bg-danger limitchar">
+        <span>ccccccccccccccccccccccccccccccccccccccccccccccccccccc
+            ccccccccccccccccccccccccccccccccccccccccccccccccccccc
+            ccccccccccccccccccccccccccccccccccccccccccccccccccccc
+            ccccccccccccccccccccccccccccccccccccccccccccccccccccc
+            ccccccccccccccccccccccccccccccccccccccccccccccccccccc
+            ccccccccccccccccccccccccccccccccccccccccccccccccccccc
+        </span>
+        </div>
+    </div>
 </body>
 
 </html>

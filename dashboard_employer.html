@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
@@ -106,9 +107,9 @@
             var x = window.location.href;
             var x1 = x.split('#');
 
-            if(x1[1]!=null){
-             //   alert(x1[1].substring(0,1));
-                $('#'+x1[1].substring(0,1)).addClass("boldtext");
+            if (x1[1] != null) {
+                //   alert(x1[1].substring(0,1));
+                $('#' + x1[1].substring(0, 1)).addClass("boldtext");
             }
 
             $("#tabs li a").click(function (event) {
@@ -120,7 +121,7 @@
 
             //limit the number of characters
             $(window).resize(function () {
-                if ($(window).width() > 1200) {
+                /*if ($(window).width() > 1200) {
                     alert('More than 1200');
                     $('.txtdescjob').map(function () {
                         var myval = ($(this).attr('id'));
@@ -144,11 +145,25 @@
                 }
                 else if ($(window).width() > 300) {
                     alert('More than 300');
-                }
+                }*/
             });
 
         });
     </script>
+    <style>
+        .limitchar span {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .no-marginLR {
+    margin-left:0;
+    margin-right:0;
+}
+.no-padding {
+    padding: 0px;
+}
+    </style>
 </head>
 
 <body style="font-family: Segoe UI;">
@@ -426,10 +441,11 @@
                                                 <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
                                                     Pakistan</span>
                                             </div>
-                                            <div class="row txtdescjob mt-2" id="txtone">
-                                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
-                                                industry exp)
-                                                Responsibilities: Provide comprehensive and
+                                            <div class="row col-12 txtdescjob mt-2 limitchar">
+                                                <span>
+                                                    Position Title: Mid-Senior Software Quality Assurance Engineer (3+
+                                                    years industry exp) Responsibilities: Provide comprehensive and
+                                                </span>
                                             </div>
                                             <div class="row">
                                                 <div class="d-inline">
@@ -456,10 +472,11 @@
                                                 <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
                                                     Pakistan</span>
                                             </div>
-                                            <div class="row txtdescjob mt-2" id="txttwo">
-                                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
-                                                industry exp)
-                                                Responsibilities: Provide comprehensive and
+                                            <div class="row col-12 txtdescjob mt-2 limitchar">
+                                                <span>
+                                                    Position Title: Mid-Senior Software Quality Assurance Engineer (3+
+                                                    years industry exp) Responsibilities: Provide comprehensive and
+                                                </span>
                                             </div>
                                             <div class="row">
                                                 <div class="d-inline">
@@ -492,10 +509,11 @@
                                                 <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
                                                     Pakistan</span>
                                             </div>
-                                            <div class="row txtdescjob mt-2" id="txt2one">
-                                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
-                                                industry exp)
-                                                Responsibilities: Provide comprehensive and
+                                            <div class="row col-12 txtdescjob mt-2 limitchar">
+                                                <span>
+                                                    Position Title: Mid-Senior Software Quality Assurance Engineer (3+
+                                                    years industry exp) Responsibilities: Provide comprehensive and
+                                                </span>
                                             </div>
                                             <div class="row">
                                                 <div class="d-inline">
@@ -522,10 +540,11 @@
                                                 <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
                                                     Pakistan</span>
                                             </div>
-                                            <div class="row txtdescjob mt-2" id="txt2two">
-                                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years
-                                                industry exp)
-                                                Responsibilities: Provide comprehensive and
+                                            <div class="row col-12 txtdescjob mt-2 limitchar">
+                                                <span>
+                                                    Position Title: Mid-Senior Software Quality Assurance Engineer (3+
+                                                    years industry exp) Responsibilities: Provide comprehensive and
+                                                </span>
                                             </div>
                                             <div class="row">
                                                 <div class="d-inline">
@@ -600,18 +619,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

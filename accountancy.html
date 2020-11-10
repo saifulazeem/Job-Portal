@@ -21,12 +21,30 @@
             $(".acccards").hover(function (event) {
                 $(this).find('img').toggle();
             });
+
+            /*$(".normalcard").hover(function (event) {
+                $(this).find('img').toggle();
+                $(this).addClass("boldcard");
+            });
+*/
+            $(".normalcard").click(function () {
+                if (!$(this).hasClass('boldcard')) {
+                    $(".boldcard").find('img').toggle();
+                    $(".normalcard").removeClass('boldcard');
+                    $(this).addClass("boldcard");
+                    $(this).find('img').toggle(function () {
+                        $(this).find('img').toggle();
+                    });
+                }
+            });
+
             //show div on hover
             $(".hovtabs2").hide();
             $(".hovtabs").hover(function (event) {
                 $var = $(this).attr("id");
                 $var1 = $var + 's';
-                $('.main2').find('#' + $var1).show();
+                $('.main2').find('#' + $var1).show("slow");
+                
             }, function (event) {
                 $var = $(this).attr("id");
                 $var1 = $var + 's';
@@ -47,6 +65,12 @@
             background-size: cover;
             background-position: top center;
             background-repeat: no-repeat;
+        }
+
+        .boldcard {
+            background-color: #0BB44F;
+            text-decoration: none;
+            color: white;
         }
     </style>
 </head>
@@ -104,12 +128,13 @@
                 </div>
             </nav>
 
-            <div class="container" style="max-height: 95rem;">
+            <div class="container accheight">
                 <div class="row">
-                    <div class="col-12 text-center text-white accmar">
+                    <div class="col-12 text-center text-white">
                         <div class="row mx-auto col-xl-10 col-lg-11 col-md-12 col-sm-12 col-11 ">
                             <p class="acctxt mx-auto">Accountancy</p>
-                            <p class="accsubtxt mt-4 text-center">Accountancy is the measurement, processing and communication of
+                            <p class="accsubtxt mt-4 text-center">Accountancy is the measurement, processing and
+                                communication of
                                 financial information for
                                 businesses and corporations.Accountants can work in any industry – whether it’s in an
                                 accountancy firm, a financial institution, a professional services firm or even within a
@@ -121,13 +146,13 @@
                                 the career path for you.</p>
                         </div>
 
-                        <div class="row careertable mt-5">
+                        <div class="row careertable mt-sm-4 mt-0">
                             <!--------------------------X-LARGE VIEW-------------------->
                             <div class="col-xl-12 d-xl-block d-lg-none d-md-none d-sm-none d-none">
                                 <div class="row d-flex justify-content-center align-items-center">
                                     <div class="mx-2">
                                         <a href="#for">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsefor" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
@@ -142,7 +167,7 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#tax">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsetax" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
@@ -157,7 +182,7 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#fin">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsefin" aria-expanded="false"
                                                 aria-controls="collapsefin">
                                                 <div>
@@ -172,7 +197,7 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#man">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapseman" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
@@ -187,14 +212,14 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#aud">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapseaud" aria-expanded="false"
                                                 aria-controls="collapseaud">
-                                                <div>
+                                                <div class="mb-3">
                                                     <img src="img/audit.png">
                                                     <img src="img/auditwhite.png" style="display: none;">
                                                 </div>
-                                                <div style="position: relative; top:10px;">
+                                                <div style="position: relative; top:0px;">
                                                     <span>AUDIT</span>
                                                 </div>
                                             </div>
@@ -202,13 +227,12 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!--------------------------LARGE VIEW-------------------->
                             <div class="col-lg-12 d-xl-none d-lg-block d-md-none d-sm-none d-none">
                                 <div class="row d-flex justify-content-center align-items-center">
                                     <div class="mx-2">
                                         <a href="#for">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsefor" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
@@ -223,7 +247,7 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#tax">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsetax" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
@@ -238,7 +262,7 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#fin">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsefin" aria-expanded="false"
                                                 aria-controls="collapsefin">
                                                 <div>
@@ -253,7 +277,7 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#man">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapseman" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
@@ -268,14 +292,14 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#aud">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapseaud" aria-expanded="false"
                                                 aria-controls="collapseaud">
-                                                <div>
+                                                <div class="mb-3">
                                                     <img src="img/audit.png">
                                                     <img src="img/auditwhite.png" style="display: none;">
                                                 </div>
-                                                <div style="position: relative; top:10px;">
+                                                <div style="position: relative; top:-5px;">
                                                     <span>AUDIT</span>
                                                 </div>
                                             </div>
@@ -289,14 +313,14 @@
                                 <div class="row d-flex justify-content-center align-items-center">
                                     <div class="mx-2">
                                         <a href="#for">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsefor" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
                                                     <img src="img/forensic.png">
                                                     <img src="img/forensicwhite.png" style="display: none;">
                                                 </div>
-                                                <div style="position: relative; top:15px;">
+                                                <div style="position: relative; top:10px;">
                                                     <span>FORENSIC <br>ACCOUNTING</span>
                                                 </div>
                                             </div>
@@ -304,14 +328,14 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#tax">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsetax" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
                                                     <img src="img/tax.png">
                                                     <img src="img/taxwhite.png" style="display: none;">
                                                 </div>
-                                                <div style="position: relative; top:6px;">
+                                                <div style="position: relative; top:4px;">
                                                     <span>TAX <br>ACCOUNTING</span>
                                                 </div>
                                             </div>
@@ -319,14 +343,14 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#fin">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsefin" aria-expanded="false"
                                                 aria-controls="collapsefin">
                                                 <div>
                                                     <img src="img/financial.png">
                                                     <img src="img/financialwhite.png" style="display: none;">
                                                 </div>
-                                                <div style="position: relative; top:6px;">
+                                                <div style="position: relative; top:2px;">
                                                     <span>FINANCIAL <br>ACCOUNTING</span>
                                                 </div>
                                             </div>
@@ -337,7 +361,7 @@
                                 <div class="row d-flex justify-content-center align-items-center mt-4">
                                     <div class="mx-2">
                                         <a href="#man">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapseman" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
@@ -352,14 +376,14 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#aud">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapseaud" aria-expanded="false"
                                                 aria-controls="collapseaud">
-                                                <div>
+                                                <div class="mb-2">
                                                     <img src="img/audit.png">
                                                     <img src="img/auditwhite.png" style="display: none;">
                                                 </div>
-                                                <div style="position: relative; top:10px;">
+                                                <div style="position: relative; top:-1px;">
                                                     <span>AUDIT</span>
                                                 </div>
                                             </div>
@@ -373,14 +397,14 @@
                                 <div class="row d-flex justify-content-center align-items-center">
                                     <div class="mx-2">
                                         <a href="#for">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsefor" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
                                                     <img src="img/forensic.png">
                                                     <img src="img/forensicwhite.png" style="display: none;">
                                                 </div>
-                                                <div style="position: relative; top:15px;">
+                                                <div style="position: relative; top:10px;">
                                                     <span>FORENSIC <br>ACCOUNTING</span>
                                                 </div>
                                             </div>
@@ -388,14 +412,14 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#tax">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsetax" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
                                                     <img src="img/tax.png">
                                                     <img src="img/taxwhite.png" style="display: none;">
                                                 </div>
-                                                <div style="position: relative; top:6px;">
+                                                <div style="position: relative; top:5px;">
                                                     <span>TAX <br>ACCOUNTING</span>
                                                 </div>
                                             </div>
@@ -405,14 +429,14 @@
                                 <div class="row d-flex justify-content-center align-items-center mt-3">
                                     <div class="mx-2">
                                         <a href="#fin">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapsefin" aria-expanded="false"
                                                 aria-controls="collapsefin">
                                                 <div>
                                                     <img src="img/financial.png">
                                                     <img src="img/financialwhite.png" style="display: none;">
                                                 </div>
-                                                <div style="position: relative; top:6px;">
+                                                <div style="position: relative; top:4px;">
                                                     <span>FINANCIAL <br>ACCOUNTING</span>
                                                 </div>
                                             </div>
@@ -420,14 +444,14 @@
                                     </div>
                                     <div class="mx-2">
                                         <a href="#man">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapseman" aria-expanded="false"
                                                 aria-controls="collapsefor">
                                                 <div>
                                                     <img src="img/management.png">
                                                     <img src="img/managementwhite.png" style="display: none;">
                                                 </div>
-                                                <div style="position: relative; top:15px;">
+                                                <div style="position: relative; top:12px;">
                                                     <span>MANAGEMENT<br>ACCOUNTING</span>
                                                 </div>
                                             </div>
@@ -437,7 +461,7 @@
                                 <div class="row d-flex justify-content-center align-items-center mt-3">
                                     <div class="mx-2">
                                         <a href="#aud">
-                                            <div class="d-flex flex-column justify-content-center acccards cards-txt"
+                                            <div class="d-flex flex-column justify-content-center normalcard normaltxt"
                                                 data-toggle="collapse" data-target="#collapseaud" aria-expanded="false"
                                                 aria-controls="collapseaud">
                                                 <div>
@@ -457,10 +481,10 @@
                 </div>
             </div>
 
-            <div class="w-100" style="bottom:0px; position: absolute;">
+       <!--     <div class="w-100" style="bottom:0px; position: absolute;">
                 <img src="img/Rectangle.png" class="w-100 acctopimg">
             </div>
-
+-->
 
         </div>
         <!----------------------------------------------Circle image---------------------------------------->
@@ -469,15 +493,15 @@
         </div>
     </div>
 
-    <div class="container tover">
-        <div id="myGroup" class="dover row" style="position: absolute;">
+    <div class="container">
+        <div id="myGroup" class="dover row" style="position: relative;">
             <!-------------------------------------------FORENSIC ACCOUNTING--------------------------------------->
-            <div class="collapse" id="collapsefor" data-parent="#myGroup">
+            <div class="collapse show" id="collapsefor" data-parent="#myGroup">
                 <div class="row col-10 mx-auto mt-5">
                     <div class="text-white text-center">
                         <p class="accsubhead"><b>Forensic
                                 Accounting</b></p>
-                        <p class="my-xl-5 my-lg-5 my-md-3 my-sm-3 my-0 accsubtxt" >
+                        <p class="my-xl-5 my-lg-5 my-md-3 my-sm-3 my-0 accsubtxt">
                             Forensic accountants lead detailed investigation and data analysis into things that
                             have
                             gone wrong: preventing, uncovering and solving fraud, bribery, corruption,
@@ -488,7 +512,7 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="row careertable mt-5">
                     <!-------------------------------------TABLE--------------------------------------------------->
                     <!---------------------------X-LARGE VIEW-------------------->
@@ -545,7 +569,7 @@
                                             <img src="img/prog.png">
                                             <img src="img/progwhite.png" style="display: none;">
                                         </div>
-                                        <div style="position: relative; top:10px;">
+                                        <div style="position: relative; top:14px;">
                                             <span>PROGRESSION</span>
                                         </div>
                                     </div>
@@ -608,7 +632,7 @@
                                             <img src="img/sal.png">
                                             <img src="img/salwhite.png" style="display: none;">
                                         </div>
-                                        <div style="position: relative; top:20px;">
+                                        <div style="position: relative; top:10px;">
                                             <span>SALARY BANDS <br>
                                                 AND HOURS</span>
                                         </div>
@@ -637,7 +661,7 @@
                                             <img src="img/prog.png">
                                             <img src="img/progwhite.png" style="display: none;">
                                         </div>
-                                        <div style="position: relative; top:10px;">
+                                        <div style="position: relative; top:15px;">
                                             <span>PROGRESSION</span>
                                         </div>
                                     </div>
@@ -651,7 +675,7 @@
                                             <img src="img/skill.png">
                                             <img src="img/skillwhite.png" style="display: none;">
                                         </div>
-                                        <div style="position: relative; top:20px;">
+                                        <div style="position: relative; top:15px;">
                                             <span>NECESSARY SKILLS
                                                 <br>& REQUIREMENTS</span>
                                         </div>
@@ -745,7 +769,7 @@
                                             <img src="img/skill.png">
                                             <img src="img/skillwhite.png" style="display: none;">
                                         </div>
-                                        <div style="position: relative; top:20px;">
+                                        <div style="position: relative; top:10px;">
                                             <span>NECESSARY SKILLS
                                                 <br>& REQUIREMENTS</span>
                                         </div>
@@ -811,7 +835,7 @@
                                             <img src="img/train.png">
                                             <img src="img/trainwhite.png" style="display: none;">
                                         </div>
-                                        <div style="position: relative; top:10px;">
+                                        <div style="position: relative; top:6px;">
                                             <span>TRAINING</span>
                                         </div>
                                     </div>
@@ -1122,7 +1146,7 @@
     </div>
 
     <!-------------------------TESTIMONIAL----------------------------------->
-    <div class="container">
+    <div class="container testpad">
         <div class="row">
             <div class=" mx-auto">
                 <span class="testtxt">
@@ -1169,7 +1193,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <!-----------------------------------------------------FOOTER----------------------------------------------------------->
