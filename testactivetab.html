@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Keep Last Selected Bootstrap Tab Active on Page Refresh</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            // set content on click
+            $('.button').click(function (e) {
+                e.preventDefault();
+                setContent($(this));
+                localStorage.setItem('active-container', $(this).data('rel'));
+            });
+
+            // set content on load
+            localStorage.getItem('active-container') && setContent($('.button[data-rel="' + localStorage.getItem('active-container') + '"]'));
+
+        });
+
+        function setContent($el) {
+            $('.button').removeClass('active');
+            $('.container').hide();
+
+            $el.addClass('active');
+            $($el.data('rel')).show();
+        }
+    </script>
+</head>
+
+<body class="bg-warning">
+    <ul class="nav flex-column" class="tabs">
+        <li class="nav-item dashnav normaltext ml-0">
+            <a class=" nav-link" href="#editprofile" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="img/profilelogo.png" class="img-fluid">
+                <span class="dashtxt ml-2">Edit Profile</span>
+            </a>
+        </li>
+
+        <li class="nav-item dashnav normaltext ml-0">
+            <a class="nav-link" href="#jobs" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="img/jobposted.png" class="img-fluid">
+                <span class="dashtxt ml-2">Jobs</span>
+            </a>
+        </li>
+
+        <li class="nav-item dashnav normaltext ml-0">
+            <a class="nav-link" href="#deletejobs" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="img/delete.png" class="img-fluid my-2">
+                <span class="dashtxt ml-2">Delete Profile</span>
+            </a>
+        </li>
+    </ul>
+</body>
+
+</html>

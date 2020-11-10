@@ -275,6 +275,10 @@ opacity: 1;
   font-size: 16px;
   font-style: normal;
 }
+a.bfont{
+  text-decoration: none;
+  color: white;
+}
 .dashtxt{
   font-size: 14px;
 }

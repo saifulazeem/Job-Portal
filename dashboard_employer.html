@@ -28,7 +28,6 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
     <title>Company Admin Panel</title>
-    </style>
     <script>
         function CheckOpt(val) {
             var element = document.getElementById('reason');
@@ -100,12 +99,10 @@
             }
         }
         $(document).ready(function () {
-            /*$(".normaltext").click(function (event) {
+            $(".normaltext").click(function (event) {
                 $(this).siblings().removeClass('boldtext');
                 $(this).addClass("boldtext");
-            });*/
-
-            
+            });
 
             //limit the number of characters
             $(window).resize(function () {
@@ -200,26 +197,26 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="d-flex collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav flex-column ">
+                            <ul class="nav flex-column">
                                 <li class="nav-item dashnav normaltext ml-0">
-                                    <a class=" nav-link" href="#editprofile" role="button" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <a class=" nav-link" href="#editprofile" role="button"
+                                        aria-haspopup="true" aria-expanded="false">
                                         <img src="img/profilelogo.png" class="img-fluid">
                                         <span class="dashtxt ml-2">Edit Profile</span>
                                     </a>
                                 </li>
 
                                 <li class="nav-item dashnav normaltext ml-0">
-                                    <a class="nav-link" href="#jobs" role="button" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <a class="nav-link" href="#jobs" role="button"
+                                        aria-haspopup="true" aria-expanded="false">
                                         <img src="img/jobposted.png" class="img-fluid">
                                         <span class="dashtxt ml-2">Jobs</span>
                                     </a>
                                 </li>
 
                                 <li class="nav-item dashnav normaltext ml-0">
-                                    <a class="nav-link" href="#deletejobs" role="button" aria-haspopup="true"
-                                        aria-expanded="false">
+                                    <a class="nav-link" href="#deletejobs" role="button"
+                                        aria-haspopup="true" aria-expanded="false">
                                         <img src="img/delete.png" class="img-fluid my-2">
                                         <span class="dashtxt ml-2">Delete Profile</span>
                                     </a>
