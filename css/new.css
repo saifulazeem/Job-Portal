@@ -777,11 +777,21 @@ font-style: normal;
   .sidebarpad{
     padding-bottom: 20px;
   }
+  .leftbarpad{
+    padding-bottom: 30px;
+  }
+  .rightbarpad{
+    padding-bottom: 600px;
+    margin-right:0px;
+  }
+  .marright{
+    margin-right:0px;
+  }
   .bover-about{
     top:-220px;
     border-radius: 0px;
     padding:20px 20px 190px 20px;
-  margin-bottom: -210px;
+    margin-bottom: -210px;
   }
 .blogtext{
   font-size:56px;font-weight: 700; letter-spacing: 2px;margin-top:-80px;
@@ -1234,7 +1244,6 @@ font-style: normal;
   .cartxtheight{
     max-height:27rem;
   }
-
   .bover-about{
     top:-220px;
     border-radius: 0px;
@@ -1299,6 +1308,9 @@ font-style: normal;
  }
 /***********************************************************************************************************************/
 @media (min-width: 500px) {
+  .limitchar{
+    max-width: 28rem;
+}
   .externalpad{
     margin:0px 140px;
     left: 40px;
@@ -1623,7 +1635,7 @@ font-style: normal;
   top:80px;
 }
 .testpad{
-  margin-top: 160px;
+  margin-top: 190px;
 }
 .accheight{
   max-height: 65rem;
@@ -1761,6 +1773,9 @@ font-style: normal;
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
+  .limitchar{
+    max-width: 18rem;
+}
   .externalpad{
     margin:0px 40px;
     left: 0px;
@@ -2098,7 +2113,7 @@ font-style: normal;
   top:-200px;
 }
 .testpad{
-  margin-top: 160px;
+  margin-top: 190px;
 }
 .testtxt{
   font-weight: 900; letter-spacing: 2px;font-size: 44px; color:white;
@@ -2165,6 +2180,12 @@ font-style: normal;
   .sidebarpad{
     padding-bottom: 400px;
   }
+  .leftbarpad{
+    padding-bottom: 600px;
+  }
+  .rightbarpad{
+    padding-bottom: 1000px;
+  }
   /*career.html circle image*/
   .cirimg{
     width:500px;
@@ -2173,7 +2194,16 @@ font-style: normal;
     right:-290px;
     top:-700px;
   }
-       
+  .leftbarpad{
+    padding-bottom: 30px;
+  }
+  .rightbarpad{
+    padding-bottom: 600px;
+    margin-right:-12px;
+  }
+  .marright{
+    margin-right:-17px;
+  }
   .bover-about{
     top:-320px;
     border-radius: 10px;
@@ -2246,6 +2276,9 @@ font-style: normal;
  }
 /***********************************************************************************************************************/
 @media (min-width: 768px) {
+  .limitchar{
+    max-width: 27rem;
+}
   .externalpad{
     margin:0px 30px;
   }
@@ -2568,7 +2601,7 @@ font-style: normal;
   top:-250px;
 }
 .testpad{
-  margin-top: 150px;
+  margin-top: 200px;
 }
 .testtxt{
   font-weight: 900; letter-spacing: 2px;font-size: 48px; color:white;
@@ -2634,6 +2667,13 @@ font-style: normal;
   }
   .sidebarpad{
     padding-bottom: 600px;
+  }
+  .leftbarpad{
+    padding-bottom: 600px;
+  }
+  .rightbarpad{
+    padding-bottom: 1000px;
+    margin-right:-12px;
   }
     /*career.html circle image*/
     .cirimg{
@@ -2774,6 +2814,9 @@ table.firhome tr td:nth-child(4) input {
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
+  .limitchar{
+    max-width: 37rem;
+}
   .externalpad{
     margin:0px 7px;
   }
@@ -3030,7 +3073,7 @@ table.firhome tr td:nth-child(4) input {
   top:-200px;
 }
 .testpad{
-  margin-top: 150px;
+  margin-top: 230px;
 }
 .testtxt{
   font-weight: 900; letter-spacing: 2px;font-size: 50px; color:white;
@@ -3291,6 +3334,9 @@ table.firhome tr td:nth-child(4) input {
  }
 /***********************************************************************************************************************/
  @media (min-width: 1200px) {
+  .limitchar{
+    max-width: 45rem;
+}
    /*button*/
 .btnpad {
   padding-right: 70px;
@@ -3542,7 +3588,7 @@ font-size: 20px;
   top:-180px;
 }
 .testpad{
-  margin-top: 190px;
+  margin-top: 250px;
 }
 .testtxt{
   font-weight: 900; letter-spacing: 2px;font-size: 50px; color:white;
@@ -3606,12 +3652,6 @@ font-size: 20px;
 .cartxtheight{
   max-height:25rem;
 }
-.leftbarpad{
-  padding-bottom: 600px;
-}
-.rightbarpad{
-  padding-bottom: 1000px;
-}
   /*career.html circle image*/
   .cirimg{
     width:580px;
@@ -3620,7 +3660,6 @@ font-size: 20px;
     right:-300px;
     top:-580px;
   }
-  
 
 /*career.html cards*/
  
@@ -4005,13 +4044,22 @@ font-size: 12px;
   font-size: 25px; font-style: normal; border-bottom: 2px solid #0D2942;color: #0D2942; 
 }
 /*blog title change color blog.html*/
-.blogtitle:hover{
-  color:#0BB44F;
-}
+
 .blogtitle{
   color:black;
   font-weight: bold;
   font-size: 16px;
+}
+.blogdiv{
+  border: 2px solid transparent;
+}
+.blogdiv:hover{
+border: 2px solid #0BB44F;
+transition: 300ms;
+cursor: pointer;
+}
+.blogdiv:hover .blogtitle, .blogdiv:hover .blogtitle2{
+  color: #0BB44F;
 }
 a.blogtitle{
   text-decoration: none;
@@ -4031,9 +4079,6 @@ a.blogtitle{
   font-style: normal;
 }
 /*subblogs*/
-.blogtitle2:hover{
-  color:#0BB44F;
-}
 .blogtitle2{
   color:black;
   font-weight: bold;
@@ -4112,7 +4157,7 @@ tr{
 /*seeker dashboard*/
 .seekdiv
 {
- min-width: max-content; height: 60px; border-radius: 20px 20px 0px 0px;
+ min-width: max-content; height: 60px; border-radius: 15px 15px 0px 0px;
  margin-left:0px;
  margin-right:0px;
 }
@@ -4125,6 +4170,15 @@ tr{
   background-color: #0D2942;
   border-radius: 6px;
   color:white;
+  font-size: 13px;
+}
+.dashtxt1{
+  font-size: 13px;
+  color: #757575;
+}
+.dashtxt2{
+  font-size: 13px;
+  color: #404040;
 }
 .seekdeldiv{
   background-color: #d9dbda;
@@ -4154,10 +4208,7 @@ tr{
 .delhov{
   cursor: hand;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 7e0bed54e94a1f70272135cc185d6611debb2d68
 .resumetable td{
   font-size: 12px;
   color:black;
@@ -4485,4 +4536,21 @@ color: #808080;
   font-size: 14px;
   font-style: normal;
   text-align: left;
+}
+.limitchar span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.txtdash{
+  font-size: 12px;
+  color: #5E5E5E;
+}
+.txtdash2{
+  font-size: 18px;
+  color: #5E5E5E;
+}
+.txtdashab{
+  font-size: 12px;
+  color: #757575;
 }

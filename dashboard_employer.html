@@ -118,52 +118,8 @@
                 //var ses = localStorage.setItem('myid', $(this).attr('href'));
                 //alert(localStorage.getItem('myid') +" "+$(this).attr('href'));
             });
-
-            //limit the number of characters
-            $(window).resize(function () {
-                /*if ($(window).width() > 1200) {
-                    alert('More than 1200');
-                    $('.txtdescjob').map(function () {
-                        var myval = ($(this).attr('id'));
-                        $('#' + myval).text($('#' + myval).text().substring(0, 255) + '...');
-                    });
-                }
-                else if ($(window).width() > 992) {
-                    alert('More than 992');
-                }
-                else if ($(window).width() > 768) {
-                    alert('More than 768');
-                }
-                else if ($(window).width() > 576) {
-                    alert('More than 576');
-                }
-                else if ($(window).width() > 500) {
-                    alert('More than 500');
-                }
-                else if ($(window).width() > 400) {
-                    alert('More than 400');
-                }
-                else if ($(window).width() > 300) {
-                    alert('More than 300');
-                }*/
-            });
-
         });
     </script>
-    <style>
-        .limitchar span {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-        .no-marginLR {
-    margin-left:0;
-    margin-right:0;
-}
-.no-padding {
-    padding: 0px;
-}
-    </style>
 </head>
 
 <body style="font-family: Segoe UI;">
@@ -227,7 +183,7 @@
                         </button>
                         <div class="d-flex collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="nav flex-column" id="tabs">
-                                <li class="nav-item dashnav normaltext ml-0">
+                                <li class="nav-item dashnav normaltext">
                                     <a class=" nav-link" href="#editprofile" id="e" role="button" aria-haspopup="true"
                                         aria-expanded="false">
                                         <img src="img/profilelogo.png" class="img-fluid">
@@ -235,7 +191,7 @@
                                     </a>
                                 </li>
 
-                                <li class="nav-item dashnav normaltext ml-0">
+                                <li class="nav-item dashnav normaltext">
                                     <a class="nav-link" href="#jobs" id="j" role="button" aria-haspopup="true"
                                         aria-expanded="false">
                                         <img src="img/jobposted.png" class="img-fluid">
@@ -243,7 +199,7 @@
                                     </a>
                                 </li>
 
-                                <li class="nav-item dashnav normaltext ml-0">
+                                <li class="nav-item dashnav normaltext">
                                     <a class="nav-link" href="#deletejobs" id="d" role="button" aria-haspopup="true"
                                         aria-expanded="false">
                                         <img src="img/delete.png" class="img-fluid my-2">
@@ -257,9 +213,9 @@
             </div>
 
             <!------------------------------------------Side bar right---------------------------------------------->
-            <div class="col ml-3 my-lg-0 my-md-0 my-sm-0 my-5" style="border-radius: 10px;">
+            <div class="col my-lg-0 my-md-0 my-sm-0 my-5 ml-3" style="border-radius: 10px;">
                 <!----------------------breadcrumb------------------->
-                <div class="row">
+                <div class="row marright">
                     <nav aria-label="breadcrumb" class="col-12 w-100 m-0 p-0">
                         <ol class="breadcrumb" style="background-color:  #969696;border-radius: 10px 10px 0px 0px;">
                             <li class="breadcrumb-item "><a class="bfont" href="#">Home</a></li>
@@ -271,9 +227,10 @@
                 <!------------------------on click divs--------------->
                 <div class="row roun mt-1 rightbarpad" style="border-radius:10px;">
                     <!----------------------edit profile------------------->
-                    <div class="myDiv" id="editprofile">
-                        <p class=" font-weight-bold m-3" style="color: #797a7a; font-size: 20px;">Employee Profile</p>
-                        <div class="col-12 my-2" style=" padding-bottom: 170px;">
+                    <div class="myDiv col" id="editprofile">
+                        <p class=" font-weight-bold m-3 my-4" style="color: #797a7a; font-size: 20px;">Employee Profile
+                        </p>
+                        <div class="col-12 my-2 px-lg-2 px-md-1 px-sm-0" style=" padding-bottom: 170px;">
                             <div class="container roun bg-white" style="border-radius: 20px;">
                                 <div class="row bg-success seekdiv text-white">
                                     <span class="mx-4 my-3"><b>Details FORM</b></span>
@@ -375,8 +332,6 @@
                                     <!----------------------------Social Networks--------------------------->
                                     <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
                                         <div class="seekjobsdiv p-2 col-12">Social Networks</div>
-
-
                                         <!------ div-->
                                         <div class="container mt-4 col-12" style="padding:10px; padding-right:0px;">
                                             <div class="row " style="font-size: 14px;">
@@ -397,7 +352,6 @@
                                                     <input type="text" class="form-control f" id="linkedin">
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
 
@@ -417,23 +371,23 @@
                     </div>
 
                     <!----------------------jobs--------------------------->
-                    <div class="myDiv" id="jobs">
-                        <p class=" font-weight-bold  m-3" style="color: #797a7a; font-size: 20px;">Jobs Section</p>
-                        <div class="col-12 mx-auto my-2" style=" padding-bottom: 170px;">
-                            <div class="container roun bg-white" style="border-radius: 20px;">
+                    <div class="myDiv col" id="jobs">
+                        <p class=" font-weight-bold m-3 my-4" style="color: #797a7a; font-size: 20px;">Jobs Section</p>
+                        <div class="col-12 my-2 px-lg-2 px-md-1 px-sm-0" style=" padding-bottom: 170px;">
+                            <div class="roun pb-4" style="border-radius: 15px;">
                                 <div class="row seekdiv text-white" style="background-color: #0BB44F;">
                                     <span class="mx-4 my-3 dashhead">Jobs Posted</span>
                                 </div>
                                 <!----------New Jobs------->
                                 <div class="row pt-4 mx-auto mt-1 col-12">
-                                    <div class="seekjobsdiv p-2 col"><span class="mx-4">New Jobs</span></div>
+                                    <div class="seekjobsdiv p-2 w-100"><span class="mx-4">New Jobs</span></div>
 
                                     <!------------------------------------Divs--------------------------------------->
                                     <!------First div-->
                                     <div class="container roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
                                         style="border-radius: 10px;">
                                         <a href="#">
-                                            <div class="row ">
+                                            <div class="row">
                                                 <span class="main1">Senior Software Quality Assurance Engineer</span>
                                             </div>
                                             <div class="row mt-1">
@@ -441,10 +395,10 @@
                                                 <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
                                                     Pakistan</span>
                                             </div>
-                                            <div class="row col-12 txtdescjob mt-2 limitchar">
+                                            <div class="row txtdescjob mt-2 limitchar">
                                                 <span>
                                                     Position Title: Mid-Senior Software Quality Assurance Engineer (3+
-                                                    years industry exp) Responsibilities: Provide comprehensive and
+                                                    years industry exp) Responsibilities: Provide comprehensive an..
                                                 </span>
                                             </div>
                                             <div class="row">
@@ -472,10 +426,10 @@
                                                 <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
                                                     Pakistan</span>
                                             </div>
-                                            <div class="row col-12 txtdescjob mt-2 limitchar">
+                                            <div class="row txtdescjob mt-2 limitchar">
                                                 <span>
                                                     Position Title: Mid-Senior Software Quality Assurance Engineer (3+
-                                                    years industry exp) Responsibilities: Provide comprehensive and
+                                                    years industry exp) Responsibilities: Provide comprehensive an..
                                                 </span>
                                             </div>
                                             <div class="row">
@@ -493,7 +447,7 @@
                                 </div>
 
                                 <!----------Upcoming Jobs------->
-                                <div class="row m-4 mb-0 mt-0 py-4 ">
+                                <div class="row pt-4 mx-auto mt-1 col-12">
                                     <div class="seekjobsdiv p-2 col-12"><span class="mx-4">Upcoming Jobs</span></div>
 
                                     <!------------------------------------Divs--------------------------------------->
@@ -509,10 +463,10 @@
                                                 <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
                                                     Pakistan</span>
                                             </div>
-                                            <div class="row col-12 txtdescjob mt-2 limitchar">
+                                            <div class="row txtdescjob mt-2 limitchar">
                                                 <span>
                                                     Position Title: Mid-Senior Software Quality Assurance Engineer (3+
-                                                    years industry exp) Responsibilities: Provide comprehensive and
+                                                    years industry exp) Responsibilities: Provide comprehensive an..
                                                 </span>
                                             </div>
                                             <div class="row">
@@ -540,10 +494,10 @@
                                                 <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
                                                     Pakistan</span>
                                             </div>
-                                            <div class="row col-12 txtdescjob mt-2 limitchar">
+                                            <div class="row txtdescjob mt-2 limitchar">
                                                 <span>
                                                     Position Title: Mid-Senior Software Quality Assurance Engineer (3+
-                                                    years industry exp) Responsibilities: Provide comprehensive and
+                                                    years industry exp) Responsibilities: Provide comprehensive an..
                                                 </span>
                                             </div>
                                             <div class="row">
@@ -564,52 +518,56 @@
                     </div>
 
                     <!----------------------delete profile-------------------->
-                    <div class="myDiv mx-3" id="deletejobs">
-                        <p class=" font-weight-bold my-3" style="color: #797a7a; font-size: 20px;">Delete Profile</p>
-                        <div class="container roun bg-white" style="border-radius: 20px;">
-                            <div class="row bg-success seekdiv text-white">
-                                <span class="mx-4 my-3"><b>Employee</b></span>
-                            </div>
-                            <div class="row text-justify m-1 mt-0 p-lg-4 p-md-4 p-sm-1 p-3 pb-sm-4 mb-5 pb-5">
-                                <div class="row">
-                                    <p class="col-lg-8 mx-auto my-auto text-center">When you delete your account, your
-                                        profile, photos, videos, comments, likes and
-                                        followers will be permanently removed.</p>
+                    <div class="myDiv col" id="deletejobs">
+                        <p class=" font-weight-bold my-4" style="color: #797a7a; font-size: 20px;">Delete Profile</p>
+                        <div class="col-12 my-2 px-lg-2 px-md-1 px-sm-0" style=" padding-bottom: 170px;">
+                            <div class="roun pb-4" style="border-radius: 15px;">
+                                <div class="row bg-success seekdiv text-white">
+                                    <span class="mx-4 my-3"><b>Employee</b></span>
                                 </div>
-                                <div class="row mt-5 mx-auto roun rounded p-5">
-                                    <div class="col-lg-12">
-                                        <form class="needs-validation" novalidate action="login.html">
-                                            <div class="form-group">
-                                                <label for="delacc"><b>Why are you deleting your account?</b></label>
-                                                <select id="delacc" name="reason" class="form-control f"
-                                                    onchange='CheckOpt(this.value);' required>
-                                                    <option selected disabled value="">Choose...</option>
-                                                    <option value="nothing useful">I don't find anything useful here
-                                                    </option>
-                                                    <option value="noprivacy">No privacy</option>
-                                                    <option value="difficult">Difficult to Operate</option>
-                                                    <option value="others">Others</option>
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    Please select a valid option
+                                <div class="d-flex flex-column p-lg-4 p-md-4 p-sm-1 p-3 pb-sm-4 mb-5 pb-5">
+                                    <div class="row">
+                                        <span class="col text-center txtdash2">When you delete your account,
+                                            your
+                                            profile, photos, videos, comments, likes and
+                                            followers will be permanently removed.</span>
+                                    </div>
+                                    <div class="row mt-4 mx-auto roun rounded p-5">
+                                        <div class="col-lg-12">
+                                            <form class="needs-validation" novalidate action="login.html">
+                                                <div class="form-group">
+                                                    <label for="delacc"><b>Why are you deleting your
+                                                            account?</b></label>
+                                                    <select id="delacc" name="reason" class="form-control f"
+                                                        onchange='CheckOpt(this.value);' required>
+                                                        <option selected disabled value="">Choose...</option>
+                                                        <option value="nothing useful">I don't find anything useful here
+                                                        </option>
+                                                        <option value="noprivacy">No privacy</option>
+                                                        <option value="difficult">Difficult to Operate</option>
+                                                        <option value="others">Others</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">
+                                                        Please select a valid option
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
                                                 </div>
-                                                <div class="valid-feedback">
-                                                    Looks good!
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control f" name="reason" id="reason"
+                                                        style='display:none;' />
+                                                    <div class="invalid-feedback">
+                                                        Please type a valid reason
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control f" name="reason" id="reason"
-                                                    style='display:none;' />
-                                                <div class="invalid-feedback">
-                                                    Please type a valid reason
-                                                </div>
-                                            </div>
 
-                                            <button type="submit"
-                                                class="btn post mt-4 px-lg-4 px-md-4 px-sm-2 px-2">Permanently
-                                                Delete my
-                                                Account</button>
-                                        </form>
+                                                <button type="submit"
+                                                    class="btn post mt-4 px-lg-4 px-md-4 px-sm-2 px-2">Permanently
+                                                    Delete my
+                                                    Account</button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

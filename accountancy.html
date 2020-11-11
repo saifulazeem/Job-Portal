@@ -44,19 +44,35 @@
                 $var = $(this).attr("id");
                 $var1 = $var + 's';
                 $('.main2').find('#' + $var1).show("slow");
-                
             }, function (event) {
                 $var = $(this).attr("id");
                 $var1 = $var + 's';
                 $('.main2').find('#' + $var1).hide();
             }
             );
+
             //restrict the number of characters
             $('.tdesc').map(function () {
                 var myval = ($(this).attr('id'));
                 $('#' + myval).text($('#' + myval).text().substring(0, 300) + '...');
             });
+
+            $('.collapse').on('shown.bs.collapse', function (e) {
+                var $panel = $(this).closest('.collapse');
+                $('html,body').animate({
+                    scrollTop: $panel.offset().top
+                }, 'slow');
+            });
         });
+        function goToByScroll(id) {
+            // Reove "link" from the ID
+            id = id.replace("link", "");
+            // Scroll
+            $('html,body').animate({
+                scrollTop: $("#" + id).offset().top
+            },
+                'slow');
+        }
     </script>
     <style>
         .bg-img-career {
@@ -481,7 +497,7 @@
                 </div>
             </div>
 
-       <!--     <div class="w-100" style="bottom:0px; position: absolute;">
+            <!--     <div class="w-100" style="bottom:0px; position: absolute;">
                 <img src="img/Rectangle.png" class="w-100 acctopimg">
             </div>
 -->
