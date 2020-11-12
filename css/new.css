@@ -81,7 +81,7 @@ color: #0BB44F;text-decoration: none; font-size: 16px;
     right: 358px;
   }
   .activelink {
-    border-bottom: 2px solid #0BB44F;
+    border-bottom: 3px solid #0BB44F;
     color: white;
     font-weight: 700;
   }
@@ -782,26 +782,29 @@ font-style: normal;
   }
   .rightbarpad{
     padding-bottom: 600px;
-    margin-right:0px;
+    margin-right:12px;
   }
   .marright{
     margin-right:0px;
   }
   .bover-about{
-    top:-220px;
-    border-radius: 0px;
-    padding:20px 20px 190px 20px;
-    margin-bottom: -210px;
+    top:-600px;
+    border-radius: 10px;
+  padding-bottom: 400px;
+  padding-left: 30px;
+padding-right: 30px;
+padding-top: 15px;
+  margin-bottom: 80px;
   }
-.blogtext{
-  font-size:56px;font-weight: 700; letter-spacing: 2px;margin-top:-80px;
-}
-.blogsubtext{
-  font-size:20px;letter-spacing: 0px;margin-bottom: 200px;
-}
-.blogmar{
-  margin: 160px 0px 70px 0px;
-}
+  .blogtext{
+    font-size:70px;font-weight: 700; letter-spacing: 4px
+  }
+  .blogsubtext{
+    font-size:25px;letter-spacing: 4px;
+  }
+  .blogmar{
+    padding: 90px 0px;
+  }
 .job{
   font-size: 16px;
   text-align: left;
@@ -1245,20 +1248,23 @@ font-style: normal;
     max-height:27rem;
   }
   .bover-about{
-    top:-220px;
-    border-radius: 0px;
-    padding:20px 20px 190px 20px;
-  margin-bottom: -210px;
+    top:-600px;
+    border-radius: 10px;
+  padding-bottom: 400px;
+  padding-left: 30px;
+padding-right: 30px;
+padding-top: 15px;
+  margin-bottom: 80px;
   }
-.blogtext{
-  font-size:52px;font-weight: 700; letter-spacing: 2px;margin-top:-80px;
-}
-.blogsubtext{
-  font-size:20px;letter-spacing: 2px;margin-bottom: 200px; 
-}
-.blogmar{
-  margin: 160px 0px 70px 0px;
-}
+  .blogtext{
+    font-size:70px;font-weight: 700; letter-spacing: 4px
+  }
+  .blogsubtext{
+    font-size:25px;letter-spacing: 4px;
+  }
+  .blogmar{
+    padding: 90px 0px;
+  }
 .job{
   font-size: 16px;
   text-align: left;
@@ -1710,20 +1716,23 @@ font-style: normal;
     max-height:23rem;
   }
   .bover-about{
-    top:-220px;
-    border-radius: 0px;
-    padding:20px 20px 190px 20px;
-  margin-bottom: -210px;
+    top:-600px;
+    border-radius: 10px;
+  padding-bottom: 400px;
+  padding-left: 30px;
+padding-right: 30px;
+padding-top: 15px;
+  margin-bottom: 80px;
   }
-.blogtext{
-  font-size:56px;font-weight: 700; letter-spacing: 4px;margin-top:-80px;
-}
-.blogsubtext{
-  font-size:20px;letter-spacing: 2px;margin-bottom: 200px;
-}
-.blogmar{
-  margin: 160px 0px 70px 0px;
-}
+  .blogtext{
+    font-size:70px;font-weight: 700; letter-spacing: 4px
+  }
+  .blogsubtext{
+    font-size:25px;letter-spacing: 4px;
+  }
+  .blogmar{
+    padding: 90px 0px;
+  }
 .job{
   font-size: 16px;
   text-align: left;
@@ -2180,12 +2189,6 @@ font-style: normal;
   .sidebarpad{
     padding-bottom: 400px;
   }
-  .leftbarpad{
-    padding-bottom: 600px;
-  }
-  .rightbarpad{
-    padding-bottom: 1000px;
-  }
   /*career.html circle image*/
   .cirimg{
     width:500px;
@@ -2204,21 +2207,28 @@ font-style: normal;
   .marright{
     margin-right:-17px;
   }
-  .bover-about{
-    top:-320px;
-    border-radius: 10px;
-    padding:20px 20px 190px 20px;
-  margin-bottom: -300px;
+  .dashimg{
+    height:100px;
+    width:100px;
   }
-.blogtext{
-  font-size:56px;font-weight: 700; letter-spacing: 4px;margin-top:-80px;
-}
-.blogsubtext{
-  font-size:20px;letter-spacing: 4px;margin-bottom: 300px;
-}
-.blogmar{
-  margin: 160px 0px 70px 0px;
-}
+  .bover-about{
+    top:-600px;
+    border-radius: 10px;
+  padding-bottom: 400px;
+  padding-left: 30px;
+padding-right: 30px;
+padding-top: 15px;
+  margin-bottom: 80px;
+  }
+  .blogtext{
+    font-size:70px;font-weight: 700; letter-spacing: 4px
+  }
+  .blogsubtext{
+    font-size:25px;letter-spacing: 4px;
+  }
+  .blogmar{
+    padding: 90px 0px;
+  }
 .job{
   font-size: 16px;
   text-align: left;
@@ -2683,22 +2693,28 @@ font-style: normal;
       right:-280px;
       top:-700px;
     }
-
-  .bover-about{
-    top:-320px;
-    border-radius: 10px;
-    padding:20px 20px 190px 20px;
-  margin-bottom: -300px;
-  }
-.blogtext{
-  font-size:60px;font-weight: 700; letter-spacing: 4px;margin-top:-80px;
-}
-.blogsubtext{
-  font-size:22px;letter-spacing: 4px;margin-bottom: 300px;
-}
-.blogmar{
-  margin: 160px 0px 70px 0px;
-}
+    .dashimg{
+      height:120px;
+      width:120px;
+    }
+    .bover-about{
+      top:-600px;
+      border-radius: 10px;
+    padding-bottom: 300px;
+    padding-left: 30px;
+padding-right: 30px;
+padding-top: 15px;
+    margin-bottom: 80px;
+    }
+    .blogtext{
+      font-size:70px;font-weight: 700; letter-spacing: 4px;
+    }
+    .blogsubtext{
+      font-size:25px;letter-spacing: 4px;
+    }
+    .blogmar{
+      padding: 90px 0px;
+    }
 .job{
   font-size: 15px;
   text-align: left;
@@ -3155,22 +3171,29 @@ font-style: normal;
       right:-300px;
       top:-550px;
     }
+    .dashimg{
+      height:130px;
+      width:130px;
+    }
    /*blog.html div*/
-.bover-about{
-  top:-420px;
-  border-radius: 10px;
-margin-bottom: -370px;
-
-}
-.blogtext{
-  font-size:70px;font-weight: 700; letter-spacing: 4px;margin-top:-100px;
-}
-.blogsubtext{
-  font-size:25px;letter-spacing: 4px;margin-bottom: 400px;
-}
-.blogmar{
-  margin: 160px 0px 90px 0px;
-}
+   .bover-about{
+    top:-600px;
+    border-radius: 10px;
+  padding-bottom: 320px;
+  padding-left: 30px;
+padding-right: 30px;
+padding-top: 15px;
+  margin-bottom: 80px;
+  }
+  .blogtext{
+    font-size:70px;font-weight: 700; letter-spacing: 4px
+  }
+  .blogsubtext{
+    font-size:25px;letter-spacing: 4px;
+  }
+  .blogmar{
+    padding: 90px 0px;
+  }
 .job{
   font-size: 17px;
   text-align: left;
@@ -3675,23 +3698,29 @@ font-size: 20px;
     height:180px;
     width: 180px;
     } 
+    .dashimg{
+      height:130px;
+      width:130px;
+    }
   /*blog.html div*/
 .bover-about{
   top:-600px;
   border-radius: 10px;
-margin-bottom: -370px;
+padding-bottom: 400px;
+padding-left: 30px;
+padding-right: 30px;
+padding-top: 15px;
+margin-bottom: 80px;
 }
-
 .blogtext{
-  font-size:70px;font-weight: 700; letter-spacing: 4px;margin-top:-60px;
+  font-size:70px;font-weight: 700; letter-spacing: 4px
 }
 .blogsubtext{
-  font-size:25px;letter-spacing: 4px;margin-bottom: 600px;
+  font-size:25px;letter-spacing: 4px;
 }
 .blogmar{
-  margin: 160px 0px 70px 0px;
+  padding: 90px 0px;
 }
-
 .jobtxt{
   font-size: 16px;
   color: #808080;
@@ -4041,7 +4070,13 @@ font-size: 12px;
     background-color: white;
 }
 .txtbloghead{
-  font-size: 25px; font-style: normal; border-bottom: 2px solid #0D2942;color: #0D2942; 
+  font-size: 25px; font-style: normal;  color: #0D2942; margin-bottom: -10px;
+}
+.txtbloghead::after{
+  border-bottom: 2px solid #0D2942;
+  width: 80%;
+  display: block;
+  content: "";
 }
 /*blog title change color blog.html*/
 
@@ -4050,15 +4085,23 @@ font-size: 12px;
   font-weight: bold;
   font-size: 16px;
 }
+.blogdivmain a{
+  text-decoration: none;
+}
 .blogdiv{
-  border: 2px solid transparent;
+  border: 1px solid transparent;
+  border-top: none;
 }
-.blogdiv:hover{
-border: 2px solid #0BB44F;
+.blogdivmain:hover{
+  cursor: pointer;
+}
+.blogdivmain:hover .blogdiv{
+border: .1px solid #0BB44F;
+border-top: none;
 transition: 300ms;
-cursor: pointer;
+border-radius: 0px 0px 10px 10px;
 }
-.blogdiv:hover .blogtitle, .blogdiv:hover .blogtitle2{
+.blogdivmain:hover .blogtitle, .blogdivmain:hover .blogtitle2{
   color: #0BB44F;
 }
 a.blogtitle{
@@ -4470,7 +4513,11 @@ font-style: normal;
   font-weight: bold;
   font-size: 18px;
 }
-
+.main1:hover{
+  color: #0BB44F;
+  text-decoration: underline;
+  cursor: pointer;
+}
 .empsidebartxt a{
   text-decoration: none;
   color: white;

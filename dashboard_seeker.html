@@ -121,6 +121,16 @@
                 //var ses = localStorage.setItem('myid', $(this).attr('href'));
                 //alert(localStorage.getItem('myid') +" "+$(this).attr('href'));
             });
+
+            $(".myBox").click(function (e) {
+                window.location = $(this).find("a").attr("href");
+                return false;
+            });
+
+            $(".myBox .notclk").click(function (e) {
+                e.stopPropagation();
+            });
+
         });
     </script>
     <style>
@@ -138,6 +148,14 @@
         .dashlist {
             list-style-type: none;
             list-style-image: url('img/special-qualification.png');
+        }
+
+        .myBox:hover {
+            cursor: pointer;
+        }
+
+        .nav-link{
+            padding: 0px;
         }
     </style>
 </head>
@@ -171,7 +189,7 @@
             <div class="text-white col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 leftbarpad"
                 style="background-color: #0D2942; border-radius: 10px;">
                 <div class="row">
-                    <img src="img/seeker.png" class="img-fluid my-5 mx-auto d-block">
+                    <img src="img/seeker.png" class="my-5 mx-auto d-block dashimg">
                 </div>
                 <div class="row">
                     <h6 class="mx-auto d-block">John Wick</h6>
@@ -180,62 +198,55 @@
                     <p class="mx-auto pt-3" style="font-size: 14;">@Username</p>
                 </div>
 
-                <div class="row my-2 mx-3 d-flex justify-content-between">
-                    <div class="">
-                        Profile
+                <div class="row my-2 d-flex justify-content-between">
+                    <div class="mx-lg-4 mx-md-2 mx-sm-2 mx-5">
+                        <b>Profile</b>
                     </div>
-                    <div class="">
+                    <div class="mx-lg-4 mx-md-2 mx-sm-2 mx-5">
                         25%
                     </div>
                 </div>
-                <div class="progress mx-3" style="height:5px">
+                <div class="progress mx-lg-3 mx-sm-0 mx-5" style="height:5px">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25"
                         aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
 
-                <div class="row d-flex justify-content-start align-self-start">
+                <div class="row d-flex justify-content-start align-items-start">
                     <!----------------------------------------Vertical navigation bar------------------------------------------->
-                    <nav class="navbar navbar-expand text-white">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="d-flex collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav flex-column" id="tabs">
-                                <li class="nav-item dashnav normaltext">
-                                    <a class="nav-link" href="#editprofile" id="e" role="button" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        <img src="img/profilelogo.png" class="img-fluid">
-                                        <span class="dashtxt ml-2">Edit Profile</span>
-                                    </a>
-                                </li>
+                    <nav class="ml-lg-3 ml-sm-0 ml-4 mt-3 navbar navbar-expand col-12 text-white">
+                        <ul class="nav flex-column" id="tabs">
+                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                                <a class="nav-link" href="#editprofile" id="e" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img src="img/profilelogo.png" class="img-fluid">
+                                    <span class="dashtxt ml-2">Edit Profile</span>
+                                </a>
+                            </li>
 
-                                <li class="nav-item dashnav normaltext">
-                                    <a class="nav-link" href="#resume" id="r" role="button" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        <img src="img/resume.png" class="img-fluid my-2">
-                                        <span class="dashtxt ml-2">Resume</span>
-                                    </a>
-                                </li>
+                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                                <a class="nav-link" href="#resume" id="r" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img src="img/resume.png" class="img-fluid pr-1">
+                                    <span class="dashtxt ml-2">Resume</span>
+                                </a>
+                            </li>
 
-                                <li class="nav-item dashnav normaltext">
-                                    <a class="nav-link" href="#jobs" id="j" role="button" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        <img src="img/jobposted.png" class="img-fluid">
-                                        <span class="dashtxt ml-2">Jobs</span>
-                                    </a>
-                                </li>
+                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                                <a class="nav-link" href="#jobs" id="j" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img src="img/jobposted.png" class="img-fluid">
+                                    <span class="dashtxt ml-2">Jobs</span>
+                                </a>
+                            </li>
 
-                                <li class="nav-item dashnav normaltext">
-                                    <a class="nav-link" href="#deletejobs" id="d" role="button" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        <img src="img/delete.png" class="img-fluid my-2">
-                                        <span class="dashtxt ml-2">Delete Profile</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                                <a class="nav-link" href="#deletejobs" id="d" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img src="img/delete.png" class="img-fluid pr-1">
+                                    <span class="dashtxt ml-2">Delete Profile</span>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </div>
@@ -414,6 +425,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!----------------------resume-------------------------->
                     <div class="myDiv col" id="resume">
                         <p class=" font-weight-bold my-4" style="color: #797a7a; font-size: 20px;">Resume</p>
@@ -696,7 +708,6 @@
                                                 recently with desktop publishing software like Aldus PageMaker
                                                 including
                                                 versions of Lorem Ipsum.
-
                                             </div>
                                         </div>
                                     </div>
@@ -924,14 +935,16 @@
 
                                     <!------------------------------------Divs--------------------------------------->
                                     <!------First div-->
-                                    <div class="container roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
                                         style="border-radius: 10px;">
                                         <div class="row d-flex justify-content-between">
-                                            <div class="">
-                                                <span class="main1">Senior Software Quality Assurance
-                                                    Engineer</span>
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
                                             </div>
-                                            <div class="d-flex flex-row">
+                                            <div class="d-flex flex-row notclk">
                                                 <div class="">
                                                     <button type="submit"
                                                         class="btn btnseeker text-white px-4 py-1">Applied
@@ -967,14 +980,16 @@
                                         </div>
                                     </div>
                                     <!------Second div-->
-                                    <div class="container roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
                                         style="border-radius: 10px;">
                                         <div class="row d-flex justify-content-between">
-                                            <div class="">
-                                                <span class="main1">Senior Software Quality Assurance
-                                                    Engineer</span>
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
                                             </div>
-                                            <div class="d-flex flex-row">
+                                            <div class="d-flex flex-row notclk">
                                                 <div class="">
                                                     <button type="submit"
                                                         class="btn btnseeker text-white px-4 py-1">Applied
@@ -1017,14 +1032,16 @@
 
                                     <!------------------------------------Divs--------------------------------------->
                                     <!------First div-->
-                                    <div class="container roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
                                         style="border-radius: 10px;">
                                         <div class="row d-flex justify-content-between">
-                                            <div class="">
-                                                <span class="main1">Senior Software Quality Assurance
-                                                    Engineer</span>
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
                                             </div>
-                                            <div class="d-flex flex-row">
+                                            <div class="d-flex flex-row notclk">
                                                 <div class="">
                                                     <button type="submit"
                                                         class="btn btnseeker text-white px-4 py-1">Applied
@@ -1060,14 +1077,16 @@
                                         </div>
                                     </div>
                                     <!------Second div-->
-                                    <div class="container roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
                                         style="border-radius: 10px;">
                                         <div class="row d-flex justify-content-between">
-                                            <div class="">
-                                                <span class="main1">Senior Software Quality Assurance
-                                                    Engineer</span>
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
                                             </div>
-                                            <div class="d-flex flex-row">
+                                            <div class="d-flex flex-row notclk">
                                                 <div class="">
                                                     <button type="submit"
                                                         class="btn btnseeker text-white px-4 py-1">Applied
@@ -1110,14 +1129,16 @@
 
                                     <!------------------------------------Divs--------------------------------------->
                                     <!------First div-->
-                                    <div class="container roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
                                         style="border-radius: 10px;">
                                         <div class="row d-flex justify-content-between">
-                                            <div class="">
-                                                <span class="main1">Senior Software Quality Assurance
-                                                    Engineer</span>
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
                                             </div>
-                                            <div class="d-flex flex-row">
+                                            <div class="d-flex flex-row notclk">
                                                 <div class="">
                                                     <button type="submit"
                                                         class="btn btnseeker text-white px-4 py-1">Applied
@@ -1153,14 +1174,16 @@
                                         </div>
                                     </div>
                                     <!------Second div-->
-                                    <div class="container roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
                                         style="border-radius: 10px;">
                                         <div class="row d-flex justify-content-between">
-                                            <div class="">
-                                                <span class="main1">Senior Software Quality Assurance
-                                                    Engineer</span>
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
                                             </div>
-                                            <div class="d-flex flex-row">
+                                            <div class="d-flex flex-row notclk">
                                                 <div class="">
                                                     <button type="submit"
                                                         class="btn btnseeker text-white px-4 py-1">Applied
