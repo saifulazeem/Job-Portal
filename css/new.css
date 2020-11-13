@@ -786,10 +786,13 @@ font-style: normal;
   .marright{
     margin-right:0px;
   }
+  .supmarright{
+    margin-right:0px;
+  }
   .bover-about{
     top:-600px;
     border-radius: 10px;
-  padding-bottom: 400px;
+  padding-bottom: 0px;
   padding-left: 30px;
 padding-right: 30px;
 padding-top: 15px;
@@ -802,6 +805,9 @@ padding-top: 15px;
 padding-right: 30px;
 padding-top: 10px;
   margin-bottom: 80px;
+  }
+  .bimgheight{
+    height: 10rem;
   }
   .blogtext{
     font-size:70px;font-weight: 700; letter-spacing: 4px
@@ -1257,7 +1263,7 @@ font-style: normal;
   .bover-about{
     top:-600px;
     border-radius: 10px;
-  padding-bottom: 400px;
+  padding-bottom: 0px;
   padding-left: 30px;
 padding-right: 30px;
 padding-top: 15px;
@@ -1270,6 +1276,9 @@ padding-top: 15px;
 padding-right: 30px;
 padding-top: 10px;
   margin-bottom: 80px;
+  }
+  .bimgheight{
+    height: 13rem;
   }
   .blogtext{
     font-size:70px;font-weight: 700; letter-spacing: 4px
@@ -1733,7 +1742,7 @@ font-style: normal;
   .bover-about{
     top:-600px;
     border-radius: 10px;
-  padding-bottom: 400px;
+  padding-bottom: 0px;
   padding-left: 30px;
 padding-right: 30px;
 padding-top: 15px;
@@ -1746,6 +1755,9 @@ padding-top: 15px;
 padding-right: 30px;
 padding-top: 10px;
   margin-bottom: 80px;
+  }
+  .bimgheight{
+    height: 13rem;
   }
   .blogtext{
     font-size:70px;font-weight: 700; letter-spacing: 4px
@@ -2227,6 +2239,13 @@ font-style: normal;
     padding-bottom: 600px;
     margin-right:-12px;
   }
+  .suprightbarpad{
+    padding-bottom: 600px;
+    margin-right:0px;
+  }
+  .supmarright{
+    margin-right:0px;
+  }
   .marright{
     margin-right:-17px;
   }
@@ -2237,7 +2256,7 @@ font-style: normal;
   .bover-about{
     top:-600px;
     border-radius: 10px;
-  padding-bottom: 400px;
+  padding-bottom: 0px;
   padding-left: 30px;
 padding-right: 30px;
 padding-top: 15px;
@@ -2250,6 +2269,9 @@ padding-top: 15px;
 padding-right: 30px;
 padding-top: 10px;
   margin-bottom: 80px;
+  }
+  .bimgheight{
+    height: 14rem;
   }
   .blogtext{
     font-size:70px;font-weight: 700; letter-spacing: 4px
@@ -2716,6 +2738,13 @@ font-style: normal;
     padding-bottom: 1000px;
     margin-right:-12px;
   }
+  .suprightbarpad{
+    padding-bottom: 1600px;
+    margin-right:-12px;
+  }
+  .supmarright{
+    margin-right:-12px;
+  }
     /*career.html circle image*/
     .cirimg{
       width:500px;
@@ -2728,10 +2757,14 @@ font-style: normal;
       height:120px;
       width:120px;
     }
+    .superdashimg{
+      height:120px;
+      width:120px;
+    }
     .bover-about{
       top:-600px;
       border-radius: 10px;
-    padding-bottom: 300px;
+    padding-bottom: 0px;
     padding-left: 30px;
 padding-right: 30px;
 padding-top: 15px;
@@ -3214,11 +3247,15 @@ font-style: normal;
       height:130px;
       width:130px;
     }
+    .superdashimg{
+      height:130px;
+      width:130px;
+    }
    /*blog.html div*/
    .bover-about{
     top:-600px;
     border-radius: 10px;
-  padding-bottom: 320px;
+  padding-bottom: 0px;
   padding-left: 30px;
 padding-right: 30px;
 padding-top: 15px;
@@ -3749,11 +3786,15 @@ font-size: 20px;
       height:130px;
       width:130px;
     }
+    .superdashimg{
+      height:130px;
+      width:130px;
+    }
   /*blog.html div*/
 .bover-about{
   top:-600px;
   border-radius: 10px;
-padding-bottom: 400px;
+padding-bottom: 0px;
 padding-left: 30px;
 padding-right: 30px;
 padding-top: 15px;
@@ -4157,6 +4198,10 @@ a.innersubblogdescp:hover{
   color:#0D2942;
   font-weight: bold;
   font-size: 16px;
+}
+/*padding pagination blog.html*/
+.padblog{
+  padding-top:200px;
 }
 .innerblogtitle{
   color:#0D2942;
@@ -4681,6 +4726,11 @@ color: #808080;
 .txtdash{
   font-size: 12px;
   color: #5E5E5E;
+}
+.txtdashsuper{
+  font-size: 16px;
+  color: white;
+  font-style: normal;
 }
 .txtdash2{
   font-size: 18px;
