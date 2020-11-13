@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <title>BLOG</title>
+    <title>SubBLOG</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -43,28 +43,9 @@
             /* number of lines to show */
             -webkit-box-orient: vertical;
         }
-
     </style>
     <script>
         $(document).ready(function () {
-            /*$('.blogtitle').map(function () {
-                var myval = ($(this).attr('id'));
-                if ($('#' + myval).text().length > 205) {
-                    $('#' + myval).text($('#' + myval).text().substring(0, 160) + '...');
-                }
-            });
-            $('.blogtitle2').map(function () {
-                var myval = ($(this).attr('id'));
-                if ($('#' + myval).text().length > 25) {
-                    $('#' + myval).text($('#' + myval).text().substring(0, 25) + '...');
-                }
-            });
-            $('.blogsubtitle, .blogsubtitle2').map(function () {
-                var myval = ($(this).attr('id'));
-                if ($('#' + myval).text().length > 350) {
-                    $('#' + myval).text($('#' + myval).text().substring(0, 370) + '...');
-                }
-            });*/
         });
     </script>
 </head>
@@ -105,7 +86,7 @@
                         </li>
                         <li class="nav-item navfour sp mr-xl-5 mr-lg-5 mr-md-4">
                             <a class="nav-link" href="blog.html"><span
-                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2 activelink">BLOG</span></a>
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">BLOG</span></a>
                         </li>
                         <li class="nav-item">
                             <div
@@ -136,21 +117,45 @@
 
         <div class="container bover-about roun bg-white">
             <div class="row">
-                <div class="row col-12 my-3 mx-xl-2 mx-lg-3 mx-md-2 mx-sm-2 mx-2 mx-md-0">
-                    <p class="txtbloghead">LATEST BLOGs</p>
-
-                </div>
-                <!--xlarge large and medium view-->
                 <div
                     class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
                     <!-------------------------------------first row---------------------------------->
                     <div class="row my-3 mx-xl-1 mx-lg-1 mx-md-2 mx-sm-2 mx-2 ">
-                        <!-------first blog------->
-                        <div class="col container roun blogdivmain" style="border-radius: 10px;">
-                            <a href="#">
+                        <!-------image------>
+                        <div class="col d-flex flex-column" style="border-radius: 10px;">
+                            <div class="">
+                                <img src="img/subblog.png" class="img-fluid">
+                            </div>
+                            <div class="mt-2 blogtitle text-left">How to
+                                write a CV if you’ve never really
+                                had a proper job before.
+                            </div>
+                            <div class="mt-2 blogsubtitle text-left">
+                                <p>Living off the bank of mum and dad has its downsides
+                                </p>
+                            </div>
+                            <div class="my-2 d-flex justify-content-start">
+                               <div>
+                                <img src="img/ba1.png">
+                                <small class="imgtxt">Christina Guides, Jobs</small>
+                               </div>
+                            </div>
+                            <div class="blogdescp text-left">
+                                    Uni is supposed to set you up for the adult world and your future career. But, when
+                                    you’ve never actually been taught how to write a CV, it can be hard to stay
+                                    optimistic. Especially, when you realise there are thousands of other students all
+                                    applying for the same job too.
+                                    So, how do you make your CV stand out when your main extracurricular activities at
+                                    uni are yeeting VKs and procrastinating coursework??
+                                    Don’t panic, it’s not as hard as you think. There are generations of successful
+                                    students who’ve also finished uni with a barely functioning liver and still managed
+                                    to get a great grad job – it’s all about the presentation of the facts.
+                                    Here’s a step by step guide on how to write a CV that makes you look great:
+                            </div>
+                            <!--<a href="#">
                                 <div class="d-flex flex-column text-left">
                                     <div class="">
-                                        <img src="img/b1.png" class="img-fluid">
+                                        
                                     </div>
                                     <div class="blogdiv">
                                         <div class=" mx-3 mt-4 blogtitle">How to
@@ -168,31 +173,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-
-                        <!-------second blog------->
-                        <div class="col container roun blogdivmain ml-md-4 ml-0" style="border-radius: 10px;">
-                            <a href="#">
-                                <div class="d-flex flex-column text-left">
-                                    <div class="">
-                                        <img src="img/b1.png" class="img-fluid">
-                                    </div>
-                                    <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle">How to
-                                            write a CV if you’ve never really
-                                            had a proper job before.
-                                        </div>
-                                        <div class=" mx-3 blogsubtitle">
-                                            <p>Living off the bank of mum and dad has its downsides</p>
-                                        </div>
-                                        <div class=" mx-3 mb-3 ">
-                                            <img src="img/ba1.png" class="img-responsive">
-                                            <small class="imgtxt">Christina Guides, Jobs</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                            </a>-->
                         </div>
                     </div>
 
@@ -257,141 +238,6 @@
                                         <div class="mb-3 mx-2">
                                             <img src="img/ba1.png" class="img-responsive">
                                             <small class="imgtxt2">Christina Guides, Jobs</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!--small vsmall and mobile view-->
-                <div
-                    class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 d-xl-none d-lg-none d-md-none d-sm-block d-block">
-
-                    <!-------------------------------------first row---------------------------------->
-                    <div class="row my-3 mx-xl-2 mx-lg-1 mx-md-2 mx-sm-2 mx-2 ">
-                        <div class="col container roun blogdivmain" style="border-radius: 10px;">
-                            <a href="#">
-                                <div class="d-flex flex-column text-left">
-                                    <div class="">
-                                        <img src="img/b1.png" class="img-fluid w-100">
-                                    </div>
-                                    <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle">How to
-                                            write a CV if you’ve never really
-                                            had a proper job before.
-                                        </div>
-                                        <div class=" mx-3 blogsubtitle">
-                                            <p>Living off the bank of mum and dad has its downsides</p>
-                                        </div>
-                                        <div class=" mx-3 mb-3 ">
-                                            <img src="img/ba1.png" class="img-responsive">
-                                            <small class="imgtxt">Christina Guides, Jobs</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-------------------------------------second row---------------------------------->
-                    <div class="row my-3 mx-xl-2 mx-lg-1 mx-md-2 mx-sm-2 mx-2 ">
-                        <div class="col container roun blogdivmain" style="border-radius: 10px;">
-                            <a href="#">
-                                <div class="d-flex flex-column text-left">
-                                    <div class="">
-                                        <img src="img/b1.png" class="img-fluid w-100">
-                                    </div>
-                                    <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle">How to
-                                            write a CV if you’ve never really
-                                            had a proper job before.
-                                        </div>
-                                        <div class=" mx-3 blogsubtitle">
-                                            <p>Living off the bank of mum and dad has its downsides</p>
-                                        </div>
-                                        <div class=" mx-3 mb-3 ">
-                                            <img src="img/ba1.png" class="img-responsive">
-                                            <small class="imgtxt">Christina Guides, Jobs</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-------------------------------------third row---------------------------------->
-                    <div class="row my-3 mx-xl-2 mx-lg-1 mx-md-2 mx-sm-2 mx-2 ">
-                        <div class="col container roun blogdivmain" style="border-radius: 10px;">
-                            <a href="#">
-                                <div class="d-flex flex-column text-left">
-                                    <div class="">
-                                        <img src="img/b1.png" class="img-fluid w-100">
-                                    </div>
-                                    <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle">How to
-                                            write a CV if you’ve never really
-                                            had a proper job before.
-                                        </div>
-                                        <div class=" mx-3 blogsubtitle">
-                                            <p>Living off the bank of mum and dad has its downsides</p>
-                                        </div>
-                                        <div class=" mx-3 mb-3 ">
-                                            <img src="img/ba1.png" class="img-responsive">
-                                            <small class="imgtxt">Christina Guides, Jobs</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-------------------------------------fourth row---------------------------------->
-                    <div class="row my-3 mx-xl-2 mx-lg-1 mx-md-2 mx-sm-2 mx-2 ">
-                        <div class="col container roun blogdivmain" style="border-radius: 10px;">
-                            <a href="#">
-                                <div class="d-flex flex-column text-left">
-                                    <div class="">
-                                        <img src="img/b1.png" class="img-fluid w-100">
-                                    </div>
-                                    <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle">How to
-                                            write a CV if you’ve never really
-                                            had a proper job before.
-                                        </div>
-                                        <div class=" mx-3 blogsubtitle">
-                                            <p>Living off the bank of mum and dad has its downsides</p>
-                                        </div>
-                                        <div class=" mx-3 mb-3 ">
-                                            <img src="img/ba1.png" class="img-responsive">
-                                            <small class="imgtxt">Christina Guides, Jobs</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-------------------------------------fifth row---------------------------------->
-                    <div class="row my-3 mx-xl-2 mx-lg-1 mx-md-2 mx-sm-2 mx-2 ">
-                        <div class="col container roun blogdivmain" style="border-radius: 10px;">
-                            <a href="#">
-                                <div class="d-flex flex-column text-left">
-                                    <div class="">
-                                        <img src="img/b1.png" class="img-fluid w-100">
-                                    </div>
-                                    <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle">How to
-                                            write a CV if you’ve never really
-                                            had a proper job before.
-                                        </div>
-                                        <div class=" mx-3 blogsubtitle">
-                                            <p>Living off the bank of mum and dad has its downsides</p>
-                                        </div>
-                                        <div class=" mx-3 mb-3 ">
-                                            <img src="img/ba1.png" class="img-responsive">
-                                            <small class="imgtxt">Christina Guides, Jobs</small>
                                         </div>
                                     </div>
                                 </div>

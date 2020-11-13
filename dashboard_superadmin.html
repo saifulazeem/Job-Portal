@@ -259,11 +259,23 @@
 
 <body style="font-family: Segoe UI;">
   <!------------------------------------------Navbar---------------------------------------------------------->
-  <nav class="navbar navbar-expand-xs n">
-    <img src="img/logo.png" class="img-fluid navbar-brand navbar-nav mr-auto">
-    <button class="btn bg-white btn-lg rounded-pill" style="padding-left: 30px; padding-right: 30px;">
-      <a href="login.html" class="b">Login</a>
-    </button>
+  <nav class="navbar navbar-expand-md flex-column flex-row n" style="border-bottom: 2px solid white;">
+    <div class="container  mt-3">
+      <a class="navbar-brand mr-0 mr-md-2 mb-2" href="home.html" style="border: none; outline: none;">
+        <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block"
+          style="border: none; outline: none;">
+      </a>
+
+      <ul class="navbar-nav align-items-md-center">
+        <li class="nav-item">
+          <div class="row d-flex align-items-center mr-2 mt-md-0 mt-sm-1 my-1 mb-2 mb-xl-0 mb-lg-0 mb-md-0 mb-sm-2">
+            <a href="login.html"
+              class="btn btn-lg rounded-pill btnLogin btnLogtxt px-5 mt-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3">
+              Login</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </nav>
 
   <!------------------------------------------Body---------------------------------------------------------->
@@ -459,8 +471,8 @@
                     <tr>
                       <!----------first row-->
                       <td>
-                        <select class="selectpicker btn form-control dashformselect"
-                          style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="">Select Company</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -476,13 +488,12 @@
                       <td>
                         <div class="form-group m-0">
                           <input type="text" class="text-center form-control dashform py-3" id="jdesc"
-                            style="font-size: 12px; border: 0px;"
-                            placeholder="Job Description">
+                            style="font-size: 12px; border: 0px;" placeholder="Job Description">
                         </div>
                       </td>
                       <td>
-                        <select class="selectpicker btn form-control dashformselect"
-                          style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="">Country</option>
                           <option value="A">Iran</option>
                           <option value="B">Pakistan</option>
@@ -490,8 +501,8 @@
                         </select>
                       </td>
                       <td>
-                        <select class="selectpicker btn form-control dashformselect"
-                          style="font-size: 12px" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect" style="font-size: 12px"
+                          onchange="changeMe(this)">
                           <option value="">Active</option>
                           <option value="A">Inactive</option>
                         </select>
@@ -519,8 +530,8 @@
                       <td></td>
                       <td></td>
                       <td>
-                        <select class="selectpicker btn form-control dashformselect py-1"
-                          style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="">City</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -600,8 +611,7 @@
                     <tr>
                       <!----------first row-->
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashformselect"
-                          style="font-size: 12px;">
+                        <select class="selectpicker btn form-control dashformselect" style="font-size: 12px;">
                           <option value="">Select Company</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -611,13 +621,11 @@
                       <td colspan="2">
                         <div class="form-group m-0">
                           <input type="text" class="form-control dashform py-3" id="jdesc"
-                            style="font-size: 12px; border: 0px;"
-                            placeholder="Job Description">
+                            style="font-size: 12px; border: 0px;" placeholder="Job Description">
                         </div>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashformselect"
-                          style="font-size: 12px;">
+                        <select class="selectpicker btn form-control dashformselect" style="font-size: 12px;">
                           <option value="">Country</option>
                           <option value="A">Iran</option>
                           <option value="B">Pakistan</option>
@@ -636,15 +644,15 @@
                         </div>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashformselect"
-                          style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="">Active</option>
                           <option value="A">Inactive</option>
                         </select>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashformselect py-1"
-                          style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="">State</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -660,8 +668,8 @@
                       <td></td>
                       <td></td>
                       <td>
-                        <select class="selectpicker btn form-control dashformselect py-1"
-                          style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="">City</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -740,8 +748,8 @@
                     <tr>
                       <!----------first row-->
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashformselect"
-                          style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="">Select Company</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -751,13 +759,12 @@
                       <td colspan="2">
                         <div class="form-group m-0">
                           <input type="text" class="form-control dashform py-3" id="jdesc"
-                            style="font-size: 12px;border: 0px;"
-                            placeholder="Job Description">
+                            style="font-size: 12px;border: 0px;" placeholder="Job Description">
                         </div>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashformselect"
-                          style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="">Country</option>
                           <option value="A">Iran</option>
                           <option value="B">Pakistan</option>
@@ -776,15 +783,15 @@
                         </div>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashformselect"
-                          style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="">Active</option>
                           <option value="A">Inactive</option>
                         </select>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashformselect py-1"
-                          style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="">State</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -800,8 +807,8 @@
                       <td></td>
                       <td></td>
                       <td>
-                        <select class="selectpicker btn form-control dashformselect py-1"
-                          style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="">City</option>
                           <option value="A">A</option>
                           <option value="B">B</option>
@@ -909,7 +916,8 @@
                         </div>
                       </td>
                       <td>
-                        <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="A">Active</option>
                           <option value="B">Not Active</option>
                         </select>
@@ -1002,7 +1010,8 @@
                         </div>
                       </td>
                       <td colspan="2">
-                        <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                        <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                          onchange="changeMe(this)">
                           <option value="A">Active</option>
                           <option value="B">Not Active</option>
                         </select>
@@ -1087,7 +1096,8 @@
                       <form>
                         <!---------FORM--------->
                         <td>
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="">Select Company</option>
                             <option value="A">A</option>
                             <option value="B">B</option>
@@ -1096,24 +1106,27 @@
                         </td>
                         <td>
                           <div class="form-group p-0 m-0">
-                            <input type="email" class="form-control dashform" id="cmail"
-                              placeholder="Company Email" style="border: 0px;">
+                            <input type="email" class="form-control dashform" id="cmail" placeholder="Company Email"
+                              style="border: 0px;">
                           </div>
                         </td>
                         <td>
-                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Is Active</option>
                             <option value="B">Not Active</option>
                           </select>
                         </td>
                         <td>
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Is Featured</option>
                             <option value="B">Not Featured</option>
                           </select>
                         </td>
                         <td>
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1190,7 +1203,8 @@
                       <tr>
                         <!----------first row-->
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="">Select Company</option>
                             <option value="A">A</option>
                             <option value="B">B</option>
@@ -1198,13 +1212,15 @@
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Is Featured</option>
                             <option value="B">Not Featured</option>
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Is Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1218,7 +1234,8 @@
                           </div>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1295,7 +1312,8 @@
                       <tr>
                         <!----------first row-->
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="">Select Company</option>
                             <option value="A">A</option>
                             <option value="B">B</option>
@@ -1303,13 +1321,15 @@
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Is Featured</option>
                             <option value="B">Not Featured</option>
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Is Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1323,7 +1343,8 @@
                           </div>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1400,7 +1421,8 @@
                       <tr>
                         <!----------first row-->
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="">Select Company</option>
                             <option value="A">A</option>
                             <option value="B">B</option>
@@ -1408,13 +1430,15 @@
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Is Featured</option>
                             <option value="B">Not Featured</option>
                           </select>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1 " style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Is Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1428,7 +1452,8 @@
                           </div>
                         </td>
                         <td colspan="2">
-                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;" onchange="changeMe(this)">
+                          <select class="selectpicker btn form-control dashformselect py-1" style="font-size: 12px;"
+                            onchange="changeMe(this)">
                             <option value="A">Active</option>
                             <option value="B">Not Active</option>
                           </select>
@@ -1599,8 +1624,7 @@
                     <td>
                       <div class="form-group m-0 mb-2 roun rounded">
                         <input type="text" class="text-center form-control py-3 dashform" id="mancat"
-                          style="font-size: 12px; border: 0px;"
-                          placeholder="Manage Categories">
+                          style="font-size: 12px; border: 0px;" placeholder="Manage Categories">
                       </div>
                     </td>
                   </tr>
@@ -1787,8 +1811,8 @@
                     <!----------first row-->
                     <td>
                       <div class="form-group roun rounded">
-                        <input type="text" class="form-control dashform m-0 text-center" id="empname"
-                          placeholder="Name" style="border: 0px;">
+                        <input type="text" class="form-control dashform m-0 text-center" id="empname" placeholder="Name"
+                          style="border: 0px;">
                       </div>
                     </td>
                     <td>
@@ -1875,8 +1899,8 @@
                     <!----------first row-->
                     <td>
                       <div class="form-group roun rounded">
-                        <input type="text" class="form-control dashform m-0 text-center" id="empname"
-                          placeholder="Name" style="border: 0px;">
+                        <input type="text" class="form-control dashform m-0 text-center" id="empname" placeholder="Name"
+                          style="border: 0px;">
                       </div>
                     </td>
                     <td>
@@ -3163,13 +3187,14 @@
                     <!----------first row-->
                     <td>
                       <div class="form-group rounded roun">
-                        <input type="text" class="form-control dashform m-0 text-center" id="empname"
-                          placeholder="Name" style="border: 0px;">
+                        <input type="text" class="form-control dashform m-0 text-center" id="empname" placeholder="Name"
+                          style="border: 0px;">
                       </div>
                     </td>
                     <td>
                       <div class="form-group rounded roun">
-                        <input type="number" class="form-control dashform m-0 text-center" id="compid" placeholder="ID" style="border: 0px;">
+                        <input type="number" class="form-control dashform m-0 text-center" id="compid" placeholder="ID"
+                          style="border: 0px;">
                       </div>
                     </td>
                   </tr>
@@ -3249,13 +3274,13 @@
                     <td>
                       <div class="form-group">
                         <input type="text" class="text-center form-control dashform ml-lg-2 ml-sm-1 ml-md-2 ml-0"
-                          id="jdesc" placeholder="Email"  style="border: 0px;">
+                          id="jdesc" placeholder="Email" style="border: 0px;">
                       </div>
                     </td>
                     <td>
                       <div class="form-group">
                         <input type="text" class="text-center form-control dashform ml-lg-2 ml-sm-1 ml-md-2 ml-0"
-                          id="jdesc" placeholder="Id"  style="border: 0px;">
+                          id="jdesc" placeholder="Id" style="border: 0px;">
                       </div>
                     </td>
                   </tr>
@@ -4543,13 +4568,14 @@
                     <!----------first row-->
                     <td>
                       <div class="form-group rounded roun">
-                        <input type="text" class="form-control dashform m-0 text-center" id="empname"
-                          placeholder="Name"  style="border: 0px;">
+                        <input type="text" class="form-control dashform m-0 text-center" id="empname" placeholder="Name"
+                          style="border: 0px;">
                       </div>
                     </td>
                     <td>
                       <div class="form-group rounded roun">
-                        <input type="number" class="form-control dashform m-0 text-center" id="empid" placeholder="ID"  style="border: 0px;">
+                        <input type="number" class="form-control dashform m-0 text-center" id="empid" placeholder="ID"
+                          style="border: 0px;">
                       </div>
                     </td>
                   </tr>
