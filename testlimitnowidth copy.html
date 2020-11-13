@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/logo.png">
+    <!-- Bootstrap CSS -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    
+    <script src="jquery.ellipsis.min.js"></script>
+    
+    <style>
+        .limitchar span {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            /*$('.class').map(function () {
+                var myval = ($(this).attr('id'));
+                //$('#'+myval).text('new text');
+                $('#' + myval).text($('#' + myval).text().substring(0, 15) + '...');
+            });
+            //alert(ids);
+*/
+$('.demo').ellipsis({
+  type:'lines',
+  count: 1
+});
+
+        });
+        
+    </script>
+</head>
+
+<body>
+    <p class="demo">
+        
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna dui, posuere at varius in, mollis nec ante. Vestibulum vitae rutrum arcu. Morbi porttitor nunc et luctus lobortis. Etiam quis semper velit.
+        
+        </p>
+        
+
+
+</body>
+
+</html>

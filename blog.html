@@ -24,10 +24,31 @@
             background-attachment: fixed;
             background-repeat: no-repeat;
         }
+
+        .blogsubtitle,
+        .blogsubtitle2 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+
+        .blogtitle,
+        .blogtitle2 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+
     </style>
     <script>
         $(document).ready(function () {
-            $('.blogtitle').map(function () {
+            /*$('.blogtitle').map(function () {
                 var myval = ($(this).attr('id'));
                 if ($('#' + myval).text().length > 205) {
                     $('#' + myval).text($('#' + myval).text().substring(0, 160) + '...');
@@ -39,11 +60,20 @@
                     $('#' + myval).text($('#' + myval).text().substring(0, 25) + '...');
                 }
             });
+<<<<<<< HEAD
             $('.demo').ellipsis({
                 type: 'char',
                 count: 3
             });
 
+=======
+            $('.blogsubtitle, .blogsubtitle2').map(function () {
+                var myval = ($(this).attr('id'));
+                if ($('#' + myval).text().length > 350) {
+                    $('#' + myval).text($('#' + myval).text().substring(0, 370) + '...');
+                }
+            });*/
+>>>>>>> 9418340be4ae9091e77c1c963c1db5179992eaba
         });
     </script>
 </head>
@@ -131,12 +161,14 @@
                                         <img src="img/b1.png" class="img-fluid">
                                     </div>
                                     <div class="blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle" id="txtone">How to
+                                        <div class=" mx-3 mt-4 blogtitle">How to
                                             write a CV if you’ve never really
+                                            had a proper job before.write a CV if you’ve never really
                                             had a proper job before.
                                         </div>
                                         <div class=" mx-3 blogsubtitle">
-                                            <p>Living off the bank of mum and dad has its downsides</p>
+                                            <p>Living off the bank of mum and dad has its downsides
+                                            </p>
                                         </div>
                                         <div class=" mx-3 mb-3 ">
                                             <img src="img/ba1.png" class="img-responsive">
@@ -155,7 +187,7 @@
                                         <img src="img/b1.png" class="img-fluid">
                                     </div>
                                     <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle" id="txttwo">How to
+                                        <div class=" mx-3 mt-4 blogtitle">How to
                                             write a CV if you’ve never really
                                             had a proper job before.
                                         </div>
@@ -182,7 +214,7 @@
                                         <img src="img/b1.png" class="img-fluid">
                                     </div>
                                     <div class=" blogdiv">
-                                        <div class="mt-2 mx-2 blogtitle2" id="txtthree">How to smash your graduate</div>
+                                        <div class="mt-2 mx-2 blogtitle2">How to smash your graduate</div>
                                         <div class="blogsubtitle2 mx-2">
                                             <p>Living off the bank of mum and dad has its downsides</p>
                                         </div>
@@ -203,7 +235,7 @@
                                         <img src="img/b1.png" class="img-fluid">
                                     </div>
                                     <div class=" blogdiv">
-                                        <div class="mt-2 mx-2 blogtitle2" id="txtfour">How to smash your graduate
+                                        <div class="mt-2 mx-2 blogtitle2">How to smash your graduates
                                         </div>
                                         <div class="blogsubtitle2 mx-2">
                                             <p>Living off the bank of mum and dad has its downsides</p>
@@ -225,7 +257,7 @@
                                         <img src="img/b1.png" class="img-fluid">
                                     </div>
                                     <div class=" blogdiv">
-                                        <div class="mt-2 mx-2 blogtitle2" id="txtfive">How to smash your graduate
+                                        <div class="mt-2 mx-2 blogtitle2">How to smash your graduate
                                         </div>
                                         <div class="blogsubtitle2 mx-2">
                                             <p>Living off the bank of mum and dad has its downsides</p>
@@ -254,7 +286,7 @@
                                         <img src="img/b1.png" class="img-fluid w-100">
                                     </div>
                                     <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle" id="txt2one">How to
+                                        <div class=" mx-3 mt-4 blogtitle">How to
                                             write a CV if you’ve never really
                                             had a proper job before.
                                         </div>
@@ -280,7 +312,7 @@
                                         <img src="img/b1.png" class="img-fluid w-100">
                                     </div>
                                     <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle" id="txt2two">How to
+                                        <div class=" mx-3 mt-4 blogtitle">How to
                                             write a CV if you’ve never really
                                             had a proper job before.
                                         </div>
@@ -306,7 +338,7 @@
                                         <img src="img/b1.png" class="img-fluid w-100">
                                     </div>
                                     <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle" id="txt2three">How to
+                                        <div class=" mx-3 mt-4 blogtitle">How to
                                             write a CV if you’ve never really
                                             had a proper job before.
                                         </div>
@@ -332,7 +364,7 @@
                                         <img src="img/b1.png" class="img-fluid w-100">
                                     </div>
                                     <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle" id="txt2four">How to
+                                        <div class=" mx-3 mt-4 blogtitle">How to
                                             write a CV if you’ve never really
                                             had a proper job before.
                                         </div>
@@ -358,7 +390,7 @@
                                         <img src="img/b1.png" class="img-fluid w-100">
                                     </div>
                                     <div class=" blogdiv">
-                                        <div class=" mx-3 mt-4 blogtitle" id="txt2five">How to
+                                        <div class=" mx-3 mt-4 blogtitle">How to
                                             write a CV if you’ve never really
                                             had a proper job before.
                                         </div>
