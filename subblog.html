@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <title>SubBLOG</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <style>
+        .bg-img-blog {
+            background: url(img/blogmain.png);
+            background-size: cover;
+            background-position: top center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.blogtitle').map(function () {
+                var myval = ($(this).attr('id'));
+                if ($('#' + myval).text().length > 205) {
+                    $('#' + myval).text($('#' + myval).text().substring(0, 250) + '...');
+                }
+            });
+            $('.blogtitle2').map(function () {
+                var myval = ($(this).attr('id'));
+                if ($('#' + myval).text().length > 25) {
+                    $('#' + myval).text($('#' + myval).text().substring(0, 120) + '...');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-img-blog">
+    <!---------------------------------------------CONTAINER--------------------------------------------->
+    <div class="container-fluid" style="position: relative;">
+        <!-------------------------------------NAVIGATION BAR----------------------------------------------->
+        <nav class="navbar navbar-expand-md flex-column flex-row n" style="border-bottom: 2px solid white;">
+            <div class="container  mt-3">
+                <a class="navbar-brand mr-0 mr-md-2 mb-2" href="home.html" style="border: none; outline: none;">
+                    <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block"
+                        style="border: none; outline: none;">
+                </a>
+
+                <button class="navbar-toggler navbar-dark mt-2" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation" style="border: none; outline: none;">
+                    <img class="img-fluid" src="img/lines.png">
+                </button>
+
+                <div class="collapse mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0 navbar-collapse navbar-right  justify-content-end"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-md-center">
+                        <li class="nav-item navone sp">
+                            <a class="nav-link" href="about.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">ABOUT US</span></a>
+                        </li>
+                        <li class="nav-item navtwo sp">
+                            <a class="nav-link" href="Employer.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">EMPLOYERS
+                                    PROFILE</span></a>
+                        </li>
+                        <li class="nav-item navthree sp">
+                            <a class="nav-link" href="careers.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">CAREERS
+                                    GUIDE</span></a>
+                        </li>
+                        <li class="nav-item navfour sp mr-xl-5 mr-lg-5 mr-md-4">
+                            <a class="nav-link" href="blog.html"><span
+                                    class="float-left ml-xl-0 ml-lg-0 ml-md-0 ml-sm-2 ml-2">BLOG</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <div
+                                class="row d-flex align-items-center mt-md-0 mt-sm-1 my-1 mb-2 mb-xl-0 mb-lg-0 mb-md-0 mb-sm-2">
+                                <a href="login.html"
+                                    class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3">
+                                    Login</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!---------------------------------------------CONTAINER--------------------------------------------->
+
+        <div class="container">
+            <div class="row mb-0 blogmar">
+                <div class="col-12">
+                    <p class="blogtext text-center text-white">BLOGs</p>
+                    <p class="text-center text-white blogsubtext">Keep up to date with
+                        the latest news</p>
+                </div>
+            </div>
+        </div>
+
+        <!---------------------------------------------CONTAINER--------------------------------------------->
+
+        <div class="container bg-white subbover-about roun">
+            <div class="row ">
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row my-3">
+                        <div class="d-flex flex-column text-left">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img src="img/blogimg1.png" class="img-fluid">
+                            </div>
+                            <div class="blogdiv">
+                                <div class="mt-4 innerblogtitle" id="txtone">How to
+                                    write a CV if you’ve never really
+                                    had a proper job before.
+                                </div>
+                                <div class="innerblogsubtitle">
+                                    <p>Living off the bank of mum and dad has its downsides</p>
+                                </div>
+                                <div class="mb-3 ">
+                                    <img src="img/ba1.png" class="img-responsive">
+                                    <span class="imgtxt">Christina Guides, Jobs</span>
+                                </div>
+                                <div class="innersubblogdescp">
+                                    Uni is supposed to set you up for the adult world and your future career. But,
+                                    when you’ve
+                                    never actually been taught how to write a CV, it can be hard to stay optimistic.
+                                    Especially,
+                                    when you realise there are thousands of other students all applying for the same
+                                    job too.
+
+                                    So, how do you make your CV stand out when your main extracurricular activities
+                                    at uni are
+                                    yeeting VKs and procrastinating coursework??
+
+                                    Don’t panic, it’s not as hard as you think. There are generations of successful
+                                    students
+                                    who’ve also finished uni with a barely functioning liver and still managed to
+                                    get a great
+                                    grad job – it’s all about the presentation of the facts.
+
+                                    Here’s a step by step guide on how to write a CV that makes you look great:
+                                </div>
+                                <div class="my-4 d-flex justify-content-center align-items-center" style="max-width: 48rem;">
+                                    <img src="img/blogimg2.png" class="img-fluid">
+                                </div>
+                                <div class="">
+                                    <p class="mt-2 innerblogdescp">Step 1: Choose your format</p>
+                                    <p class="mt-2 innersubblogdescp">
+                                        There are two main types of CV: The chronological CV and the functional CV.
+
+                                        What is a chronological CV? – Chronological CVs are good for people who have
+                                        previous work experience to talk about. These are the traditional looking
+                                        CVs, with work experience and education listed in date order with the most
+                                        recent at the top and the oldest at the bottom.
+
+                                        Even if you don’t have work experience that directly matches the role, you
+                                        can pull out specific instances that are relevant. For example, if you’ve
+                                        worked behind the bar at the local pub you can talk about how you’ve gained
+                                        experience working in a high-pressured environment (think rush orders at
+                                        Happy Hour) and have learnt how to solve problems in a calm and clear
+                                        manner.
+
+                                        What is a functional CV? – Functional CVs focus on skills, rather than work
+                                        history. These CVs are good if you have a variety of odd job experiences (a
+                                        day or two here and there) or no experience at all. These CVs list out key
+                                        skills (e.g. teamwork, time management, conflict resolution etc.) and then
+                                        bullet point examples of when/ how you developed them.
+                                    </p>
+                                </div>
+                                <div class=" mt-4">
+                                    <p class="mt-2 innerblogdescp">Step 2: Write it</p>
+                                    <p class="mt-2 innersubblogdescp">
+                                        Every CV should always include your name, contact details, a summary
+                                        statement (like a short personal statement – these are good if you’re degree
+                                        doesn’t directly relate to the role you’re applying for), education, work
+                                        experience/skills and interests.
+
+                                        Whatever you end up including, make sure it’s true and don’t lie. It can be
+                                        tempting to bend the truth but, at the end of the day, these employers
+                                        aren’t idiots. If you can’t show proof of a skill in an interview, don’t
+                                        pretend you have it on your CV.
+
+                                        If you’re struggling to start, or want a visual guide on how to write a CV,
+                                        use a CV template – you can find some good ones here
+
+                                        Ideally, limit your CV to one page. Employers don’t have time to read your
+                                        entire life story. Also, don’t include a photo of yourself (limits the
+                                        potential for discrimination) and please please pleeaase use a normal font
+                                        and not something “artsy” and illegible.
+                                    </p>
+                                </div>
+                                <div class=" mt-4">
+                                    <p class="mt-2 innerblogdescp">Step: Proof</p>
+                                    <p class="mt-2 innersubblogdescp">
+                                        Make sure you reread your CV again and again. Then, when you can no longer
+                                        face ever seeing it again get your parents to read it, your friends, maybe
+                                        even your tutor? One spelling mistake and employers will push your CV aside
+                                        for one with better grammar.
+
+                                        So that’s it. Not too difficult after all. The trick is to get started ASAP
+                                        so you’re not frantically writing one with only two hours left until the
+                                        application deadline closes. You’ve got this.
+                                    </p>
+                                </div>
+                                <div class=" mt-4">
+                                    <p class="mt-2 innerblogdescp">Related articles</p>
+                                    <div class="mt-2">
+                                        <ul style="color: #757575;">
+                                            <li class="mt-2">
+                                                <a href="#" class=" innersubblogdescp">
+                                                    Quiz: What should you do after uni?
+                                                </a>
+                                            </li>
+                                            <li class="mt-2">
+                                                <a href="#" class=" innersubblogdescp">
+                                                    How to smash your graduate scheme interview and get that bread
+                                                </a>
+                                            </li>
+                                            <li class="mt-2">
+                                                <a href="#" class=" innersubblogdescp">
+                                                    Don’t risk the FOMO: Check out The Tab’s new job board now!!!
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--LARGE VIEW-->
+                                <div class="row mt-5 p-0">
+                                    <div class="col-12 d-xl-block d-lg-block d-md-block d-sm-none d-none">
+                                        <div class="row">
+                                            <!-------first blog------->
+                                            <div class="col ml-3 container roun blogdivmain"
+                                                style="border-radius: 10px;">
+                                                <a href="#">
+                                                    <div class="d-flex flex-column text-left">
+                                                        <div style="height: 8rem;">
+                                                            <img src="img/about.png" class="img-fluid w-100"
+                                                                style="height: 8rem;border-radius:10px 10px 0px 0px;">
+                                                        </div>
+                                                        <div class="blogdiv">
+                                                            <div class="mt-2 mx-2 blogtitle2">How to smash
+                                                                your graduate</div>
+                                                            <div class="blogsubtitle2 mx-2">
+                                                                <p>The best decision you’ll ever make</p>
+                                                            </div>
+                                                            <div class="mb-3 mx-2">
+                                                                <img src="img/ba1.png" class="img-responsive">
+                                                                <small class="imgtxt2">Christina Guides, Jobs</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <!-------second blog------->
+                                            <div class="col ml-3 container roun blogdivmain"
+                                                style="border-radius: 10px;">
+                                                <a href="#">
+                                                    <div class="d-flex flex-column text-left">
+                                                        <div style="height: 8rem;">
+                                                            <img src="img/b1.png" class="img-fluid w-100"
+                                                                style="height: 8rem;border-radius:10px 10px 0px 0px;">
+                                                        </div>
+                                                        <div class="blogdiv">
+                                                            <div class="mt-2 mx-2 blogtitle2">How to smash
+                                                                your graduate</div>
+                                                            <div class="blogsubtitle2 mx-2">
+                                                                <p>The best decision you’ll ever make</p>
+                                                            </div>
+                                                            <div class="mb-3 mx-2">
+                                                                <img src="img/ba1.png" class="img-responsive">
+                                                                <small class="imgtxt2">Christina Guides, Jobs</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <!-------third blog------->
+                                            <div class="col ml-3 mr-0 mr-md-3 mr-lg-0 container roun blogdivmain"
+                                                style="border-radius: 10px;">
+                                                <a href="#">
+                                                    <div class="d-flex flex-column text-left">
+                                                        <div style="height: 8rem;">
+                                                            <img src="img/Image 23.png" class="img-fluid w-100"
+                                                                style="height: 8rem;border-radius:10px 10px 0px 0px;">
+                                                        </div>
+                                                        <div class="blogdiv">
+                                                            <div class="mt-2 mx-2 blogtitle2">How to smash
+                                                                your graduate</div>
+                                                            <div class="blogsubtitle2 mx-2">
+                                                                <p>The best decision you’ll ever make</p>
+                                                            </div>
+                                                            <div class="mb-3 mx-2">
+                                                                <img src="img/ba1.png" class="img-responsive">
+                                                                <small class="imgtxt2">Christina Guides, Jobs</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!--MOBILE VIEW-->
+                                    <div class="col-sm-7 col-10 mx-auto mt-2 d-xl-none d-lg-none d-md-none d-sm-block d-block">
+                                        <div class="row">
+                                            <!-------first blog------->
+                                            <div class="col ml-3 container roun blogdivmain"
+                                                style="border-radius: 10px;">
+                                                <a href="#">
+                                                    <div class="d-flex flex-column text-left">
+                                                        <div style="height: 8rem;">
+                                                            <img src="img/about.png" class="img-fluid w-100"
+                                                                style="height: 8rem;border-radius:10px 10px 0px 0px;">
+                                                        </div>
+                                                        <div class="blogdiv">
+                                                            <div class="mt-2 mx-2 blogtitle2">How to smash
+                                                                your graduate</div>
+                                                            <div class="blogsubtitle2 mx-2">
+                                                                <p>The best decision you’ll ever make</p>
+                                                            </div>
+                                                            <div class="mb-3 mx-2">
+                                                                <img src="img/ba1.png" class="img-responsive">
+                                                                <small class="imgtxt2">Christina Guides, Jobs</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <!-------second blog------->
+                                            <div class="col ml-3 mt-3 container roun blogdivmain"
+                                                style="border-radius: 10px;">
+                                                <a href="#">
+                                                    <div class="d-flex flex-column text-left">
+                                                        <div style="height: 8rem;">
+                                                            <img src="img/b1.png" class="img-fluid w-100"
+                                                                style="height: 8rem;border-radius:10px 10px 0px 0px;">
+                                                        </div>
+                                                        <div class="blogdiv">
+                                                            <div class="mt-2 mx-2 blogtitle2">How to smash
+                                                                your graduate</div>
+                                                            <div class="blogsubtitle2 mx-2">
+                                                                <p>The best decision you’ll ever make</p>
+                                                            </div>
+                                                            <div class="mb-3 mx-2">
+                                                                <img src="img/ba1.png" class="img-responsive">
+                                                                <small class="imgtxt2">Christina Guides, Jobs</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <!-------third blog------->
+                                            <div class="col ml-3 mt-3 mr-0 mr-md-3 mr-lg-0 container roun blogdivmain"
+                                                style="border-radius: 10px;">
+                                                <a href="#">
+                                                    <div class="d-flex flex-column text-left">
+                                                        <div style="height: 8rem;">
+                                                            <img src="img/Image 23.png" class="img-fluid w-100"
+                                                                style="height: 8rem;border-radius:10px 10px 0px 0px;">
+                                                        </div>
+                                                        <div class="blogdiv">
+                                                            <div class="mt-2 mx-2 blogtitle2">How to smash
+                                                                your graduate</div>
+                                                            <div class="blogsubtitle2 mx-2">
+                                                                <p>The best decision you’ll ever make</p>
+                                                            </div>
+                                                            <div class="mb-3 mx-2">
+                                                                <img src="img/ba1.png" class="img-responsive">
+                                                                <small class="imgtxt2">Christina Guides, Jobs</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-------------------------------------------------list of MOST READ----------------------------------------->
+                <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12 col-12 mt-3 pr-0">
+                    <!----------------------list of MOST READ------------------->
+                    <div class="container pb-5"
+                        style="background-color:#0D2942; color: white;font-size:20px; border-radius: 8px; position: relative;">
+                        <p class="font-weight-normal text-center pt-3 ljobs">MOST READ
+                        </p>
+                        <div class="">
+                            <ul class="text-left mt-3">
+                                <li class="">
+                                    <a href="#" class="" style="text-decoration: none;">
+                                        <span class="mb-1 jobpost">Graduate Commercial Business Analyst</span>
+                                        <br><span class="mb-1 cname">Graduate Recruitment Bureau</span>
+                                        <br><span>
+                                            <img src="img/location.png">
+                                            <small class="loc">Wiltshire, South West</small>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="" style="text-decoration: none;">
+                                        <span class="mb-1 jobpost">International Sales& Marketing Exec</span>
+                                        <br><span class="mb-1 cname">Graduate Recruitment Bureau</span>
+                                        <br><span>
+                                            <img src="img/location.png">
+                                            <small class="loc">Wiltshire, South West</small>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="" style="text-decoration: none;">
+                                        <span class="mb-1 jobpost">Personal Tutor</span>
+                                        <br><span class="mb-1 cname">Graduate Recruitment Bureau</span>
+                                        <br><span>
+                                            <img src="img/location.png">
+                                            <small class="loc">Wiltshire, South West</small>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="" style="text-decoration: none;">
+                                        <span class="mb-1 jobpost">Graduate Field Sales Rep</span>
+                                        <br><span class="mb-1 cname">Graduate Recruitment Bureau</span>
+                                        <br><span>
+                                            <img src="img/location.png">
+                                            <small class="loc">Wiltshire, South West</small>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------------------------FOOTER----------------------------------------------------------->
+    <footer class="container-fluid foot pb-5" style="background-color: #323232; ">
+        <div class="container">
+            <div class="row mb-2">
+                <div class=" col-xl-7 col-lg-5 d-flex align-self-center col-md-3 col-sm-3 col-3">
+                    <img src="img/logo.png" class="logo ml-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3">
+                    <!--logo-->
+                </div>
+                <div
+                    class="col-xl-5 offset-xl-0 col-lg-6 offset-lg-1 col-md-7 offset-md-2 col-sm-7 offset-sm-2 offset-1 col-8">
+                    <div class="row mrow pl-xl-0 pl-lg-0 ml-lg-4 pl-0 ml-0 curhov justify-content-start">
+                        <div
+                            class="col-xl-1 offset-xl-1 col-lg-1  offset-lg-1 col-md-1 offset-md-2 col-sm-1 col-1 offset-0 offset-sm-2 px-0 my-2">
+                            <img src="img/joblisting.png" class="img-fluid mt-0 mt-sm-0 mt-md-2 mt-lg-2 mt-xl-2">
+                        </div>
+                        <div class="ml-1 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-4 px-0 mt-1">
+                            <p class="tag d-flex justify-content font-weight-bold"
+                                style="color: #FFFFFF;margin-bottom:0px;">1124</p>
+                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Job Listing</p>
+                        </div>
+                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 px-0 my-2">
+                            <img src="img/resumeposted.png" class="img-fluid mt-0 mt-sm-0 mt-md-2 mt-lg-2 mt-xl-2">
+                        </div>
+                        <div
+                            class="ml-sm-1 ml-xl-0 ml-lg-0 ml-md-0 ml-2 col-xl-4 col-lg-3 col-md-3 col-sm-4 col-5 px-0 mt-1">
+                            <p class="tag d-flex justify-content font-weight-bold"
+                                style="color: #FFFFFF;margin-bottom:0px;">444</p>
+                            <p class="text text-left py-0" style="color: #A7A7A7;margin-top:-4px;">Resumes Posted
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------------------------------HORIZONTAL LINE------------------------------------->
+        <div class="row p-0">
+            <div class="col-md-12">
+                <hr style="background-color: green; height: 1.2px;" class="p-0 m-0">
+            </div>
+        </div>
+
+        <!-------------------------------------------NEXT ROW------------------------------------------------>
+
+        <div class="row mt-5" style="position: relative;">
+            <div class="resp">
+                <img src="img/circle.png" class="img-fluid respimg">
+            </div>
+
+            <div class="container">
+                <div class="row mar">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-10">
+                        <div class="row no-gutters">
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop"> For
+                                                Candidates
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="singlejobpage.html">Browse Jobs</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Browse
+                                                Categories</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Candidate
+                                                Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Job Alerts</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">My Bookmarks</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="d-inline list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop"> For Employers
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Browse
+                                                Candidates</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Employer
+                                                Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Add Job</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="packages.html">Job Packages</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="d-inline list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop"> Other
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="singlejobpage.html">Job Page</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#" style="text-align: left;">Job Page
+                                                Alternative</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Resume Page</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="blog.html">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="d-inline list-group borderless" style="color: #323232;">
+                                    <ul class="one">
+                                        <li>
+                                            <p class="tag foottop">Legal</p>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Privacy Policy</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">Terms of Use</a>
+                                        </li>
+                                        <li>
+                                            <a class="weightedtext" href="#">FAQ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-------------------------------------FORM--------------------------------------------------->
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 newsform mr-3">
+                                <div class="list-group borderless  mr-3" style="color: #323232;">
+                                    <ul class="newsfooter">
+                                        <li>
+                                            <img src="img/newsletter.png" class="img-fluid nospace">
+                                            <span class="text-white text-left foottop align-middle">Sign Up For a
+                                                Newsletter</span>
+                                        </li>
+                                        <li>
+                                            <p class="mt-2 ml-xl-2 ml-lg-2 ml-md-2 ml-sm-0 ml-0 mt-3"
+                                                style="line-height: normal; color:#929292;font-size: 14px;">
+                                                Weekly breaking news, analysis and cutting edge
+                                                advices on job searching.</p>
+                                        </li>
+                                        <li>
+                                            <form class="form-inline ml-lg-2 ml-md-2 ml-sm-3 ml-4 my-2 my-lg-0">
+                                                <input
+                                                    class="form-control footerform col-xl-8 col-lg-7 col-md-8 col-sm-8 col-7"
+                                                    type="email" placeholder="Enter your Email here...">
+                                                <button class="btn btn-success my-2 btnsub"
+                                                    type="submit">Subscribe</button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

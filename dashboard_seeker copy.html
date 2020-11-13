@@ -1,0 +1,1299 @@
+</body>
+
+</html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <title>Job Seeker Admin Panel</title>
+    <script>
+        function CheckOpt(val) {
+            var element = document.getElementById('reason');
+            if (val == 'others') {
+                element.style.display = 'block';
+                element.required = true;
+            }
+            else//any value
+            {
+                element.style.display = 'none';
+                element.required = false;
+            }
+        }
+        $('#no').keyup(function () {
+            if ($(this).val() < 0) {
+                var cnt = document.getElementById('numberofemp');
+                cnt.style.display = 'block';
+                $(this).val('0');
+            }
+        });
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+        /*upload image*/
+        $(function () {
+            var filePath = $("#spnFilePathimg");
+            $('#img_link').click(function (e) {
+                e.preventDefault();
+                $('#image').trigger('click');
+            });
+
+            $('#image').on('change', function () {
+                myfile = $(this).val();
+                var ext = myfile.split('.').pop();
+                filePath.html(myfile);
+                if (ext == "png" || ext == "PNG") {
+                    $('#errmsgimg').html("");
+                    readURL(this);
+                } else {
+                    $('#errmsgimg').html("Invalid File Type. Upload only .png");
+                    readURL(this);
+                }
+            });
+        });
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result)
+                        .width(200)
+                        .height(190);
+                }
+                reader.readAsDataURL(input.files[0]); // convert to base64 string
+            }
+        }
+        $(document).ready(function () {
+            /*if(localStorage.getItem('myid')!=null){
+                alert(localStorage.getItem('myid'));
+            }
+*/   //hide or show Heart img
+            $(".imagetog").click(function (event) {
+                $(this).toggleClass("im2");
+            });
+            var x = window.location.href;
+            var x1 = x.split('#');
+
+            if (x1[1] != null) {
+                //   alert(x1[1].substring(0,1));
+                $('#' + x1[1].substring(0, 1)).addClass("boldtext");
+            }
+
+            $("#tabs li a").click(function (event) {
+                $("#tabs li a").removeClass('boldtext');
+                $(this).addClass("boldtext");
+                //var ses = localStorage.setItem('myid', $(this).attr('href'));
+                //alert(localStorage.getItem('myid') +" "+$(this).attr('href'));
+            });
+
+            $(".myBox").click(function (e) {
+                window.location = $(this).find("a").attr("href");
+                return false;
+            });
+
+            $(".myBox .notclk").click(function (e) {
+                e.stopPropagation();
+            });
+
+        });
+    </script>
+    <style>
+          select {
+      color: #ccc;
+    }
+
+    option {
+      color: #000;
+    }
+
+    option:first-child {
+      color: #ccc;
+    }
+        /*heart images in seeker dashboard*/
+        .im1 {
+            content: url('img/heartempty.png');
+            cursor: pointer;
+        }
+
+        .im2 {
+            content: url('img/heartfilled.png');
+            cursor: pointer;
+        }
+
+        .dashlist {
+            list-style-type: none;
+            list-style-image: url('img/special-qualification.png');
+        }
+
+        .myBox:hover {
+            cursor: pointer;
+        }
+
+        .nav-link{
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body style="font-family: Segoe UI;">
+    <!------------------------------------------Navbar---------------------------------------------------------->
+    <nav class="navbar navbar-expand-md flex-column flex-row n" style="border-bottom: 2px solid white;">
+        <div class="container  mt-3">
+            <a class="navbar-brand mr-0 mr-md-2 mb-2" href="home.html" style="border: none; outline: none;">
+                <img src="img/logo.png" style="opacity: 1;" class="img-fluid navbar-brand navbar-nav d-block"
+                    style="border: none; outline: none;">
+            </a>
+
+            <ul class="navbar-nav align-items-md-center">
+                <li class="nav-item">
+                    <div
+                        class="row d-flex align-items-center mr-2 mt-md-0 mt-sm-1 my-1 mb-2 mb-xl-0 mb-lg-0 mb-md-0 mb-sm-2">
+                        <a href="login.html"
+                            class="btn btn-lg rounded-pill btnLogin btnLogtxt px-5 mt-1 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-3 ml-3">
+                            Login</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!------------------------------------------Body---------------------------------------------------------->
+    <div class="container my-5 pb-5">
+        <div class="row">
+            <!------------------------------------------Side Bar left---------------------------------------------->
+            <div class="text-white col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 leftbarpad"
+                style="background-color: #0D2942; border-radius: 10px;">
+                <div class="row">
+                    <img src="img/seeker.png" class="my-5 mx-auto d-block dashimg">
+                </div>
+                <div class="row">
+                    <h6 class="mx-auto d-block">John Wick</h6>
+                </div>
+                <div class="row">
+                    <p class="mx-auto pt-3" style="font-size: 14;">@Username</p>
+                </div>
+
+                <div class="row my-2 d-flex justify-content-between">
+                    <div class="mx-lg-4 mx-md-2 mx-sm-2 mx-5">
+                        <b>Profile</b>
+                    </div>
+                    <div class="mx-lg-4 mx-md-2 mx-sm-2 mx-5">
+                        25%
+                    </div>
+                </div>
+                <div class="progress mx-lg-3 mx-sm-0 mx-5" style="height:5px">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <div class="row d-flex justify-content-start align-items-start">
+                    <!----------------------------------------Vertical navigation bar------------------------------------------->
+                    <nav class="ml-lg-3 ml-sm-0 ml-4 mt-3 navbar navbar-expand col-12 text-white">
+                        <ul class="nav flex-column" id="tabs">
+                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                                <a class="nav-link" href="#editprofile" id="e" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img src="img/profilelogo.png" class="img-fluid">
+                                    <span class="dashtxt ml-2">Edit Profile</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                                <a class="nav-link" href="#resume" id="r" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img src="img/resume.png" class="img-fluid pr-1">
+                                    <span class="dashtxt ml-2">Resume</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                                <a class="nav-link" href="#jobs" id="j" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img src="img/jobposted.png" class="img-fluid">
+                                    <span class="dashtxt ml-2">Jobs</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                                <a class="nav-link" href="#deletejobs" id="d" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <img src="img/delete.png" class="img-fluid pr-1">
+                                    <span class="dashtxt ml-2">Delete Profile</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!------------------------------------------Side bar right---------------------------------------------->
+            <div class="col my-lg-0 my-md-0 my-sm-0 my-5 ml-3" style="border-radius: 10px;">
+                <!----------------------breadcrumb------------------->
+                <div class="row marright">
+                    <nav aria-label="breadcrumb" class="col-12 w-100 m-0 p-0">
+                        <ol class="breadcrumb" style="background-color:  #969696;border-radius: 10px 10px 0px 0px;">
+                            <li class="breadcrumb-item "><a class="bfont" href="#">Home</a></li>
+                            <li class="breadcrumb-item bfont" aria-current="page">JOBS PORTAL Admin Panel</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <!------------------------on click divs--------------->
+                <div class="row roun mt-1 rightbarpad" style="border-radius:10px;">
+                    <!----------------------edit profile------------------->
+                    <div class="myDiv col" id="editprofile">
+                        <p class=" font-weight-bold my-4 m-3" style="color: #797a7a; font-size: 20px;">Employee
+                            Profile</p>
+                        <div class="col-12 mt-2 px-lg-2 px-md-1 px-sm-0" style=" padding-bottom: 10px;">
+                            <div class="container roun bg-white" style="border-radius: 20px;">
+                                <div class="row bg-success seekdiv text-white">
+                                    <span class="mx-4 my-3"><b>Details FORM</b></span>
+                                </div>
+                                <form class="needs-validation" novalidate>
+                                    <!-------------------------------Upload Image----------------------->
+                                    <div class="row m-lg-4 m-md-2 m-sm-1 m-2 mb-0 mt-0 py-4">
+                                        <div class="col-lg-5 ">
+                                            <div class="row">
+                                                <span class="text-muted font-weight-bold mx-4">Add Logo</span>
+                                            </div>
+                                            <div class="row mt-4 mx-2">
+                                                <div class="roun imgboxseek" id="img_link">
+                                                    <img id="blah" src="" />
+                                                </div>
+                                                <input type="file" id="image" style="visibility: hidden" required><br>
+                                                <span id="spnFilePathimg"></span><br>
+                                                <span id="errmsgimg" class="text-danger"></span><br>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!----------------------------Basic Information--------------------------->
+                                    <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4 ">
+                                        <div class="seekjobsdiv p-2 col-12">Basic Information</div>
+
+                                        <!------ div-->
+                                        <div class="container mt-4 col-12" style="padding:20px;">
+                                            <div class="row" style="font-size: 15px;">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="fname">First name:</label>
+                                                    <input type="text" class="form-control f" id="fname" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid name.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="lname">Last name:</label>
+                                                    <input type="text" class="form-control f" id="lname" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid name.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="email">Email:</label>
+                                                    <input type="email" class="form-control f" id="email" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid email.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="phone">Phone:</label>
+                                                    <input type="number" class="form-control f" id="phone" required>
+                                                    <small class="text-muted">Digits Only</small>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid Phone Number.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="address">Address:</label>
+                                                    <input type="text" class="form-control f" id="address" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid Address.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="lang">Language:</label>
+                                                    <input type="text" class="form-control f" id="lang" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a language.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="jd">Job Description:</label>
+                                                    <input type="text" class="form-control f" id="jd" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a job description.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="cnic">CNIC:</label>
+                                                    <input type="text" class="form-control f" id="cnic" required>
+                                                    <div class="invalid-feedback">
+                                                        Please provide a valid cnic number.
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!----------------------------Social Networks--------------------------->
+                                    <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
+                                        <div class="seekjobsdiv p-2 col-12">Social Networks</div>
+                                        <!------ div-->
+                                        <div class="container mt-4 col-12" style="padding:10px; padding-right:0px;">
+                                            <div class="row " style="font-size: 14px;">
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="google"><b>Google:</b></label><br>
+                                                    <input type="text" class="form-control f" id="google">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="facebook"><b>Facebook:</b></label><br>
+                                                    <input type="text" class="form-control f" id="facebook">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="twitter"><b>Twitter:</b></label><br>
+                                                    <input type="text" class="form-control f" id="twitter">
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <label for="linkedin"><b>LinkedIn:</b></label><br>
+                                                    <input type="text" class="form-control f" id="linkedin">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!----------------------------Update Button--------------------------->
+                                    <div class="mx-4 delhov">
+                                        <button type="submit" class="btn text-white bt px-5 mb-5">
+                                            <div>
+                                                Update
+                                                <img class="" src="img/update.png" class="img-responsive">
+                                            </div>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----------------------resume-------------------------->
+                    <div class="myDiv col" id="resume">
+                        <p class=" font-weight-bold my-4" style="color: #797a7a; font-size: 20px;">Resume</p>
+                        <div class="col-12 mx-auto my-2 px-lg-2 px-md-1 px-sm-0" style=" padding-bottom: 170px;">
+                            <div class="container roun bg-white" style="border-radius: 20px;">
+                                <form class="needs-validation" novalidate>
+                                    <div class="row bg-success seekdiv text-white">
+                                        <span class="mx-4 my-3"><b>Details</b></span>
+                                    </div>
+                                    <!----------------------------Basic Information--------------------------->
+                                    <div class="row m-4 mb-0 mt-0 py-4 ">
+                                        <div class="seekjobsdiv p-2 col-12 d-inline px-4">Basic Information
+                                            <div class="float-right d-inline mt-1">
+                                                <img src="img/edit-icon-white.png" class="img-fluid w-75">
+                                            </div>
+                                        </div>
+
+                                        <!------ div-->
+                                        <div class="container mt-4" style="padding:10px;">
+                                            <div class="row">
+                                                <!----------------------------X-LARGE, LARGE, MEDIUM VIEW-------------------->
+                                                <div class="col d-xl-block d-lg-block d-md-block d-sm-none d-none">
+                                                    <div class="row col-12">
+                                                        <div class="d-flex flex-column col-4">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/job-discription.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Job Description:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-2">
+                                                                <span class="txtdash">Graphic Designer</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex flex-column col-4">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/email.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Email:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-2">
+                                                                <span class="txtdash"> example@user.com</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex flex-column col-4">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/location-g.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Location:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-2">
+                                                                <span class="txtdash">Lahore</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row col-12 mt-4">
+                                                        <div class="d-flex flex-column col-4">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/website.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Website:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-2">
+                                                                <span class="txtdash">www.example.com</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex flex-column col-4">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/phone.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Phone:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-2">
+                                                                <span class="txtdash"> 1234567</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!----------------------------SMALL VIEW-------------------->
+                                                <div class="col d-xl-none d-lg-none d-md-none d-sm-block d-none">
+                                                    <div class="row col-12">
+                                                        <div class="d-flex flex-column col-7">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/job-discription.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Job Description:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-1">
+                                                                <span class="txtdash">Graphic Designer</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex flex-column col-5">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/email.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Email:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-1">
+                                                                <span class="txtdash"> example@user.com</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row col-12 mt-4">
+                                                        <div class="d-flex flex-column col-7">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/location-g.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Location:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-1">
+                                                                <span class="txtdash">Lahore</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex flex-column col-5">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/website.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Website:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-1">
+                                                                <span class="txtdash">www.example.com</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row col-12 mt-4">
+                                                        <div class="d-flex flex-column col-7">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/phone.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Phone:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-1">
+                                                                <span class="txtdash"> 1234567</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!----------------------------MOBILE VIEW-------------------->
+                                                <div class="col d-xl-none d-lg-none d-md-none d-sm-none d-block">
+                                                    <div class="row col-12">
+                                                        <div class="d-flex flex-column">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/job-discription.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Job Description:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-1">
+                                                                <span class="txtdash">Graphic Designer</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row col-12 mt-4">
+                                                        <div class="d-flex flex-column">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/email.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Email:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-1">
+                                                                <span class="txtdash"> example@user.com</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row col-12 mt-4">
+                                                        <div class="d-flex flex-column">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/location-g.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Location:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-1">
+                                                                <span class="txtdash">Lahore</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row col-12 mt-4">
+                                                        <div class="d-flex flex-column">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/website.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Website:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-1">
+                                                                <span class="txtdash">www.example.com</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row col-12 mt-4">
+                                                        <div class="d-flex flex-column">
+                                                            <div class="d-flex flex-row">
+                                                                <div class="">
+                                                                    <img src="img/phone.png" class="w-75">
+                                                                </div>
+                                                                <div class="ml-1">
+                                                                    <b class="txtdash">Phone:</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-row mt-1">
+                                                                <span class="txtdash"> 1234567</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!------------------------------------About Yourself------------------------------>
+                                    <div class="row m-4">
+                                        <div class="seekjobsdiv p-2 col-12 d-inline px-4">About Yourself
+                                            <div class="float-right d-inline mt-1">
+                                                <img src="img/edit-icon-white.png" class="img-fluid w-75">
+                                            </div>
+                                        </div>
+
+                                        <!------div-->
+                                        <div class="container mt-2">
+                                            <div class="row text-justify txtdashab col-12 mx-1">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                                Lorem
+                                                Ipsum has been the industry's standard dummy text ever since the
+                                                1500s, when
+                                                an
+                                                unknown printer took a galley of type and scrambled it to make a
+                                                type
+                                                specimen
+                                                book. It has survived not only five centuries, but also the leap
+                                                into
+                                                electronic
+                                                typesetting, remaining essentially unchanged. It was popularised in
+                                                the
+                                                1960s
+                                                with the release of Letraset sheets containing Lorem Ipsum passages,
+                                                and
+                                                more
+                                                recently with desktop publishing software like Aldus PageMaker
+                                                including
+                                                versions of Lorem Ipsum.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!----------------------------Education Background---------------------------->
+                                    <div class="row m-4 mb-0 mt-0">
+                                        <div class="seekjobsdiv p-2 col-12 d-inline px-4">Education Background
+                                            <div class="float-right d-inline mt-1">
+                                                <img src="img/edit-icon-white.png" class="img-fluid w-100">
+                                            </div>
+                                        </div>
+
+                                        <!------------------------------------Divs--------------------------------------->
+                                        <div class="container mx-4">
+                                            <!---first div-->
+                                            <div class="d-flex flex-row flex-wrap mt-4">
+                                                <div class="d-flex flex-column mt-1 mx-lg-0 mx-auto">
+                                                    <img src="img/study.png" class="img-fluid ">
+                                                </div>
+                                                <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0">
+                                                    <div
+                                                        class="row dashtxt1 justify-content-lg-start justify-content-center">
+                                                        2018-present
+                                                    </div>
+                                                    <div
+                                                        class="row dashtxt2 justify-content-lg-start justify-content-center">
+                                                        recently with desktop publishing software like
+                                                    </div>
+                                                    <div
+                                                        class="row dashtxt1 justify-content-lg-start justify-content-center">
+                                                        recently with desktop publishing software like Aldus
+                                                        PageMaker
+                                                        including
+                                                        versions of Lorem Ipsum.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!---second div-->
+                                            <div class="d-flex flex-row flex-wrap mt-4">
+                                                <div class="d-flex flex-column mt-1 mx-lg-0 mx-auto">
+                                                    <img src="img/study.png" class="img-fluid ">
+                                                </div>
+                                                <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0">
+                                                    <div
+                                                        class="row dashtxt1 justify-content-lg-start justify-content-center">
+                                                        2018-present
+                                                    </div>
+                                                    <div
+                                                        class="row dashtxt2 justify-content-lg-start justify-content-center">
+                                                        recently with desktop publishing software like
+                                                    </div>
+                                                    <div
+                                                        class="row dashtxt1 justify-content-lg-start justify-content-center">
+                                                        recently with desktop publishing software like Aldus
+                                                        PageMaker
+                                                        including
+                                                        versions of Lorem Ipsum.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!---third div-->
+                                            <div class="d-flex flex-row flex-wrap mt-4">
+                                                <div class="d-flex flex-column mt-1 mx-lg-0 mx-auto">
+                                                    <img src="img/study.png" class="img-fluid ">
+                                                </div>
+                                                <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0">
+                                                    <div
+                                                        class="row dashtxt1 justify-content-lg-start justify-content-center">
+                                                        2018-present
+                                                    </div>
+                                                    <div
+                                                        class="row dashtxt2 justify-content-lg-start justify-content-center">
+                                                        recently with desktop publishing software like
+                                                    </div>
+                                                    <div
+                                                        class="row dashtxt1 justify-content-lg-start justify-content-center">
+                                                        recently with desktop publishing software like Aldus
+                                                        PageMaker
+                                                        including
+                                                        versions of Lorem Ipsum.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-------------------------------Work Experience------------------------>
+                                    <div class="row m-4 mb-0 mt-0">
+                                        <div class="seekjobsdiv p-2 col-12 d-inline px-4">Work Experience
+                                            <div class="float-right d-inline mt-1">
+                                                <img src="img/edit-icon-white.png" class="img-fluid w-75">
+                                            </div>
+                                        </div>
+
+                                        <!------------------------------------Divs--------------------------------------->
+                                        <div class="container mx-4">
+                                            <!---first div-->
+                                            <div class="d-flex flex-row flex-wrap mt-4">
+                                                <div class="d-flex flex-column mt-1 mx-lg-0 mx-auto">
+                                                    <img src="img/work-ex.png" class="img-fluid ">
+                                                </div>
+                                                <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0">
+                                                    <div
+                                                        class="row dashtxt1 justify-content-lg-start justify-content-center">
+                                                        2018-present
+                                                    </div>
+                                                    <div
+                                                        class="row dashtxt2 justify-content-lg-start justify-content-center">
+                                                        recently with desktop publishing software like
+                                                    </div>
+                                                    <div
+                                                        class="row dashtxt1 justify-content-lg-start justify-content-center">
+                                                        recently with desktop publishing software like Aldus
+                                                        PageMaker
+                                                        including
+                                                        versions of Lorem Ipsum.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!---second div-->
+                                            <div class="d-flex flex-row flex-wrap mt-4">
+                                                <div class="d-flex flex-column mt-1 mx-lg-0 mx-auto">
+                                                    <img src="img/work-ex.png" class="img-fluid ">
+                                                </div>
+                                                <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0">
+                                                    <div
+                                                        class="row dashtxt1 justify-content-lg-start justify-content-center">
+                                                        2018-present
+                                                    </div>
+                                                    <div
+                                                        class="row dashtxt2 justify-content-lg-start justify-content-center">
+                                                        recently with desktop publishing software like
+                                                    </div>
+                                                    <div
+                                                        class="row dashtxt1 justify-content-lg-start justify-content-center">
+                                                        recently with desktop publishing software like Aldus
+                                                        PageMaker
+                                                        including
+                                                        versions of Lorem Ipsum.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-------------------------------Special Qualification------------------------>
+                                    <div class="row m-4 mb-0 mt-0">
+                                        <div class="seekjobsdiv p-2 col-12 d-inline px-4">Special Qualification
+                                            <div class="float-right d-inline mt-1">
+                                                <img src="img/edit-icon-white.png" class="img-fluid w-75">
+                                            </div>
+                                        </div>
+
+                                        <!------------------------------------Divs--------------------------------------->
+                                        <div class="list-group borderless mx-2" style="color: white;">
+                                            <ul class="text-left mt-2 dashlist">
+                                                <li class="mt-2">
+                                                    <span class="dashtxt1"
+                                                        style="position: relative; top:-5px;">recently with desktop
+                                                        publishing
+                                                        software like Aldus
+                                                        PageMaker
+                                                        including
+                                                        versions of Lorem Ipsum.</span>
+                                                </li>
+                                                <li class="mt-2">
+                                                    <span class="dashtxt1"
+                                                        style="position: relative; top:-5px;">recently with desktop
+                                                        publishing
+                                                        software like Aldus
+                                                        PageMaker
+                                                        including
+                                                        versions of Lorem Ipsum.</span>
+                                                </li>
+                                                <li class="mt-2">
+                                                    <span class="dashtxt1"
+                                                        style="position: relative; top:-5px;">recently with desktop
+                                                        publishing
+                                                        software like Aldus
+                                                        PageMaker
+                                                        including
+                                                        versions of Lorem Ipsum.</span>
+                                                </li>
+                                                <li class="mt-2">
+                                                    <span class="dashtxt1"
+                                                        style="position: relative; top:-5px;">recently with desktop
+                                                        publishing
+                                                        software like Aldus
+                                                        PageMaker
+                                                        including
+                                                        versions of Lorem Ipsum.</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!----------------------------Update Button--------------------------->
+                                    <div class="m-4 delhov">
+                                        <button type="submit" class="btn text-white bt px-5 my-4">
+                                            <div>
+                                                Update
+                                                <img class="" src="img/update.png" class="img-responsive">
+                                            </div>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----------------------jobs--------------------------->
+                    <div class="myDiv col" id="jobs">
+                        <p class=" font-weight-bold my-4" style="color: #797a7a; font-size: 20px;">Jobs Section</p>
+                        <div class="col-12 mx-auto my-2 px-lg-2 px-md-1 px-sm-0" style=" padding-bottom: 170px;">
+                            <div class="container roun bg-white" style="border-radius: 20px;">
+                                <div class="row bg-success seekdiv text-white">
+                                    <span class="mx-4 my-3"><b>Details</b></span>
+                                </div>
+                                <!----------Applied Jobs------->
+                                <div class="row m-4 mb-0 mt-0 py-4 ">
+                                    <div class="seekjobsdiv p-2 col-12"><span class="mx-4">Applied Jobs</span></div>
+
+                                    <!------------------------------------Divs--------------------------------------->
+                                    <!------First div-->
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                        style="border-radius: 10px;">
+                                        <div class="row d-flex justify-content-between">
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex flex-row notclk">
+                                                <div class="">
+                                                    <button type="submit"
+                                                        class="btn btnseeker text-white px-4 py-1">Applied
+                                                        Jobs</button>
+                                                </div>
+                                                <div class="ml-2 align-self-center">
+                                                    <div class="imagetog">
+                                                        <img class="im1" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <img src="img/locgrey.png" class="d-inline mr-3">
+                                            <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
+                                                Pakistan</span>
+                                        </div>
+                                        <div class="row txtdescjob mt-2 limitchar">
+                                            <span>
+                                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+
+                                                years industry exp) Responsibilities: Provide comprehensive an..
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="d-inline">
+                                                <img src="img/date.png" class="">
+                                                <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                            </div>
+                                            <div class="d-inline mx-5">
+                                                <img src="img/yrs.png">
+                                                <span class="d-inline subtxtdescjob">3 Years</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!------Second div-->
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                        style="border-radius: 10px;">
+                                        <div class="row d-flex justify-content-between">
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex flex-row notclk">
+                                                <div class="">
+                                                    <button type="submit"
+                                                        class="btn btnseeker text-white px-4 py-1">Applied
+                                                        Jobs</button>
+                                                </div>
+                                                <div class="ml-2 align-self-center">
+                                                    <div class="imagetog">
+                                                        <img class="im1" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <img src="img/locgrey.png" class="d-inline mr-3">
+                                            <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
+                                                Pakistan</span>
+                                        </div>
+                                        <div class="row txtdescjob mt-2 limitchar">
+                                            <span>
+                                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+
+                                                years industry exp) Responsibilities: Provide comprehensive an..
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="d-inline">
+                                                <img src="img/date.png" class="">
+                                                <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                            </div>
+                                            <div class="d-inline mx-5">
+                                                <img src="img/yrs.png">
+                                                <span class="d-inline subtxtdescjob">3 Years</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!----------Favorite Jobs------->
+                                <div class="row m-4 mb-0 mt-0 py-4 ">
+                                    <div class="seekjobsdiv p-2 col-12"><span class="mx-4">Favorite</span></div>
+
+                                    <!------------------------------------Divs--------------------------------------->
+                                    <!------First div-->
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                        style="border-radius: 10px;">
+                                        <div class="row d-flex justify-content-between">
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex flex-row notclk">
+                                                <div class="">
+                                                    <button type="submit"
+                                                        class="btn btnseeker text-white px-4 py-1">Applied
+                                                        Jobs</button>
+                                                </div>
+                                                <div class="ml-2 align-self-center">
+                                                    <div class="imagetog">
+                                                        <img class="im1" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <img src="img/locgrey.png" class="d-inline mr-3">
+                                            <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
+                                                Pakistan</span>
+                                        </div>
+                                        <div class="row txtdescjob mt-2 limitchar">
+                                            <span>
+                                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+
+                                                years industry exp) Responsibilities: Provide comprehensive an..
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="d-inline">
+                                                <img src="img/date.png" class="">
+                                                <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                            </div>
+                                            <div class="d-inline mx-5">
+                                                <img src="img/yrs.png">
+                                                <span class="d-inline subtxtdescjob">3 Years</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!------Second div-->
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                        style="border-radius: 10px;">
+                                        <div class="row d-flex justify-content-between">
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex flex-row notclk">
+                                                <div class="">
+                                                    <button type="submit"
+                                                        class="btn btnseeker text-white px-4 py-1">Applied
+                                                        Jobs</button>
+                                                </div>
+                                                <div class="ml-2 align-self-center">
+                                                    <div class="imagetog">
+                                                        <img class="im1" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <img src="img/locgrey.png" class="d-inline mr-3">
+                                            <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
+                                                Pakistan</span>
+                                        </div>
+                                        <div class="row txtdescjob mt-2 limitchar">
+                                            <span>
+                                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+
+                                                years industry exp) Responsibilities: Provide comprehensive an..
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="d-inline">
+                                                <img src="img/date.png" class="">
+                                                <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                            </div>
+                                            <div class="d-inline mx-5">
+                                                <img src="img/yrs.png">
+                                                <span class="d-inline subtxtdescjob">3 Years</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!----------New Jobs------->
+                                <div class="row m-4 mb-0 mt-0 py-4 ">
+                                    <div class="seekjobsdiv p-2 col-12"><span class="mx-4">New Jobs</span></div>
+
+                                    <!------------------------------------Divs--------------------------------------->
+                                    <!------First div-->
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                        style="border-radius: 10px;">
+                                        <div class="row d-flex justify-content-between">
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex flex-row notclk">
+                                                <div class="">
+                                                    <button type="submit"
+                                                        class="btn btnseeker text-white px-4 py-1">Applied
+                                                        Jobs</button>
+                                                </div>
+                                                <div class="ml-2 align-self-center">
+                                                    <div class="imagetog">
+                                                        <img class="im1" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <img src="img/locgrey.png" class="d-inline mr-3">
+                                            <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
+                                                Pakistan</span>
+                                        </div>
+                                        <div class="row txtdescjob mt-2 limitchar">
+                                            <span>
+                                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+
+                                                years industry exp) Responsibilities: Provide comprehensive an..
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="d-inline">
+                                                <img src="img/date.png" class="">
+                                                <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                            </div>
+                                            <div class="d-inline mx-5">
+                                                <img src="img/yrs.png">
+                                                <span class="d-inline subtxtdescjob">3 Years</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!------Second div-->
+                                    <div class="container myBox roun mt-4 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 px-4 py-3"
+                                        style="border-radius: 10px;">
+                                        <div class="row d-flex justify-content-between">
+                                            <div>
+                                                <a href="#">
+                                                    <span class="main1">Senior Software Quality Assurance
+                                                        Engineer</span>
+                                                </a>
+                                            </div>
+                                            <div class="d-flex flex-row notclk">
+                                                <div class="">
+                                                    <button type="submit"
+                                                        class="btn btnseeker text-white px-4 py-1">Applied
+                                                        Jobs</button>
+                                                </div>
+                                                <div class="ml-2 align-self-center">
+                                                    <div class="imagetog">
+                                                        <img class="im1" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <img src="img/locgrey.png" class="d-inline mr-3">
+                                            <span class="d-inline txtsubemp mt-0">Innostark Technologies, Lahore,
+                                                Pakistan</span>
+                                        </div>
+                                        <div class="row txtdescjob mt-2 limitchar">
+                                            <span>
+                                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+
+                                                years industry exp) Responsibilities: Provide comprehensive an..
+                                            </span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="d-inline">
+                                                <img src="img/date.png" class="">
+                                                <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                            </div>
+                                            <div class="d-inline mx-5">
+                                                <img src="img/yrs.png">
+                                                <span class="d-inline subtxtdescjob">3 Years</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----------------------delete profile-------------------->
+                    <div class="myDiv col" id="deletejobs">
+                        <p class=" font-weight-bold my-4" style="color: #797a7a; font-size: 20px;">Delete Profile</p>
+                        <div class="col-12 my-2 px-lg-2 px-md-1 px-sm-0" style=" padding-bottom: 170px;">
+                            <div class="roun pb-4" style="border-radius: 15px;">
+                                <div class="row bg-success seekdiv text-white">
+                                    <span class="mx-4 my-3"><b>Employee</b></span>
+                                </div>
+                                <div class="d-flex flex-column p-lg-4 p-md-4 p-sm-1 p-3 pb-sm-4 mb-5 pb-5">
+                                    <div class="row">
+                                        <span class="col text-center txtdash2">When you delete your account,
+                                            your
+                                            profile, photos, videos, comments, likes and
+                                            followers will be permanently removed.</span>
+                                    </div>
+                                    <div class="row mt-4 mx-auto roun rounded p-5">
+                                        <div class="col-lg-12">
+                                            <form class="needs-validation" novalidate action="login.html">
+                                                <div class="form-group">
+                                                    <label for="delacc"><b>Why are you deleting your
+                                                            account?</b></label>
+                                                    <select id="delacc" name="reason" class="form-control f"
+                                                        onchange='CheckOpt(this.value);' required>
+                                                        <option selected disabled value="">Choose...</option>
+                                                        <option value="nothing useful">I don't find anything useful here
+                                                        </option>
+                                                        <option value="noprivacy">No privacy</option>
+                                                        <option value="difficult">Difficult to Operate</option>
+                                                        <option value="others">Others</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">
+                                                        Please select a valid option
+                                                    </div>
+                                                    <div class="valid-feedback">
+                                                        Looks good!
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control f" name="reason" id="reason"
+                                                        style='display:none;' />
+                                                    <div class="invalid-feedback">
+                                                        Please type a valid reason
+                                                    </div>
+                                                </div>
+
+                                                <button type="submit"
+                                                    class="btn post mt-4 px-lg-4 px-md-4 px-sm-2 px-2">Permanently
+                                                    Delete my
+                                                    Account</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

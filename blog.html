@@ -14,7 +14,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
-
+    <script src="//code.jquery.com/jquery.min.js"></script>
+<script src="jquery.ellipsis.min.js"></script>
     <style>
         .bg-img-blog {
             background: url(img/blogmain.png);
@@ -38,6 +39,11 @@
                     $('#' + myval).text($('#' + myval).text().substring(0, 25) + '...');
                 }
             });
+            $('.demo').ellipsis({
+                type: 'char',
+                count: 3
+            });
+
         });
     </script>
 </head>
@@ -111,7 +117,6 @@
             <div class="row">
                 <div class="row col-12 my-3 mx-xl-2 mx-lg-3 mx-md-2 mx-sm-2 mx-2 mx-md-0">
                     <p class="txtbloghead">LATEST BLOGs</p>
-
                 </div>
                 <!--xlarge large and medium view-->
                 <div
