@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".seekdeltable").on('click', '.delbtn', function () {
+                $(this).closest('tr').remove();
+            });
+            //edit a row
+            $(".seekdeltable").on('click', '.editbtn', function () {
+                //alert('two');
+                var v = $(this).closest('tr');
+                v.find('span').each(function () {
+                    //alert('three');
+                    var htmls = $(this).text();
+                    var inputs = $('<input type="text" />');
+                    inputs.val(htmls);
+                    $(this).html(inputs);
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container roun bg-white" style="border-radius: 20px;">
+        <div class="row bg-success seekdiv text-white">
+            <span class="mx-4 my-3"><b>Blogs</b></span>
+        </div>
+        <div class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
+            <!------------Blogs table-------------->
+            <table class="table table-sm table-hover seekdeltable " id="del">
+                <!---------------------------thead------------------------>
+                <thead>
+                    <tr>
+                        <td>
+                            <!----------first row-->
+                            <div class="form-group m-0 mb-2 roun rounded">
+                                <input type="text" class="text-center form-control py-3 dashform" id="manblogs"
+                                    style="font-size: 12px; border:0px;" placeholder="Manage Blogs">
+                            </div>
+                        </td>
+                    </tr>
+                    <!----------second row-->
+                    <tr class="text-center" style="background-color: #0D2942; color: white;">
+                        <th scope="col">Title</th>
+                        <th scope="col">Content</th>
+                        <th scope="col">Last Updated</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <!---------------------------------tbody--------------------------->
+                <tbody>
+                    <tr>
+                        <!----------first row-->
+                        <td><span>Innostark Technologies</span></td>
+                        <td><span>fgfdgdgkgfgkkgkfg</span></td>
+                        <td><span>06 Oct,2020</span></td>
+                        <td>
+                            <div class="row">
+                                <div class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
+                                    <img src="img/edit-icon.png" class="img-fluid delhov editbtn">
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                                    <img src="img/deletedash.png" class="img-fluid delhov delbtn">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!----------second row-->
+                        <td><span>Innostark Technologies</span></td>
+                        <td><span>fgfdgdgkgfgkkgkfg</span></td>
+                        <td><span>06 Oct,2020</span></td>
+                        <td>
+                            <div class="row">
+                                <div class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
+                                    <img src="img/edit-icon.png" class="img-fluid delhov editbtn">
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                                    <img src="img/deletedash.png" class="img-fluid delhov delbtn">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!----------third row-->
+                        <td><span>Innostark Technologies</span></td>
+                        <td><span>fgfdgdgkgfgkkgkfg</span></td>
+                        <td><span>06 Oct,2020</span></td>
+                        <td>
+                            <div class="row">
+                                <div class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
+                                    <img src="img/edit-icon.png" class="img-fluid delhov editbtn">
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                                    <img src="img/deletedash.png" class="img-fluid delhov delbtn">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

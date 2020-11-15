@@ -100,13 +100,9 @@
             }
         }
         $(document).ready(function () {
-            /*if(localStorage.getItem('myid')!=null){
-                alert(localStorage.getItem('myid'));
-            }
-*/   //hide or show Heart img
-            $(".imagetog").click(function (event) {
-                $(this).toggleClass("im2");
-            });
+            $('.seekdeltable input').css('border', '0');
+            $('.seekdeltable input').css('background-color', 'transparent');
+            //link remains active on that pg after reload
             var x = window.location.href;
             var x1 = x.split('#');
 
@@ -119,20 +115,54 @@
             $("#tabs li a").click(function (event) {
                 $("#tabs li a").removeClass('boldtext');
                 $(this).addClass("boldtext");
-                //var ses = localStorage.setItem('myid', $(this).attr('href'));
-                //alert(localStorage.getItem('myid') +" "+$(this).attr('href'));
             });
 
-            $(".myBox").click(function (e) {
-                window.location = $(this).find("a").attr("href");
-                return false;
+            //delete a row
+            $(".seekdeltable").on('click', '.delbtn', function () {
+                $(this).closest('tr').remove();
             });
 
-            $(".myBox .notclk").click(function (e) {
-                e.stopPropagation();
+            //edit a row
+            $(".seekdeltable").on('click', '.editbtn', function () {
+                //alert('two');
+                var v = $(this).closest('tr');
+                v.find('input').each(function () {
+                    $(this).prop('disabled', false);
+                    $(this).css('border', '1px solid black');
+                    $(this).css('background-color', 'gray');
+                });
             });
 
+            $('.seekdeltable input').keyup(throttle(function () {
+                // do the search if criteria is met
+                $('.seekdeltable tbody td input').prop('disabled', 'true');
+                $('.seekdeltable tbody td input').css('border', '0');
+                $('.seekdeltable tbody td input').css('background-color', 'transparent');
+            }));
+
+            function throttle(f, delay) {
+                var timer = null;
+                return function () {
+                    var context = this, args = arguments;
+                    clearTimeout(timer);
+                    timer = window.setTimeout(function () {
+                        f.apply(context, args);
+                    },
+                        delay || 5000);
+                };
+            }
         });
+
+        $(document).mouseup(function (e) {
+            var container = $(".seekdeltable tbody tr td");
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                $('.seekdeltable tbody td input').prop('disabled', 'true');
+                $('.seekdeltable tbody td input').css('border', '0');
+                $('.seekdeltable tbody td input').css('background-color', 'transparent');
+            }
+        });
+
         function check(input) {
             if (input.value != document.getElementById('modpass1').value) {
                 input.setCustomValidity('Password Must be Matching.');
@@ -160,6 +190,7 @@
                 });
             }, false);
         })();
+
         /*upload image*/
         $(function () {
             var filePath = $("#spnFilePathimg");
@@ -185,6 +216,7 @@
                 }
             });
         });
+
         function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -197,6 +229,7 @@
                 reader.readAsDataURL(input.files[0]); // convert to base64 string
             }
         }
+
         /*upload image2*/
         $(function () {
             var filePath = $("#spnFilePathimg2");
@@ -239,24 +272,12 @@
         }
     </script>
     <style>
-        /*heart images in seeker dashboard*/
-        .im1 {
-            content: url('img/heartempty.png');
-            cursor: pointer;
+        .col-2 {
+            background-color: aqua;
         }
 
-        .im2 {
-            content: url('img/heartfilled.png');
-            cursor: pointer;
-        }
-
-        .dashlist {
-            list-style-type: none;
-            list-style-image: url('img/special-qualification.png');
-        }
-
-        .myBox:hover {
-            cursor: pointer;
+        .col-10 {
+            background-color: #797a7a;
         }
 
         select {
@@ -271,24 +292,9 @@
             color: #ccc;
         }
 
-        .navbar ul {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-}
-.navbar ul li{
-
-}
-/*
-.navbar .first{
-    width: 100px;
-    height:30px;
-    background-color:aquamarine;
-}
-.navbar .second{
-    margin-left: 10px;
-    background-color: cadetblue;
-}*/
+        .seekdeltable {
+            cursor: context-menu;
+        }
     </style>
 </head>
 
@@ -349,10 +355,10 @@
                                         <li class="nav-item normaltext">
                                             <a class="nav-link pl-md-2 pl-lg-3" id="approvejobss" href="#approvejobs"
                                                 role="button">
-                                                <div class="d-inline first w-100">
-                                                    <img src="img/approvejob.png" class="my-2">
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/approvejob.png">
                                                 </div>
-                                                <div class="d-inline second">
+                                                <div class="d-inline-block">
                                                     <span class="dashtxt">Approve Jobs</span>
                                                 </div>
                                             </a>
@@ -360,51 +366,71 @@
                                         <!---------------------manage profile---------------------------------------------------------->
 
                                         <li class="nav-item dropdown normaltext">
-                                            <a class=" nav-link dropdown-toggle pl-md-2 pl-lg-3" href="#"
+                                            <a class="nav-link dropdown-toggle pl-md-2 pl-lg-3" href="#"
                                                 id="navbarDropdown" role="button" data-toggle="dropdown"
                                                 aria-haspopup="true" aria-expanded="false">
-                                                <div class="d-inline first">
-                                                    <img src="img/manageprofile.png" class="my-2">
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/manageprofile.png" >
                                                 </div>
-                                                <div class="d-inline second">
+                                                <div class="d-inline-block">
                                                     <span class="dashtxt">Manage User Profile</span>
                                                 </div>
                                             </a>
-                                            <div class="dropdown-menu subdashnav" aria-labelledby="navbarDropdown">
+                                            <div class="dropdown-menu subdashnav w-75" aria-labelledby="navbarDropdown">
                                                 <a class="dropdown-item" id="manageuserprofiless"
                                                     href="#manageuserprofiles">
-                                                    <img src="img/profilelogo.png" class="img-fluid">
-                                                    <span class="dashtxt ml-2">User Profile</span>
+                                                    <div class="d-inline-block" style="width: 25%;">
+                                                        <img src="img/profilelogo.png" >
+                                                    </div>
+                                                    <div class="d-inline-block">
+                                                        <span class="dashtxt ">User Profile</span>
+                                                    </div>
                                                 </a>
                                                 <a class="dropdown-item" id="manageusercompaniess"
                                                     href="#managecompanies">
-                                                    <img src="img/companies.png" class="img-fluid">
-                                                    <span class="dashtxt ml-2">Companies</span>
+                                                    <div class="d-inline-block" style="width: 25%;">
+                                                        <img src="img/companies.png" >
+                                                    </div>
+                                                    <div class="d-inline-block">
+                                                        <span class="dashtxt">Companies</span>
+                                                    </div>
                                                 </a>
                                             </div>
                                         </li>
 
                                         <li class="nav-item normaltext">
-                                            <a class="nav-link pl-md-2 pl-lg-3" id="manageblogs" href="#manageblogs"
+                                            <a class="nav-link pl-md-2 pl-lg-3" id="manageblogss" href="#manageblogs"
                                                 role="button">
-                                                <img src="img/manageblog.png" class="img-fluid">
-                                                <span class="dashtxt ml-2">Manage Blogs</span>
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/manageblog.png">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <span class="dashtxt">Manage Blogs</span>
+                                                </div>
                                             </a>
                                         </li>
 
                                         <li class="nav-item normaltext">
                                             <a class="nav-link pl-md-2 pl-lg-3" id="subadmins" href="#subadmin"
                                                 role="button">
-                                                <img src="img/sunad.png" class="img-fluid">
-                                                <span class="dashtxt ml-2">Sub Admin</span>
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/sunad.png">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <span class="dashtxt">Sub Admin</span>
+                                                </div>
                                             </a>
                                         </li>
 
                                         <li class="nav-item normaltext">
                                             <a class="nav-link pl-md-2 pl-lg-3" id="fakereportss" href="#fakereports"
                                                 role="button">
-                                                <img src="img/fakerep.png" class="img-fluid">
-                                                <span class="dashtxt ml-2">Fake Reports</span>
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/fakerep.png">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <span class="dashtxt">Fake Reports</span>
+                                                </div>
                                             </a>
                                         </li>
                                     </div>
@@ -423,31 +449,47 @@
 
                                     <div class="dashnav">
                                         <li class="nav-item normaltext">
-                                            <a class="nav-link pl-md-2 pl-lg-3" id="employeemaintainprofile"
+                                            <a class="nav-link pl-md-2 pl-lg-3" id="employeemaintainprofiles"
                                                 href="#employeemaintainprofile" role="button">
-                                                <img src="img/maintain.png" class="img-fluid">
-                                                <span class="dashtxt ml-2">Maintain Profile</span>
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/maintain.png">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <span class="dashtxt">Maintain Profile</span>
+                                                </div>
                                             </a>
                                         </li>
                                         <li class="nav-item normaltext">
                                             <a class="nav-link pl-md-2 pl-lg-3" id="appliedjobss" href="#appliedjobs"
                                                 role="button">
-                                                <img src="img/applied.png" class="img-fluid">
-                                                <span class="dashtxt ml-2">Applied Jobs</span>
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/applied.png">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <span class="dashtxt">Applied Jobs</span>
+                                                </div>
                                             </a>
                                         </li>
                                         <li class="nav-item normaltext">
                                             <a class="nav-link pl-md-2 pl-lg-3" id="empreportfakes"
                                                 href="#empreportfake" role="button">
-                                                <img src="img/report.png" class="img-fluid">
-                                                <span class="dashtxt ml-2">Report Fake</span>
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/report.png">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <span class="dashtxt">Report Fake</span>
+                                                </div>
                                             </a>
                                         </li>
                                         <li class="nav-item normaltext">
-                                            <a class="nav-link pl-md-2 pl-lg-3" id="deleteprofile" href="#deleteprofile"
-                                                role="button">
-                                                <img src="img/delete.png" class="img-fluid">
-                                                <span class="dashtxt ml-2">Delete Profile</span>
+                                            <a class="nav-link pl-md-2 pl-lg-3" id="deleteprofiles"
+                                                href="#deleteprofile" role="button">
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/delete.png">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <span class="dashtxt">Delete Profile</span>
+                                                </div>
                                             </a>
                                         </li>
                                     </div>
@@ -467,22 +509,34 @@
                                         <li class="nav-item normaltext">
                                             <a class="nav-link pl-md-2 pl-lg-3" id="employermaintainprofiles"
                                                 href="#employermaintainprofile" role="button">
-                                                <img src="img/maipro.png" class="img-fluid">
-                                                <span class="dashtxt ml-2">Maintain Profile</span>
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/maipro.png">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <span class="dashtxt">Maintain Profile</span>
+                                                </div>
                                             </a>
                                         </li>
                                         <li class="nav-item normaltext">
                                             <a class="nav-link pl-md-2 pl-lg-3" id="jobsposteds" href="#jobsposted"
                                                 role="button">
-                                                <img src="img/jobposted.png" class="img-fluid">
-                                                <span class="dashtxt ml-2">Jobs Posted</span>
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/jobposted.png">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <span class="dashtxt">Jobs Posted</span>
+                                                </div>
                                             </a>
                                         </li>
                                         <li class="nav-item normaltext">
                                             <a class="nav-link pl-md-2 pl-lg-3" id="employerreportfakes"
                                                 href="#employerreportfake" role="button">
-                                                <img src="img/report.png" class="img-fluid">
-                                                <span class="dashtxt ml-2">Report Fake</span>
+                                                <div class="d-inline-block" style="width: 15%;">
+                                                    <img src="img/report.png">
+                                                </div>
+                                                <div class="d-inline-block">
+                                                    <span class="dashtxt">Report Fake</span>
+                                                </div>
                                             </a>
                                         </li>
                                     </div>
@@ -1670,7 +1724,7 @@
                                 <div
                                     class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
                                     <!------------Blogs table-------------->
-                                    <table class="table table-sm table-hover seekdeltable ">
+                                    <table class="table table-sm table-hover seekdeltable">
                                         <!---------------------------thead------------------------>
                                         <thead>
                                             <tr>
@@ -1696,57 +1750,57 @@
                                         <tbody>
                                             <tr>
                                                 <!----------first row-->
-                                                <td>Innostark Technologies</td>
-                                                <td>fgfdgdgkgfgkkgkfg</td>
-                                                <td>06 Oct,2020</td>
+                                                <td><input type="text" disabled value="Innostark Technologies"></td>
+                                                <td><input type="text" disabled value="xssssssssssssss"></td>
+                                                <td><input type="text" disabled value="06 Oct,2020"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
                                                             class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <!----------second row-->
-                                                <td>Innostark Technologies</td>
-                                                <td>fgfdgdgkgfgkkgkfg</td>
-                                                <td>06 Oct,2020</td>
+                                                <td><input type="text" disabled value="Innostark Technologies"></td>
+                                                <td><input type="text" disabled value="xssssssssssssss"></td>
+                                                <td><input type="text" disabled value="06 Oct,2020"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
                                                             class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <!----------third row-->
-                                                <td>Innostark Technologies</td>
-                                                <td>fgfdgdgkgfgkkgkfg</td>
-                                                <td>06 Oct,2020</td>
+                                                <td><input type="text" disabled value="Innostark Technologies"></td>
+                                                <td><input type="text" disabled value="xssssssssssssss"></td>
+                                                <td><input type="text" disabled value="06 Oct,2020"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
                                                             class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
@@ -1789,54 +1843,54 @@
                                         <tbody>
                                             <tr>
                                                 <!----------first row-->
-                                                <td>Job Seeker</td>
-                                                <td>06 Oct,2020</td>
+                                                <td><input type="text" disabled value="Employer"></td>
+                                                <td><input type="text" disabled value="06 Oct,2020"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
                                                             class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <!----------second row-->
-                                                <td>Employer</td>
-                                                <td>06 Oct,2020</td>
+                                                <td><input type="text" disabled value="Employer"></td>
+                                                <td><input type="text" disabled value="06 Oct,2020"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
                                                             class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <!----------third row-->
-                                                <td>Moderator</td>
-                                                <td>06 Oct,2020</td>
+                                                <td><input type="text" disabled value="Moderator"></td>
+                                                <td><input type="text" disabled value="06 Oct,2020"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
                                                             class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
@@ -2005,57 +2059,57 @@
                                         <tbody>
                                             <tr>
                                                 <!----------first row-->
-                                                <td>XYZ</td>
-                                                <td>example@gmail.com</td>
-                                                <td>Fake</td>
+                                                <td><input type="text" disabled value="XYZ"></td>
+                                                <td><input type="text" disabled value="example@gmail.com"></td>
+                                                <td><input type="text" disabled value="Fake"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
-                                                            class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            class="offset-lg-1 col-lg-6 offset-md-1 col-md-5 col-sm-6 col-6">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <!----------second row-->
-                                                <td>XYZ</td>
-                                                <td>example@gmail.com</td>
-                                                <td>Fake</td>
+                                                <td><input type="text" disabled value="XYZ"></td>
+                                                <td><input type="text" disabled value="example@gmail.com"></td>
+                                                <td><input type="text" disabled value="Fake"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
-                                                            class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            class="offset-lg-1 col-lg-6 offset-md-1 col-md-5 col-sm-6 col-6">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <!----------third row-->
-                                                <td>XYZ</td>
-                                                <td>example@gmail.com</td>
-                                                <td>Fake</td>
+                                                <td><input type="text" disabled value="XYZ"></td>
+                                                <td><input type="text" disabled value="example@gmail.com"></td>
+                                                <td><input type="text" disabled value="Fake"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
-                                                            class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            class="offset-lg-1 col-lg-6 offset-md-1 col-md-5 col-sm-6 col-6">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
@@ -2104,57 +2158,57 @@
                                         <tbody>
                                             <tr>
                                                 <!----------first row-->
-                                                <td>XYZ</td>
-                                                <td>example@gmail.com</td>
-                                                <td>Fake</td>
+                                                <td><input type="text" disabled value="XYZ"></td>
+                                                <td><input type="text" disabled value="example@gmail.com"></td>
+                                                <td><input type="text" disabled value="Fake"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
-                                                            class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            class="offset-lg-1 col-lg-6 offset-md-1 col-md-5 col-sm-6 col-6">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <!----------second row-->
-                                                <td>XYZ</td>
-                                                <td>example@gmail.com</td>
-                                                <td>Fake</td>
+                                                <td><input type="text" disabled value="XYZ"></td>
+                                                <td><input type="text" disabled value="example@gmail.com"></td>
+                                                <td><input type="text" disabled value="Fake"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
-                                                            class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            class="offset-lg-1 col-lg-6 offset-md-1 col-md-5 col-sm-6 col-6">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <!----------third row-->
-                                                <td>XYZ</td>
-                                                <td>example@gmail.com</td>
-                                                <td>Fake</td>
+                                                <td><input type="text" disabled value="XYZ"></td>
+                                                <td><input type="text" disabled value="example@gmail.com"></td>
+                                                <td><input type="text" disabled value="Fake"></td>
                                                 <td>
                                                     <div class="row">
                                                         <div
-                                                            class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/edit-icon.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            class="offset-lg-1 col-lg-6 offset-md-1 col-md-5 col-sm-6 col-6">
+                                                            <img src="img/edit-icon.png"
+                                                                class="img-fluid delhov editbtn">
                                                         </div>
                                                         <div class="col-lg-5 col-md-5 col-sm-6 col-6">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
@@ -4367,11 +4421,15 @@
                                                 <td>XYZ</td>
                                                 <td>0011</td>
                                                 <td>dfdjkfndjfn</td>
+                                                <!--<td><input type="text" disabled value="XYZ"></td>
+                                                <td><input type="text" disabled value="0011"></td>
+                                                <td><input type="text" disabled value="fghgfj"></td>
+                                                -->
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-lg-12">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
@@ -4384,8 +4442,8 @@
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-lg-12">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
@@ -4398,8 +4456,8 @@
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-lg-12">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
+                                                            <img src="img/deletedash.png"
+                                                                class="img-fluid delhov delbtn">
                                                         </div>
                                                     </div>
                                                 </td>
@@ -4459,21 +4517,20 @@
                                                 <td>Mark</td>
                                                 <td>Otto</td>
                                                 <td>@mdo</td>
-                                                <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a>
+                                                <td><img src="img/deletedash.png" class="img-fluid delhov delbtn">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Mark</td>
                                                 <td>Otto</td>
                                                 <td>@mdo</td>
-                                                <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a>
-                                                </td>
+                                                <td><img src="img/deletedash.png" class="img-fluid delhov delbtn">
                                             </tr>
                                             <tr>
                                                 <td>Mark</td>
                                                 <td>Otto</td>
                                                 <td>@mdo</td>
-                                                <td class="delhov"><img src="img/deletedash.png" class="img-fluid"></a>
+                                                <td><img src="img/deletedash.png" class="img-fluid delhov delbtn">
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -6729,12 +6786,7 @@
                                                 <td>XYZ</td>
                                                 <td>0011</td>
                                                 <td>
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
-                                                        </div>
-                                                    </div>
+                                                    <img src="img/deletedash.png" class="img-fluid delhov delbtn">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -6742,12 +6794,7 @@
                                                 <td>XYZ</td>
                                                 <td>0011</td>
                                                 <td>
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
-                                                        </div>
-                                                    </div>
+                                                    <img src="img/deletedash.png" class="img-fluid delhov delbtn">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -6755,12 +6802,7 @@
                                                 <td>XYZ</td>
                                                 <td>0011</td>
                                                 <td>
-                                                    <div class="row">
-                                                        <div class="col-lg-12">
-                                                            <img src="img/deletedash.png" class="img-fluid delhov"
-                                                                onclick="">
-                                                        </div>
-                                                    </div>
+                                                    <img src="img/deletedash.png" class="img-fluid delhov delbtn">
                                                 </td>
                                             </tr>
                                         </tbody>

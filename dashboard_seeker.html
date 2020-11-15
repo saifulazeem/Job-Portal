@@ -153,10 +153,6 @@
         .myBox:hover {
             cursor: pointer;
         }
-
-        .nav-link{
-            padding: 0px;
-        }
     </style>
 </head>
 
@@ -213,37 +209,53 @@
 
                 <div class="row d-flex justify-content-start align-items-start">
                     <!----------------------------------------Vertical navigation bar------------------------------------------->
-                    <nav class="ml-lg-3 ml-sm-0 ml-4 mt-3 navbar navbar-expand col-12 text-white">
-                        <ul class="nav flex-column" id="tabs">
+                    <nav class="p-0 col-12 mt-3 navbar navbar-expand text-white">
+                        <ul class="ml-lg-3 ml-md-0 ml-sm-0 ml-5 nav flex-column p-0 col-12" id="tabs">
                             <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
                                 <a class="nav-link" href="#editprofile" id="e" role="button" aria-haspopup="true"
                                     aria-expanded="false">
-                                    <img src="img/profilelogo.png" class="img-fluid">
-                                    <span class="dashtxt ml-2">Edit Profile</span>
+                                    <div class="d-inline-block" style="width: 15%;">
+                                        <img src="img/profilelogo.png">
+                                    </div>
+                                    <div class="d-inline-block">
+                                        <span class="dashtxt">Edit Profile</span>
+                                    </div>
                                 </a>
                             </li>
 
-                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                            <li class="nav-item dashnav normaltext p-0 m-0">
                                 <a class="nav-link" href="#resume" id="r" role="button" aria-haspopup="true"
                                     aria-expanded="false">
-                                    <img src="img/resume.png" class="img-fluid pr-1">
-                                    <span class="dashtxt ml-2">Resume</span>
+                                    <div class="d-inline-block" style="width: 15%;">
+                                        <img src="img/resume.png">
+                                    </div>
+                                    <div class="d-inline-block">
+                                        <span class="dashtxt">Resume</span>
+                                    </div>
                                 </a>
                             </li>
 
-                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                            <li class="nav-item dashnav normaltext p-0 m-0">
                                 <a class="nav-link" href="#jobs" id="j" role="button" aria-haspopup="true"
                                     aria-expanded="false">
-                                    <img src="img/jobposted.png" class="img-fluid">
-                                    <span class="dashtxt ml-2">Jobs</span>
+                                    <div class="d-inline-block" style="width: 15%;">
+                                        <img src="img/jobposted.png">
+                                    </div>
+                                    <div class="d-inline-block">
+                                        <span class="dashtxt">Jobs</span>
+                                    </div>
                                 </a>
                             </li>
 
-                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                            <li class="nav-item dashnav normaltext p-0 m-0">
                                 <a class="nav-link" href="#deletejobs" id="d" role="button" aria-haspopup="true"
                                     aria-expanded="false">
-                                    <img src="img/delete.png" class="img-fluid pr-1">
-                                    <span class="dashtxt ml-2">Delete Profile</span>
+                                    <div class="d-inline-block" style="width: 15%;">
+                                        <img src="img/delete.png">
+                                    </div>
+                                    <div class="d-inline-block">
+                                        <span class="dashtxt">Delete Profile</span>
+                                    </div>
                                 </a>
                             </li>
                         </ul>

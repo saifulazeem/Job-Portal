@@ -25,23 +25,136 @@
         crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
-            $("#btn2").click(function () {
-                $("#txtPageNumber").prop('disabled', false);
+            $('.seekdeltable td input').css('border', '0');
+            $('.seekdeltable td input').css('background-color', 'transparent');
+            /*$("#btn2").click(function () {
+                $("input").prop('disabled', false);
+            });*/
+            $(".seekdeltable").on('click', '.delbtn', function () {
+                $(this).closest('tr').remove();
+            });
+            //edit a row
+            $(".seekdeltable").on('click', '.editbtn', function () {
+                //alert('two');
+                var v = $(this).closest('tr');
+                v.find('input').each(function () {
+                    $(this).prop('disabled', false);
+                    $(this).css('border', '1px solid black');
+                    $(this).css('background-color', 'gray');
+                });
+            });
+
+            $('.seekdeltable td input').keyup(throttle(function () {
+                // do the search if criteria is met
+                $('.seekdeltable td input').prop('disabled', 'true');
+
+                $('.seekdeltable td input').css('border', '0');
+                $('.seekdeltable td input').css('background-color', 'transparent');
+            }));
+
+            function throttle(f, delay) {
+                var timer = null;
+                return function () {
+                    var context = this, args = arguments;
+                    clearTimeout(timer);
+                    timer = window.setTimeout(function () {
+                        f.apply(context, args);
+                    },
+                        delay || 5000);
+                };
+            }
+
+            $(document).mouseup(function (e) {
+                var container = $(".seekdeltable tbody tr td");
+                // if the target of the click isn't the container nor a descendant of the container
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    $('.seekdeltable tbody td input').prop('disabled', 'true');
+                    $('.seekdeltable tbody td input').css('border', '0');
+                    $('.seekdeltable tbody td input').css('background-color', 'transparent');
+                }
             });
         });
     </script>
-    <style>
-        input{
-            border: none;
-            background-color: transparent;
-        }
-    </style>
 </head>
 
 <body>
-        <div class="w-100">
-            <input type="text" id="txtPageNumber" disabled class="w-100">
-        </div>
+    <!--<div>
+        <input type="text" disabled value="Hello">
+    </div>
     <button class="btn btn-success" id="btn2">Click</button>
+-->
+    <table class="table table-sm table-hover seekdeltable " id="del">
+        <!---------------------------thead------------------------>
+        <thead>
+            <tr>
+                <td>
+                    <!----------first row-->
+                    <div class="form-group m-0 mb-2 roun rounded">
+                        <input type="text" class="text-center form-control py-3 dashform" id="manblogs"
+                            style="font-size: 12px; border:0px;" placeholder="Manage Blogs">
+                    </div>
+                </td>
+            </tr>
+            <!----------second row-->
+            <tr class="text-center" style="background-color: #0D2942; color: white;">
+                <th scope="col">Title</th>
+                <th scope="col">Content</th>
+                <th scope="col">Last Updated</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <!---------------------------------tbody--------------------------->
+        <tbody>
+            <tr>
+                <!----------first row-->
+                <td><input type="text" disabled value="Innostark Technologies"></td>
+                <td><input type="text" disabled value="xssssssssssssss"></td>
+                <td><input type="text" disabled value="06 Oct,2020"></td>
+                <td>
+                    <div class="row">
+                        <div class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
+                            <img src="img/edit-icon.png" class="img-fluid delhov editbtn">
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                            <img src="img/deletedash.png" class="img-fluid delhov delbtn">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!----------second row-->
+                <td><input type="text" disabled value="Innostark Technologies"></td>
+                <td><input type="text" disabled value="xssssssssssssss"></td>
+                <td><input type="text" disabled value="06 Oct,2020"></td>
+                <td>
+                    <div class="row">
+                        <div class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
+                            <img src="img/edit-icon.png" class="img-fluid delhov editbtn">
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                            <img src="img/deletedash.png" class="img-fluid delhov delbtn">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <!----------third row-->
+                <td><input type="text" disabled value="Innostark Technologies"></td>
+                <td><input type="text" disabled value="xssssssssssssss"></td>
+                <td><input type="text" disabled value="06 Oct,2020"></td>
+                <td>
+                    <div class="row">
+                        <div class="offset-lg-1 col-lg-5 offset-md-1 col-md-5 col-sm-6 col-6">
+                            <img src="img/edit-icon.png" class="img-fluid delhov editbtn">
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-6 col-6">
+                            <img src="img/deletedash.png" class="img-fluid delhov delbtn">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>
