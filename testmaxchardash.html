@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/new.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#abouts').change(function (event) {
+                //alert($(this).text().length);
+                if ($(this).text().length > 150) {
+                    //$(this).prop('contenteditable', 'false');
+                  //  $('.errmsg').html('character limit exceeds');
+                    //$(this).text($(this).text().substring(0, 150));
+                    //event.preventDefault();
+              //  }
+            //});
+            /*$('[contenteditable]').on('focus', function () {
+                var $this = $(this);
+                $this.data('before', $this.html());
+                return $this;
+            }).on('blur keyup keydown paste', function () {
+                var $this = $(this);
+                if ($this.data('before') !== $this.html()) {
+                    $this.data('before', $this.html());
+                    $this.trigger('change');
+                }
+                return $this;
+            });*/
+            $(".editbtn").click(function (e) {
+                //$var = $(this).attr("id");
+                //$var1 = $var + 's';
+                //alert('id'+$var1);
+                $('#abouts').prop('contenteditable', 'true');
+                $('#abouts').css('border', '1px solid black');
+                $("#about").change();
+            });
+            $("#abouts").on('keyup', function (e) {
+                //alert('input');
+                $("#detailsfield").val($(this).text()); //store content to input[type=hidden]
+            });
+            $(document).mouseup(function (e) {
+                var container = $("#abouts");
+                // if the target of the click isn't the container nor a descendant of the container
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    $('#abouts').prop('contenteditable', 'false');
+                    $('#abouts').css('border', '0');
+                }
+            });
+            $("div[contenteditable='false'][maxlength]").on('keydown paste', function (event) {
+                var cntMaxLength = parseInt($(this).attr('maxlength'));
+
+                if ($(this).text().length === cntMaxLength && event.keyCode != 8) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div id="abouts" class="" contenteditable="false" maxlength="550" style="max-width: 47rem;">
+                    <span class="aboutspan">dddddddddddddd</span></div>
+                <input type="hidden" id="detailsfield">
+                <span class="errmsg"></span>
+                <button class="editbtn">
+                    EDIT
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

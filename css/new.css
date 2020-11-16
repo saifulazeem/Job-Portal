@@ -47,6 +47,9 @@ html,body
     outline: none;
     border: 0px;
   }
+  .form-control{
+    border: 0;
+  }
   .valid-feedback,.invalid-feedback {
     text-align: left;
     margin-left: 10px;
@@ -300,6 +303,9 @@ a.bfont{
 {
   box-shadow: 1px 5px 6px 1px rgba(0, 0, 0, 0.1);
 }
+.featshad img{
+  object-fit: cover;
+}
 .txtfeat{
   color: #5E5E5E;
   font-size: 20px;
@@ -358,6 +364,10 @@ text-decoration: none;
 }
 /***********************************************************************************************************************/
 @media (min-width: 300px) {
+  .widthabout{
+    max-width: 100%;
+    width:13rem;
+   }
 .externalpad{
   margin:0px 20px;
   left: 0px;
@@ -801,7 +811,7 @@ padding-top: 15px;
   .subbover-about{
     border-radius: 10px;
   padding-bottom: 20px;
-  padding-left: 30px;
+  padding-left: 40px;
 padding-right: 30px;
 padding-top: 10px;
   margin-bottom: 80px;
@@ -884,7 +894,10 @@ margin:0px 120px;
 }
  /***********************************************************************************************************************/
 @media (min-width: 400px) {
-
+  .widthabout{
+    max-width: 100%;
+    width:19rem;
+   }
 .externalpad{
   margin:0px 100px;
   left: 30px;
@@ -1272,7 +1285,7 @@ padding-top: 15px;
   .subbover-about{
     border-radius: 10px;
   padding-bottom: 20px;
-  padding-left: 30px;
+  padding-left: 40px;
 padding-right: 30px;
 padding-top: 10px;
   margin-bottom: 80px;
@@ -1338,6 +1351,10 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 500px) {
+  .widthabout{
+    max-width: 100%;
+    width:24rem;
+   }
   .limitchar{
     max-width: 28rem;
 }
@@ -1751,7 +1768,7 @@ padding-top: 15px;
   .subbover-about{
     border-radius: 10px;
   padding-bottom: 20px;
-  padding-left: 30px;
+  padding-left: 40px;
 padding-right: 30px;
 padding-top: 10px;
   margin-bottom: 80px;
@@ -1817,6 +1834,10 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
+  .widthabout{
+    max-width: 100%;
+    width:30rem;
+   }
   .limitchar{
     max-width: 18rem;
 }
@@ -2265,7 +2286,7 @@ padding-top: 15px;
   .subbover-about{
     border-radius: 10px;
   padding-bottom: 20px;
-  padding-left: 30px;
+  padding-left: 40px;
 padding-right: 30px;
 padding-top: 10px;
   margin-bottom: 80px;
@@ -2339,6 +2360,10 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 768px) {
+  .widthabout{
+    max-width: 100%;
+    width:27rem;
+   }
   .limitchar{
     max-width: 27rem;
 }
@@ -2773,7 +2798,7 @@ padding-top: 15px;
     .subbover-about{
       border-radius: 10px;
     padding-bottom: 20px;
-    padding-left: 35px;
+    padding-left: 45px;
   padding-right: 35px;
   padding-top: 10px;
     margin-bottom: 80px;
@@ -2902,6 +2927,10 @@ table.firhome tr td:nth-child(4) input {
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
+  .widthabout{
+    max-width: 100%;
+    width:38rem;
+   }
   .limitchar{
     max-width: 37rem;
 }
@@ -3264,7 +3293,7 @@ padding-top: 15px;
   .subbover-about{
     border-radius: 10px;
   padding-bottom: 20px;
-  padding-left: 30px;
+  padding-left: 40px;
 padding-right: 30px;
 padding-top: 5px;
   margin-bottom: 80px;
@@ -3441,6 +3470,10 @@ table.firhome tr td:nth-child(4) input {
  }
 /***********************************************************************************************************************/
  @media (min-width: 1200px) {
+   .widthabout{
+    max-width: 100%;
+    width:46rem;
+   }
   .limitchar{
     max-width: 45rem;
 }
@@ -3803,7 +3836,7 @@ margin-bottom: 80px;
 .subbover-about{
   border-radius: 10px;
 padding-bottom: 20px;
-padding-left: 35px;
+padding-left: 45px;
 padding-right: 35px;
 padding-top: 5px;
 margin-bottom: 80px;
@@ -4186,12 +4219,12 @@ font-size: 12px;
 }
 a.innersubblogdescp{
   text-decoration: none;
-  border-bottom: 2px solid #757575;
+  border-bottom: 1px solid #757575;
 }
 a.innersubblogdescp:hover{
   text-decoration: none;
   color: #0BB44F;
-  border-bottom: 2px solid #0BB44F;
+  border-bottom: 1px solid #0BB44F;
 }
 /*blog title change color blog.html*/
 .blogtitle{
@@ -4210,6 +4243,9 @@ a.innersubblogdescp:hover{
 }
 .blogdivmain a{
   text-decoration: none;
+}
+.blogdivmain img{
+  object-fit: cover;
 }
 .blogdiv{
   border: 1px solid transparent;
@@ -4394,9 +4430,9 @@ tr{
   font-size: 14px;
 }
 .imgboxseek{
-  height:190px;
-  width:200px;
-  background-color: #f0eded;
+  height:220px;
+  width:220px;
+  background-color: white;
 }
 .btnupdate:hover{
   background-color:#0BB44F;
@@ -4739,4 +4775,15 @@ color: #808080;
 .txtdashab{
   font-size: 12px;
   color: #757575;
+}
+.dashforminput >input{
+  border: 0;
+}
+.errmsg{
+  font-size: 12px;
+  color: tomato;
+  font-weight: 600;
+}
+.carousel-item img{
+  object-fit: cover;
 }

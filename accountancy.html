@@ -51,12 +51,6 @@
             }
             );
 
-            //restrict the number of characters
-            $('.tdesc').map(function () {
-                var myval = ($(this).attr('id'));
-                $('#' + myval).text($('#' + myval).text().substring(0, 300) + '...');
-            });
-
             $('.collapse').on('shown.bs.collapse', function (e) {
                 var $panel = $(this).closest('.collapse');
                 $('html,body').animate({

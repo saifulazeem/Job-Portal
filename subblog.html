@@ -22,6 +22,14 @@
             background-attachment: fixed;
             background-repeat: no-repeat;
         }
+        .blogtitle2, .blogsubtitle2 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
     </style>
     <script>
         $(document).ready(function () {
@@ -107,7 +115,7 @@
         <!---------------------------------------------CONTAINER--------------------------------------------->
 
         <div class="container bg-white subbover-about roun">
-            <div class="row ">
+            <div class="row">
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                     <div class="row my-3">
                         <div class="d-flex flex-column text-left">
@@ -123,8 +131,9 @@
                                     <p>Living off the bank of mum and dad has its downsides</p>
                                 </div>
                                 <div class="mb-3 ">
-                                    <img src="img/ba1.png" class="img-responsive">
+                                    <a href="#" style="text-decoration: none;"><img src="img/ba1.png" class="img-responsive">
                                     <span class="imgtxt">Christina Guides, Jobs</span>
+                                </a>
                                 </div>
                                 <div class="innersubblogdescp">
                                     Uni is supposed to set you up for the adult world and your future career. But,
@@ -269,7 +278,7 @@
                                                         </div>
                                                         <div class="blogdiv">
                                                             <div class="mt-2 mx-2 blogtitle2">How to smash
-                                                                your graduate</div>
+                                                                your graduate </div>
                                                             <div class="blogsubtitle2 mx-2">
                                                                 <p>The best decision you’ll ever make</p>
                                                             </div>
@@ -374,7 +383,7 @@
                                                             <div class="mt-2 mx-2 blogtitle2">How to smash
                                                                 your graduate</div>
                                                             <div class="blogsubtitle2 mx-2">
-                                                                <p>The best decision you’ll ever make</p>
+                                                                <p>The best decision you’ll ever makeThe best decision you’ll ever makeThe best decision you’ll ever make</p>
                                                             </div>
                                                             <div class="mb-3 mx-2">
                                                                 <img src="img/ba1.png" class="img-responsive">
@@ -400,42 +409,42 @@
                         style="background-color:#0D2942; color: white;font-size:20px; border-radius: 8px; position: relative;">
                         <p class="font-weight-normal text-center pt-3 ljobs">MOST READ
                         </p>
-                        <div class="">
-                            <ul class="text-left mt-3">
-                                <li class="">
-                                    <a href="#" class="" style="text-decoration: none;">
-                                        <span class="mb-1 jobpost">Graduate Commercial Business Analyst</span>
-                                        <br><span class="mb-1 cname">Graduate Recruitment Bureau</span>
+                        <div class="pb-5">
+                            <ul class="text-left mt-3" style="line-height:1em;">
+                                <li >
+                                    <a href="#" style="text-decoration: none;">
+                                        <span class="jobpost">Graduate Commercial Business Analyst</span>
+                                        <br><span class="cname" >Graduate Recruitment Bureau</span>
+                                        <br><span >
+                                            <img src="img/location.png">
+                                            <small class="loc">Wiltshire, South West</small>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="mt-2">
+                                    <a href="#" style="text-decoration: none;">
+                                        <span class="jobpost">International Sales& Marketing Exec</span>
+                                        <br><span class="cname">Graduate Recruitment Bureau</span>
                                         <br><span>
                                             <img src="img/location.png">
                                             <small class="loc">Wiltshire, South West</small>
                                         </span>
                                     </a>
                                 </li>
-                                <li class="">
-                                    <a href="#" class="" style="text-decoration: none;">
-                                        <span class="mb-1 jobpost">International Sales& Marketing Exec</span>
-                                        <br><span class="mb-1 cname">Graduate Recruitment Bureau</span>
+                                <li class="mt-2">
+                                    <a href="#" style="text-decoration: none;">
+                                        <span class="jobpost">Personal Tutor</span>
+                                        <br><span class="cname">Graduate Recruitment Bureau</span>
                                         <br><span>
                                             <img src="img/location.png">
                                             <small class="loc">Wiltshire, South West</small>
                                         </span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" class="" style="text-decoration: none;">
-                                        <span class="mb-1 jobpost">Personal Tutor</span>
-                                        <br><span class="mb-1 cname">Graduate Recruitment Bureau</span>
-                                        <br><span>
-                                            <img src="img/location.png">
-                                            <small class="loc">Wiltshire, South West</small>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="" style="text-decoration: none;">
-                                        <span class="mb-1 jobpost">Graduate Field Sales Rep</span>
-                                        <br><span class="mb-1 cname">Graduate Recruitment Bureau</span>
+                                <li class="mt-2">
+                                    <a href="#" style="text-decoration: none;">
+                                        <span class="jobpost">Graduate Field Sales Rep</span>
+                                        <br><span class="cname">Graduate Recruitment Bureau</span>
                                         <br><span>
                                             <img src="img/location.png">
                                             <small class="loc">Wiltshire, South West</small>

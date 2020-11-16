@@ -93,8 +93,8 @@
 
                 reader.onload = function (e) {
                     $('#blah').attr('src', e.target.result)
-                        .width(200)
-                        .height(190);
+                        .width(220)
+                        .height(220);
                 }
                 reader.readAsDataURL(input.files[0]); // convert to base64 string
             }
@@ -130,7 +130,56 @@
             $(".myBox .notclk").click(function (e) {
                 e.stopPropagation();
             });
+           /* $('#abouts').change(function (e) {
+                //alert($(this).text().length);
+                if ($(this).text().length > 650) {
+                    $('.errmsg').html('character limit exceeds');
+                    
+                   $(this).css('pointer-events','none');
+                    e.preventDefault();
+                    $(this).text($(this).text().substring(0, 650));
+                }
+            });
+            $('[contenteditable]').on('focus', function () {
+                var $this = $(this);
+                $this.data('before', $this.html());
+                return $this;
+            }).on('blur keyup keydown paste', function () {
+                var $this = $(this);
+                if ($this.data('before') !== $this.html()) {
+                    $this.data('before', $this.html());
+                    $this.trigger('change');
+                }
+                return $this;
+            });*/
+            $(".editbtn").click(function (e) {
+                //$var = $(this).attr("id");
+                //$var1 = $var + 's';
+                //alert('id'+$var1);
+                $('#abouts').prop('contenteditable', 'true');
+                $('#abouts').css('border', '1px solid black');
+                $("#about").change();
+            });
+            $("#abouts").on('keyup', function (e) {
+                $("#detailsfield").val($(this).text()); //store content to input[type=hidden]
+            });
+            $("div[contenteditable='false'][maxlength]").on('keydown paste', function (event) {
+                var cntMaxLength = parseInt($(this).attr('maxlength'));
 
+                if ($(this).text().length === cntMaxLength && event.keyCode != 8) {
+                    $('.errmsg').html('character limit exceeds').show();
+                    event.preventDefault();
+                }
+            });
+            $(document).mouseup(function (e) {
+                var container = $("#abouts");
+                // if the target of the click isn't the container nor a descendant of the container
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    //$('#abouts').prop('contenteditable', 'false');
+                    $('#abouts').css('border', '0');
+                    $('.errmsg').hide();
+                }
+            });
         });
     </script>
     <style>
@@ -150,7 +199,8 @@
             list-style-image: url('img/special-qualification.png');
         }
 
-        .myBox:hover {
+        .myBox:hover,
+        .editbtn:hover {
             cursor: pointer;
         }
     </style>
@@ -286,12 +336,12 @@
                                 <div class="row bg-success seekdiv text-white">
                                     <span class="mx-4 my-3"><b>Details FORM</b></span>
                                 </div>
-                                <form class="needs-validation" novalidate>
+                                <form class="needs-validation dashforminput" novalidate>
                                     <!-------------------------------Upload Image----------------------->
-                                    <div class="row m-lg-4 m-md-2 m-sm-1 m-2 mb-0 mt-0 py-4">
-                                        <div class="col-lg-5 ">
+                                    <div class="row mx-lg-2 my-lg-3 my-0 mx-md-2 mx-sm-1 mx-3">
+                                        <div class="col-lg-5 col-md-8 col-12 mt-3 py-0 px-lg-1 px-0">
                                             <div class="row">
-                                                <span class="text-muted font-weight-bold mx-4">Add Logo</span>
+                                                <span class="text-muted font-weight-bold mx-4">Add Your Image</span>
                                             </div>
                                             <div class="row mt-4 mx-2">
                                                 <div class="roun imgboxseek" id="img_link">
@@ -305,14 +355,15 @@
                                     </div>
 
                                     <!----------------------------Basic Information--------------------------->
-                                    <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4 ">
-                                        <div class="seekjobsdiv p-2 col-12">Basic Information</div>
-
+                                    <div class="row m-lg-3 m-md-2 m-sm-1 m-3">
+                                        <div class="seekjobsdiv p-2 col-12"><span class="mx-3"
+                                                style="font-size: 14px;">Basic Information</span>
+                                        </div>
                                         <!------ div-->
-                                        <div class="container mt-4 col-12" style="padding:20px;">
+                                        <div class="container mt-2 mb-1 col-12 px-4">
                                             <div class="row" style="font-size: 15px;">
                                                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="fname">First name:</label>
+                                                    <label for="fname"><b class="text-muted">Name:</b></label>
                                                     <input type="text" class="form-control f" id="fname" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid name.
@@ -321,8 +372,8 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="lname">Last name:</label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
+                                                    <label for="lname"><b class="text-muted">Father name:</b></label>
                                                     <input type="text" class="form-control f" id="lname" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid name.
@@ -331,8 +382,8 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="email">Email:</label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="email"><b class="text-muted">Email:</b></label>
                                                     <input type="email" class="form-control f" id="email" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid email.
@@ -341,10 +392,9 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="phone">Phone:</label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="phone"><b class="text-muted">Phone:</b></label>
                                                     <input type="number" class="form-control f" id="phone" required>
-                                                    <small class="text-muted">Digits Only</small>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid Phone Number.
                                                     </div>
@@ -352,8 +402,8 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="address">Address:</label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="address"><b class="text-muted">Address:</b></label>
                                                     <input type="text" class="form-control f" id="address" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid Address.
@@ -362,8 +412,8 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="lang">Language:</label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="lang"><b class="text-muted">Language:</b></label>
                                                     <input type="text" class="form-control f" id="lang" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a language.
@@ -372,8 +422,8 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="jd">Job Description:</label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="jd"><b class="text-muted">Job Description:</b></label>
                                                     <input type="text" class="form-control f" id="jd" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a job description.
@@ -382,8 +432,8 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="cnic">CNIC:</label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="cnic"><b class="text-muted">CNIC:</b></label>
                                                     <input type="text" class="form-control f" id="cnic" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid cnic number.
@@ -396,33 +446,32 @@
                                         </div>
                                     </div>
 
-
                                     <!----------------------------Social Networks--------------------------->
-                                    <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
-                                        <div class="seekjobsdiv p-2 col-12">Social Networks</div>
+                                    <div class="row m-lg-3 m-md-2 m-sm-1 m-3">
+                                        <div class="seekjobsdiv p-2 col-12"><span class="mx-3"
+                                                style="font-size: 14px;">Social Networks</span></div>
                                         <!------ div-->
-                                        <div class="container mt-4 col-12" style="padding:10px; padding-right:0px;">
+                                        <div class="container mt-2 col-12 px-4">
                                             <div class="row " style="font-size: 14px;">
                                                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="google"><b>Google:</b></label><br>
+                                                    <label for="google" class="text-muted">Google:</label><br>
                                                     <input type="text" class="form-control f" id="google">
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="facebook"><b>Facebook:</b></label><br>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
+                                                    <label for="facebook" class="text-muted">Facebook:</label><br>
                                                     <input type="text" class="form-control f" id="facebook">
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="twitter"><b>Twitter:</b></label><br>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="twitter" class="text-muted">Twitter:</label><br>
                                                     <input type="text" class="form-control f" id="twitter">
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="linkedin"><b>LinkedIn:</b></label><br>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="linkedin" class="text-muted">LinkedIn:</label><br>
                                                     <input type="text" class="form-control f" id="linkedin">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
 
                                     <!----------------------------Update Button--------------------------->
                                     <div class="mx-4 delhov">
@@ -451,7 +500,7 @@
                                     <div class="row m-4 mb-0 mt-0 py-4 ">
                                         <div class="seekjobsdiv p-2 col-12 d-inline px-4">Basic Information
                                             <div class="float-right d-inline mt-1">
-                                                <img src="img/edit-icon-white.png" class="img-fluid w-75">
+                                                <img src="img/edit-icon-white.png" class="img-fluid w-75 editbtn">
                                             </div>
                                         </div>
 
@@ -692,43 +741,37 @@
                                     <div class="row m-4">
                                         <div class="seekjobsdiv p-2 col-12 d-inline px-4">About Yourself
                                             <div class="float-right d-inline mt-1">
-                                                <img src="img/edit-icon-white.png" class="img-fluid w-75">
+                                                <img src="img/edit-icon-white.png" class="img-fluid w-75 editbtn"
+                                                    id="about">
                                             </div>
                                         </div>
 
                                         <!------div-->
                                         <div class="container mt-2">
-                                            <div class="row text-justify txtdashab col-12 mx-1">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                industry.
-                                                Lorem
-                                                Ipsum has been the industry's standard dummy text ever since the
-                                                1500s, when
-                                                an
-                                                unknown printer took a galley of type and scrambled it to make a
-                                                type
-                                                specimen
-                                                book. It has survived not only five centuries, but also the leap
-                                                into
-                                                electronic
-                                                typesetting, remaining essentially unchanged. It was popularised in
-                                                the
-                                                1960s
-                                                with the release of Letraset sheets containing Lorem Ipsum passages,
-                                                and
-                                                more
-                                                recently with desktop publishing software like Aldus PageMaker
-                                                including
-                                                versions of Lorem Ipsum.
+                                            <!--<div class="row text-justify txtdashab col-12 mx-1" id="abouts">
+                                                <textarea type="text" class="w-100" disabled
+                                                    style="border:0; background-color:transparent;overflow: hidden;"></textarea>
+                                            </div>-->
+                                            <div class="row mx-2">
+                                                <div id="abouts" contenteditable="false"
+                                                class="text-justify txtdashab widthabout" id="abouts" maxlength="650">
+                                                Take advantage of the opportunity! In order to do that, you’ll want to
+                                                spend some time combing through the job description, researching the
+                                                company, and figuring out how you can tell your story in a way that
+                                                makes it crystal clear why you’re interested and what you bring to the
+                                                table that aligns with the role and company.</div>
+                                            <input type="hidden" disabled id="detailsfield">
+                                            <span class="errmsg"></span>
                                             </div>
                                         </div>
                                     </div>
 
                                     <!----------------------------Education Background---------------------------->
-                                    <div class="row m-4 mb-0 mt-0">
+                                    <div class="row m-4">
                                         <div class="seekjobsdiv p-2 col-12 d-inline px-4">Education Background
                                             <div class="float-right d-inline mt-1">
-                                                <img src="img/edit-icon-white.png" class="img-fluid w-100">
+                                                <img src="img/edit-icon-white.png" class="img-fluid w-75 editbtn"
+                                                    id="edu">
                                             </div>
                                         </div>
 
@@ -739,7 +782,7 @@
                                                 <div class="d-flex flex-column mt-1 mx-lg-0 mx-auto">
                                                     <img src="img/study.png" class="img-fluid ">
                                                 </div>
-                                                <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0">
+                                                <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0" id="edus">
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
                                                         2018-present
@@ -812,14 +855,15 @@
                                     <div class="row m-4 mb-0 mt-0">
                                         <div class="seekjobsdiv p-2 col-12 d-inline px-4">Work Experience
                                             <div class="float-right d-inline mt-1">
-                                                <img src="img/edit-icon-white.png" class="img-fluid w-75">
+                                                <img src="img/edit-icon-white.png" class="img-fluid w-75 editbtn"
+                                                    id="exp">
                                             </div>
                                         </div>
 
                                         <!------------------------------------Divs--------------------------------------->
                                         <div class="container mx-4">
                                             <!---first div-->
-                                            <div class="d-flex flex-row flex-wrap mt-4">
+                                            <div class="d-flex flex-row flex-wrap mt-4" id="exps">
                                                 <div class="d-flex flex-column mt-1 mx-lg-0 mx-auto">
                                                     <img src="img/work-ex.png" class="img-fluid ">
                                                 </div>
@@ -843,7 +887,7 @@
                                             </div>
                                             <hr>
                                             <!---second div-->
-                                            <div class="d-flex flex-row flex-wrap mt-4">
+                                            <div class="d-flex flex-row flex-wrap mt-4" id="exps">
                                                 <div class="d-flex flex-column mt-1 mx-lg-0 mx-auto">
                                                     <img src="img/work-ex.png" class="img-fluid ">
                                                 </div>
@@ -872,13 +916,14 @@
                                     <div class="row m-4 mb-0 mt-0">
                                         <div class="seekjobsdiv p-2 col-12 d-inline px-4">Special Qualification
                                             <div class="float-right d-inline mt-1">
-                                                <img src="img/edit-icon-white.png" class="img-fluid w-75">
+                                                <img src="img/edit-icon-white.png" class="img-fluid w-75 editbtn"
+                                                    id="qua">
                                             </div>
                                         </div>
 
                                         <!------------------------------------Divs--------------------------------------->
                                         <div class="list-group borderless mx-2" style="color: white;">
-                                            <ul class="text-left mt-2 dashlist">
+                                            <ul class="text-left mt-2 dashlist" id="quas">
                                                 <li class="mt-2">
                                                     <span class="dashtxt1"
                                                         style="position: relative; top:-5px;">recently with desktop

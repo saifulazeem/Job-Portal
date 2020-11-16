@@ -93,8 +93,8 @@
 
                 reader.onload = function (e) {
                     $('#blah').attr('src', e.target.result)
-                        .width(200)
-                        .height(190);
+                        .width(220)
+                        .height(220);
                 }
                 reader.readAsDataURL(input.files[0]); // convert to base64 string
             }
@@ -121,7 +121,7 @@
         });
     </script>
     <style>
-        .nav-link{
+        .nav-link {
             padding: 0px;
         }
     </style>
@@ -181,43 +181,43 @@
                 <div class="row d-flex justify-content-start align-self-start">
                     <!----------------------------------------Vertical navigation bar------------------------------------------->
                     <nav class="p-0 col-12 mt-3 navbar navbar-expand text-white">
-                            <ul class="ml-lg-4 ml-sm-3 ml-5 pl-3 pl-sm-0 nav flex-column col-12" id="tabs">
-                                <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
-                                    <a class=" nav-link" href="#editprofile" id="e" role="button" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        <div class="d-inline-block" style="width: 15%;">
-                                            <img src="img/profilelogo.png">
-                                        </div>
-                                        <div class="d-inline-block">
-                                            <span class="dashtxt">Edit Profile</span>
-                                        </div>
-                                    </a>
-                                </li>
+                        <ul class="ml-lg-4 ml-sm-3 ml-5 pl-3 pl-sm-0 nav flex-column col-12" id="tabs">
+                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                                <a class=" nav-link" href="#editprofile" id="e" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <div class="d-inline-block" style="width: 15%;">
+                                        <img src="img/profilelogo.png">
+                                    </div>
+                                    <div class="d-inline-block">
+                                        <span class="dashtxt">Edit Profile</span>
+                                    </div>
+                                </a>
+                            </li>
 
-                                <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
-                                    <a class="nav-link" href="#jobs" id="j" role="button" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        <div class="d-inline-block" style="width: 15%;">
-                                            <img src="img/jobposted.png">
-                                        </div>
-                                        <div class="d-inline-block">
-                                            <span class="dashtxt">Jobs</span>
-                                        </div>
-                                    </a>
-                                </li>
+                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                                <a class="nav-link" href="#jobs" id="j" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <div class="d-inline-block" style="width: 15%;">
+                                        <img src="img/jobposted.png">
+                                    </div>
+                                    <div class="d-inline-block">
+                                        <span class="dashtxt">Jobs</span>
+                                    </div>
+                                </a>
+                            </li>
 
-                                <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
-                                    <a class="nav-link" href="#deletejobs" id="d" role="button" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        <div class="d-inline-block" style="width: 15%;">
-                                            <img src="img/delete.png">
-                                        </div>
-                                        <div class="d-inline-block">
-                                            <span class="dashtxt">Delete Profile</span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                            <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
+                                <a class="nav-link" href="#deletejobs" id="d" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <div class="d-inline-block" style="width: 15%;">
+                                        <img src="img/delete.png">
+                                    </div>
+                                    <div class="d-inline-block">
+                                        <span class="dashtxt">Delete Profile</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </div>
@@ -247,8 +247,8 @@
                                 </div>
                                 <form class="needs-validation" novalidate>
                                     <!-------------------------------Upload Image----------------------->
-                                    <div class="row m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4 m-2">
-                                        <div class="col-lg-5 ">
+                                    <div class="row mx-lg-2 my-lg-3 my-0 mx-md-2 mx-sm-1 mx-3">
+                                        <div class="col-lg-5 col-md-8 col-12 mt-3 py-0 px-lg-1 px-0">
                                             <div class="row">
                                                 <span class="text-muted font-weight-bold mx-4">Add Logo</span>
                                             </div>
@@ -258,20 +258,21 @@
                                                 </div>
                                                 <input type="file" id="image" style="visibility: hidden" required><br>
                                                 <span id="spnFilePathimg"></span><br>
-                                                <span id="errmsgimg" class="text-danger"></span><br>
+                                                <span id="errmsgimg" class="text-danger"></span>
                                             </div>
                                         </div>
                                     </div>
 
                                     <!----------------------------Basic Information--------------------------->
-                                    <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
-                                        <div class="seekjobsdiv p-2 col-12">Basic Information</div>
+                                    <div class="row m-lg-3 m-md-2 m-sm-1 m-3">
+                                        <div class="seekjobsdiv p-2 col-12"><span class="mx-3" style="font-size: 14px;">Basic Information</span>
+                                        </div>
 
                                         <!------ div-->
-                                        <div class="container mt-4 col-12" style="padding:20px;">
+                                        <div class="container mt-2 mb-1 px-4 col-12">
                                             <div class="row" style="font-size: 15px;">
                                                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="cname"><b>Company name:</b></label>
+                                                    <label for="cname"><b class="text-muted">Company name:</b></label>
                                                     <input type="text" class="form-control f" id="cname" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid name.
@@ -280,8 +281,8 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="email"><b>Email:</b></label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12  mt-md-0 mt-3">
+                                                    <label for="email"><b class="text-muted">Email:</b></label>
                                                     <input type="email" class="form-control f" id="email" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid email.
@@ -290,8 +291,8 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="address"><b>Address:</b></label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="address"><b class="text-muted">Address:</b></label>
                                                     <input type="text" class="form-control f" id="address" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid Company Address.
@@ -300,10 +301,9 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="phone"><b>Phone:</b></label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="phone"><b class="text-muted">Phone:</b></label>
                                                     <input type="number" class="form-control f" id="phone" required>
-                                                    <small class="text-muted">Digits Only</small>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid Phone Number.
                                                     </div>
@@ -311,8 +311,8 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="ct"><b>Company Type:</b></label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="ct"><b class="text-muted">Company Type:</b></label>
                                                     <input type="text" class="form-control f" id="ct" required>
                                                     <div class="invalid-feedback">
                                                         Please provide a valid company type.
@@ -321,8 +321,8 @@
                                                         Looks good!
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="no"><b>No. of Employees:</b></label>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="no"><b class="text-muted">No. of Employees:</b></label>
                                                     <input type="number" class="form-control f" id="no" min="0"
                                                         required>
                                                     <div id="numberofemp" style="display: none;">
@@ -340,31 +340,31 @@
                                     </div>
 
                                     <!----------------------------Social Networks--------------------------->
-                                    <div class="row mx-2 m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
-                                        <div class="seekjobsdiv p-2 col-12">Social Networks</div>
+                                    <div class="row m-lg-3 m-md-2 m-sm-1 m-3">
+                                        <div class="seekjobsdiv p-2 col-12"><span class="mx-3" style="font-size: 14px;">Social Networks</span>
+                                        </div>
                                         <!------ div-->
-                                        <div class="container mt-4 col-12" style="padding:10px; padding-right:0px;">
+                                        <div class="container mt-2 px-4 col-12">
                                             <div class="row " style="font-size: 14px;">
                                                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="google"><b>Google:</b></label><br>
+                                                    <label for="google" class="text-muted">Google:</label><br>
                                                     <input type="text" class="form-control f" id="google">
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="facebook"><b>Facebook:</b></label><br>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
+                                                    <label for="facebook" class="text-muted">Facebook:</label><br>
                                                     <input type="text" class="form-control f" id="facebook">
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="twitter"><b>Twitter:</b></label><br>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="twitter" class="text-muted">Twitter:</label><br>
                                                     <input type="text" class="form-control f" id="twitter">
                                                 </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                                                    <label for="linkedin"><b>LinkedIn:</b></label><br>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
+                                                    <label for="linkedin" class="text-muted">LinkedIn:</label><br>
                                                     <input type="text" class="form-control f" id="linkedin">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
 
                                     <!----------------------------Update Button--------------------------->
                                     <div class="m-4 delhov">
