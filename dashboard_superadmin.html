@@ -126,6 +126,7 @@
             $(".seekdeltable").on('click', '.editbtn', function () {
                 //alert('two');
                 var v = $(this).closest('tr');
+                
                 v.find('input').each(function () {
                     $(this).prop('disabled', false);
                     $(this).css('border', '1px solid black');

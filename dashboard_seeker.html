@@ -130,56 +130,58 @@
             $(".myBox .notclk").click(function (e) {
                 e.stopPropagation();
             });
-           /* $('#abouts').change(function (e) {
-                //alert($(this).text().length);
-                if ($(this).text().length > 650) {
-                    $('.errmsg').html('character limit exceeds');
-                    
-                   $(this).css('pointer-events','none');
-                    e.preventDefault();
-                    $(this).text($(this).text().substring(0, 650));
-                }
-            });
-            $('[contenteditable]').on('focus', function () {
-                var $this = $(this);
-                $this.data('before', $this.html());
-                return $this;
-            }).on('blur keyup keydown paste', function () {
-                var $this = $(this);
-                if ($this.data('before') !== $this.html()) {
-                    $this.data('before', $this.html());
-                    $this.trigger('change');
-                }
-                return $this;
-            });*/
-            $(".editbtn").click(function (e) {
-                //$var = $(this).attr("id");
-                //$var1 = $var + 's';
-                //alert('id'+$var1);
-                $('#abouts').prop('contenteditable', 'true');
-                $('#abouts').css('border', '1px solid black');
-                $("#about").change();
-            });
+
             $("#abouts").on('keyup', function (e) {
                 $("#detailsfield").val($(this).text()); //store content to input[type=hidden]
             });
+
             $("div[contenteditable='false'][maxlength]").on('keydown paste', function (event) {
                 var cntMaxLength = parseInt($(this).attr('maxlength'));
-
-                if ($(this).text().length === cntMaxLength && event.keyCode != 8) {
-                    $('.errmsg').html('character limit exceeds').show();
+                //alert($(this).text().length);
+                if ($(this).text().length === cntMaxLength) {
+                    alert('exceeds');
+                    alert($(this).parent().closest('.errmsg')==true);
+                    $(this).parent.closest('.errmsg').html('character limit exceeds').show();
                     event.preventDefault();
                 }
             });
-            $(document).mouseup(function (e) {
-                var container = $("#abouts");
-                // if the target of the click isn't the container nor a descendant of the container
-                if (!container.is(e.target) && container.has(e.target).length === 0) {
-                    //$('#abouts').prop('contenteditable', 'false');
-                    $('#abouts').css('border', '0');
+            $('#resume').mouseup(function (e) {
+                if (!$("input").is(":focus") && !document.activeElement.isContentEditable) {
+                    //alert('mousedown');
+                    $('input').prop('disabled', 'true');
+                    $('input').css('border', '1px solid transparent');
+                    $("div[contenteditable='true']").css('border', '1px solid transparent');
+                    $("div[contenteditable='true']").prop('contenteditable', 'false');
+                    $('input').css('background-color', 'transparent');
+                    $("div[contenteditable='false']").css('background-color', 'transparent');
                     $('.errmsg').hide();
                 }
             });
+            $("#resume").on('click', '.editbtn', function () {
+                //alert('editbtn');
+                $var = $(this).attr("id");
+                $var1 = $var + 's';
+
+                var v = $('#' + $var1);
+                //alert(v);
+                //v.css('background-color','gray');
+                v.find('input').each(function () {
+                    //alert('in');
+                    $(this).prop('disabled', false);
+                    $(this).css('border', '1px solid black');
+                    $(this).css('border-radius', '2px');
+                    $(this).css('background-color', '#F3F3F3');
+                });
+
+                v.find('.edittxt').each(function () {
+                    //alert('ed');
+                    $(this).prop('contenteditable', 'true');
+                    $(this).css('border', '1px solid black');
+                    $(this).css('border-radius', '2px');
+                    $(this).css('background-color', '#F3F3F3');
+                });
+            });
+
         });
     </script>
     <style>
@@ -196,7 +198,7 @@
 
         .dashlist {
             list-style-type: none;
-            list-style-image: url('img/special-qualification.png');
+            list-style-image: url('img/qua.png');
         }
 
         .myBox:hover,
@@ -497,15 +499,16 @@
                                         <span class="mx-4 my-3"><b>Details</b></span>
                                     </div>
                                     <!----------------------------Basic Information--------------------------->
-                                    <div class="row m-4 mb-0 mt-0 py-4 ">
+                                    <div class="row m-4 mb-0 mt-0 py-4">
                                         <div class="seekjobsdiv p-2 col-12 d-inline px-4">Basic Information
                                             <div class="float-right d-inline mt-1">
-                                                <img src="img/edit-icon-white.png" class="img-fluid w-75 editbtn">
+                                                <img src="img/edit-icon-white.png" id="bas"
+                                                    class="img-fluid w-75 editbtn">
                                             </div>
                                         </div>
 
                                         <!------ div-->
-                                        <div class="container mt-4" style="padding:10px;">
+                                        <div class="container mt-4" id="bass" style="padding:10px;">
                                             <div class="row">
                                                 <!----------------------------X-LARGE, LARGE, MEDIUM VIEW-------------------->
                                                 <div class="col d-xl-block d-lg-block d-md-block d-sm-none d-none">
@@ -520,7 +523,9 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-2">
-                                                                <span class="txtdash">Graphic Designer</span>
+                                                                <span class="txtdash"><input type="text" disabled
+                                                                        value="Graphic Designer" maxlength="25"></span>
+
                                                             </div>
                                                         </div>
                                                         <div class="d-flex flex-column col-4">
@@ -533,7 +538,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-2">
-                                                                <span class="txtdash"> example@user.com</span>
+                                                                <span class="txtdash"><input type="email" disabled
+                                                                        value="example@user.com" maxlength="50"></span>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex flex-column col-4">
@@ -546,7 +552,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-2">
-                                                                <span class="txtdash">Lahore</span>
+                                                                <span class="txtdash"><input type="text" disabled
+                                                                        value="Lahore" maxlength="20"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -561,7 +568,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-2">
-                                                                <span class="txtdash">www.example.com</span>
+                                                                <span class="txtdash"><input type="text" disabled
+                                                                        value="www.example.com" maxlength="50"></span>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex flex-column col-4">
@@ -574,7 +582,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-2">
-                                                                <span class="txtdash"> 1234567</span>
+                                                                <span class="txtdash"><input type="tel" disabled
+                                                                        value="1234567" maxlength="20"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -593,7 +602,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-1">
-                                                                <span class="txtdash">Graphic Designer</span>
+                                                                <span class="txtdash"><input type="text" disabled
+                                                                        value="Graphic Designer" maxlength="20"></span>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex flex-column col-5">
@@ -606,7 +616,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-1">
-                                                                <span class="txtdash"> example@user.com</span>
+                                                                <span class="txtdash"><input type="email" disabled
+                                                                        value="example@user.com" maxlength="50"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -621,7 +632,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-1">
-                                                                <span class="txtdash">Lahore</span>
+                                                                <span class="txtdash"><input type="text" disabled
+                                                                        value="Lahore" maxlength="20"></span>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex flex-column col-5">
@@ -634,7 +646,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-1">
-                                                                <span class="txtdash">www.example.com</span>
+                                                                <span class="txtdash"><input type="text" disabled
+                                                                        value="www.example.com" maxlength="50"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -649,7 +662,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-1">
-                                                                <span class="txtdash"> 1234567</span>
+                                                                <span class="txtdash"><input type="number" disabled
+                                                                        value="1234567" maxlength="20"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -668,7 +682,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-1">
-                                                                <span class="txtdash">Graphic Designer</span>
+                                                                <span class="txtdash"><input type="text" disabled
+                                                                        value="Graphic Designer" maxlength="20"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -683,7 +698,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-1">
-                                                                <span class="txtdash"> example@user.com</span>
+                                                                <span class="txtdash"><input type="email" disabled
+                                                                        value="example@user.com" maxlength="50"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -698,7 +714,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-1">
-                                                                <span class="txtdash">Lahore</span>
+                                                                <span class="txtdash"><input type="text" disabled
+                                                                        value="Lahore" maxlength="20"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -713,7 +730,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-1">
-                                                                <span class="txtdash">www.example.com</span>
+                                                                <span class="txtdash"><input type="text" disabled
+                                                                        value="www.example.com" maxlength="50"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -728,7 +746,8 @@
                                                                 </div>
                                                             </div>
                                                             <div class="flex-row mt-1">
-                                                                <span class="txtdash"> 1234567</span>
+                                                                <span class="txtdash"><input type="number" disabled
+                                                                        value="1234567" maxlength="20"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -747,21 +766,23 @@
                                         </div>
 
                                         <!------div-->
-                                        <div class="container mt-2">
+                                        <div class="container mt-2" id="abouts">
                                             <!--<div class="row text-justify txtdashab col-12 mx-1" id="abouts">
                                                 <textarea type="text" class="w-100" disabled
                                                     style="border:0; background-color:transparent;overflow: hidden;"></textarea>
                                             </div>-->
                                             <div class="row mx-2">
-                                                <div id="abouts" contenteditable="false"
-                                                class="text-justify txtdashab widthabout" id="abouts" maxlength="650">
-                                                Take advantage of the opportunity! In order to do that, you’ll want to
-                                                spend some time combing through the job description, researching the
-                                                company, and figuring out how you can tell your story in a way that
-                                                makes it crystal clear why you’re interested and what you bring to the
-                                                table that aligns with the role and company.</div>
-                                            <input type="hidden" disabled id="detailsfield">
-                                            <span class="errmsg"></span>
+                                                <div contenteditable="false"
+                                                    class="text-justify txtdashab widthabout edittxt" maxlength="700">
+                                                    Take advantage of the opportunity! In order to do that, you’ll want
+                                                    to
+                                                    spend some time combing through the job description, researching the
+                                                    company, and figuring out how you can tell your story in a way that
+                                                    makes it crystal clear why you’re interested and what you bring to
+                                                    the
+                                                    table that aligns with the role and company.</div>
+                                                <input type="hidden" disabled id="detailsfield">
+                                                <span class="errmsg"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -776,27 +797,37 @@
                                         </div>
 
                                         <!------------------------------------Divs--------------------------------------->
-                                        <div class="container mx-4">
+                                        <div class="container mx-4" id="edus">
                                             <!---first div-->
                                             <div class="d-flex flex-row flex-wrap mt-4">
                                                 <div class="d-flex flex-column mt-1 mx-lg-0 mx-auto">
                                                     <img src="img/study.png" class="img-fluid ">
                                                 </div>
-                                                <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0" id="edus">
+                                                <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0">
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        2018-present
+                                                        <input type="text" disabled value="2018"
+                                                            style="width: 40px;">&nbsp;-&nbsp;&nbsp;<input type="text"
+                                                            disabled value="present" style="width: 50px;">
                                                     </div>
                                                     <div
                                                         class="row dashtxt2 justify-content-lg-start justify-content-center">
-                                                        recently with desktop publishing software like
+                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
+                                                            id="edu1one" maxlength="150">
+                                                            recently with desktop publishing software like</div>
+                                                        <input type="hidden" disabled id="edu1ones">
+                                                        <span class="errmsg"></span>
                                                     </div>
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        recently with desktop publishing software like Aldus
-                                                        PageMaker
-                                                        including
-                                                        versions of Lorem Ipsum.
+                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
+                                                            id="edu1two" maxlength="250">
+                                                            recently with desktop publishing software like Aldus
+                                                            PageMaker
+                                                            including
+                                                            versions of Lorem Ipsum.</div>
+                                                        <input type="hidden" disabled id="edu1twos">
+                                                        <span class="errmsg"></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -809,18 +840,28 @@
                                                 <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0">
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        2018-present
+                                                        <input type="text" disabled value="2018"
+                                                            style="width: 40px;">&nbsp;-&nbsp;&nbsp;<input type="text"
+                                                            disabled value="present" style="width: 50px;">
                                                     </div>
                                                     <div
                                                         class="row dashtxt2 justify-content-lg-start justify-content-center">
-                                                        recently with desktop publishing software like
+                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
+                                                            id="edu2one" maxlength="150">
+                                                            recently with desktop publishing software like</div>
+                                                        <input type="hidden" disabled id="edu2ones">
+                                                        <span class="errmsg"></span>
                                                     </div>
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        recently with desktop publishing software like Aldus
-                                                        PageMaker
-                                                        including
-                                                        versions of Lorem Ipsum.
+                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
+                                                            id="edu1two" maxlength="250">
+                                                            recently with desktop publishing software like Aldus
+                                                            PageMaker
+                                                            including
+                                                            versions of Lorem Ipsum.</div>
+                                                        <input type="hidden" disabled id="edu1twos">
+                                                        <span class="errmsg"></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -833,18 +874,28 @@
                                                 <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0">
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        2018-present
+                                                        <input type="text" disabled value="2018"
+                                                            style="width: 40px;">&nbsp;-&nbsp;&nbsp;<input type="text"
+                                                            disabled value="present" style="width: 50px;">
                                                     </div>
                                                     <div
                                                         class="row dashtxt2 justify-content-lg-start justify-content-center">
-                                                        recently with desktop publishing software like
+                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
+                                                            id="edu3one" maxlength="150">
+                                                            recently with desktop publishing software like</div>
+                                                        <input type="hidden" disabled id="edu3ones">
+                                                        <span class="errmsg"></span>
                                                     </div>
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        recently with desktop publishing software like Aldus
-                                                        PageMaker
-                                                        including
-                                                        versions of Lorem Ipsum.
+                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
+                                                            id="edu3two" maxlength="250">
+                                                            recently with desktop publishing software like Aldus
+                                                            PageMaker
+                                                            including
+                                                            versions of Lorem Ipsum.</div>
+                                                        <input type="hidden" disabled id="edu3twos">
+                                                        <span class="errmsg"></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -861,51 +912,73 @@
                                         </div>
 
                                         <!------------------------------------Divs--------------------------------------->
-                                        <div class="container mx-4">
+                                        <div class="container mx-4" id="exps">
                                             <!---first div-->
-                                            <div class="d-flex flex-row flex-wrap mt-4" id="exps">
+                                            <div class="d-flex flex-row flex-wrap mt-4">
                                                 <div class="d-flex flex-column mt-1 mx-lg-0 mx-auto">
                                                     <img src="img/work-ex.png" class="img-fluid ">
                                                 </div>
                                                 <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0">
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        2018-present
+                                                        <input type="text" disabled value="2018"
+                                                            style="width: 40px;">&nbsp;-&nbsp;&nbsp;
+                                                        <input type="text" disabled value="present"
+                                                            style="width: 50px;">
                                                     </div>
                                                     <div
                                                         class="row dashtxt2 justify-content-lg-start justify-content-center">
-                                                        recently with desktop publishing software like
+                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
+                                                            id="exp1one" maxlength="150">
+                                                            recently with desktop publishing software like</div>
+                                                        <input type="hidden" disabled id="edu2ones">
+                                                        <span class="errmsg"></span>
                                                     </div>
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        recently with desktop publishing software like Aldus
-                                                        PageMaker
-                                                        including
-                                                        versions of Lorem Ipsum.
+                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
+                                                            id="exp1two" maxlength="250">
+                                                            recently with desktop publishing software like Aldus
+                                                            PageMaker
+                                                            including
+                                                            versions of Lorem Ipsum.</div>
+                                                        <input type="hidden" disabled id="edu3twos">
+                                                        <span class="errmsg"></span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <hr>
                                             <!---second div-->
-                                            <div class="d-flex flex-row flex-wrap mt-4" id="exps">
+                                            <div class="d-flex flex-row flex-wrap mt-4">
                                                 <div class="d-flex flex-column mt-1 mx-lg-0 mx-auto">
                                                     <img src="img/work-ex.png" class="img-fluid ">
                                                 </div>
                                                 <div class="d-flex flex-column ml-xl-4 ml-lg-3 ml-md-0">
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        2018-present
+                                                        <input type="text" disabled value="2018"
+                                                            style="width: 40px;">&nbsp;-&nbsp;&nbsp;
+                                                        <input type="text" disabled value="present"
+                                                            style="width: 50px;">
                                                     </div>
                                                     <div
                                                         class="row dashtxt2 justify-content-lg-start justify-content-center">
-                                                        recently with desktop publishing software like
+                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
+                                                            id="exp2one" maxlength="150">
+                                                            recently with desktop publishing software like</div>
+                                                        <input type="hidden" disabled id="edu2ones">
+                                                        <span class="errmsg"></span>
                                                     </div>
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        recently with desktop publishing software like Aldus
-                                                        PageMaker
-                                                        including
-                                                        versions of Lorem Ipsum.
+                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
+                                                            id="exp1two" maxlength="250">
+                                                            recently with desktop publishing software like Aldus
+                                                            PageMaker
+                                                            including
+                                                            versions of Lorem Ipsum.</div>
+                                                        <input type="hidden" disabled id="edu3twos">
+                                                        <span class="errmsg"></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -922,43 +995,56 @@
                                         </div>
 
                                         <!------------------------------------Divs--------------------------------------->
-                                        <div class="list-group borderless mx-2" style="color: white;">
-                                            <ul class="text-left mt-2 dashlist" id="quas">
+                                        <div class="mx-2" style="color: white;">
+                                            <ul class="text-left mt-2 dashlist mt-4" id="quas">
                                                 <li class="mt-2">
-                                                    <span class="dashtxt1"
-                                                        style="position: relative; top:-5px;">recently with desktop
+                                                    <div contenteditable="false" id="sp1" class="txtdashab edittxt"
+                                                        maxlength="50">
+                                                        5 recently with desktop
                                                         publishing
                                                         software like Aldus
                                                         PageMaker
                                                         including
                                                         versions of Lorem Ipsum.</span>
+                                                    <input type="hidden" disabled id="sp1s">
+                                                    <span class="errmsg"></span>
+                                                    </div>
                                                 </li>
                                                 <li class="mt-2">
-                                                    <span class="dashtxt1"
-                                                        style="position: relative; top:-5px;">recently with desktop
+                                                    <div contenteditable="false" id="sp2" class="txtdashab edittxt"
+                                                        maxlength="100">
+                                                        recently with desktop
                                                         publishing
                                                         software like Aldus
                                                         PageMaker
                                                         including
-                                                        versions of Lorem Ipsum.</span>
+                                                        versions of Lorem Ipsum.</div>
+                                                    <input type="hidden" disabled id="sp2s">
+                                                    <span class="errmsg"></span>
                                                 </li>
                                                 <li class="mt-2">
-                                                    <span class="dashtxt1"
-                                                        style="position: relative; top:-5px;">recently with desktop
+                                                    <div contenteditable="false" id="sp3" class="txtdashab edittxt"
+                                                        maxlength="100">
+                                                        recently with desktop
                                                         publishing
                                                         software like Aldus
                                                         PageMaker
                                                         including
-                                                        versions of Lorem Ipsum.</span>
+                                                        versions of Lorem Ipsum.</div>
+                                                    <input type="hidden" disabled id="sp3s">
+                                                    <span class="errmsg"></span>
                                                 </li>
                                                 <li class="mt-2">
-                                                    <span class="dashtxt1"
-                                                        style="position: relative; top:-5px;">recently with desktop
+                                                    <div contenteditable="false" id="sp4" class="txtdashab edittxt"
+                                                        maxlength="100">
+                                                        recently with desktop
                                                         publishing
                                                         software like Aldus
                                                         PageMaker
                                                         including
-                                                        versions of Lorem Ipsum.</span>
+                                                        versions of Lorem Ipsum.</div>
+                                                    <input type="hidden" disabled id="sp4s">
+                                                    <span class="errmsg"></span>
                                                 </li>
                                             </ul>
                                         </div>

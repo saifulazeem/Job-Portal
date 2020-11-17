@@ -131,7 +131,7 @@
 
                     <div class="collapse navbarmar mt-xl-2 mt-lg-2 mt-md-2 mt-sm-0 mt-0 navbar-collapse navbar-right justify-content-end"
                         id="navbarSupportedContent">
-                        <ul class="navbar-nav align-items-md-center">
+                        <ul class="navbar-nav align-items-md-center" style="position: relative;">
                             <li class="nav-item navone sp">
                                 <a class="nav-link" href="about.html"><span class="float-left">ABOUT US</span></a>
                             </li>
@@ -157,71 +157,75 @@
                                         </div>
 
                                         <!------------------------------onhover div----------------------------------->
-                                        <div class="row col-xl-3 col-lg-5 col-md-5 col-sm-6 col-8 my-2 hoverdown hoverhomerel roun regdiv"
-                                            style="z-index: 9; background: rgba(255,255,255,.9);">
-                                            <form class="col-12 needs-validation my-lg-3 my-md-3 my-sm-3 my-3 mx-0"
-                                                novalidate>
-                                                <div class="form-row no-gutters col-12 p-0 m-0 ">
-                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
-                                                        <div class="delhov float-left">
-                                                            <button type="button" class="btn text-white btg btn1">
-                                                                <img class="" src="img/js.png" class="img-responsive">
-                                                                <span
-                                                                    class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">CANDIDATE</span>
-                                                            </button>
+                                        <div class="regdiv" style="z-index: 9;max-width:30rem;right:10px;position: absolute;"> 
+                                            <div class="row col-12 roun"
+                                                style=" background: rgba(255,255,255,.9);margin-top:25px; border-radius: 10px;">
+                                                <form class="col-12 needs-validation my-lg-3 my-md-3 my-sm-3 my-3 mx-0"
+                                                    novalidate>
+                                                    <div class="form-row no-gutters col-12 p-0 m-0 ">
+                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
+                                                            <div class="delhov float-left">
+                                                                <button type="button" class="btn text-white btg btn1">
+                                                                    <img class="" src="img/js.png"
+                                                                        class="img-responsive">
+                                                                    <span
+                                                                        class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">CANDIDATE</span>
+                                                                </button>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
-                                                        <div class="delhov float-right">
-                                                            <button type="button" class="btn text-white btg btn1">
-                                                                <img class="" src="img/emp.png" class="img-responsive">
-                                                                <span
-                                                                    class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">EMPLOYER</span>
-                                                            </button>
+                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
+                                                            <div class="delhov float-right">
+                                                                <button type="button" class="btn text-white btg btn1">
+                                                                    <img class="" src="img/emp.png"
+                                                                        class="img-responsive">
+                                                                    <span
+                                                                        class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">EMPLOYER</span>
+                                                                </button>
+                                                            </div>
                                                         </div>
-                                                    </div>
 
 
-                                                    <!-------------------------------Username------------------------------------->
-                                                    <div class="form-group mt-4">
-                                                        <input type="text" size="60"
-                                                            class="form-control formdiv roun py-2 hovtxt w-100"
-                                                            id="name" placeholder="Username" required>
+                                                        <!-------------------------------Username------------------------------------->
+                                                        <div class="form-group mt-4">
+                                                            <input type="text" size="60"
+                                                                class="form-control formdiv roun py-2 hovtxt w-100"
+                                                                id="name" placeholder="Username" required>
 
-                                                        <div class="invalid-feedback">
-                                                            Please provide a valid username.
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid username.
+                                                            </div>
+                                                            <div class="valid-feedback">
+                                                                Looks good!
+                                                            </div>
                                                         </div>
-                                                        <div class="valid-feedback">
-                                                            Looks good!
-                                                        </div>
-                                                    </div>
-                                                    <!-------------------------------Email------------------------------------->
-                                                    <div class="form-group mt-2">
-                                                        <input type="email" size="60"
-                                                            class="form-control formdiv roun py-2 hovtxt w-100"
-                                                            id="mail" placeholder="Email" required>
+                                                        <!-------------------------------Email------------------------------------->
+                                                        <div class="form-group mt-2">
+                                                            <input type="email" size="60"
+                                                                class="form-control formdiv roun py-2 hovtxt w-100"
+                                                                id="mail" placeholder="Email" required>
 
-                                                        <div class="invalid-feedback">
-                                                            Please provide a valid email.
+                                                            <div class="invalid-feedback">
+                                                                Please provide a valid email.
+                                                            </div>
+                                                            <div class="valid-feedback">
+                                                                Looks good!
+                                                            </div>
                                                         </div>
-                                                        <div class="valid-feedback">
-                                                            Looks good!
-                                                        </div>
-                                                    </div>
 
-                                                    <!-------------------------BUTTON------------------------------------->
-                                                    <div
-                                                        class="form-group mx-auto mt-0 d-flex justify-content-center align-self-center">
-                                                        <button type="submit"
-                                                            class="btn text-white bt btn2 hovtxt btnregister">
-                                                            Register</button>
+                                                        <!-------------------------BUTTON------------------------------------->
+                                                        <div
+                                                            class="form-group mx-auto mt-0 d-flex justify-content-center align-self-center">
+                                                            <button type="submit"
+                                                                class="btn text-white bt btn2 hovtxt btnregister">
+                                                                Register</button>
+                                                        </div>
+                                                        <div class="row mb-lg-0 mb-2 mt-0 mx-2 d-flex justify-content-center align-self-center"
+                                                            style="color: #707070;">
+                                                            Password will be generated and sent to your email address.
+                                                        </div>
                                                     </div>
-                                                    <div class="row mb-lg-0 mb-2 mt-0 mx-2 d-flex justify-content-center align-self-center"
-                                                        style="color: #707070;">
-                                                        Password will be generated and sent to your email address.
-                                                    </div>
-                                                </div>
-                                            </form>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1146,7 +1150,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!------------------------------------FORM------------------------>
             <div class="row rounded formpad">
                 <div class="top roun" style="margin: 0px 30px;border-radius: 20px 20px 0px 20px;">
