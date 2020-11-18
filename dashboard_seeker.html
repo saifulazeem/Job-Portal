@@ -102,8 +102,16 @@
         $(document).ready(function () {
             /*if(localStorage.getItem('myid')!=null){
                 alert(localStorage.getItem('myid'));
-            }
-*/   //hide or show Heart img
+            }        
+*/
+        //setting the maxlength of all conteneditable divs 
+            $('#quas .edittxt').attr('maxlength', '100');
+            $('#exps .edittxt:even').attr('maxlength', '100');//smaller text
+            $('#exps .edittxt:odd').attr('maxlength', '200');//larger text
+            $('#edus .edittxt:even').attr('maxlength', '100');//smaller text
+            $('#edus .edittxt:odd').attr('maxlength', '200');//larger text
+
+            //hide or show Heart img
             $(".imagetog").click(function (event) {
                 $(this).toggleClass("im2");
             });
@@ -131,22 +139,31 @@
                 e.stopPropagation();
             });
 
-            $("#abouts").on('keyup', function (e) {
-                $("#detailsfield").val($(this).text()); //store content to input[type=hidden]
-            });
-
+            /* $("#abouts").on('keyup', function (e) {
+                 $("#detailsfield").val($(this).text()); //store content to input[type=hidden]
+             });
+ */
             $("div[contenteditable='false'][maxlength]").on('keydown paste', function (event) {
-                var cntMaxLength = parseInt($(this).attr('maxlength'));
-                //alert($(this).text().length);
-                if ($(this).text().length === cntMaxLength) {
-                    alert('exceeds');
-                    alert($(this).parent().closest('.errmsg')==true);
-                    $(this).parent.closest('.errmsg').html('character limit exceeds').show();
+                var v = $(this).attr('id');
+                //alert(v);
+                var cntMaxLength = parseInt($('#' + v).attr('maxlength'));
+                var length = $('#' + v).text().replace(/\s/g, '').trim().length;
+                //alert(length + " " + cntMaxLength);
+                if (length === cntMaxLength && event.keyCode != 8) {
+                    $(this).siblings('.errmsg').html('character limit exceeds').show();
                     event.preventDefault();
                 }
+                //alert(length);
+                if( event.keyCode == 8)
+                {
+                    $(this).siblings('.errmsg').hide();
+                }
+            });
+            $("div[contenteditable='false'][maxlength]").on('blur', function (event) {
+                $('.errmsg').hide();
             });
             $('#resume').mouseup(function (e) {
-                if (!$("input").is(":focus") && !document.activeElement.isContentEditable) {
+                if (!$("input").is(":focus") && !document.activeElement.isContentEditable && event. keyCode != 8 ) {
                     //alert('mousedown');
                     $('input').prop('disabled', 'true');
                     $('input').css('border', '1px solid transparent');
@@ -181,10 +198,16 @@
                     $(this).css('background-color', '#F3F3F3');
                 });
             });
-
         });
     </script>
     <style>
+        .dashlist div{
+            position: relative;
+            top:-2px;
+        }
+        .dashlist ul{
+            position: absolute;
+        }
         /*heart images in seeker dashboard*/
         .im1 {
             content: url('img/heartempty.png');
@@ -766,14 +789,15 @@
                                         </div>
 
                                         <!------div-->
-                                        <div class="container mt-2" id="abouts">
+                                        <div class="container mt-2">
                                             <!--<div class="row text-justify txtdashab col-12 mx-1" id="abouts">
                                                 <textarea type="text" class="w-100" disabled
                                                     style="border:0; background-color:transparent;overflow: hidden;"></textarea>
                                             </div>-->
-                                            <div class="row mx-2">
+                                            <div class="row mx-2" id="abouts">
                                                 <div contenteditable="false"
-                                                    class="text-justify txtdashab widthabout edittxt" maxlength="700">
+                                                    class="txtdashab edittxt widthabout" maxlength="400"
+                                                    id="abouttxt">
                                                     Take advantage of the opportunity! In order to do that, you’ll want
                                                     to
                                                     spend some time combing through the job description, researching the
@@ -781,7 +805,7 @@
                                                     makes it crystal clear why you’re interested and what you bring to
                                                     the
                                                     table that aligns with the role and company.</div>
-                                                <input type="hidden" disabled id="detailsfield">
+                                                <input type="hidden" disabled id="detailsfield" class="e">
                                                 <span class="errmsg"></span>
                                             </div>
                                         </div>
@@ -813,7 +837,7 @@
                                                     <div
                                                         class="row dashtxt2 justify-content-lg-start justify-content-center">
                                                         <div contenteditable="false" class="txtdashab widthe edittxt"
-                                                            id="edu1one" maxlength="150">
+                                                            id="edu1one">
                                                             recently with desktop publishing software like</div>
                                                         <input type="hidden" disabled id="edu1ones">
                                                         <span class="errmsg"></span>
@@ -821,7 +845,7 @@
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
                                                         <div contenteditable="false" class="txtdashab widthe edittxt"
-                                                            id="edu1two" maxlength="250">
+                                                            id="edu1two">
                                                             recently with desktop publishing software like Aldus
                                                             PageMaker
                                                             including
@@ -847,7 +871,7 @@
                                                     <div
                                                         class="row dashtxt2 justify-content-lg-start justify-content-center">
                                                         <div contenteditable="false" class="txtdashab widthe edittxt"
-                                                            id="edu2one" maxlength="150">
+                                                            id="edu2one">
                                                             recently with desktop publishing software like</div>
                                                         <input type="hidden" disabled id="edu2ones">
                                                         <span class="errmsg"></span>
@@ -855,7 +879,7 @@
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
                                                         <div contenteditable="false" class="txtdashab widthe edittxt"
-                                                            id="edu1two" maxlength="250">
+                                                            id="edu2two">
                                                             recently with desktop publishing software like Aldus
                                                             PageMaker
                                                             including
@@ -881,7 +905,7 @@
                                                     <div
                                                         class="row dashtxt2 justify-content-lg-start justify-content-center">
                                                         <div contenteditable="false" class="txtdashab widthe edittxt"
-                                                            id="edu3one" maxlength="150">
+                                                            id="edu3one">
                                                             recently with desktop publishing software like</div>
                                                         <input type="hidden" disabled id="edu3ones">
                                                         <span class="errmsg"></span>
@@ -889,7 +913,7 @@
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
                                                         <div contenteditable="false" class="txtdashab widthe edittxt"
-                                                            id="edu3two" maxlength="250">
+                                                            id="edu3two">
                                                             recently with desktop publishing software like Aldus
                                                             PageMaker
                                                             including
@@ -928,21 +952,21 @@
                                                     </div>
                                                     <div
                                                         class="row dashtxt2 justify-content-lg-start justify-content-center">
-                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
-                                                            id="exp1one" maxlength="150">
+                                                        <div contenteditable="false" class="txtdashab edittxt"
+                                                            id="exp1one">
                                                             recently with desktop publishing software like</div>
-                                                        <input type="hidden" disabled id="edu2ones">
+                                                        <input type="hidden" disabled id="exp1ones"><br>
                                                         <span class="errmsg"></span>
                                                     </div>
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
-                                                            id="exp1two" maxlength="250">
+                                                        <div contenteditable="false" class="txtdashab edittxt"
+                                                            id="exp1two">
                                                             recently with desktop publishing software like Aldus
                                                             PageMaker
                                                             including
                                                             versions of Lorem Ipsum.</div>
-                                                        <input type="hidden" disabled id="edu3twos">
+                                                        <input type="hidden" disabled id="exp1twos">
                                                         <span class="errmsg"></span>
                                                     </div>
                                                 </div>
@@ -963,22 +987,22 @@
                                                     </div>
                                                     <div
                                                         class="row dashtxt2 justify-content-lg-start justify-content-center">
-                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
-                                                            id="exp2one" maxlength="150">
+                                                        <div contenteditable="false" class="txtdashab widthexp edittxt"
+                                                            id="exp2one">
                                                             recently with desktop publishing software like</div>
-                                                        <input type="hidden" disabled id="edu2ones">
+                                                        <input type="hidden" disabled id="exp2ones"><br>
                                                         <span class="errmsg"></span>
                                                     </div>
                                                     <div
                                                         class="row dashtxt1 justify-content-lg-start justify-content-center">
-                                                        <div contenteditable="false" class="txtdashab widthe edittxt"
-                                                            id="exp1two" maxlength="250">
+                                                        <div contenteditable="false" class="txtdashab widthexp edittxt"
+                                                            id="exp2two">
                                                             recently with desktop publishing software like Aldus
                                                             PageMaker
                                                             including
                                                             versions of Lorem Ipsum.</div>
-                                                        <input type="hidden" disabled id="edu3twos">
-                                                        <span class="errmsg"></span>
+                                                        <input type="hidden" disabled id="exp2twos"><br>
+                                                        <span class="errmsg" ></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -995,24 +1019,22 @@
                                         </div>
 
                                         <!------------------------------------Divs--------------------------------------->
-                                        <div class="mx-2" style="color: white;">
+                                        <div class="mx-0 mx-md-2" style="color: white;">
                                             <ul class="text-left mt-2 dashlist mt-4" id="quas">
-                                                <li class="mt-2">
-                                                    <div contenteditable="false" id="sp1" class="txtdashab edittxt"
-                                                        maxlength="50">
-                                                        5 recently with desktop
+                                                <li class="mt-2 ">
+                                                    <div contenteditable="false" id="sp1" class="widthsp txtdashab edittxt">
+                                                        recently with desktop
                                                         publishing
                                                         software like Aldus
                                                         PageMaker
                                                         including
                                                         versions of Lorem Ipsum.</span>
-                                                    <input type="hidden" disabled id="sp1s">
-                                                    <span class="errmsg"></span>
+                                                        <input type="hidden" disabled id="sp1s">
+                                                        <span class="errmsg"></span>
                                                     </div>
                                                 </li>
                                                 <li class="mt-2">
-                                                    <div contenteditable="false" id="sp2" class="txtdashab edittxt"
-                                                        maxlength="100">
+                                                    <div contenteditable="false" id="sp2" class="widthsp txtdashab edittxt">
                                                         recently with desktop
                                                         publishing
                                                         software like Aldus
@@ -1023,8 +1045,7 @@
                                                     <span class="errmsg"></span>
                                                 </li>
                                                 <li class="mt-2">
-                                                    <div contenteditable="false" id="sp3" class="txtdashab edittxt"
-                                                        maxlength="100">
+                                                    <div contenteditable="false" id="sp3" class="widthsp txtdashab edittxt">
                                                         recently with desktop
                                                         publishing
                                                         software like Aldus
@@ -1035,14 +1056,9 @@
                                                     <span class="errmsg"></span>
                                                 </li>
                                                 <li class="mt-2">
-                                                    <div contenteditable="false" id="sp4" class="txtdashab edittxt"
-                                                        maxlength="100">
-                                                        recently with desktop
-                                                        publishing
-                                                        software like Aldus
-                                                        PageMaker
-                                                        including
-                                                        versions of Lorem Ipsum.</div>
+                                                    <div contenteditable="false" id="sp4" class="widthsp txtdashab edittxt">
+                                                        recently with desktop publishing software like Aldus
+                                                        PageMaker including versions of Lorem Ipsum.</div>
                                                     <input type="hidden" disabled id="sp4s">
                                                     <span class="errmsg"></span>
                                                 </li>

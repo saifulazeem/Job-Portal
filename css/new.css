@@ -367,6 +367,12 @@ text-decoration: none;
   .widthabout{
     max-width: 100%;
     width:13rem;
+    word-wrap: break-word;
+   }
+   .widthsp{
+    max-width: 100%;
+    width:12rem;
+    word-wrap: break-word;
    }
 .externalpad{
   margin:0px 20px;
@@ -893,6 +899,12 @@ margin:0px 120px;
   .widthabout{
     max-width: 100%;
     width:19rem;
+    word-wrap: break-word;
+   }
+   .widthsp{
+    max-width: 100%;
+    width:16rem;
+    word-wrap: break-word;
    }
 .externalpad{
   margin:0px 100px;
@@ -1346,6 +1358,12 @@ padding-top: 10px;
   .widthabout{
     max-width: 100%;
     width:24rem;
+    word-wrap: break-word;
+   }
+   .widthsp{
+    max-width: 100%;
+    width:21rem;
+    word-wrap: break-word;
    }
   .limitchar{
     max-width: 28rem;
@@ -1824,7 +1842,13 @@ padding-top: 10px;
 @media (min-width: 576px) {
   .widthabout{
     max-width: 100%;
-    width:30rem;
+    width:19rem;
+    word-wrap: break-word;
+  }
+    .widthsp{
+    max-width: 100%;
+    width:17rem;
+    word-wrap: break-word;
    }
   .limitchar{
     max-width: 18rem;
@@ -2348,6 +2372,18 @@ padding-top: 10px;
   .widthabout{
     max-width: 100%;
     width:27rem;
+    word-wrap: break-word;
+   }
+   .widthsp{
+    max-width: 100%;
+    width:25rem;
+    word-wrap: break-word;
+   }
+   .widthexp{
+    max-width: 100%;
+    width:24rem;
+    text-align: center;
+    word-wrap: break-word;
    }
   .limitchar{
     max-width: 27rem;
@@ -2912,6 +2948,18 @@ table.firhome tr td:nth-child(4) input {
   .widthabout{
     max-width: 100%;
     width:38rem;
+    word-wrap: break-word;
+   }
+   .widthsp{
+    max-width: 100%;
+    width:35rem;
+    word-wrap: break-word;
+   }
+   .widthexp{
+    max-width: 100%;
+    width:27rem;
+    word-wrap: break-word;
+    text-align: left;
    }
   .limitchar{
     max-width: 37rem;
@@ -3452,6 +3500,18 @@ table.firhome tr td:nth-child(4) input {
    .widthabout{
     max-width: 100%;
     width:46rem;
+    word-wrap: break-word;
+   }
+   .widthsp{
+    max-width: 100%;
+    width:40rem;
+    word-wrap: break-word;
+   }
+   .widthexp{
+    max-width: 100%;
+    width:35rem;
+    word-wrap: break-word;
+    text-align: left;
    }
   .limitchar{
     max-width: 45rem;
