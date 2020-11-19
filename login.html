@@ -13,31 +13,6 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/new.css">
-    <style>
-        .custom-control-label:before {
-            background-color: white;
-        }
-
-        .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-            background-color: #0D2942;
-        }
-
-        .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='white' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
-        }
-
-        .custom-control-input:active~.custom-control-label::before {
-            background-color: green;
-        }
-
-        /** focus shadow pinkish **/
-        .custom-checkbox .custom-control-input:focus~.custom-control-label::before {
-            box-shadow: none !important;
-            outline: none !important;
-            border: 1px solid #c2c0c0 !important;
-        }
-
-    </style>
     <script>
         //JavaScript for disabling form submissions if there are invalid fields
         (function () {
@@ -146,7 +121,7 @@
                             </div>
                         </div>
                         <div class="d-flex align-items-start custom-control form-control-lg custom-checkbox m-0 p-0"
-                            style="white-space: nowrap;display:inline ">
+                            style="white-space: nowrap;display:inline">
                             <input type="checkbox" class="custom-control-input" id="remember">
                             <label class="custom-control-label ml-4 reftxtlogin" for="remember"><span>Remember
                                     Me</span></label>

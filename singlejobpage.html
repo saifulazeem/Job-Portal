@@ -48,16 +48,47 @@
                 $('#' + myval).text($('#' + myval).text().substring(0, 62) + '...');
             });
 
-            $(".content").hide();
-            $(".empdivs").hover(function (event) {
-                $(this).find('.content').show();
-                $(this).find('.content').css('position', 'absolute');
-                $('.outerdiv').css('padding-bottom', '450px');
-            }, function (event) {
-                $(this).find('.content').hide();
-                $(this).find('.content').css('position', 'none');
-                $('.outerdiv').css('padding-bottom', '100px');
+            //$(".content").hide();
+            $(".empdivs").click(function () {
+                //alert('click');
+                if ($(this).find('.content').is(':visible')) {
+                    //do nothing\
+                    
+                }
+                else {
+                    //alert('inside');
+                    
+                    $('.activator').show();
+                    $('.content').hide();
+                    $(this).find('.activator').hide();
+                    $(this).find('.content').slideDown('slow');
+                    if ($(this).find(".content").is(':hover')) {
+                        alert('Test');
+                    }
+                }
             });
+
+            $(document).mouseup(function (e) {
+                var container = $(".empdivs");
+                //alert('inside');
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    //alert('innnnnnn');
+                    $('.content').hide();
+                    $('.contentone').show();
+                    $('.activator').show();
+                }
+            });
+            $('.empdivs').hover(function () {
+                //alert('in');
+                if ($(this).find('.activator').is(':visible')) {
+                    //alert('vis');
+                    $(this).find('.contentone').css('border-right', '10px solid #0BB44F');
+                    $(this).find('.contentone').css('cursor', 'pointer');
+                }
+            }, function () {
+                $(this).find('.contentone').css('border-right', 'none');
+            });
+
         });
 
         function checkFormData() {
@@ -85,6 +116,28 @@
         }
 
         .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #4CAF50;
+            border: 6px solid white;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #4CAF50;
+            border: 5px solid white;
+            cursor: pointer;
+        }
+
+        .slider::-ms-range-thumb {
             -webkit-appearance: none;
             appearance: none;
             width: 15px;
@@ -117,42 +170,6 @@
             outline: 0px;
         }
 
-        .slider::-moz-range-thumb {
-            width: 25px;
-            height: 35px;
-            border-radius: 50%;
-            background: #4CAF50;
-            cursor: pointer;
-            margin: -12px 0px 0px 0px;
-        }
-
-        input[type='range']::-moz-range-thumb {
-            background: #333;
-            border-radius: 50%;
-            box-shadow: -1010px 0 0 1000px #666;
-            cursor: pointer;
-            height: 20px;
-            width: 20px;
-            border: 0;
-        }
-
-        input[type="range"]::-moz-range-track {
-            background-color: #ddd;
-        }
-
-        input[type="range"]::-moz-range-progress {
-            background-color: #666;
-            height: 20px
-        }
-
-        input[type="range"]::-ms-fill-upper {
-            background-color: #ddd;
-        }
-
-        input[type="range"]::-ms-fill-lower {
-            background-color: #666;
-        }
-
         output {
             font-size: 12px;
         }
@@ -160,25 +177,27 @@
         .empdivs {
             margin-top: 15px;
             background-color: white;
+            border-radius: 10px;
         }
 
         .empdivs:first-child {
             margin-top: 0px;
         }
 
-        .empdivs:hover {
-            border-right: 10px solid #0BB44F;
-            cursor: pointer;
-        }
-
         .empdivs:hover .content {
             cursor: context-menu;
         }
 
+        .contentone {
+            padding: 20px 30px 7px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
         .content {
             display: none;
-            margin: 15px 15px 15px 0px;
-            position: absolute;
+            margin: 0px 15px 15px 0px;
+            padding: 0px 30px 20px 30px;
         }
 
         .outerdiv {
@@ -194,6 +213,10 @@
 
         .divsli ul li span {
             color: #808080;
+        }
+
+        .form-control {
+            border: 1px solid white;
         }
     </style>
 </head>
@@ -280,7 +303,7 @@
                                     <!---------Second row------------->
                                     <!------------------------FORM------------------------------------->
                                     <form class="form-inline">
-                                        <td class=" p-0" >
+                                        <td class=" p-0">
                                             <input type="text" class="form-control empsearch " id="keywords"
                                                 placeholder="Keywords">
                                         </td>
@@ -426,9 +449,9 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show mt-2" id="collapsemaintitle" data-parent="#myGroup">
                             <div class="row mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk" id="txtone">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val1">
+                                    <label class="custom-control-label subjob " for="val1" id="txtone">
                                         Software Quality Assurance En
                                     </label>
                                 </div>
@@ -438,9 +461,9 @@
                             </div>
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk" id="txttwo">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val2">
+                                    <label class="custom-control-label subjob" for="val2" id="txttwo">
                                         Software Quality Assurance En
                                     </label>
                                 </div>
@@ -451,9 +474,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk" id="txtthree">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val3">
+                                    <label class="subjob custom-control-label" for="val3" id="txtthree">
                                         Software Quality Assurance En
                                     </label>
                                 </div>
@@ -464,9 +487,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk" id="txtfour">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val4">
+                                    <label class="subjob custom-control-label" for="val4" id="txtfour">
                                         Software Quality Assurance En
                                     </label>
                                 </div>
@@ -479,9 +502,9 @@
                             <div class="collapse" id="collapsetitle" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk" id="txtfive">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val5">
+                                        <label class="subjob custom-control-label" for="val5" id="txtfive">
                                             Software Quality Assurance En
                                         </label>
                                     </div>
@@ -492,9 +515,9 @@
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk" id="txtsix">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val6">
+                                        <label class="subjob custom-control-label" for="val6" id="txtsix">
                                             Software Quality Assurance En
                                         </label>
                                     </div>
@@ -518,7 +541,7 @@
                                     </div>
                                 </a>
                             </div>
-                           
+
                         </div>
 
                         <!--------------------------------------------CITY-------------------------------->
@@ -540,9 +563,9 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemaincity" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val11">
+                                    <label class="subjob custom-control-label " for="val11">
                                         Lahore
                                     </label>
                                 </div>
@@ -553,9 +576,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10  custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val12">
+                                    <label class="subjob custom-control-label" for="val12">
                                         Lahore
                                     </label>
                                 </div>
@@ -566,9 +589,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val13">
+                                    <label class="subjob custom-control-label " for="val13">
                                         Lahore
                                     </label>
                                 </div>
@@ -579,9 +602,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val14">
+                                    <label class="subjob custom-control-label " for="val14">
                                         Lahore
                                     </label>
                                 </div>
@@ -594,9 +617,9 @@
                             <div class="collapse" id="collapsecity" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val15">
+                                        <label class="subjob custom-control-label " for="val15">
                                             Lahore
                                         </label>
                                     </div>
@@ -607,9 +630,9 @@
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val16">
+                                        <label class="subjob custom-control-label " for="val16">
                                             Lahore
                                         </label>
                                     </div>
@@ -652,9 +675,9 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemainexp" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val21">
+                                    <label class="subjob custom-control-label " for="val21">
                                         1 Year
                                     </label>
                                 </div>
@@ -664,22 +687,9 @@
                             </div>
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
-                                        1 Year
-                                    </label>
-                                </div>
-                                <div class="col-2 subjob">
-                                    <span>(24)</span>
-                                </div>
-                            </div>
-
-                            <!------------Next Row-->
-                            <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val22">
+                                    <label class="subjob custom-control-label " for="val22">
                                         1 Year
                                     </label>
                                 </div>
@@ -690,9 +700,22 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val23">
+                                    <label class="subjob custom-control-label" for="val23">
+                                        1 Year
+                                    </label>
+                                </div>
+                                <div class="col-2 subjob">
+                                    <span>(24)</span>
+                                </div>
+                            </div>
+
+                            <!------------Next Row-->
+                            <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val24">
+                                    <label class="subjob custom-control-label " for="val24">
                                         1 Year
                                     </label>
                                 </div>
@@ -705,9 +728,9 @@
                             <div class="collapse" id="collapseexp" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val25">
+                                        <label class="subjob custom-control-label " for="val25">
                                             1 Year
                                         </label>
                                     </div>
@@ -718,9 +741,9 @@
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val26">
+                                        <label class="subjob custom-control-label " for="val26">
                                             1 Year
                                         </label>
                                     </div>
@@ -767,9 +790,9 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemaintype" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val31">
+                                    <label class="subjob custom-control-label " for="val31">
                                         Full Time/Permanent
                                     </label>
                                 </div>
@@ -780,9 +803,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val32">
+                                    <label class="subjob custom-control-label " for="val32">
                                         Full Time/Permanent
                                     </label>
                                 </div>
@@ -793,9 +816,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val33">
+                                    <label class="subjob custom-control-label " for="val33">
                                         Full Time/Permanent
                                     </label>
                                 </div>
@@ -806,9 +829,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val34">
+                                    <label class="subjob custom-control-label " for="val34">
                                         Full Time/Permanent
                                     </label>
                                 </div>
@@ -821,9 +844,9 @@
                             <div class="collapse" id="collapsetype" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto " style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val35">
+                                        <label class="subjob  custom-control-label " for="val35">
                                             Full Time/Permanent
                                         </label>
                                     </div>
@@ -834,9 +857,9 @@
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val36">
+                                        <label class="subjob  custom-control-label " for="val36">
                                             Full Time/Permanent
                                         </label>
                                     </div>
@@ -882,9 +905,9 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemainskills" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val41">
+                                    <label class="subjob custom-control-label" for="val41">
                                         Javascript
                                     </label>
                                 </div>
@@ -895,9 +918,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val42">
+                                    <label class="subjob custom-control-label " for="val42">
                                         Javascript
                                     </label>
                                 </div>
@@ -908,9 +931,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val43">
+                                    <label class="subjob custom-control-label " for="val43">
                                         Javascript
                                     </label>
                                 </div>
@@ -921,9 +944,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val44">
+                                    <label class="subjob custom-control-label " for="val44">
                                         Javascript
                                     </label>
                                 </div>
@@ -936,9 +959,9 @@
                             <div class="collapse" id="collapseskills" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val45">
+                                        <label class="subjob custom-control-label " for="val45">
                                             Javascript
                                         </label>
                                     </div>
@@ -949,9 +972,9 @@
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val46">
+                                        <label class="subjob custom-control-label" for="val46">
                                             Javascript
                                         </label>
                                     </div>
@@ -996,9 +1019,9 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemainind" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk" id="txt2one">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val51">
+                                    <label class="subjob custom-control-label" for="val51" id="txt2one">
                                         Information Technology
                                     </label>
                                 </div>
@@ -1009,9 +1032,10 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk" id="txt2two">
+                                <div
+                                    class="col-10 custom-control custom-checkbox custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val52">
+                                    <label class="subjob custom-control-label" for="val52" id="txt2two">
                                         Information Technology
                                     </label>
                                 </div>
@@ -1022,9 +1046,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk" id="txt2three">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val53">
+                                    <label class="subjob custom-control-label" for="val53" id="txt2three">
                                         Information Technology
                                     </label>
                                 </div>
@@ -1035,9 +1059,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk" id="txt2four">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val54">
+                                    <label class="subjob custom-control-label" for="val54" id="txt2four">
                                         Information Technology
                                     </label>
                                 </div>
@@ -1050,9 +1074,9 @@
                             <div class="collapse" id="collapseind" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto bg" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk" id="txt2five">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val55">
+                                        <label class="subjob custom-control-label" for="val55" id="txt2five">
                                             Information Technology
                                         </label>
                                     </div>
@@ -1063,9 +1087,9 @@
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk" id="txt2six">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val56">
+                                        <label class="subjob custom-control-label" for="val56" id="txt2six">
                                             Information Technology
                                         </label>
                                     </div>
@@ -1109,9 +1133,9 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemaingend" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10  custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val61">
+                                    <label class="subjob custom-control-label" for="val61">
                                         Male
                                     </label>
                                 </div>
@@ -1121,9 +1145,9 @@
                             </div>
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val62">
+                                    <label class="subjob custom-control-label" for="val62">
                                         Male
                                     </label>
                                 </div>
@@ -1136,9 +1160,9 @@
                             <div class="collapse" id="collapsegend" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val63">
+                                        <label class="subjob custom-control-label" for="val63">
                                             Male
                                         </label>
                                     </div>
@@ -1149,9 +1173,9 @@
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val64">
+                                        <label class="subjob custom-control-label" for="val64">
                                             Male
                                         </label>
                                     </div>
@@ -1196,9 +1220,9 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemainarea" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob" for="chk" id="txt3one">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val71">
+                                    <label class="subjob custom-control-label" for="val71" id="txt3one">
                                         Software & Web Development
                                     </label>
                                 </div>
@@ -1208,22 +1232,9 @@
                             </div>
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk" id="txt3two">
-                                        Software & Web Development
-                                    </label>
-                                </div>
-                                <div class="col-2 subjob">
-                                    <span>(24)</span>
-                                </div>
-                            </div>
-
-                            <!------------Next Row-->
-                            <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk" id="txt3three">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val72">
+                                    <label class="subjob custom-control-label" for="val72" id="txt3two">
                                         Software & Web Development
                                     </label>
                                 </div>
@@ -1234,9 +1245,22 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk" id="txt3four">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val73">
+                                    <label class="subjob custom-control-label" for="val73" id="txt3three">
+                                        Software & Web Development
+                                    </label>
+                                </div>
+                                <div class="col-2 subjob">
+                                    <span>(24)</span>
+                                </div>
+                            </div>
+
+                            <!------------Next Row-->
+                            <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val74">
+                                    <label class="subjob custom-control-label" for="val74" id="txt3four">
                                         Software & Web Development
                                     </label>
                                 </div>
@@ -1249,9 +1273,9 @@
                             <div class="collapse" id="collapsearea" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk" id="txt3five">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val75">
+                                        <label class="subjob custom-control-label" for="val75" id="txt3five">
                                             Software & Web Development
                                         </label>
                                     </div>
@@ -1262,9 +1286,9 @@
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob" for="chk" id="txt3six">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val76">
+                                        <label class="subjob custom-control-label" for="val76" id="txt3six">
                                             Software & Web Development
                                         </label>
                                     </div>
@@ -1308,9 +1332,9 @@
                         <!------------Next Row-->
                         <div class="collapse panel-collapse show" id="collapsemaincomp" data-parent="#myGroup">
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val81">
+                                    <label class="subjob custom-control-label" for="val81">
                                         Contour Software
                                     </label>
                                 </div>
@@ -1321,9 +1345,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val82">
+                                    <label class="subjob custom-control-label" for="val82">
                                         Contour Software
                                     </label>
                                 </div>
@@ -1334,9 +1358,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val83">
+                                    <label class="subjob custom-control-label" for="val83">
                                         Contour Software
                                     </label>
                                 </div>
@@ -1347,9 +1371,9 @@
 
                             <!------------Next Row-->
                             <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                <div class="col-10 d-flex justify-content-start">
-                                    <input type="checkbox" class="form-check-input" id="chk">
-                                    <label class="subjob " for="chk">
+                                <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                    <input type="checkbox" class="form-check-input custom-control-input" id="val84">
+                                    <label class="subjob custom-control-label" for="val84">
                                         Contour Software
                                     </label>
                                 </div>
@@ -1362,9 +1386,9 @@
                             <div class="collapse" id="collapsecomp" data-parent="#myGroup">
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val85">
+                                        <label class="subjob  custom-control-label" for="val85">
                                             Contour Software
                                         </label>
                                     </div>
@@ -1375,9 +1399,9 @@
 
                                 <!------------Next Row-->
                                 <div class="row  mt-0 jtitle mx-auto" style="font-size: 10px;">
-                                    <div class="col-10 d-flex justify-content-start">
-                                        <input type="checkbox" class="form-check-input" id="chk">
-                                        <label class="subjob " for="chk">
+                                    <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
+                                        <input type="checkbox" class="form-check-input custom-control-input" id="val86">
+                                        <label class="subjob  custom-control-label" for="val86">
                                             Contour Software
                                         </label>
                                     </div>
@@ -1422,53 +1446,52 @@
                 <!------------------------------------------Center----------------------------------------------------->
                 <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 divsli mt-4 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-0">
                     <!-------first div-->
-                    <div class="roun empdivs" style="border-radius: 10px;">
-                        <div class="activator" style="padding:20px 40px; ">
+                    <div class="roun empdivs">
+                        <div class="contentone">
                             <div class="row ">
-                                <span class="main1">Senior Software Quality Assurance Engineer</span>
+                                <span class="main1">First Senior Software Quality Assurance Engineer</span>
                             </div>
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
+                                <img src="img/locgrey.png" class="d-inline mr-2">
                                 <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
                             </div>
-                            <div class="row txtdescjob mt-2">
-                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry exp)
-                            </div>
-                            <div class="row txtdescjob">
-                                Responsibilities: Provide comprehensive an..
-                            </div>
-                            <div class="row">
-                                <div class="d-inline">
-                                    <img src="img/date.png" class="">
-                                    <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                            <!--div to be hidden on click-->
+                            <div class="activator">
+                                <div class="row txtdescjob mt-2">
+                                    Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry
+                                    exp)
                                 </div>
-                                <div class="d-inline mx-5">
-                                    <img src="img/yrs.png">
-                                    <span class="d-inline subtxtdescjob">3 Years</span>
+                                <div class="row txtdescjob">
+                                    Responsibilities: Provide comprehensive an..
+                                </div>
+                                <div class="row">
+                                    <div class="d-inline">
+                                        <img src="img/date.png" class="">
+                                        <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                    </div>
+                                    <div class="d-inline mx-5">
+                                        <img src="img/yrs.png">
+                                        <span class="d-inline subtxtdescjob">3 Years</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--------display div on hover-->
-                        <div class="row roun content bg-white" style="border-radius: 10px; padding:20px 30px;">
-                            <div class="row ">
-                                <span class="main1" style="color: #0BB44F;">Senior Software Quality Assurance
-                                    Engineer</span>
-                            </div>
+                        <!--------display div on click-->
+                        <div class="row content bg-white">
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
-                                <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
-                            </div>
-                            <div class="row text-left mt-1">
-                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to View
+                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to
+                                    View
                                     Salary</a>
                             </div>
-                            <div class="d-flex ">
+                            <div class="row col-12">
                                 <!--buttons-->
-                                <div class="d-inline mt-3">
-                                    <button type="submit" class="btn text-white btnjob1">Apply</button>
-                                </div>
-                                <div class="d-inline mt-3 ml-2">
-                                    <button type="button" class="btn text-white btnjob2">Save</button>
+                                <div class="row d-flex justify-content-start align-items-start">
+                                    <div class="d-inline mt-3">
+                                        <button type="button" class="btn text-white btnjob1">Apply</button>
+                                    </div>
+                                    <div class="d-inline mt-3 ml-2">
+                                        <button type="button" class="btn text-white btnjob2">Save</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -1642,53 +1665,52 @@
                     </div>
 
                     <!-------second div-->
-                    <div class="roun empdivs" style="border-radius: 10px;">
-                        <div class="activator" style="padding:20px 40px; ">
+                    <div class="roun empdivs">
+                        <div class="contentone">
                             <div class="row ">
-                                <span class="main1">Senior Software Quality Assurance Engineer</span>
+                                <span class="main1">First Senior Software Quality Assurance Engineer</span>
                             </div>
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
+                                <img src="img/locgrey.png" class="d-inline mr-2">
                                 <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
                             </div>
-                            <div class="row txtdescjob mt-2">
-                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry exp)
-                            </div>
-                            <div class="row txtdescjob">
-                                Responsibilities: Provide comprehensive an..
-                            </div>
-                            <div class="row">
-                                <div class="d-inline">
-                                    <img src="img/date.png" class="">
-                                    <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                            <!--div to be hidden on click-->
+                            <div class="activator">
+                                <div class="row txtdescjob mt-2">
+                                    Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry
+                                    exp)
                                 </div>
-                                <div class="d-inline mx-5">
-                                    <img src="img/yrs.png">
-                                    <span class="d-inline subtxtdescjob">3 Years</span>
+                                <div class="row txtdescjob">
+                                    Responsibilities: Provide comprehensive an..
+                                </div>
+                                <div class="row">
+                                    <div class="d-inline">
+                                        <img src="img/date.png" class="">
+                                        <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                    </div>
+                                    <div class="d-inline mx-5">
+                                        <img src="img/yrs.png">
+                                        <span class="d-inline subtxtdescjob">3 Years</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--------display div on hover-->
-                        <div class="row roun content bg-white" style="border-radius: 10px; padding:20px 30px;">
-                            <div class="row ">
-                                <span class="main1" style="color: #0BB44F;">Senior Software Quality Assurance
-                                    Engineer</span>
-                            </div>
+                        <!--------display div on click-->
+                        <div class="row content bg-white">
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
-                                <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
-                            </div>
-                            <div class="row text-left mt-1">
-                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to View
+                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to
+                                    View
                                     Salary</a>
                             </div>
-                            <div class="d-flex ">
+                            <div class="row col-12">
                                 <!--buttons-->
-                                <div class="d-inline mt-3">
-                                    <button type="submit" class="btn text-white btnjob1">Apply</button>
-                                </div>
-                                <div class="d-inline mt-3 ml-2">
-                                    <button type="button" class="btn text-white btnjob2">Save</button>
+                                <div class="row d-flex justify-content-start align-items-start">
+                                    <div class="d-inline mt-3">
+                                        <button type="submit" class="btn text-white btnjob1">Apply</button>
+                                    </div>
+                                    <div class="d-inline mt-3 ml-2">
+                                        <button type="button" class="btn text-white btnjob2">Save</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -1862,53 +1884,52 @@
                     </div>
 
                     <!-------third div-->
-                    <div class="roun empdivs" style="border-radius: 10px;">
-                        <div class="activator" style="padding:20px 40px; ">
+                    <div class="roun empdivs">
+                        <div class="contentone">
                             <div class="row ">
-                                <span class="main1">Senior Software Quality Assurance Engineer</span>
+                                <span class="main1">First Senior Software Quality Assurance Engineer</span>
                             </div>
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
+                                <img src="img/locgrey.png" class="d-inline mr-2">
                                 <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
                             </div>
-                            <div class="row txtdescjob mt-2">
-                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry exp)
-                            </div>
-                            <div class="row txtdescjob">
-                                Responsibilities: Provide comprehensive an..
-                            </div>
-                            <div class="row">
-                                <div class="d-inline">
-                                    <img src="img/date.png" class="">
-                                    <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                            <!--div to be hidden on click-->
+                            <div class="activator">
+                                <div class="row txtdescjob mt-2">
+                                    Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry
+                                    exp)
                                 </div>
-                                <div class="d-inline mx-5">
-                                    <img src="img/yrs.png">
-                                    <span class="d-inline subtxtdescjob">3 Years</span>
+                                <div class="row txtdescjob">
+                                    Responsibilities: Provide comprehensive an..
+                                </div>
+                                <div class="row">
+                                    <div class="d-inline">
+                                        <img src="img/date.png" class="">
+                                        <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                    </div>
+                                    <div class="d-inline mx-5">
+                                        <img src="img/yrs.png">
+                                        <span class="d-inline subtxtdescjob">3 Years</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--------display div on hover-->
-                        <div class="row roun content bg-white" style="border-radius: 10px; padding:20px 30px;">
-                            <div class="row ">
-                                <span class="main1" style="color: #0BB44F;">Senior Software Quality Assurance
-                                    Engineer</span>
-                            </div>
+                        <!--------display div on click-->
+                        <div class="row content bg-white">
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
-                                <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
-                            </div>
-                            <div class="row text-left mt-1">
-                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to View
+                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to
+                                    View
                                     Salary</a>
                             </div>
-                            <div class="d-flex ">
+                            <div class="row col-12">
                                 <!--buttons-->
-                                <div class="d-inline mt-3">
-                                    <button type="submit" class="btn text-white btnjob1">Apply</button>
-                                </div>
-                                <div class="d-inline mt-3 ml-2">
-                                    <button type="button" class="btn text-white btnjob2">Save</button>
+                                <div class="row d-flex justify-content-start align-items-start">
+                                    <div class="d-inline mt-3">
+                                        <button type="submit" class="btn text-white btnjob1">Apply</button>
+                                    </div>
+                                    <div class="d-inline mt-3 ml-2">
+                                        <button type="button" class="btn text-white btnjob2">Save</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -2082,53 +2103,52 @@
                     </div>
 
                     <!-------fourth div-->
-                    <div class="roun empdivs" style="border-radius: 10px;">
-                        <div class="activator" style="padding:20px 40px; ">
+                    <div class="roun empdivs">
+                        <div class="contentone">
                             <div class="row ">
-                                <span class="main1">Senior Software Quality Assurance Engineer</span>
+                                <span class="main1">First Senior Software Quality Assurance Engineer</span>
                             </div>
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
+                                <img src="img/locgrey.png" class="d-inline mr-2">
                                 <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
                             </div>
-                            <div class="row txtdescjob mt-2">
-                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry exp)
-                            </div>
-                            <div class="row txtdescjob">
-                                Responsibilities: Provide comprehensive an..
-                            </div>
-                            <div class="row">
-                                <div class="d-inline">
-                                    <img src="img/date.png" class="">
-                                    <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                            <!--div to be hidden on click-->
+                            <div class="activator">
+                                <div class="row txtdescjob mt-2">
+                                    Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry
+                                    exp)
                                 </div>
-                                <div class="d-inline mx-5">
-                                    <img src="img/yrs.png">
-                                    <span class="d-inline subtxtdescjob">3 Years</span>
+                                <div class="row txtdescjob">
+                                    Responsibilities: Provide comprehensive an..
+                                </div>
+                                <div class="row">
+                                    <div class="d-inline">
+                                        <img src="img/date.png" class="">
+                                        <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                    </div>
+                                    <div class="d-inline mx-5">
+                                        <img src="img/yrs.png">
+                                        <span class="d-inline subtxtdescjob">3 Years</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--------display div on hover-->
-                        <div class="row roun content bg-white" style="border-radius: 10px; padding:20px 30px;">
-                            <div class="row ">
-                                <span class="main1" style="color: #0BB44F;">Senior Software Quality Assurance
-                                    Engineer</span>
-                            </div>
+                        <!--------display div on click-->
+                        <div class="row content bg-white">
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
-                                <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
-                            </div>
-                            <div class="row text-left mt-1">
-                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to View
+                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to
+                                    View
                                     Salary</a>
                             </div>
-                            <div class="d-flex ">
+                            <div class="row col-12">
                                 <!--buttons-->
-                                <div class="d-inline mt-3">
-                                    <button type="submit" class="btn text-white btnjob1">Apply</button>
-                                </div>
-                                <div class="d-inline mt-3 ml-2">
-                                    <button type="button" class="btn text-white btnjob2">Save</button>
+                                <div class="row d-flex justify-content-start align-items-start">
+                                    <div class="d-inline mt-3">
+                                        <button type="submit" class="btn text-white btnjob1">Apply</button>
+                                    </div>
+                                    <div class="d-inline mt-3 ml-2">
+                                        <button type="button" class="btn text-white btnjob2">Save</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -2302,53 +2322,52 @@
                     </div>
 
                     <!-------fifth div-->
-                    <div class="roun empdivs" style="border-radius: 10px;">
-                        <div class="activator" style="padding:20px 40px; ">
+                    <div class="roun empdivs">
+                        <div class="contentone">
                             <div class="row ">
-                                <span class="main1">Senior Software Quality Assurance Engineer</span>
+                                <span class="main1">First Senior Software Quality Assurance Engineer</span>
                             </div>
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
+                                <img src="img/locgrey.png" class="d-inline mr-2">
                                 <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
                             </div>
-                            <div class="row txtdescjob mt-2">
-                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry exp)
-                            </div>
-                            <div class="row txtdescjob">
-                                Responsibilities: Provide comprehensive an..
-                            </div>
-                            <div class="row">
-                                <div class="d-inline">
-                                    <img src="img/date.png" class="">
-                                    <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                            <!--div to be hidden on click-->
+                            <div class="activator">
+                                <div class="row txtdescjob mt-2">
+                                    Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry
+                                    exp)
                                 </div>
-                                <div class="d-inline mx-5">
-                                    <img src="img/yrs.png">
-                                    <span class="d-inline subtxtdescjob">3 Years</span>
+                                <div class="row txtdescjob">
+                                    Responsibilities: Provide comprehensive an..
+                                </div>
+                                <div class="row">
+                                    <div class="d-inline">
+                                        <img src="img/date.png" class="">
+                                        <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                    </div>
+                                    <div class="d-inline mx-5">
+                                        <img src="img/yrs.png">
+                                        <span class="d-inline subtxtdescjob">3 Years</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--------display div on hover-->
-                        <div class="row roun content content2 bg-white" style="border-radius: 10px; padding:20px 30px;">
-                            <div class="row ">
-                                <span class="main1" style="color: #0BB44F;">Senior Software Quality Assurance
-                                    Engineer</span>
-                            </div>
+                        <!--------display div on click-->
+                        <div class="row content bg-white">
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
-                                <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
-                            </div>
-                            <div class="row text-left mt-1">
-                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to View
+                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to
+                                    View
                                     Salary</a>
                             </div>
-                            <div class="d-flex ">
+                            <div class="row col-12">
                                 <!--buttons-->
-                                <div class="d-inline mt-3">
-                                    <button type="submit" class="btn text-white btnjob1">Apply</button>
-                                </div>
-                                <div class="d-inline mt-3 ml-2">
-                                    <button type="button" class="btn text-white btnjob2">Save</button>
+                                <div class="row d-flex justify-content-start align-items-start">
+                                    <div class="d-inline mt-3">
+                                        <button type="submit" class="btn text-white btnjob1">Apply</button>
+                                    </div>
+                                    <div class="d-inline mt-3 ml-2">
+                                        <button type="button" class="btn text-white btnjob2">Save</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -2522,53 +2541,52 @@
                     </div>
 
                     <!-------sixth div-->
-                    <div class="roun empdivs" style="border-radius: 10px;">
-                        <div class="activator" style="padding:20px 40px; ">
+                    <div class="roun empdivs">
+                        <div class="contentone">
                             <div class="row ">
-                                <span class="main1">Senior Software Quality Assurance Engineer</span>
+                                <span class="main1">First Senior Software Quality Assurance Engineer</span>
                             </div>
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
+                                <img src="img/locgrey.png" class="d-inline mr-2">
                                 <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
                             </div>
-                            <div class="row txtdescjob mt-2">
-                                Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry exp)
-                            </div>
-                            <div class="row txtdescjob">
-                                Responsibilities: Provide comprehensive an..
-                            </div>
-                            <div class="row">
-                                <div class="d-inline">
-                                    <img src="img/date.png" class="">
-                                    <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                            <!--div to be hidden on click-->
+                            <div class="activator">
+                                <div class="row txtdescjob mt-2">
+                                    Position Title: Mid-Senior Software Quality Assurance Engineer (3+ years industry
+                                    exp)
                                 </div>
-                                <div class="d-inline mx-5">
-                                    <img src="img/yrs.png">
-                                    <span class="d-inline subtxtdescjob">3 Years</span>
+                                <div class="row txtdescjob">
+                                    Responsibilities: Provide comprehensive an..
+                                </div>
+                                <div class="row">
+                                    <div class="d-inline">
+                                        <img src="img/date.png" class="">
+                                        <span class="d-inline subtxtdescjob">Sep 04, 2020</span>
+                                    </div>
+                                    <div class="d-inline mx-5">
+                                        <img src="img/yrs.png">
+                                        <span class="d-inline subtxtdescjob">3 Years</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!--------display div on hover-->
-                        <div class="row roun content content2 bg-white" style="border-radius: 10px; padding:20px 30px;">
-                            <div class="row ">
-                                <span class="main1" style="color: #0BB44F;">Senior Software Quality Assurance
-                                    Engineer</span>
-                            </div>
+                        <!--------display div on click-->
+                        <div class="row content bg-white">
                             <div class="row">
-                                <img src="img/locgrey.png" class="d-inline mr-3">
-                                <span class="d-inline txtsubemp">Innostark Technologies, Lahore, Pakistan</span>
-                            </div>
-                            <div class="row text-left mt-1">
-                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to View
+                                <a href="login.html" class="txtpl" style="text-decoration: none;">Please Login to
+                                    View
                                     Salary</a>
                             </div>
-                            <div class="d-flex ">
+                            <div class="row col-12">
                                 <!--buttons-->
-                                <div class="d-inline mt-3">
-                                    <button type="submit" class="btn text-white btnjob1">Apply</button>
-                                </div>
-                                <div class="d-inline mt-3 ml-2">
-                                    <button type="button" class="btn text-white btnjob2">Save</button>
+                                <div class="row d-flex justify-content-start align-items-start">
+                                    <div class="d-inline mt-3">
+                                        <button type="submit" class="btn text-white btnjob1">Apply</button>
+                                    </div>
+                                    <div class="d-inline mt-3 ml-2">
+                                        <button type="button" class="btn text-white btnjob2">Save</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -2740,6 +2758,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <!------------------------------------------Side bar right---------------------------------------------->
@@ -2749,7 +2768,6 @@
                     <div class="row my-auto mx-auto d-flex justify-content-center jalert" style="padding-top:30px;">
                         Create Job Alert
                     </div>
-
 
                     <div class="row my-2 mx-2">
                         <div class="col-lg-12">

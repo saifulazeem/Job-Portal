@@ -364,22 +364,7 @@ text-decoration: none;
 }
 /***********************************************************************************************************************/
 @media (min-width: 300px) {
-  .widthabout{
-    max-width: 100%;
-    width:13rem;
-    word-wrap: break-word;
-   }
-   .widthsp{
-    max-width: 100%;
-    width:12rem;
-    word-wrap: break-word;
-   }
-   .widthexp{
-    max-width: 100%;
-    width:14rem;
-    text-align: center;
-    word-wrap: break-word;
-   }
+
 .externalpad{
   margin:0px 20px;
   left: 0px;
@@ -902,22 +887,6 @@ margin:0px 120px;
 }
  /***********************************************************************************************************************/
 @media (min-width: 400px) {
-  .widthabout{
-    max-width: 100%;
-    width:19rem;
-    word-wrap: break-word;
-   }
-   .widthsp{
-    max-width: 100%;
-    width:16rem;
-    word-wrap: break-word;
-   }
-   .widthexp{
-    max-width: 100%;
-    width:19rem;
-    text-align: center;
-    word-wrap: break-word;
-   }
 .externalpad{
   margin:0px 100px;
   left: 30px;
@@ -1367,22 +1336,6 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 500px) {
-  .widthabout{
-    max-width: 100%;
-    width:24rem;
-    word-wrap: break-word;
-   }
-   .widthsp{
-    max-width: 100%;
-    width:21rem;
-    word-wrap: break-word;
-   }
-   .widthexp{
-    max-width: 100%;
-    width:24rem;
-    text-align: center;
-    word-wrap: break-word;
-   }
   .limitchar{
     max-width: 28rem;
 }
@@ -1858,22 +1811,6 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
-  .widthabout{
-    max-width: 100%;
-    width:27rem;
-    word-wrap: break-word;
-  }
-    .widthsp{
-    max-width: 100%;
-    width:17rem;
-    word-wrap: break-word;
-   }
-   .widthexp{
-    max-width: 100%;
-    width:24rem;
-    text-align: center;
-    word-wrap: break-word;
-   }
   .limitchar{
     max-width: 18rem;
 }
@@ -2393,22 +2330,6 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 768px) {
-  .widthabout{
-    max-width: 100%;
-    width:27rem;
-    word-wrap: break-word;
-   }
-   .widthsp{
-    max-width: 100%;
-    width:25rem;
-    word-wrap: break-word;
-   }
-   .widthexp{
-    max-width: 100%;
-    width:27rem;
-    text-align: center;
-    word-wrap: break-word;
-   }
   .limitchar{
     max-width: 27rem;
 }
@@ -2969,22 +2890,6 @@ table.firhome tr td:nth-child(4) input {
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
-  .widthabout{
-    max-width: 100%;
-    width:38rem;
-    word-wrap: break-word;
-   }
-   .widthsp{
-    max-width: 100%;
-    width:35rem;
-    word-wrap: break-word;
-   }
-   .widthexp{
-    max-width: 100%;
-    width:27rem;
-    word-wrap: break-word;
-    text-align: left;
-   }
   .limitchar{
     max-width: 37rem;
 }
@@ -3521,22 +3426,6 @@ table.firhome tr td:nth-child(4) input {
  }
 /***********************************************************************************************************************/
  @media (min-width: 1200px) {
-   .widthabout{
-    max-width: 100%;
-    width:46rem;
-    word-wrap: break-word;
-   }
-   .widthsp{
-    max-width: 100%;
-    width:40rem;
-    word-wrap: break-word;
-   }
-   .widthexp{
-    max-width: 100%;
-    width:35rem;
-    word-wrap: break-word;
-    text-align: left;
-   }
   .limitchar{
     max-width: 45rem;
 }
@@ -4849,4 +4738,27 @@ div[contenteditable='false'], .txtdash input, .dashtxt1 input, .dashtxt2 input{
 border: 1px solid transparent;
 background-color: transparent;
 border-radius: 2px;
+}
+/*custom checkbox*/
+.custom-control-label:before {
+  background-color: white;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+  background-color: #0D2942;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='white' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+  box-shadow: none !important;
+  outline: none !important;
+  border: 1px solid #c2c0c0 !important;
+  border-radius: 5px;
+}
+
+/** focus shadow **/
+.custom-checkbox .custom-control-input:focus~.custom-control-label::before {
+  box-shadow: none !important;
+  outline: none !important;
+  border: 1px solid #c2c0c0 !important;
 }
