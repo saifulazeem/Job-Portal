@@ -62,9 +62,6 @@
                     $('.content').hide();
                     $(this).find('.activator').hide();
                     $(this).find('.content').slideDown('slow');
-                    if ($(this).find(".content").is(':hover')) {
-                        alert('Test');
-                    }
                 }
             });
 
@@ -79,14 +76,16 @@
                 }
             });
 
-            $(document).mousemove(function (e) {
+            $(".empdivs").mousemove(function (e) {
                 //alert('inside');
-                if ($(".empdivs:hover").length != 0) {
-                    //alert('innnnnnn');
-                    if ($('.activator').is(':hidden')) {
-                        //alert('hhhhhhhhhhhhhhhhhh');
-                        $(this).find('.contentone').css('border-right', 'none');
-                    }
+                if ($(this).find('.activator').is(':hidden')) {
+                    //alert('hhhhhhhhhhhhhhhhhh');
+                    $(this).find('.contentone').css('border-right', 'none');
+                }
+                else {
+                    //alert('content');
+                    $(this).not().find('.contentone').css('border-right', '10px solid #0BB44F');
+
                 }
             });
 
@@ -101,7 +100,14 @@
                 $(this).find('.contentone').css('border-right', 'none');
             });
 
+            $('a').click(function () {
+                $(this).find('.arrow').toggleClass('flip');
+            });
 
+            $('.collapsedivs').click(function () {
+                //alert($(this).closest('a').find('.arrow')==true);
+                $(this).closest('a').find('.arrow').toggleClass('flip');
+            });
         });
 
         function checkFormData() {
@@ -112,6 +118,17 @@
         }
     </script>
     <style>
+        .dropdown-toggle,
+        .arrow {
+            -moz-transition: transform 0.2s;
+            -webkit-transition: transform 0.2s;
+            transition: transform 0.2s;
+        }
+
+        .flip {
+            transform: rotate(-180deg);
+        }
+
         table.fir tr:nth-child(2) {
             box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
             border-radius: 9px;
@@ -228,8 +245,16 @@
             color: #808080;
         }
 
-        .form-control {
+        .form-control,
+        .form-control:focus {
             border: 1px solid white;
+        }
+
+        .e:focus,
+        .e {
+            box-shadow: none !important;
+            outline: none !important;
+            border: 0;
         }
     </style>
 </head>
@@ -317,15 +342,15 @@
                                     <!------------------------FORM------------------------------------->
                                     <form class="form-inline">
                                         <td class=" p-0">
-                                            <input type="text" class="form-control empsearch " id="keywords"
+                                            <input type="text" class="form-control empsearch e" id="keywords"
                                                 placeholder="Keywords">
                                         </td>
                                         <td class=" p-0">
-                                            <input type="text" class="form-control empsearch" id="location"
+                                            <input type="text" class="form-control empsearch e" id="location"
                                                 placeholder="Location">
                                         </td>
                                         <td class="buttonIn w-100 p-0">
-                                            <input type="text" class="form-control empsearch" id="categories"
+                                            <input type="text" class="form-control empsearch e" id="categories"
                                                 placeholder="All Categories">
                                             <button id="empsearchbtn" class="btn btn-success homebtn">
                                                 <span class="search">Search</span>
@@ -363,8 +388,8 @@
                                     </tr>
                                     <tr>
                                         <td class=" p-0 ">
-                                            <input type="text" class="form-control empsearch w-100" id="keywords"
-                                                placeholder="Keywords">
+                                            <input type="text" class="form-control empsearch w-100 featshad"
+                                                id="keywords" placeholder="Keywords">
                                         </td>
                                     </tr>
                                     <tr>
@@ -375,8 +400,8 @@
                                     </tr>
                                     <tr>
                                         <td class=" p-0">
-                                            <input type="text" class="form-control empsearch  w-100" id="location"
-                                                placeholder="Location">
+                                            <input type="text" class="form-control empsearch  w-100 featshad"
+                                                id="location" placeholder="Location">
                                         </td>
                                     </tr>
                                     <tr>
@@ -387,26 +412,29 @@
                                     </tr>
                                     <tr>
                                         <td class="p-0">
-                                            <input type="text" class="form-control empsearch w-100" id="categories"
-                                                placeholder="All Categories">
+                                            <input type="text" class="form-control empsearch w-100 featshad"
+                                                id="categories" placeholder="All Categories">
                                         </td>
                                     </tr>
                                     <tr>
                                         <!--------Third row------------->
-                                        <td colspan="3" class="text-dark">
-                                            <span class="float-left">Need more search options?<a href="#"
-                                                    class="advancesearch" style="text-decoration: none;">&nbsp;ADVANCE
-                                                    SEARCH</a></span>
+                                        <td class="text-dark">
+                                            <div class="d-flex align-items-center">
+                                                <span class="text-center">Need more search options?<a href="#"
+                                                        class="advancesearch text-center"
+                                                        style="text-decoration: none;">&nbsp;ADVANCE
+                                                        SEARCH</a></span>
+                                            </div>
                                         </td>
-                                        <td></td>
-                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <button class="btn btn-success homebt mt-1">
-                                                <span class="search">Search</span>
-                                                <img src="img/search.png" class="img-fluid imgsearch">
-                                            </button>
+                                            <div class="text-center text-sm-left">
+                                                <button class="btn btn-success homebt mt-1">
+                                                    <span class="search">Search</span>
+                                                    <img src="img/search.png" class="img-fluid imgsearch">
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -442,7 +470,9 @@
                                 <div class="d-inline "><span style="font-size: 12px;">- 1,000,000+</span></div>
                             </div>
                         </div>
-
+<!-- style="
+                                    white-space: nowrap;display: inline-block;text-overflow: ellipsis;overflow: hidden;
+                                    width: 100%;"-->
                         <!--------------------------------------------JOB TITLE-------------------------------->
                         <div class="row d-flex justify-content-between mx-0 mt-5 mb-3"
                             style="border-bottom: 1px solid #707070;">
@@ -539,13 +569,14 @@
                                     </div>
                                 </div>
                             </div>
+
                             <!------------Next Row-->
 
                             <!---------------------------------SHOW MORE---------------------------------->
                             <div class="row" style="font-size: 12px;">
                                 <a href="" data-toggle="collapse" data-target="#collapsetitle" aria-expanded="false"
                                     aria-controls="collapsetitle" style="text-decoration: none;">
-                                    <div class="d-flex flex-row divshm ml-2">
+                                    <div class="d-flex flex-row divshm ml-3">
                                         <img src="img/addgreen.png" class="img-fluid">
                                         <span class="showmore dispshm d-flex align-items-end mx-1 mb-1"
                                             style="font-size: 16px;text-decoration:none;">
@@ -554,7 +585,6 @@
                                     </div>
                                 </a>
                             </div>
-
                         </div>
 
                         <!--------------------------------------------CITY-------------------------------->
@@ -659,7 +689,7 @@
                             <div class="row" style="font-size: 12px;">
                                 <a href="" data-toggle="collapse" data-target="#collapsecity" aria-expanded="false"
                                     aria-controls="collapsecity" style="text-decoration: none;">
-                                    <div class="d-flex flex-row divshm ml-2">
+                                    <div class="d-flex flex-row divshm ml-3">
                                         <img src="img/addgreen.png" class="img-fluid">
                                         <span class="showmore dispshm d-flex align-items-end mx-1 mb-1"
                                             style="font-size: 16px;text-decoration:none;">
@@ -772,7 +802,7 @@
                             <div class="row" style="font-size: 12px;">
                                 <a href="" data-toggle="collapse" data-target="#collapseexp" aria-expanded="false"
                                     aria-controls="collapseexp" style="text-decoration: none;">
-                                    <div class="d-flex flex-row divshm ml-2">
+                                    <div class="d-flex flex-row divshm ml-3">
                                         <img src="img/addgreen.png" class="img-fluid">
                                         <span class="showmore dispshm d-flex align-items-end mx-1 mb-1"
                                             style="font-size: 16px;text-decoration:none;">
@@ -887,7 +917,7 @@
                             <div class="row" style="font-size: 12px;">
                                 <a href="" data-toggle="collapse" data-target="#collapsetype" aria-expanded="false"
                                     aria-controls="collapsetype" style="text-decoration: none;">
-                                    <div class="d-flex flex-row divshm ml-2">
+                                    <div class="d-flex flex-row divshm ml-3">
                                         <img src="img/addgreen.png" class="img-fluid">
                                         <span class="showmore dispshm d-flex align-items-end mx-1 mb-1"
                                             style="font-size: 16px;text-decoration:none;">
@@ -1002,7 +1032,7 @@
                             <div class="row" style="font-size: 12px;">
                                 <a href="" data-toggle="collapse" data-target="#collapseskills" aria-expanded="false"
                                     aria-controls="collapseskills" style="text-decoration: none;">
-                                    <div class="d-flex flex-row divshm ml-2">
+                                    <div class="d-flex flex-row divshm ml-3">
                                         <img src="img/addgreen.png" class="img-fluid ">
                                         <span class="showmore dispshm d-flex align-items-end mx-1 mb-1"
                                             style="font-size: 16px;text-decoration:none;">
@@ -1116,7 +1146,7 @@
                             <div class="row" style="font-size: 12px;">
                                 <a href="" data-toggle="collapse" data-target="#collapseind" aria-expanded="false"
                                     aria-controls="collapseind" style="text-decoration: none;">
-                                    <div class="d-flex flex-row divshm ml-2">
+                                    <div class="d-flex flex-row divshm ml-3">
                                         <img src="img/addgreen.png" class="img-fluid">
                                         <span class="showmore dispshm d-flex align-items-end mx-1 mb-1"
                                             style="font-size: 16px;text-decoration:none;">
@@ -1203,7 +1233,7 @@
                             <div class="row" style="font-size: 12px;">
                                 <a href="" data-toggle="collapse" data-target="#collapsegend" aria-expanded="false"
                                     aria-controls="collapsegend" style="text-decoration: none;">
-                                    <div class="d-flex flex-row divshm ml-2">
+                                    <div class="d-flex flex-row divshm ml-3">
                                         <img src="img/addgreen.png" class="img-fluid">
                                         <span class="showmore dispshm d-flex align-items-end mx-1 mb-1"
                                             style="font-size: 16px;text-decoration:none;">
@@ -1316,7 +1346,7 @@
                             <div class="row" style="font-size: 12px;">
                                 <a href="" data-toggle="collapse" data-target="#collapsearea" aria-expanded="false"
                                     aria-controls="collapsearea" style="text-decoration: none;">
-                                    <div class="d-flex flex-row divshm ml-2">
+                                    <div class="d-flex flex-row divshm ml-3">
                                         <img src="img/addgreen.png" class="img-fluid">
                                         <span class="showmore dispshm d-flex align-items-end mx-1 mb-1"
                                             style="font-size: 16px;text-decoration:none;">
@@ -1429,7 +1459,7 @@
                             <div class="row" style="font-size: 12px;">
                                 <a href="" data-toggle="collapse" data-target="#collapsecomp" aria-expanded="false"
                                     aria-controls="collapsecomp" style="text-decoration: none;">
-                                    <div class="d-flex flex-row divshm ml-2">
+                                    <div class="d-flex flex-row divshm ml-3">
                                         <img src="img/addgreen.png" class="img-fluid">
                                         <span class="showmore dispshm d-flex align-items-end mx-1 mb-1"
                                             style="font-size: 16px;text-decoration:none;">
@@ -1457,7 +1487,7 @@
                 </div>
 
                 <!------------------------------------------Center----------------------------------------------------->
-                <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 divsli mt-4 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-0">
+                <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 divsli mt-md-0 mt-4">
                     <!-------first div-->
                     <div class="roun empdivs">
                         <div class="contentone">
@@ -1900,7 +1930,7 @@
                     <div class="roun empdivs">
                         <div class="contentone">
                             <div class="row ">
-                                <span class="main1">First Senior Software Quality Assurance Engineer</span>
+                                <span class="main1">Senior Software Quality Assurance Engineer</span>
                             </div>
                             <div class="row">
                                 <img src="img/locgrey.png" class="d-inline mr-2">
@@ -2775,7 +2805,7 @@
                 </div>
 
                 <!------------------------------------------Side bar right---------------------------------------------->
-                <div class="container text-white col-xl-3 col-lg-3 col-md-4 col-sm-11 col-11 h-75 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-4 ml-3"
+                <div class="container text-white col-xl-3 col-lg-3 col-md-12 col-sm-11 col-11 h-75 mt-xl-0 mt-lg-0 mt-md-3 mt-sm-3 mt-3 ml-xl-0 ml-lg-0 ml-md-0 ml-sm-4 ml-3"
                     style="border-radius:10px;background-color: #0D2942;padding-bottom: 30px;">
 
                     <div class="row my-auto mx-auto d-flex justify-content-center jalert" style="padding-top:30px;">
@@ -2789,27 +2819,33 @@
                                     The Keyword you entered is a*
                                 </div>
                                 <!----------------------------CHECK BOXES------------------>
-                                <div class="form-group form-check mx-3" required>
-                                    <div class="d-flex mt-2 justify-content-between">
-                                        <div class="">
-                                            <input type="checkbox" value="Title" class="form-check-input in"
-                                                id="chktitle" name="jobalert">
-                                            <label class="form-check-label fontform" for="chktitle">Job
+                                <div class="form-group form-check row" required>
+                                    <div class="row mx-0 mt-2">
+                                        <div
+                                            class=" d-flex justify-content-start align-items-start custom-control custom-checkbox col-lg-6 col-4">
+                                            <input type="checkbox" value="Title"
+                                                class="form-check-input in custom-control-input" id="chktitle"
+                                                name="jobalert">
+                                            <label class="custom-control-label fontform" for="chktitle">Job
                                                 Title</label>
                                         </div>
-
-                                        <div class="mr-4">
-                                            <input type="checkbox" value="Skills" class="form-check-input"
-                                                id="chkskills" name="jobalert">
-                                            <label class="form-check-label fontform" for="chkskills">Skills</label>
+                                        <div
+                                            class=" d-flex justify-content-start align-items-start custom-control custom-checkbox col-lg-6 col-4">
+                                            <input type="checkbox" value="Skills"
+                                                class="form-check-input custom-control-input" id="chkskills"
+                                                name="jobalert">
+                                            <label class="custom-control-label fontform" for="chkskills">Skills</label>
                                         </div>
-                                    </div>
-                                    <div class="d-flex flex-row mt-2">
-                                        <input type="checkbox" value="Company" class="form-check-input" id="chkcompany"
-                                            name="jobalert">
-                                        <label class="form-check-label fontform" for="chkcompany">Company</label>
-                                        <!--<div class="errMessage text-white bg-success">hghg</div>
+                                        <div
+                                            class="mt-0 mt-lg-2 d-flex justify-content-start align-items-start custom-control custom-checkbox col-lg-6 col-4">
+                                            <input type="checkbox" value="Company"
+                                                class="form-check-input custom-control-input" id="chkcompany"
+                                                name="jobalert">
+                                            <label class="custom-control-label fontform"
+                                                for="chkcompany">Company</label>
+                                            <!--<div class="errMessage text-white bg-success">hghg</div>
                                 -->
+                                        </div>
                                     </div>
                                 </div>
                                 <!------------------------------Fields---------------->
@@ -3489,6 +3525,7 @@
             </div>
         </div>
     </div>
+
     <!-----------------------------------------------------FOOTER----------------------------------------------------------->
     <footer class="container-fluid foot pb-5 pt-4" style="background-color: #323232; ">
         <div class="container">
