@@ -100,8 +100,12 @@
             }
         }
         $(document).ready(function () {
-            $('.seekdeltable input').css('border', '0');
-            $('.seekdeltable input').css('background-color', 'transparent');
+            $('a').click(function () {
+                $(this).find('.arrow2').toggleClass('flip');
+            });
+
+            $(".edittable input").not(".dashform").css("background-color", "transparent");
+            $(".edittable input").not(".dashform").css("border", "1px solid transparent");
             //link remains active on that pg after reload
             var x = window.location.href;
             var x1 = x.split('#');
@@ -123,22 +127,23 @@
             });
 
             //edit a row
-            $(".seekdeltable").on('click', '.editbtn', function () {
+            $(".edittable").on('click', '.editbtn', function () {
                 //alert('two');
                 var v = $(this).closest('tr');
-                
+
                 v.find('input').each(function () {
                     $(this).prop('disabled', false);
                     $(this).css('border', '1px solid black');
-                    $(this).css('background-color', 'gray');
+                    $(this).css('border-radius', '2px');
+                    $(this).css('background-color', '#F3F3F3');
                 });
             });
 
-            $('.seekdeltable input').keyup(throttle(function () {
+            $('.edittable input').keyup(throttle(function () {
                 // do the search if criteria is met
-                $('.seekdeltable tbody td input').prop('disabled', 'true');
-                $('.seekdeltable tbody td input').css('border', '0');
-                $('.seekdeltable tbody td input').css('background-color', 'transparent');
+                $('.edittable tbody td input').prop('disabled', 'true');
+                $('.edittable tbody td input').css('border', '1px solid transparent');
+                $('.edittable tbody td input').css('background-color', 'transparent');
             }));
 
             function throttle(f, delay) {
@@ -155,12 +160,12 @@
         });
 
         $(document).mouseup(function (e) {
-            var container = $(".seekdeltable tbody tr td");
+            var container = $(".edittable tbody tr td");
             // if the target of the click isn't the container nor a descendant of the container
             if (!container.is(e.target) && container.has(e.target).length === 0) {
-                $('.seekdeltable tbody td input').prop('disabled', 'true');
-                $('.seekdeltable tbody td input').css('border', '0');
-                $('.seekdeltable tbody td input').css('background-color', 'transparent');
+                $('.edittable tbody td input').prop('disabled', 'true');
+                $('.edittable tbody td input').css('border', '1px solid transparent');
+                $('.edittable tbody td input').css('background-color', 'transparent');
             }
         });
 
@@ -267,30 +272,17 @@
                 reader.readAsDataURL(input.files[0]); // convert to base64 string
             }
         }
-
         function changeMe(sel) {
-            sel.style.color = "#000";
+            sel.style.opacity = "1";
         }
     </script>
     <style>
-        .col-2 {
-            background-color: aqua;
-        }
-
-        .col-10 {
-            background-color: #797a7a;
-        }
-
-        select {
-            color: #ccc;
-        }
-
-        option {
-            color: #000;
-        }
-
         option:first-child {
             color: #ccc;
+        }
+
+        .dashformact {
+            text-align-last: center;
         }
 
         .seekdeltable {
@@ -366,36 +358,46 @@
                                         </li>
                                         <!---------------------manage profile---------------------------------------------------------->
 
-                                        <li class="nav-item dropdown normaltext">
-                                            <a class="nav-link dropdown-toggle pl-md-2 pl-lg-3" href="#"
-                                                id="navbarDropdown" role="button" data-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false">
-                                                <div class="d-inline-block" style="width: 15%;">
-                                                    <img src="img/manageprofile.png" >
-                                                </div>
-                                                <div class="d-inline-block">
-                                                    <span class="dashtxt">Manage User Profile</span>
+                                        <li class="nav-item normaltext">
+                                                <a class="nav-link pl-md-2 pl-lg-3" href="#" data-toggle="collapse"
+                                                data-target="#expandnav" aria-expanded="false" aria-controls="expandnav"
+                                                style="text-decoration: none;">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-inline w-100">
+                                                        <div class="d-inline-block" style="width: 12%;">
+                                                            <img src="img/manageprofile.png">
+                                                        </div>
+                                                        <div class="d-inline-block ml-2">
+                                                            <span class="dashtxt">Manage User Profile</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-inline mt-2">
+                                                        <div class="dropdown-toggle arrow2 text-white m-0" aria-expanded="false">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </a>
-                                            <div class="dropdown-menu subdashnav w-75" aria-labelledby="navbarDropdown">
-                                                <a class="dropdown-item" id="manageuserprofiless"
-                                                    href="#manageuserprofiles">
-                                                    <div class="d-inline-block" style="width: 25%;">
-                                                        <img src="img/profilelogo.png" >
+                                            <div class="collapse mb-3" id="expandnav" style="padding-left:40px;">
+                                                    <div class="row col-12 ">
+                                                        <a class="w-100" id="manageuserprofiless" href="#manageuserprofiles">
+                                                            <div class="d-inline-block" style="width:15%;">
+                                                                <img src="img/subadmin.png" >
+                                                            </div>
+                                                            <div class="d-inline-block">
+                                                                <span class="dashtxtdrop ">User Profile</span>
+                                                            </div>
+                                                        </a>
                                                     </div>
-                                                    <div class="d-inline-block">
-                                                        <span class="dashtxt ">User Profile</span>
-                                                    </div>
-                                                </a>
-                                                <a class="dropdown-item" id="manageusercompaniess"
-                                                    href="#managecompanies">
-                                                    <div class="d-inline-block" style="width: 25%;">
-                                                        <img src="img/companies.png" >
-                                                    </div>
-                                                    <div class="d-inline-block">
-                                                        <span class="dashtxt">Companies</span>
-                                                    </div>
-                                                </a>
+                                                   <div class="row col-12 mt-2">
+                                                    <a class="w-100" id="manageusercompaniess" href="#managecompanies">
+                                                        <div class="d-inline-block" style="width:15%;">
+                                                            <img src="img/companies.png">
+                                                        </div>
+                                                        <div class="d-inline-block">
+                                                            <span class="dashtxtdrop">Companies</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </li>
 
@@ -573,8 +575,7 @@
                                 <div
                                     class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1  table-responsive-lg d-lg-block d-md-none d-sm-none d-none ">
                                     <!------------Large table-------------->
-                                    <table class="table table-sm table-hover seekdeltable"
-                                        style=" border-collapse: collapse;">
+                                    <table class="table table-sm table-hover seekdeltable">
                                         <form>
                                             <!---------------------------thead------------------------>
                                             <thead>
@@ -658,8 +659,11 @@
                                                     <td></td>
                                                 </tr>
                                         </form>
+                                        <tr>
+                                            <td class="p-3"></td>
+                                        </tr>
                                         <!----------fourth row-->
-                                        <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                        <tr class="text-center" style="background-color: #0D2942; color: white; ">
                                             <th scope="col">Company</th>
                                             <th scope="col">Job Title</th>
                                             <th scope="col">Job Description</th>
@@ -676,7 +680,7 @@
                                                 <td>@mdo</td>
                                                 <td>@mdo</td>
                                                 <td class="delhov">
-                                                    <select class="selectpicker btn form-control dashformact"
+                                                    <select class="selectpicker btn dashformact"
                                                         style="font-size: 12px;">
                                                         <option value="">Action</option>
                                                         <option value="A">Warn</option>
@@ -1039,21 +1043,27 @@
                                                 <form>
                                                     <!---------FORM--------->
                                                     <td>
-                                                        <div class="form-group p-0 m-0">
-                                                            <input type="text" class="form-control dashform" id="cid"
-                                                                placeholder="Company ID" style="border: 0px;">
+                                                        <div class="form-group m-0">
+                                                            <input type="text"
+                                                                class="text-center form-control dashform py-3" id="cid"
+                                                                style="font-size: 12px; border: 0px;"
+                                                                placeholder="Company ID">
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <div class="form-group p-0 m-0">
-                                                            <input type="text" class="form-control dashform" id="cname"
-                                                                placeholder="Company Name" style="border: 0px;">
+                                                        <div class="form-group m-0">
+                                                            <input type="text"
+                                                                class="text-center form-control dashform py-3"
+                                                                id="cname" style="font-size: 12px; border: 0px;"
+                                                                placeholder="Company Name">
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <div class="form-group p-0 m-0">
-                                                            <input type="cmail" class="form-control dashform" id="cmail"
-                                                                placeholder="Company Email" style="border: 0px;">
+                                                        <div class="form-group m-0">
+                                                            <input type="text"
+                                                                class="text-center form-control dashform py-3"
+                                                                id="cmail" style="font-size: 12px; border: 0px;"
+                                                                placeholder="Company Email">
                                                         </div>
                                                     </td>
                                                     <td>
@@ -1066,13 +1076,17 @@
                                                     </td>
                                                 </form>
                                             </tr>
+                                            <tr>
+                                                <td class="py-3"></td>
+                                            </tr>
                                             <!----------second row-->
-                                            <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                            <tr class="text-center txthead">
                                                 <th scope="col">ID</th>
                                                 <th scope="col">Name</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">Action</th>
                                             </tr>
+
                                         </thead>
                                         <!---------------------------------tbody--------------------------->
                                         <tbody>
@@ -1135,28 +1149,34 @@
                                                     <!----------first row-->
                                                     <!---------FORM--------->
                                                     <td colspan="2">
-                                                        <div class="form-group p-0 m-0">
-                                                            <input type="text" class="form-control dashform" id="cid"
-                                                                placeholder="Company ID" style="border: 0px;">
+                                                        <div class="form-group m-0">
+                                                            <input type="text"
+                                                                class="text-center form-control dashform py-3" id="cid"
+                                                                style="font-size: 12px; border: 0px;"
+                                                                placeholder="Company ID">
                                                         </div>
                                                     </td>
                                                     <td colspan="2">
-                                                        <div class="form-group p-0 m-0">
-                                                            <input type="text" class="form-control dashform" id="cname"
-                                                                placeholder="Company Name" style="border: 0px;">
+                                                        <div class="form-group m-0">
+                                                            <input type="text"
+                                                                class="text-center form-control dashform py-3"
+                                                                id="cname" style="font-size: 12px; border: 0px;"
+                                                                placeholder="Company Name">
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td colspan="2">
-                                                        <div class="form-group p-0 m-0">
-                                                            <input type="cmail" class="form-control dashform" id="cmail"
-                                                                placeholder="Company Email" style="border: 0px;">
+                                                        <div class="form-group m-0">
+                                                            <input type="text"
+                                                                class="text-center form-control dashform py-3"
+                                                                id="cmail" style="font-size: 12px; border: 0px;"
+                                                                placeholder="Company Email">
                                                         </div>
                                                     </td>
                                                     <td colspan="2">
                                                         <select
-                                                            class="selectpicker btn form-control dashformselect py-1"
+                                                            class="selectpicker w-100 btn form-control dashformselect py-1"
                                                             style="font-size: 12px;" onchange="changeMe(this)">
                                                             <option value="A">Active</option>
                                                             <option value="B">Not Active</option>
@@ -1222,8 +1242,6 @@
                                         </tbody>
                                     </table>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -1240,7 +1258,7 @@
                                     <!------------table------LARGE VIEW-------->
                                     <div
                                         class="col-lg-12 table-responsive-lg table-borderless d-lg-block d-md-none d-sm-none d-none">
-                                        <table class="table table-hover seekdeltable ">
+                                        <table class="table table-hover seekdeltable table-sm">
                                             <!---------------------------thead------------------------>
                                             <thead>
                                                 <tr>
@@ -1258,10 +1276,11 @@
                                                             </select>
                                                         </td>
                                                         <td>
-                                                            <div class="form-group p-0 m-0">
-                                                                <input type="email" class="form-control dashform"
-                                                                    id="cmail" placeholder="Company Email"
-                                                                    style="border: 0px;">
+                                                            <div class="form-group m-0">
+                                                                <input type="text"
+                                                                    class="text-center form-control dashform py-3"
+                                                                    id="cmail" style="font-size: 12px; border: 0px;"
+                                                                    placeholder="Company Email">
                                                             </div>
                                                         </td>
                                                         <td>
@@ -1290,9 +1309,11 @@
                                                         </td>
                                                     </form>
                                                 </tr>
+                                                <tr>
+                                                    <td class="py-2"></td>
+                                                </tr>
                                                 <!----------second row-->
-                                                <tr class="text-center"
-                                                    style="background-color: #0D2942; color: white;">
+                                                <tr class="text-center txthead">
                                                     <th scope="col">Name</th>
                                                     <th scope="col">Email</th>
                                                     <th scope="col">Is Active</th>
@@ -1392,10 +1413,11 @@
                                                     </tr>
                                                     <tr>
                                                         <td colspan="2">
-                                                            <div class="form-group p-0 m-0">
-                                                                <input type="email" class="form-control dashform"
-                                                                    id="cmail" placeholder="Company Email"
-                                                                    style="border: 0px;">
+                                                            <div class="form-group m-0">
+                                                                <input type="text"
+                                                                    class="text-center form-control dashform py-3"
+                                                                    id="cmail" style="font-size: 12px; border: 0px;"
+                                                                    placeholder="Company Email">
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
@@ -1725,22 +1747,25 @@
                                 <div
                                     class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
                                     <!------------Blogs table-------------->
-                                    <table class="table table-sm table-hover seekdeltable">
+                                    <table class="table table-sm table-hover seekdeltable edittable">
                                         <!---------------------------thead------------------------>
                                         <thead>
                                             <tr>
                                                 <td>
                                                     <!----------first row-->
-                                                    <div class="form-group m-0 mb-2 roun rounded">
+                                                    <div class="form-group m-0">
                                                         <input type="text"
-                                                            class="text-center form-control py-3 dashform" id="manblogs"
-                                                            style="font-size: 12px; border:0px;"
+                                                            class="text-center form-control dashform py-3" id="manblogs"
+                                                            style="font-size: 12px; border: 0px;"
                                                             placeholder="Manage Blogs">
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <td class="py-2"></td>
+                                            </tr>
                                             <!----------second row-->
-                                            <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                            <tr class="text-center txthead">
                                                 <th scope="col">Title</th>
                                                 <th scope="col">Content</th>
                                                 <th scope="col">Last Updated</th>
@@ -1819,22 +1844,25 @@
                                 <div
                                     class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
                                     <!------------Categories table-------------->
-                                    <table class="table table-sm table-hover seekdeltable ">
+                                    <table class="table table-sm table-hover seekdeltable edittable">
                                         <!---------------------------thead------------------------>
                                         <thead>
                                             <tr>
                                                 <!----------first row-->
                                                 <td>
-                                                    <div class="form-group m-0 mb-2 roun rounded">
+                                                    <div class="form-group m-0">
                                                         <input type="text"
-                                                            class="text-center form-control py-3 dashform" id="mancat"
+                                                            class="text-center form-control dashform py-3" id="mancat"
                                                             style="font-size: 12px; border: 0px;"
                                                             placeholder="Manage Categories">
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <td class="py-2"></td>
+                                            </tr>
                                             <!----------second row-->
-                                            <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                            <tr class="text-center txthead">
                                                 <th scope="col">Title</th>
                                                 <th scope="col">Last Updated</th>
                                                 <th scope="col">Action</th>
@@ -1920,7 +1948,7 @@
                                         <div class="row" style="font-size: 15px;">
                                             <form class="needs-validation col-12" novalidate>
                                                 <div class="form-row">
-                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <div class="col-md-6 col-10">
                                                         <label for="modname">Name:<span
                                                                 class="text-danger">*</span></label>
                                                         <input type="text" pattern="[a-zA-Z]+" placeholder="Smith"
@@ -1932,7 +1960,7 @@
                                                             Looks good!
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <div class="col-md-6 col-10 mt-md-0 mt-3">
                                                         <label for="modemail">Email:<span
                                                                 class="text-danger">*</span></label>
                                                         <input type="email" placeholder="example@email.com"
@@ -1945,8 +1973,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-row">
-                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                <div class="form-row mt-md-4 mt-0">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
                                                         <label for="modpass1">Password:<span
                                                                 class="text-danger">*</span></label>
                                                         <input type="password" placeholder="***********" minlength="8"
@@ -1962,7 +1990,7 @@
                                                             Looks good!
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
                                                         <label for="modpass2">Confirm Password:<span
                                                                 class="text-danger">*</span></label>
                                                         <input type="password" placeholder="***********" minlength="8"
@@ -1979,9 +2007,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-lg-6 col-md-6 col-sm-12 col-12">
-                                                        <label for="access">Specify Access<span
+                                                <div class="form-row mt-md-4 mt-0">
+                                                    <div
+                                                        class="form-group col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
+                                                        <label for="access">Allowed Access<span
                                                                 class="text-danger">*</span></label>
                                                         <select id="access" class="form-control f" required>
                                                             <option selected disabled value="">Choose...</option>
@@ -2029,27 +2058,31 @@
                                 <div
                                     class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
                                     <!------------Employers table-------------->
-                                    <table class="table table-sm table-hover seekdeltable ">
+                                    <table class="table table-sm table-hover seekdeltable edittable">
                                         <!---------------------------thead------------------------>
                                         <thead>
                                             <tr>
                                                 <!----------first row-->
                                                 <td>
-                                                    <div class="form-group roun rounded">
-                                                        <input type="text" class="form-control dashform m-0 text-center"
-                                                            id="empname" placeholder="Name" style="border: 0px;">
+                                                    <div class="form-group m-0">
+                                                        <input type="text"
+                                                            class="text-center form-control dashform py-3" id="empname"
+                                                            style="font-size: 12px; border: 0px;"
+                                                            placeholder="Name">
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="form-group roun rounded">
+                                                    <div class="form-group m-0">
                                                         <input type="email"
-                                                            class="form-control dashform m-0 text-center" id="empemail"
-                                                            placeholder="Email" style="border: 0px;">
+                                                            class="text-center form-control dashform py-3" id="empmail"
+                                                            style="font-size: 12px; border: 0px;"
+                                                            placeholder="Email">
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <tr><td class="py-2"></td></tr>
                                             <!----------second row-->
-                                            <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                            <tr class="text-center txthead">
                                                 <th scope="col">Name</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">Fake Reports</th>
@@ -2128,27 +2161,31 @@
                                 <div
                                     class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
                                     <!------------Employers table-------------->
-                                    <table class="table table-sm table-hover seekdeltable ">
+                                    <table class="table table-sm table-hover seekdeltable edittable">
                                         <!---------------------------thead------------------------>
                                         <thead>
                                             <tr>
                                                 <!----------first row-->
                                                 <td>
-                                                    <div class="form-group roun rounded">
-                                                        <input type="text" class="form-control dashform m-0 text-center"
-                                                            id="empname" placeholder="Name" style="border: 0px;">
+                                                    <div class="form-group m-0">
+                                                        <input type="text"
+                                                            class="text-center form-control dashform py-3" id="cname"
+                                                            style="font-size: 12px; border: 0px;"
+                                                            placeholder="Name">
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="form-group roun rounded">
+                                                    <div class="form-group m-0">
                                                         <input type="email"
-                                                            class="form-control dashform m-0 text-center" id="empemail"
-                                                            placeholder="Email" style="border: 0px;">
+                                                            class="text-center form-control dashform py-3" id="cmail"
+                                                            style="font-size: 12px; border: 0px;"
+                                                            placeholder="Email">
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <tr><td class="py-2"></td></tr>
                                             <!----------second row-->
-                                            <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                            <tr class="text-center txthead">
                                                 <th scope="col">Name</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">Fake Reports</th>
@@ -2240,18 +2277,16 @@
                                                 <tr>
                                                     <!----first row-->
                                                     <!-------------------------------Upload Image----------------------->
-                                                    <div class="row m-lg-4 m-md-2 m-sm-1 mb-0 mt-0 py-4">
-                                                        <div class="col-lg-5 ">
+                                                    <div class="row mx-lg-2 my-lg-3 my-0 mx-md-2 mx-sm-1 mx-3">
+                                                        <div class="col-lg-5 col-md-8 col-12 mt-3 py-0 px-lg-1 px-0">
                                                             <div class="row">
-                                                                <span class="text-muted font-weight-bold mx-4">Add Your
-                                                                    Image</span>
+                                                                <span class="text-muted font-weight-bold mx-4">Add Your Image</span>
                                                             </div>
                                                             <div class="row mt-4 mx-2">
                                                                 <div class="roun imgboxseek" id="img_link">
                                                                     <img id="blah" src="" />
                                                                 </div>
-                                                                <input type="file" id="image" style="visibility: hidden"
-                                                                    required><br>
+                                                                <input type="file" id="image" style="visibility: hidden" required><br>
                                                                 <span id="spnFilePathimg"></span><br>
                                                                 <span id="errmsgimg" class="text-danger"></span><br>
                                                             </div>
@@ -4336,11 +4371,11 @@
                                 <div
                                     class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
                                     <!------------Employers table-------------->
-                                    <table class="table table-sm table-hover seekdeltable ">
+                                    <table class="table table-hover seekdeltable ">
                                         <!---------------------------thead------------------------>
                                         <thead>
                                             <!----------first row-->
-                                            <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                            <tr class="text-center txthead">
                                                 <th scope="col">Company Name</th>
                                                 <th scope="col"> Job Position</th>
                                                 <th scope="col">Posted Date</th>
@@ -4388,27 +4423,29 @@
                                 <div
                                     class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
                                     <!------------Employers table-------------->
-                                    <table class="table table-sm table-hover seekdeltable ">
+                                    <table class="table table-hover seekdeltable ">
                                         <!---------------------------thead------------------------>
                                         <thead>
-                                            <tr>
-                                                <!----------first row-->
-                                                <td>
-                                                    <div class="form-group rounded roun">
-                                                        <input type="text" class="form-control dashform m-0 text-center"
-                                                            id="empname" placeholder="Name" style="border: 0px;">
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="form-group rounded roun">
-                                                        <input type="number"
-                                                            class="form-control dashform m-0 text-center" id="compid"
-                                                            placeholder="ID" style="border: 0px;">
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            <td>
+                                                <div class="form-group m-0">
+                                                    <input type="text"
+                                                        class="text-center form-control dashform py-3" id="empname"
+                                                        style="font-size: 12px; border: 0px;"
+                                                        placeholder="Name">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form-group m-0">
+                                                    <input type="text"
+                                                        class="text-center form-control dashform py-3" id="empid"
+                                                        style="font-size: 12px; border: 0px;"
+                                                        placeholder="ID">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr><td class="py-2"></td></tr>
                                             <!----------second row-->
-                                            <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                            <tr class="text-center" style="background-color: #0D2942; color: white;font-size: 14px;">
                                                 <th scope="col">Company Name</th>
                                                 <th scope="col">ID</th>
                                                 <th scope="col">Job Post</th>
@@ -4506,7 +4543,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                            <tr class="text-center txthead">
                                                 <th scope="col">Name</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">ID</th>
@@ -6702,11 +6739,11 @@
                                 <div
                                     class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
                                     <!------------Employers table-------------->
-                                    <table class="table table-sm table-hover seekdeltable ">
+                                    <table class="table table-hover seekdeltable ">
                                         <!---------------------------thead------------------------>
                                         <thead>
                                             <!----------first row-->
-                                            <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                            <tr class="text-center txthead">
                                                 <th scope="col">Company Name</th>
                                                 <th scope="col"> Job Position</th>
                                                 <th scope="col">Posted Date</th>
@@ -6754,27 +6791,31 @@
                                 <div
                                     class="row text-justify p-lg-4 py-md-4 px-md-0 p-sm-1 pb-sm-4 mb-5 m-1 mb-0 mt-0 p-1 ">
                                     <!------------Employers table-------------->
-                                    <table class="table table-sm table-hover seekdeltable ">
+                                    <table class="table table-hover seekdeltable ">
                                         <!---------------------------thead------------------------>
                                         <thead>
                                             <tr>
                                                 <!----------first row-->
                                                 <td>
-                                                    <div class="form-group rounded roun">
-                                                        <input type="text" class="form-control dashform m-0 text-center"
-                                                            id="empname" placeholder="Name" style="border: 0px;">
+                                                    <div class="form-group m-0">
+                                                        <input type="text"
+                                                            class="text-center form-control dashform py-3" id="empname"
+                                                            style="font-size: 12px; border: 0px;"
+                                                            placeholder="Name">
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="form-group rounded roun">
-                                                        <input type="number"
-                                                            class="form-control dashform m-0 text-center" id="empid"
-                                                            placeholder="ID" style="border: 0px;">
+                                                    <div class="form-group m-0">
+                                                        <input type="text"
+                                                            class="text-center form-control dashform py-3" id="empid"
+                                                            style="font-size: 12px; border: 0px;"
+                                                            placeholder="ID">
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <tr><td class="py-2"></td></tr>
                                             <!----------second row-->
-                                            <tr class="text-center" style="background-color: #0D2942; color: white;">
+                                            <tr class="text-center txthead">
                                                 <th scope="col">Name</th>
                                                 <th scope="col">ID</th>
                                                 <th scope="col">Action</th>

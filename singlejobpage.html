@@ -42,12 +42,6 @@
                 $(".imgsearch").hide();
             });
 
-            //limit the number of characters
-            $('.subjob').map(function () {
-                var myval = ($(this).attr('id'));
-                $('#' + myval).text($('#' + myval).text().substring(0, 62) + '...');
-            });
-
             //$(".content").hide();
             $(".empdivs").click(function () {
                 //alert('click');
@@ -118,17 +112,6 @@
         }
     </script>
     <style>
-        .dropdown-toggle,
-        .arrow {
-            -moz-transition: transform 0.2s;
-            -webkit-transition: transform 0.2s;
-            transition: transform 0.2s;
-        }
-
-        .flip {
-            transform: rotate(-180deg);
-        }
-
         table.fir tr:nth-child(2) {
             box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
             border-radius: 9px;
@@ -375,7 +358,7 @@
 
                     <!--------------Small and Very Small View--------->
                     <div class="col-sm-12 col-12 table-responsive d-lg-none d-md-none d-sm-block d-block">
-                        <table class="mx-2 mx-sm-0 mx-md-0 mx-lg-0 mx-xl-0 table table-borderless table-sm sec ">
+                        <table class="mx-2 mx-sm-0 table table-borderless sec table-sm">
                             <form class="form-inline">
                                 <tbody>
                                     <tr>
@@ -419,7 +402,7 @@
                                     <tr>
                                         <!--------Third row------------->
                                         <td class="text-dark">
-                                            <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center mt-1">
                                                 <span class="text-center">Need more search options?<a href="#"
                                                         class="advancesearch text-center"
                                                         style="text-decoration: none;">&nbsp;ADVANCE
@@ -430,7 +413,7 @@
                                     <tr>
                                         <td>
                                             <div class="text-center text-sm-left">
-                                                <button class="btn btn-success homebt mt-1">
+                                                <button class="btn btn-success homebt ">
                                                     <span class="search">Search</span>
                                                     <img src="img/search.png" class="img-fluid imgsearch">
                                                 </button>
@@ -494,8 +477,8 @@
                             <div class="row mt-0 jtitle mx-auto " style="font-size: 10px;">
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val1">
-                                    <label class="custom-control-label subjob " for="val1" id="txtone">
-                                        Software Quality Assurance En
+                                    <label class="custom-control-label subjob" for="val1" id="txtone">
+                                        <div class="txtcol">Software Quality Assurance En</div>
                                     </label>
                                 </div>
                                 <div class="col-2 col-md-2 subjob">
@@ -507,7 +490,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val2">
                                     <label class="custom-control-label subjob" for="val2" id="txttwo">
-                                        Software Quality Assurance En
+                                        <div class="txtcol">Software Quality Assurance En</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -520,7 +503,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val3">
                                     <label class="subjob custom-control-label" for="val3" id="txtthree">
-                                        Software Quality Assurance En
+                                        <div class="txtcol">Software Quality Assurance En</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -533,7 +516,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val4">
                                     <label class="subjob custom-control-label" for="val4" id="txtfour">
-                                        Software Quality Assurance En
+                                        <div class="txtcol">Software Quality Assurance En</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -548,7 +531,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val5">
                                         <label class="subjob custom-control-label" for="val5" id="txtfive">
-                                            Software Quality Assurance En
+                                            <div class="txtcol">Software Quality Assurance En</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -561,7 +544,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val6">
                                         <label class="subjob custom-control-label" for="val6" id="txtsix">
-                                            Software Quality Assurance En
+                                            <div class="txtcol">Software Quality Assurance En</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -609,7 +592,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val11">
                                     <label class="subjob custom-control-label " for="val11">
-                                        Lahore
+                                        <div class="txtcol">Lahore</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -622,7 +605,7 @@
                                 <div class="col-10  custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val12">
                                     <label class="subjob custom-control-label" for="val12">
-                                        Lahore
+                                        <div class="txtcol">Lahore</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -635,7 +618,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val13">
                                     <label class="subjob custom-control-label " for="val13">
-                                        Lahore
+                                        <div class="txtcol">Lahore</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -648,7 +631,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val14">
                                     <label class="subjob custom-control-label " for="val14">
-                                        Lahore
+                                        <div class="txtcol">Lahore</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -663,7 +646,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val15">
                                         <label class="subjob custom-control-label " for="val15">
-                                            Lahore
+                                            <div class="txtcol">Lahore</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -676,7 +659,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val16">
                                         <label class="subjob custom-control-label " for="val16">
-                                            Lahore
+                                            <div class="txtcol">Lahore</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -721,7 +704,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val21">
                                     <label class="subjob custom-control-label " for="val21">
-                                        1 Year
+                                        <div class="txtcol">1 Year</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -733,7 +716,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val22">
                                     <label class="subjob custom-control-label " for="val22">
-                                        1 Year
+                                        <div class="txtcol">1 Year</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -746,7 +729,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val23">
                                     <label class="subjob custom-control-label" for="val23">
-                                        1 Year
+                                        <div class="txtcol">1 Year</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -759,7 +742,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val24">
                                     <label class="subjob custom-control-label " for="val24">
-                                        1 Year
+                                        <div class="txtcol">1 Year</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -774,7 +757,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val25">
                                         <label class="subjob custom-control-label " for="val25">
-                                            1 Year
+                                            <div class="txtcol">1 Year</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -787,7 +770,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val26">
                                         <label class="subjob custom-control-label " for="val26">
-                                            1 Year
+                                            <div class="txtcol">1 Year</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -836,7 +819,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val31">
                                     <label class="subjob custom-control-label " for="val31">
-                                        Full Time/Permanent
+                                        <div class="txtcol">Full Time/Permanent</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -849,7 +832,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val32">
                                     <label class="subjob custom-control-label " for="val32">
-                                        Full Time/Permanent
+                                        <div class="txtcol">Full Time/Permanent</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -862,7 +845,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val33">
                                     <label class="subjob custom-control-label " for="val33">
-                                        Full Time/Permanent
+                                        <div class="txtcol">Full Time/Permanent</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -875,7 +858,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val34">
                                     <label class="subjob custom-control-label " for="val34">
-                                        Full Time/Permanent
+                                        <div class="txtcol">Full Time/Permanent</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -890,7 +873,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val35">
                                         <label class="subjob  custom-control-label " for="val35">
-                                            Full Time/Permanent
+                                            <div class="txtcol">Full Time/Permanent</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -903,7 +886,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val36">
                                         <label class="subjob  custom-control-label " for="val36">
-                                            Full Time/Permanent
+                                            <div class="txtcol">Full Time/Permanent</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -951,7 +934,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val41">
                                     <label class="subjob custom-control-label" for="val41">
-                                        Javascript
+                                        <div class="txtcol">Javascript</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -964,7 +947,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val42">
                                     <label class="subjob custom-control-label " for="val42">
-                                        Javascript
+                                        <div class="txtcol">Javascript</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -977,7 +960,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val43">
                                     <label class="subjob custom-control-label " for="val43">
-                                        Javascript
+                                        <div class="txtcol">Javascript</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -990,7 +973,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val44">
                                     <label class="subjob custom-control-label " for="val44">
-                                        Javascript
+                                        <div class="txtcol">Javascript</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1005,7 +988,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val45">
                                         <label class="subjob custom-control-label " for="val45">
-                                            Javascript
+                                            <div class="txtcol">Javascript</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -1018,7 +1001,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val46">
                                         <label class="subjob custom-control-label" for="val46">
-                                            Javascript
+                                            <div class="txtcol">Javascript</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -1065,7 +1048,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val51">
                                     <label class="subjob custom-control-label" for="val51" id="txt2one">
-                                        Information Technology
+                                        <div class="txtcol">Information Technology</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1079,7 +1062,7 @@
                                     class="col-10 custom-control custom-checkbox custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val52">
                                     <label class="subjob custom-control-label" for="val52" id="txt2two">
-                                        Information Technology
+                                        <div class="txtcol">Information Technology</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1092,7 +1075,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val53">
                                     <label class="subjob custom-control-label" for="val53" id="txt2three">
-                                        Information Technology
+                                        <div class="txtcol">Information Technology</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1105,7 +1088,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val54">
                                     <label class="subjob custom-control-label" for="val54" id="txt2four">
-                                        Information Technology
+                                        <div class="txtcol">Information Technology</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1120,7 +1103,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val55">
                                         <label class="subjob custom-control-label" for="val55" id="txt2five">
-                                            Information Technology
+                                            <div class="txtcol">Information Technology</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -1133,7 +1116,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val56">
                                         <label class="subjob custom-control-label" for="val56" id="txt2six">
-                                            Information Technology
+                                            <div class="txtcol">Information Technology</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -1179,7 +1162,7 @@
                                 <div class="col-10  custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val61">
                                     <label class="subjob custom-control-label" for="val61">
-                                        Male
+                                        <div class="txtcol">Male</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1191,7 +1174,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val62">
                                     <label class="subjob custom-control-label" for="val62">
-                                        Male
+                                        <div class="txtcol">Male</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1206,7 +1189,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val63">
                                         <label class="subjob custom-control-label" for="val63">
-                                            Male
+                                            <div class="txtcol">Male</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -1219,7 +1202,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val64">
                                         <label class="subjob custom-control-label" for="val64">
-                                            Male
+                                            <div class="txtcol">Male</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -1266,7 +1249,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val71">
                                     <label class="subjob custom-control-label" for="val71" id="txt3one">
-                                        Software & Web Development
+                                        <div class="txtcol">Software & Web Development</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1278,7 +1261,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val72">
                                     <label class="subjob custom-control-label" for="val72" id="txt3two">
-                                        Software & Web Development
+                                        <div class="txtcol">Software & Web Development</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1291,7 +1274,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val73">
                                     <label class="subjob custom-control-label" for="val73" id="txt3three">
-                                        Software & Web Development
+                                        <div class="txtcol">Software & Web Development</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1304,7 +1287,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val74">
                                     <label class="subjob custom-control-label" for="val74" id="txt3four">
-                                        Software & Web Development
+                                        <div class="txtcol">Software & Web Development</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1319,7 +1302,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val75">
                                         <label class="subjob custom-control-label" for="val75" id="txt3five">
-                                            Software & Web Development
+                                            <div class="txtcol">Software & Web Development</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -1332,7 +1315,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val76">
                                         <label class="subjob custom-control-label" for="val76" id="txt3six">
-                                            Software & Web Development
+                                            <div class="txtcol">Software & Web Development</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -1378,7 +1361,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val81">
                                     <label class="subjob custom-control-label" for="val81">
-                                        Contour Software
+                                        <div class="txtcol">Contour Software</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1391,7 +1374,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val82">
                                     <label class="subjob custom-control-label" for="val82">
-                                        Contour Software
+                                        <div class="txtcol">Contour Software</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1404,7 +1387,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val83">
                                     <label class="subjob custom-control-label" for="val83">
-                                        Contour Software
+                                        <div class="txtcol">Contour Software</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1417,7 +1400,7 @@
                                 <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                     <input type="checkbox" class="form-check-input custom-control-input" id="val84">
                                     <label class="subjob custom-control-label" for="val84">
-                                        Contour Software
+                                        <div class="txtcol">Contour Software</div>
                                     </label>
                                 </div>
                                 <div class="col-2 subjob">
@@ -1432,7 +1415,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val85">
                                         <label class="subjob  custom-control-label" for="val85">
-                                            Contour Software
+                                            <div class="txtcol">Contour Software</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">
@@ -1445,7 +1428,7 @@
                                     <div class="col-10 custom-control custom-checkbox d-flex justify-content-start">
                                         <input type="checkbox" class="form-check-input custom-control-input" id="val86">
                                         <label class="subjob  custom-control-label" for="val86">
-                                            Contour Software
+                                            <div class="txtcol">Contour Software</div>
                                         </label>
                                     </div>
                                     <div class="col-2 subjob">

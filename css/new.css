@@ -165,18 +165,19 @@ max-width: 400px;
   margin:-4px;
 }
 */
-
+/*
 .subdashnav{
-  background-color: #c2c0c0;
+  background-color: #0D2942;
+  color: white;
 }
   .subdashnav a:hover {
     color: white;
-    
+    border: 0;
   }
   .subdashnav a:active {
     color: white;
     font-weight: 1000;
-  }
+  }*/
 .showmore{
   color:white;
 }
@@ -283,6 +284,18 @@ a.bfont{
 }
 .dashtxt{
   font-size: 14px;
+}
+.dashtxtdrop{
+  font-size: 14px;
+  color: white;
+}
+a .dashtxtdrop:hover{
+  color: #0BB44F;
+}
+#expandnav a:hover{
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
 }
 .dashhead{
   font-weight: bold;
@@ -828,6 +841,18 @@ padding-top: 10px;
 .arrow{
   font-size: 20px;
 }
+.arrow2{
+  font-size: 16px;
+}
+.dropdown-toggle,
+        .arrow{
+            -moz-transition: transform 0.2s;
+            -webkit-transition: transform 0.2s;
+            transition: transform 0.2s;
+        }
+        .flip {
+          transform: rotate(-180deg);
+      }
 .txtemp{
   font-size: 16px;
 }
@@ -4305,7 +4330,6 @@ tr{
 
 .formjob option{
   background-color: white;
-  opacity: 1;
 }
 
 .jd{
@@ -4344,16 +4368,15 @@ tr{
   background-color: #d9dbda;
   border-radius: 6px;
 }
-.seekdeltable td{
-  color: black;
+.seekdeltable td, .seekdeltable input{
+  color: #5E5E5E;
   text-align: center;
+  vertical-align: middle;
+  border: 2px solid #d9dbda;
 }
 /*.seekdeltable tr{
   border: 2px solid #d9dbda;
 }*/
-.seekdeltable td{
-  border: 2px solid #d9dbda;
-}
 .seekdeltable thead td{
   border: 0px;
 }
@@ -4397,16 +4420,38 @@ tr{
 .dashnav a:hover {
   color: #0BB44F;
 }
-/*Active button*/
-.dashformact, .dashformact:focus{
-  background-color: #0BB44F;
-  color: white;
-}
-.dashformact option{
-  color: black;
-  background-color: #ceebda;
-}
-
+        /*Active button*/
+        select.dashformact:focus {
+          background-color: #0BB44F;
+          color: white;
+          width: 100px;
+          height:22px;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          border-radius: 5px;
+        }
+        select.dashformact:hover{
+            color: white;
+        }
+        select.dashformact option{
+          color: black;
+          background-color: white;
+        }
+        select.dashformact{
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          background: transparent;
+          background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='22' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+          background-repeat: no-repeat;
+          background-position-x: 100%;
+          background-color: #0BB44F;
+          color: white;
+          width: 100px;
+          height:22px;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          border-radius: 5px;
+        }
 /*dashboard admin*/
 .just-padding {
   padding: 0px 15px;
@@ -4452,6 +4497,7 @@ tr{
 .boldtext {
     font-weight: 700;
 }
+
 select
 {
     color: #ccc;
@@ -4464,7 +4510,6 @@ option:first-child
 {
     color: #ccc;
 }
-
 .dashform{
   background-color: #F3F3F3;
   
@@ -4478,21 +4523,45 @@ option:first-child
   font-size: 12px;
   color:black;
 }
+/*
 .dashformselect{
   background-color: #F3F3F3;
   color:grey;
 }
-.dashformselect:focus { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    opacity: 1; /* Firefox */
+.dashformselect:focus { 
+    opacity: 1; 
     background-color: #F3F3F3;
 }
-.dashformselect::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  opacity: 0.5; /* Firefox */
+.dashformselect::placeholder { 
+  opacity: 0.5; 
   font-size: 12px;
 }
 .dashformselect option{
   color: black;
-  background-color: #ceebda;
+}*/
+
+select.dashformselect option{
+  color: black;
+  background-color: white;
+}
+select.dashformselect, select.dashformselect:focus{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='22' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  background-color: #F3F3F3;
+  color: black;
+  padding-top: 0px;
+  opacity: 0.6;
+  padding-bottom: 0px;
+  border-radius: 5px;
+}
+select.dashformselect:focus{
+  opacity: 1;
+}
 }
 .comment {
   position: relative;
@@ -4604,6 +4673,9 @@ font-style: normal;
   color: #5E5E5E;
   margin-top: 10px;
 }
+.txthead{
+  background-color: #0D2942; color: white;font-size: 14px;
+}
 .txtsubemp{
   color: #BFBFBF;
   font-size: 12px;
@@ -4700,6 +4772,11 @@ color: #808080;
   font-size: 14px;
   font-style: normal;
   text-align: left;
+  width: 100%;
+}
+.txtcol{
+  white-space: nowrap;display: inline-block;
+  width: 100%;overflow: hidden;text-overflow: ellipsis;
 }
 .limitchar span {
   text-overflow: ellipsis;
