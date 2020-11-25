@@ -41,11 +41,13 @@ html,body
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
     border: 0px;
     outline: none;
+    color:black;
   }
   .form-control:visited{
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
     outline: none;
     border: 0px;
+    color:black;
   }
   .form-control{
     border: 0;
@@ -377,7 +379,9 @@ text-decoration: none;
 }
 /***********************************************************************************************************************/
 @media (min-width: 300px) {
-
+  .edittable input:not(.dashform){
+    max-width: 40px;
+  }
 .externalpad{
   margin:0px 20px;
   left: 0px;
@@ -781,11 +785,17 @@ font-style: normal;
   .over{
     top:-100px;
   }
+  .blogimg{
+    width: 60%;
+  }
   .carheight{
     max-height:45rem;
   }
   .cartxtheight{
     max-height:28rem;
+  }
+  .manimg{
+    width: 13%;
   }
   .sidebarpad{
     padding-bottom: 20px;
@@ -801,6 +811,10 @@ font-style: normal;
     margin-right:0px;
   }
   .supmarright{
+    margin-right:0px;
+  }
+  .suprightbarpad{
+    padding-bottom: 1600px;
     margin-right:0px;
   }
   .bover-about{
@@ -912,6 +926,9 @@ margin:0px 120px;
 }
  /***********************************************************************************************************************/
 @media (min-width: 400px) {
+  .edittable input:not(.dashform){
+    max-width: 80px;
+  }
 .externalpad{
   margin:0px 100px;
   left: 30px;
@@ -1275,6 +1292,9 @@ font-style: normal;
   .over{
     top:-100px;
   }
+  .blogimg{
+    width: 40%;
+  }
   .carheight{
     max-height:45rem;
   }
@@ -1361,6 +1381,9 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 500px) {
+  .edittable input:not(.dashform){
+    max-width: 100px;
+  }
   .limitchar{
     max-width: 28rem;
 }
@@ -1750,6 +1773,7 @@ font-style: normal;
   .over{
     top:-100px;
   }
+  
   .carheight{
     max-height:55rem;
   }
@@ -1836,6 +1860,12 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
+  .edittable input:not(.dashform){
+    max-width: 140px;
+  }
+  .txtwidth{
+    max-width:250px;
+       }
   .limitchar{
     max-width: 18rem;
 }
@@ -2237,6 +2267,9 @@ font-style: normal;
   .sidebarpad{
     padding-bottom: 400px;
   }
+  .blogimg{
+    width: 40%;
+  }
   /*career.html circle image*/
   .cirimg{
     width:500px;
@@ -2252,12 +2285,12 @@ font-style: normal;
     padding-bottom: 600px;
     margin-right:-12px;
   }
-  .suprightbarpad{
-    padding-bottom: 600px;
-    margin-right:0px;
-  }
   .supmarright{
-    margin-right:0px;
+    margin-right:-12px;
+  }
+  .suprightbarpad{
+    padding-bottom: 1600px;
+    margin-right:-12px;
   }
   .marright{
     margin-right:-17px;
@@ -2355,6 +2388,12 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 768px) {
+  .edittable input:not(.dashform){
+    max-width: 200px;
+  }
+  .txtwidth{
+    max-width:320px;
+       }
   .limitchar{
     max-width: 27rem;
 }
@@ -2755,6 +2794,9 @@ font-style: normal;
   .supmarright{
     margin-right:-12px;
   }
+  .blogimg{
+    width: 75%;
+  }
     /*career.html circle image*/
     .cirimg{
       width:500px;
@@ -2915,6 +2957,9 @@ table.firhome tr td:nth-child(4) input {
  }
  /***********************************************************************************************************************/
  @media (min-width: 992px) {
+  .txtwidth{
+    max-width:400px;
+       }
   .limitchar{
     max-width: 37rem;
 }
@@ -3248,6 +3293,12 @@ font-style: normal;
   .sidebarpad{
     padding-bottom: 700px;
   }
+  .manimg{
+    width: 10%;
+  }
+  .blogimg{
+    width: 75%;
+  }
     /*career.html circle image*/
     .cirimg{
       width:560px;
@@ -3451,6 +3502,12 @@ table.firhome tr td:nth-child(4) input {
  }
 /***********************************************************************************************************************/
  @media (min-width: 1200px) {
+   .txtwidth{
+max-width:370px;
+   }
+   .edittable input:not(.dashform){
+     max-width: 200px;
+   }
   .limitchar{
     max-width: 45rem;
 }
@@ -3769,6 +3826,12 @@ font-size: 20px;
 .cartxtheight{
   max-height:25rem;
 }
+.manimg{
+  width: 12%;
+}
+.blogimg{
+  width: 75%;
+}
   /*career.html circle image*/
   .cirimg{
     width:580px;
@@ -4039,7 +4102,7 @@ table.firhome tr td:nth-child(4) input {
 }
 .bt{
   background-color: #0D2942;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 .bt:hover{
 background-color:  #0BB44F;
@@ -4316,7 +4379,7 @@ tr{
 .btnsave:hover{
   padding-left: 40px;
   padding-right: 40px;
-  background-color:gainsboro;
+  background-color:#757575;
   color:black;
 }
 
@@ -4341,9 +4404,11 @@ tr{
 /*seeker dashboard*/
 .seekdiv
 {
- min-width: max-content; height: 60px; border-radius: 15px 15px 0px 0px;
+ min-width: max-content; height: 45px; border-radius: 15px 15px 0px 0px;
  margin-left:0px;
  margin-right:0px;
+ background-color: #0BB44F;
+ font-size: 18px;
 }
 .btnseeker{
   color:white;
@@ -4356,6 +4421,18 @@ tr{
   color:white;
   font-size: 13px;
 }
+.seekjobsdiv.btn{
+  background-color: #0D2942;
+  border-radius: 6px;
+  color:white;
+  font-size: 13px;
+}
+.seekjobsdiv.btn:hover{
+  background-color: #757575;
+  border-radius: 6px;
+  color:white;
+  font-size: 13px;
+}
 .dashtxt1{
   font-size: 13px;
   color: #757575;
@@ -4364,15 +4441,35 @@ tr{
   font-size: 13px;
   color: #404040;
 }
+.supertxt{
+  color: #757575;
+}
 .seekdeldiv{
   background-color: #d9dbda;
   border-radius: 6px;
 }
-.seekdeltable td, .seekdeltable input{
-  color: #5E5E5E;
+.seekdeltable td{
   text-align: center;
   vertical-align: middle;
   border: 2px solid #d9dbda;
+  color: #757575;
+}
+.myDiv table th{
+  text-align: center;
+  vertical-align: middle;
+}
+.seekdeltable input{
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid #d9dbda;
+}
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #F3F3F3 inset !important;
+    box-shadow: 0 0 0 30px #F3F3F3 inset !important;
 }
 /*.seekdeltable tr{
   border: 2px solid #d9dbda;
@@ -4412,8 +4509,12 @@ tr{
 .btnupdate{
   background-color:#0D2942; 
   color:white;
-  border-radius: 10px;
+  border-radius: 5px;
 }
+.txtmanage{
+  font-size: 14px;border-radius: 10px;text-align: left;max-width: 140px;
+}
+
 .dashnav a:active{
   font-weight: 900;
 }
@@ -4510,18 +4611,31 @@ option:first-child
 {
     color: #ccc;
 }
+.dashinput{
+  background-color: #F3F3F3;
+  font-size: 12px;
+  color: #000;
+}
+.dashinput:focus { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  background-color: #F3F3F3;
+  color: #000;
+}
+.dashinput::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+font-size: 12px;
+color:black;
+}
 .dashform{
   background-color: #F3F3F3;
-  
+  font-size: 12px;
+  color: #000;
 }
 .dashform:focus { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    opacity: 1; /* Firefox */
     background-color: #F3F3F3;
+    color: #000;
 }
 .dashform::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  opacity: 0.5; /* Firefox */
   font-size: 12px;
-  color:black;
+  color: #404040;
 }
 /*
 .dashformselect{
@@ -4553,16 +4667,12 @@ select.dashformselect, select.dashformselect:focus{
   background-position-x: 100%;
   background-position-y: 5px;
   background-color: #F3F3F3;
-  color: black;
+  color: #5E5E5E;
   padding-top: 0px;
-  opacity: 0.6;
   padding-bottom: 0px;
   border-radius: 5px;
 }
-select.dashformselect:focus{
-  opacity: 1;
-}
-}
+
 .comment {
   position: relative;
   background-color: #fff;
@@ -4839,3 +4949,47 @@ border-radius: 2px;
   outline: none !important;
   border: 1px solid #c2c0c0 !important;
 }
+
+/*radio button*/
+.custom-control-label:before {
+  background-color: white;
+  border: 4px solid #0D2942;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+  background-color: #0BB44F;
+  border: 4px solid #0D2942;
+  border-radius: 20px;
+  outline:#0D2942;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+  box-shadow: none !important;
+  outline: none !important;
+  background: #0BB44F;
+  border-radius: 20px;
+  border: 4px solid #0D2942;
+}
+/** focus shadow **/
+.custom-radio .custom-control-input:focus~.custom-control-label::before {
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: #0BB44F;
+  border: 4px solid #0D2942;
+}
+.coltext{
+  color: #5E5E5E;
+}
+.sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #0D2942;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+        }
+        .sidenav a{
+          transition: 0.1s;
+        }
