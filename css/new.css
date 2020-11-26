@@ -379,9 +379,6 @@ text-decoration: none;
 }
 /***********************************************************************************************************************/
 @media (min-width: 300px) {
-  .edittable input:not(.dashform){
-    max-width: 40px;
-  }
 .externalpad{
   margin:0px 20px;
   left: 0px;
@@ -804,11 +801,10 @@ font-style: normal;
     padding-bottom: 30px;
   }
   .rightbarpad{
-    padding-bottom: 600px;
     margin-right:12px;
   }
   .marright{
-    margin-right:0px;
+    margin-right:12px;
   }
   .supmarright{
     margin-right:0px;
@@ -926,9 +922,7 @@ margin:0px 120px;
 }
  /***********************************************************************************************************************/
 @media (min-width: 400px) {
-  .edittable input:not(.dashform){
-    max-width: 80px;
-  }
+  
 .externalpad{
   margin:0px 100px;
   left: 30px;
@@ -1381,9 +1375,6 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 500px) {
-  .edittable input:not(.dashform){
-    max-width: 100px;
-  }
   .limitchar{
     max-width: 28rem;
 }
@@ -1860,12 +1851,6 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 576px) {
-  .edittable input:not(.dashform){
-    max-width: 140px;
-  }
-  .txtwidth{
-    max-width:250px;
-       }
   .limitchar{
     max-width: 18rem;
 }
@@ -2282,8 +2267,13 @@ font-style: normal;
     padding-bottom: 30px;
   }
   .rightbarpad{
-    padding-bottom: 600px;
     margin-right:-12px;
+  }
+  .dashbarpad{
+    padding-bottom: 300px;
+  }
+  .dashbarpad{
+    padding-bottom: 800px;
   }
   .supmarright{
     margin-right:-12px;
@@ -2388,9 +2378,6 @@ padding-top: 10px;
  }
 /***********************************************************************************************************************/
 @media (min-width: 768px) {
-  .edittable input:not(.dashform){
-    max-width: 200px;
-  }
   .txtwidth{
     max-width:320px;
        }
@@ -2781,10 +2768,12 @@ font-style: normal;
     padding-bottom: 600px;
   }
   .leftbarpad{
-    padding-bottom: 600px;
+    padding-bottom: 400px;
+  }
+  .dashbarpad{
+    padding-bottom: 800px;
   }
   .rightbarpad{
-    padding-bottom: 1000px;
     margin-right:-12px;
   }
   .suprightbarpad{
@@ -4448,6 +4437,16 @@ tr{
   background-color: #d9dbda;
   border-radius: 6px;
 }
+.maintainform{
+  font-size: 14px;
+  color: #757575;
+}
+.maintainform .custom-radio label, output{
+  color: #404040;
+}
+.maintainform .col-md-6{
+padding: 0px;
+}
 .seekdeltable td{
   text-align: center;
   vertical-align: middle;
@@ -4480,6 +4479,17 @@ input:-webkit-autofill:active  {
 .seekdeltable tbody tr{
   border: 2px solid #d9dbda;
 }
+.seekdeltable td:not(.dashformselect){
+  word-break: break-all;
+  }
+  .seekdeltable thead td{
+    padding-left:3px;
+    padding-right: 3px;
+    }
+  .edittable td input:not(.dashform){
+    width: 100%;
+    background-color: #707070;
+    }
 .seekdeltable{
   border-collapse: collapse;
   border-style: hidden;/*hides the boundary*/
@@ -4525,8 +4535,8 @@ input:-webkit-autofill:active  {
         select.dashformact:focus {
           background-color: #0BB44F;
           color: white;
-          width: 100px;
           height:22px;
+          width: 90%;
           padding-top: 0px;
           padding-bottom: 0px;
           border-radius: 5px;
@@ -4547,12 +4557,13 @@ input:-webkit-autofill:active  {
           background-position-x: 100%;
           background-color: #0BB44F;
           color: white;
-          width: 100px;
           height:22px;
+          width: 90%;
           padding-top: 0px;
           padding-bottom: 0px;
           border-radius: 5px;
         }
+        
 /*dashboard admin*/
 .just-padding {
   padding: 0px 15px;
