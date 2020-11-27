@@ -71,8 +71,11 @@
                 $('#' + x1[1] + 's').addClass("boldtext");
             }
 
-            $("#tabs li a").click(function (event) {
-                $("#tabs li a").removeClass('boldtext');
+            
+            $(".nav-item:first-child").addClass('boldtext'); 
+
+            $(".nav-item").click(function (event) {
+                $(".nav-item").removeClass('boldtext');
                 $(this).addClass("boldtext");
                 $(".sidenav").css('width', '0');
             });
@@ -689,8 +692,8 @@
 
                                 <div class="dashnav mt-3">
                                     <li class="nav-item normaltext">
-                                        <a class="nav-link pl-md-2 pl-lg-3" id="approvejobss" href="#approvejobs"
-                                            role="button">
+                                        <a class="nav-link pl-md-2 pl-lg-3" role="button" data-toggle="collapse" data-target="#approvejobs"
+                                            aria-expanded="false" aria-controls="approvejobs">
                                             <div class="d-inline-block" style="width: 15%;">
                                                 <img src="img/approvejob.png">
                                             </div>
@@ -723,7 +726,8 @@
                                         </a>
                                         <div class="collapse mb-3" id="expandnav" style="padding-left:40px;">
                                             <div class="row col-12 ">
-                                                <a class="w-100" id="manageuserprofiless" href="#manageuserprofiles">
+                                                <a class="w-100" role="button" data-toggle="collapse" data-target="#manageuserprofiles"
+                                                aria-expanded="false" aria-controls="manageuserprofiles">
                                                     <div class="d-inline-block" style="width:15%;">
                                                         <img src="img/subadmin.png">
                                                     </div>
@@ -733,7 +737,8 @@
                                                 </a>
                                             </div>
                                             <div class="row col-12 mt-2">
-                                                <a class="w-100" id="manageusercompaniess" href="#managecompanies">
+                                                <a class="w-100" role="button" data-toggle="collapse" data-target="#managecompanies"
+                                                aria-expanded="false" aria-controls="manageusercompanies">
                                                     <div class="d-inline-block" style="width:15%;">
                                                         <img src="img/companies.png">
                                                     </div>
@@ -746,8 +751,9 @@
                                     </li>
 
                                     <li class="nav-item normaltext">
-                                        <a class="nav-link pl-md-2 pl-lg-3" id="manageblogss" href="#manageblogs"
-                                            role="button">
+                                        <a class="nav-link pl-md-2 pl-lg-3"
+                                            role="button" data-toggle="collapse" data-target="#manageblogs"
+                                            aria-expanded="false" aria-controls="manageblogs">
                                             <div class="d-inline-block" style="width: 15%;">
                                                 <img src="img/manageblog.png" class="blogimg">
                                             </div>
@@ -758,8 +764,9 @@
                                     </li>
 
                                     <li class="nav-item normaltext">
-                                        <a class="nav-link pl-md-2 pl-lg-3" id="subadmins" href="#subadmin"
-                                            role="button">
+                                        <a class="nav-link pl-md-2 pl-lg-3"
+                                            role="button" data-toggle="collapse" data-target="#subadmin"
+                                            aria-expanded="false" aria-controls="subadmin">
                                             <div class="d-inline-block" style="width: 15%;">
                                                 <img src="img/sunad.png">
                                             </div>
@@ -770,8 +777,9 @@
                                     </li>
 
                                     <li class="nav-item normaltext">
-                                        <a class="nav-link pl-md-2 pl-lg-3" id="fakereportss" href="#fakereports"
-                                            role="button">
+                                        <a class="nav-link pl-md-2 pl-lg-3"
+                                            role="button" data-toggle="collapse" data-target="#fakereports"
+                                            aria-expanded="false" aria-controls="fakereports">
                                             <div class="d-inline-block" style="width: 15%;">
                                                 <img src="img/fakerep.png">
                                             </div>
@@ -796,8 +804,8 @@
 
                                 <div class="dashnav">
                                     <li class="nav-item normaltext">
-                                        <a class="nav-link pl-md-2 pl-lg-3" id="employeemaintainprofiles"
-                                            href="#employeemaintainprofile" role="button">
+                                        <a class="nav-link pl-md-2 pl-lg-3" role="button" data-toggle="collapse" data-target="#employeemaintainprofile"
+                                            aria-expanded="false" aria-controls="employeemaintainprofile">
                                             <div class="d-inline-block" style="width: 15%;">
                                                 <img src="img/maintain.png">
                                             </div>
@@ -807,8 +815,9 @@
                                         </a>
                                     </li>
                                     <li class="nav-item normaltext">
-                                        <a class="nav-link pl-md-2 pl-lg-3" id="appliedjobss" href="#appliedjobs"
-                                            role="button">
+                                        <a class="nav-link pl-md-2 pl-lg-3"
+                                            role="button" data-toggle="collapse" data-target="#appliedjobs"
+                                            aria-expanded="false" aria-controls="appliedjobs">
                                             <div class="d-inline-block" style="width: 15%;">
                                                 <img src="img/applied.png">
                                             </div>
@@ -818,8 +827,9 @@
                                         </a>
                                     </li>
                                     <li class="nav-item normaltext">
-                                        <a class="nav-link pl-md-2 pl-lg-3" id="empreportfakes" href="#empreportfake"
-                                            role="button">
+                                        <a class="nav-link pl-md-2 pl-lg-3"
+                                            role="button" data-toggle="collapse" data-target="#empreportfake"
+                                            aria-expanded="false" aria-controls="empreportfake">
                                             <div class="d-inline-block" style="width: 15%;">
                                                 <img src="img/report.png">
                                             </div>
@@ -829,8 +839,9 @@
                                         </a>
                                     </li>
                                     <li class="nav-item normaltext">
-                                        <a class="nav-link pl-md-2 pl-lg-3" id="deleteprofiles" href="#deleteprofile"
-                                            role="button">
+                                        <a class="nav-link pl-md-2 pl-lg-3"
+                                            role="button" data-toggle="collapse" data-target="#deleteprofile"
+                                            aria-expanded="false" aria-controls="deleteprofile">
                                             <div class="d-inline-block" style="width: 15%;">
                                                 <img src="img/delete.png">
                                             </div>
@@ -854,8 +865,8 @@
                                 <!--------------------------------------Vertical navigation bar------------------------------------------->
                                 <div class="dashnav">
                                     <li class="nav-item normaltext">
-                                        <a class="nav-link pl-md-2 pl-lg-3" id="employermaintainprofiles"
-                                            href="#employermaintainprofile" role="button">
+                                        <a class="nav-link pl-md-2 pl-lg-3" role="button" data-toggle="collapse" data-target="#employermaintainprofile"
+                                            aria-expanded="false" aria-controls="employermaintainprofile">
                                             <div class="d-inline-block" style="width: 15%;">
                                                 <img src="img/maipro.png">
                                             </div>
@@ -865,8 +876,9 @@
                                         </a>
                                     </li>
                                     <li class="nav-item normaltext">
-                                        <a class="nav-link pl-md-2 pl-lg-3" id="jobsposteds" href="#jobsposted"
-                                            role="button">
+                                        <a class="nav-link pl-md-2 pl-lg-3"
+                                            role="button" data-toggle="collapse" data-target="#jobsposted"
+                                            aria-expanded="false" aria-controls="jobsposted">
                                             <div class="d-inline-block" style="width: 15%;">
                                                 <img src="img/jobposted.png">
                                             </div>
@@ -876,8 +888,8 @@
                                         </a>
                                     </li>
                                     <li class="nav-item normaltext">
-                                        <a class="nav-link pl-md-2 pl-lg-3" id="employerreportfakes"
-                                            href="#employerreportfake" role="button">
+                                        <a class="nav-link pl-md-2 pl-lg-3" role="button" data-toggle="collapse" data-target="#employerreportfake"
+                                            aria-expanded="false" aria-controls="employerreportfake">
                                             <div class="d-inline-block" style="width: 15%;">
                                                 <img src="img/report.png">
                                             </div>

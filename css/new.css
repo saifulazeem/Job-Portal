@@ -4170,10 +4170,10 @@ font-size: 12px;
   color:  #0BB44F;
 }
 
-/*internal linking*/
+/*internal linking
 .myDiv{
   display: none;
-}
+}*/
 .myDiv a{
   text-decoration: none;
 }
