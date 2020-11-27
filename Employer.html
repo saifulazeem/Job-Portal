@@ -21,6 +21,15 @@
             box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
             border-radius: 9px;
         }
+
+        .txtdescemp {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
     </style>
     <script>
         $(document).ready(function () {
@@ -48,10 +57,11 @@
                 }
             });
 
-            $('.txtdescemp').map(function () {
+            /*$('.txtdescemp').map(function () {
                 var myval = ($(this).attr('id'));
                 $('#' + myval).text($('#' + myval).text().substring(0, 550) + '...');
-            });
+            });*/
+
         });
     </script>
 </head>
@@ -109,133 +119,137 @@
 
         <!------------------------------------------Body---------------------------------------------------------->
         <div class="container my-5">
-            <div class="row col-12">
-                <!--------------Large and Medium View--------->
-                <div class="col-lg-12 col-md-12 table-responsive d-lg-block d-md-block d-sm-none d-none">
-                    <table class="table table-borderless table-sm fir firemp" style="border: none;" cellspacing="0"
-                        cellpadding="0">
-                        <tbody>
-                            <tr>
-                                <!--------First row------------->
-                                <td class=" p-0">
-                                    <p class="float-left" style="margin:0px;">What Job You Are Looking
-                                        For?<img src="img/arrowblack.png" class="img-fluid">
-                                    </p>
-                                </td>
-                                <td class=" p-0">
-                                    <p class="float-left" style="margin:0px;">Where?<img src="img/arrowblack.png"
-                                            class="img-fluid">
-                                    </p>
-                                </td>
-                                <td class=" p-0">
-                                    <p class="float-left" style="margin:0px;">Categories<img src="img/arrowblack.png"
-                                            class="img-fluid"></p>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <!---------Second row------------->
-                                <!------------------------FORM------------------------------------->
-                                <form class="form-inline">
-                                    <td class=" p-0">
-                                        <input type="text" class="form-control empsearch " id="keywords"
-                                            placeholder="Keywords">
-                                    </td>
-                                    <td class=" p-0">
-                                        <input type="text" class="form-control empsearch" id="location"
-                                            placeholder="Location">
-                                    </td>
-                                    <td class="buttonIn w-100 p-0">
-                                        <input type="text" class="form-control empsearch" id="categories"
-                                            placeholder="All Categories">
-                                        <button id="empsearchbtn" class="btn btn-success homebtn">
-                                            <span class="search">Search</span>
-                                            <img src="img/search.png" class="img-fluid imgsearch">
-                                        </button>
-                                    </td>
-                                </form>
-                            </tr>
-                            <tr>
-                                <!--------Third row------------->
-                                <td colspan="3" class="text-dark">
-                                    <span class="float-left textadvance">Need more search options?<a href="#"
-                                            class="advancesearch" style="text-decoration: none;">&nbsp;ADVANCE
-                                            SEARCH</a></span>
-                                </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!--------------Small and Very Small View--------->
-                <div class="col-sm-12 col-12 table-responsive d-lg-none d-md-none d-sm-block d-block">
-                    <table class="mx-2 mx-sm-0 mx-md-0 mx-lg-0 mx-xl-0 table table-borderless table-sm sec ">
-                        <form class="form-inline">
+            <div class="container-fluid">
+                <div class="row">
+                    <!--------------Large and Medium View--------->
+                    <div class="col-lg-12 col-md-12 table-responsive d-lg-block d-md-block d-sm-none d-none">
+                        <table class="table table-borderless table-sm fir firemp" style="border: none;" cellspacing="0"
+                            cellpadding="0">
                             <tbody>
                                 <tr>
-                                    <td>
-                                        <p class="text-dark float-left" style="margin:0px;">What Job You Are
-                                            Looking
-                                            For?
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class=" p-0 ">
-                                        <input type="text" class="form-control empsearch w-100" id="keywords"
-                                            placeholder="Keywords">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="text-dark float-left pt-3" style="margin:0px;">Where?
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
+                                    <!--------First row------------->
                                     <td class=" p-0">
-                                        <input type="text" class="form-control empsearch  w-100" id="location"
-                                            placeholder="Location">
+                                        <p class="float-left" style="margin:0px;">What Job You Are Looking
+                                            For?<img src="img/arrowblack.png" class="img-fluid">
+                                        </p>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="text-dark float-left pt-3" style="margin:0px;">Categories</p>
+                                    <td class=" p-0">
+                                        <p class="float-left" style="margin:0px;">Where?<img src="img/arrowblack.png"
+                                                class="img-fluid">
+                                        </p>
+                                    </td>
+                                    <td class=" p-0">
+                                        <p class="float-left" style="margin:0px;">Categories<img
+                                                src="img/arrowblack.png" class="img-fluid"></p>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class="p-0">
-                                        <input type="text" class="form-control empsearch w-100" id="categories"
-                                            placeholder="All Categories">
-                                    </td>
+                                    <!---------Second row------------->
+                                    <!------------------------FORM------------------------------------->
+                                    <form class="form-inline">
+                                        <td class=" p-0">
+                                            <input type="text" class="form-control empsearch " id="keywords"
+                                                placeholder="Keywords">
+                                        </td>
+                                        <td class=" p-0">
+                                            <input type="text" class="form-control empsearch" id="location"
+                                                placeholder="Location">
+                                        </td>
+                                        <td class="buttonIn w-100 p-0">
+                                            <input type="text" class="form-control empsearch" id="categories"
+                                                placeholder="All Categories">
+                                            <button id="empsearchbtn" class="btn btn-success homebtn">
+                                                <span class="search">Search</span>
+                                                <img src="img/search.png" class="img-fluid imgsearch">
+                                            </button>
+                                        </td>
+                                    </form>
                                 </tr>
                                 <tr>
                                     <!--------Third row------------->
                                     <td colspan="3" class="text-dark">
-                                        <span class="float-left">Need more search options?<a href="#"
+                                        <span class="float-left textadvance">Need more search options?<a href="#"
                                                 class="advancesearch" style="text-decoration: none;">&nbsp;ADVANCE
                                                 SEARCH</a></span>
                                     </td>
                                     <td></td>
                                     <td></td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <button class="btn btn-success homebt mt-1">
-                                            <span class="search">Search</span>
-                                            <img src="img/search.png" class="img-fluid imgsearch">
-                                        </button>
-                                    </td>
-                                </tr>
                             </tbody>
-                        </form>
-                    </table>
+                        </table>
+                    </div>
+
+                    <!--------------Small and Very Small View--------->
+                    <div class="col-sm-12 col-12 table-responsive d-lg-none d-md-none d-sm-block d-block">
+                        <table class="mx-2 mx-sm-0 mx-md-0 mx-lg-0 mx-xl-0 table table-borderless table-sm sec ">
+                            <form class="form-inline">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p class="text-dark float-left" style="margin:0px;">What Job You Are
+                                                Looking
+                                                For?
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0 ">
+                                            <input type="text" class="form-control empsearch w-100 featshad"
+                                                id="keywords" placeholder="Keywords">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="text-dark float-left pt-3" style="margin:0px;">Where?
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class=" p-0">
+                                            <input type="text" class="form-control empsearch w-100 featshad"
+                                                id="location" placeholder="Location">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p class="text-dark float-left pt-3" style="margin:0px;">Categories</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-0">
+                                            <input type="text" class="form-control empsearch w-100 featshad"
+                                                id="categories" placeholder="All Categories">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <!--------Third row------------->
+                                        <td class="text-dark">
+                                            <div class="d-flex align-items-center mt-1">
+                                                <span class="text-center">Need more search options?<a href="#"
+                                                        class="advancesearch text-center"
+                                                        style="text-decoration: none;">&nbsp;ADVANCE
+                                                        SEARCH</a></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text-center text-sm-left">
+                                                <button class="btn btn-success homebt ">
+                                                    <span class="search">Search</span>
+                                                    <img src="img/search.png" class="img-fluid imgsearch">
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </form>
+                        </table>
+                    </div>
                 </div>
             </div>
-
 
             <!-------------------------------------NEXT CONTAINER--------------------------->
             <div class="row col-12 px-lg-4 px-xl-3 px-md-1 px-sm-2 px-2 mx-auto text my-4 roun"
@@ -390,7 +404,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txtone">
+                                            <div class="txtdescemp">
                                                 We, at Assignmenthelp.ae, providing the writing services
                                                 to
                                                 the
@@ -417,7 +431,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txttwo">
+                                            <div class="txtdescemp">
                                                 AlphaSights provides bespoke B2B knowledge solutions to leading
                                                 professionals in investment management, private equity, management
                                                 consulting, global
@@ -441,7 +455,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txtthree">
+                                            <div class="txtdescemp">
                                                 Otro de los mejores cursos que ofrecemos es el curso de creación y
                                                 gestión de pymes, o este de competencias de ciberseguridad para
                                                 usuarios. Este curso
@@ -465,7 +479,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txtfour">
+                                            <div class="txtdescemp">
                                                 Aanmeegam (ஆன்மீகம்) is one of the best Tamil Aanmeegam websites. At
                                                 Anmigam, our mission is to distribute the value of worshiping GOD to
                                                 the Tamil
@@ -503,7 +517,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txt2one">
+                                            <div class="txtdescemp">
                                                 We, at Assignmenthelp.ae, providing the writing services
                                                 to
                                                 the
@@ -530,7 +544,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txt2two">
+                                            <div class="txtdescemp">
                                                 AlphaSights provides bespoke B2B knowledge solutions to leading
                                                 professionals in investment management, private equity, management
                                                 consulting, global
@@ -554,7 +568,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txt2three">
+                                            <div class="txtdescemp">
                                                 Otro de los mejores cursos que ofrecemos es el curso de creación y
                                                 gestión de pymes, o este de competencias de ciberseguridad para
                                                 usuarios. Este curso
@@ -578,7 +592,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txt2four">
+                                            <div class="txtdescemp">
                                                 Aanmeegam (ஆன்மீகம்) is one of the best Tamil Aanmeegam websites. At
                                                 Anmigam, our mission is to distribute the value of worshiping GOD to
                                                 the Tamil
@@ -616,7 +630,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txt3one">
+                                            <div class="txtdescemp">
                                                 We, at Assignmenthelp.ae, providing the writing services
                                                 to
                                                 the
@@ -643,7 +657,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txt3two">
+                                            <div class="txtdescemp">
                                                 AlphaSights provides bespoke B2B knowledge solutions to leading
                                                 professionals in investment management, private equity, management
                                                 consulting, global
@@ -667,7 +681,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txt3three">
+                                            <div class="txtdescemp">
                                                 Otro de los mejores cursos que ofrecemos es el curso de creación y
                                                 gestión de pymes, o este de competencias de ciberseguridad para
                                                 usuarios. Este curso
@@ -691,7 +705,7 @@
                                                 <img src="img/locgrey.png" class="d-inline">
                                                 <small class="d-inline txtsubemp">Location</small>
                                             </div>
-                                            <div class="txtdescemp" id="txt3four">
+                                            <div class="txtdescemp">
                                                 Aanmeegam (ஆன்மீகம்) is one of the best Tamil Aanmeegam websites. At
                                                 Anmigam, our mission is to distribute the value of worshiping GOD to
                                                 the Tamil
@@ -700,40 +714,14 @@
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="row mx-4 mt-5 d-flex justify-content-center">
-                                <!------------pagination-->
-                                <nav class="d-flex align-text-center justify-content-center ">
-                                    <ul class="pagination d-flex align-items-baseline">
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                        </li>
-                                        <li class="page-item ml-2">
-                                            <a class="page-link active" href="#" tabindex="-1">1</a>
-                                        </li>
-
-                                        <li class="page-item ml-2"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item ml-2"><a class="page-link" href="#">3</a></li>
-                                        <li><span class="dots mx-2 align-self-end">......</span></li>
-                                        <li class="page-item ml-2"><a class="page-link" href="#">10</a></li>
-                                        <li class="page-item ml-2">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <span aria-hidden="true">&raquo;</span>
-                                                <span class="sr-only">Next</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-----------------------------------------------------FOOTER----------------------------------------------------------->
     <footer class="container-fluid foot pb-5 pt-4" style="background-color: #323232; ">
         <div class="container">

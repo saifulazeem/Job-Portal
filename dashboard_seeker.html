@@ -317,7 +317,7 @@
                 <div class="sidenav d-xl-none d-block" id="mySidenav">
                     <div style="min-width: 300px;">
                         <div class="row">
-                            <img src="img/seeker.png" class="my-5 mx-auto d-block dashimg">
+                            <img src="img/seeker.png" class="my-5 mx-auto d-block">
                         </div>
                         <div class="row">
                             <h6 class="mx-auto d-block text-white">John Wick</h6>
@@ -326,23 +326,25 @@
                             <p class="mx-auto pt-3 text-white" style="font-size: 14;">@Username</p>
                         </div>
 
-                        <div class="row text-white my-2 d-flex justify-content-between">
-                            <div class="mx-lg-4 mx-md-2 mx-sm-2 mx-5">
-                                <b>Profile</b>
+                        <div class="text-white d-flex flex-column m-auto" style="width: 85%;">
+                            <div class="mb-2 d-flex justify-content-between">
+                                <div class="">
+                                    <b>Profile</b>
+                                </div>
+                                <div class="">
+                                    25%
+                                </div>
                             </div>
-                            <div class="mx-lg-4 mx-md-2 mx-sm-2 mx-5">
-                                25%
+                            <div class="progress" style="height:5px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                        </div>
-                        <div class="progress mx-lg-3 mx-sm-0 mx-5" style="height:5px">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
 
                         <div class="row d-flex justify-content-start align-items-start">
                             <!----------------------------------------Vertical navigation bar------------------------------------------->
                             <nav class="p-0 col-12 mt-3 navbar text-white">
-                                <ul class="ml-lg-3 ml-md-0 ml-sm-0 ml-5 nav flex-column p-0 col-12" id="tabs">
+                                <ul class="ml-4 nav flex-column p-0 col-12" id="tabs">
                                     <li class="nav-item dashnav normaltext p-0 m-0 mt-2">
                                         <a class="nav-link" role="button" data-toggle="collapse" data-target="#editprofile"
                                             aria-expanded="false" aria-controls="editprofile">
@@ -418,10 +420,10 @@
     <div class="container my-5 pb-5">
         <div class="row">
             <!------------------------------------------Side Bar left---------------------------------------------->
-            <div class="text-white col-3 leftbarpad d-xl-block d-none"
+            <div class="text-white col-3 d-xl-block d-none heightdash"
                 style="background-color: #0D2942; border-radius: 10px;">
                 <div class="row">
-                    <img src="img/seeker.png" class="my-5 mx-auto d-block dashimg">
+                    <img src="img/seeker.png" class="my-5 mx-auto d-block">
                 </div>
                 <div class="row">
                     <h6 class="mx-auto d-block">John Wick</h6>
@@ -502,26 +504,26 @@
             </div>
 
             <!------------------------------------------Side bar right---------------------------------------------->
-            <div class="col my-lg-0 my-md-0 my-sm-0 my-5 ml-3" style="border-radius: 10px;">
+            <div class="col my-lg-0 my-md-0 my-sm-0 my-5 ml-3 heightdash" style="border-radius: 10px;">
                 <!----------------------breadcrumb------------------->
                 <div class="row marright">
                     <nav aria-label="breadcrumb" class="col-12 w-100 m-0 p-0">
                         <ol class="breadcrumb" style="background-color:  #969696;border-radius: 10px 10px 0px 0px;">
-                            <li class="breadcrumb-item "><a class="bfont" href="#">Home</a></li>
+                            <li class="breadcrumb-item "><a class="bfont" href="home.html">Home</a></li>
                             <li class="breadcrumb-item bfont" aria-current="page">JOBS PORTAL Admin Panel</li>
                         </ol>
                     </nav>
                 </div>
 
                 <!------------------------on click divs--------------->
-                <div class="row roun mt-1 rightbarpad dashbarpad" id="myGroup" style="border-radius:10px;">
+                <div class="row roun mt-1 marright" id="myGroup" style="border-radius:10px;min-height: 95%;">
                     <!----------------------edit profile------------------->
                     <div class="collapse show" id="editprofile" data-parent="#myGroup">
-                        <div class="myDiv col">
-                            <p class=" font-weight-bold my-4 m-3" style="color: #797a7a; font-size: 20px;">Employee
+                        <div class="myDiv col px-sm-1 px-0">
+                            <p class=" font-weight-bold my-4 m-2" style="color: #797a7a; font-size: 20px;">Employee
                                 Profile</p>
-                            <div class="col-12 mt-2 px-lg-2 px-md-1 px-sm-0" style=" padding-bottom: 10px;">
-                                <div class="container roun bg-white" style="border-radius: 20px;">
+                            <div class="col-12 mt-2 px-sm-4 px-0" style=" padding-bottom: 10px;">
+                                <div class="container roun" style="border-radius: 20px;">
                                     <div class="row bg-success seekdiv text-white">
                                         <span class="d-flex justify-content-center align-items-center mx-4"><b>Details
                                                 FORM</b></span>
@@ -529,7 +531,7 @@
                                     <form class="needs-validation dashforminput" novalidate>
                                         <!-------------------------------Upload Image----------------------->
                                         <div class="row mx-lg-2 my-lg-3 my-0 mx-md-2 mx-sm-1 mx-3">
-                                            <div class="col-lg-5 col-md-8 col-12 mt-3 py-0 px-lg-1 px-0">
+                                            <div class="col-lg-5 col-8 mt-3 py-0 px-lg-1 px-0">
                                                 <div class="row">
                                                     <span class="text-muted font-weight-bold mx-4">Add Your Image</span>
                                                 </div>
@@ -683,9 +685,9 @@
 
                     <!----------------------resume-------------------------->
                     <div class="collapse" id="resume" data-parent="#myGroup">
-                        <div class="myDiv col">
-                            <p class=" font-weight-bold my-4" style="color: #797a7a; font-size: 20px;">Resume</p>
-                            <div class="col-12 mx-auto my-2 px-lg-2 px-md-1 px-sm-0" style=" padding-bottom: 170px;">
+                        <div class="myDiv col px-sm-3 px-1">
+                            <p class=" font-weight-bold my-4 m-2" style="color: #797a7a; font-size: 20px;">Resume</p>
+                            <div class="col-12 mx-auto my-2 px-sm-4 px-0" style=" padding-bottom: 170px;">
                                 <div class="container roun bg-white" style="border-radius: 20px;">
                                     <form class="needs-validation" novalidate>
                                         <div class="row bg-success seekdiv text-white">
@@ -1271,10 +1273,10 @@
                     </div>
 
                     <!----------------------jobs--------------------------->
-                    <div class="collapse" id="jobs" data-parent="#myGroup">
-                        <div class="myDiv col">
-                            <p class=" font-weight-bold my-4" style="color: #797a7a; font-size: 20px;">Jobs Section</p>
-                            <div class="col-12 mx-auto my-2 px-lg-2 px-md-1 px-sm-0" style=" padding-bottom: 170px;">
+                    <div class="collapse col-12 p-0" id="jobs" data-parent="#myGroup">
+                        <div class="myDiv col px-sm-3 px-1">
+                            <p class=" font-weight-bold my-4 m-2" style="color: #797a7a; font-size: 20px;">Jobs Section</p>
+                            <div class="col-12 mx-auto my-2 px-sm-4 px-0" style=" padding-bottom: 170px;">
                                 <div class="container roun bg-white" style="border-radius: 20px;">
                                     <div class="row bg-success seekdiv text-white">
                                         <span
@@ -2978,10 +2980,10 @@
 
                     <!----------------------delete profile-------------------->
                     <div class="collapse" id="deleteprofile" data-parent="#myGroup">
-                        <div class="myDiv col">
-                            <p class=" font-weight-bold my-4" style="color: #797a7a; font-size: 20px;">Delete Profile
+                        <div class="myDiv col px-sm-4 px-1">
+                            <p class=" font-weight-bold my-4 m-2" style="color: #797a7a; font-size: 20px;">Delete Profile
                             </p>
-                            <div class="col-12 my-2 px-lg-2 px-md-1 px-sm-0" style=" padding-bottom: 170px;">
+                            <div class="col-12 my-2 px-sm-4 px-0" style=" padding-bottom: 170px;">
                                 <div class="roun pb-4" style="border-radius: 15px;">
                                     <div class="row bg-success seekdiv text-white">
                                         <span
