@@ -43,21 +43,11 @@ html,body
     outline: none;
     color:black;
   }
-  .form-control:visited{
+  .form-control{
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
     outline: none;
     border: 0px;
     color:black;
-  }
-  .form-control{
-    border: 0;
-  }
-  input.form-control:-webkit-autofill,
-  input.form-control:-webkit-autofill:hover, 
-  input.form-control:-webkit-autofill:focus, 
-  input.form-control:-webkit-autofill:active  {
-      -webkit-box-shadow: 0 0 0 30px #F3F3F3 inset !important;
-      box-shadow: 0 0 0 30px #F3F3F3 inset !important;
   }
   .valid-feedback,.invalid-feedback {
     text-align: left;
@@ -4098,6 +4088,10 @@ font-size: 12px;
   font-size: 11px;
   color: #808080;
 }
+.formpost{
+  background-color: transparent;
+  opacity: 1;
+}
 .formpost::placeholder{
   color:#939292;
   text-shadow: 0.5px 0.1px #939292;
@@ -4414,13 +4408,26 @@ padding: 0px;
   border: 2px solid #d9dbda;
 }
 /* autofill */
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0 30px #F3F3F3 inset !important;
-    box-shadow: 0 0 0 30px #F3F3F3 inset !important;
-}
+input:-webkit-autofill,input.form-control.f:-webkit-autofill
+input:-webkit-autofill:hover, input.form-control.f:-webkit-autofill:hover
+input:-webkit-autofill:focus, input.form-control.f:-webkit-autofill:focus
+input:-webkit-autofill:active, input.form-control.f:-webkit-autofill:active  {
+    -webkit-box-shadow: 1px 5px 6px 1px rgba(0, 0, 0, 0.1),0 0 0 30px #F3F3F3 inset !important;
+    box-shadow: 1px 5px 6px 1px rgba(0, 0, 0, 0.1),0 0 0 30px #F3F3F3 inset !important;
+outline: none;
+  border: 0px;
+  color:black;
+  }
+input.form-control.formpost:-webkit-autofill,input.form-control.empsearch:-webkit-autofill,input.form-control.homesearch:-webkit-autofill
+input.form-control.formpost:-webkit-autofill:hover, input.form-control.empsearch:-webkit-autofill:hover,input.form-control.homesearch:-webkit-autofill:hover
+input.form-control.formpost:-webkit-autofill:focus, input.form-control.empsearch:-webkit-autofill:focus,input.form-control.homesearch:-webkit-autofill:focus
+input.form-control.formpost:-webkit-autofill:active, input.form-control.empsearch:-webkit-autofill:active,input.form-control.homesearch:-webkit-autofill:active  {
+  -webkit-box-shadow:  1px 5px 6px 1px rgba(0, 0, 0, 0.1), 0 0 0 30px white inset !important;
+  box-shadow:  1px 5px 6px 1px rgba(0, 0, 0, 0.1), 0 0 0 30px white inset !important;
+  outline: none;
+  border: 0px;
+  color:black;
+  }
 /*.seekdeltable tr{
   border: 2px solid #d9dbda;
 }*/
