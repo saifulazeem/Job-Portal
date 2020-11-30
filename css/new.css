@@ -38,20 +38,28 @@ html,body
     outline:none!important;
 }
   .form-control:focus {
-    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 30px #F3F3F3 inset !important ;
     border: 0px;
     outline: none;
     color:black;
   }
   .form-control{
-    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: none ;
     outline: none;
     border: 0px;
     color:black;
   }
+  input.form-control:-webkit-autofill{
+    box-shadow: none ;
+    outline: none;
+    border: 0px;
+    color:black;
+    -webkit-box-shadow: 0 0 0 30px #F3F3F3 inset !important;
+    box-shadow: 0 0 0 30px #F3F3F3 inset !important;
+  }
   .valid-feedback,.invalid-feedback {
     text-align: left;
-    margin-left: 10px;
+     margin-left: 10px;
 }
 
 .n {
@@ -374,6 +382,10 @@ text-decoration: none;
 .container {
   padding: 0px;
 }
+.normalheader{
+  font-size: 12px;
+  text-align: left;
+}
 /***********************************************************************************************************************/
 @media (min-width: 300px) {
   .heightdash{
@@ -595,7 +607,7 @@ text-decoration: none;
   padding-top: 550px;
 }
 .btn1{
-  padding:3px 10px;
+  padding:3px 5px;
 }
 .btn2{
   padding:7px 40px;
@@ -642,28 +654,28 @@ text-decoration: none;
   width:35px;height: 50px;
 }
 .s1div{
-  position: absolute;left:-40px;width:130px;
+  position: absolute;left:-40px;width:130px;border-radius: 4px;padding: 6px;padding-top: 12px;
 }
 .s2{
   position: absolute; left: 135px; top:30px;
   width:35px;height: 50px;
 }
 .s2div{
-  position: absolute;left:-40px;width:130px; top:-15px;
+  position: absolute;left:-40px;width:130px; top:7px;border-radius: 4px;padding: 6px;padding-top: 12px;
 }
 .s3{
   position: absolute; left:60px;top:50px;
   width:35px;height: 50px;
 }
 .s3div{
-  position: absolute;left:-40px;width:130px;top:-15px;
+  position: absolute;left:-40px;width:130px;top:7px;border-radius: 4px;padding: 6px;padding-top: 12px;
 }
 .s4{
   position: absolute; left:210px; top:10px;
   width:35px;height: 50px;
 }
 .s4div{
-  position: absolute;left:-40px;width:130px;top:-15px;
+  position: absolute;left:-40px;width:130px;top:7px;border-radius: 4px;padding: 6px;padding-top: 12px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -1099,7 +1111,7 @@ margin:0px 120px;
   padding-top: 550px;
 }
 .btn1{
-  padding:3px 10px;
+  padding:3px 28px;
 }
 .btn2{
   padding:7px 40px;
@@ -1145,28 +1157,28 @@ margin:0px 120px;
   width:40px;height: 50px;
 }
 .s1div{
-  position: absolute;left:-60px;width:140px;
+  position: absolute;left:-45px;width:130px;border-radius: 4px;padding: 6px;padding-top: 12px;
 }
 .s2{
   position: absolute; left: 190px; top:50px;
   width:40px;height: 50px;
 }
 .s2div{
-  position: absolute;left:-50px;width:140px;top:-20px;
+  position: absolute;left:-45px;width:130px;top:10px;border-radius: 4px;padding: 6px;padding-top: 12px;
 }
 .s3{
   position: absolute; left:70px;top:70px;
   width:40px;height: 50px;
 }
 .s3div{
-  position: absolute;left:-50px;width:140px;top:-21px;
+  position: absolute;left:-50px;width:130px;top:6px;border-radius: 4px;padding: 6px;padding-top: 12px;
 }
 .s4{
   position: absolute; left:290px; top:30px;
   width:40px;height: 50px;
 }
 .s4div{
-  position: absolute;left:-55px;width:140px;
+  position: absolute;left:-45px;width:130px;top:10px;border-radius: 4px;padding: 6px;padding-top: 12px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -1582,7 +1594,7 @@ padding-top: 10px;
   padding-top: 340px;
 }
 .btn1{
-  padding:7px 20px;
+  padding:7px 45px;
 }
 .btn2{
   padding:7px 50px;
@@ -1627,28 +1639,28 @@ padding-top: 10px;
   width:50px;height: 50px;
 }
 .s1div{
-  position: absolute;left:-40px;width:140px;top:8px;
+  position: absolute;left:-40px;width:140px;top:8px;border-radius: 6px;padding: 6px;padding-top: 12px;
 }
 .s2{
   position: absolute; left: 230px; top:80px;
   width:50px;height: 50px;
 }
 .s2div{
-  position: absolute;left:-40px;width:140px;top:-19px;
+  position: absolute;left:-40px;width:140px;top:8px;border-radius: 6px;padding: 6px;padding-top: 12px;
 }
 .s3{
   position: absolute; left:100px;top:90px;
   width:50px;height: 50px;
 }
 .s3div{
-  position: absolute;left:-40px;width:140px;top:-19px;
+  position: absolute;left:-40px;width:140px;top:4px;border-radius: 6px;padding: 6px;padding-top: 12px;
 }
 .s4{
   position: absolute; left:370px; top:30px;
   width:50px;height: 50px;
 }
 .s4div{
-  position: absolute;left:-40px;width:140px;top:-19px;
+  position: absolute;left:-40px;width:140px;top:10px;border-radius: 6px;padding: 6px;padding-top: 12px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -2081,7 +2093,7 @@ padding-top: 10px;
   content:"";
   position: absolute;
   top:-10px;
-  left:100px;
+  left:70px;
   margin:auto;
   height: 20px;
   width: 20px;
@@ -2102,28 +2114,28 @@ padding-top: 10px;
   width:50px;height: 70px;
 }
 .s1div{
-  position: absolute;left:-90px;width:220px;top:10px;
+  position: absolute;left:-55px;width:180px;top:10px;border-radius: 8px;padding: 6px;padding-top: 12px;
 }
 .s2{
   position: absolute; left: 280px; top:90px;
   width:50px;height: 70px;
 }
 .s2div{
-  position: absolute;left:-80px;width:220px;top:-20px;
+  position: absolute;left:-60px;width:180px;top:5px;border-radius: 8px;padding: 6px;padding-top: 12px;
 }
 .s3{
   position: absolute; left:130px;top:130px;
   width:50px;height: 70px;
 }
 .s3div{
-  position: absolute;left:-80px;width:220px;top:-20px;
+  position: absolute;left:-60px;width:180px;top:4px;border-radius: 8px;padding: 6px;padding-top: 12px;
 }
 .s4{
   position: absolute; left:400px; top:30px;
   width:50px;height: 70px;
 }
 .s4div{
-  position: absolute;left:-80px;width:220px;top:-20px;
+  position: absolute;left:-60px;width:180px;top:5px;border-radius: 8px;padding: 6px;padding-top: 12px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -2319,7 +2331,7 @@ padding-top: 10px;
   top: -800px;
 }
 .btn1{
-  padding:7px 25px;
+  padding:7px 45px;
 }
 .btn2{
   padding:7px 50px;
@@ -2537,7 +2549,7 @@ padding-top: 10px;
   font-size: 20px;
 }
 .btn1{
-  padding:7px 35px;
+  padding:5px 45px;
 }
 .btn2{
   padding:7px 50px;
@@ -2577,11 +2589,11 @@ padding-top: 10px;
 .comment::before{
   content:"";
   position: absolute;
-  top:-16px;
-  left:105px;
+  top:-12px;
+  left:75px;
   margin:auto;
   height: 30px;
-  width: 30px;
+  width: 20px;
   border:1px solid #fff;
   transform:rotate(45deg);
   background-color:  #fff;
@@ -2599,28 +2611,28 @@ padding-top: 10px;
   height: 80px; width: 70px;
 }
 .s1div{
-  position: absolute;left:-90px;width:230px; top:10px;
+  position: absolute;left:-55px;width:180px; top:10px;border-radius: 8px;padding: 6px;padding-top: 12px;
 }
 .s2{
   position: absolute; left: 380px; top:90px;
   height: 80px; width: 70px;
 }
 .s2div{
-  position: absolute;left:-85px;width:230px;top:-17px;
+  position: absolute;left:-55px;width:180px;top:10px;border-radius: 8px;padding: 6px;padding-top: 12px;
 }
 .s3{
   position: absolute; left:160px;top:180px;
   height: 80px; width: 70px;
 }
 .s3div{
-  position: absolute;left:-80px;width:230px;top:-18px;
+  position: absolute;left:-60px;width:180px;top:10px;border-radius: 8px;padding: 6px;padding-top: 12px;
 }
 .s4{
   position: absolute; left:570px; top:30px;
   height: 80px; width: 70px;
 }
 .s4div{
-  position: absolute;left:-80px;width:230px;top:-8px;
+  position: absolute;left:-60px;width:180px;top:10px;border-radius: 8px;padding: 6px;padding-top: 12px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -2856,11 +2868,9 @@ table.sec tr td:nth-child(4) input {
 }
 table.firemp tr td:nth-child(4) input {
   padding-right: 95px;
-  border-radius: 0px;
 }
 table.firhome tr td:nth-child(4) input {
   padding-right: 105px;
-  border-radius: 0px;
 }
 .addhome{
   margin-left: 0px;
@@ -3072,7 +3082,7 @@ table.firhome tr td:nth-child(4) input {
   content:"";
   position: absolute;
   top:-10px;
-  left:115px;
+  left:95px;
   margin:auto;
   height: 25px;
   width: 25px;
@@ -3093,28 +3103,28 @@ table.firhome tr td:nth-child(4) input {
   height: 90px; width: 90px;
 }
 .s1div{
-  position: absolute;left:-100px;width:240px; top:13px;
+  position: absolute;left:-80px;width:200px; top:4px;border-radius: 10px;padding: 9px;padding-top: 12px;
 }
 .s2{
   position: absolute; left: 550px; top:100px;
   height: 90px; width: 90px;
 }
 .s2div{
-  position: absolute;left:-100px;width:240px; top:-13px;
+  position: absolute;left:-60px;width:200px; top:4px;border-radius: 10px;padding: 9px;padding-top: 12px;
 }
 .s3{
   position: absolute; left:270px;top:160px;
   height: 90px; width: 90px;
 }
 .s3div{
-  position: absolute;left:-100px;width:240px; top:-15px;
+  position: absolute;left:-60px;width:200px; top:4px;border-radius: 10px;padding: 9px;padding-top: 12px;
 }
 .s4{
   position: absolute; left:740px; top:30px;
   height: 90px; width: 90px;
 }
 .s4div{
-  position: absolute;left:-100px;width:240px; top:-13px;
+  position: absolute;left:-60px;width:200px; top:4px;border-radius: 10px;padding: 9px;padding-top: 12px;
 }
 /*Alert form in home.html and about.html*/ 
 .formalert{
@@ -3375,11 +3385,9 @@ table.sec tr td:nth-child(4) input {
 }
 table.firemp tr td:nth-child(4) input {
   padding-right: 115px;
-  border-radius: 0px;
 }
 table.firhome tr td:nth-child(4) input {
   padding-right: 125px;
-  border-radius: 0px;
 }
 .addhome{
   margin-left: 0px;
@@ -3573,28 +3581,28 @@ max-width:370px;
   width:100px;height: 100px;
 }
 .s1div{
-  position: absolute;left:-70px;width:250px;top:13px;
+  position: absolute;left:-70px;width:220px;top:13px;border-radius: 10px;padding: 9px;padding-top: 12px;
 }
 .s2{
   position: absolute; left: 575px; top:150px;
   width:100px;height: 100px;
 }
 .s2div{
-  position: absolute;left:-70px;width:250px;top:-12px;
+  position: absolute;left:-70px;width:220px;top:10px;border-radius: 10px;padding: 9px;padding-top: 12px;
 }
 .s3{
   position: absolute; left:330px;top:190px;
   width:100px;height: 100px;
 }
 .s3div{
-  position: absolute;left:-70px;width:250px;top:-12px;
+  position: absolute;left:-70px;width:220px;top:10px;border-radius: 10px;padding: 9px;padding-top: 12px;
 }
 .s4{
   position: absolute; left:790px; top:30px;
   width:100px;height: 100px;
 }
 .s4div{
-  position: absolute;left:-70px;width:250px;top:-12px;
+  position: absolute;left:-70px;width:220px;top:10px;border-radius: 10px;padding: 9px;padding-top: 12px;
 }
 /*home.html main img top*/ 
 .homeimg{
@@ -3904,11 +3912,9 @@ margin-bottom: 80px;
 
 table.firemp tr td:nth-child(4) input {
   padding-right: 130px;
-  border-radius: 0px;
 }
 table.firhome tr td:nth-child(4) input {
   padding-right: 140px;
-  border-radius: 0px;
 }
 .addhome{
   margin-left: 0px;
@@ -3926,12 +3932,12 @@ table.firhome tr td:nth-child(4) input {
 #clear {
   position: absolute;
   border-radius: 5px;
-  right: 4px;
-  top:3px;
+  right: 2px;
+  top:1.5px;
   z-index: 2px;
   border: none;
   width: 120px;
-  height: 45px;
+  height: 47px;
   margin-left: 10px;
 }
 .homeemp{/*featured employers*/
@@ -3958,7 +3964,7 @@ table.firhome tr td:nth-child(4) input {
   font-size: 56px;
 }
 .btn1{
-  padding:10px 40px;
+  padding:10px 45px;
 }
 .btn2{
   padding:12px 60px;
@@ -4408,10 +4414,10 @@ padding: 0px;
   border: 2px solid #d9dbda;
 }
 /* autofill */
-input:-webkit-autofill,input.form-control.f:-webkit-autofill
-input:-webkit-autofill:hover, input.form-control.f:-webkit-autofill:hover
-input:-webkit-autofill:focus, input.form-control.f:-webkit-autofill:focus
-input:-webkit-autofill:active, input.form-control.f:-webkit-autofill:active  {
+input.form-control.f:-webkit-autofill
+input.form-control.f:-webkit-autofill:hover
+input.form-control.f:-webkit-autofill:focus
+input.form-control.f:-webkit-autofill:active  {
     -webkit-box-shadow: 1px 5px 6px 1px rgba(0, 0, 0, 0.1),0 0 0 30px #F3F3F3 inset !important;
     box-shadow: 1px 5px 6px 1px rgba(0, 0, 0, 0.1),0 0 0 30px #F3F3F3 inset !important;
 outline: none;
@@ -4427,6 +4433,12 @@ input.form-control.formpost:-webkit-autofill:active, input.form-control.empsearc
   outline: none;
   border: 0px;
   color:black;
+  }
+  input.form-control.formjob:-webkit-autofill,
+  input.form-control.formjob:-webkit-autofill:hover,
+  input.form-control.formjob:-webkit-autofill:focus,
+  input.form-control.formjob:-webkit-autofill:active{
+    background-color: #0D2942;
   }
 /*.seekdeltable tr{
   border: 2px solid #d9dbda;
@@ -4689,27 +4701,31 @@ select.dashformselect, select.dashformselect:focus{
 }
 /*SEARCH BOX home.html and singlejobpg.html*/
 table.fir {
-  border-collapse: inherit;
+  border-collapse: collapse;
   border-spacing: none;
 }
 
-table.fir td>* {
-  border: 0px;
-  border-radius: 0px;
+table.fir tr:nth-child(2) td{
+  background-color: white;
 }
 
-table.fir tr td:nth-child(2) input {
-  border-radius: 5px 0 0 5px;
+table.fir tr:nth-child(2) td:nth-child(3){
+  border-radius: 0;
+}
+
+table.fir tr:nth-child(2) td:nth-child(2){
+  border-radius:  5px 0px 0px 5px;
   border-right: 1px solid #D8D8D8;
 }
 
-table.fir tr td:nth-child(4) input {
-  border-radius: 0 5px 5px 0;
+table.fir tr:nth-child(2) td:nth-child(4){
+  border-radius: 0px 5px 5px 0px;
   border-left: 1px solid #D8D8D8;
 }
 
 table.sec td>* {
   border-radius: 5px;
+  -moz-border-radius: 5px;
 }
 
 .buttonIn {
@@ -4924,8 +4940,8 @@ border-radius: 2px;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='white' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
   box-shadow: none !important;
   outline: none !important;
-  border: 1px solid #c2c0c0 !important;
   border-radius: 5px;
+  border: 1px solid #c2c0c0 !important;
 }
 
 /** focus shadow **/

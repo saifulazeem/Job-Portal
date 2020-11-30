@@ -286,13 +286,28 @@
                     $('#errmsg').html("Invalid File Type" + "<br>" + ".doc, .docx and .pdf supported");
                 }
             });
-        });
 
+            $('.collapse').on('shown.bs.collapse', function (e) {
+                //alert('#' + $(this).attr('id'));
+                $s ='#' + $(this).attr('id');
+                $('html,body').animate({
+                    scrollTop: $s.offset().top
+                }, 'slow');
+            });
+        });
+        function goToByScroll(id) {
+            // Reove "link" from the ID
+            id = id.replace("link", "");
+            // Scroll
+            $('html,body').animate({
+                scrollTop: $("#" + id).offset().top
+            },
+                'slow');
+        }
         function changeMe(sel) {
             sel.style.color = "black";
             //sel.style.backgroundImage = url("data:image/svg+xml;utf8,<svg fill='red' height='22' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
         }
-
     </script>
     <style>
         .textareaprop {

@@ -89,7 +89,21 @@
                 $(".search").show();
                 $(".imgsearch").hide();
             });
+
+            $(".addhov .divimg").hover(function (event) {
+                $(this).find('img').toggle();
+            });
+
+            /*$(".addhov").on( 'mouseover','.divimg', function (){
+                //alert('this');
+                $(this).find('img').toggle();
+            },
+            on('mouseleave','.divimg', function (){
+                //alert('this');
+                $(this).find('img').toggle();
+                });*/
         });
+
         // JavaScript for disabling form submissions if there are invalid fields
         (function () {
             'use strict';
@@ -152,12 +166,14 @@
                                         class="btn btn-lg rounded-pill btnLogin btnLogtxt px-xl-5 px-lg-5 px-md-4 px-sm-5 px-5 mt-1">
                                         Login</a>
                                     <div class="addhov">
-                                        <div class="row mx-lg-1 mx-md-0 mt-2 mx-sm-2 mx-2">
+                                        <div class="row mx-lg-1 mx-md-0 mt-2 mx-sm-2 mx-2 divimg">
                                             <img src="img/homeadd.png" class="img-fluid">
+                                            <img src="img/homeadd2.png" class="img-fluid" style="display: none;">
                                         </div>
 
                                         <!------------------------------onhover div----------------------------------->
-                                        <div class="regdiv" style="z-index: 9;max-width:30rem;right:10px;position: absolute;"> 
+                                        <div class="regdiv"
+                                            style="z-index: 9;max-width:30rem;right:10px;position: absolute;">
                                             <div class="row col-12 roun"
                                                 style=" background: rgba(255,255,255,.9);margin-top:25px; border-radius: 10px;">
                                                 <form class="col-12 needs-validation my-lg-3 my-md-3 my-sm-3 my-3 mx-0"
@@ -166,8 +182,7 @@
                                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
                                                             <div class="delhov float-left">
                                                                 <button type="button" class="btn text-white btg btn1">
-                                                                    <img class="" src="img/js.png"
-                                                                        class="img-responsive">
+                                                                    <img class="" src="img/js.png">
                                                                     <span
                                                                         class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">CANDIDATE</span>
                                                                 </button>
@@ -176,8 +191,7 @@
                                                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
                                                             <div class="delhov float-right">
                                                                 <button type="button" class="btn text-white btg btn1">
-                                                                    <img class="" src="img/emp.png"
-                                                                        class="img-responsive">
+                                                                    <img class="" src="img/emp.png">
                                                                     <span
                                                                         class="mx-lg-0 mx-0 hovtxt mx-0 mx-sm-0 mx-md-0">EMPLOYER</span>
                                                                 </button>
@@ -251,8 +265,7 @@
                     style="position: relative; ">
                     <!--------------Large and Medium View--------->
                     <div class="col-lg-12 col-md-12 table-responsive d-lg-block d-md-block d-sm-none d-none">
-                        <table class="table table-borderless table-sm fir firhome" cellspacing="0"
-                            cellpadding="0">
+                        <table class="table table-borderless table-sm fir firhome" cellspacing="0" cellpadding="0">
                             <tbody>
                                 <tr>
                                     <!--------First row------------->
@@ -272,11 +285,11 @@
                                     </td>
                                     <td></td>
                                 </tr>
-                                <tr class="bg-white">
+                                <tr>
                                     <!---------Second row------------->
                                     <!------------------------FORM------------------------------------->
                                     <form class="form-inline">
-                                        <td class=" p-0" style="border-radius: 10px 0px 0px 10px;border: 0;">
+                                        <td class=" p-0">
                                             <input type="text" class="form-control homesearch " id="keywords"
                                                 placeholder="Keywords">
                                         </td>
@@ -284,7 +297,7 @@
                                             <input type="text" class="form-control homesearch" id="location"
                                                 placeholder="Location">
                                         </td>
-                                        <td class="buttonIn w-100 p-0" style="border-radius: 0px 10px 10px 0px;border: 0;">
+                                        <td class="buttonIn w-100 p-0">
                                             <input type="text" class="form-control homesearch" id="categories"
                                                 placeholder="All Categories">
                                             <button id="clear" class="btn btn-success homebtn">
@@ -488,8 +501,7 @@
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="row d-flex justify-content-center align-self-center">
-                                <select
-                                    class="homesel selectpicker btn form-control dashformact px-3 rounded-pill">
+                                <select class="homesel selectpicker btn form-control dashformact px-3 rounded-pill">
                                     <option value="" selected disabled>Select Category</option>
                                     <option value="A">UI/UX Designer</option>
                                     <option value="B">Web Developer</option>
@@ -1211,22 +1223,21 @@
                             <img src="img/s1.png" class="img-fluid" id="s1">
                             <!--------------------------onhover div ------------------->
                             <!----------s1----------->
-                            <div class="roun comment s1div myclass bg-white text-dark p-xl-4 p-lg-2 p-md-3 p-sm-2 p-2 rounded"
-                                id="s1div">
-                                <div class="row font-weight-bold d-flex justify-content-center">
-                                    <span class="boldheader">Jhon Wick</span>
-                                </div>
-                                <div class="row">
-                                    <span style="font-size: 12px;padding:0px 10px;">This job portal help me to find a
-                                        good
-                                        job.</span>
-                                </div>
-                                <div class="row d-flex justify-content-center">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
+                            <div class=" comment s1div myclass roun bg-white text-dark" id="s1div">
+                                <div class="d-flex flex-column">
+                                    <span class="boldheader font-weight-bold">
+                                        Jhon Wick
+                                    </span>
+                                    <span class="normalheader">This job portal help me to find a
+                                        good job.
+                                    </span>
+                                    <div class="d-flex justify-content-between align-self-center w-50 mt-sm-2 mt-0">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1234,22 +1245,21 @@
                             <img src="img/s2.png" id="s2" class="img-fluid">
                             <!--------------------------onhover div ------------------->
                             <!----------s2----------->
-                            <div class="roun comment s2div myclass bg-white text-dark p-xl-4 p-lg-3 p-md-3 p-sm-2 p-2 mt-4 rounded"
-                                id="s2div">
-                                <div class="row font-weight-bold d-flex justify-content-center">
-                                    <span class="boldheader">Jhon Wick</span>
-                                </div>
-                                <div class="row">
-                                    <span style="font-size: 12px;padding:0px 10px;">This job portal help me to find a
-                                        good
-                                        job.</span>
-                                </div>
-                                <div class="row d-flex justify-content-center">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
+                            <div class=" comment s2div myclass roun bg-white text-dark" id="s2div">
+                                <div class="d-flex flex-column">
+                                    <span class="boldheader font-weight-bold">
+                                        Jhon Wick
+                                    </span>
+                                    <span class="normalheader">This job portal help me to find a
+                                        good job.
+                                    </span>
+                                    <div class="d-flex justify-content-between align-self-center w-50 mt-sm-2 mt-0">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1257,22 +1267,21 @@
                             <img src="img/s3.png" id="s3" class="img-fluid">
                             <!--------------------------onhover div ------------------->
                             <!----------s3----------->
-                            <div class="roun comment s3div myclass bg-white text-dark p-xl-4 p-lg-3 p-md-3 p-sm-2 p-2 mt-4 rounded"
-                                id="s3div">
-                                <div class="row font-weight-bold d-flex justify-content-center">
-                                    <span class="boldheader">Jhon Wick</span>
-                                </div>
-                                <div class="row">
-                                    <span style="font-size: 12px;padding:0px 10px;">This job portal help me to find a
-                                        good
-                                        job.</span>
-                                </div>
-                                <div class="row d-flex justify-content-center">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
+                            <div class=" comment s3div myclass roun bg-white text-dark" id="s3div">
+                                <div class="d-flex flex-column">
+                                    <span class="boldheader font-weight-bold">
+                                        Jhon Wick
+                                    </span>
+                                    <span class="normalheader">This job portal help me to find a
+                                        good job.
+                                    </span>
+                                    <div class="d-flex justify-content-between align-self-center w-50 mt-sm-2 mt-0">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1280,22 +1289,21 @@
                             <img src="img/s4.png" id="s4" class="img-fluid">
                             <!--------------------------onhover div ------------------->
                             <!----------s4----------->
-                            <div class="roun comment s4div myclass bg-white text-dark p-xl-4 p-lg-3 p-md-3 p-sm-2 p-2 mt-4 rounded"
-                                id="s4div">
-                                <div class="row font-weight-bold d-flex justify-content-center">
-                                    <span class="boldheader">Jhon Wick</span>
-                                </div>
-                                <div class="row">
-                                    <span style="font-size: 12px;padding:0px 10px;">This job portal help me to find a
-                                        good
-                                        job.</span>
-                                </div>
-                                <div class="row d-flex justify-content-center">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
-                                    <img class="img-fluid" src="img/star.png">
+                            <div class=" comment s4div myclass roun bg-white text-dark" id="s4div">
+                                <div class="d-flex flex-column">
+                                    <span class="boldheader font-weight-bold">
+                                        Jhon Wick
+                                    </span>
+                                    <span class="normalheader">This job portal help me to find a
+                                        good job.
+                                    </span>
+                                    <div class="d-flex justify-content-between align-self-center w-50 mt-sm-2 mt-0">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                        <img class="img-fluid" src="img/star.png">
+                                    </div>
                                 </div>
                             </div>
                         </div>

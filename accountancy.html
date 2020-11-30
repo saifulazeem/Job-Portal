@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="css/new.css">
     <script>
         $(document).ready(function () {
+            //$(".boldcard").find('img').toggle();
+            $(".normalcard").first().addClass('boldcard');
+            $(".normalcard").first().find('img').toggle();
+
             //toggle image on cards
             $(".acccards").hover(function (event) {
                 $(this).find('img').toggle();
@@ -29,6 +33,7 @@
 */
             $(".normalcard").click(function () {
                 if (!$(this).hasClass('boldcard')) {
+                    //alert('bold');
                     $(".boldcard").find('img').toggle();
                     $(".normalcard").removeClass('boldcard');
                     $(this).addClass("boldcard");
@@ -36,6 +41,10 @@
                         $(this).find('img').toggle();
                     });
                 }
+                /*else{
+                    //do nothing
+                    event.stopPropagation();
+                }*/
             });
 
             //show div on hover
