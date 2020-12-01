@@ -110,6 +110,11 @@
                 $(".nav-item").removeClass('boldtext');
                 $(this).addClass("boldtext");
                 $(".sidenav").css('width', '0');
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
                 //var ses = localStorage.setItem('myid', $(this).attr('href'));
                 //alert(localStorage.getItem('myid') +" "+$(this).attr('href'));
             });
@@ -451,7 +456,7 @@
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                         <label for="cname"><b class="text-muted">Company
                                                                 name:</b></label>
-                                                        <input type="text" class="form-control f" id="cname" required>
+                                                        <input type="text" class="form-control dashform" id="cname" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid name.
                                                         </div>
@@ -461,7 +466,7 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12  mt-md-0 mt-3">
                                                         <label for="email"><b class="text-muted">Email:</b></label>
-                                                        <input type="email" class="form-control f" id="email" required>
+                                                        <input type="email" class="form-control dashform" id="email" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid email.
                                                         </div>
@@ -471,7 +476,7 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="address"><b class="text-muted">Address:</b></label>
-                                                        <input type="text" class="form-control f" id="address" required>
+                                                        <input type="text" class="form-control dashform" id="address" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid Company Address.
                                                         </div>
@@ -481,7 +486,7 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="phone"><b class="text-muted">Phone:</b></label>
-                                                        <input type="number" class="form-control f" id="phone" required>
+                                                        <input type="number" class="form-control dashform" id="phone" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid Phone Number.
                                                         </div>
@@ -491,7 +496,7 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="ct"><b class="text-muted">Company Type:</b></label>
-                                                        <input type="text" class="form-control f" id="ct" required>
+                                                        <input type="text" class="form-control dashform" id="ct" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid company type.
                                                         </div>
@@ -502,7 +507,7 @@
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="no"><b class="text-muted">No. of
                                                                 Employees:</b></label>
-                                                        <input type="number" class="form-control f" id="no" min="0"
+                                                        <input type="number" class="form-control dashform" id="no" min="0"
                                                             required>
                                                         <div id="numberofemp" style="display: none;">
                                                             Please provide a valid number.
@@ -528,19 +533,19 @@
                                                 <div class="row " style="font-size: 14px;">
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                         <label for="google" class="text-muted">Google:</label><br>
-                                                        <input type="text" class="form-control f" id="google">
+                                                        <input type="text" class="form-control dashform" id="google">
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
                                                         <label for="facebook" class="text-muted">Facebook:</label><br>
-                                                        <input type="text" class="form-control f" id="facebook">
+                                                        <input type="text" class="form-control dashform" id="facebook">
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="twitter" class="text-muted">Twitter:</label><br>
-                                                        <input type="text" class="form-control f" id="twitter">
+                                                        <input type="text" class="form-control dashform" id="twitter">
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="linkedin" class="text-muted">LinkedIn:</label><br>
-                                                        <input type="text" class="form-control f" id="linkedin">
+                                                        <input type="text" class="form-control dashform" id="linkedin">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1665,7 +1670,7 @@
                                                     <div class="form-group">
                                                         <label for="delacc"><b>Why are you deleting your
                                                                 account?</b></label>
-                                                        <select id="delacc" name="reason" class="form-control f"
+                                                        <select id="delacc" name="reason" class="form-control dashform"
                                                             onchange='CheckOpt(this.value);' required>
                                                             <option selected disabled value="">Choose...</option>
                                                             <option value="nothing useful">I don't find anything useful

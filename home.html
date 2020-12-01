@@ -90,18 +90,9 @@
                 $(".imgsearch").hide();
             });
 
-            $(".addhov .divimg").hover(function (event) {
-                $(this).find('img').toggle();
+            $(".addhov .divimg, .addhov .regdiv").hover(function (event) {
+                $('.divimg').find('img').toggle();
             });
-
-            /*$(".addhov").on( 'mouseover','.divimg', function (){
-                //alert('this');
-                $(this).find('img').toggle();
-            },
-            on('mouseleave','.divimg', function (){
-                //alert('this');
-                $(this).find('img').toggle();
-                });*/
         });
 
         // JavaScript for disabling form submissions if there are invalid fields

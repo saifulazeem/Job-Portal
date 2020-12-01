@@ -115,6 +115,11 @@
                 $(".nav-item").removeClass('boldtext');
                 $(this).addClass("boldtext");
                 $(".sidenav").css('width', '0');
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
                 //var ses = localStorage.setItem('myid', $(this).attr('href'));
                 //alert(localStorage.getItem('myid') +" "+$(this).attr('href'));
             });
@@ -557,7 +562,7 @@
                                                 <div class="row" style="font-size: 15px;">
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                         <label for="fname"><b class="text-muted">Name:</b></label>
-                                                        <input type="text" class="form-control f" id="fname" required>
+                                                        <input type="text" class="form-control dashform" id="fname" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid name.
                                                         </div>
@@ -568,7 +573,7 @@
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
                                                         <label for="lname"><b class="text-muted">Father
                                                                 name:</b></label>
-                                                        <input type="text" class="form-control f" id="lname" required>
+                                                        <input type="text" class="form-control dashform" id="lname" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid name.
                                                         </div>
@@ -578,7 +583,7 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="email"><b class="text-muted">Email:</b></label>
-                                                        <input type="email" class="form-control f" id="email" required>
+                                                        <input type="email" class="form-control dashform" id="email" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid email.
                                                         </div>
@@ -588,7 +593,7 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="phone"><b class="text-muted">Phone:</b></label>
-                                                        <input type="number" class="form-control f" id="phone" required>
+                                                        <input type="number" class="form-control dashform" id="phone" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid Phone Number.
                                                         </div>
@@ -598,7 +603,7 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="address"><b class="text-muted">Address:</b></label>
-                                                        <input type="text" class="form-control f" id="address" required>
+                                                        <input type="text" class="form-control dashform" id="address" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid Address.
                                                         </div>
@@ -608,7 +613,7 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="lang"><b class="text-muted">Language:</b></label>
-                                                        <input type="text" class="form-control f" id="lang" required>
+                                                        <input type="text" class="form-control dashform" id="lang" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a language.
                                                         </div>
@@ -619,7 +624,7 @@
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="jd"><b class="text-muted">Job
                                                                 Description:</b></label>
-                                                        <input type="text" class="form-control f" id="jd" required>
+                                                        <input type="text" class="form-control dashform" id="jd" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a job description.
                                                         </div>
@@ -629,7 +634,7 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="cnic"><b class="text-muted">CNIC:</b></label>
-                                                        <input type="text" class="form-control f" id="cnic" required>
+                                                        <input type="text" class="form-control dashform" id="cnic" required>
                                                         <div class="invalid-feedback">
                                                             Please provide a valid cnic number.
                                                         </div>
@@ -650,19 +655,19 @@
                                                 <div class="row " style="font-size: 14px;">
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                                                         <label for="google" class="text-muted">Google:</label><br>
-                                                        <input type="text" class="form-control f" id="google">
+                                                        <input type="text" class="form-control dashform" id="google">
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
                                                         <label for="facebook" class="text-muted">Facebook:</label><br>
-                                                        <input type="text" class="form-control f" id="facebook">
+                                                        <input type="text" class="form-control dashform" id="facebook">
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="twitter" class="text-muted">Twitter:</label><br>
-                                                        <input type="text" class="form-control f" id="twitter">
+                                                        <input type="text" class="form-control dashform" id="twitter">
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-3">
                                                         <label for="linkedin" class="text-muted">LinkedIn:</label><br>
-                                                        <input type="text" class="form-control f" id="linkedin">
+                                                        <input type="text" class="form-control dashform" id="linkedin">
                                                     </div>
                                                 </div>
                                             </div>
@@ -3002,7 +3007,7 @@
                                                     <div class="form-group">
                                                         <label for="delacc"><b>Why are you deleting your
                                                                 account?</b></label>
-                                                        <select id="delacc" name="reason" class="form-control f"
+                                                        <select id="delacc" name="reason" class="form-control dashform"
                                                             onchange='CheckOpt(this.value);' required>
                                                             <option selected disabled value="">Choose...</option>
                                                             <option value="nothing useful">I don't find anything useful
